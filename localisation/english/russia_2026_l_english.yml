@@ -1,0 +1,28 @@
+l_english:
+
+ RUSSIA_MOBILIZATION_2026: "RUSSIA_MOBILIZATION_2026"
+ RUSSIA_MOBILIZATION_2026_DESC: "On April 1st 2026, the Russian Federation announces a large-scale mobilization of 300,000 troops. With sanctions limiting access to foreign credit markets, the state finances the expansion through domestic debt issuance and monetary expansion, adding significant stress to the financial system."
+
+ RUSSIA_BANK_CRISIS_2026: "RUSSIA_BANK_CRISIS_2026"
+ RUSSIA_BANK_CRISIS_2026_DESC: "The April mobilization placed enormous strain on an already fragile banking system. Unable to borrow externally due to sanctions, Russia printed money to sustain military spending. Liquidity evaporated, and a cascade of bank failures has triggered a full financial crisis."
+
+ RUSSIA_MOBLIKS_UNPAID_2026: "RUSSIA_MOBLIKS_UNPAID_2026"
+ RUSSIA_MOBLIKS_UNPAID_2026_DESC: "With the state unable to sustain payments, mobilized units are going unpaid. Death benefits are withheld, wages delayed indefinitely. Confidence in the ruble collapses. Entire regiments abandon their posts and return home."
+ RUSSIA_OLIGARCH_COUNCIL_2026: "The Council of National Restoration"
+ RUSSIA_OLIGARCH_COUNCIL_2026_DESC: "Russian oligarchs, alarmed by the rapid collapse of the ruble and mounting financial chaos, have coordinated with senior military officials to remove President Putin from office. A provisional 'Council of National Restoration' now governs, promising to stabilize the economy, resume troop payments, and negotiate an end to the war in exchange for sanctions relief."
+
+ RUS_OLIGARCH_COUNCIL_DESC: "An interim technocratic and oligarch-led council tasked with economic stabilization and political transition."
+
+ RUSSIA_PEACE_UKRAINE_2026: "Peace Agreement with Ukraine"
+ RUSSIA_PEACE_UKRAINE_2026_DESC: "Following back-channel negotiations, Russia has agreed to withdraw to the internationally recognized 2014 borders. Sanctions relief will begin gradually but will only be fully lifted after a new president is elected and formally ratifies the peace agreement."
+
+l_english:
+ RUSSIA_ELECTION_ANNOUNCED_2026_TITLE:0 "2026 Presidential Election Announced"
+ RUSSIA_ELECTION_ANNOUNCED_2026_DESC:0 "Following the resignation of Putin and the signing of peace, the Russian National Stabilization Council has announced presidential elections for December."
+
+ RUSSIA_ELECTION_DAY_2026_TITLE:0 "The 2026 Presidential Election"
+ RUSSIA_ELECTION_DAY_2026_DESC:0 "Russia votes in its first post-war election. The future of the Federation hangs in the balance."
+
+ ELECT_SOKOLOV:0 "Elect Viktor Sokolov — The Deal Maker"
+ ELECT_VOLODIN:0 "Elect Sergei Volodin — The Stabilizer"
+ ELECT_ORLOV:0 "Elect Dmitri Orlov — Russia First, But Patient"

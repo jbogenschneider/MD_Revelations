@@ -1,0 +1,29 @@
+state = {
+	id = 1103
+	name = "STATE_1103"
+	manpower = 4274167
+	state_category = state_05
+
+	history = {
+		owner = YEM
+		victory_points = { 14581 5 } #Ibb
+		victory_points = { 14580 1 } #Dhamar
+		buildings = {
+			infrastructure = 0
+			internet_station = 0
+		}
+		add_core_of = YEM
+		2025.1.1 = {
+		owner = HOU
+		add_core_of = HOU
+			buildings = {
+				internet_station = 1
+			}
+			add_manpower = 2365
+		}
+	}
+
+	provinces = {
+		9147 14476 14580 14581
+	}
+}

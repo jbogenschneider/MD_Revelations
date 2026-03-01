@@ -1,0 +1,9 @@
+RUSSIA_ELECTION_CAMPAIGN = {
+    allowed = { original_tag = SOV }
+    picture = idea_political_campaign
+
+    modifier = {
+        political_power_gain = -0.2
+        stability_factor = -0.02
+    }
+}

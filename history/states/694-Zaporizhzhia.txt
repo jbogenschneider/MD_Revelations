@@ -1,0 +1,65 @@
+state = {
+	id = 694
+	name = "STATE_694"
+	resources = {
+		aluminium = 4.000
+		steel = 8
+	}
+
+	history = {
+		owner = UKR
+		victory_points = {
+			11405 6
+		}
+		victory_points = {
+			9729 3
+		}
+		victory_points = {
+			9571 1
+		}
+		buildings = {
+			infrastructure = 2
+			internet_station = 1
+			industrial_complex = 1
+			offices = 1
+			air_base = 3
+			nuclear_reactor = 1
+			agriculture_district = 1
+			11405 = {
+				bunker = 5
+			}
+			14439 = {
+				bunker = 5
+			}
+			3399 = {
+				bunker = 5
+			}
+			9571 = {
+				bunker = 5
+			}
+		}
+		
+		#set_province_controller = 11405
+		#		set_province_controller = 14441
+		#		set_province_controller = 3399
+		2025.1.1 = {
+		owner = UKR
+			SOV = {
+				set_province_controller = 9571
+				set_province_controller = 9729
+				set_province_controller = 11700
+				set_province_controller = 14440
+				set_province_controller = 14439
+			}
+						add_core_of = NOV
+			#add_manpower = -882016
+		}
+	}
+
+	provinces = {
+		3399 9571 9729 11405 11700 14329 14439 14440 14441
+	}
+	manpower = 1867578
+	buildings_max_level_factor = 1.000
+	state_category = state_03
+}
