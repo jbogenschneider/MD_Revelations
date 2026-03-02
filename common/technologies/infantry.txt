@@ -1256,27 +1256,36 @@ technologies = {
 
 		L_Recce_Comp = {
 			recon = 0.25
-
+			soft_attack = 0.04
+			hard_attack = 0.03
+			breakthrough = -0.04
 		}
 		Mot_Recce_Comp = {
 			recon = 0.31
-
+			soft_attack = 0.04
+			hard_attack = 0.03
+			breakthrough = -0.04
 		}
 		Mech_Recce_Comp = {
 			recon = 0.4
-
+			soft_attack = 0.04
+			hard_attack = 0.03
+			breakthrough = -0.04
 		}
 		Arm_Recce_Comp = {
 			recon = 0.4
-
+			soft_attack = 0.04
+			hard_attack = 0.03
+			breakthrough = -0.04
 		}
 		armor_Recce_Comp = {
 			recon = 0.5
-
+			soft_attack = 0.04
+			hard_attack = 0.03
+			breakthrough = -0.04
 		}
 		attack_helo_comp = {
 			recon = 0.6
-
 		}
 
 		path = {
@@ -1341,27 +1350,134 @@ technologies = {
 
 		L_Recce_Comp = {
 			recon = 0.25
-
+			soft_attack = 0.10
+			hard_attack = 0.08
+			defense = 0.03
+			breakthrough = -0.10
+			training_time = 0.20
+			need = {
+				Inf_equipment = 42
+				L_AT_Equipment = 2
+				AA_Equipment = 1
+				command_control_equipment = 5
+			}
+			plains = {
+				attack = 0.05
+			}
+			urban = {
+				attack = 0.03
+			}
 		}
 		Mot_Recce_Comp = {
 			recon = 0.31
-
+			soft_attack = 0.10
+			hard_attack = 0.08
+			defense = 0.03
+			breakthrough = -0.10
+			training_time = 0.20
+			need = {
+				Inf_equipment = 46
+				L_AT_Equipment = 2
+				H_AT_Equipment = 1
+				AA_Equipment = 2
+				command_control_equipment = 5
+				util_vehicle_equipment = 10
+			}
+			plains = {
+				attack = 0.05
+			}
+			urban = {
+				attack = 0.03
+			}
 		}
 		Mech_Recce_Comp = {
 			recon = 0.4
-
+			soft_attack = 0.10
+			hard_attack = 0.08
+			defense = 0.03
+			breakthrough = -0.10
+			training_time = 0.20
+			need = {
+				Inf_equipment = 46
+				L_AT_Equipment = 2
+				H_AT_Equipment = 1
+				AA_Equipment = 2
+				command_control_equipment = 7
+				medium_tank_amphibious_chassis = 10
+			}
+			plains = {
+				attack = 0.05
+			}
+			urban = {
+				attack = 0.03
+			}
 		}
 		Arm_Recce_Comp = {
 			recon = 0.4
-
+			soft_attack = 0.10
+			hard_attack = 0.08
+			defense = 0.03
+			breakthrough = -0.10
+			training_time = 0.20
+			need = {
+				Inf_equipment = 46
+				L_AT_Equipment = 2
+				H_AT_Equipment = 1
+				AA_Equipment = 2
+				command_control_equipment = 7
+				medium_tank_flame_chassis = 10
+			}
+			plains = {
+				attack = 0.05
+			}
+			urban = {
+				attack = 0.03
+			}
 		}
 		armor_Recce_Comp = {
 			recon = 0.5
-
+			soft_attack = 0.10
+			hard_attack = 0.08
+			defense = 0.03
+			breakthrough = -0.10
+			training_time = 0.20
+			need = {
+				command_control_equipment = 7
+				medium_tank_destroyer_chassis = 7
+			}
+			plains = {
+				attack = 0.05
+			}
+			urban = {
+				attack = 0.03
+			}
+		}
+		drone_tactical_company = {
+			soft_attack = 0.07
+			hard_attack = 0.06
+			defense = 0.12
+			breakthrough = -0.08
+			entrenchment = 0.08
+			initiative = 0.02
+			training_time = 0.20
+			need = {
+				command_control_equipment = 15
+				util_vehicle_equipment = 10
+			}
+		}
+		combat_service_support_company = {
+			defense = 0.15
+			entrenchment = 0.10
+			initiative = 0.05
+			breakthrough = -0.02
+			training_time = 0.20
+			need = {
+				command_control_equipment = 15
+				util_vehicle_equipment = 10
+			}
 		}
 		attack_helo_comp = {
 			recon = 0.6
-
 		}
 
 		path = {
@@ -1388,7 +1504,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 2.5
 			modifier = {
 				factor = 0.5
 				date < 2015.01.01
@@ -1398,8 +1514,12 @@ technologies = {
 				date < 2010.01.01
 			}
 			modifier = {
-				factor = 2
+				factor = 3
 				check_variable = { gdp_per_capita > 14.999 }
+			}
+			modifier = {
+				factor = 1.5
+				has_war = yes
 			}
 		}
 	}
@@ -1421,39 +1541,82 @@ technologies = {
 			defense = 0.20
 			hard_attack = 0.05
 			soft_attack = 0.09
+			breakthrough = -0.12
+			plains = {
+				attack = 0.06
+			}
+			urban = {
+				attack = 0.04
+			}
 		}
 		Mot_Recce_Comp = {
 			recon = 0.31
 			defense = 0.20
 			hard_attack = 0.05
 			soft_attack = 0.09
+			breakthrough = -0.12
+			plains = {
+				attack = 0.06
+			}
+			urban = {
+				attack = 0.04
+			}
 		}
 		Mech_Recce_Comp = {
 			recon = 0.4
 			defense = 0.20
 			hard_attack = 0.05
 			soft_attack = 0.09
+			breakthrough = -0.12
+			plains = {
+				attack = 0.06
+			}
+			urban = {
+				attack = 0.04
+			}
 		}
 		Arm_Recce_Comp = {
 			recon = 0.4
 			defense = 0.20
 			hard_attack = 0.05
 			soft_attack = 0.09
+			breakthrough = -0.12
+			plains = {
+				attack = 0.06
+			}
+			urban = {
+				attack = 0.04
+			}
 		}
 		armor_Recce_Comp = {
 			recon = 0.5
 			defense = 0.20
 			hard_attack = 0.05
 			soft_attack = 0.09
+			breakthrough = -0.12
+			plains = {
+				attack = 0.06
+			}
+			urban = {
+				attack = 0.04
+			}
 		}
 		drone_tactical_company = {
-			recon = 0.5
 			defense = 0.20
-			hard_attack = 0.05
-			soft_attack = 0.09
+			hard_attack = 0.07
+			soft_attack = 0.08
+			breakthrough = -0.10
+			entrenchment = 0.12
+			initiative = 0.03
 			need = {
 				command_control_equipment = 2
 			}
+		}
+		combat_service_support_company = {
+			defense = 0.22
+			entrenchment = 0.15
+			initiative = 0.07
+			breakthrough = -0.03
 		}
 		attack_helo_comp = {
 			recon = 0.6
@@ -1486,7 +1649,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 2.5
 			modifier = {
 				factor = 0.5
 				date < 2025.01.01
@@ -1496,8 +1659,12 @@ technologies = {
 				date < 2020.01.01
 			}
 			modifier = {
-				factor = 2
+				factor = 3
 				check_variable = { gdp_per_capita > 14.999 }
+			}
+			modifier = {
+				factor = 1.5
+				has_war = yes
 			}
 		}
 	}

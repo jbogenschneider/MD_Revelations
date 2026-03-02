@@ -1,0 +1,25 @@
+on_actions = {
+	on_daily = {
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						tag = SOV
+						tag = UKR
+					}
+					date > 2026.1.1
+					date < 2026.1.3
+					NOT = { has_country_flag = rev_2026_casualty_adjustment_applied }
+				}
+				if = {
+					limit = { tag = SOV }
+					country_event = { id = rev_ukr_rus_cas.1 }
+				}
+				if = {
+					limit = { tag = UKR }
+					country_event = { id = rev_ukr_rus_cas.2 }
+				}
+			}
+		}
+	}
+}

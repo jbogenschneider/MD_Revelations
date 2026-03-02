@@ -391,35 +391,12 @@ units = {
 	}
 	division = {
 		name = "14th Spetsnaz Brigade"
-		location = 3977
+		location = 14448
 		division_template = "Spetsnaz Brigade"
 		start_experience_factor = 0.7
 		start_equipment_factor = 0.30
 	}
 
-	division = {
-		name = "57th Motor Rifle Brigade"
-		location = 11643
-		division_template = "Moblics"
-		start_experience_factor = 0.5
-		start_equipment_factor = 0.30
-	}
-
-	division = {
-		name = "59th Motor Rifle Brigade"
-		location = 7763
-		division_template = "Moblics"
-		start_experience_factor = 0.5
-		start_equipment_factor = 0.30
-	}
-
-	division = {
-		name = "38th Motor Rifle Brigade"
-		location = 12654
-		division_template = "Moblics"
-		start_experience_factor = 0.5
-		start_equipment_factor = 0.30
-	}
 #	division = {
 #		name = "165th Artillery Brigade"
 #		location = 12654
@@ -439,14 +416,6 @@ units = {
 	division = {
 		name = "64th Motor Rifle Brigade"
 		location = 12189
-		division_template = "Moblics"
-		start_experience_factor = 0.5
-		start_equipment_factor = 0.30
-	}
-
-	division = {
-		name = "69th Motor Rifle Brigade"
-		location = 7672
 		division_template = "Moblics"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.30
@@ -663,14 +632,6 @@ units = {
 	}
 
 	division = {
-		name = "100th Recce Brigade"
-		location = 9674
-		division_template = "Recce Brigade"
-		start_experience_factor = 0.5
-		start_equipment_factor = 0.30
-	}
-
-	division = {
 		name = "8th Mountain Motor Rifle Brigade"
 		location = 670
 		division_template = "Light Motor Rifle Brigade"
@@ -712,7 +673,7 @@ units = {
 
 	division = {
 		name = "22nd Spetsnaz Brigade"
-		location = 6505
+		location = 3479
 		division_template = "Spetsnaz Brigade"
 		start_experience_factor = 0.7
 		start_equipment_factor = 0.30
@@ -785,14 +746,6 @@ units = {
 #	}
 
 	division = {
-		name = "25th Motor Rifle Brigade"
-		location = 95
-		division_template = "Motor Rifle Brigade"
-		start_experience_factor = 0.5
-		start_equipment_factor = 0.30
-	}
-
-	division = {
 		name = "138th Motor Rifle Brigade"
 		location = 9206
 		division_template = "Motor Rifle Brigade"
@@ -825,14 +778,6 @@ units = {
 	}
 
 	division = {
-		name = "6th Tank Brigade"
-		location = 14448
-		division_template = "Tank Brigade"
-		start_experience_factor = 0.5
-		start_equipment_factor = 0.30
-	}
-
-	division = {
 		name = "9th Motor Rifle Brigade"
 		location = 6543
 		division_template = "Motor Rifle Brigade"
@@ -845,15 +790,6 @@ units = {
 		location = 3492
 		division_template = "Artillery Brigade"
 		start_experience_factor = 0.5
-		start_equipment_factor = 0.30
-	}
-
-# VDV
-	division = {
-		name = "83rd Guards Airborne Brigade"
-		location = 3977
-		division_template = "Airborne Brigade"
-		start_experience_factor = 0.6
 		start_equipment_factor = 0.30
 	}
 
@@ -881,15 +817,6 @@ units = {
 		start_equipment_factor = 0.30
 	}
 
-#Marines / Naval Infantry
-	division = {
-		name = "810th Marine Brigade"
-		location = 3468 #Sevastopol Bay
-		division_template = "Naval Infantry Brigade"
-		start_experience_factor = 0.5
-		start_equipment_factor = 0.30
-	}
-
 	division = {
 		name = "61st Red Banner Marine Brigade"
 		location = 6432
@@ -901,14 +828,6 @@ units = {
 	division = {
 		name = "336th Guards Marine Brigade"
 		location = 6332
-		division_template = "Naval Infantry Brigade"
-		start_experience_factor = 0.5
-		start_equipment_factor = 0.30
-	}
-
-	division = {
-		name = "155th Marine Brigade"
-		location = 957
 		division_template = "Naval Infantry Brigade"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.30
@@ -1216,8 +1135,11 @@ instant_effect = {
 		amount = 50
 	}
 
-	### AA, ART, AGTM ###
-
+	#cruise missiles
+	add_equipment_to_stockpile = {
+		type = guided_missile_equipment_4 #SA-8 Osa
+		amount = 40
+	}
 	#SP-AA
 
 	add_equipment_to_stockpile = {
@@ -1332,12 +1254,12 @@ instant_effect = {
 
 	add_equipment_to_stockpile = {
 		type = artillery_0 #D-30
-		amount = 150
+		amount = 350
 	}
 
 	add_equipment_to_stockpile = {
 		type = artillery_1 #2S9 Nona
-		amount = 256
+		amount = 456
 	}
 
 	#SP
@@ -1355,7 +1277,7 @@ instant_effect = {
 
 	add_equipment_to_stockpile = {
 		type = SP_arty_1 #2S19 Msta
-		amount = 68
+		amount = 38
 	}
 
 	add_equipment_to_stockpile = {

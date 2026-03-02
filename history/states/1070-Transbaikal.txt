@@ -29,7 +29,6 @@ state = {
 		2025.1.1 = {
 			buildings = {
 				internet_station = 2
-				arms_factory = 1
 			}
 		}
 	}

@@ -1,0 +1,28 @@
+state = {
+	id = 1224
+	name = "STATE_1224"
+
+	history = {
+		owner = UKR
+		controller = UKR
+		add_core_of = UKR
+		buildings = {
+			infrastructure = 2
+			6704 = {
+				bunker = 2
+			}
+			11561 = {
+				bunker = 2
+			}
+			14436 = {
+				bunker = 2
+			}
+		}
+	}
+
+	provinces = {
+		6704 11561 14436
+	}
+	manpower = 341811
+	state_category = state_02
+}

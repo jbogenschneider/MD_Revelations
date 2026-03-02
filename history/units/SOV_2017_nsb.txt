@@ -1,17 +1,31 @@
 ﻿division_template = {
-	name = "Motor Rifle Brigade" #Mechanized
+	name = "Motor Rifle Brigade" #mec
 
 	regiments = {
-		Mech_Inf_Bat = { x = 0 y = 0 }
-		Mech_Inf_Bat = { x = 0 y = 1 }
+		Arm_Inf_Bat = { x = 0 y = 0 }
+		Arm_Inf_Bat = { x = 0 y = 1 }
 		Arm_Inf_Bat = { x = 0 y = 2 }
 		armor_Bat = { x = 1 y = 0 }
 		SP_Arty_Bat = { x = 2 y = 0 }
 		SP_Arty_Bat = { x = 2 y = 1 }
-		SP_Arty_Bat = { x = 2 y = 2 }
-		SP_AA_Bat = { x = 2 y = 3 }
+		SP_AA_Bat = { x = 2 y = 2 }
 		Mech_Inf_Bat = { x = 3 y = 0 }
 		Mech_Inf_Bat = { x = 3 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Moblics"
+
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 0 y = 2 }
+
+		L_Inf_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		armor_Bat = { x = 2 y = 0 }
 	}
 }
 
@@ -41,19 +55,16 @@ division_template = {
 		Mech_Inf_Bat = { x = 0 y = 1 }
 		Mech_Inf_Bat = { x = 0 y = 2 }
 		Mech_Inf_Bat = { x = 0 y = 3 }
-		Mech_Inf_Bat = { x = 0 y = 4 }
 
 		Arm_Inf_Bat = { x = 1 y = 0 }
 		Arm_Inf_Bat = { x = 1 y = 1 }
 		Arm_Inf_Bat = { x = 1 y = 2 }
-		Mech_Inf_Bat = { x = 1 y = 3 }
-		SP_Arty_Bat = { x = 1 y = 4 }
+		SP_Arty_Bat = { x = 1 y = 3 }
 
 		armor_Bat = { x = 2 y = 0 }
 		armor_Bat = { x = 2 y = 1 }
 		armor_Bat = { x = 2 y = 2 }
-		armor_Bat = { x = 2 y = 3 }
-		SP_AA_Bat = { x = 2 y = 4 }
+		SP_AA_Bat = { x = 2 y = 3 }
 
 		Arty_Bat = { x = 3 y = 0 }
 		Arty_Bat = { x = 3 y = 1 }
@@ -74,25 +85,21 @@ division_template = {
 		Arm_Inf_Bat = { x = 0 y = 1 }
 		Arm_Inf_Bat = { x = 0 y = 2 }
 		Arm_Inf_Bat = { x = 0 y = 3 }
-		Arm_Inf_Bat = { x = 0 y = 4 }
 
 		Mech_Inf_Bat = { x = 1 y = 0 }
 		Mech_Inf_Bat = { x = 1 y = 1 }
 		Mech_Inf_Bat = { x = 1 y = 2 }
 		Mech_Inf_Bat = { x = 1 y = 3 }
-		Mech_Inf_Bat = { x = 1 y = 4 }
 
 		armor_Bat = { x = 2 y = 0 }
 		armor_Bat = { x = 2 y = 1 }
 		armor_Bat = { x = 2 y = 2 }
 		armor_Bat = { x = 2 y = 3 }
-		SP_AA_Bat = { x = 2 y = 4 }
 
 		SP_Arty_Bat = { x = 3 y = 0 }
 		SP_Arty_Bat = { x = 3 y = 1 }
 		SP_Arty_Bat = { x = 3 y = 2 }
 		SP_Arty_Bat = { x = 3 y = 3 }
-		SP_Arty_Bat = { x = 3 y = 4 }
 	}
 	support = {
 		armor_Recce_Comp = { x = 0 y = 0 }
@@ -172,6 +179,9 @@ division_template = {
 		Special_Forces = { x = 0 y = 1 }
 		Special_Forces = { x = 0 y = 2 }
 		Special_Forces = { x = 0 y = 3 }
+	}
+	support = {
+		drone_tactical_company = { x = 0 y = 0 }
 	}
 	priority = 2
 }
@@ -327,6 +337,9 @@ division_template = {
 		Arty_Bat = { x = 1 y = 1 }
 		Arty_Bat = { x = 1 y = 2 }
 	}
+	support = {
+		drone_tactical_company = { x = 0 y = 0 }
+	}
 }
 
 division_template = {
@@ -365,48 +378,25 @@ units = {
 	 division = {
 		name = "70th Motor Rifle Brigade"
 		location = 3977
-		division_template = "Motor Rifle Brigade"
+		division_template = "Moblics"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.30
 	}
 	division = {
 		name = "60th Motor Rifle Brigade"
 		location = 3977
-		division_template = "Motor Rifle Brigade"
+		division_template = "Moblics"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.30
 	}
 	division = {
 		name = "14th Spetsnaz Brigade"
-		location = 3977
+		location = 14448
 		division_template = "Spetsnaz Brigade"
 		start_experience_factor = 0.7
 		start_equipment_factor = 0.30
 	}
 
-	division = {
-		name = "57th Motor Rifle Brigade"
-		location = 11643
-		division_template = "Motor Rifle Brigade"
-		start_experience_factor = 0.5
-		start_equipment_factor = 0.30
-	}
-
-	division = {
-		name = "59th Motor Rifle Brigade"
-		location = 7763
-		division_template = "Motor Rifle Brigade"
-		start_experience_factor = 0.5
-		start_equipment_factor = 0.30
-	}
-
-	division = {
-		name = "38th Motor Rifle Brigade"
-		location = 12654
-		division_template = "Motor Rifle Brigade"
-		start_experience_factor = 0.5
-		start_equipment_factor = 0.30
-	}
 #	division = {
 #		name = "165th Artillery Brigade"
 #		location = 12654
@@ -418,7 +408,7 @@ units = {
 	division = {
 		name = "36th Motor Rifle Brigade"
 		location = 4719
-		division_template = "Motor Rifle Brigade"
+		division_template = "Moblics"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.30
 	}
@@ -426,15 +416,7 @@ units = {
 	division = {
 		name = "64th Motor Rifle Brigade"
 		location = 12189
-		division_template = "Motor Rifle Brigade"
-		start_experience_factor = 0.5
-		start_equipment_factor = 0.30
-	}
-
-	division = {
-		name = "69th Motor Rifle Brigade"
-		location = 7672
-		division_template = "Motor Rifle Brigade"
+		division_template = "Moblics"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.30
 	}
@@ -442,7 +424,7 @@ units = {
 	division = {
 		name = "39th Motor Rifle Brigade"
 		location = 12446
-		division_template = "Motor Rifle Brigade"
+		division_template = "Moblics"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.30
 	}
@@ -474,7 +456,7 @@ units = {
 	division = {
 		name = "18th Machinegun Artillery Division"
 		location = 14853
-		division_template = "Machinegun Artillery Division"
+		division_template = "Moblics"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.30
 	}
@@ -500,14 +482,14 @@ units = {
 	division = {
 		name = "15th Motor Rifle Brigade"
 		location = 9449
-		division_template = "Motor Rifle Brigade"
+		division_template = "Light Motor Rifle Brigade"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.30
 	}
 	division = {
 		name = "23rd Motor Rifle Brigade"
 		location = 9449
-		division_template = "Motor Rifle Brigade"
+		division_template = "Light Motor Rifle Brigade"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.30
 	}
@@ -515,7 +497,7 @@ units = {
 	division = {
 		name = "21st Motor Rifle Brigade"
 		location = 14440
-		division_template = "Motor Rifle Brigade"
+		division_template = "Moblics"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.30
 	}
@@ -530,7 +512,7 @@ units = {
 	division = {
 		name = "28th Motor Rifle Brigade"
 		location = 588
-		division_template = "Motor Rifle Brigade"
+		division_template = "Moblics"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.30
 	}
@@ -538,7 +520,7 @@ units = {
 	division = {
 		name = "32nd Motor Rifle Brigade"
 		location = 737
-		division_template = "Motor Rifle Brigade"
+		division_template = "Moblics"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.30
 	}
@@ -567,21 +549,6 @@ units = {
 	}
 
 	division = {
-		name = "35th Motor Rifle Brigade"
-		location = 6519
-		division_template = "Motor Rifle Brigade"
-		start_experience_factor = 0.5
-		start_equipment_factor = 0.30
-	}
-
-	division = {
-		name = "74th Motor Rifle Brigade"
-		location = 6776
-		division_template = "Motor Rifle Brigade"
-		start_experience_factor = 0.5
-		start_equipment_factor = 0.30
-	}
-	division = {
 		name = "120th Artillery Brigade"
 		location = 6776
 		division_template = "Artillery Brigade"
@@ -592,6 +559,13 @@ units = {
 	division = {
 		name = "3rd Spetsnaz Brigade"
 		location = 1297
+		division_template = "Spetsnaz Brigade"
+		start_experience_factor = 0.7
+		start_equipment_factor = 0.30
+	}
+	division = {
+		name = "3rd Spetsnaz Brigade"
+		location = 3466
 		division_template = "Spetsnaz Brigade"
 		start_experience_factor = 0.7
 		start_equipment_factor = 0.30
@@ -658,30 +632,6 @@ units = {
 	}
 
 	division = {
-		name = "205th Motor Rifle Brigade"
-		location = 6474
-		division_template = "Motor Rifle Brigade"
-		start_experience_factor = 0.5
-		start_equipment_factor = 0.30
-	}
-
-	division = {
-		name = "100th Recce Brigade"
-		location = 9674
-		division_template = "Recce Brigade"
-		start_experience_factor = 0.5
-		start_equipment_factor = 0.30
-	}
-
-	division = {
-		name = "150th Motor Rifle Division"
-		location = 6505
-		division_template = "Guards Motor Rifle Division"
-		start_experience_factor = 0.5
-		start_equipment_factor = 0.30
-	}
-
-	division = {
 		name = "8th Mountain Motor Rifle Brigade"
 		location = 670
 		division_template = "Light Motor Rifle Brigade"
@@ -723,7 +673,7 @@ units = {
 
 	division = {
 		name = "22nd Spetsnaz Brigade"
-		location = 6505
+		location = 3479
 		division_template = "Spetsnaz Brigade"
 		start_experience_factor = 0.7
 		start_equipment_factor = 0.30
@@ -746,43 +696,6 @@ units = {
 #	}
 
 	division = {
-		name = "76th Motor Rifle Brigade"
-		location = 12441 #Armenia
-		division_template = "Motor Rifle Brigade"
-		start_experience_factor = 0.5
-		start_equipment_factor = 0.9
-		force_equipment_variants = { infantry_weapons1 = { owner = "SOV" } }
-		force_equipment_variants = { APC_4 = { owner = "SOV" } }
-		force_equipment_variants = { IFV_2 = { owner = "SOV" } }
-		force_equipment_variants = { command_control_equipment1 = { owner = "SOV" } }
-		force_equipment_variants = { Anti_Air_1 = { owner = "SOV" } }
-		force_equipment_variants = { Anti_tank_1 = { owner = "SOV" } }
-		force_equipment_variants = { Heavy_Anti_tank_2 = { owner = "SOV" } }
-		force_equipment_variants = { SP_arty_0 = { owner = "SOV" } }
-		force_equipment_variants = { mbt_hull_1 = { owner = "SOV" version_name = "T-72B" } }
-		force_equipment_variants = { SP_Anti_Air_1 = { owner = "SOV" } }
-	}
-
-	division = {
-		name = "73rd Motor Rifle Brigade"
-		location = 12441 #Armenia
-		division_template = "Motor Rifle Brigade"
-		start_experience_factor = 0.5
-		start_equipment_factor = 0.9
-		force_equipment_variants = { infantry_weapons1 = { owner = "SOV" } }
-		force_equipment_variants = { APC_4 = { owner = "SOV" } }
-		force_equipment_variants = { IFV_2 = { owner = "SOV" } }
-		force_equipment_variants = { command_control_equipment1 = { owner = "SOV" } }
-		force_equipment_variants = { Anti_Air_1 = { owner = "SOV" } }
-		force_equipment_variants = { Anti_tank_1 = { owner = "SOV" } }
-		force_equipment_variants = { Heavy_Anti_tank_2 = { owner = "SOV" } }
-		force_equipment_variants = { SP_arty_0 = { owner = "SOV" } }
-		force_equipment_variants = { infantry_weapons4 = { owner = "SOV" } }
-		force_equipment_variants = { mbt_hull_1 = { owner = "SOV" version_name = "T-72B" } }
-		force_equipment_variants = { SP_Anti_Air_1 = { owner = "SOV" } }
-	}
-
-	division = {
 		name = "200th Motor Rifle Brigade"
 		location = 9140
 		division_template = "Light Motor Rifle Brigade"
@@ -799,13 +712,6 @@ units = {
 	}
 
 #Western MD
-	division = {
-		name = "449th Detached Fireworks Division"
-		location = 6517
-		division_template = "Artillery Brigade"
-		start_experience_factor = 0.5
-		start_equipment_factor = 0.30
-	}
 
 	division = {
 		name = "27th Motor Rifle Brigade"
@@ -840,14 +746,6 @@ units = {
 #	}
 
 	division = {
-		name = "25th Motor Rifle Brigade"
-		location = 95
-		division_template = "Motor Rifle Brigade"
-		start_experience_factor = 0.5
-		start_equipment_factor = 0.30
-	}
-
-	division = {
 		name = "138th Motor Rifle Brigade"
 		location = 9206
 		division_template = "Motor Rifle Brigade"
@@ -859,21 +757,6 @@ units = {
 		name = "9th Artillery Brigade"
 		location = 570
 		division_template = "Artillery Brigade"
-		start_experience_factor = 0.5
-		start_equipment_factor = 0.30
-	}
-
-	division = {
-		name = "4th Guards Tank Division"
-		location = 570
-		division_template = "Tank Division"
-		start_experience_factor = 0.5
-		start_equipment_factor = 0.30
-	}
-	division = {
-		name = "2nd Guards Motor Rifle Division"
-		location = 11526
-		division_template = "Guards Motor Rifle Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.30
 	}
@@ -895,14 +778,6 @@ units = {
 	}
 
 	division = {
-		name = "6th Tank Brigade"
-		location = 14448
-		division_template = "Tank Brigade"
-		start_experience_factor = 0.5
-		start_equipment_factor = 0.30
-	}
-
-	division = {
 		name = "9th Motor Rifle Brigade"
 		location = 6543
 		division_template = "Motor Rifle Brigade"
@@ -915,39 +790,6 @@ units = {
 		location = 3492
 		division_template = "Artillery Brigade"
 		start_experience_factor = 0.5
-		start_equipment_factor = 0.30
-	}
-
-# VDV
-	division = {
-		name = "98th Guards Airborne Division"
-		location = 3492
-		division_template = "Airborne Division"
-		start_experience_factor = 0.6
-		start_equipment_factor = 0.30
-	}
-
-	division = {
-		name = "106th Guards Airborne Division"
-		location = 3466
-		division_template = "Airborne Division"
-		start_experience_factor = 0.6
-		start_equipment_factor = 0.30
-	}
-
-	division = {
-		name = "76h Guards Air Assault Division"
-		location = 371
-		division_template = "Air Assault Division"
-		start_experience_factor = 0.6
-		start_equipment_factor = 0.30
-	}
-
-	division = {
-		name = "83rd Guards Airborne Brigade"
-		location = 3977
-		division_template = "Airborne Brigade"
-		start_experience_factor = 0.6
 		start_equipment_factor = 0.30
 	}
 
@@ -975,15 +817,6 @@ units = {
 		start_equipment_factor = 0.30
 	}
 
-#Marines / Naval Infantry
-	division = {
-		name = "810th Marine Brigade"
-		location = 3468 #Sevastopol Bay
-		division_template = "Naval Infantry Brigade"
-		start_experience_factor = 0.5
-		start_equipment_factor = 0.30
-	}
-
 	division = {
 		name = "61st Red Banner Marine Brigade"
 		location = 6432
@@ -1001,14 +834,6 @@ units = {
 	}
 
 	division = {
-		name = "155th Marine Brigade"
-		location = 957
-		division_template = "Naval Infantry Brigade"
-		start_experience_factor = 0.5
-		start_equipment_factor = 0.30
-	}
-
-	division = {
 		name = "40th Krasnodar-Harbin Marine Brigade"
 		location = 7878
 		division_template = "Naval Infantry Brigade"
@@ -1018,22 +843,15 @@ units = {
 
 	#### NAVY ####
 
-
-
-
-
-
-
-
-
-
-
 }
 
 instant_effect = {
 
 	### Aircraft
-
+	add_equipment_to_stockpile = {
+		type = kamikaze_drone_1
+		amount = 1000
+	}
 	add_equipment_to_stockpile = {
 	type = AS_Fighter2 #MIG-31
 	amount = 94
@@ -1183,21 +1001,21 @@ instant_effect = {
 		type = mbt_hull_1
 		producer = SOV
 		variant_name = "T-72B3"
-		amount = 100
+		amount = 150
 	}
 
 	add_equipment_to_stockpile = {
 		type = mbt_hull_1
 		producer = SOV
 		variant_name = "T-80"
-		amount = 150
+		amount = 100
 	}
 
 	add_equipment_to_stockpile = {
 		type = mbt_hull_2
 		producer = SOV
 		variant_name = "T-90"
-		amount = 150
+		amount = 50
 	}
 
 	add_equipment_to_stockpile = {
@@ -1213,12 +1031,6 @@ instant_effect = {
 	add_equipment_to_stockpile = {
 		type = util_vehicle_3 #Tigr
 		amount = 30
-	}
-
-	add_equipment_to_stockpile = {
-		type = util_vehicle_4 #Iveco LMV
-		producer = ITA
-		amount = 33
 	}
 
 	add_equipment_to_stockpile = {
@@ -1254,7 +1066,7 @@ instant_effect = {
 
 	add_equipment_to_stockpile = {
 		type = APC_2 #MT-LB
-		amount = 200
+		amount = 100
 	}
 
 	add_equipment_to_stockpile = {
@@ -1323,8 +1135,11 @@ instant_effect = {
 		amount = 50
 	}
 
-	### AA, ART, AGTM ###
-
+	#cruise missiles
+	add_equipment_to_stockpile = {
+		type = guided_missile_equipment_4 #SA-8 Osa
+		amount = 40
+	}
 	#SP-AA
 
 	add_equipment_to_stockpile = {
@@ -1387,7 +1202,7 @@ instant_effect = {
 	add_equipment_to_stockpile = {
 		type = Anti_tank_1
 		#version_name = "AT-7 Metis"
-		amount = 250
+		amount = 200
 	}
 
 	add_equipment_to_stockpile = {
@@ -1439,12 +1254,12 @@ instant_effect = {
 
 	add_equipment_to_stockpile = {
 		type = artillery_0 #D-30
-		amount = 150
+		amount = 350
 	}
 
 	add_equipment_to_stockpile = {
 		type = artillery_1 #2S9 Nona
-		amount = 256
+		amount = 456
 	}
 
 	#SP
@@ -1462,7 +1277,7 @@ instant_effect = {
 
 	add_equipment_to_stockpile = {
 		type = SP_arty_1 #2S19 Msta
-		amount = 68
+		amount = 38
 	}
 
 	add_equipment_to_stockpile = {

@@ -1,7 +1,51 @@
 add_namespace = russia_2026
 
 # ===============================
-# APRIL 1 2026 – MOBILIZATION
+# MARCH 1 2026 - PEACE OR ESCALATION
+# ===============================
+
+country_event = {
+    id = russia_2026.6
+    title = RUSSIA_MARCH_DECISION_2026
+    desc = RUSSIA_MARCH_DECISION_2026_DESC
+    picture = GFX_report_event_peace_conference
+    is_triggered_only = yes
+
+    trigger = {
+        tag = SOV
+        has_war_with = UKR
+        NOT = { has_country_flag = russia_march_decision_done_2026 }
+        date > 2026.2.28
+        date < 2026.3.2
+    }
+
+    mean_time_to_happen = { days = 1 }
+
+    option = {
+        name = RUSSIA_MARCH_DECISION_2026_ACCEPT
+        ai_chance = { factor = 35 }
+
+        white_peace = UKR
+        clr_country_flag = rev_sov_2026_sanctions_active
+        set_country_flag = russia_accepted_current_lines_2026
+        set_country_flag = russia_march_decision_done_2026
+        add_stability = -0.03
+        add_war_support = -0.05
+    }
+
+    option = {
+        name = RUSSIA_MARCH_DECISION_2026_CONTINUE
+        ai_chance = { factor = 65 }
+
+        set_country_flag = russia_prepare_mobilization_2026
+        set_country_flag = russia_march_decision_done_2026
+        add_war_support = 0.03
+        add_stability = -0.01
+    }
+}
+
+# ===============================
+# MARCH 1 2026 - PEACE OR ESCALATION
 # ===============================
 
 country_event = {
@@ -9,11 +53,13 @@ country_event = {
     title = RUSSIA_MOBILIZATION_2026
     desc = RUSSIA_MOBILIZATION_2026_DESC
     picture = GFX_report_event_generic_military
+    is_triggered_only = yes
 
     trigger = {
         tag = SOV
-        date > 2026.3.31
-        date < 2026.4.2
+        has_country_flag = russia_prepare_mobilization_2026
+        date > 2026.3.2
+        date < 2026.3.10
     }
 
     mean_time_to_happen = { days = 1 }
@@ -39,6 +85,7 @@ country_event = {
     title = RUSSIA_BANK_CRISIS_2026
     desc = RUSSIA_BANK_CRISIS_2026_DESC
     picture = GFX_report_event_economic_crisis
+    is_triggered_only = yes
 
     trigger = {
         tag = SOV
@@ -67,6 +114,7 @@ country_event = {
     title = RUSSIA_MOBLIKS_UNPAID_2026
     desc = RUSSIA_MOBLIKS_UNPAID_2026_DESC
     picture = GFX_report_event_generic_civil_unrest
+    is_triggered_only = yes
 
     trigger = {
         tag = SOV
@@ -80,8 +128,7 @@ country_event = {
     option = {
         name = OK
 
-        #add_manpower = -100000
-        set_manpower = -100000
+        add_manpower = -100000
         add_stability = -0.20
 	    add_war_support = -0.20
     }
@@ -96,6 +143,7 @@ country_event = {
     title = RUSSIA_OLIGARCH_COUNCIL_2026
     desc = RUSSIA_OLIGARCH_COUNCIL_2026_DESC
     picture = GFX_report_event_generic_political_meeting
+    is_triggered_only = yes
 
     trigger = {
         tag = SOV
@@ -144,6 +192,7 @@ country_event = {
     title = RUSSIA_PEACE_UKRAINE_2026
     desc = RUSSIA_PEACE_UKRAINE_2026_DESC
     picture = GFX_report_event_peace_conference
+    is_triggered_only = yes
 
     trigger = {
         tag = SOV
@@ -177,14 +226,15 @@ country_event = {
 }
 
 country_event = {
-    id = RUSSIA_ELECTION_ANNOUNCED_2026
+    id = russia_2026.7
     title = RUSSIA_ELECTION_ANNOUNCED_2026_TITLE
     desc = RUSSIA_ELECTION_ANNOUNCED_2026_DESC
     picture = GFX_report_event_russian_parliament
+    is_triggered_only = yes
 
     trigger = {
         tag = SOV
-        has_country_flag = RUSSIA_POST_PUTIN
+        has_country_flag = russia_pending_election_2026
         date > 2026.10.30
     }
 
@@ -198,10 +248,11 @@ country_event = {
 }
 
 country_event = {
-    id = RUSSIA_ELECTION_DAY_2026
+    id = russia_2026.8
     title = RUSSIA_ELECTION_DAY_2026_TITLE
     desc = RUSSIA_ELECTION_DAY_2026_DESC
     picture = GFX_report_event_election
+    is_triggered_only = yes
 
     trigger = {
         tag = SOV
@@ -267,4 +318,5 @@ country_event = {
         }
     }
 }
+
 
