@@ -1,0 +1,33 @@
+add_namespace = rev_ukr_rus_cas
+
+# Casualty adjustment pass for the 2026 scenario.
+# Edit the add_manpower values below to tune losses.
+
+country_event = {
+	id = rev_ukr_rus_cas.1
+	title = rev_ukr_rus_cas.1.t
+	desc = rev_ukr_rus_cas.1.d
+	picture = GFX_report_event_generic_war
+	is_triggered_only = yes
+
+	option = {
+		name = rev_ukr_rus_cas.1.a
+		add_manpower = -950000
+		set_country_flag = rev_sov_2026_sanctions_active
+		set_country_flag = rev_2026_casualty_adjustment_applied
+	}
+}
+
+country_event = {
+	id = rev_ukr_rus_cas.2
+	title = rev_ukr_rus_cas.2.t
+	desc = rev_ukr_rus_cas.2.d
+	picture = GFX_report_event_generic_war
+	is_triggered_only = yes
+
+	option = {
+		name = rev_ukr_rus_cas.2.a
+		add_manpower = -150000
+		set_country_flag = rev_2026_casualty_adjustment_applied
+	}
+}

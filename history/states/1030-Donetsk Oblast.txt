@@ -1,66 +1,32 @@
 state = {
 	id = 1030
 	name = "STATE_1030"
-	manpower = 2008225
+	manpower = 1434446
 	state_category = state_03
 	history = {
 		owner = UKR
-		add_core_of = UKR
+		add_core_of = SOV
 		add_core_of = DPR
+		add_core_of = UKR
 
 
 		victory_points = { 6420 4 } #mariupol
-		victory_points = { 502 1 }
 
 		buildings = {
 			infrastructure = 2
-			industrial_complex = 1
-			internet_station = 1
-			air_base = 1
-			6420 = {
-				naval_base = 4
-				naval_facility = 1
-				bunker = 3 #azovstal
-			}
-			502 = {
-				bunker = 7
-			}
 			3479 = {
-				bunker = 7
-			}
-			3491 = {
-				bunker = 7
+				bunker = 4
 			}
 		}
 		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
-		set_variable = { state_renewable_capacity_factor_modifier_var = 0.25 }		
+		set_variable = { state_renewable_capacity_factor_modifier_var = 0.25 }	
 		2025.1.1 = {
-		owner = SOV
-		add_core_of = SOV
-			UKR = {
-				set_province_controller = 3491
-				set_province_controller = 502
-				set_province_controller = 3479
-			}
-			add_manpower = -451679
-			buildings = {
-				internet_station = 3
-				6420 = {
-					bunker = 1
-				}
-				6776 = {
-					bunker = 1
-				}
-				3466 = {
-					bunker = 1
-				}
-				3479 = {
-					bunker = 1
-				}
-			}
-		}
+			owner = SOV
+			add_core_of = NOV
+			add_manpower = -204471
+		}	
 	}
 	provinces = {
-		502 3466 3479 3491 6420 6776 14295
+		3466 3479 6420 6776 14295
 	}
 }
