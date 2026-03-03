@@ -1,4 +1,4 @@
-﻿capital = 134
+capital = 134
 2024.1.1 = {
 	set_cosmetic_tag = MNT
 

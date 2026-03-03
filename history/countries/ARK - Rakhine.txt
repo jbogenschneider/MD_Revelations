@@ -1,4 +1,4 @@
-﻿capital = 500
+capital = 500
 2024.1.1 = {
 	set_cosmetic_tag = ARK_nationalist
 	set_country_flag = dynamic_flag

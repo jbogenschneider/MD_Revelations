@@ -1,4 +1,4 @@
-﻿capital = 88
+capital = 88
 2024.1.1 = {
 	set_variable = { gdp_per_capita = 34.757 }
 	set_country_flag = dynamic_flag

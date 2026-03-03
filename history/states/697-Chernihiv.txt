@@ -16,18 +16,7 @@ state = {
 			internet_station = 1
 			industrial_complex = 1
 			air_base = 1
-			238 = {
-				bunker = 7
-			}
-			3568 = {
-				bunker = 7
-			}
-			6589 = {
-				bunker = 7
-			}
-			9506 = {
-				bunker = 7
-			}
+			stronghold_network = 1
 		}
 		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
 		set_variable = { state_renewable_capacity_factor_modifier_var = 0.25 }		

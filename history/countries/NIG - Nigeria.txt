@@ -1,4 +1,4 @@
-﻿capital = 337
+capital = 337
 2024.1.1 = {
 	set_cosmetic_tag = NIG
 	set_country_flag = dynamic_flag
@@ -16,7 +16,7 @@
 			destroyer_hull_1 = 1
 			destroyer_hull_2 = 1
 			tech_naval_systems_engineering = 1
-			tech_mtg_landing_craft = 1
+			tech_landing_craft = 1
 		}
 
 	if = { limit = { has_dlc = "No Step Back" }

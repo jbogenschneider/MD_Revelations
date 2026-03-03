@@ -1,4 +1,4 @@
-﻿capital = 929
+capital = 929
 2024.1.1 = {
 	set_cosmetic_tag = HLS_AUTH
 	set_country_flag = dynamic_flag

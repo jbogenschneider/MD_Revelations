@@ -1,4 +1,4 @@
-﻿capital = 727
+capital = 727
 2024.1.1 = {
 	#oob = "KRP_2000"
 

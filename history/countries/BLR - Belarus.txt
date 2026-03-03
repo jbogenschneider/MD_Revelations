@@ -1,4 +1,4 @@
-﻿capital = 703
+capital = 703
 2024.1.1 = {
 	set_cosmetic_tag = BLR
 	set_country_flag = dynamic_flag

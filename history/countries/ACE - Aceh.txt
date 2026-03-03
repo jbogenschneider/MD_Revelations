@@ -1,4 +1,4 @@
-﻿capital = 622
+capital = 622
 2024.1.1 = {
 	set_country_flag = dynamic_flag
 	set_cosmetic_tag = ACE_AUTH

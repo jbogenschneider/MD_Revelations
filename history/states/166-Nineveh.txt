@@ -35,10 +35,7 @@ state = {
 			add_manpower = 1154441
 			buildings = {
 				internet_station = 2
-				10106 = {
-					bunker = 5
-				}
-			}
+}
 		}
 	}
 

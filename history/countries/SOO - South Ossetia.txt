@@ -1,4 +1,4 @@
-﻿capital = 705
+capital = 705
 2024.1.1 = {
 	if = {
 		limit = { has_dlc = "No Step Back" }

@@ -10,18 +10,7 @@ state = {
 		}
 		buildings = {
 			infrastructure = 2
-			11405 = {
-				bunker = 5
-			}
-			14441 = {
-				bunker = 5
-			}
-			3399 = {
-				bunker = 5
-			}
-			14329 = {
-				bunker = 5
-			}
+			stronghold_network = 1
 		}
 	}
 

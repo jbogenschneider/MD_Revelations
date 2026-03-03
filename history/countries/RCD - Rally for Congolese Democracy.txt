@@ -1,4 +1,4 @@
-﻿capital = 311
+capital = 311
 2024.1.1 = {
 	oob = "RCD_2000"
 	set_country_flag = is_civil_war_faction

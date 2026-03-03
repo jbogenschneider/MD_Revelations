@@ -1,4 +1,4 @@
-﻿capital = 396
+capital = 396
 2024.1.1 = {
 	set_country_flag = is_civil_war_faction
 	set_variable = { civil_war_original_tag = LBA.id }
@@ -184,15 +184,15 @@
 	if = { limit = { has_dlc = "Man the Guns" }
 		set_technology = {
 			tech_early_naval_weapon_systems = 1
-			tech_mtg_landing_craft = 1
+			tech_landing_craft = 1
 			corvette_hull_1 = 1
 		}
 
 		else = {
 			set_technology = {
-				landing_craft = 1
-				submarine_1 = 1
-				diesel_attack_submarine_1 = 1
+				tech_landing_craft = 1
+				attack_submarine_hull_1 = 1
+				attack_submarine_hull_1 = 1
 				cruiser_1 = 1
 				cruiser_2 = 1
 				destroyer_1 = 1

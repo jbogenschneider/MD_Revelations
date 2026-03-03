@@ -1,4 +1,4 @@
-﻿capital = 947
+capital = 947
 oob = "LIC_2000"
 2024.1.1 = {
 	set_variable = { gdp_per_capita = 124.757 }

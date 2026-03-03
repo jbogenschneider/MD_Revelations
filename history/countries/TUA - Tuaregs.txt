@@ -1,4 +1,4 @@
-﻿capital = 918
+capital = 918
 2024.1.1 = {
 
 	set_cosmetic_tag = TUA

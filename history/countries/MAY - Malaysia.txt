@@ -1,4 +1,4 @@
-﻿capital = 528
+capital = 528
 2024.1.1 = {
 	if = {
 		limit = { has_dlc = "No Step Back" }
@@ -190,7 +190,7 @@
 
 			tech_torpedoes = 1
 
-			tech_mtg_landing_craft = 1
+			tech_landing_craft = 1
 		}
 
 	#Influence system

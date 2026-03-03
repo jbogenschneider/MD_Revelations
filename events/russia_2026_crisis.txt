@@ -25,6 +25,17 @@ country_event = {
         name = RUSSIA_MARCH_DECISION_2026_ACCEPT
         ai_chance = { factor = 35 }
 
+        # Ceasefire on adjusted current lines:
+        # SOV keeps Donetsk + Luhansk regions and south corridor,
+        # UKR keeps Kramatorsk (1222), North Zaporizhzhia (1223), North Kherson (1224).
+        UKR = {
+            transfer_state = 693    # Donetsk (West Donetsk)
+            transfer_state = 1030   # Donetsk Oblast
+            transfer_state = 1075   # Luhansk
+            transfer_state = 1076   # Luhansk Oblast (West Luhansk)
+            transfer_state = 694    # Zaporizhzhia
+            transfer_state = 1085   # Kherson
+        }
         white_peace = UKR
         clr_country_flag = rev_sov_2026_sanctions_active
         set_country_flag = russia_accepted_current_lines_2026
@@ -37,6 +48,7 @@ country_event = {
         name = RUSSIA_MARCH_DECISION_2026_CONTINUE
         ai_chance = { factor = 65 }
 
+        set_country_flag = RUSSIA_PUTIN_PATH
         set_country_flag = russia_prepare_mobilization_2026
         set_country_flag = russia_march_decision_done_2026
         add_war_support = 0.03
@@ -90,8 +102,30 @@ country_event = {
     trigger = {
         tag = SOV
         has_country_flag = russia_mobilized_2026
-        date > 2026.6.6
-        date < 2026.6.8
+        OR = {
+            AND = {
+                NOT = { has_country_flag = russia_delay_crisis_1 }
+                NOT = { has_country_flag = russia_delay_crisis_2 }
+                NOT = { has_country_flag = russia_delay_crisis_3 }
+                date > 2026.6.6
+                date < 2026.6.8
+            }
+            AND = {
+                has_country_flag = russia_delay_crisis_1
+                date > 2026.9.6
+                date < 2026.9.8
+            }
+            AND = {
+                has_country_flag = russia_delay_crisis_2
+                date > 2027.2.6
+                date < 2027.2.8
+            }
+            AND = {
+                has_country_flag = russia_delay_crisis_3
+                date > 2027.6.6
+                date < 2027.6.8
+            }
+        }
     }
 
     mean_time_to_happen = { days = 1 }
@@ -99,7 +133,7 @@ country_event = {
     option = {
         name = OK
 
-        set_manpower = 0
+        add_manpower = -300000
         add_stability = -0.20
 	    add_war_support = -0.20
     }
@@ -119,8 +153,30 @@ country_event = {
     trigger = {
         tag = SOV
         has_country_flag = russia_mobilized_2026
-        date > 2026.7.19
-        date < 2026.7.21
+        OR = {
+            AND = {
+                NOT = { has_country_flag = russia_delay_crisis_1 }
+                NOT = { has_country_flag = russia_delay_crisis_2 }
+                NOT = { has_country_flag = russia_delay_crisis_3 }
+                date > 2026.7.19
+                date < 2026.7.21
+            }
+            AND = {
+                has_country_flag = russia_delay_crisis_1
+                date > 2026.10.19
+                date < 2026.10.21
+            }
+            AND = {
+                has_country_flag = russia_delay_crisis_2
+                date > 2027.3.19
+                date < 2027.3.21
+            }
+            AND = {
+                has_country_flag = russia_delay_crisis_3
+                date > 2027.6.12
+                date < 2027.6.14
+            }
+        }
     }
 
     mean_time_to_happen = { days = 1 }
@@ -148,8 +204,30 @@ country_event = {
     trigger = {
         tag = SOV
         has_country_flag = russia_mobilized_2026
-        date > 2026.8.9
-        date < 2026.8.11
+        OR = {
+            AND = {
+                NOT = { has_country_flag = russia_delay_crisis_1 }
+                NOT = { has_country_flag = russia_delay_crisis_2 }
+                NOT = { has_country_flag = russia_delay_crisis_3 }
+                date > 2026.8.9
+                date < 2026.8.11
+            }
+            AND = {
+                has_country_flag = russia_delay_crisis_1
+                date > 2026.11.9
+                date < 2026.11.11
+            }
+            AND = {
+                has_country_flag = russia_delay_crisis_2
+                date > 2027.4.9
+                date < 2027.4.11
+            }
+            AND = {
+                has_country_flag = russia_delay_crisis_3
+                date > 2027.6.20
+                date < 2027.6.22
+            }
+        }
     }
 
     mean_time_to_happen = { days = 1 }
@@ -269,11 +347,12 @@ country_event = {
         add_stability = 0.05
         add_political_power = 100
         add_ideas = RUSSIA_OLIGARCH_PRESIDENT
-        set_country_leader = {
+        retire_country_leader = yes
+        create_country_leader = {
             name = "Viktor Mikhailovich Sokolov"
             desc = "POLITICS_SOKOLOV_DESC"
-            picture = GFX_portrait_sokolov
-            expire = "1965.1.1"
+            picture = "Viktor_Mikhailovich_Sokolov.dds"
+            expire = "2032.1.1"
             ideology = despotism
             traits = {
                 corrupt_politician
@@ -288,10 +367,12 @@ country_event = {
         set_country_flag = RUSSIA_TECHNOCRAT_PATH
         add_stability = 0.03
         add_ideas = RUSSIA_TECHNOCRAT_PRESIDENT
-        set_country_leader = {
+        retire_country_leader = yes
+        create_country_leader = {
             name = "Sergei Andreevich Volodin"
             desc = "POLITICS_VOLODIN_DESC"
-            picture = GFX_portrait_volodin
+            picture = "Sergei_Andreevich_Volodin.dds"
+            expire = "2032.1.1"
             ideology = neutrality
             traits = {
                 silent_workhorse
@@ -306,11 +387,13 @@ country_event = {
         set_country_flag = RUSSIA_POPULIST_PATH
         add_war_support = 0.05
         add_ideas = RUSSIA_POPULIST_PRESIDENT
-        set_country_leader = {
+        retire_country_leader = yes
+        create_country_leader = {
             name = "Dmitri Leonidovich Orlov"
             desc = "POLITICS_ORLOV_DESC"
-            picture = GFX_portrait_orlov
-            ideology = nationalism
+            picture = "Dmitri_Leonidovich_Orlov.dds"
+            expire = "2032.1.1"
+            ideology = nationalist
             traits = {
                 charismatic
                 nationalist_sympathizer

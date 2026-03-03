@@ -1,4 +1,4 @@
-﻿capital = 945
+capital = 945
 2024.1.1 = {
 	oob = "ADO_2000"
 	set_variable = { gdp_per_capita = 130.415 }

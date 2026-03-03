@@ -1,4 +1,4 @@
-﻿capital = 1110
+capital = 1110
 2024.1.1 = {
 	#oob = "VRP_2000"
 

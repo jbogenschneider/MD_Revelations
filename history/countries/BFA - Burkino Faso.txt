@@ -1,4 +1,4 @@
-﻿capital = 350
+capital = 350
 2024.1.1 = {
 	oob = "BFA_2000"
 	set_cosmetic_tag = BFA

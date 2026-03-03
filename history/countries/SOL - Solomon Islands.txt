@@ -1,4 +1,4 @@
-﻿capital = 533
+capital = 533
 2024.1.1 = {
 	oob = "SOL_2017"
 

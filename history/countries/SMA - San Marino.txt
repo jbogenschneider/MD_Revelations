@@ -1,4 +1,4 @@
-﻿capital = 948 #San Marino
+capital = 948 #San Marino
 set_research_slots = 1
 
 2024.1.1 = {

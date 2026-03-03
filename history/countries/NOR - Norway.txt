@@ -1,4 +1,4 @@
-﻿capital = 32
+capital = 32
 2024.1.1 = {
 	set_cosmetic_tag = NOR
 
@@ -545,7 +545,7 @@
 			tech_torpedoes = 1
 			tech_torpedoes_1 = 1
 
-			tech_mtg_landing_craft = 1
+			tech_landing_craft = 1
 		}
 
 		#Hauk Class

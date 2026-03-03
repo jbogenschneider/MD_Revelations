@@ -1,4 +1,4 @@
-﻿capital = 466
+capital = 466
 2024.1.1 = {
 	oob = "GEO_2000"
 	set_cosmetic_tag = ADJ_communism

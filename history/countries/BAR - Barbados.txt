@@ -1,4 +1,4 @@
-﻿capital = 865
+capital = 865
 2024.1.1 = {
 	oob = "BAR_2000"
 

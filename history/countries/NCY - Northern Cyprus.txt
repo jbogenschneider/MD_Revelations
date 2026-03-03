@@ -1,4 +1,4 @@
-﻿capital = 146
+capital = 146
 2024.1.1 = {
 	#oob = "TAG_2000"
 

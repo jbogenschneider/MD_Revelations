@@ -1,4 +1,4 @@
-﻿capital = 709
+capital = 709
 2022.1.1 = {
 		leave_faction = yes
 	}

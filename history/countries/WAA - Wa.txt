@@ -1,4 +1,4 @@
-﻿capital = 497
+capital = 497
 2024.1.1 = {
 	set_cosmetic_tag = WAA_AUTH_S
 	set_country_flag = dynamic_flag

@@ -1,4 +1,4 @@
-﻿capital = 319
+capital = 319
 2024.1.1 = {
 
 	if = {

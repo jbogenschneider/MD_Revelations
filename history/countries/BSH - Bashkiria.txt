@@ -1,4 +1,4 @@
-﻿capital = 664
+capital = 664
 2024.1.1 = {
 	#oob = "BSH_2000"
 

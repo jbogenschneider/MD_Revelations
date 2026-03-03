@@ -1,4 +1,4 @@
-﻿capital = 391
+capital = 391
 2024.1.1 = {
 	set_country_flag = is_civil_war_faction
 	set_variable = { civil_war_original_tag = LBA.id }
@@ -146,7 +146,7 @@
 		corvette_1 = 1
 		corvette_2 = 1
 
-		landing_craft = 1
+		tech_landing_craft = 1
 
 		basic_computing = 1
 		integrated_circuit = 1

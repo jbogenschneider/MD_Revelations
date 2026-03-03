@@ -1,4 +1,4 @@
-﻿capital = 1013
+capital = 1013
 2024.1.1 = {
 	set_country_flag = dynamic_flag
 	set_country_flag = dynamic_rebel_flag

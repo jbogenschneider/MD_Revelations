@@ -1,4 +1,4 @@
-﻿capital = 50
+capital = 50
 2024.1.1 = {
 	set_variable = { var = global.var_EUpopTotal value = 0 }
 	every_country = {

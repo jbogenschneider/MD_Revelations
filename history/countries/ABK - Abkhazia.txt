@@ -1,4 +1,4 @@
-﻿capital = 706
+capital = 706
 2024.1.1 = {
 	### for all nations # Don't get clever ideas with it
 	every_country = {

@@ -8,15 +8,7 @@ state = {
 		add_core_of = UKR
 		buildings = {
 			infrastructure = 2
-			6704 = {
-				bunker = 2
-			}
-			11561 = {
-				bunker = 2
-			}
-			14436 = {
-				bunker = 2
-			}
+			stronghold_network = 1
 		}
 	}
 

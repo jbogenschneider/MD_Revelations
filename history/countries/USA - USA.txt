@@ -2267,10 +2267,10 @@ capital = 1182
 			tech_torpedoes_1 = 1
 			tech_torpedoes_2 = 1
 
-			tech_mtg_landing_craft = 1
-			tech_mtg_amphibious_assault_ship = 1
-			tech_mtg_air_cushioned_landing_craft = 1
-			tech_mtg_modern_landing_craft = 1
+			tech_landing_craft = 1
+			tech_amphibious_assault_ship = 1
+			tech_air_cushioned_landing_craft = 1
+			tech_modern_landing_craft = 1
 		}
 
 		# Iowa Class
@@ -5176,8 +5176,8 @@ capital = 1182
 			tech_torpedoes_1 = 1
 			tech_torpedoes_2 = 1
 
-			tech_mtg_landing_craft = 1
-			tech_mtg_modern_landing_craft = 1
+			tech_landing_craft = 1
+			tech_modern_landing_craft = 1
 			tech_mtg_specialized_protective_equipment = 1
 		}
 
@@ -5352,7 +5352,7 @@ capital = 1182
 
 			create_equipment_variant = {
 				name = "Freedom-Class Block II"
-				type = missile_frigate_4 #Freedom-Class Block II
+				type = frigate_hull_4 #Freedom-Class Block II
 				upgrades = {
 				}
 				#obsolete = yes
@@ -5360,7 +5360,7 @@ capital = 1182
 
 			create_equipment_variant = {
 				name = "Arleigh Burke IIA-Class"
-				type = missile_destroyer_2
+				type = destroyer_hull_2
 				upgrades = {
 				}
 			}

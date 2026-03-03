@@ -1,4 +1,4 @@
-﻿capital = 1107
+capital = 1107
 2024.1.1 = {
 	#oob = "KLM_2000"
 	set_variable = { gdp_per_capita = 14.570 }

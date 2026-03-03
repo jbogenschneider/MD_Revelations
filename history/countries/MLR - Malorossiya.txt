@@ -1,4 +1,4 @@
-﻿capital = 698
+capital = 698
 2024.1.1 = {
 	#oob = "MLR_2017"
 	set_cosmetic_tag = MLR

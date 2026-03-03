@@ -12,12 +12,7 @@ state = {
 
 		buildings = {
 			infrastructure = 2
-			502 = {
-				bunker = 7
-			}
-			3491 = {
-				bunker = 7
-			}
+			stronghold_network = 1
 		}
 		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
 		set_variable = { state_renewable_capacity_factor_modifier_var = 0.25 }
