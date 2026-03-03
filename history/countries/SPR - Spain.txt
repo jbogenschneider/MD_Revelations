@@ -1,4 +1,4 @@
-﻿capital = 91
+capital = 91
 2024.1.1 = {
 	set_cosmetic_tag = SPR
 	set_country_flag = dynamic_flag
@@ -82,12 +82,12 @@
 			tech_torpedoes = 1
 			tech_torpedoes_1 = 1
 
-			tech_mtg_landing_craft = 1
+			tech_landing_craft = 1
 		}
 
-		#Príncipe de Asturias Class
+		#Pr�ncipe de Asturias Class
 		create_equipment_variant = {
-			name = "Príncipe de Asturias Class"
+			name = "Pr�ncipe de Asturias Class"
 			type = helicopter_operator_hull_1
 			#name_group = SPAIN
 			parent_version = 0
@@ -143,9 +143,9 @@
 			icon = "gfx/interface/technologies/SPR/NAV/F2_Rio_Damuji.dds"
 			obsolete = yes
 		}
-		#Santa María Class
+		#Santa Mar�a Class
 		create_equipment_variant = {
-			name = "Santa María Class - Batch #1"
+			name = "Santa Mar�a Class - Batch #1"
 			type = frigate_hull_2
 			#name_group = SPAIN
 			parent_version = 1
@@ -161,9 +161,9 @@
 				rear_1_custom_slot = module_light_helipad_1
 			}
 		}
-		#Santa María Class
+		#Santa Mar�a Class
 		create_equipment_variant = {
-			name = "Santa María Class - Batch #2"
+			name = "Santa Mar�a Class - Batch #2"
 			type = frigate_hull_2
 			#name_group = SPAIN
 			parent_version = 2
@@ -198,9 +198,9 @@
 			}
 		}
 
-		#Delfín Class
+		#Delf�n Class
 		create_equipment_variant = {
-			name = "Delfín Class"
+			name = "Delf�n Class"
 			type = attack_submarine_hull_1
 			#name_group = SPAIN
 			parent_version = 0
@@ -1114,7 +1114,7 @@
 	startup_politics = yes
 
 	create_country_leader = {
-		name = "José María Aznar"
+		name = "Jos� Mar�a Aznar"
 		picture = "jose_maria_aznar.dds"
 		ideology = conservatism
 		traits = {
@@ -1368,7 +1368,7 @@
 			tech_torpedoes_1 = 1
 			tech_torpedoes_2 = 1
 
-			tech_mtg_landing_craft = 1
+			tech_landing_craft = 1
 		}
 	}
 	### Economy
@@ -1426,7 +1426,7 @@
 	startup_politics = yes
 
 	create_country_leader = {
-		name = "Pedro Sánchez"
+		name = "Pedro S�nchez"
 		picture = "pedro_sanchez.dds"
 		ideology = socialism
 	}
@@ -1441,14 +1441,14 @@
 		}
 		create_equipment_variant = {
 			name = "Alvaro de Bazan-class"
-			type = missile_frigate_3
+			type = frigate_hull_3
 			upgrades = {
 			}
 		}
 
 		create_equipment_variant = {
 			name = "Fridtjof Nansen-Class"
-			type = missile_frigate_3
+			type = frigate_hull_3
 			upgrades = {
 			}
 		}

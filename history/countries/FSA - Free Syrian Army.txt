@@ -1,4 +1,4 @@
-﻿capital = 186
+capital = 186
 2024.1.1 = {
 	set_country_flag = is_civil_war_faction
 	set_variable = { civil_war_original_tag = SYR.id }
@@ -297,7 +297,7 @@ Anti_tank_0 = 1
 Heavy_Anti_tank_0 = 1
 Anti_Air_0 = 1
 
-landing_craft = 1
+tech_landing_craft = 1
 
 basic_computing = 1
 integrated_circuit = 1

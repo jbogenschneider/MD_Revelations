@@ -11,7 +11,7 @@ focus_tree = {
 
     focus = {
         id = USA_state_of_the_union
-        icon = GFX_focus_USA_trump_speech
+        icon = that_american_dude_forgot_name
         x = 0
         y = 0
         cost = 5
@@ -39,7 +39,7 @@ focus_tree = {
 
     focus = {
         id = USA_side_with_trump
-        icon = GFX_focus_USA_side_with_trump
+        icon = USA_republican_party
         relative_position_id = USA_state_of_the_union
         x = 4
         y = 1
@@ -89,7 +89,7 @@ focus_tree = {
 
     focus = {
         id = USA_plan_for_the_worst
-        icon = GFX_focus_USA_plan_for_worst
+        icon = draw_up_war_plans
         x = 2
         y = 2
         cost = 5
@@ -120,7 +120,7 @@ focus_tree = {
 
     focus = {
         id = USA_warp_speed
-        icon = GFX_focus_USA_warp_speed
+        icon = research4
         x = 3
         y = 3
         cost = 5
@@ -163,7 +163,7 @@ focus_tree = {
 
     focus = {
         id = USA_implement_emergency_measures
-        icon = GFX_focus_USA_emergency_measures
+        icon = government_beu
         x = 1
         y = 3
         cost = 5
@@ -210,7 +210,7 @@ focus_tree = {
 
     focus = {
         id = USA_prepare_the_vaccine
-        icon = GFX_focus_generic_prepare_the_vaccine
+        icon = pharma_drugs
         x = 2
         y = 4
         cost = 5
@@ -242,7 +242,7 @@ focus_tree = {
 
     focus = {
         id = USA_american_only_oil
-        icon = GFX_focus_USA_oil_crisis
+        icon = oil_production
         x = 3
         y = 5
         cost = 5
@@ -275,7 +275,7 @@ focus_tree = {
 
     focus = {
         id = USA_back_the_blue
-        icon = GFX_focus_USA_back_the_blue
+        icon = Generic_Policeman
         x = 6
         y = 2
         cost = 5
@@ -297,7 +297,7 @@ focus_tree = {
 
     focus = {
         id = USA_crush_the_rioters
-        icon = GFX_focus_USA_crush_the_protesters
+        icon = deal_with_traitors
         x = 5
         y = 3
         cost = 5
@@ -321,7 +321,7 @@ focus_tree = {
 
     focus = {
         id = USA_compromise_with_the_protesters
-        icon = GFX_focus_USA_compromise_with_the_protesters
+        icon = union_negotiations
         x = 7
         y = 3
         cost = 5
@@ -349,7 +349,7 @@ focus_tree = {
 
     focus = {
         id = USA_end_the_chaos
-        icon = GFX_focus_USA_end_the_chaos
+        icon = national_unity
         x = 6
         y = 4
         cost = 5
@@ -372,7 +372,7 @@ focus_tree = {
 
     focus = {
         id = USA_lasting_peace
-        icon = GFX_focus_USA_lasting_peace
+        icon = bread_and_peace
         x = 5
         y = 5
         cost = 5
@@ -395,7 +395,7 @@ focus_tree = {
 
     focus = {
         id = USA_stimulate_the_economy
-        icon = GFX_focus_USA_stimulate_the_economy
+        icon = better_money
         x = 4
         y = 2
         cost = 5
@@ -425,7 +425,7 @@ focus_tree = {
 
     focus = {
         id = USA_reinvigorate_the_economy
-        icon = GFX_focus_USA_reinvigorate_the_economy
+        icon = economic_prosperity2
         x = 4
         y = 4
         cost = 5
@@ -446,11 +446,9 @@ focus_tree = {
             }
             USA_reduce_locked_down_economy = yes
         }
-    }
-
-    focus = {
+    }    focus = {
         id = USA_side_against_trump
-        icon = GFX_focus_USA_side_against_trump
+        icon = USA_democratic_party
         relative_position_id = USA_state_of_the_union
         x = -4
         y = 1
@@ -459,9 +457,22 @@ focus_tree = {
             trigger = {
                 has_country_flag = USA_sided_with_resistance_flag }
         cost = 5
+        available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_POLITICAL }
         prerequisite = { focus = USA_state_of_the_union }
-        mutually_exclusive = { focus = USA_side_with_trump }
+        prerequisite = { focus = USA_side_against_trump }
+        prerequisite = { focus = USA_no_justice_no_peace }
+        prerequisite = { focus = USA_no_justice_no_peace }
+        prerequisite = { focus = USA_abandon_the_anarchists focus = USA_mingle_with_the_movement }
+        prerequisite = { focus = USA_flames_of_the_future }
+        prerequisite = { focus = USA_fuel_the_machine }
+        prerequisite = { focus = USA_side_against_trump }
+        prerequisite = { focus = USA_engage_the_media }
+        prerequisite = { focus = USA_side_against_trump }
+        prerequisite = { focus = USA_expand_the_cdc }
+        prerequisite = { focus = USA_expand_the_cdc }
+        prerequisite = { focus = USA_executive_order_14066 }
+        mutually_exclusive = { focus = USA_side_with_trump focus = USA_mingle_with_the_movement focus = USA_abandon_the_anarchists focus = USA_meet_in_the_middle focus = USA_high_expectations }
         available = {
             is_completed_by_event = yes
         }
@@ -501,9 +512,13 @@ focus_tree = {
         }
     }
 
+
+        }
+    }
+
     focus = {
         id = USA_no_justice_no_peace
-        icon = GFX_focus_USA_no_justice_no_peace
+        icon = political_pressure_blue
         x = -6
         y = 2
         cost = 5
@@ -529,7 +544,7 @@ focus_tree = {
 
     focus = {
         id = USA_abandon_the_anarchists
-        icon = GFX_focus_USA_abandon_the_anarchists
+        icon = deal_with_traitors
         x = -7
         y = 3
         cost = 5
@@ -577,7 +592,7 @@ focus_tree = {
 
     focus = {
         id = USA_mingle_with_the_movement
-        icon = GFX_focus_USA_mingle_with_the_movement
+        icon = concessions
         x = -5
         y = 3
         cost = 5
@@ -611,7 +626,7 @@ focus_tree = {
 
     focus = {
         id = USA_flames_of_the_future
-        icon = GFX_focus_USA_the_fire_rises
+        icon = burning_globe
         x = -6
         y = 4
         cost = 5
@@ -650,7 +665,7 @@ focus_tree = {
 
     focus = {
         id = USA_silence_the_tyrant
-        icon = GFX_focus_USA_silence_trump
+        icon = Generic_Ripping_Papers
         x = -5
         y = 5
         cost = 5
@@ -676,7 +691,7 @@ focus_tree = {
 
     focus = {
         id = USA_engage_the_media
-        icon = GFX_focus_USA_fund_the_media
+        icon = USA_millennium_media
         x = -4
         y = 2
         cost = 5
@@ -702,7 +717,7 @@ focus_tree = {
 
     focus = {
         id = USA_fuel_the_machine
-        icon = GFX_focus_USA_trump_mania
+        icon = national_unity_red
         x = -4
         y = 4
         cost = 5
@@ -727,7 +742,7 @@ focus_tree = {
 
     focus = {
         id = USA_expand_the_cdc
-        icon = GFX_focus_USA_expand_the_cdc
+        icon = generic_healthcare
         x = -2
         y = 2
         cost = 5
@@ -776,7 +791,7 @@ focus_tree = {
 
     focus = {
         id = USA_high_expectations
-        icon = GFX_focus_USA_high_expectations
+        icon = torchbearers_of_tomorrow
         x = -3
         y = 3
         cost = 5
@@ -821,7 +836,7 @@ focus_tree = {
 
     focus = {
         id = USA_meet_in_the_middle
-        icon = GFX_focus_USA_meet_in_the_middle
+        icon = USA_balanced_approach
         x = -1
         y = 3
         cost = 5
@@ -865,7 +880,7 @@ focus_tree = {
         }
     }    focus = {
         id = USA_national_lockdowns
-        icon = GFX_focus_USA_flames_of_the_future
+        icon = green_projects
         x = -4
         y = 12
         cost = 10
@@ -913,7 +928,7 @@ focus_tree = {
         }
     }    focus = {
         id = USA_green_economics
-        icon = GFX_focus_generic_bury_weapons
+        icon = green_projects
         x = -3
         y = 5
         cost = 5
@@ -953,7 +968,7 @@ focus_tree = {
 
     focus = {
         id = USA_keep_america_great
-        icon = GFX_focus_USA_assure_security
+        icon = american_nationalism
         relative_position_id = USA_reinvigorate_the_economy
         x = 0
         y = 2
@@ -991,7 +1006,7 @@ focus_tree = {
 
     focus = {
         id = USA_defend_the_second_amendment
-        icon = GFX_focus_USA_second_ammendment
+        icon = USA_american_militias
         x = -2
         y = 4
         cost = 5
@@ -1026,7 +1041,7 @@ focus_tree = {
 
     focus = {
         id = USA_standing_down_and_standing_by
-        icon = GFX_focus_USA_presidential_militias
+        icon = USA_american_militias
         x = 2
         y = 9
         cost = 5
@@ -1065,7 +1080,7 @@ focus_tree = {
 
     focus = {
         id = USA_enforce_order
-        icon = GFX_focus_USA_enforce_order
+        icon = secret_police
         x = 0
         y = 6
         cost = 5
@@ -1094,7 +1109,7 @@ focus_tree = {
 
     focus = {
         id = USA_by_law
-        icon = GFX_focus_USA_lasting_peace
+        icon = bread_and_peace
         x = 3
         y = 8
         cost = 5
@@ -1126,7 +1141,7 @@ focus_tree = {
 
     focus = {
         id = USA_by_force
-        icon = GFX_focus_USA_unify_the_army
+        icon = united_states_army
         x = 5
         y = 8
         cost = 5
@@ -1158,7 +1173,7 @@ focus_tree = {
 
     focus = {
         id = USA_end_state_lockdowns
-        icon = GFX_focus_generic_end_lockdowns
+        icon = generic_hospital2
         x = 4
         y = 9
         cost = 5
@@ -1186,7 +1201,7 @@ focus_tree = {
 
     focus = {
         id = USA_purge_the_pentagon
-        icon = GFX_focus_USA_purge_the_pentagon
+        icon = pentagon
         x = 8
         y = 9
         cost = 5
@@ -1219,7 +1234,7 @@ focus_tree = {
 
     focus = {
         id = USA_unify_the_military
-        icon = GFX_focus_USA_purge_the_pentagon
+        icon = pentagon
         x = 6
         y = 9
         cost = 5
@@ -1254,7 +1269,7 @@ focus_tree = {
 
     focus = {
         id = USA_invoke_the_insurrection_act
-        icon = GFX_focus_USA_invoke_the_insurrection_act
+        icon = army_marching
         x = 4
         y = 12
         cost = 5
@@ -1294,7 +1309,7 @@ focus_tree = {
 
     focus = {
         id = USA_the_shadow_presidency
-        icon = GFX_focus_USA_shadow_presidency
+        icon = secret_police
         x = 4
         y = 6
         cost = 5
@@ -1328,7 +1343,7 @@ focus_tree = {
 
     focus = {
         id = USA_underground_armaments
-        icon = GFX_focus_USA_by_force
+        icon = black_market
         x = 2
         y = 7
         cost = 5
@@ -1364,7 +1379,7 @@ focus_tree = {
 
     focus = {
         id = USA_fan_the_flames
-        icon = GFX_focus_USA_fan_the_flames
+        icon = focus_generic_fascist_propaganda
         x = 4
         y = 7
         cost = 5
@@ -1388,7 +1403,7 @@ focus_tree = {
 
     focus = {
         id = USA_rally_the_people
-        icon = GFX_focus_USA_rally_the_people
+        icon = american_nationalism
         x = 6
         y = 7
         cost = 5
@@ -1414,7 +1429,7 @@ focus_tree = {
 
     focus = {
         id = USA_the_fire_rises
-        icon = GFX_focus_USA_the_fire_rises
+        icon = burning_globe
         x = 6
         y = 12
         cost = 5
@@ -1446,7 +1461,7 @@ focus_tree = {
 
     focus = {
         id = USA_build_back_better
-        icon = GFX_focus_USA_build_back_better
+        icon = BRA_renewable_energy_funds
         x = -8
         y = 8
         cost = 5
@@ -1480,7 +1495,7 @@ focus_tree = {
 
     focus = {
         id = USA_promise_progress
-        icon = GFX_focus_USA_promise_progress
+        icon = torchbearers_of_tomorrow
         x = -8
         y = 10
         cost = 5
@@ -1504,7 +1519,7 @@ focus_tree = {
 
     focus = {
         id = USA_address_the_infrastructure
-        icon = GFX_focus_USA_build_back_better_act
+        icon = infrastructure1
         x = -9
         y = 12
         cost = 5
@@ -1609,7 +1624,7 @@ focus_tree = {
 
     focus = {
         id = USA_unifiy_the_democratic_party
-        icon = GFX_focus_USA_unify_the_dems
+        icon = USA_democratic_party
         x = -9
         y = 9
         cost = 5
@@ -1639,7 +1654,7 @@ focus_tree = {
 
     focus = {
         id = USA_mandate_the_mask
-        icon = GFX_focus_generic_mandate_the_mask
+        icon = generic_hospital2
         x = -10
         y = 10
         cost = 5
@@ -1669,7 +1684,7 @@ focus_tree = {
 
     focus = {
         id = USA_expand_lockdowns
-        icon = GFX_focus_generic_bury_weapons
+        icon = green_projects
         x = 0
         y = 5
         cost = 5
@@ -1716,7 +1731,7 @@ focus_tree = {
 
     focus = {
         id = USA_empower_the_government
-        icon = GFX_focus_USA_everything_is_fine
+        icon = american_government
         x = -3
         y = 7
         cost = 5
@@ -1747,7 +1762,7 @@ focus_tree = {
 
     focus = {
         id = USA_reconcile_republicans
-        icon = GFX_focus_USA_reconcile_republicans
+        icon = USA_balanced_approach
         x = -4
         y = 8
         cost = 10
@@ -1781,7 +1796,7 @@ focus_tree = {
 
     focus = {
         id = USA_minimalize_militias
-        icon = GFX_focus_USA_minimize_militias
+        icon = USA_balanced_approach
         x = -1
         y = 12
         cost = 5
@@ -1822,7 +1837,7 @@ focus_tree = {
 
     focus = {
         id = USA_executive_order_14066
-        icon = GFX_focus_USA_executive_order_14066
+        icon = legislation
         x = -4
         y = 10
         cost = 5
@@ -1859,7 +1874,7 @@ focus_tree = {
 
     focus = {
         id = USA_oppose_the_tyrant
-        icon = GFX_focus_USA_oppose_the_tyrant
+        icon = deal_with_traitors
         x = -4
         y = 6
         cost = 5
@@ -1900,7 +1915,7 @@ focus_tree = {
 
     focus = {
         id = USA_the_true_revolution_begins
-        icon = GFX_focus_USA_the_true_revolution
+        icon = Generic_Socialist_Revolution
         x = 0
         y = 7
         cost = 5
@@ -1916,7 +1931,7 @@ focus_tree = {
 
     focus = {
         id = USA_ridin_with_biden
-        icon = GFX_focus_USA_the_third_impeachment
+        icon = Red_Tearing_Paper
         x = -5
         y = 7
         cost = 10
@@ -1954,7 +1969,7 @@ focus_tree = {
 
     focus = {
         id = USA_support_national_socialism
-        icon = GFX_focus_NSM_propagate_national_socialism
+        icon = focus_generic_fascist_propaganda
         x = 0
         y = 9
         cost = 5
@@ -2003,7 +2018,7 @@ focus_tree = {
 
     focus = {
         id = USA_the_third_impeachment
-        icon = GFX_focus_USA_the_third_impeachment
+        icon = Red_Tearing_Paper
         x = -9
         y = 5
         cost = 5
@@ -2035,3 +2050,4 @@ focus_tree = {
     }
 
 }
+

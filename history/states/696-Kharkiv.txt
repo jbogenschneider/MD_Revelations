@@ -11,33 +11,10 @@ state = {
 			infrastructure = 2
 			internet_station = 1
 			air_base = 4
+			stronghold_network = 1
 			9556 = {
 				# KMDB
 				land_facility = 1
-			}
-			418 = {
-				bunker = 7
-			}
-			3409 = {
-				bunker = 7
-			}
-			6530 = {
-				bunker = 7
-			}
-			6554 = {
-				bunker = 7
-			}		
-			11397 = {
-				bunker = 7
-			}
-			11541 = {
-				bunker = 7
-			}
-			14444 = {
-				bunker = 7
-			}
-			14445 = {
-				bunker = 7
 			}
 		}
 		add_core_of = UKR

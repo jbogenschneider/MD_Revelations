@@ -1,4 +1,4 @@
-﻿capital = 272
+capital = 272
 2024.1.1 = {
 	add_ideas = {
 		rampant_corruption

@@ -1,4 +1,4 @@
-﻿capital = 91
+capital = 91
 2024.1.1 = {
 	set_variable = { gdp_per_capita = 34.757 }
 	oob = "SPR_2000_nsb"

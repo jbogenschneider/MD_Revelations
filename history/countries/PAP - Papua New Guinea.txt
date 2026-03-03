@@ -1,4 +1,4 @@
-﻿capital = 730
+capital = 730
 2024.1.1 = {
 	oob = "PAP_2000"
 

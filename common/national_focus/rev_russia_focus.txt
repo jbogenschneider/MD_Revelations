@@ -1,0 +1,333 @@
+focus_tree = {
+	id = rev_russia_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 100
+			tag = SOV
+		}
+	}
+
+	continuous_focus_position = { x = 0 y = 0 }
+	initial_show_position = { x = 10 y = 0 }
+
+	focus = {
+		id = rev_SOV_president_putin_entry
+		icon = SOV_putinism
+
+		x = 4
+		y = 0
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+			has_country_flag = RUSSIA_PUTIN_PATH
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+		}
+
+		ai_will_do = {
+			base = 50
+			modifier = {
+				add = 400
+				has_country_flag = RUSSIA_PUTIN_PATH
+			}
+		}
+	}
+
+	focus = {
+		id = rev_SOV_president_sokolov_entry
+		icon = SOV_oligarchic_republic
+
+		x = 2
+		y = 0
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+			has_country_flag = RUSSIA_OLIGARCH_PATH
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+		}
+
+		ai_will_do = {
+			base = 50
+			modifier = {
+				add = 400
+				has_country_flag = RUSSIA_OLIGARCH_PATH
+			}
+		}
+	}
+
+	focus = {
+		id = rev_SOV_president_volodin_entry
+		icon = SOV_russian_elections
+
+		x = 6
+		y = 0
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+			has_country_flag = RUSSIA_TECHNOCRAT_PATH
+		}
+
+		completion_reward = {
+			add_stability = 0.06
+		}
+
+		ai_will_do = {
+			base = 50
+			modifier = {
+				add = 400
+				has_country_flag = RUSSIA_TECHNOCRAT_PATH
+			}
+		}
+	}
+
+	focus = {
+		id = rev_SOV_president_orlov_entry
+		icon = SOV_aggressive_foreign_policy
+
+		x = 8
+		y = 0
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+			has_country_flag = RUSSIA_POPULIST_PATH
+		}
+
+		completion_reward = {
+			add_stability = 0.04
+		}
+
+		ai_will_do = {
+			base = 50
+			modifier = {
+				add = 400
+				has_country_flag = RUSSIA_POPULIST_PATH
+			}
+		}
+	}
+
+	focus = {
+		id = rev_SOV_sokolov_financial_stabilization
+		icon = SOV_stabilisation_fund
+		relative_position_id = rev_SOV_president_sokolov_entry
+		x = 0
+		y = 1
+		cost = 5
+		search_filters = { FOCUS_FILTER_ECONOMY }
+		prerequisite = { focus = rev_SOV_president_sokolov_entry }
+		completion_reward = {
+			add_stability = 0.04
+			add_political_power = 75
+			add_to_variable = { var = debt value = -20 }
+		}
+		ai_will_do = { base = 80 }
+	}
+
+	focus = {
+		id = rev_SOV_sokolov_industry_restart
+		icon = SOV_economic_russian
+		relative_position_id = rev_SOV_sokolov_financial_stabilization
+		x = 0
+		y = 1
+		cost = 5
+		search_filters = { FOCUS_FILTER_ECONOMY }
+		prerequisite = { focus = rev_SOV_sokolov_financial_stabilization }
+		completion_reward = {
+			add_stability = 0.02
+			add_war_support = 0.01
+			add_to_variable = { var = debt value = -35 }
+		}
+		ai_will_do = { base = 80 }
+	}
+
+	focus = {
+		id = rev_SOV_sokolov_social_compact
+		icon = SOV_the_grand_bargain
+		relative_position_id = rev_SOV_sokolov_industry_restart
+		x = 0
+		y = 1
+		cost = 5
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = { focus = rev_SOV_sokolov_industry_restart }
+		completion_reward = {
+			add_stability = 0.04
+			add_war_support = -0.03
+			add_to_variable = { var = debt value = 20 }
+		}
+		ai_will_do = { base = 80 }
+	}
+
+	focus = {
+		id = rev_SOV_volodin_fiscal_discipline
+		icon = SOV_mitigate_financial_crisis
+		relative_position_id = rev_SOV_president_volodin_entry
+		x = 0
+		y = 1
+		cost = 5
+		search_filters = { FOCUS_FILTER_ECONOMY }
+		prerequisite = { focus = rev_SOV_president_volodin_entry }
+		completion_reward = {
+			add_stability = 0.02
+			add_to_variable = { var = debt value = -70 }
+		}
+		ai_will_do = { base = 80 }
+	}
+
+	focus = {
+		id = rev_SOV_volodin_admin_cleanup
+		icon = SOV_rein_in_the_government
+		relative_position_id = rev_SOV_volodin_fiscal_discipline
+		x = 0
+		y = 1
+		cost = 5
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = { focus = rev_SOV_volodin_fiscal_discipline }
+		completion_reward = {
+			add_stability = 0.03
+			add_political_power = 75
+			add_to_variable = { var = debt value = -20 }
+		}
+		ai_will_do = { base = 80 }
+	}
+
+	focus = {
+		id = rev_SOV_volodin_state_services
+		icon = SOV_go_russia
+		relative_position_id = rev_SOV_volodin_admin_cleanup
+		x = 0
+		y = 1
+		cost = 5
+		search_filters = { FOCUS_FILTER_ECONOMY }
+		prerequisite = { focus = rev_SOV_volodin_admin_cleanup }
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = -0.02
+			add_to_variable = { var = debt value = 10 }
+		}
+		ai_will_do = { base = 80 }
+	}
+
+	focus = {
+		id = rev_SOV_orlov_ruble_recovery
+		icon = SOV_state_corporatism
+		relative_position_id = rev_SOV_president_orlov_entry
+		x = 0
+		y = 1
+		cost = 5
+		search_filters = { FOCUS_FILTER_ECONOMY }
+		prerequisite = { focus = rev_SOV_president_orlov_entry }
+		completion_reward = {
+			add_stability = 0.01
+			add_war_support = 0.03
+			add_to_variable = { var = debt value = -15 }
+		}
+		ai_will_do = { base = 80 }
+	}
+
+	focus = {
+		id = rev_SOV_orlov_emergency_industry
+		icon = SOV_npp_again
+		relative_position_id = rev_SOV_orlov_ruble_recovery
+		x = 0
+		y = 1
+		cost = 5
+		search_filters = { FOCUS_FILTER_ECONOMY }
+		prerequisite = { focus = rev_SOV_orlov_ruble_recovery }
+		completion_reward = {
+			add_stability = 0.01
+			add_war_support = 0.02
+			add_to_variable = { var = debt value = -25 }
+		}
+		ai_will_do = { base = 80 }
+	}
+
+	focus = {
+		id = rev_SOV_orlov_national_cohesion
+		icon = SOV_unite_as_one
+		relative_position_id = rev_SOV_orlov_emergency_industry
+		x = 0
+		y = 1
+		cost = 5
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = { focus = rev_SOV_orlov_emergency_industry }
+		completion_reward = {
+			add_stability = 0.03
+			add_war_support = 0.03
+			add_manpower = 75000
+		}
+		ai_will_do = { base = 80 }
+	}
+
+	focus = {
+		id = rev_SOV_putin_buy_time_1
+		icon = SOV_information_war
+		relative_position_id = rev_SOV_president_putin_entry
+		x = 0
+		y = 1
+		cost = 5
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = { focus = rev_SOV_president_putin_entry }
+		completion_reward = {
+			add_stability = 0.01
+			add_war_support = 0.01
+			add_to_variable = { var = debt value = 60 }
+			set_country_flag = russia_delay_crisis_1
+			clr_country_flag = russia_delay_crisis_2
+			clr_country_flag = russia_delay_crisis_3
+		}
+		ai_will_do = { base = 80 }
+	}
+
+	focus = {
+		id = rev_SOV_putin_buy_time_2
+		icon = SOV_anti_bsb
+		relative_position_id = rev_SOV_putin_buy_time_1
+		x = 0
+		y = 1
+		cost = 5
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = { focus = rev_SOV_putin_buy_time_1 }
+		completion_reward = {
+			add_stability = 0.01
+			add_war_support = 0.01
+			add_to_variable = { var = debt value = 70 }
+			set_country_flag = russia_delay_crisis_2
+			clr_country_flag = russia_delay_crisis_1
+			clr_country_flag = russia_delay_crisis_3
+		}
+		ai_will_do = { base = 80 }
+	}
+
+	focus = {
+		id = rev_SOV_putin_buy_time_3
+		icon = SOV_secret_strike
+		relative_position_id = rev_SOV_putin_buy_time_2
+		x = 0
+		y = 1
+		cost = 5
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = { focus = rev_SOV_putin_buy_time_2 }
+		completion_reward = {
+			add_stability = 0.01
+			add_war_support = 0.02
+			add_to_variable = { var = debt value = 80 }
+			set_country_flag = russia_delay_crisis_3
+			clr_country_flag = russia_delay_crisis_1
+			clr_country_flag = russia_delay_crisis_2
+		}
+		ai_will_do = { base = 80 }
+	}
+}

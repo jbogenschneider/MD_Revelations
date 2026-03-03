@@ -1,4 +1,4 @@
-﻿capital = 484
+capital = 484
 2024.1.1 = {
 	oob = "BHU_2000"
 	set_cosmetic_tag = BHU_AUTH_S

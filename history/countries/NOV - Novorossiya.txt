@@ -1,4 +1,4 @@
-﻿capital = 693
+capital = 693
 2024.1.1 = {
 	set_cosmetic_tag = NOV
 	set_variable = { gdp_per_capita = 7.497 }

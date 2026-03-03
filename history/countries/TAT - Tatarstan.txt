@@ -1,4 +1,4 @@
-﻿capital = 661
+capital = 661
 2024.1.1 = {
 	#oob = "TAT_2000"
 

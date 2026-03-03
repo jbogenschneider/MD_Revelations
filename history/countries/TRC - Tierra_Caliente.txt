@@ -1,4 +1,4 @@
-﻿capital = 837
+capital = 837
 2024.1.1 = {
 	set_variable = { gdp_per_capita = 17.943 }
 
@@ -152,7 +152,7 @@
 			tech_torpedoes = 1
 			tech_torpedoes_1 = 1
 
-			tech_mtg_landing_craft = 1
+			tech_landing_craft = 1
 		}
 
 	add_ideas = {

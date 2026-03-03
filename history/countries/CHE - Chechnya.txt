@@ -1,4 +1,4 @@
-﻿capital = 672
+capital = 672
 2024.1.1 = {
 	set_cosmetic_tag = CHE
 	set_country_flag = dynamic_flag

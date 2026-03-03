@@ -1,4 +1,4 @@
-﻿capital = 547
+capital = 547
 2024.1.1 = {
 	set_cosmetic_tag = CHI_AUTH_S
 	set_country_flag = dynamic_flag
@@ -3097,7 +3097,7 @@
 		tech_torpedoes_1 = 1
 		tech_torpedoes_2 = 1
 
-		tech_mtg_landing_craft = 1
+		tech_landing_craft = 1
 	}
 
 	#Type 051 Class https://en.wikipedia.org/wiki/Type_051_destroyer
@@ -4606,7 +4606,7 @@
 			modules = {
 				main_armament_slot = tank_medium_cannon_2
 				turret_type_slot = tank_soviet_turret
-				suspension_type_slot = tank_torsion_bar_suspension
+				suspension_type_slot = tank_torsion_bar_suspension_medium
 				armor_type_slot = tank_composite_armor_gen2
 				engine_type_slot = tank_diesel_engine_gen5
 				reload_type_slot = automatic_loading
@@ -4767,9 +4767,9 @@
 			tech_torpedoes_1 = 1
 			tech_torpedoes_2 = 1
 
-			tech_mtg_landing_craft = 1
-			tech_mtg_amphibious_assault_ship = 1
-			tech_mtg_air_cushioned_landing_craft = 1
+			tech_landing_craft = 1
+			tech_amphibious_assault_ship = 1
+			tech_air_cushioned_landing_craft = 1
 		}
 
 		#Adhafer Class https://en.wikipedia.org/wiki/Adhafer-class_corvette
@@ -5103,7 +5103,7 @@
 				missile_frigate_2 = 1
 				missile_frigate_3 = 1 #Type 054A frigate Jiangkai II class,
 
-				submarine_1 = 1
+				attack_submarine_hull_1 = 1
 
 				missile_submarine_2 = 1 #Jin-class
 				missile_submarine_3 = 1 #093B-class
@@ -5111,7 +5111,7 @@
 				attack_submarine_2 = 1
 				attack_submarine_3 = 1 #Shang-class
 
-				diesel_attack_submarine_2 = 1 #Song-class
+				attack_submarine_hull_2 = 1 #Song-class
 				diesel_attack_submarine_3 = 1 #Kilo-class
 
 				LPD_0 = 1
@@ -5125,20 +5125,20 @@
 
 			create_equipment_variant = {
 				name = "Type 051C Luzhou-Class"
-				type = missile_destroyer_1
+				type = destroyer_hull_2
 				upgrades = {
 				}
 				obsolete = yes
 			}
 			create_equipment_variant = {
 				name = "C28A-Class"
-				type = missile_corvette_2
+				type = corvette_hull_3
 				upgrades = {
 				}
 			}
 			create_equipment_variant = {
 				name = "C13B-Class"
-				type = missile_corvette_2
+				type = corvette_hull_3
 				upgrades = {
 				}
 			}

@@ -1,4 +1,4 @@
-﻿capital = 1075
+capital = 1075
 2024.1.1 = {
 	#oob = "LPR_2017"
 	set_cosmetic_tag = LPR

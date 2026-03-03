@@ -1,4 +1,4 @@
-﻿capital = 191
+capital = 191
 2024.1.1 = {
 	set_variable = { gdp_per_capita = 8.780 }
 	add_ideas = {

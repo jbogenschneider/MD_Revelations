@@ -1,4 +1,4 @@
-﻿capital = 357
+capital = 357
 2024.1.1 = {
 	oob = "AFR_2000"
 	set_country_flag = is_civil_war_faction

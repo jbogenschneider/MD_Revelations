@@ -1,4 +1,4 @@
-﻿capital = 1106
+capital = 1106
 2024.1.1 = {
 	set_cosmetic_tag = MAC_autonomy_special_administrative_region
 	oob = "MAC_2000"

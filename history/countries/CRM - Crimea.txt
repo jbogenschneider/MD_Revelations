@@ -1,4 +1,4 @@
-﻿capital = 669
+capital = 669
 2024.1.1 = {
 	#oob = "CRM_2000"
 

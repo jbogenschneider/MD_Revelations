@@ -1,4 +1,4 @@
-﻿capital = 499
+capital = 499
 2024.1.1 = {
 	set_cosmetic_tag = CHS_nationalist
 	set_country_flag = dynamic_flag

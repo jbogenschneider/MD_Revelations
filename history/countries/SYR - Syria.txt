@@ -1,4 +1,4 @@
-﻿capital = 186
+capital = 186
 
 2024.1.1 = {
 	if = {
@@ -245,7 +245,7 @@
 		set_technology = {
 			tech_early_naval_weapon_systems = 1
 			corvette_hull_1 = 1
-			tech_mtg_landing_craft = 1
+			tech_landing_craft = 1
 		}
 
 	#Variables for 2000 focus tree
@@ -582,9 +582,9 @@
 			#Basic generic package for purchases to work
 			corvette_1 = 1
 			frigate_1 = 1
-			submarine_1 = 1
-			diesel_attack_submarine_1 = 1
-			landing_craft = 1
+			attack_submarine_hull_1 = 1
+			attack_submarine_hull_1 = 1
+			tech_landing_craft = 1
 		}
 	}
 	if = {
@@ -639,7 +639,7 @@
 			tech_torpedoes = 1
 			tech_torpedoes_1 = 1
 
-			tech_mtg_landing_craft = 1
+			tech_landing_craft = 1
 		}
 	}
 	#Removing variables for 2000 focus tree

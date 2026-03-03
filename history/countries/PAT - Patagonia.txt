@@ -1,4 +1,4 @@
-﻿capital = 454 #Patagonia
+capital = 454 #Patagonia
 2024.1.1 = {
 	set_variable = { gdp_per_capita = 18.525 }
 	add_ideas = {
@@ -198,7 +198,7 @@
 
 			tech_torpedoes = 1
 
-			tech_mtg_landing_craft = 1
+			tech_landing_craft = 1
 		}
 
 	#Money System

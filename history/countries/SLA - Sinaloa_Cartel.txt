@@ -1,4 +1,4 @@
-﻿capital = 831 # Culiacan
+capital = 831 # Culiacan
 2024.1.1 = {
 	set_variable = { gdp_per_capita = 17.943 }
 
@@ -135,7 +135,7 @@
 
 			tech_torpedoes = 1
 
-			tech_mtg_landing_craft = 1
+			tech_landing_craft = 1
 		}
 
 	add_ideas = {

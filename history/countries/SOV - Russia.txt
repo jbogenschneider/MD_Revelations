@@ -159,8 +159,8 @@ capital = 652
 			tech_torpedoes = 1
 			tech_torpedoes_1 = 1
 
-			tech_mtg_landing_craft = 1
-			tech_mtg_amphibious_assault_ship = 1
+			tech_landing_craft = 1
+			tech_amphibious_assault_ship = 1
 		}
 
 		#Kiev Class/Pr.1143
@@ -4022,12 +4022,6 @@ capital = 652
 			IRBM2 = 1
 			IRBM3 = 1
 
-			ICBM = 1
-			ICBM1 = 1
-			ICBM2 = 1
-			ICBM3 = 1
-			ICBM4 = 1
-
 			cruise_missile = 1
 
 			GLCM = 1
@@ -4066,8 +4060,7 @@ capital = 652
 
 		set_variable = { num_launchers_set = 9 }
 
-		# Set the Nuclear Warhead Stance
-		complete_special_project = sp:sp_nuclear_warhead_program
+		# Nuclear warhead project intentionally not granted at start
 		else = {
 			complete_special_project = sp:sp_space_program_non_gdm
 		}
@@ -5777,8 +5770,8 @@ capital = 652
 			tech_torpedoes = 1
 			tech_torpedoes_1 = 1
 
-			tech_mtg_landing_craft = 1
-			tech_mtg_amphibious_assault_ship = 1
+			tech_landing_craft = 1
+			tech_amphibious_assault_ship = 1
 		}
 
 		#Kiev Class/Pr.1143
@@ -9640,12 +9633,6 @@ capital = 652
 			IRBM2 = 1
 			IRBM3 = 1
 
-			ICBM = 1
-			ICBM1 = 1
-			ICBM2 = 1
-			ICBM3 = 1
-			ICBM4 = 1
-
 			cruise_missile = 1
 
 			GLCM = 1
@@ -9684,8 +9671,7 @@ capital = 652
 
 		set_variable = { num_launchers_set = 9 }
 
-		# Set the Nuclear Warhead Stance
-		complete_special_project = sp:sp_nuclear_warhead_program
+		# Nuclear warhead project intentionally not granted at start
 		else = {
 			complete_special_project = sp:sp_space_program_non_gdm
 		}

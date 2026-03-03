@@ -1,4 +1,4 @@
-﻿capital = 724
+capital = 724
 2024.1.1 = {
 	set_cosmetic_tag = TAJ
 	set_country_flag = TAJ_dictatorship_flag

@@ -1,4 +1,4 @@
-﻿capital = 885
+capital = 885
 2024.1.1 = {
 	set_country_flag = dynamic_flag
 	set_country_flag = dynamic_rebel_flag
@@ -501,7 +501,7 @@
 			tech_torpedoes = 1
 			tech_torpedoes_1 = 1
 
-			tech_mtg_landing_craft = 1
+			tech_landing_craft = 1
 		}
 
 		#Colossus Class https://en.wikipedia.org/wiki/Brazilian_aircraft_carrier_Minas_Gerais
@@ -1095,7 +1095,7 @@
 		transport_plane2 = 1
 		transport_plane3 = 1
 
-		landing_craft = 1
+		tech_landing_craft = 1
 
 		body_armor_2000 = 1
 
@@ -1221,7 +1221,7 @@
 			tech_torpedoes_1 = 1
 			tech_torpedoes_2 = 1
 
-			tech_mtg_landing_craft = 1
+			tech_landing_craft = 1
 		}
 
 		################
@@ -1250,10 +1250,10 @@
 		else = {
 			set_technology = {
 				#Prosub program
-				submarine_1 = 1
+				attack_submarine_hull_1 = 1
 
-				diesel_attack_submarine_1 = 1
-				diesel_attack_submarine_2 = 1
+				attack_submarine_hull_1 = 1
+				attack_submarine_hull_2 = 1
 				diesel_attack_submarine_3 = 1
 				diesel_attack_submarine_4 = 1
 
