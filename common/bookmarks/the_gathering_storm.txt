@@ -645,7 +645,7 @@ bookmarks = {
 				set_technology = { internet4 = 1 }
 				set_technology = { hsupa = 1 }
 				set_technology = { lte = 1 }
-				set_technology = { wimax = 1 }
+				#set_technology = { wimax = 1 }
 				#set_technology = { internet5 = 1 }
 				#set_technology = { lifi = 1 }
 
@@ -1480,6 +1480,7 @@ bookmarks = {
 				set_technology = { Anti_tank_3 = 1 }
 				set_technology = { Anti_Air_3 = 1 }
 				set_technology = { lifi = 1 }
+				set_technology = { internet5 = 1 }
 				set_technology = { modern_deep_learning = 1 }
 				set_technology = { fully_automated_drones = 1 }
 				set_technology = { crispr_treatment = 1 }
@@ -1589,6 +1590,7 @@ bookmarks = {
 				set_technology = { Anti_tank_3 = 1 }
 				set_technology = { Anti_Air_3 = 1 }
 				set_technology = { lifi = 1 }
+				set_technology = { internet5 = 1 }
 				set_technology = { modern_deep_learning = 1 }
 				set_technology = { fully_automated_drones = 1 }
 				set_technology = { crispr_treatment = 1 }
@@ -1697,6 +1699,7 @@ bookmarks = {
 				set_technology = { Anti_tank_3 = 1 }
 				set_technology = { Anti_Air_3 = 1 }
 				set_technology = { lifi = 1 }
+				set_technology = { internet5 = 1 }
 				set_technology = { modern_deep_learning = 1 }
 				set_technology = { fully_automated_drones = 1 }
 				set_technology = { crispr_treatment = 1 }
@@ -1803,6 +1806,7 @@ bookmarks = {
 				set_technology = { Anti_tank_3 = 1 }
 				set_technology = { Anti_Air_3 = 1 }
 				set_technology = { lifi = 1 }
+				set_technology = { internet5 = 1 }
 				set_technology = { modern_deep_learning = 1 }
 				set_technology = { fully_automated_drones = 1 }
 				set_technology = { crispr_treatment = 1 }
@@ -1849,7 +1853,7 @@ bookmarks = {
 			
 			}
 			USA = {
-				complete_special_project = sp:sp_nuclear_warhead_program
+				#complete_special_project = sp:sp_nuclear_warhead_program
 				complete_special_project = sp:sp_space_program_gdm
 				complete_special_project = sp:sp_missile_project
 				complete_special_project = sp:sp_missile_project_non_got
@@ -1869,6 +1873,10 @@ bookmarks = {
 				set_technology = { transport_helicopter4 = 1 }
 				set_technology = { SP_Anti_Air_3 = 1 }
 				set_technology = { L_Strike_fighter3 = 1 }
+				set_technology = { Strike_fighter4 = 1 }
+				set_technology = { MR_Fighter4 = 1 }
+				set_technology = { Strike_fighter3 = 1 }
+				set_technology = { MR_Fighter3 = 1 }
 				set_technology = { Air_UAV1 = 1 }
 				set_technology = { Air_UAV2 = 1 }
 				set_technology = { awacs_plane2 = 1 }
@@ -1897,6 +1905,7 @@ bookmarks = {
 				set_technology = { Anti_tank_3 = 1 }
 				set_technology = { Anti_Air_3 = 1 }
 				set_technology = { lifi = 1 }
+				set_technology = { internet5 = 1 }
 				set_technology = { modern_deep_learning = 1 }
 				set_technology = { fully_automated_drones = 1 }
 				set_technology = { crispr_treatment = 1 }

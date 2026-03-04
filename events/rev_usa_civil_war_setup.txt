@@ -1,0 +1,142 @@
+add_namespace = rev_usa_cw
+
+# Manual setup event for the September 2028 impeachment branch.
+country_event = {
+	id = rev_usa_cw.1
+	title = rev_usa_cw.1.t
+	desc = rev_usa_cw.1.d
+	picture = GFX_report_event_usa_election
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+	}
+
+	option = {
+		name = rev_usa_cw.1.a
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.1.a"
+		rev_setup_usa_civil_war_sides_impeachment = yes
+	}
+}
+
+# Manual setup event for the September 2028 Canada war branch.
+country_event = {
+	id = rev_usa_cw.2
+	title = rev_usa_cw.2.t
+	desc = rev_usa_cw.2.d
+	picture = GFX_report_event_generic_war
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+	}
+
+	option = {
+		name = rev_usa_cw.2.a
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.2.a"
+		rev_setup_usa_civil_war_sides = yes
+	}
+}
+
+# Impeachment/removal branch war declaration (Sept 20, 2028).
+country_event = {
+	id = rev_usa_cw.12
+	title = rev_usa_cw.12.t
+	desc = rev_usa_cw.12.d
+	picture = GFX_report_event_generic_war
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		OR = {
+			has_country_flag = USA_sided_with_resistance_flag
+			has_country_flag = USA_ridin_with_biden_flag
+		}
+		NOT = { has_country_flag = rev_usa_cw_sep_war_fired }
+		NOT = { has_country_flag = rev_usa_civil_war_initialized }
+	}
+
+	option = {
+		name = rev_usa_cw.12.a
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.12.a"
+		set_country_flag = rev_usa_cw_sep_war_fired
+		set_country_flag = rev_usa_election_suspended_2028
+		set_politics = {
+			ruling_party = conservative
+			elections_allowed = no
+		}
+		rev_setup_usa_civil_war_sides_impeachment = yes
+	}
+}
+
+# Trump path escalation event (mid-August 2028).
+country_event = {
+	id = rev_usa_cw.10
+	title = rev_usa_cw.10.t
+	desc = rev_usa_cw.10.d
+	picture = GFX_report_event_generic_war
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = USA_sided_with_trump_flag
+		has_country_leader = {
+			character = USA_donald_trump_char
+			ruling_only = yes
+		}
+		NOT = { has_country_flag = rev_usa_cw_aug_plot_fired }
+		NOT = { has_country_flag = rev_usa_civil_war_initialized }
+	}
+
+	option = {
+		name = rev_usa_cw.10.a
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.10.a"
+		set_country_flag = rev_usa_cw_aug_plot_fired
+		set_country_flag = rev_usa_canada_plot_flag
+		add_war_support = 0.03
+		add_stability = -0.02
+	}
+}
+
+# Trump path war declaration event (Sept 20, 2028) that starts the split.
+country_event = {
+	id = rev_usa_cw.11
+	title = rev_usa_cw.11.t
+	desc = rev_usa_cw.11.d
+	picture = GFX_report_event_generic_war
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = USA_sided_with_trump_flag
+		has_country_flag = rev_usa_canada_plot_flag
+		has_country_leader = {
+			character = USA_donald_trump_char
+			ruling_only = yes
+		}
+		NOT = { has_country_flag = rev_usa_cw_sep_war_fired }
+		NOT = { has_country_flag = rev_usa_civil_war_initialized }
+	}
+
+	option = {
+		name = rev_usa_cw.11.a
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.11.a"
+		set_country_flag = rev_usa_cw_sep_war_fired
+		set_country_flag = rev_usa_election_suspended_2028
+		set_politics = {
+			ruling_party = conservative
+			elections_allowed = no
+		}
+		if = {
+			limit = {
+				CAN = { exists = yes }
+				NOT = { has_war_with = CAN }
+			}
+			declare_war_on = {
+				target = CAN
+				type = annex_everything
+			}
+		}
+		rev_setup_usa_civil_war_sides = yes
+	}
+}

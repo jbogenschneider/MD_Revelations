@@ -1,0 +1,286 @@
+focus_tree = {
+	id = REV_ukr_war_defense_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 30000
+			tag = UKR
+		}
+	}
+	continuous_focus_position = { x = 50 y = 120 }
+
+	focus = {
+		id = REV_UKR_wartime_defense_directorate
+		icon = military_planning
+		x = 14
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_DEFENSE }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			add_political_power = 100
+			add_war_support = 0.03
+		}
+	}
+
+	focus = {
+		id = REV_UKR_rapid_repair_corps
+		icon = construction3
+		x = 11
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_DEFENSE }
+		prerequisite = { focus = REV_UKR_wartime_defense_directorate }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+				name = REV_UKR_emergency_construction
+				bonus = 0.5
+				uses = 2
+				category = CAT_construction_tech
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_by = ROOT
+					is_controlled_by = ROOT
+					NOT = { any_neighbor_state = { NOT = { is_owned_by = ROOT } } }
+				}
+				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+			}
+			add_command_power = 20
+		}
+	}
+
+	focus = {
+		id = REV_UKR_national_air_shield
+		icon = anti_war_with_big_gun
+		x = 14
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_AIR_FOCUS }
+		prerequisite = { focus = REV_UKR_wartime_defense_directorate }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_by = ROOT
+					is_controlled_by = ROOT
+					NOT = { any_neighbor_state = { NOT = { is_owned_by = ROOT } } }
+				}
+				add_building_construction = { type = anti_air_building level = 1 instant_build = yes }
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_by = ROOT
+					is_controlled_by = ROOT
+					NOT = { any_neighbor_state = { NOT = { is_owned_by = ROOT } } }
+				}
+				add_building_construction = { type = anti_air_building level = 1 instant_build = yes }
+			}
+			add_equipment_to_stockpile = { type = Anti_Air_2 amount = 1200 }
+			add_equipment_to_stockpile = { type = SP_Anti_Air_0 amount = 80 }
+		}
+	}
+
+	focus = {
+		id = REV_UKR_hardened_power_units_alpha
+		icon = powerplant
+		x = 17
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_DEFENSE }
+		prerequisite = { focus = REV_UKR_wartime_defense_directorate }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_by = ROOT
+					is_controlled_by = ROOT
+					NOT = { any_neighbor_state = { NOT = { is_owned_by = ROOT } } }
+				}
+				add_building_construction = { type = fossil_powerplant level = 1 instant_build = yes }
+			}
+		}
+	}
+
+	focus = {
+		id = REV_UKR_hardened_power_units_bravo
+		icon = powerplant
+		x = 17
+		y = 2
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_DEFENSE }
+		prerequisite = { focus = REV_UKR_wartime_defense_directorate }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_by = ROOT
+					is_controlled_by = ROOT
+					NOT = { any_neighbor_state = { NOT = { is_owned_by = ROOT } } }
+				}
+				add_building_construction = { type = fossil_powerplant level = 1 instant_build = yes }
+			}
+		}
+	}
+
+	focus = {
+		id = REV_UKR_hardened_power_units_charlie
+		icon = powerplant
+		x = 17
+		y = 3
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_DEFENSE }
+		prerequisite = { focus = REV_UKR_wartime_defense_directorate }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_by = ROOT
+					is_controlled_by = ROOT
+					NOT = { any_neighbor_state = { NOT = { is_owned_by = ROOT } } }
+				}
+				add_building_construction = { type = fossil_powerplant level = 1 instant_build = yes }
+			}
+		}
+	}
+
+	focus = {
+		id = REV_UKR_distributed_defense_plants
+		icon = industry_military
+		x = 11
+		y = 2
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_DEFENSE }
+		prerequisite = { focus = REV_UKR_wartime_defense_directorate }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_by = ROOT
+					is_controlled_by = ROOT
+					NOT = { any_neighbor_state = { NOT = { is_owned_by = ROOT } } }
+					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
+				}
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_by = ROOT
+					is_controlled_by = ROOT
+					NOT = { any_neighbor_state = { NOT = { is_owned_by = ROOT } } }
+					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
+				}
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+		}
+	}
+
+	focus = {
+		id = REV_UKR_offshore_suicide_drone_contracts
+		icon = Generic_Submarine_Drone
+		x = 14
+		y = 2
+		cost = 10
+		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_RESEARCH }
+		prerequisite = { focus = REV_UKR_wartime_defense_directorate }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			add_equipment_to_stockpile = { type = kamikaze_drone_1 amount = 2000 }
+			add_equipment_to_stockpile = { type = command_control_equipment1 amount = 1000 }
+		}
+	}
+
+	focus = {
+		id = REV_UKR_offshore_air_defense_contracts
+		icon = anti_war_with_big_gun
+		x = 14
+		y = 3
+		cost = 10
+		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_AIR_FOCUS }
+		prerequisite = { focus = REV_UKR_wartime_defense_directorate }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			add_equipment_to_stockpile = { type = Anti_Air_2 amount = 1500 }
+			add_equipment_to_stockpile = { type = SP_Anti_Air_0 amount = 120 }
+			add_army_experience = 15
+		}
+	}
+
+	focus = {
+		id = REV_UKR_offshore_fighter_pipeline
+		icon = fighters2
+		x = 14
+		y = 4
+		cost = 10
+		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_AIR_FOCUS }
+		prerequisite = { focus = REV_UKR_wartime_defense_directorate }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			add_equipment_to_stockpile = { type = MR_Fighter2 amount = 24 }
+			add_equipment_to_stockpile = { type = AS_Fighter2 amount = 16 }
+			add_air_experience = 25
+		}
+	}
+
+	focus = {
+		id = REV_UKR_counter_bombing_network
+		icon = airforce_base_1
+		x = 11
+		y = 3
+		cost = 10
+		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_AIR_FOCUS }
+		prerequisite = { focus = REV_UKR_wartime_defense_directorate }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_by = ROOT
+					is_controlled_by = ROOT
+					NOT = { any_neighbor_state = { NOT = { is_owned_by = ROOT } } }
+				}
+				add_building_construction = { type = anti_air_building level = 1 instant_build = yes }
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_by = ROOT
+					is_controlled_by = ROOT
+					NOT = { any_neighbor_state = { NOT = { is_owned_by = ROOT } } }
+				}
+				add_building_construction = { type = anti_air_building level = 1 instant_build = yes }
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_by = ROOT
+					is_controlled_by = ROOT
+					NOT = { any_neighbor_state = { NOT = { is_owned_by = ROOT } } }
+				}
+				add_building_construction = { type = anti_air_building level = 1 instant_build = yes }
+			}
+		}
+	}
+
+	focus = {
+		id = REV_UKR_emergency_defense_logistics
+		icon = army_logistics
+		x = 11
+		y = 4
+		cost = 10
+		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_INDUSTRY }
+		prerequisite = { focus = REV_UKR_wartime_defense_directorate }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			add_command_power = 25
+			add_equipment_to_stockpile = { type = util_vehicle_2 amount = 1200 }
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_by = ROOT
+					is_controlled_by = ROOT
+					NOT = { any_neighbor_state = { NOT = { is_owned_by = ROOT } } }
+				}
+				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+			}
+		}
+	}
+}

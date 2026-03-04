@@ -18,11 +18,6 @@ state = {
 				add_core_of = SOV
 				add_core_of = NOV
 				add_core_of = LPR
-			buildings = {
-				6519 = {
-					bunker = 1
-				}
-			}
 			add_manpower = -194330
 		}
 	}

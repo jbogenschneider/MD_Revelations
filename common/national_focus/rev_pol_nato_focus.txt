@@ -1,0 +1,322 @@
+focus_tree = {
+	id = REV_POL_nato_default_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 20000
+			tag = POL
+		}
+	}
+	continuous_focus_position = { x = 50 y = 120 }
+
+	focus = {
+		id = REV_POL_NATO_2026_security_compact
+		icon = military_deal
+		x = 14
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_NATO }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			add_war_support = 0.02
+			add_political_power = 75
+		}
+	}
+
+	focus = {
+		id = REV_POL_NATO_rapid_procurement_authority
+		icon = defense
+		x = 12
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NATO }
+		prerequisite = { focus = REV_POL_NATO_2026_security_compact }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			add_political_power = 50
+			add_army_experience = 10
+		}
+	}
+
+	focus = {
+		id = REV_POL_NATO_munitions_surge
+		icon = production
+		x = 12
+		y = 2
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NATO }
+		prerequisite = { focus = REV_POL_NATO_rapid_procurement_authority }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			add_war_support = 0.03
+			add_army_experience = 10
+		}
+	}
+
+	focus = {
+		id = REV_POL_NATO_expand_military_factories_i
+		icon = industry_military
+		x = 11
+		y = 3
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NATO }
+		prerequisite = { focus = REV_POL_NATO_munitions_surge }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = { free_building_slots = { building = arms_factory size > 0 include_locked = yes } }
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+			random_owned_controlled_state = {
+				limit = { free_building_slots = { building = arms_factory size > 0 include_locked = yes } }
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+		}
+	}
+
+	focus = {
+		id = REV_POL_NATO_expand_military_factories_ii
+		icon = factory_planning
+		x = 11
+		y = 4
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NATO }
+		prerequisite = { focus = REV_POL_NATO_expand_military_factories_i }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = { free_building_slots = { building = arms_factory size > 0 include_locked = yes } }
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+			random_owned_controlled_state = {
+				limit = { free_building_slots = { building = arms_factory size > 0 include_locked = yes } }
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+			random_owned_controlled_state = {
+				limit = { free_building_slots = { building = arms_factory size > 0 include_locked = yes } }
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+		}
+	}
+
+	focus = {
+		id = REV_POL_NATO_forward_stockpiles
+		icon = army_mobilisation
+		x = 12
+		y = 5
+		cost = 10
+		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_NATO }
+		prerequisite = { focus = REV_POL_NATO_expand_military_factories_ii }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			add_command_power = 30
+			add_army_experience = 15
+		}
+	}
+
+	focus = {
+		id = REV_POL_NATO_integrated_training_cycle
+		icon = brothers_in_arms
+		x = 12
+		y = 6
+		cost = 10
+		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_NATO }
+		prerequisite = { focus = REV_POL_NATO_forward_stockpiles }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			add_army_experience = 25
+			add_navy_experience = 10
+			add_air_experience = 10
+		}
+	}
+
+	focus = {
+		id = REV_POL_NATO_long_war_posture
+		icon = national_unity
+		x = 12
+		y = 7
+		cost = 10
+		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_NATO }
+		prerequisite = { focus = REV_POL_NATO_integrated_training_cycle }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			add_war_support = 0.05
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = REV_POL_NATO_land_drone_program
+		icon = recon
+		x = 14
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NATO }
+		prerequisite = { focus = REV_POL_NATO_2026_security_compact }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+				name = REV_POL_NATO_land_drone_bonus_1
+				bonus = 0.5
+				uses = 1
+				technology = land_Drone_equipment2
+			}
+		}
+	}
+
+	focus = {
+		id = REV_POL_NATO_field_test_drone_wings
+		icon = scientific_exchange
+		x = 14
+		y = 2
+		cost = 10
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NATO }
+		prerequisite = { focus = REV_POL_NATO_land_drone_program }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			set_technology = land_Drone_equipment2
+			add_army_experience = 15
+		}
+	}
+
+	focus = {
+		id = REV_POL_NATO_networked_drone_fires
+		icon = Generic_Intelligence_Gathering
+		x = 14
+		y = 3
+		cost = 10
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NATO }
+		prerequisite = { focus = REV_POL_NATO_field_test_drone_wings }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			set_technology = land_Drone_equipment3
+			add_army_experience = 20
+		}
+	}
+
+	focus = {
+		id = REV_POL_NATO_autonomous_targeting_cells
+		icon = research4
+		x = 14
+		y = 4
+		cost = 10
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NATO }
+		prerequisite = { focus = REV_POL_NATO_networked_drone_fires }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			set_technology = land_Drone_equipment4
+			add_army_experience = 20
+		}
+	}
+
+	focus = {
+		id = REV_POL_NATO_joint_ew_cells
+		icon = Generic_Intelligence_Gathering
+		x = 14
+		y = 5
+		cost = 10
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NATO }
+		prerequisite = { focus = REV_POL_NATO_autonomous_targeting_cells }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+				name = REV_POL_NATO_ew_bonus
+				bonus = 0.3
+				uses = 1
+				category = electronics
+			}
+			add_command_power = 20
+		}
+	}
+
+	focus = {
+		id = REV_POL_NATO_ukraine_intel_sharing
+		icon = Generic_Intelligence_Gathering
+		x = 16
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_NATO }
+		prerequisite = { focus = REV_POL_NATO_2026_security_compact }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			add_army_experience = 15
+			if = {
+				limit = { UKR = { exists = yes } }
+				add_opinion_modifier = { target = UKR modifier = NATO_commitment }
+				UKR = {
+					reverse_add_opinion_modifier = { target = ROOT modifier = NATO_commitment }
+					add_command_power = 15
+					add_army_experience = 10
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = REV_POL_NATO_security_assistance_package
+		icon = volunteers
+		x = 16
+		y = 2
+		cost = 10
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_NATO }
+		prerequisite = { focus = REV_POL_NATO_ukraine_intel_sharing }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			add_political_power = -50
+			if = {
+				limit = { UKR = { exists = yes } }
+				UKR = {
+					add_war_support = 0.05
+					add_stability = 0.03
+					add_army_experience = 15
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = REV_POL_NATO_ukraine_development_package
+		icon = construction_development
+		x = 16
+		y = 3
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NATO }
+		prerequisite = { focus = REV_POL_NATO_security_assistance_package }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			add_political_power = -50
+			if = {
+				limit = { UKR = { exists = yes } }
+				UKR = {
+					random_owned_controlled_state = {
+						limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+						add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+					}
+					random_owned_controlled_state = {
+						limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+						add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = REV_POL_NATO_18_month_readiness
+		icon = military_deal
+		x = 14
+		y = 8
+		cost = 10
+		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_NATO }
+		prerequisite = { focus = REV_POL_NATO_long_war_posture }
+		prerequisite = { focus = REV_POL_NATO_joint_ew_cells }
+		prerequisite = { focus = REV_POL_NATO_ukraine_development_package }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_army_experience = 20
+		}
+	}
+}
