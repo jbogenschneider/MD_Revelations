@@ -1,0 +1,52 @@
+on_actions = {
+	on_daily = {
+		effect = {
+			if = {
+				limit = {
+					tag = USA
+					has_country_flag = USA_sided_with_trump_flag
+					has_country_leader = {
+						character = USA_donald_trump_char
+						ruling_only = yes
+					}
+					NOT = { has_country_flag = rev_usa_cw_aug_plot_fired }
+					NOT = { has_country_flag = rev_usa_civil_war_initialized }
+					date > 2028.8.14
+					date < 2028.8.18
+				}
+				country_event = { id = rev_usa_cw.10 }
+			}
+			if = {
+				limit = {
+					tag = USA
+					has_country_flag = USA_sided_with_trump_flag
+					has_country_flag = rev_usa_canada_plot_flag
+					has_country_leader = {
+						character = USA_donald_trump_char
+						ruling_only = yes
+					}
+					NOT = { has_country_flag = rev_usa_cw_sep_war_fired }
+					NOT = { has_country_flag = rev_usa_civil_war_initialized }
+					date > 2028.9.19
+					date < 2028.9.22
+				}
+				country_event = { id = rev_usa_cw.11 }
+			}
+			if = {
+				limit = {
+					tag = USA
+					OR = {
+						has_country_flag = USA_sided_with_resistance_flag
+						has_country_flag = USA_ridin_with_biden_flag
+					}
+					NOT = { has_country_flag = USA_sided_with_trump_flag }
+					NOT = { has_country_flag = rev_usa_cw_sep_war_fired }
+					NOT = { has_country_flag = rev_usa_civil_war_initialized }
+					date > 2028.9.19
+					date < 2028.9.22
+				}
+				country_event = { id = rev_usa_cw.12 }
+			}
+		}
+	}
+}

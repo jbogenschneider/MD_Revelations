@@ -1,0 +1,322 @@
+rev_setup_usa_civil_war_sides = {
+	set_country_flag = rev_usa_civil_war_initialized
+
+	# Ensure splitter tags exist.
+	if = {
+		limit = { NOT = { country_exists = USB } }
+		release = USB
+	}
+	if = {
+		limit = { NOT = { country_exists = HWI } }
+		release = HWI
+	}
+
+	# USA exits NATO before alliance split.
+	if = {
+		limit = { has_idea = NATO_member }
+		NATO_leave = yes
+	}
+
+	# Move most US states into USB except explicit holdouts listed by design.
+	every_state = {
+		limit = {
+			is_owned_by = USA
+			is_core_of = USA
+			NOT = { state = 800 }   # Texas
+			NOT = { state = 797 }   # Louisiana
+			NOT = { state = 798 }   # Arkansas
+			NOT = { state = 796 }   # Mississippi
+			NOT = { state = 794 }   # Alabama
+			NOT = { state = 792 }   # Georgia
+			NOT = { state = 795 }   # Florida
+			NOT = { state = 793 }   # Tennessee
+			NOT = { state = 791 }   # South Carolina
+			NOT = { state = 790 }   # North Carolina
+			NOT = { state = 773 }   # Virginia
+			NOT = { state = 1182 }  # Washington DC
+			NOT = { state = 782 }   # Kentucky
+			NOT = { state = 776 }   # Indiana
+			NOT = { state = 799 }   # Oklahoma
+			NOT = { state = 783 }   # Missouri
+			NOT = { state = 784 }   # Kansas
+			NOT = { state = 785 }   # Nebraska
+			NOT = { state = 786 }   # South Dakota
+			NOT = { state = 787 }   # North Dakota
+			NOT = { state = 788 }   # Montana
+			NOT = { state = 789 }   # Wyoming
+			NOT = { state = 808 }   # Idaho
+			NOT = { state = 805 }   # Utah
+			NOT = { state = 814 }   # Alaska
+			NOT = { state = 817 }   # Hawaii (neutral)
+			NOT = { state = 815 }   # Puerto Rico (neutral)
+		}
+		transfer_state_to = USB
+	}
+
+	# Neutral bloc setup: Hawaii + Puerto Rico + transferred US navy.
+	817 = { transfer_state_to = HWI }
+	815 = { transfer_state_to = HWI }
+	USA = {
+		transfer_navy = { target = HWI }
+	}
+
+	# USB political setup for this branch.
+	USB = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		create_country_leader = {
+			name = "Lloyd Austin"
+			ideology = conservatism
+			traits = {
+				career_politician
+			}
+		}
+		create_corps_commander = {
+			name = "USB Agent 1 Placeholder"
+			portrait_path = "gfx/leaders/USA/agent_jay.dds"
+			traits = { commando }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+		create_corps_commander = {
+			name = "USB Agent 2 Placeholder"
+			portrait_path = "gfx/leaders/USA/jason_bourne.dds"
+			traits = { trickster }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 1
+		}
+	}
+
+	# USB aligns with Canada/NATO side.
+	USB = {
+		if = {
+			limit = { CAN = { is_in_faction = yes } }
+			add_to_faction = CAN
+		}
+		if = {
+			limit = { NOT = { has_idea = NATO_member } }
+			NATO_join = yes
+		}
+	}
+
+	# NATO and Canada oppose USA.
+	every_country = {
+		limit = {
+			has_idea = NATO_member
+			NOT = { tag = USA }
+			NOT = { tag = HWI }
+			country_exists = USA
+			USA = { exists = yes }
+			NOT = { has_war_with = USA }
+		}
+		declare_war_on = {
+			target = USA
+			type = annex_everything
+		}
+	}
+	if = {
+		limit = {
+			USB = { exists = yes }
+			USB = { NOT = { has_war_with = USA } }
+		}
+		USB = {
+			declare_war_on = {
+				target = USA
+				type = annex_everything
+			}
+		}
+	}
+
+	# Keep neutral bloc out of the war.
+	HWI = {
+		if = {
+			limit = { has_war_with = USA }
+			white_peace = USA
+		}
+		if = {
+			limit = { has_war_with = USB }
+			white_peace = USB
+		}
+	}
+}
+
+rev_setup_usa_civil_war_sides_impeachment = {
+	set_country_flag = rev_usa_civil_war_initialized
+
+	# Ensure splitter tags exist.
+	if = {
+		limit = { NOT = { country_exists = USB } }
+		release = USB
+	}
+	if = {
+		limit = { NOT = { country_exists = HWI } }
+		release = HWI
+	}
+
+	# In impeachment branch, USA/USB/CAN all leave NATO so alliance stays out.
+	if = {
+		limit = { has_idea = NATO_member }
+		NATO_leave = yes
+	}
+	CAN = {
+		if = {
+			limit = { has_idea = NATO_member }
+			NATO_leave = yes
+		}
+	}
+
+	# Move most US states into USB (Virginia + DC now join USB in this branch).
+	every_state = {
+		limit = {
+			is_owned_by = USA
+			is_core_of = USA
+			NOT = { state = 800 }   # Texas
+			NOT = { state = 797 }   # Louisiana
+			NOT = { state = 798 }   # Arkansas
+			NOT = { state = 796 }   # Mississippi
+			NOT = { state = 794 }   # Alabama
+			NOT = { state = 792 }   # Georgia
+			NOT = { state = 795 }   # Florida
+			NOT = { state = 793 }   # Tennessee
+			NOT = { state = 791 }   # South Carolina
+			NOT = { state = 790 }   # North Carolina
+			NOT = { state = 782 }   # Kentucky
+			NOT = { state = 776 }   # Indiana
+			NOT = { state = 799 }   # Oklahoma
+			NOT = { state = 783 }   # Missouri
+			NOT = { state = 784 }   # Kansas
+			NOT = { state = 785 }   # Nebraska
+			NOT = { state = 786 }   # South Dakota
+			NOT = { state = 787 }   # North Dakota
+			NOT = { state = 788 }   # Montana
+			NOT = { state = 789 }   # Wyoming
+			NOT = { state = 808 }   # Idaho
+			NOT = { state = 805 }   # Utah
+			NOT = { state = 814 }   # Alaska
+			NOT = { state = 817 }   # Hawaii (neutral)
+			NOT = { state = 815 }   # Puerto Rico (neutral)
+		}
+		transfer_state_to = USB
+	}
+
+	# Neutral bloc setup: Hawaii + Puerto Rico + transferred US navy.
+	817 = { transfer_state_to = HWI }
+	815 = { transfer_state_to = HWI }
+	USA = {
+		transfer_navy = { target = HWI }
+	}
+
+	# Trump stronghold capital in Fort Bragg / Fayetteville region (North Carolina).
+	set_capital = { state = 790 }
+
+	# USB political setup for this branch.
+	USB = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		if = {
+			limit = { has_idea = NATO_member }
+			NATO_leave = yes
+		}
+		create_country_leader = {
+			name = "Lloyd Austin"
+			ideology = conservatism
+			traits = {
+				career_politician
+			}
+		}
+		create_corps_commander = {
+			name = "USB Agent 1 Placeholder"
+			portrait_path = "gfx/leaders/USA/agent_jay.dds"
+			traits = { commando }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+		create_corps_commander = {
+			name = "USB Agent 2 Placeholder"
+			portrait_path = "gfx/leaders/USA/jason_bourne.dds"
+			traits = { trickster }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 1
+		}
+		# Impeachment branch advantage: USB inherits most deployable federal strength.
+		add_manpower = 500000
+		army_experience = 75
+		add_equipment_to_stockpile = { type = infantry_weapons3 amount = 90000 }
+		add_equipment_to_stockpile = { type = command_control_equipment3 amount = 12000 }
+		add_equipment_to_stockpile = { type = Anti_tank_2 amount = 2800 }
+		add_equipment_to_stockpile = { type = Anti_Air_2 amount = 2200 }
+		add_equipment_to_stockpile = { type = IFV_3 amount = 800 }
+		add_equipment_to_stockpile = { type = APC_2 amount = 1200 }
+		add_equipment_to_stockpile = { type = MR_Fighter2 amount = 40 }
+	}
+
+	USA = {
+		add_stability = -0.08
+		add_war_support = -0.08
+	}
+
+	# Core conflict in this branch: USA vs CAN+USB, NATO uninvolved.
+	if = {
+		limit = {
+			CAN = { exists = yes }
+			NOT = { has_war_with = CAN }
+		}
+		declare_war_on = {
+			target = CAN
+			type = annex_everything
+		}
+	}
+	if = {
+		limit = {
+			USB = { exists = yes }
+			USB = { NOT = { has_war_with = USA } }
+		}
+		USB = {
+			declare_war_on = {
+				target = USA
+				type = annex_everything
+			}
+		}
+	}
+	CAN = {
+		if = {
+			limit = { NOT = { has_war_with = USA } }
+			declare_war_on = {
+				target = USA
+				type = annex_everything
+			}
+		}
+	}
+
+	# Keep neutral bloc out of the war.
+	HWI = {
+		if = {
+			limit = { has_war_with = USA }
+			white_peace = USA
+		}
+		if = {
+			limit = { has_war_with = USB }
+			white_peace = USB
+		}
+		if = {
+			limit = { has_war_with = CAN }
+			white_peace = CAN
+		}
+	}
+}

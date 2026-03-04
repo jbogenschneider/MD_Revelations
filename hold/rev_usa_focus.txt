@@ -1,4 +1,4 @@
-﻿focus_tree = {
+focus_tree = {
     id = USA_focus
     country = {
         factor = 0
@@ -17,7 +17,12 @@
         cost = 5
         available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_POLITICAL }
-        available = { always = yes }
+        available = {
+            has_country_leader = {
+            character = USA_donald_trump_char
+            ruling_only = yes
+            }
+        }
         ai_will_do = {
             base = 1
         }
@@ -42,13 +47,16 @@
             y = 0
             trigger = {
                 has_country_flag = USA_sided_with_trump_flag }
-        }
         cost = 5
         search_filters = { FOCUS_FILTER_POLITICAL }
         prerequisite = { focus = USA_state_of_the_union }
         mutually_exclusive = { focus = USA_side_against_trump }
-        available = { always = yes }
-        allow_branch = { always = yes }
+        available = {
+            is_completed_by_event = yes
+        }
+        allow_branch = {
+            USA_sided_with_trump_trigger = yes
+        }
         ai_will_do = {
             base = 1
         }
@@ -448,14 +456,29 @@
             y = 0
             trigger = {
                 has_country_flag = USA_sided_with_resistance_flag }
-        }
         cost = 5
         available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_POLITICAL }
         prerequisite = { focus = USA_state_of_the_union }
+        prerequisite = { focus = USA_side_against_trump }
+        prerequisite = { focus = USA_no_justice_no_peace }
+        prerequisite = { focus = USA_no_justice_no_peace }
+        prerequisite = { focus = USA_abandon_the_anarchists focus = USA_mingle_with_the_movement }
+        prerequisite = { focus = USA_flames_of_the_future }
+        prerequisite = { focus = USA_fuel_the_machine }
+        prerequisite = { focus = USA_side_against_trump }
+        prerequisite = { focus = USA_engage_the_media }
+        prerequisite = { focus = USA_side_against_trump }
+        prerequisite = { focus = USA_expand_the_cdc }
+        prerequisite = { focus = USA_expand_the_cdc }
+        prerequisite = { focus = USA_executive_order_14066 }
         mutually_exclusive = { focus = USA_side_with_trump focus = USA_mingle_with_the_movement focus = USA_abandon_the_anarchists focus = USA_meet_in_the_middle focus = USA_high_expectations }
-        available = { always = yes }
-        allow_branch = { always = yes }
+        available = {
+            is_completed_by_event = yes
+        }
+        allow_branch = {
+            USA_sided_with_resistance_trigger = yes
+        }
         ai_will_do = {
             base = 1
         }
@@ -486,6 +509,10 @@
             remove = hos_divisive_populist
             add = hos_divisive_populist1
             }
+        }
+    }
+
+
         }
     }
 
@@ -686,7 +713,9 @@
             show_effect_tooltip = yes
             }
         }
-    }    focus = {
+    }
+
+    focus = {
         id = USA_fuel_the_machine
         icon = national_unity_red
         x = -4
@@ -709,9 +738,6 @@
             unlock_decision_tooltip = USA_fuel_the_machine_decision
             unlock_decision_tooltip = USA_fortify_the_election_decision
         }
-    }
-
-
     }
 
     focus = {
@@ -855,8 +881,8 @@
     }    focus = {
         id = USA_national_lockdowns
         icon = green_projects
-        x = 0
-        y = 6
+        x = -4
+        y = 12
         cost = 10
         available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_POLITICAL }
@@ -879,10 +905,6 @@
             decision = USA_mass_lockdowns
             show_effect_tooltip = yes
             }
-        }
-    }
-
-
         }
     }
 
@@ -961,7 +983,10 @@
             }
             has_country_flag = USA_counting_heads_flag
         }
-        allow_branch = { always = yes }
+        allow_branch = {
+            has_country_flag = USA_trump_2020_inauguration_flag
+            USA_sided_with_trump_trigger = yes
+        }
         ai_will_do = {
             base = 1
         }
@@ -1294,7 +1319,10 @@
         available = {
             has_country_flag = USA_counting_heads_flag
         }
-        allow_branch = { always = yes }
+        allow_branch = {
+            has_country_flag = USA_biden_2020_inauguration_flag
+            USA_sided_with_trump_trigger = yes
+        }
         ai_will_do = {
             base = 1
         }
@@ -1445,7 +1473,10 @@
             }
             has_country_flag = USA_counting_heads_flag
         }
-        allow_branch = { always = yes }
+        allow_branch = {
+            has_country_flag = USA_biden_2020_inauguration_flag
+            USA_sided_with_resistance_trigger = yes
+        }
         ai_will_do = {
             base = 1
         }
@@ -1857,7 +1888,10 @@
             }
             has_country_flag = USA_counting_heads_flag
         }
-        allow_branch = { always = yes }
+        allow_branch = {
+            has_country_flag = USA_trump_2020_inauguration_flag
+            USA_sided_with_resistance_trigger = yes
+        }
         ai_will_do = {
             base = 1
         }
@@ -2016,4 +2050,3 @@
     }
 
 }
-
