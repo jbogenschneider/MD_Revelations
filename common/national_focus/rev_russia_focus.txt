@@ -21,9 +21,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			has_country_flag = RUSSIA_PUTIN_PATH
-		}
+		available = { always = yes }
 
 		completion_reward = {
 			add_stability = 0.05
@@ -272,62 +270,89 @@ focus_tree = {
 	}
 
 	focus = {
-		id = rev_SOV_putin_buy_time_1
-		icon = SOV_information_war
+		id = rev_SOV_putin_bomb_ukr_energy
+		icon = SOV_secret_strike
 		relative_position_id = rev_SOV_president_putin_entry
 		x = 0
 		y = 1
 		cost = 5
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MILITARY }
 		prerequisite = { focus = rev_SOV_president_putin_entry }
 		completion_reward = {
-			add_stability = 0.01
-			add_war_support = 0.01
-			add_to_variable = { var = debt value = 60 }
-			set_country_flag = russia_delay_crisis_1
-			clr_country_flag = russia_delay_crisis_2
-			clr_country_flag = russia_delay_crisis_3
+			add_war_support = 0.03
+			air_experience = 15
+			add_stability = -0.01
 		}
-		ai_will_do = { base = 80 }
+		ai_will_do = { base = 90 }
 	}
 
 	focus = {
-		id = rev_SOV_putin_buy_time_2
+		id = rev_SOV_putin_sell_gold
+		icon = SOV_stabilisation_fund
+		relative_position_id = rev_SOV_putin_bomb_ukr_energy
+		x = 0
+		y = 1
+		cost = 5
+		search_filters = { FOCUS_FILTER_ECONOMY }
+		prerequisite = { focus = rev_SOV_putin_bomb_ukr_energy }
+		completion_reward = {
+			add_political_power = 50
+			add_to_variable = { var = debt value = -80 }
+		}
+		ai_will_do = { base = 90 }
+	}
+
+	focus = {
+		id = rev_SOV_putin_suppress_social_media
+		icon = SOV_information_war
+		relative_position_id = rev_SOV_putin_sell_gold
+		x = 0
+		y = 1
+		cost = 5
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = { focus = rev_SOV_putin_sell_gold }
+		completion_reward = {
+			add_stability = 0.03
+			add_war_support = 0.01
+		}
+		ai_will_do = { base = 90 }
+	}
+
+	focus = {
+		id = rev_SOV_putin_support_iran_ad
+		icon = SOV_neighborhood_watch
+		relative_position_id = rev_SOV_putin_suppress_social_media
+		x = 0
+		y = 1
+		cost = 5
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MILITARY }
+		prerequisite = { focus = rev_SOV_putin_suppress_social_media }
+		completion_reward = {
+			add_war_support = 0.01
+			if = {
+				limit = { country_exists = PER }
+				PER = {
+					add_equipment_to_stockpile = { type = Anti_Air_2 amount = 600 }
+				}
+			}
+		}
+		ai_will_do = { base = 90 }
+	}
+
+	focus = {
+		id = rev_SOV_putin_loyalty_tests
 		icon = SOV_anti_bsb
-		relative_position_id = rev_SOV_putin_buy_time_1
+		relative_position_id = rev_SOV_putin_support_iran_ad
 		x = 0
 		y = 1
 		cost = 5
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		prerequisite = { focus = rev_SOV_putin_buy_time_1 }
+		prerequisite = { focus = rev_SOV_putin_support_iran_ad }
 		completion_reward = {
-			add_stability = 0.01
-			add_war_support = 0.01
-			add_to_variable = { var = debt value = 70 }
-			set_country_flag = russia_delay_crisis_2
-			clr_country_flag = russia_delay_crisis_1
-			clr_country_flag = russia_delay_crisis_3
+			add_stability = 0.02
+			add_political_power = 75
+			set_country_flag = russia_delay_crisis_1
 		}
-		ai_will_do = { base = 80 }
-	}
-
-	focus = {
-		id = rev_SOV_putin_buy_time_3
-		icon = SOV_secret_strike
-		relative_position_id = rev_SOV_putin_buy_time_2
-		x = 0
-		y = 1
-		cost = 5
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		prerequisite = { focus = rev_SOV_putin_buy_time_2 }
-		completion_reward = {
-			add_stability = 0.01
-			add_war_support = 0.02
-			add_to_variable = { var = debt value = 80 }
-			set_country_flag = russia_delay_crisis_3
-			clr_country_flag = russia_delay_crisis_1
-			clr_country_flag = russia_delay_crisis_2
-		}
-		ai_will_do = { base = 80 }
+		ai_will_do = { base = 90 }
 	}
 }

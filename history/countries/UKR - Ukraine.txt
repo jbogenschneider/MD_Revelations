@@ -36,7 +36,6 @@ capital = 698
 	set_country_flag = dynamic_flag
 	set_country_flag = dynamic_rebel_flag
 	set_variable = { gdp_per_capita = 7.497 }
-	add_manpower = -80000
 
 	set_variable = { easterns = 15 }
 	set_variable = { westerns = 35 }
@@ -367,7 +366,7 @@ capital = 698
 		add_equipment_to_stockpile = {
 			type = medium_tank_chassis_1
 			variant_name = "T-64A"
-			amount = 400
+			amount = 100
 			producer = UKR
 		}
 		create_equipment_variant = {
@@ -397,7 +396,7 @@ capital = 698
 		add_equipment_to_stockpile = {
 			type = medium_tank_chassis_1
 			variant_name = "T-64B"
-			amount = 300
+			amount = 100
 			producer = UKR
 		}
 		# is not referenced in oobs, but is actually in service in Ukraine, Soviet tank but needed here to allow for Bulat conversion
@@ -429,7 +428,7 @@ capital = 698
 		add_equipment_to_stockpile = {
 			type = medium_tank_chassis_1
 			variant_name = "T-64BV"
-			amount = 500
+			amount = 100
 			producer = UKR
 		}
 		create_equipment_variant = {
@@ -660,124 +659,6 @@ capital = 698
 			tech_torpedoes_1 = 1
 
 			tech_landing_craft = 1
-		}
-
-		#Krivak I Class
-		create_equipment_variant = {
-			name = "Krivak I Class"
-			type = frigate_hull_1
-			#name_group = UKR_DD_HISTORICAL
-			parent_version = 0
-			role_icon_index = 2
-			modules = {
-				fixed_ship_engine_slot = module_light_surface_diesel_power
-				fixed_ship_fire_control_system_slot = module_analog_fire_control
-				fixed_ship_radar_slot = module_sonar_1
-				fixed_ship_auxillary_slot_2 = module_anti_submarine_mortar
-				fixed_ship_auxillary_slot_1 = module_aa_missiles_1
-				fixed_ship_auxillary_slot = module_ciws_1
-				fixed_ship_battery_slot = module_76mm_gun_2 #normaly 2x1
-				front_1_custom_slot = module_torpedoes_1
-				rear_1_custom_slot = module_asm_1
-			}
-			icon = "gfx/interface/technologies/SOV/NAV/F2.dds"
-		}
-
-		#Krivak II Class
-		create_equipment_variant = {
-			name = "Krivak II Class"
-			type = frigate_hull_1
-			#name_group = UKR_DD_HISTORICAL
-			parent_version = 1
-			role_icon_index = 2
-			modules = {
-				fixed_ship_engine_slot = module_light_surface_diesel_power
-				fixed_ship_fire_control_system_slot = module_analog_fire_control
-				fixed_ship_radar_slot = module_sonar_2
-				fixed_ship_auxillary_slot_2 = module_anti_submarine_mortar
-				fixed_ship_auxillary_slot_1 = module_aa_missiles_1
-				fixed_ship_auxillary_slot = module_ciws_1
-				fixed_ship_battery_slot = module_127mm_guns_1
-				front_1_custom_slot = module_torpedoes_1
-				rear_1_custom_slot = module_asm_1
-			}
-			icon = "gfx/interface/technologies/SOV/NAV/F2_Krivak_II.dds"
-		}
-
-		create_equipment_variant = {
-			name = "Krivak III Class"
-			type = frigate_hull_1
-			#name_group = UKR_DD_HISTORICAL
-			parent_version = 2
-			role_icon_index = 2
-			modules = {
-				fixed_ship_engine_slot = module_light_surface_diesel_power
-				fixed_ship_fire_control_system_slot = module_analog_fire_control
-				fixed_ship_radar_slot = module_sonar_2
-				fixed_ship_auxillary_slot_2 = module_anti_submarine_mortar
-				fixed_ship_auxillary_slot_1 = module_aa_missiles_1
-				fixed_ship_auxillary_slot = module_ciws_1
-				fixed_ship_battery_slot = module_127mm_guns_1
-				front_1_custom_slot = module_torpedoes_1
-				rear_1_custom_slot = module_light_helipad_1
-			}
-			icon = "gfx/interface/technologies/SOV/NAV/F2_Krivak_III.dds"
-			obsolete = yes
-		}
-
-		#Grisha Class
-		create_equipment_variant = {
-			name = "Grisha II Class"
-			type = corvette_hull_2
-			#name_group = UKR_DD_HISTORICAL
-			parent_version = 2
-			role_icon_index = 2
-			modules = {
-				fixed_ship_engine_slot = module_light_surface_diesel_power
-				fixed_ship_fire_control_system_slot = module_analog_fire_control
-				fixed_ship_radar_slot = module_sonar_2
-				fixed_ship_auxillary_slot = module_anti_submarine_mortar
-				fixed_ship_battery_slot = module_76mm_gun_1
-				front_1_custom_slot = module_torpedoes_1
-				rear_1_custom_slot = empty
-			}
-			icon = "gfx/interface/technologies/SOV/NAV/CRV2_Grisha.dds"
-		}
-		create_equipment_variant = {
-			name = "Grisha V Class"
-			type = corvette_hull_2
-			#name_group = UKR_DD_HISTORICAL
-			parent_version = 2
-			role_icon_index = 2
-			modules = {
-				fixed_ship_engine_slot = module_light_surface_diesel_power
-				fixed_ship_fire_control_system_slot = module_analog_fire_control
-				fixed_ship_radar_slot = module_sonar_2
-				fixed_ship_auxillary_slot = module_anti_submarine_mortar
-				fixed_ship_battery_slot = module_76mm_gun_3
-				front_1_custom_slot = module_torpedoes_1
-				rear_1_custom_slot = module_ciws_2
-			}
-			icon = "gfx/interface/technologies/SOV/NAV/CRV2_Grisha.dds"
-		}
-
-		#Tarantul Class /poles & rom & Ukr use this aswell
-		create_equipment_variant = {
-			name = "Tarantul Class"
-			type = corvette_hull_2
-			#name_group = UKR_DD_HISTORICAL
-			parent_version = 0
-			role_icon_index = 2
-			modules = {
-				fixed_ship_engine_slot = module_light_surface_diesel_power
-				fixed_ship_fire_control_system_slot = module_analog_fire_control
-				fixed_ship_radar_slot = module_radar_2
-				fixed_ship_auxillary_slot = module_asm_2
-				fixed_ship_battery_slot = module_76mm_gun_2
-				front_1_custom_slot = module_ciws_2
-				rear_1_custom_slot = module_asm_2
-			}
-			icon = "gfx/interface/technologies/SOV/NAV/CRV2.dds"
 		}
 
 		complete_special_project = sp:sp_naval_vessel_project
