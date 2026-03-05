@@ -397,6 +397,14 @@ units = {
 		start_equipment_factor = 0.30
 	}
 
+	division = {
+		name = "Conscripts"
+		location = 14448
+		division_template = "Moblics"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.30
+	}
+
 #	division = {
 #		name = "165th Artillery Brigade"
 #		location = 12654
@@ -414,7 +422,23 @@ units = {
 	}
 
 	division = {
+		name = "Conscripts"
+		location = 4719
+		division_template = "Moblics"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.30
+	}
+
+	division = {
 		name = "64th Motor Rifle Brigade"
+		location = 12189
+		division_template = "Moblics"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.30
+	}
+
+	division = {
+		name = "Conscripts"
 		location = 12189
 		division_template = "Moblics"
 		start_experience_factor = 0.5
@@ -467,6 +491,14 @@ units = {
 		name = "201st Military Base"
 		location = 1384 #Tajikistan
 		division_template = "Motor Rifle Brigade"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.30
+	}
+
+	division = {
+		name = "Conscripts"
+		location = 9449
+		division_template = "Moblics"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.30
 	}
@@ -550,8 +582,24 @@ units = {
 
 	division = {
 		name = "120th Artillery Brigade"
+		location = 11487
+		division_template = "Artillery Brigade"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.30
+	}
+
+	division = {
+		name = "120th Artillery Brigade"
 		location = 6776
 		division_template = "Artillery Brigade"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.30
+	}
+
+	division = {
+		name = "Conscripts"
+		location = 6776
+		division_template = "Moblics"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.30
 	}
@@ -570,26 +618,15 @@ units = {
 		start_experience_factor = 0.7
 		start_equipment_factor = 0.30
 	}
+	division = {
+		name = "Conscripts"
+		location = 3446
+		division_template = "Moblics"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.30
+	}
 
 #Southern MD
-	division = {
-		name = "693rd Motor Rifle Brigade"
-		location = 1530 #South Ossetia
-		division_template = "Motor Rifle Brigade"
-		start_experience_factor = 0.5
-		start_equipment_factor = 0.9
-		force_equipment_variants = { infantry_weapons1 = { owner = "SOV" } }
-		force_equipment_variants = { APC_4 = { owner = "SOV" } }
-		force_equipment_variants = { IFV_2 = { owner = "SOV" } }
-		force_equipment_variants = { command_control_equipment1 = { owner = "SOV" } }
-		force_equipment_variants = { Anti_Air_1 = { owner = "SOV" } }
-		force_equipment_variants = { Anti_tank_1 = { owner = "SOV" } }
-		force_equipment_variants = { Heavy_Anti_tank_2 = { owner = "SOV" } }
-		force_equipment_variants = { SP_arty_0 = { owner = "SOV" } }
-		force_equipment_variants = { infantry_weapons4 = { owner = "SOV" } }
-		force_equipment_variants = { mbt_hull_1 = { owner = "SOV" version_name = "T-72B" } }
-		force_equipment_variants = { SP_Anti_Air_1 = { owner = "SOV" } }
-	}
 
 	division = {
 		name = "17th Motor Rifle Brigade"
@@ -679,6 +716,14 @@ units = {
 		start_equipment_factor = 0.30
 	}
 
+	division = {
+		name = "Conscripts"
+		location = 3479
+		division_template = "Moblics"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.30
+	}
+
 #	division = {
 #		name = "120th Artillery Brigade"
 #		location = 670
@@ -757,6 +802,14 @@ units = {
 		name = "9th Artillery Brigade"
 		location = 570
 		division_template = "Artillery Brigade"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.30
+	}
+
+	division = {
+		name = "Conscripts"
+		location = 570
+		division_template = "Moblics"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.30
 	}
@@ -854,7 +907,7 @@ instant_effect = {
 	}
 	add_equipment_to_stockpile = {
 	type = AS_Fighter2 #MIG-31
-	amount = 94
+	amount = 54
 	}
 
 	add_equipment_to_stockpile = {
@@ -869,7 +922,7 @@ instant_effect = {
 
 	add_equipment_to_stockpile = {
 	type = AS_Fighter2 #SU-27
-	amount = 92
+	amount = 52
 	}
 
 	add_equipment_to_stockpile = {
@@ -920,12 +973,6 @@ instant_effect = {
 	add_equipment_to_stockpile = {
 	type = naval_plane2 #tu142
 	amount = 10
-	}
-
-	add_equipment_to_stockpile = {
-		type = L_Strike_fighter2	 #Aero L-39
-		amount = 50
-		producer = CZE
 	}
 
 	### Helicopters

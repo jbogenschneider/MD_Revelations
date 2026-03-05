@@ -15,6 +15,76 @@ country_event = {
 		add_manpower = -950000
 		set_country_flag = rev_sov_2026_sanctions_active
 		set_country_flag = rev_2026_casualty_adjustment_applied
+		# Russian border belt: add level 2 bunkers in SOV states bordering UKR.
+		694 = { # zap
+			add_building_construction = {
+				type = bunker
+				level = 4
+				province = 9571
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 4
+				province = 14439
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 4
+				province = 9729
+				instant_build = yes
+			}
+		}
+		1076 = { # luha
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 570
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 11487
+				instant_build = yes
+			}
+		}
+		644 = {
+			add_building_construction = {
+				type = shorad
+				level = 3
+				instant_build = yes
+			}
+		}
+		9663 = {
+			add_building_construction = {
+				type = shorad
+				level = 2
+				instant_build = yes
+			}
+		}
+		653 = {
+			add_building_construction = {
+				type = shorad
+				level = 2
+				instant_build = yes
+			}
+		}
+		1172 = {
+			add_building_construction = {
+				type = shorad
+				level = 2
+				instant_build = yes
+			}
+		}
+		1174 = {
+			add_building_construction = {
+				type = shorad
+				level = 2
+				instant_build = yes
+			}
+		}
 	}
 }
 
@@ -32,16 +102,180 @@ country_event = {
 		1222 = { # Kramatorsk state scope
 			add_building_construction = {
 				type = bunker
-				level = 4
+				level = 7
 				province = 502
 				instant_build = yes
 			}
 			add_building_construction = {
 				type = bunker
-				level = 4
+				level = 7
 				province = 3491
 				instant_build = yes
 			}
+			add_building_construction = {
+				type = shorad
+				level = 2
+				instant_build = yes
+			}
 		}	
+		1087 = { # dipro
+			add_building_construction = {
+				type = bunker
+				level = 4
+				province = 3449
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = shorad
+				level = 2
+				instant_build = yes
+			}
+		}	
+		11223 = { # zap
+			add_building_construction = {
+				type = bunker
+				level = 4
+				province = 3399
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 7
+				province = 11405
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = shorad
+				level = 2
+				instant_build = yes
+			}
+		}	
+		696 = { # zap
+			add_building_construction = {
+				type = bunker
+				level = 4
+				province = 14445
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 4
+				province = 11541
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 4
+				province = 3409
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 4
+				province = 9556
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 4
+				province = 418
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 4
+				province = 11397
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = shorad
+				level = 2
+				instant_build = yes
+			}
+		}
+		1088 = { # zap
+			add_building_construction = {
+				type = bunker
+				level = 4
+				province = 6565
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 4
+				province = 3225
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 4
+				province = 11462
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 4
+				province = 3455
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 4
+				province = 3520
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = shorad
+				level = 2
+				instant_build = yes
+			}
+		}
+		697 = { # Chirk
+			add_building_construction = {
+				type = bunker
+				level = 4
+				province = 6508
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 4
+				province = 6589
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = shorad
+				level = 2
+				instant_build = yes
+			}
+		}
+		698 = {
+			add_building_construction = {
+				type = shorad
+				level = 3
+				instant_build = yes
+			}
+		}
+		700 = {
+			add_building_construction = {
+				type = shorad
+				level = 2
+				instant_build = yes
+			}
+		}
+		1086 = {
+			add_building_construction = {
+				type = shorad
+				level = 2
+				instant_build = yes
+			}
+		}
+		695 = {
+			add_building_construction = {
+				type = shorad
+				level = 2
+				instant_build = yes
+			}
+		}
 	}
 }
