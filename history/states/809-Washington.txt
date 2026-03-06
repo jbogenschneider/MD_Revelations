@@ -1,7 +1,7 @@
 state = {
 	id = 809
 	name = "STATE_809"
-	manpower = 5894121
+	manpower = 9894121
 	state_category = state_06
 
 	resources = {
@@ -28,13 +28,13 @@ state = {
 		victory_points = { 7442 1 } #Eatonville
 
 		buildings = {
-			infrastructure = 3
-			internet_station = 2
-			arms_factory = 4
+			infrastructure = 5
+			internet_station = 5
+			arms_factory = 7
 			dockyard = 6
 			air_base = 6
-			industrial_complex = 2
-			offices = 4
+			industrial_complex = 5
+			offices = 8
 			radar_station = 1
 			nuclear_reactor = 1
 			7315 = {

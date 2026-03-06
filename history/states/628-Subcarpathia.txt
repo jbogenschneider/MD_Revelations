@@ -11,12 +11,12 @@ state = {
 			6484 3
 		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 4
 			internet_station = 1
-			arms_factory = 1
+			arms_factory = 2
 			air_base = 2
-			synthetic_refinery = 1
-			industrial_complex = 1
+			synthetic_refinery = 2
+			industrial_complex = 2
 		}
 		add_core_of = POL
 		2025.1.1 = {

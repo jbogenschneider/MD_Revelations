@@ -1,7 +1,7 @@
 state = {
 	id = 45
 	name = "STATE_45"
-	manpower = 3636951
+	manpower = 3836951
 	state_category = state_04
 
 	history = {
@@ -12,8 +12,8 @@ state = {
 		buildings = {
 			infrastructure = 3
 			internet_station = 2
-			industrial_complex = 1
-			offices = 2
+			industrial_complex = 3
+			offices = 5
 			air_base = 5
 			anti_air_building = 1
 			radar_station = 2
@@ -32,7 +32,8 @@ state = {
 		2025.1.1 = {
 			add_manpower = 106587
 			buildings = {
-				internet_station = 2
+				internet_station = 4
+				infrastructure = 5
 				radar_station = 2
 			}
 		}

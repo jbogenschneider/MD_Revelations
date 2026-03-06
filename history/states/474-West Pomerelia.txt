@@ -14,7 +14,8 @@ state = {
 			infrastructure = 2
 			internet_station = 1
 			industrial_complex = 2
-			offices = 1
+			agriculture_district = 1
+			offices = 2
 		}
 		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
 		set_variable = { state_renewable_capacity_factor_modifier_var = 0.35 }		
@@ -22,6 +23,7 @@ state = {
 		2025.1.1 = {
 			buildings = {
 				internet_station = 4
+				infrastructure = 5
 			}
 			add_manpower = 1332
 		}

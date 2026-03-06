@@ -18,13 +18,13 @@ state = {
 		buildings = {
 			infrastructure = 3
 			internet_station = 2
-			arms_factory = 1
+			arms_factory = 3
 			industrial_complex = 3
-			offices = 3
+			offices = 4
 			air_base = 6
 			anti_air_building = 1
 			nuclear_reactor = 1
-			agriculture_district = 1
+			agriculture_district = 2
 		}
 		add_dynamic_modifier = { modifier = GER_new_economic_hubs }
 		add_core_of = GER
@@ -33,6 +33,7 @@ state = {
 			add_manpower = -56000
 			buildings = {
 				internet_station = 4
+				infrastructure = 5
 			}
 		}
 	}

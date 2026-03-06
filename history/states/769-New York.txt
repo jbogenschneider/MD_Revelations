@@ -28,9 +28,9 @@ state = {
 		victory_points = { 706 1 } #Forestburgh
 
 		buildings = {
-			infrastructure = 3
+			infrastructure = 5
 			internet_station = 2
-			arms_factory = 1
+			arms_factory = 4
 			dockyard = 2
 			air_base = 4
 			industrial_complex = 4
@@ -51,6 +51,7 @@ state = {
 			add_manpower = 1144948
 			buildings = {
 				internet_station = 4
+				offices = 9
 			}
 		}
 	}

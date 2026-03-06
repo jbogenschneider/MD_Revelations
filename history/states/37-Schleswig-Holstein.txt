@@ -21,7 +21,7 @@ state = {
 			anti_air_building = 2
 			synthetic_refinery = 3
 			offices = 1
-			dockyard = 1
+			dockyard = 2
 			air_base = 4
 			nuclear_reactor = 2
 			6389 = {
@@ -35,8 +35,8 @@ state = {
 			add_manpower = 45316
 			buildings = {
 				internet_station = 4
-				synthetic_refinery = 6
-				offices = 1
+				synthetic_refinery = 9
+				infrastructure = 5
 			}
 		}
 	}

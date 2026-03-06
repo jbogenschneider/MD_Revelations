@@ -18,6 +18,7 @@ state = {
 			buildings = {
 				internet_station = 4
 				industrial_complex = 1
+				stronghold_network = 1
 			}
 		}
 	}

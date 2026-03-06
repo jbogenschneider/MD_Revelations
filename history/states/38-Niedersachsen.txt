@@ -60,8 +60,9 @@ state = {
 			buildings = {
 				internet_station = 4
 				industrial_complex = 6
-				offices = 6
+				offices = 4
 				synthetic_refinery = 6
+				infrastructure = 5
 			}
 		}
 	}

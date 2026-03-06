@@ -1,7 +1,7 @@
 state = {
 	id = 779
 	name = "STATE_779"
-	manpower = 5363675
+	manpower = 5563675
 	state_category = state_06
 
 	history = {
@@ -21,14 +21,15 @@ state = {
 		victory_points = { 15681 1 } #Dodgeville
 
 		buildings = {
-			infrastructure = 3
+			infrastructure = 4
 			internet_station = 2
-			arms_factory = 1
+			arms_factory = 2
 			air_base = 4
 			industrial_complex = 2
-			offices = 2
+			offices = 4
 			synthetic_refinery = 2
 			nuclear_reactor = 1
+			agriculture_district = 1
 		}
 		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
 		set_variable = { state_renewable_capacity_factor_modifier_var = 0.30 }		
