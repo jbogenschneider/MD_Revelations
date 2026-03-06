@@ -79,6 +79,17 @@ state = {
 				land_facility = 1
 			}
 		}
+		2025.1.1 = {
+			add_manpower = 1002022
+			buildings = {
+				internet_station = 5
+				synthetic_refinery = 6
+				infrastructure = 5
+				arms_factory = 9
+				offices = 20
+				agriculture_district = 6
+			}
+		}
 		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
 		set_variable = { state_renewable_capacity_factor_modifier_var = 0.53 }		
 		add_core_of = USA

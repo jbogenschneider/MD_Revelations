@@ -1,0 +1,9 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			every_country = {
+				set_variable = { post_conventional_rail = 0 }
+			}
+		}
+	}
+}

@@ -31,8 +31,8 @@ state = {
 			11902 1
 		}
 		buildings = {
-			infrastructure = 2
-			internet_station = 1
+			infrastructure = 3
+			internet_station = 2
 			air_base = 2
 			4345 = {
 				# GD Canada

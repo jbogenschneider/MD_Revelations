@@ -51,7 +51,7 @@ capital = 45
 	# East vs West divide mechanic
 	set_variable = { GER_east_opinion_min = 0 } 	#Minimum amount of Insurgent Strength
 	set_variable = { GER_east_opinion_max = 100 }		#Maximum amount of Insurgent Strength
-	set_variable = { GER_east_opinion = 45 }			#Starting Insurgent Strength
+	set_variable = { GER_east_opinion = 100 }			#Starting Insurgent Strength (fully resolved)
 	set_variable = { GER_east_opinion_gain = 0 }	# Events will randomly decrease East German opinion
 
 	set_variable = { GER_event_counter_1_dielinke = 2 } #
@@ -126,7 +126,7 @@ capital = 45
 		GER_idea_okosteuer
 		GER_idea_aging_population
 		GER_idea_war_reparations
-		GER_idea_germany_divided
+		# GER_idea_germany_divided # East-West divide resolved for this scenario
 		GER_idea_bfv_islamist_low
 		GER_idea_bfv_rightwing_med
 		GER_idea_bfv_leftwing_med
@@ -189,6 +189,8 @@ capital = 45
 
 	set_variable = { GER_intercept_efficiency = 0.1 }
 	set_variable = { GER_air_training_xp_gain_factor = 0.1 }
+	army_experience = 30
+	air_experience = 30
 
 
 	#BOP

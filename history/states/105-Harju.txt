@@ -10,7 +10,9 @@ state = {
 		buildings = {
 			infrastructure = 3
 			internet_station = 2
-			industrial_complex = 1
+			industrial_complex = 2
+			arms_factory = 2
+			offices = 2
 			air_base = 2
 			3152 = {
 				naval_base = 3
@@ -25,9 +27,8 @@ state = {
 		2025.1.1 = {
 			buildings = {
 				internet_station = 4
-				industrial_complex = 1
-				offices = 1
 				air_base = 3
+				stronghold_network = 1
 			}
 			add_manpower = -135623
 		}

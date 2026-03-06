@@ -30,6 +30,8 @@ state = {
 			add_manpower = -369905
 			buildings = {
 				internet_station = 4
+				infrastructure = 5
+				arms_factory = 2
 			}
 		}
 	}

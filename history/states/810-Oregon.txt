@@ -29,12 +29,12 @@ state = {
 		victory_points = { 505 2 } #Brookings
 
 		buildings = {
-			infrastructure = 3
-			internet_station = 2
+			infrastructure = 5
+			internet_station = 4
 			arms_factory = 2
 			air_base = 4
 			anti_air_building = 1
-			industrial_complex = 2
+			industrial_complex = 3
 			offices = 4
 			agriculture_district = 2
 		}

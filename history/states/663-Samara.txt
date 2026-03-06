@@ -45,6 +45,7 @@ state = {
 			buildings = {
 				internet_station = 2
 				arms_factory = 3
+				agriculture_district = 1
 			}
 		}
 	}

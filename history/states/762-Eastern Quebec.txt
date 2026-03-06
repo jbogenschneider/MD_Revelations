@@ -36,12 +36,13 @@ state = {
 		}
 		buildings = {
 			infrastructure = 3
-			internet_station = 2
-			offices = 3
-			arms_factory = 2
+			internet_station = 3
+			offices = 6
+			arms_factory = 3
 			dockyard = 1
-			industrial_complex = 1
+			industrial_complex = 2
 			air_base = 4
+			agriculture_district = 1
 			12149 = {
 				naval_base = 6
 				air_facility = 1

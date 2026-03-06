@@ -8,7 +8,7 @@ state = {
 			347 2
 		}
 		buildings = {
-			infrastructure = 1
+			infrastructure = 3
 			internet_station = 1
 		}
 		add_core_of = POL
@@ -16,6 +16,7 @@ state = {
 			add_manpower = 1062
 			buildings = {
 				internet_station = 4
+				stronghold_network = 1
 			}
 		}
 	}

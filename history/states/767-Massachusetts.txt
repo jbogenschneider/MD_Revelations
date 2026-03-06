@@ -16,12 +16,12 @@ state = {
 		victory_points = { 908 5 } #Westfield
 
 		buildings = {
-			infrastructure = 3
-			internet_station = 2
+			infrastructure = 5
+			internet_station = 5
 			dockyard = 3
 			air_base = 6
 			industrial_complex = 2
-			offices = 4
+			offices = 5
 
 			6732 = { naval_base = 4 }
 		}
@@ -29,9 +29,9 @@ state = {
 		2025.1.1 = {
 			add_manpower = 489265
 			buildings = {
-				internet_station = 4
+				internet_station = 5
 				dockyard = 3
-				industrial_complex = 1
+				industrial_complex = 2
 			}
 		}
 	}
