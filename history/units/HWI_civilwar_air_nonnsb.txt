@@ -1,0 +1,241 @@
+# Air and missile parking pool for US civil war (non-NSB).
+# Copied from USA air-centric stockpile blocks so HWI can hold these assets out of the war.
+
+add_equipment_to_stockpile = {
+	type = transport_plane1
+	amount = 222
+}
+add_equipment_to_stockpile = {
+	type = attack_helicopter1
+	amount = 511
+}
+add_equipment_to_stockpile = {
+	type = attack_helicopter2
+	amount = 743
+}
+add_equipment_to_stockpile = {
+	type = transport_helicopter1
+	amount = 809
+}
+add_equipment_to_stockpile = {
+	type = transport_helicopter2
+	amount = 1465
+}
+add_equipment_to_stockpile = {
+	type = transport_helicopter2
+	amount = 1465
+}
+add_equipment_to_stockpile = {
+	type = attack_helicopter2
+	amount = 853
+}
+add_equipment_to_stockpile = {
+	type = transport_helicopter1
+	amount = 136
+}
+
+add_equipment_to_stockpile = {
+	type = AS_Fighter2
+	amount = 193
+}
+add_equipment_to_stockpile = {
+	type = CV_MR_Fighter2
+	amount = 771
+}
+add_equipment_to_stockpile = {
+	type = MR_Fighter1
+	amount = 36
+}
+add_equipment_to_stockpile = {
+	type = CV_L_Strike_fighter1
+	amount = 119
+}
+add_equipment_to_stockpile = {
+	type = naval_plane2
+	amount = 260
+}
+add_equipment_to_stockpile = {
+	type = naval_plane1
+	amount = 112
+}
+add_equipment_to_stockpile = {
+	type = transport_plane1
+	amount = 6
+}
+add_equipment_to_stockpile = {
+	type = transport_helicopter1
+	amount = 101
+}
+add_equipment_to_stockpile = {
+	type = transport_helicopter1
+	amount = 239
+}
+add_equipment_to_stockpile = {
+	type = transport_helicopter2
+	amount = 278
+}
+add_equipment_to_stockpile = {
+	type = transport_helicopter1
+	amount = 256
+}
+add_equipment_to_stockpile = {
+	type = transport_helicopter1
+	amount = 120
+}
+add_equipment_to_stockpile = {
+	type = attack_helicopter2
+	amount = 195
+}
+add_equipment_to_stockpile = {
+	type = cv_awacs_equipment_1
+	amount = 64
+	producer = USA
+}
+
+add_equipment_to_stockpile = {
+	type = CV_MR_Fighter2
+	amount = 245
+}
+add_equipment_to_stockpile = {
+	type = CV_L_Strike_fighter1
+	amount = 119
+}
+add_equipment_to_stockpile = {
+	type = MR_Fighter1
+	amount = 2
+}
+add_equipment_to_stockpile = {
+	type = transport_plane1
+	amount = 4
+}
+add_equipment_to_stockpile = {
+	type = attack_helicopter2
+	amount = 188
+}
+add_equipment_to_stockpile = {
+	type = transport_helicopter1
+	amount = 58
+}
+add_equipment_to_stockpile = {
+	type = transport_helicopter1
+	amount = 230
+}
+add_equipment_to_stockpile = {
+	type = transport_helicopter1
+	amount = 205
+}
+add_equipment_to_stockpile = {
+	type = transport_helicopter1
+	amount = 205
+}
+add_equipment_to_stockpile = {
+	type = SP_Anti_Air_1
+	amount = 235
+}
+
+add_equipment_to_stockpile = {
+	type = strategic_bomber1
+	amount = 94
+}
+add_equipment_to_stockpile = {
+	type = strategic_bomber2
+	amount = 93
+}
+add_equipment_to_stockpile = {
+	type = strategic_bomber3
+	amount = 21
+}
+add_equipment_to_stockpile = {
+	type = AS_Fighter2
+	amount = 494
+}
+add_equipment_to_stockpile = {
+	type = Strike_fighter3
+	amount = 210
+}
+add_equipment_to_stockpile = {
+	type = MR_Fighter2
+	amount = 325
+}
+add_equipment_to_stockpile = {
+	type = MR_Fighter3
+	amount = 1095
+}
+add_equipment_to_stockpile = {
+	type = awacs_equipment_1
+	amount = 31
+	producer = USA
+}
+add_equipment_to_stockpile = {
+	type = MR_Fighter2
+	amount = 325
+}
+add_equipment_to_stockpile = {
+	type = MR_Fighter3
+	amount = 1095
+}
+add_equipment_to_stockpile = {
+	type = MR_Fighter3
+	amount = 1095
+}
+add_equipment_to_stockpile = {
+	type = Strike_fighter1
+	amount = 6
+}
+add_equipment_to_stockpile = {
+	type = Strike_fighter2
+	amount = 52
+}
+add_equipment_to_stockpile = {
+	type = cas1
+	amount = 330
+}
+add_equipment_to_stockpile = {
+	type = transport_plane1
+	amount = 324
+}
+add_equipment_to_stockpile = {
+	type = transport_plane1
+	amount = 374
+}
+add_equipment_to_stockpile = {
+	type = transport_plane1
+	amount = 260
+}
+add_equipment_to_stockpile = {
+	type = transport_plane3
+	amount = 261
+}
+add_equipment_to_stockpile = {
+	type = L_Strike_fighter2
+	amount = 408
+}
+add_equipment_to_stockpile = {
+	type = transport_helicopter1
+	amount = 153
+}
+add_equipment_to_stockpile = {
+	type = transport_helicopter1
+	amount = 63
+}
+
+add_equipment_to_stockpile = {
+	type = strategic_bomber2
+	amount = 7
+}
+add_equipment_to_stockpile = {
+	type = strategic_bomber1
+	amount = 5
+}
+add_equipment_to_stockpile = {
+	type = strategic_bomber3
+	amount = 2
+}
+add_equipment_to_stockpile = {
+	type = strategic_bomber2
+	amount = 91
+}
+add_equipment_to_stockpile = {
+	type = strategic_bomber1
+	amount = 92
+}

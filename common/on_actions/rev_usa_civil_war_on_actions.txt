@@ -3,6 +3,17 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
+					OR = {
+						tag = USA
+						tag = USB
+					}
+					has_country_flag = rev_usa_civil_war_initialized
+					NOT = { has_global_flag = rev_usa_cw_neutral_states_resolved }
+				}
+				rev_resolve_usa_civil_war_neutral_states = yes
+			}
+			if = {
+				limit = {
 					tag = USA
 					has_country_flag = USA_sided_with_trump_flag
 					has_country_leader = {
@@ -31,21 +42,6 @@ on_actions = {
 					date < 2028.9.22
 				}
 				country_event = { id = rev_usa_cw.11 }
-			}
-			if = {
-				limit = {
-					tag = USA
-					OR = {
-						has_country_flag = USA_sided_with_resistance_flag
-						has_country_flag = USA_ridin_with_biden_flag
-					}
-					NOT = { has_country_flag = USA_sided_with_trump_flag }
-					NOT = { has_country_flag = rev_usa_cw_sep_war_fired }
-					NOT = { has_country_flag = rev_usa_civil_war_initialized }
-					date > 2028.9.19
-					date < 2028.9.22
-				}
-				country_event = { id = rev_usa_cw.12 }
 			}
 		}
 	}
