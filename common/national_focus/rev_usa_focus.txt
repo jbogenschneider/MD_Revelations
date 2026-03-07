@@ -11,7 +11,7 @@
 
     focus = {
         id = USA_state_of_the_union
-        icon = that_american_dude_forgot_name
+        icon = trump_agenda
         x = 0
         y = 0
         cost = 5
@@ -1054,35 +1054,6 @@
     }
 
     focus = {
-        id = USA_enforce_order
-        icon = secret_police
-        x = 0
-        y = 6
-        cost = 5
-        available_if_capitulated = yes
-        search_filters = { FOCUS_FILTER_POLITICAL }
-        available = {
-            has_country_leader = {
-            character = USA_donald_trump_char
-            ruling_only = yes
-            }
-            has_country_flag = USA_counting_heads_flag
-        }
-        ai_will_do = {
-            base = 1
-        }
-        completion_reward = {
-            log = "[GetDateText]: [Root.GetName]: focus USA_enforce_order completion_reward"
-            set_temp_variable = {
-            var = legit_var_temp
-            value = 0.15
-            }
-            add_legit = yes
-            add_ideas = USA_enforce_order_idea
-        }
-    }
-
-    focus = {
         id = USA_by_law
         icon = bread_and_peace
         x = 3
@@ -1876,22 +1847,6 @@
             }
             add_legit = yes
             }
-        }
-    }
-
-    focus = {
-        id = USA_the_true_revolution_begins
-        icon = Generic_Socialist_Revolution
-        x = 0
-        y = 7
-        cost = 5
-        available_if_capitulated = yes
-        search_filters = { FOCUS_FILTER_POLITICAL }
-        ai_will_do = {
-            factor = 1
-        }
-        completion_reward = {
-            log = "[GetDateText]: [Root.GetName]: Focus USA_the_true_revolution_begins completed"
         }
     }
 

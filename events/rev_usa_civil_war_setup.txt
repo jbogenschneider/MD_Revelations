@@ -19,56 +19,6 @@ country_event = {
 	}
 }
 
-# Manual setup event for the September 2028 Canada war branch.
-country_event = {
-	id = rev_usa_cw.2
-	title = rev_usa_cw.2.t
-	desc = rev_usa_cw.2.d
-	picture = GFX_report_event_generic_war
-	is_triggered_only = yes
-
-	trigger = {
-		tag = USA
-	}
-
-	option = {
-		name = rev_usa_cw.2.a
-		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.2.a"
-		rev_setup_usa_civil_war_sides = yes
-	}
-}
-
-# Impeachment/removal branch war declaration (Sept 20, 2028).
-country_event = {
-	id = rev_usa_cw.12
-	title = rev_usa_cw.12.t
-	desc = rev_usa_cw.12.d
-	picture = GFX_report_event_generic_war
-	is_triggered_only = yes
-
-	trigger = {
-		tag = USA
-		OR = {
-			has_country_flag = USA_sided_with_resistance_flag
-			has_country_flag = USA_ridin_with_biden_flag
-		}
-		NOT = { has_country_flag = rev_usa_cw_sep_war_fired }
-		NOT = { has_country_flag = rev_usa_civil_war_initialized }
-	}
-
-	option = {
-		name = rev_usa_cw.12.a
-		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.12.a"
-		set_country_flag = rev_usa_cw_sep_war_fired
-		set_country_flag = rev_usa_election_suspended_2028
-		set_politics = {
-			ruling_party = conservative
-			elections_allowed = no
-		}
-		rev_setup_usa_civil_war_sides_impeachment = yes
-	}
-}
-
 # Trump path escalation event (mid-August 2028).
 country_event = {
 	id = rev_usa_cw.10
@@ -98,7 +48,9 @@ country_event = {
 	}
 }
 
-# Trump path war declaration event (Sept 20, 2028) that starts the split.
+# Sole civil war trigger (Sept 20, 2028):
+# Trump suspends elections and invokes the Insurrection Act, then is removed
+# in a snap remote impeachment vote he claims is illegitimate.
 country_event = {
 	id = rev_usa_cw.11
 	title = rev_usa_cw.11.t
@@ -123,6 +75,8 @@ country_event = {
 		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.11.a"
 		set_country_flag = rev_usa_cw_sep_war_fired
 		set_country_flag = rev_usa_election_suspended_2028
+		set_country_flag = rev_usa_insurrection_act_2028
+		set_country_flag = rev_usa_snap_impeachment_2028
 		set_politics = {
 			ruling_party = conservative
 			elections_allowed = no
@@ -137,6 +91,6 @@ country_event = {
 				type = annex_everything
 			}
 		}
-		rev_setup_usa_civil_war_sides = yes
+		rev_setup_usa_civil_war_sides_impeachment = yes
 	}
 }

@@ -1,0 +1,3 @@
+# Civil-war USA inventory hooks (NSB).
+# Keep this empty to preserve current USA armor/infantry stockpile as-is.
+# Add any USA-specific war-start stockpile here if needed.
