@@ -85,7 +85,7 @@ capital = 239
 	}
 	set_politics = {
 		ruling_party = neutrality
-		last_election = "1998.7.23"
+		last_election = "2025.7.23"
 		election_frequency = 36
 		elections_allowed = yes
 	}

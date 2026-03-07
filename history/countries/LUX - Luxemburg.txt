@@ -319,7 +319,7 @@ capital = 53
 	}
 	set_politics = {
 		ruling_party = democratic
-		last_election = "1999.1.13"
+		last_election = "2024.1.13"
 		election_frequency = 60
 		elections_allowed = yes
 	}

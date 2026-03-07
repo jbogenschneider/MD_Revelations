@@ -1,0 +1,123 @@
+add_namespace = rev_usa_iran
+
+country_event = {
+	id = rev_usa_iran.1
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = rev_usa_iran_support_pending
+		NOT = { has_country_flag = rev_usa_iran_support_done }
+	}
+
+	immediate = {
+		# If the split does not exist, stop retrying.
+		if = {
+			limit = {
+				OR = {
+					NOT = { country_exists = PER }
+					NOT = { country_exists = IRI }
+				}
+			}
+			clr_country_flag = rev_usa_iran_support_pending
+			set_country_flag = rev_usa_iran_support_done
+		}
+		else_if = {
+			limit = {
+				country_exists = PER
+				country_exists = IRI
+				PER = { has_war_with = IRI }
+			}
+
+			# Identify regime side and apply asymmetrical readiness/support.
+			if = {
+				limit = { PER = { has_country_flag = PER_IRGC_GENERALS } }
+				PER = { set_equipment_fraction = 0.5 }
+				IRI = {
+					set_equipment_fraction = 1
+					air_experience = 25
+					add_equipment_to_stockpile = { type = infantry_weapons3 amount = 30000 }
+					add_equipment_to_stockpile = { type = command_control_equipment3 amount = 5000 }
+					add_equipment_to_stockpile = { type = Anti_tank_2 amount = 1200 }
+					add_equipment_to_stockpile = { type = Anti_Air_2 amount = 900 }
+					add_equipment_to_stockpile = { type = artillery_1 amount = 800 }
+					add_equipment_to_stockpile = { type = MR_Fighter2 amount = 120 }
+					add_equipment_to_stockpile = { type = Strike_fighter2 amount = 48 }
+					add_equipment_to_stockpile = { type = cas1 amount = 72 }
+				}
+			}
+			else_if = {
+				limit = { IRI = { has_country_flag = PER_IRGC_GENERALS } }
+				IRI = { set_equipment_fraction = 0.5 }
+				PER = {
+					set_equipment_fraction = 1
+					air_experience = 25
+					add_equipment_to_stockpile = { type = infantry_weapons3 amount = 30000 }
+					add_equipment_to_stockpile = { type = command_control_equipment3 amount = 5000 }
+					add_equipment_to_stockpile = { type = Anti_tank_2 amount = 1200 }
+					add_equipment_to_stockpile = { type = Anti_Air_2 amount = 900 }
+					add_equipment_to_stockpile = { type = artillery_1 amount = 800 }
+					add_equipment_to_stockpile = { type = MR_Fighter2 amount = 120 }
+					add_equipment_to_stockpile = { type = Strike_fighter2 amount = 48 }
+					add_equipment_to_stockpile = { type = cas1 amount = 72 }
+				}
+			}
+			else_if = {
+				limit = { PER = { has_cosmetic_tag = PER_mullahs_government } }
+				PER = { set_equipment_fraction = 0.5 }
+				IRI = {
+					set_equipment_fraction = 1
+					air_experience = 25
+					add_equipment_to_stockpile = { type = infantry_weapons3 amount = 30000 }
+					add_equipment_to_stockpile = { type = command_control_equipment3 amount = 5000 }
+					add_equipment_to_stockpile = { type = Anti_tank_2 amount = 1200 }
+					add_equipment_to_stockpile = { type = Anti_Air_2 amount = 900 }
+					add_equipment_to_stockpile = { type = artillery_1 amount = 800 }
+					add_equipment_to_stockpile = { type = MR_Fighter2 amount = 120 }
+					add_equipment_to_stockpile = { type = Strike_fighter2 amount = 48 }
+					add_equipment_to_stockpile = { type = cas1 amount = 72 }
+				}
+			}
+			else_if = {
+				limit = { IRI = { has_cosmetic_tag = PER_mullahs_government } }
+				IRI = { set_equipment_fraction = 0.5 }
+				PER = {
+					set_equipment_fraction = 1
+					air_experience = 25
+					add_equipment_to_stockpile = { type = infantry_weapons3 amount = 30000 }
+					add_equipment_to_stockpile = { type = command_control_equipment3 amount = 5000 }
+					add_equipment_to_stockpile = { type = Anti_tank_2 amount = 1200 }
+					add_equipment_to_stockpile = { type = Anti_Air_2 amount = 900 }
+					add_equipment_to_stockpile = { type = artillery_1 amount = 800 }
+					add_equipment_to_stockpile = { type = MR_Fighter2 amount = 120 }
+					add_equipment_to_stockpile = { type = Strike_fighter2 amount = 48 }
+					add_equipment_to_stockpile = { type = cas1 amount = 72 }
+				}
+			}
+			else = {
+				# Fallback if Iran side tags differ in this run.
+				PER = { set_equipment_fraction = 0.5 }
+				IRI = {
+					set_equipment_fraction = 1
+					air_experience = 25
+					add_equipment_to_stockpile = { type = infantry_weapons3 amount = 30000 }
+					add_equipment_to_stockpile = { type = command_control_equipment3 amount = 5000 }
+					add_equipment_to_stockpile = { type = Anti_tank_2 amount = 1200 }
+					add_equipment_to_stockpile = { type = Anti_Air_2 amount = 900 }
+					add_equipment_to_stockpile = { type = artillery_1 amount = 800 }
+					add_equipment_to_stockpile = { type = MR_Fighter2 amount = 120 }
+					add_equipment_to_stockpile = { type = Strike_fighter2 amount = 48 }
+					add_equipment_to_stockpile = { type = cas1 amount = 72 }
+				}
+			}
+
+			clr_country_flag = rev_usa_iran_support_pending
+			set_country_flag = rev_usa_iran_support_done
+		}
+		else = {
+			# War not active yet; retry tomorrow.
+			country_event = { id = rev_usa_iran.1 days = 1 }
+		}
+	}
+}

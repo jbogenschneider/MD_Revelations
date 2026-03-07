@@ -1,0 +1,265 @@
+focus_tree = {
+	id = REV_usb_post_kelly_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 50000
+			tag = USB
+			has_country_flag = rev_usb_post_kelly_tree_active
+		}
+	}
+	continuous_focus_position = { x = 130 y = 10 }
+
+	focus = {
+		id = REV_USB_post_kelly_war_cabinet
+		icon = political_effort
+		x = 10
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			add_political_power = 120
+			add_war_support = 0.02
+		}
+	}
+
+	focus = {
+		id = REV_USB_post_kelly_total_commitment
+		icon = war_plans
+		x = 10
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+		prerequisite = { focus = REV_USB_post_kelly_war_cabinet }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			add_war_support = 0.06
+			add_stability = -0.02
+		}
+	}
+
+	focus = {
+		id = REV_USB_post_kelly_emergency_arms_i
+		icon = generic_production2
+		x = 8
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_DEFENSE }
+		prerequisite = { focus = REV_USB_post_kelly_total_commitment }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = { is_owned_by = ROOT is_controlled_by = ROOT }
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+			random_owned_controlled_state = {
+				limit = { is_owned_by = ROOT is_controlled_by = ROOT }
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+		}
+	}
+
+	focus = {
+		id = REV_USB_post_kelly_emergency_arms_ii
+		icon = generic_production3
+		x = 12
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_DEFENSE }
+		prerequisite = { focus = REV_USB_post_kelly_total_commitment }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = { is_owned_by = ROOT is_controlled_by = ROOT }
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+			random_owned_controlled_state = {
+				limit = { is_owned_by = ROOT is_controlled_by = ROOT }
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+		}
+	}
+
+	focus = {
+		id = REV_USB_post_kelly_mobilize_the_base
+		icon = anti_war_propaganda
+		x = 10
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+		prerequisite = { focus = REV_USB_post_kelly_emergency_arms_i }
+		prerequisite = { focus = REV_USB_post_kelly_emergency_arms_ii }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			add_war_support = 0.05
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = REV_USB_post_kelly_prepare_war_with_usa
+		icon = war_with_china
+		x = 6
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+		prerequisite = { focus = REV_USB_post_kelly_mobilize_the_base }
+		available = {
+			country_exists = USA
+			NOT = { has_war_with = USA }
+		}
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			add_war_support = 0.06
+			add_stability = -0.02
+			add_political_power = 75
+		}
+	}
+
+	focus = {
+		id = REV_USB_post_kelly_annex_florida
+		icon = generic_prepare_for_war
+		x = 6
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+		prerequisite = { focus = REV_USB_post_kelly_prepare_war_with_usa }
+		available = {
+			country_exists = USA
+			NOT = { has_war_with = USA }
+		}
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			declare_war_on = {
+				target = USA
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {
+		id = REV_USB_post_kelly_ethnic_reordering
+		icon = fascism_focus
+		x = 10
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = { focus = REV_USB_post_kelly_mobilize_the_base }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			add_stability = -0.03
+			add_war_support = 0.03
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = REV_USB_post_kelly_end_womens_suffrage
+		icon = anti_war_with_big_gun
+		x = 10
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = { focus = REV_USB_post_kelly_ethnic_reordering }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			add_stability = -0.04
+			add_war_support = 0.02
+			add_political_power = 40
+		}
+	}
+
+	focus = {
+		id = REV_USB_post_kelly_tiered_citizenship_act
+		icon = authoritarianism
+		x = 10
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = { focus = REV_USB_post_kelly_end_womens_suffrage }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			set_politics = {
+				ruling_party = nationalist
+				elections_allowed = no
+			}
+			add_war_support = 0.05
+			add_stability = -0.05
+		}
+	}
+
+	focus = {
+		id = REV_USB_post_kelly_claim_greenland
+		icon = generic_naval
+		x = 14
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_DEFENSE }
+		prerequisite = { focus = REV_USB_post_kelly_mobilize_the_base }
+		available = {
+			NOT = { country_exists = USA }
+			OR = {
+				country_exists = GRL
+				country_exists = DEN
+			}
+		}
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			if = {
+				limit = {
+					country_exists = GRL
+					NOT = { has_war_with = GRL }
+				}
+				declare_war_on = {
+					target = GRL
+					type = annex_everything
+				}
+			}
+			else_if = {
+				limit = {
+					country_exists = DEN
+					NOT = { has_war_with = DEN }
+				}
+				declare_war_on = {
+					target = DEN
+					type = annex_everything
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = REV_USB_post_kelly_war_with_canada
+		icon = generic_prepare_for_war
+		x = 14
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_DEFENSE }
+		prerequisite = { focus = REV_USB_post_kelly_claim_greenland }
+		available = {
+			NOT = { country_exists = USA }
+			country_exists = CAN
+			NOT = { has_war_with = CAN }
+		}
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			declare_war_on = {
+				target = CAN
+				type = annex_everything
+			}
+		}
+	}
+}

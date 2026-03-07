@@ -1879,7 +1879,7 @@ capital = 81
 	}
 	set_politics = {
 		ruling_party = democratic
-		last_election = "1996.4.21"
+		last_election = "2021.4.21"
 		election_frequency = 60
 		elections_allowed = yes
 	}
@@ -2283,7 +2283,7 @@ capital = 81
 	}
 	set_politics = {
 		ruling_party = democratic
-		last_election = "2013.2.25"
+		last_election = "2023.2.25"
 		election_frequency = 60
 		elections_allowed = yes
 	}

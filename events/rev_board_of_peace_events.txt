@@ -1,0 +1,116 @@
+add_namespace = rev_bph
+
+# 2026 setup: Gaza starts as an Israeli puppet in a devastated state.
+country_event = {
+	id = rev_bph.1
+	title = rev_bph.1.t
+	desc = rev_bph.1.d
+	picture = GFX_report_event_usa_politics
+	is_triggered_only = yes
+
+	trigger = {
+		tag = ISR
+		NOT = { has_country_flag = rev_bph_gaza_setup_done }
+	}
+
+	option = {
+		name = rev_bph.1.a
+		log = "[GetDateText]: [Root.GetName]: rev_bph.1.a"
+		set_country_flag = rev_bph_gaza_setup_done
+		if = {
+			limit = { country_exists = HAM }
+			set_autonomy = {
+				target = HAM
+				autonomy_state = autonomy_puppet_state
+			}
+		}
+	}
+}
+
+# 2029.2.1 peaceful US path outcome: Trump to Board of Peace HQ (HAM cosmetic).
+country_event = {
+	id = rev_bph.10
+	title = rev_bph.10.t
+	desc = rev_bph.10.d
+	picture = GFX_report_event_usa_election
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = rev_usa_cw_go_quiet_path
+		NOT = { has_country_flag = rev_bph_trump_gaza_done }
+	}
+
+	option = {
+		name = rev_bph.10.a
+		log = "[GetDateText]: [Root.GetName]: rev_bph.10.a"
+		set_country_flag = rev_bph_trump_gaza_done
+		if = {
+			limit = {
+				country_exists = ISR
+				country_exists = HAM
+			}
+			ISR = {
+				set_autonomy = {
+					target = HAM
+					autonomy_state = autonomy_puppet_state
+				}
+			}
+			HAM = {
+				set_country_flag = rev_board_of_peace_hq
+				set_cosmetic_tag = HAM_BPH
+				load_focus_tree = REV_ham_board_of_peace_focus
+				set_politics = {
+					ruling_party = conservative
+					elections_allowed = no
+				}
+				create_country_leader = {
+					name = "Donald Trump"
+					picture = "Donald_Trump.dds"
+					ideology = conservatism
+					traits = {
+						career_politician
+					}
+				}
+			}
+		}
+	}
+}
+
+# Later 2029 rebuilding pass for Board of Peace HQ.
+country_event = {
+	id = rev_bph.20
+	title = rev_bph.20.t
+	desc = rev_bph.20.d
+	picture = GFX_report_event_usa_politics
+	is_triggered_only = yes
+
+	trigger = {
+		tag = HAM
+		has_country_flag = rev_board_of_peace_hq
+		NOT = { has_country_flag = rev_bph_rebuild_done }
+	}
+
+	option = {
+		name = rev_bph.20.a
+		log = "[GetDateText]: [Root.GetName]: rev_bph.20.a"
+		set_country_flag = rev_bph_rebuild_done
+		209 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 3
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = internet_station
+				level = 3
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = offices
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}

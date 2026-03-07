@@ -190,7 +190,7 @@ capital = 945
 	}
 	set_politics = { #Should set Elections to March 4, 2001
 		ruling_party = democratic
-		last_election = "1997.3.4"
+		last_election = "2025.3.4"
 		election_frequency = 48
 		elections_allowed = yes
 	}

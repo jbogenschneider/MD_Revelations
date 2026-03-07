@@ -214,7 +214,7 @@ capital = 716
 	}
 	set_politics = {
 		ruling_party = communism
-		last_election = "1999.1.10"
+		last_election = "2023.1.10"
 		election_frequency = 48
 		elections_allowed = yes
 	}
@@ -366,7 +366,7 @@ capital = 716
 	}
 	set_politics = {
 		ruling_party = communism
-		last_election = "2015.4.26"
+		last_election = "2025.4.26"
 		election_frequency = 60
 		elections_allowed = yes
 	}

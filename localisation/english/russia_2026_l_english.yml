@@ -29,3 +29,20 @@
  ELECT_SOKOLOV:0 "Elect Viktor Sokolov - The Deal Maker"
  ELECT_VOLODIN:0 "Elect Sergei Volodin - The Stabilizer"
  ELECT_ORLOV:0 "Elect Dmitri Orlov - Russia First, But Patient"
+
+ RUSSIA_FAR_EAST_BREAKAWAY_TITLE:0 "Far Eastern Provinces Break Away"
+ RUSSIA_FAR_EAST_BREAKAWAY_DESC:0 "With the ruble in freefall and federal aid absent, governors and local elites in the Far East declare an emergency secession. They seek economic survival and openly discuss a currency and banking pivot toward China."
+
+ CHINA_FAR_EAST_PUPPET_OFFER_TITLE:0 "Far East Protectorate Proposal"
+ CHINA_FAR_EAST_PUPPET_OFFER_DESC:0 "The new Far Eastern state asks for economic shelter and strategic backing. Accepting a protectorate arrangement would expand Chinese leverage but sharply worsen relations with Moscow."
+ CHINA_FAR_EAST_PUPPET_OFFER_SEND:0 "Offer Protectorate Status"
+ CHINA_FAR_EAST_PUPPET_OFFER_HOLD:0 "Do Not Commit"
+
+ FAR_PUPPET_OFFER_TITLE:0 "Chinese Protectorate Offer"
+ FAR_PUPPET_OFFER_DESC:0 "China offers immediate financial stabilization and security guarantees in exchange for formal alignment as a protectorate."
+ FAR_PUPPET_OFFER_ACCEPT:0 "Accept Chinese Protection"
+ FAR_PUPPET_OFFER_REJECT:0 "Remain Independent"
+
+ CHINA_RETURNS_ASSETS_TITLE:0 "Ceremonial Return of Strategic Assets"
+ CHINA_RETURNS_ASSETS_DESC:0 "To avoid uncontrolled escalation with Moscow, Beijing arranges a ceremonial handover of selected Russian strategic assets and legacy holdings."
+ CHINA_RETURNS_ASSETS_OK:0 "Proceed with the Handover"

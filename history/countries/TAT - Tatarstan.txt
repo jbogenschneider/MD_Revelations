@@ -76,7 +76,7 @@ capital = 661
 	}
 	set_politics = {
 		ruling_party = communism
-		last_election = "1996.3.17"
+		last_election = "2021.3.17"
 		election_frequency = 60
 		elections_allowed = yes
 	}

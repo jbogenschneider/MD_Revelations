@@ -23,12 +23,9 @@ state = {
 			add_core_of = HAM
 			add_manpower = 587166
 			buildings = {
-				internet_station = 1
-				stronghold_network = 1
-				13207 = {
-					bunker = 7
-					coastal_bunker = 7
-				}
+				infrastructure = 1
+				internet_station = 0
+				offices = 0
 			}
 		}
 	}

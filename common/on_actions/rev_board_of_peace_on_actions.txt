@@ -1,0 +1,35 @@
+on_actions = {
+	on_daily = {
+		effect = {
+			if = {
+				limit = {
+					tag = ISR
+					NOT = { has_country_flag = rev_bph_gaza_setup_done }
+					date > 2026.1.1
+					date < 2026.1.6
+				}
+				country_event = { id = rev_bph.1 }
+			}
+			if = {
+				limit = {
+					tag = USA
+					has_country_flag = rev_usa_cw_go_quiet_path
+					NOT = { has_country_flag = rev_bph_trump_gaza_done }
+					date > 2029.1.31
+					date < 2029.2.5
+				}
+				country_event = { id = rev_bph.10 }
+			}
+			if = {
+				limit = {
+					tag = HAM
+					has_country_flag = rev_board_of_peace_hq
+					NOT = { has_country_flag = rev_bph_rebuild_done }
+					date > 2029.8.31
+					date < 2029.9.6
+				}
+				country_event = { id = rev_bph.20 }
+			}
+		}
+	}
+}

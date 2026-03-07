@@ -1,0 +1,28 @@
+﻿l_english:
+ HAM_BPH_neutrality: "Board of Peace Headquarters"
+ HAM_BPH_neutrality_DEF: "the Board of Peace Headquarters"
+ HAM_BPH_democratic: "Board of Peace Headquarters"
+ HAM_BPH_democratic_DEF: "the Board of Peace Headquarters"
+ HAM_BPH_fascism: "Board of Peace Headquarters"
+ HAM_BPH_fascism_DEF: "the Board of Peace Headquarters"
+ HAM_BPH_communism: "Board of Peace Headquarters"
+ HAM_BPH_communism_DEF: "the Board of Peace Headquarters"
+ HAM_BPH_nationalist: "Board of Peace Headquarters"
+ HAM_BPH_nationalist_DEF: "the Board of Peace Headquarters"
+ HAM_BPH_neutrality_ADJ: "Board of Peace"
+ HAM_BPH_democratic_ADJ: "Board of Peace"
+ HAM_BPH_fascism_ADJ: "Board of Peace"
+ HAM_BPH_communism_ADJ: "Board of Peace"
+ HAM_BPH_nationalist_ADJ: "Board of Peace"
+
+ rev_bph.1.t: "Status of Gaza"
+ rev_bph.1.d: "Gaza remains under Israeli oversight as a devastated protectorate at scenario start."
+ rev_bph.1.a: "Maintain strict control."
+
+ rev_bph.10.t: "Board of Peace Headquarters"
+ rev_bph.10.d: "After standing down domestically, Donald Trump departs for Gaza and is installed as the public face of the Board of Peace Headquarters under Israeli patronage."
+ rev_bph.10.a: "A strange end to a strange term."
+
+ rev_bph.20.t: "Rebuilding the Headquarters"
+ rev_bph.20.d: "The Board of Peace begins limited reconstruction in Gaza: core utilities, communications, and administrative offices."
+ rev_bph.20.a: "Begin reconstruction."

@@ -257,7 +257,7 @@ set_war_support = 0.27
 	}
 	set_politics = {
 		ruling_party = democratic
-		last_election = "1998.09.12"
+		last_election = "2022.9.12"
 		election_frequency = 48
 		elections_allowed = yes
 	}
@@ -436,7 +436,7 @@ set_war_support = 0.27
 	}
 	set_politics = {
 		ruling_party = neutrality
-		last_election = "2018.10.12"
+		last_election = "2022.10.12"
 		election_frequency = 48
 		elections_allowed = yes
 	}

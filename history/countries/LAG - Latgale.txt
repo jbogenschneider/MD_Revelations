@@ -159,7 +159,7 @@ capital = 1013
 	}
 	set_politics = {
 		ruling_party = nationalist
-		last_election = "1999.5.5"
+		last_election = "2023.5.5"
 		election_frequency = 48
 		elections_allowed = yes
 	}

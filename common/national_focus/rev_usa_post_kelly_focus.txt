@@ -1,0 +1,104 @@
+focus_tree = {
+	id = REV_usa_post_kelly_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 50000
+			tag = USA
+			has_country_flag = rev_usa_post_kelly_tree_active
+		}
+	}
+	continuous_focus_position = { x = 130 y = 10 }
+
+	focus = {
+		id = REV_USA_post_kelly_rebuild_command
+		icon = political_effort
+		x = 10
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			add_political_power = 120
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = REV_USA_post_kelly_war_footing
+		icon = war_plans
+		x = 10
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+		prerequisite = { focus = REV_USA_post_kelly_rebuild_command }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			add_war_support = 0.05
+			add_stability = -0.01
+		}
+	}
+
+	focus = {
+		id = REV_USA_post_kelly_military_budget_i
+		icon = generic_production2
+		x = 8
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_DEFENSE }
+		prerequisite = { focus = REV_USA_post_kelly_war_footing }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = { is_owned_by = ROOT is_controlled_by = ROOT }
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+			random_owned_controlled_state = {
+				limit = { is_owned_by = ROOT is_controlled_by = ROOT }
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+		}
+	}
+
+	focus = {
+		id = REV_USA_post_kelly_military_budget_ii
+		icon = generic_production3
+		x = 12
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_DEFENSE }
+		prerequisite = { focus = REV_USA_post_kelly_war_footing }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = { is_owned_by = ROOT is_controlled_by = ROOT }
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+			random_owned_controlled_state = {
+				limit = { is_owned_by = ROOT is_controlled_by = ROOT }
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+		}
+	}
+
+	focus = {
+		id = REV_USA_post_kelly_unity_campaign
+		icon = anti_war_propaganda
+		x = 10
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+		prerequisite = { focus = REV_USA_post_kelly_military_budget_i }
+		prerequisite = { focus = REV_USA_post_kelly_military_budget_ii }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			add_war_support = 0.05
+			add_political_power = 100
+		}
+	}
+}
