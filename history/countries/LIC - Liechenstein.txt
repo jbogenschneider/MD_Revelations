@@ -201,7 +201,7 @@ oob = "LIC_2000"
 	}
 	set_politics = {
 		ruling_party = democratic
-		last_election = "1997.2.1"
+		last_election = "2025.2.1"
 		election_frequency = 48
 		elections_allowed = yes
 	}

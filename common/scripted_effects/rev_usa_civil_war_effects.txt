@@ -11,16 +11,10 @@ rev_setup_usa_civil_war_sides_impeachment = {
 		release = HWI
 	}
 
-	# In this branch USA/USB/CAN leave NATO so the alliance bloc stays out.
+	# In this branch USA leaves NATO so the alliance bloc stays out of direct war.
 	if = {
 		limit = { has_idea = NATO_member }
 		NATO_leave = yes
-	}
-	CAN = {
-		if = {
-			limit = { has_idea = NATO_member }
-			NATO_leave = yes
-		}
 	}
 
 	# USB is the Trump-aligned South and Central-West bloc.
@@ -73,6 +67,7 @@ rev_setup_usa_civil_war_sides_impeachment = {
 			ruling_party = conservative
 			elections_allowed = no
 		}
+		set_cosmetic_tag = USB_FreeStates_democratic
 		if = {
 			limit = { has_idea = NATO_member }
 			NATO_leave = yes
@@ -177,9 +172,9 @@ rev_setup_usa_civil_war_sides_impeachment = {
 		add_stability = -0.08
 		add_war_support = -0.08
 		create_country_leader = {
-			name = "Lloyd Austin"
-			picture = "USB_lloyd_austin.png"
-			ideology = conservatism
+			name = "Hakeem Jeffries"
+			picture = "Hakeem-Jeffries.dds"
+			ideology = liberalism
 			traits = {
 				career_politician
 			}
@@ -280,46 +275,6 @@ rev_setup_usa_civil_war_sides_impeachment = {
 		set_equipment_fraction = 1
 	}
 
-	# Core conflict in this branch: USB (Trump side) vs USA + CAN.
-	if = {
-		limit = {
-			CAN = { exists = yes }
-			USB = { exists = yes }
-			USB = { NOT = { has_war_with = CAN } }
-		}
-		USB = {
-			declare_war_on = {
-				target = CAN
-				type = annex_everything
-			}
-		}
-	}
-	if = {
-		limit = {
-			USB = { exists = yes }
-			USA = { exists = yes }
-			USA = { NOT = { has_war_with = USB } }
-		}
-		USA = {
-			declare_war_on = {
-				target = USB
-				type = annex_everything
-			}
-		}
-	}
-	CAN = {
-		if = {
-			limit = {
-				USB = { exists = yes }
-				NOT = { has_war_with = USB }
-			}
-			declare_war_on = {
-				target = USB
-				type = annex_everything
-			}
-		}
-	}
-
 	# Keep Hawaii/PR neutral in the war, but NATO-aligned for naval basing.
 	HWI = {
 		if = {
@@ -367,6 +322,70 @@ rev_setup_usa_civil_war_sides_impeachment = {
 		if = {
 			limit = { has_war_with = CAN }
 			white_peace = CAN
+		}
+	}
+}
+
+rev_begin_usa_usb_war = {
+	# Core conflict branch: USB (Trump side) vs USA only.
+	if = {
+		limit = {
+			USB = { exists = yes }
+			USA = { exists = yes }
+			USA = { NOT = { has_war_with = USB } }
+		}
+		USA = {
+			declare_war_on = {
+				target = USB
+				type = annex_everything
+			}
+		}
+	}
+
+	# Keep Canada and NATO countries neutral in the civil war,
+	# but strongly bias their AI toward supporting USA with volunteers.
+	every_country = {
+		if = {
+			limit = {
+				OR = {
+					tag = CAN
+					has_idea = NATO_member
+				}
+				NOT = { tag = USA }
+				NOT = { tag = USB }
+				exists = yes
+			}
+			if = {
+				limit = { has_war_with = USA }
+				white_peace = USA
+			}
+			if = {
+				limit = { has_war_with = USB }
+				white_peace = USB
+			}
+			if = {
+				limit = { is_ai = yes }
+				add_ai_strategy = {
+					type = send_volunteers_desire
+					id = USA
+					value = 500
+				}
+				add_ai_strategy = {
+					type = support
+					id = USA
+					value = 250
+				}
+				add_ai_strategy = {
+					type = befriend
+					id = USA
+					value = 150
+				}
+				add_ai_strategy = {
+					type = antagonize
+					id = USB
+					value = 120
+				}
+			}
 		}
 	}
 }

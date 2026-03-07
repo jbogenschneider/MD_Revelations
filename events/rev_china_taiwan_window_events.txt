@@ -1,0 +1,40 @@
+add_namespace = rev_chi_tw
+
+country_event = {
+	id = rev_chi_tw.1
+	title = rev_chi_tw.1.t
+	desc = rev_chi_tw.1.d
+	picture = GFX_CHI_chinese_soldiers
+	is_triggered_only = yes
+
+	trigger = {
+		tag = CHI
+		date > 2029.3.31
+		date < 2029.4.5
+		country_exists = USA
+		country_exists = USB
+		USA = { has_war_with = USB }
+		country_exists = TAI
+		TAI = { exists = yes }
+		NOT = { has_war_with = TAI }
+		NOT = { has_country_flag = rev_chi_tw_april_2029_window_done }
+	}
+
+	option = {
+		name = rev_chi_tw.1.a
+		ai_chance = { base = 95 }
+		set_country_flag = rev_chi_tw_april_2029_window_done
+		set_global_flag = rev_chi_tw_non_intervention_window_active
+		set_country_flag = CHI_taiwan_strait_war
+		declare_war_on = {
+			target = TAI
+			type = annex_everything
+		}
+	}
+
+	option = {
+		name = rev_chi_tw.1.b
+		ai_chance = { base = 5 }
+		set_country_flag = rev_chi_tw_april_2029_window_done
+	}
+}

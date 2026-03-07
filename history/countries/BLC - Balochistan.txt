@@ -145,7 +145,7 @@ capital = 416
 	}
 	set_politics = {
 		ruling_party = fascism
-		last_election = "1999.4.30"
+		last_election = "2023.4.30"
 		election_frequency = 48
 		elections_allowed = yes
 	}

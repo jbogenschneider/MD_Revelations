@@ -8,19 +8,84 @@ on_actions = {
 						tag = USB
 					}
 					has_country_flag = rev_usa_civil_war_initialized
-					NOT = { has_global_flag = rev_usa_cw_neutral_states_resolved }
+					NOT = { has_global_flag = rev_usa_cw_concluded }
 				}
 				rev_resolve_usa_civil_war_neutral_states = yes
 			}
 			if = {
 				limit = {
 					tag = USA
-					has_country_flag = USA_sided_with_trump_flag
-					has_country_leader = {
-						character = USA_donald_trump_char
-						ruling_only = yes
+					has_country_flag = rev_usa_civil_war_initialized
+					has_country_flag = rev_usa_cw_launch_event_fired
+					NOT = { has_global_flag = rev_usa_cw_concluded }
+					OR = {
+						NOT = { country_exists = USB }
+						USB = { has_capitulated = yes }
 					}
-					NOT = { has_country_flag = rev_usa_cw_aug_plot_fired }
+				}
+				country_event = { id = rev_usa_cw.40 }
+			}
+			if = {
+				limit = {
+					tag = USB
+					has_country_flag = rev_usa_civil_war_initialized
+					has_country_flag = rev_usa_cw_launch_event_fired
+					NOT = { has_global_flag = rev_usa_cw_concluded }
+					OR = {
+						NOT = { country_exists = USA }
+						USA = { has_capitulated = yes }
+					}
+				}
+				country_event = { id = rev_usa_cw.41 }
+			}
+			if = {
+				limit = {
+					tag = USA
+					has_country_flag = rev_usa_civil_war_initialized
+					has_country_flag = rev_usa_cw_launch_event_fired
+					country_exists = USB
+					has_war_with = USB
+					NOT = { has_global_flag = rev_usa_cw_concluded }
+					date > 2030.12.24
+					date < 2030.12.29
+				}
+				country_event = { id = rev_usa_cw.50 }
+			}
+			if = {
+				limit = {
+					tag = USA
+					NOT = { has_country_flag = rev_usa_cw_midterms_2026_fired }
+					NOT = { has_country_flag = rev_usa_civil_war_initialized }
+					date > 2026.11.30
+					date < 2026.12.04
+				}
+				country_event = { id = rev_usa_cw.20 }
+			}
+			if = {
+				limit = {
+					tag = USA
+					NOT = { has_country_flag = rev_usa_cw_tariff_repeal_2027_fired }
+					NOT = { has_country_flag = rev_usa_civil_war_initialized }
+					date > 2027.1.31
+					date < 2027.2.04
+				}
+				country_event = { id = rev_usa_cw.21 }
+			}
+			if = {
+				limit = {
+					tag = USA
+					NOT = { has_country_flag = rev_usa_cw_election_field_2028_fired }
+					NOT = { has_country_flag = rev_usa_civil_war_initialized }
+					date > 2028.5.3
+					date < 2028.5.7
+				}
+				country_event = { id = rev_usa_cw.22 }
+			}
+			if = {
+				limit = {
+					tag = USA
+					has_country_flag = USA_sided_with_trump_flag
+					NOT = { has_country_flag = rev_usa_cw_aug_branch_fired }
 					NOT = { has_country_flag = rev_usa_civil_war_initialized }
 					date > 2028.8.14
 					date < 2028.8.18
@@ -31,17 +96,106 @@ on_actions = {
 				limit = {
 					tag = USA
 					has_country_flag = USA_sided_with_trump_flag
-					has_country_flag = rev_usa_canada_plot_flag
-					has_country_leader = {
-						character = USA_donald_trump_char
-						ruling_only = yes
-					}
+					has_country_flag = rev_usa_cw_stand_down_path
+					NOT = { has_country_flag = rev_usa_cw_scotus_fired }
+					NOT = { has_country_flag = rev_usa_civil_war_initialized }
+					date > 2028.8.28
+					date < 2028.9.1
+				}
+				country_event = { id = rev_usa_cw.30 }
+			}
+			if = {
+				limit = {
+					tag = USA
+					has_country_flag = USA_sided_with_trump_flag
+					has_country_flag = rev_usa_cw_stand_down_path
+					has_country_flag = rev_usa_cw_scotus_fired
 					NOT = { has_country_flag = rev_usa_cw_sep_war_fired }
 					NOT = { has_country_flag = rev_usa_civil_war_initialized }
 					date > 2028.9.19
 					date < 2028.9.22
 				}
 				country_event = { id = rev_usa_cw.11 }
+			}
+			if = {
+				limit = {
+					tag = USA
+					has_country_flag = rev_usa_cw_sep_war_fired
+					has_country_flag = rev_usa_cw_player_side_chosen
+					NOT = { has_country_flag = rev_usa_cw_launch_event_fired }
+					NOT = { has_country_flag = rev_usa_civil_war_initialized }
+					date > 2028.9.24
+					date < 2028.10.2
+				}
+				country_event = { id = rev_usa_cw.31 }
+			}
+			if = {
+				limit = {
+					tag = USB
+					USA = { has_country_flag = rev_usa_cw_sep_war_fired }
+					USA = { NOT = { has_country_flag = rev_usa_cw_launch_event_fired } }
+					NOT = { has_country_flag = rev_usa_cw_usb_election_decided }
+					date > 2028.10.9
+					date < 2028.10.13
+				}
+				country_event = { id = rev_usa_cw.32 }
+			}
+			if = {
+				limit = {
+					tag = USA
+					OR = {
+						has_country_flag = rev_usa_cw_go_quiet_path
+						has_country_flag = rev_usa_cw_sep_war_fired
+					}
+					NOT = { has_country_flag = rev_usa_cw_launch_event_fired }
+					NOT = { has_country_flag = rev_usa_cw_kelly_win_announced }
+					date > 2028.11.09
+					date < 2028.11.13
+				}
+				country_event = { id = rev_usa_cw.23 }
+			}
+			if = {
+				limit = {
+					tag = USA
+					has_country_flag = rev_usa_cw_kelly_win_announced
+					NOT = { has_country_flag = rev_usa_cw_launch_event_fired }
+					NOT = { has_country_flag = rev_usa_cw_kelly_inaugurated }
+					date > 2029.1.19
+					date < 2029.1.23
+				}
+				country_event = { id = rev_usa_cw.24 }
+			}
+			if = {
+				limit = {
+					tag = USA
+					has_country_flag = rev_usa_cw_kelly_inaugurated
+					USB = { has_country_flag = rev_usa_cw_usb_stays_out }
+					NOT = { has_country_flag = rev_usa_cw_matter_of_succession_fired }
+					NOT = { has_country_flag = rev_usa_cw_launch_event_fired }
+					date > 2029.2.4
+					date < 2029.2.8
+				}
+				country_event = { id = rev_usa_cw.33 }
+			}
+			if = {
+				limit = {
+					tag = USA
+					has_country_flag = rev_usa_cw_peaceful_partition_path
+					NOT = { has_country_flag = rev_usa_cw_april_carve_done }
+					date > 2029.3.31
+					date < 2029.4.4
+				}
+				country_event = { id = rev_usa_cw.34 }
+			}
+			if = {
+				limit = {
+					tag = USB
+					USA = { has_country_flag = rev_usa_cw_peaceful_partition_path }
+					USA = { NOT = { has_country_flag = rev_usa_cw_april_usb_notice_done } }
+					date > 2029.3.31
+					date < 2029.4.4
+				}
+				country_event = { id = rev_usa_cw.35 }
 			}
 		}
 	}

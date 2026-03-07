@@ -1,0 +1,31 @@
+on_actions = {
+	on_declare_war = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = { tag = CHI }
+					FROM = { exists = yes }
+				}
+				every_country = {
+					limit = {
+						OR = {
+							has_idea = NATO_member
+							tag = JAP
+							tag = KOR
+							tag = AST
+							tag = HWI
+							tag = USA
+							tag = USB
+						}
+						NOT = { tag = CHI }
+						exists = yes
+					}
+					if = {
+						limit = { NOT = { is_embargoing = CHI } }
+						send_embargo = CHI
+					}
+				}
+			}
+		}
+	}
+}

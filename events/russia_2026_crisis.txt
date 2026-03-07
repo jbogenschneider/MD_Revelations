@@ -236,26 +236,29 @@ country_event = {
         name = OK
         ai_chance = { factor = 100 }
 
-        # Remove Putin
+        # Remove Putin and install interim oligarch-led administration.
         set_politics = {
             ruling_party = neutrality
-            elections_allowed = yes
+            elections_allowed = no
         }
 
-        # Remove current leader
         retire_country_leader = yes
 
-        # Add new interim leader (generic oligarch chair)
+        # Main oligarch serves as interim president.
         create_country_leader = {
-            name = "Council of National Restoration"
+            name = "Viktor Mikhailovich Sokolov"
             desc = "RUS_OLIGARCH_COUNCIL_DESC"
-            picture = "GFX_portrait_generic_businessman"
-            expire = "2027.1.1"
+            picture = "Viktor_Mikhailovich_Sokolov.dds"
+            expire = "2035.1.1"
             ideology = neutrality
             traits = { }
         }
 
         set_country_flag = russia_oligarch_council_active
+        set_country_flag = RUSSIA_OLIGARCH_PATH
+        set_country_flag = rev_russia_volodin_cabinet_minister
+        set_country_flag = rev_russia_orlov_cabinet_minister
+        add_political_power = 120
         add_stability = -0.05
         add_war_support = -0.10
     }
@@ -286,120 +289,257 @@ country_event = {
         name = OK
         ai_chance = { factor = 100 }
 
-        # White peace
+        # Full withdrawal settlement.
         white_peace = UKR
 
-        # Return claimed territories (adjust state IDs if needed)
+        # Return all occupied Ukrainian territories in this scenario branch.
         UKR = {
-            transfer_state = 231   # Crimea example (replace with correct IDs)
-            transfer_state = 232   # Donetsk example
-            transfer_state = 233   # Luhansk example
+            transfer_state = 669    # Crimea
+            transfer_state = 1112   # Sevastopol Bay
+            transfer_state = 693    # Donetsk
+            transfer_state = 1030   # Donetsk Oblast
+            transfer_state = 1075   # Luhansk
+            transfer_state = 1076   # Luhansk Oblast
+            transfer_state = 694    # Zaporizhzhia
+            transfer_state = 1085   # Kherson
         }
-
-        set_country_flag = russia_pending_election_2026
+        clr_country_flag = rev_sov_2026_sanctions_active
+        clr_country_flag = russia_pending_election_2026
+        clr_country_flag = RUSSIA_ELECTION_ACTIVE
+        set_country_flag = rev_russia_postwar_transition
 
         add_stability = 0.10
         add_war_support = -0.20
     }
 }
 
+# ===============================
+# JANUARY 10 2027 - FAR EAST BREAKAWAY
+# ===============================
 country_event = {
-    id = russia_2026.7
-    title = RUSSIA_ELECTION_ANNOUNCED_2026_TITLE
-    desc = RUSSIA_ELECTION_ANNOUNCED_2026_DESC
-    picture = GFX_report_event_russian_parliament
-    is_triggered_only = yes
+	id = russia_2026.9
+	title = RUSSIA_FAR_EAST_BREAKAWAY_TITLE
+	desc = RUSSIA_FAR_EAST_BREAKAWAY_DESC
+	picture = GFX_report_event_generic_civil_unrest
+	is_triggered_only = yes
 
-    trigger = {
-        tag = SOV
-        has_country_flag = russia_pending_election_2026
-        date > 2026.10.30
-    }
+	trigger = {
+		tag = SOV
+		has_country_flag = russia_oligarch_council_active
+		NOT = { has_country_flag = rev_russia_far_east_breakaway_done }
+		date > 2027.1.9
+		date < 2027.1.12
+	}
 
-    mean_time_to_happen = { days = 1 }
+	option = {
+		name = OK
+		set_country_flag = rev_russia_far_east_breakaway_done
 
-    option = {
-        name = RUSSIA_ELECTION_BEGIN
-        set_country_flag = RUSSIA_ELECTION_ACTIVE
-        add_stability = 0.02
-    }
+		if = {
+			limit = { NOT = { country_exists = FAR } }
+			release = FAR
+		}
+
+		685 = { transfer_state_to = FAR }   # Irkutsk
+		686 = { transfer_state_to = FAR }   # Buryatia
+		687 = { transfer_state_to = FAR }   # Khabarovsk
+		688 = { transfer_state_to = FAR }   # Yakutia
+		689 = { transfer_state_to = FAR }   # Chukotka
+		691 = { transfer_state_to = FAR }   # Sakhalin
+		692 = { transfer_state_to = FAR }   # Primorye
+		1068 = { transfer_state_to = FAR }  # Jewish
+		1069 = { transfer_state_to = FAR }  # Amur
+		1070 = { transfer_state_to = FAR }  # Transbaikal
+		1136 = { transfer_state_to = FAR }  # Magadan
+		1137 = { transfer_state_to = FAR }  # Kamchatka
+
+		if = {
+			limit = { country_exists = FAR }
+			FAR = {
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = no
+				}
+				add_manpower = 85000
+				add_equipment_to_stockpile = { type = infantry_weapons3 amount = 18000 }
+				add_equipment_to_stockpile = { type = artillery_1 amount = 300 }
+				add_equipment_to_stockpile = { type = Anti_Air_2 amount = 120 }
+				division_template = {
+					name = "Far East Militia Brigade"
+					regiments = {
+						Militia_Bat = { x = 0 y = 0 }
+						Militia_Bat = { x = 0 y = 1 }
+						Militia_Bat = { x = 1 y = 0 }
+					}
+					priority = 2
+				}
+				692 = {
+					create_unit = {
+						division = "name = \"1st Far East Militia\" division_template = \"Far East Militia Brigade\" start_experience_factor = 0.1"
+						owner = FAR
+					}
+				}
+				687 = {
+					create_unit = {
+						division = "name = \"2nd Far East Militia\" division_template = \"Far East Militia Brigade\" start_experience_factor = 0.1"
+						owner = FAR
+					}
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				country_exists = FAR
+				FAR = { NOT = { is_subject_of = CHI } }
+			}
+			set_country_flag = rev_russia_far_east_reclaim_focus_unlocked
+		}
+	}
+}
+
+# ===============================
+# APRIL 1 2027 - CHINA PUPPET OFFER (ROUND 1)
+# ===============================
+country_event = {
+	id = russia_2026.10
+	title = CHINA_FAR_EAST_PUPPET_OFFER_TITLE
+	desc = CHINA_FAR_EAST_PUPPET_OFFER_DESC
+	picture = GFX_report_event_generic_political_meeting
+	is_triggered_only = yes
+
+	trigger = {
+		tag = CHI
+		country_exists = FAR
+		FAR = { exists = yes }
+		FAR = { NOT = { is_subject_of = CHI } }
+		NOT = { has_country_flag = rev_china_far_east_offer_2027_done }
+		date > 2027.3.31
+		date < 2027.4.3
+	}
+
+	option = {
+		name = CHINA_FAR_EAST_PUPPET_OFFER_SEND
+		ai_chance = { factor = 80 }
+		set_country_flag = rev_china_far_east_offer_2027_done
+		FAR = { country_event = { id = russia_2026.11 } }
+	}
+	option = {
+		name = CHINA_FAR_EAST_PUPPET_OFFER_HOLD
+		ai_chance = { factor = 20 }
+		set_country_flag = rev_china_far_east_offer_2027_done
+	}
 }
 
 country_event = {
-    id = russia_2026.8
-    title = RUSSIA_ELECTION_DAY_2026_TITLE
-    desc = RUSSIA_ELECTION_DAY_2026_DESC
-    picture = GFX_report_event_election
-    is_triggered_only = yes
+	id = russia_2026.11
+	title = FAR_PUPPET_OFFER_TITLE
+	desc = FAR_PUPPET_OFFER_DESC
+	picture = GFX_report_event_generic_political_meeting
+	is_triggered_only = yes
 
-    trigger = {
-        tag = SOV
-        has_country_flag = RUSSIA_ELECTION_ACTIVE
-        date > 2026.12.19
-    }
+	trigger = {
+		tag = FAR
+		country_exists = CHI
+		NOT = { is_subject_of = CHI }
+	}
 
-    mean_time_to_happen = { days = 1 }
-
-    option = {
-        name = ELECT_SOKOLOV
-        ai_chance = { factor = 35 }
-        set_country_flag = RUSSIA_OLIGARCH_PATH
-        add_stability = 0.05
-        add_political_power = 100
-        add_ideas = RUSSIA_OLIGARCH_PRESIDENT
-        retire_country_leader = yes
-        create_country_leader = {
-            name = "Viktor Mikhailovich Sokolov"
-            desc = "POLITICS_SOKOLOV_DESC"
-            picture = "Viktor_Mikhailovich_Sokolov.dds"
-            expire = "2032.1.1"
-            ideology = despotism
-            traits = {
-                corrupt_politician
-                industrialist
-            }
-        }
-    }
-
-    option = {
-        name = ELECT_VOLODIN
-        ai_chance = { factor = 30 }
-        set_country_flag = RUSSIA_TECHNOCRAT_PATH
-        add_stability = 0.03
-        add_ideas = RUSSIA_TECHNOCRAT_PRESIDENT
-        retire_country_leader = yes
-        create_country_leader = {
-            name = "Sergei Andreevich Volodin"
-            desc = "POLITICS_VOLODIN_DESC"
-            picture = "Sergei_Andreevich_Volodin.dds"
-            expire = "2032.1.1"
-            ideology = neutrality
-            traits = {
-                silent_workhorse
-                financial_expert
-            }
-        }
-    }
-
-    option = {
-        name = ELECT_ORLOV
-        ai_chance = { factor = 35 }
-        set_country_flag = RUSSIA_POPULIST_PATH
-        add_war_support = 0.05
-        add_ideas = RUSSIA_POPULIST_PRESIDENT
-        retire_country_leader = yes
-        create_country_leader = {
-            name = "Dmitri Leonidovich Orlov"
-            desc = "POLITICS_ORLOV_DESC"
-            picture = "Dmitri_Leonidovich_Orlov.dds"
-            expire = "2032.1.1"
-            ideology = nationalist
-            traits = {
-                charismatic
-                nationalist_sympathizer
-            }
-        }
-    }
+	option = {
+		name = FAR_PUPPET_OFFER_ACCEPT
+		trigger = { NOT = { has_war_with = CHI } }
+		ai_chance = { factor = 75 }
+		CHI = {
+			set_autonomy = {
+				target = FAR
+				autonomy_state = autonomy_puppet_state
+			}
+		}
+		set_country_flag = rev_far_east_china_puppet
+		if = {
+			limit = { country_exists = SOV }
+			SOV = {
+				clr_country_flag = rev_russia_far_east_reclaim_focus_unlocked
+				if = {
+					limit = { NOT = { is_embargoing = CHI } }
+					send_embargo = CHI
+				}
+				add_opinion_modifier = { target = CHI modifier = harsh_sanctions }
+				add_war_support = 0.02
+			}
+		}
+	}
+	option = {
+		name = FAR_PUPPET_OFFER_REJECT
+		ai_chance = { factor = 25 }
+		add_stability = 0.02
+	}
 }
+
+# ===============================
+# APRIL 15 2027 - CEREMONIAL RETURN OF STRATEGIC ASSETS
+# ===============================
+country_event = {
+	id = russia_2026.12
+	title = CHINA_RETURNS_ASSETS_TITLE
+	desc = CHINA_RETURNS_ASSETS_DESC
+	picture = GFX_report_event_generic_political_meeting
+	is_triggered_only = yes
+
+	trigger = {
+		tag = CHI
+		country_exists = FAR
+		FAR = { is_subject_of = CHI }
+		NOT = { has_country_flag = rev_china_returns_assets_done_2027 }
+		date > 2027.4.14
+		date < 2027.4.17
+	}
+
+	option = {
+		name = CHINA_RETURNS_ASSETS_OK
+		set_country_flag = rev_china_returns_assets_done_2027
+		if = {
+			limit = { country_exists = SOV }
+			SOV = {
+				add_to_variable = { treasury = 50 }
+				add_opinion_modifier = { target = CHI modifier = large_commercial_relations }
+			}
+			add_opinion_modifier = { target = SOV modifier = large_commercial_relations }
+		}
+	}
+}
+
+# ===============================
+# JANUARY 10 2028 - CHINA PUPPET OFFER (ROUND 2)
+# ===============================
+country_event = {
+	id = russia_2026.13
+	title = CHINA_FAR_EAST_PUPPET_OFFER_TITLE
+	desc = CHINA_FAR_EAST_PUPPET_OFFER_DESC
+	picture = GFX_report_event_generic_political_meeting
+	is_triggered_only = yes
+
+	trigger = {
+		tag = CHI
+		country_exists = FAR
+		FAR = { exists = yes }
+		FAR = { NOT = { is_subject_of = CHI } }
+		NOT = { has_country_flag = rev_china_far_east_offer_2028_done }
+		date > 2028.1.9
+		date < 2028.1.12
+	}
+
+	option = {
+		name = CHINA_FAR_EAST_PUPPET_OFFER_SEND
+		ai_chance = { factor = 80 }
+		set_country_flag = rev_china_far_east_offer_2028_done
+		FAR = { country_event = { id = russia_2026.11 } }
+	}
+	option = {
+		name = CHINA_FAR_EAST_PUPPET_OFFER_HOLD
+		ai_chance = { factor = 20 }
+		set_country_flag = rev_china_far_east_offer_2028_done
+	}
+}
+
 
 

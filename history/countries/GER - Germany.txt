@@ -1901,7 +1901,7 @@ capital = 45
 	}
 	set_politics = {
 		ruling_party = democratic
-		last_election = "1997.4.19"
+		last_election = "2025.4.19"
 		election_frequency = 48
 		elections_allowed = yes
 	}
@@ -3181,7 +3181,7 @@ capital = 45
 	set_politics = {
 
 		ruling_party = democratic
-		last_election = "2013.9.22"
+		last_election = "2025.9.22"
 		election_frequency = 48
 		elections_allowed = yes
 	}

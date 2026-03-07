@@ -60,7 +60,7 @@ capital = 80
 	}
 	set_politics = {
 		ruling_party = nationalist
-		last_election = "1996.4.21"
+		last_election = "2021.4.21"
 		election_frequency = 60
 		elections_allowed = yes
 	}

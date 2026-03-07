@@ -184,7 +184,7 @@ oob = "MNC_2000"
 	}
 	set_politics = {
 		ruling_party = democratic
-		last_election = "1998.2.1"
+		last_election = "2023.2.1"
 		election_frequency = 60
 		elections_allowed = yes
 	}

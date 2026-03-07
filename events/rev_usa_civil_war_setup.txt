@@ -30,27 +30,57 @@ country_event = {
 	trigger = {
 		tag = USA
 		has_country_flag = USA_sided_with_trump_flag
-		has_country_leader = {
-			character = USA_donald_trump_char
-			ruling_only = yes
-		}
-		NOT = { has_country_flag = rev_usa_cw_aug_plot_fired }
+		NOT = { has_country_flag = rev_usa_cw_aug_branch_fired }
 		NOT = { has_country_flag = rev_usa_civil_war_initialized }
 	}
 
 	option = {
-		name = rev_usa_cw.10.a
+		name = USA_standing_down_and_standing_by
 		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.10.a"
+		custom_effect_tooltip = USA_standing_down_and_standing_by_desc
+		set_country_flag = rev_usa_cw_aug_branch_fired
 		set_country_flag = rev_usa_cw_aug_plot_fired
+		set_country_flag = rev_usa_cw_stand_down_path
 		set_country_flag = rev_usa_canada_plot_flag
 		add_war_support = 0.03
 		add_stability = -0.02
 	}
+	option = {
+		name = rev_usa_cw.10.b
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.10.b"
+		set_country_flag = rev_usa_cw_aug_branch_fired
+		set_country_flag = rev_usa_cw_go_quiet_path
+		clr_country_flag = rev_usa_canada_plot_flag
+		add_stability = 0.03
+		add_war_support = -0.03
+	}
 }
 
-# Sole civil war trigger (Sept 20, 2028):
-# Trump suspends elections and invokes the Insurrection Act, then is removed
-# in a snap remote impeachment vote he claims is illegitimate.
+# Aug 29, 2028: court and impeachment escalation after Insurrection path.
+country_event = {
+	id = rev_usa_cw.30
+	title = rev_usa_cw.30.t
+	desc = rev_usa_cw.30.d
+	picture = GFX_report_event_usa_politics
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = rev_usa_cw_stand_down_path
+		NOT = { has_country_flag = rev_usa_cw_scotus_fired }
+	}
+
+	option = {
+		name = rev_usa_cw.30.a
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.30.a"
+		set_country_flag = rev_usa_cw_scotus_fired
+		set_country_flag = rev_usa_snap_impeachment_2028
+		add_stability = -0.05
+		add_war_support = 0.02
+	}
+}
+
+# Sept 20, 2028: impeachment succeeds; player picks the side to play.
 country_event = {
 	id = rev_usa_cw.11
 	title = rev_usa_cw.11.t
@@ -61,11 +91,8 @@ country_event = {
 	trigger = {
 		tag = USA
 		has_country_flag = USA_sided_with_trump_flag
-		has_country_flag = rev_usa_canada_plot_flag
-		has_country_leader = {
-			character = USA_donald_trump_char
-			ruling_only = yes
-		}
+		has_country_flag = rev_usa_cw_stand_down_path
+		has_country_flag = rev_usa_cw_scotus_fired
 		NOT = { has_country_flag = rev_usa_cw_sep_war_fired }
 		NOT = { has_country_flag = rev_usa_civil_war_initialized }
 	}
@@ -77,20 +104,491 @@ country_event = {
 		set_country_flag = rev_usa_election_suspended_2028
 		set_country_flag = rev_usa_insurrection_act_2028
 		set_country_flag = rev_usa_snap_impeachment_2028
+		set_country_flag = rev_usa_cw_player_side_chosen
+		set_country_flag = rev_usa_cw_player_side_usb
+		clr_country_flag = rev_usa_cw_player_side_usa
 		set_politics = {
 			ruling_party = conservative
 			elections_allowed = no
 		}
+	}
+	option = {
+		name = rev_usa_cw.11.b
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.11.b"
+		set_country_flag = rev_usa_cw_sep_war_fired
+		set_country_flag = rev_usa_election_suspended_2028
+		set_country_flag = rev_usa_insurrection_act_2028
+		set_country_flag = rev_usa_snap_impeachment_2028
+		set_country_flag = rev_usa_cw_player_side_chosen
+		set_country_flag = rev_usa_cw_player_side_usa
+		clr_country_flag = rev_usa_cw_player_side_usb
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+	}
+}
+
+# Final pre-war decision event for USA. War does not start until this fires.
+country_event = {
+	id = rev_usa_cw.31
+	title = rev_usa_cw.31.t
+	desc = rev_usa_cw.31.d
+	picture = GFX_report_event_generic_war
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = rev_usa_cw_sep_war_fired
+		has_country_flag = rev_usa_cw_player_side_chosen
+		NOT = { has_country_flag = rev_usa_civil_war_initialized }
+	}
+
+	option = {
+		name = rev_usa_cw.31.a
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.31.a"
+		set_country_flag = rev_usa_cw_launch_event_fired
+		rev_setup_usa_civil_war_sides_impeachment = yes
+		if = {
+			limit = { has_country_flag = rev_usa_cw_player_side_usb }
+			USB = { change_tag_from = USA }
+		}
+	}
+}
+
+# USB decision after the split: participate in November election or stay out.
+country_event = {
+	id = rev_usa_cw.32
+	title = rev_usa_cw.32.t
+	desc = rev_usa_cw.32.d
+	picture = GFX_report_event_usa_election
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USB
+		NOT = { has_country_flag = rev_usa_cw_usb_election_decided }
+		USA = { has_country_flag = rev_usa_cw_sep_war_fired }
+	}
+
+	option = {
+		name = rev_usa_cw.32.a
+		ai_chance = { factor = 90 }
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.32.a"
+		set_country_flag = rev_usa_cw_usb_election_decided
+		set_country_flag = rev_usa_cw_usb_stays_out
+		clr_country_flag = rev_usa_cw_usb_rejoin_post_election
+	}
+	option = {
+		name = rev_usa_cw.32.b
+		ai_chance = { factor = 10 }
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.32.b"
+		set_country_flag = rev_usa_cw_usb_election_decided
+		set_country_flag = rev_usa_cw_usb_rejoin_post_election
+		clr_country_flag = rev_usa_cw_usb_stays_out
+	}
+}
+
+# Peaceful branch: election result announced.
+country_event = {
+	id = rev_usa_cw.23
+	title = rev_usa_cw.23.t
+	desc = rev_usa_cw.23.d
+	picture = GFX_report_event_usa_election
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = rev_usa_cw_go_quiet_path
+		NOT = { has_country_flag = rev_usa_cw_kelly_win_announced }
+	}
+
+	option = {
+		name = rev_usa_cw.23.a
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.23.a"
+		set_country_flag = rev_usa_cw_kelly_win_announced
+		set_popularities = {
+			democratic = 62
+			fascism = 0
+			communism = 4
+			neutrality = 24
+			nationalist = 10
+		}
+	}
+}
+
+# Peaceful branch: Jan 20, 2029 inauguration.
+country_event = {
+	id = rev_usa_cw.24
+	title = rev_usa_cw.24.t
+	desc = rev_usa_cw.24.d
+	picture = GFX_report_event_usa_election
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = rev_usa_cw_kelly_win_announced
+		NOT = { has_country_flag = rev_usa_cw_kelly_inaugurated }
+	}
+
+	option = {
+		name = rev_usa_cw.24.a
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.24.a"
+		set_country_flag = rev_usa_cw_kelly_inaugurated
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		create_country_leader = {
+			name = "Mark Kelly"
+			picture = "mark_kelly.dds"
+			expire = "2033.1.20"
+			ideology = liberalism
+			traits = {
+				career_politician
+			}
+		}
+		add_stability = 0.05
+		add_war_support = -0.05
+		if = {
+			limit = {
+				USB = { has_country_flag = rev_usa_cw_usb_rejoin_post_election }
+			}
+			annex_country = { target = USB transfer_troops = yes }
+			if = {
+				limit = { country_exists = HWI }
+				annex_country = { target = HWI transfer_troops = yes }
+			}
+			clr_country_flag = rev_usa_civil_war_initialized
+			clr_country_flag = rev_usa_cw_sep_war_fired
+			clr_country_flag = rev_usa_cw_player_side_chosen
+			clr_country_flag = rev_usa_cw_player_side_usb
+			clr_country_flag = rev_usa_cw_player_side_usa
+			clr_country_flag = rev_usa_cw_launch_event_fired
+		}
+	}
+}
+
+# USA decision after Kelly inauguration if USB stayed out.
+country_event = {
+	id = rev_usa_cw.33
+	title = rev_usa_cw.33.t
+	desc = rev_usa_cw.33.d
+	picture = GFX_report_event_generic_war
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = rev_usa_cw_kelly_inaugurated
+		USB = { has_country_flag = rev_usa_cw_usb_stays_out }
+		NOT = { has_country_flag = rev_usa_cw_matter_of_succession_fired }
+	}
+
+	option = {
+		name = rev_usa_cw.33.a
+		ai_chance = { factor = 90 }
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.33.a"
+		set_country_flag = rev_usa_cw_matter_of_succession_fired
+		set_country_flag = rev_usa_cw_launch_event_fired
+		set_country_flag = rev_usa_post_kelly_tree_active
+		add_political_power = 500
+		load_focus_tree = REV_usa_post_kelly_focus
+		USB = {
+			set_country_flag = rev_usb_post_kelly_tree_active
+			add_political_power = 500
+			load_focus_tree = REV_usb_post_kelly_focus
+		}
+		rev_begin_usa_usb_war = yes
+	}
+	option = {
+		name = rev_usa_cw.33.b
+		ai_chance = { factor = 10 }
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.33.b"
+		set_country_flag = rev_usa_cw_matter_of_succession_fired
+		set_country_flag = rev_usa_cw_peaceful_partition_path
+		set_country_flag = rev_usa_post_kelly_tree_active
+		add_political_power = 500
+		load_focus_tree = REV_usa_post_kelly_focus
+		USB = {
+			set_country_flag = rev_usb_post_kelly_tree_active
+			add_political_power = 500
+			load_focus_tree = REV_usb_post_kelly_focus
+		}
+	}
+}
+
+# Placeholder for post-secession HWI settlement and carve-up.
+country_event = {
+	id = rev_usa_cw.34
+	title = rev_usa_cw.34.t
+	desc = rev_usa_cw.34.d
+	picture = GFX_report_event_usa_politics
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = rev_usa_cw_peaceful_partition_path
+		NOT = { has_country_flag = rev_usa_cw_april_carve_done }
+	}
+
+	option = {
+		name = rev_usa_cw.34.a
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.34.a"
+		set_country_flag = rev_usa_cw_april_carve_done
+
+		# USA absorbs Hawaii/neutral bloc and Pacific fleet holdings.
+		if = {
+			limit = { country_exists = HWI }
+			if = {
+				limit = { has_dlc = "Man the Guns" }
+				# Deterministic naval redistribution by base bucket.
+				USA = { set_naval_oob = "USA_civilwar_partition_naval_mtg" }
+				USB = { set_naval_oob = "USB_civilwar_partition_naval_mtg" }
+			}
+			annex_country = { target = HWI transfer_troops = yes }
+		}
+
+		# North Carolina returns to USA.
+		790 = { transfer_state_to = USA }
+
+		# Florida + Georgia become neutral stand-alone Florida.
+		if = {
+			limit = { NOT = { country_exists = FLA } }
+			release = FLA
+		}
+		795 = { transfer_state_to = FLA }   # Florida
+		792 = { transfer_state_to = FLA }   # Georgia
+		FLA = {
+			set_politics = {
+				ruling_party = democratic
+				last_election = "2026.11.5"
+				election_frequency = 48
+				elections_allowed = yes
+			}
+			create_country_leader = {
+				name = "Ron DeSantis"
+				picture = "ron_desanctamonopolous.dds"
+				ideology = conservatism
+				traits = { career_politician }
+			}
+			# Keep Florida neutral with effectively no military at start.
+			set_equipment_fraction = 0
+			army_experience = 0
+			air_experience = 0
+			navy_experience = 0
+		}
+
+		# Interior corridor states align with USB.
+		784 = { transfer_state_to = USB }   # Kansas
+		785 = { transfer_state_to = USB }   # Nebraska
+		786 = { transfer_state_to = USB }   # South Dakota
+		787 = { transfer_state_to = USB }   # North Dakota
+		788 = { transfer_state_to = USB }   # Montana
+		789 = { transfer_state_to = USB }   # Wyoming
+		808 = { transfer_state_to = USB }   # Idaho
+		805 = { transfer_state_to = USB }   # Utah
+
+		# Southern capital moves to Austin, Texas.
+		USB = {
+			set_capital = 800
+		}
+	}
+}
+
+country_event = {
+	id = rev_usa_cw.35
+	title = rev_usa_cw.35.t
+	desc = rev_usa_cw.35.d
+	picture = GFX_report_event_usa_politics
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USB
+		USA = { has_country_flag = rev_usa_cw_peaceful_partition_path }
+		USA = { NOT = { has_country_flag = rev_usa_cw_april_usb_notice_done } }
+	}
+
+	option = {
+		name = rev_usa_cw.35.a
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.35.a"
+		USA = { set_country_flag = rev_usa_cw_april_usb_notice_done }
+	}
+}
+
+# USA victory resolution.
+country_event = {
+	id = rev_usa_cw.40
+	title = rev_usa_cw.40.t
+	desc = rev_usa_cw.40.d
+	picture = GFX_report_event_usa_election
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = rev_usa_civil_war_initialized
+		has_country_flag = rev_usa_cw_launch_event_fired
+		NOT = { has_global_flag = rev_usa_cw_concluded }
+		OR = {
+			NOT = { country_exists = USB }
+			USB = { has_capitulated = yes }
+		}
+	}
+
+	option = {
+		name = rev_usa_cw.40.a
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.40.a"
+		set_global_flag = rev_usa_cw_concluded
+		if = {
+			limit = { country_exists = USB }
+			annex_country = { target = USB transfer_troops = yes }
+		}
+		if = {
+			limit = { country_exists = HWI }
+			annex_country = { target = HWI transfer_troops = yes }
+		}
+	}
+}
+
+# USB victory resolution.
+country_event = {
+	id = rev_usa_cw.41
+	title = rev_usa_cw.41.t
+	desc = rev_usa_cw.41.d
+	picture = GFX_report_event_generic_war
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USB
+		has_country_flag = rev_usa_civil_war_initialized
+		has_country_flag = rev_usa_cw_launch_event_fired
+		NOT = { has_global_flag = rev_usa_cw_concluded }
+		OR = {
+			NOT = { country_exists = USA }
+			USA = { has_capitulated = yes }
+		}
+	}
+
+	option = {
+		name = rev_usa_cw.41.a
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.41.a"
+		set_global_flag = rev_usa_cw_concluded
+		if = {
+			limit = { country_exists = USA }
+			annex_country = { target = USA transfer_troops = yes }
+		}
+		if = {
+			limit = { country_exists = HWI }
+			annex_country = { target = HWI transfer_troops = yes }
+		}
+	}
+}
+
+# Christmas 2030 stalemate: enforce white peace and begin settlement phase.
+country_event = {
+	id = rev_usa_cw.50
+	title = rev_usa_cw.50.t
+	desc = rev_usa_cw.50.d
+	picture = GFX_report_event_usa_politics
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = rev_usa_civil_war_initialized
+		has_country_flag = rev_usa_cw_launch_event_fired
+		country_exists = USB
+		has_war_with = USB
+		NOT = { has_global_flag = rev_usa_cw_concluded }
+	}
+
+	option = {
+		name = rev_usa_cw.50.a
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.50.a"
+		set_global_flag = rev_usa_cw_concluded
+		white_peace = USB
 		if = {
 			limit = {
 				CAN = { exists = yes }
-				NOT = { has_war_with = CAN }
+				CAN = { has_war_with = USB }
 			}
-			declare_war_on = {
-				target = CAN
-				type = annex_everything
-			}
+			CAN = { white_peace = USB }
 		}
-		rev_setup_usa_civil_war_sides_impeachment = yes
+		set_country_flag = rev_usa_cw_postwar_sorting_phase
+	}
+}
+
+# 2026 Midterms: Democrats retake Congress.
+country_event = {
+	id = rev_usa_cw.20
+	title = USA_oppose_the_tyrant
+	desc = USA_oppose_the_tyrant_desc
+	picture = GFX_report_event_usa_election
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		NOT = { has_country_flag = rev_usa_cw_midterms_2026_fired }
+	}
+
+	option = {
+		name = rev_usa_cw.20.a
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.20.a"
+		set_country_flag = rev_usa_cw_midterms_2026_fired
+	}
+}
+
+# 2027 Tariff rollback.
+country_event = {
+	id = rev_usa_cw.21
+	title = rev_usa_cw.21.t
+	desc = rev_usa_cw.21.d
+	picture = GFX_report_event_usa_politics
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		NOT = { has_country_flag = rev_usa_cw_tariff_repeal_2027_fired }
+	}
+
+	option = {
+		name = rev_usa_cw.21.a
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.21.a"
+		set_country_flag = rev_usa_cw_tariff_repeal_2027_fired
+		add_stability = 0.10
+		add_opinion_modifier = { target = CAN modifier = large_commercial_relations }
+		add_opinion_modifier = { target = MEX modifier = large_commercial_relations }
+		if = {
+			limit = { has_idea = USA_tariff }
+			remove_idea = USA_tariff
+		}
+	}
+}
+
+# 2028 Election field set: Vance vs Kelly.
+country_event = {
+	id = rev_usa_cw.22
+	title = rev_usa_cw.22.t
+	desc = rev_usa_cw.22.d
+	picture = GFX_report_event_usa_election
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		NOT = { has_country_flag = rev_usa_cw_election_field_2028_fired }
+	}
+
+	option = {
+		name = rev_usa_cw.22.a
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.22.a"
+		set_country_flag = rev_usa_cw_election_field_2028_fired
+		set_popularities = {
+			democratic = 60
+			fascism = 0
+			communism = 5
+			neutrality = 25
+			nationalist = 10
+		}
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
 	}
 }

@@ -1,0 +1,12 @@
+focus_tree = {
+	id = REV_ham_board_of_peace_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 50000
+			tag = HAM
+			has_country_flag = rev_board_of_peace_hq
+		}
+	}
+	continuous_focus_position = { x = 130 y = 0 }
+}

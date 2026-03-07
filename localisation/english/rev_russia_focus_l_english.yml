@@ -13,6 +13,8 @@
  rev_SOV_sokolov_industry_restart_desc:0 "Prioritize key enterprises and restart bottleneck sectors to restore production flow."
  rev_SOV_sokolov_social_compact:0 "Negotiate a Social Compact"
  rev_SOV_sokolov_social_compact_desc:0 "Trade fiscal restraint for social guarantees to cool unrest and protect political stability."
+ rev_SOV_reclaim_far_east:0 "Reclaim the Far East"
+ rev_SOV_reclaim_far_east_desc:0 "The eastern territories have broken away amid financial collapse. Reassert federal authority before external patrons entrench themselves."
 
  rev_SOV_volodin_fiscal_discipline:0 "Fiscal Discipline Program"
  rev_SOV_volodin_fiscal_discipline_desc:0 "Impose emergency fiscal controls and tighten budget execution across ministries."

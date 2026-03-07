@@ -230,7 +230,7 @@ capital = 193
 	}
 	set_politics = {
 		ruling_party = neutrality
-		last_election = "2013.11.13" #First elections are being made preps for
+		last_election = "2025.11.13" #First elections are being made preps for
 		election_frequency = 48
 		elections_allowed = yes
 	}

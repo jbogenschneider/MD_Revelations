@@ -72,22 +72,51 @@ on_actions = {
 			if = {
 				limit = {
 					tag = SOV
-					has_country_flag = russia_pending_election_2026
-					NOT = { has_country_flag = rev_russia_2026_evt_7_fired }
-					date > 2026.10.30
+					has_country_flag = russia_oligarch_council_active
+					NOT = { has_country_flag = rev_russia_2026_evt_9_fired }
+					date > 2027.1.9
+					date < 2027.1.12
 				}
-				set_country_flag = rev_russia_2026_evt_7_fired
-				country_event = { id = russia_2026.7 }
+				set_country_flag = rev_russia_2026_evt_9_fired
+				country_event = { id = russia_2026.9 }
 			}
 			if = {
 				limit = {
-					tag = SOV
-					has_country_flag = RUSSIA_ELECTION_ACTIVE
-					NOT = { has_country_flag = rev_russia_2026_evt_8_fired }
-					date > 2026.12.19
+					tag = CHI
+					country_exists = FAR
+					FAR = { exists = yes }
+					FAR = { NOT = { is_subject_of = CHI } }
+					NOT = { has_country_flag = rev_russia_2026_evt_10_fired }
+					date > 2027.3.31
+					date < 2027.4.3
 				}
-				set_country_flag = rev_russia_2026_evt_8_fired
-				country_event = { id = russia_2026.8 }
+				set_country_flag = rev_russia_2026_evt_10_fired
+				country_event = { id = russia_2026.10 }
+			}
+			if = {
+				limit = {
+					tag = CHI
+					country_exists = FAR
+					FAR = { is_subject_of = CHI }
+					NOT = { has_country_flag = rev_russia_2026_evt_12_fired }
+					date > 2027.4.14
+					date < 2027.4.17
+				}
+				set_country_flag = rev_russia_2026_evt_12_fired
+				country_event = { id = russia_2026.12 }
+			}
+			if = {
+				limit = {
+					tag = CHI
+					country_exists = FAR
+					FAR = { exists = yes }
+					FAR = { NOT = { is_subject_of = CHI } }
+					NOT = { has_country_flag = rev_russia_2026_evt_13_fired }
+					date > 2028.1.9
+					date < 2028.1.12
+				}
+				set_country_flag = rev_russia_2026_evt_13_fired
+				country_event = { id = russia_2026.13 }
 			}
 		}
 	}
