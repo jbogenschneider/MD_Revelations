@@ -3979,7 +3979,9 @@ update_cyber_cost = {
 
 #Weekly tick action
 automated_debt_taker = { # Checks to see if treasury is negative at the same time as weekly balance adds or removes from treasury, borrowing debt automatically if treasury is negative (to make it positive).
-	if = { limit = { check_variable = { treasury < 0 } }
+	if = { limit = { check_variable = { treasury < 0 }
+		NOT = { has_country_flag = rev_sov_2026_sanctions_active }
+	}
 		set_temp_variable = { treasury_temp = treasury }
 		multiply_temp_variable = { treasury_temp = -1 }
 		multiply_temp_variable = { treasury_temp = 1.25 }

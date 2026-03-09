@@ -46,8 +46,19 @@ on_actions = {
 					country_exists = USB
 					has_war_with = USB
 					NOT = { has_global_flag = rev_usa_cw_concluded }
-					date > 2030.12.24
-					date < 2030.12.29
+					date > 2029.12.24
+					date < 2029.12.29
+					# Avoid stalemate trigger when one side has a decisive war lead.
+					# A rough proxy for non-lopsided score: no side should be
+					# leading by roughly 75/25 strength.
+					NOT = {
+						OR = {
+							strength_ratio = { tag = USB ratio > 3.0 }
+							USB = { strength_ratio = { tag = USA ratio > 3.0 } }
+							surrender_progress > 0.75
+							USB = { surrender_progress > 0.75 }
+						}
+					}
 				}
 				country_event = { id = rev_usa_cw.50 }
 			}
@@ -171,11 +182,22 @@ on_actions = {
 					has_country_flag = rev_usa_cw_kelly_inaugurated
 					USB = { has_country_flag = rev_usa_cw_usb_stays_out }
 					NOT = { has_country_flag = rev_usa_cw_matter_of_succession_fired }
-					NOT = { has_country_flag = rev_usa_cw_launch_event_fired }
+					NOT = { has_country_flag = rev_usa_cw_usb_debt_offer_fired }
 					date > 2029.2.4
 					date < 2029.2.8
 				}
 				country_event = { id = rev_usa_cw.33 }
+			}
+			if = {
+				limit = {
+					tag = USB
+					USA = { has_country_flag = rev_usa_cw_kelly_inaugurated }
+					USA = { has_country_flag = rev_usa_cw_usb_stays_out }
+					NOT = { has_country_flag = rev_usa_cw_usb_debt_offer_fired }
+					date > 2029.2.4
+					date < 2029.2.8
+				}
+				country_event = { id = rev_usa_cw.36 }
 			}
 			if = {
 				limit = {

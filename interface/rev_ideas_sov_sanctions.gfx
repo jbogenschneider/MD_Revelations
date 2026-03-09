@@ -1,0 +1,6 @@
+﻿spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_sov_western_sanctions_idea"
+		texturefile = "gfx/interface/ideas/russia/sov_western_sanctions_idea.dds"
+	}
+}

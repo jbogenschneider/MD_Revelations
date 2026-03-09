@@ -9,5 +9,9 @@ ideas = {
 				stability_factor = -0.02
 			}
 		}
+		RUSSIA_SANCTIONS_BAN_DEBT = {
+			allowed = { original_tag = SOV }
+			picture = GFX_idea_sov_western_sanctions_idea
+		}
 	}
 }

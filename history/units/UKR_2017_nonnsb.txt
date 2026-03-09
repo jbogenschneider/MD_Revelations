@@ -1118,4 +1118,21 @@ instant_effect = {
 		amount = 2
 		producer = SOV
 	}
+
+	add_equipment_to_stockpile = {
+		type = guided_missile_equipment_3 
+		amount = 30
+	}
+	add_equipment_to_stockpile = {
+		type = sam_missile_equipment_4
+		amount = 200
+	}
+	add_equipment_to_stockpile = {
+		type = sam_missile_equipment_3
+		amount = 200
+	}
+	add_equipment_to_stockpile = {
+		type = sam_missile_equipment_2
+		amount = 300
+	}
 }

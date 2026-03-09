@@ -38,7 +38,7 @@ focus_tree = {
     }
 
     focus = {
-        id = USA_side_with_trump
+        id = USA_project_2025
         icon = USA_republican_party
         relative_position_id = USA_state_of_the_union
         x = 4
@@ -62,8 +62,8 @@ focus_tree = {
             base = 1
         }
         completion_reward = {
-            log = "[GetDateText]: [Root.GetName]: focus USA_side_with_trump completion_reward"
-            custom_effect_tooltip = USA_side_with_trump_tooltip
+            log = "[GetDateText]: [Root.GetName]: focus USA_project_2025 completion_reward"
+            custom_effect_tooltip = USA_project_2025_tooltip
             hidden_effect = {
             set_country_flag = USA_sided_with_trump_flag
             focus_unlock = yes
@@ -89,19 +89,19 @@ focus_tree = {
     }
 
     focus = {
-        id = USA_plan_for_the_worst
+        id = USA_implement_tariffs
         icon = draw_up_war_plans
         x = 2
         y = 2
         cost = 5
         available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_POLITICAL }
-        prerequisite = { focus = USA_side_with_trump }
+        prerequisite = { focus = USA_project_2025 }
         ai_will_do = {
             base = 1
         }
         completion_reward = {
-            log = "[GetDateText]: [Root.GetName]: focus USA_plan_for_the_worst completion_reward"
+            log = "[GetDateText]: [Root.GetName]: focus USA_implement_tariffs completion_reward"
             add_political_power = 50
             unlock_decision_tooltip = USA_mass_mask_production
             unlock_decision_tooltip = {
@@ -120,15 +120,15 @@ focus_tree = {
     }
 
     focus = {
-        id = USA_warp_speed
+        id = USA_help_ukraine
         icon = research4
         x = 3
         y = 3
         cost = 5
         available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
-        prerequisite = { focus = USA_plan_for_the_worst }
-        mutually_exclusive = { focus = USA_implement_emergency_measures }
+        prerequisite = { focus = USA_implement_tariffs }
+        mutually_exclusive = { focus = USA_pressure_ukraine }
         available = {
             has_country_flag = USA_coronavirus_strikes
         }
@@ -139,7 +139,7 @@ focus_tree = {
             base = 1
         }
         completion_reward = {
-            log = "[GetDateText]: [Root.GetName]: focus USA_warp_speed completion_reward"
+            log = "[GetDateText]: [Root.GetName]: focus USA_help_ukraine completion_reward"
             add_political_power = 50
             set_temp_variable = {
             var = mask_supply_var
@@ -151,7 +151,7 @@ focus_tree = {
             value = 3
             }
             USA_add_covid_growth_time = yes
-            custom_effect_tooltip = USA_warp_speed_tooltip
+            custom_effect_tooltip = USA_help_ukraine_tooltip
             hidden_effect = {
             set_country_flag = {
             flag = USA_researching_vaccine_flag
@@ -163,15 +163,15 @@ focus_tree = {
     }
 
     focus = {
-        id = USA_implement_emergency_measures
+        id = USA_pressure_ukraine
         icon = government_beu
         x = 1
         y = 3
         cost = 5
         available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
-        prerequisite = { focus = USA_plan_for_the_worst }
-        mutually_exclusive = { focus = USA_warp_speed }
+        prerequisite = { focus = USA_implement_tariffs }
+        mutually_exclusive = { focus = USA_help_ukraine }
         available = {
             has_country_flag = USA_coronavirus_strikes
         }
@@ -182,7 +182,7 @@ focus_tree = {
             base = 1
         }
         completion_reward = {
-            log = "[GetDateText]: [Root.GetName]: focus USA_implement_emergency_measures completion_reward"
+            log = "[GetDateText]: [Root.GetName]: focus USA_pressure_ukraine completion_reward"
             add_political_power = 50
             add_stability = -0.025
             set_temp_variable = {
@@ -190,7 +190,7 @@ focus_tree = {
             value = 10000
             }
             add_mask_supply = yes
-            custom_effect_tooltip = USA_implement_emergency_measures_tooltip
+            custom_effect_tooltip = USA_pressure_ukraine_tooltip
             hidden_effect = {
             set_country_flag = {
             flag = USA_researching_vaccine_flag
@@ -210,14 +210,14 @@ focus_tree = {
     }
 
     focus = {
-        id = USA_prepare_the_vaccine
+        id = USA_double_down_tariffs
         icon = pharma_drugs
         x = 2
         y = 4
         cost = 5
         available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_POLITICAL }
-        prerequisite = { focus = USA_implement_emergency_measures focus = USA_warp_speed }
+        prerequisite = { focus = USA_pressure_ukraine focus = USA_help_ukraine }
         available = {
             NOT = {
             has_country_flag = USA_researching_vaccine_flag
@@ -230,13 +230,13 @@ focus_tree = {
             base = 1
         }
         completion_reward = {
-            log = "[GetDateText]: [Root.GetName]: focus USA_prepare_the_vaccine completion_reward"
+            log = "[GetDateText]: [Root.GetName]: focus USA_double_down_tariffs completion_reward"
             set_temp_variable = {
             var = mask_supply_var
             value = 5000
             }
             add_mask_supply = yes
-            custom_effect_tooltip = USA_prepare_the_vaccine_tooltip
+            custom_effect_tooltip = USA_double_down_tariffs_tooltip
             unlock_decision_tooltip = USA_stop_the_spread_decision
         }
     }
@@ -248,7 +248,7 @@ focus_tree = {
         y = 5
         cost = 5
         search_filters = { FOCUS_FILTER_POLITICAL }
-        prerequisite = { focus = USA_prepare_the_vaccine }
+        prerequisite = { focus = USA_double_down_tariffs }
         prerequisite = { focus = USA_reinvigorate_the_economy }
         available = {
             has_idea = USA_oil_crisis_idea
@@ -275,14 +275,14 @@ focus_tree = {
     }
 
     focus = {
-        id = USA_back_the_blue
+        id = USA_close_the_border
         icon = Generic_Policeman
         x = 6
         y = 2
         cost = 5
         available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
-        prerequisite = { focus = USA_side_with_trump }
+        prerequisite = { focus = USA_project_2025 }
         available = {
             USA_mass_riots = yes
         }
@@ -290,8 +290,8 @@ focus_tree = {
             base = 1
         }
         completion_reward = {
-            log = "[GetDateText]: [Root.GetName]: focus USA_back_the_blue completion_reward"
-            unlock_decision_tooltip = USA_back_the_blue_decision
+            log = "[GetDateText]: [Root.GetName]: focus USA_close_the_border completion_reward"
+            unlock_decision_tooltip = USA_close_the_border_decision
             USA_riots_decrease = yes
         }
     }
@@ -304,8 +304,8 @@ focus_tree = {
         cost = 5
         available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
-        prerequisite = { focus = USA_back_the_blue }
-        mutually_exclusive = { focus = USA_compromise_with_the_protesters }
+        prerequisite = { focus = USA_close_the_border }
+        mutually_exclusive = { focus = USA_keep_out_of_site }
         available = {
             USA_mass_riots = yes
         }
@@ -321,14 +321,14 @@ focus_tree = {
     }
 
     focus = {
-        id = USA_compromise_with_the_protesters
+        id = USA_keep_out_of_site
         icon = union_negotiations
         x = 7
         y = 3
         cost = 5
         available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
-        prerequisite = { focus = USA_back_the_blue }
+        prerequisite = { focus = USA_close_the_border }
         mutually_exclusive = { focus = USA_crush_the_rioters }
         available = {
             USA_mass_riots = yes
@@ -337,8 +337,8 @@ focus_tree = {
             base = 1
         }
         completion_reward = {
-            log = "[GetDateText]: [Root.GetName]: focus USA_compromise_with_the_protesters completion_reward"
-            custom_effect_tooltip = USA_compromise_with_the_protesters_tooltip
+            log = "[GetDateText]: [Root.GetName]: focus USA_keep_out_of_site completion_reward"
+            custom_effect_tooltip = USA_keep_out_of_site_tooltip
             set_temp_variable = {
             var = USA_movement_organization_time_var_temp
             value = 4
@@ -356,7 +356,7 @@ focus_tree = {
         cost = 5
         available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
-        prerequisite = { focus = USA_compromise_with_the_protesters focus = USA_crush_the_rioters }
+        prerequisite = { focus = USA_keep_out_of_site focus = USA_crush_the_rioters }
         available = {
             USA_mass_riots = yes
         }
@@ -402,7 +402,7 @@ focus_tree = {
         cost = 5
         available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_INDUSTRY }
-        prerequisite = { focus = USA_side_with_trump }
+        prerequisite = { focus = USA_project_2025 }
         available = {
             OR = {
             has_country_flag = USA_coronavirus_strikes
@@ -462,7 +462,7 @@ focus_tree = {
         available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_POLITICAL }
         prerequisite = { focus = USA_state_of_the_union }
-        mutually_exclusive = { focus = USA_side_with_trump focus = USA_mingle_with_the_movement focus = USA_abandon_the_anarchists focus = USA_meet_in_the_middle focus = USA_high_expectations }
+        mutually_exclusive = { focus = USA_project_2025 focus = USA_mingle_with_the_movement focus = USA_abandon_the_anarchists focus = USA_meet_in_the_middle focus = USA_high_expectations }
         available = {
             is_completed_by_event = yes
         }
@@ -568,7 +568,7 @@ focus_tree = {
             value = -0.05
             }
             }
-            custom_effect_tooltip = USA_compromise_with_the_protesters_tooltip
+            custom_effect_tooltip = USA_keep_out_of_site_tooltip
             effect_tooltip = {
             remove_decision = USA_fund_the_movement_decision
             }
@@ -1026,7 +1026,7 @@ focus_tree = {
     }
 
     focus = {
-        id = USA_standing_down_and_standing_by
+        id = USA_blame_canada
         icon = USA_american_militias
         x = 2
         y = 9
@@ -1044,7 +1044,7 @@ focus_tree = {
             base = 1
         }
         completion_reward = {
-            log = "[GetDateText]: [Root.GetName]: focus USA_standing_down_and_standing_by completion_reward"
+            log = "[GetDateText]: [Root.GetName]: focus USA_blame_canada completion_reward"
             add_stability = 0.025
             if = {
             limit = {
@@ -1158,7 +1158,7 @@ focus_tree = {
     }
 
     focus = {
-        id = USA_end_state_lockdowns
+        id = USA_develop_gaza
         icon = generic_hospital2
         x = 4
         y = 9
@@ -1177,7 +1177,7 @@ focus_tree = {
             base = 1
         }
         completion_reward = {
-            log = "[GetDateText]: [Root.GetName]: focus USA_end_state_lockdowns completion_reward"
+            log = "[GetDateText]: [Root.GetName]: focus USA_develop_gaza completion_reward"
             add_political_power = 50
             USC = {
             add_stability = 0.1
@@ -1261,8 +1261,8 @@ focus_tree = {
         cost = 5
         available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_POLITICAL }
-        prerequisite = { focus = USA_standing_down_and_standing_by }
-        prerequisite = { focus = USA_end_state_lockdowns }
+        prerequisite = { focus = USA_blame_canada }
+        prerequisite = { focus = USA_develop_gaza }
         prerequisite = { focus = USA_unify_the_military }
         available = {
             has_country_leader = {
@@ -1335,7 +1335,7 @@ focus_tree = {
         cost = 5
         search_filters = { FOCUS_FILTER_POLITICAL }
         prerequisite = { focus = USA_the_shadow_presidency }
-        prerequisite = { focus = USA_standing_down_and_standing_by }
+        prerequisite = { focus = USA_blame_canada }
         available = {
             has_country_flag = USA_counting_heads_flag
         }
@@ -1722,7 +1722,7 @@ focus_tree = {
         y = 7
         cost = 5
         search_filters = { FOCUS_FILTER_POLITICAL }
-        prerequisite = { focus = USA_oppose_the_tyrant }
+        prerequisite = { focus = USA_sweep_midterms }
         available = {
             has_country_leader = {
             character = USA_joe_biden_char
@@ -1859,7 +1859,7 @@ focus_tree = {
     }
 
     focus = {
-        id = USA_oppose_the_tyrant
+        id = USA_sweep_midterms
         icon = deal_with_traitors
         x = -4
         y = 6
@@ -1882,7 +1882,7 @@ focus_tree = {
             base = 1
         }
         completion_reward = {
-            log = "[GetDateText]: [Root.GetName]: focus USA_oppose_the_tyrant completion_reward"
+            log = "[GetDateText]: [Root.GetName]: focus USA_sweep_midterms completion_reward"
             add_political_power = 75
             add_days_mission_timeout = {
             mission = USA_civil_war_mission
@@ -1923,7 +1923,7 @@ focus_tree = {
         cost = 10
         available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_POLITICAL }
-        prerequisite = { focus = USA_oppose_the_tyrant }
+        prerequisite = { focus = USA_sweep_midterms }
         available = {
             has_country_leader = {
             character = USA_donald_trump_char
