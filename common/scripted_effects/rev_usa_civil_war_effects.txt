@@ -160,11 +160,85 @@ rev_setup_usa_civil_war_sides_impeachment = {
 				load_oob = "USB_civilwar_nonnsb"
 			}
 		}
+		if = {
+			limit = {
+				USA = {
+					has_country_flag = rev_usa_border_patrol_agents_crush
+				}
+				NOT = { has_country_flag = rev_usb_border_patrol_agents_crush }
+			}
+			800 = {
+				create_unit = {
+                    division = "name = \"Border Patrol Agents (Crush the Rioters)\" division_template = \"Border Patrol Agents\" start_experience_factor = 0.2"
+					owner = USB
+					prioritize_location = 15368
+				}
+			}
+			set_country_flag = rev_usb_border_patrol_agents_crush
+		}
+		if = {
+			limit = {
+				USA = {
+					has_country_flag = rev_usa_border_patrol_agents_keep_out
+				}
+				NOT = { has_country_flag = rev_usb_border_patrol_agents_keep_out }
+			}
+			800 = {
+				create_unit = {
+					division = "name = \"Border Patrol Agents (Keep Out of Site)\" division_template = \"Border Patrol Agents\" start_experience_factor = 0.2"
+					owner = USB
+					prioritize_location = 15368
+				}
+			}
+			set_country_flag = rev_usb_border_patrol_agents_keep_out
+		}
+		if = {
+			limit = {
+				USA = {
+					has_country_flag = rev_usa_border_patrol_agents_end_chaos
+				}
+				NOT = { has_country_flag = rev_usb_border_patrol_agents_end_chaos }
+			}
+			800 = {
+				create_unit = {
+					division = "name = \"Border Patrol Agents (End the Chaos)\" division_template = \"Border Patrol Agents\" start_experience_factor = 0.2"
+					owner = USB
+					prioritize_location = 15368
+				}
+			}
+			set_country_flag = rev_usb_border_patrol_agents_end_chaos
+		}
+		if = {
+			limit = {
+				USA = {
+					has_country_flag = rev_usa_unify_the_military
+				}
+				NOT = { has_country_flag = rev_usb_unify_the_military_bonus }
+			}
+			800 = {
+				create_unit = {
+					division = "name = \"1st Purged Regiment\" division_template = \"Infantry Division\" start_experience_factor = 0.15"
+					owner = USB
+					prioritize_location = 15368
+				}
+				create_unit = {
+					division = "name = \"2nd Purged Regiment\" division_template = \"Infantry Division\" start_experience_factor = 0.15"
+					owner = USB
+					prioritize_location = 15368
+				}
+			}
+			set_country_flag = rev_usb_unify_the_military_bonus
+		}
 		set_equipment_fraction = 1
 	}
 
 	# USA is constitutional/removal side.
 	USA = {
+		# Border patrol detachments are non-federal in this scenario; they stay with USB after the split.
+		delete_units = {
+			division_template = "Border Patrol Agents"
+			disband = yes
+		}
 		set_politics = {
 			ruling_party = democratic
 			elections_allowed = yes
@@ -327,7 +401,7 @@ rev_setup_usa_civil_war_sides_impeachment = {
 }
 
 rev_begin_usa_usb_war = {
-	# Core conflict branch: USB (Trump side) vs USA only.
+# Core conflict branch: USB (Trump side) vs USA.
 	if = {
 		limit = {
 			USB = { exists = yes }
@@ -342,50 +416,55 @@ rev_begin_usa_usb_war = {
 		}
 	}
 
-	# Keep Canada and NATO countries neutral in the civil war,
-	# but strongly bias their AI toward supporting USA with volunteers.
+	# Canada joins USA directly (if independent).
+	if = {
+		limit = {
+			CAN = { exists = yes }
+			CAN = { NOT = { is_subject = yes } }
+			CAN = { NOT = { has_war_with = USA } }
+			USA = { NOT = { has_war_with = CAN } }
+		}
+		CAN = {
+			declare_war_on = {
+				target = USB
+				type = annex_everything
+			}
+		}
+	}
+
+	# Independent Cuba joins USB directly.
+	if = {
+		limit = {
+			CUB = { exists = yes }
+			CUB = { NOT = { is_subject = yes } }
+			CUB = { NOT = { has_war_with = USB } }
+			CUB = { NOT = { has_war_with = USA } }
+		}
+		CUB = {
+			declare_war_on = {
+				target = USA
+				type = annex_everything
+			}
+		}
+	}
+
+	# NATO countries can volunteer for USA, but are not forced into the war.
 	every_country = {
-		if = {
-			limit = {
-				OR = {
-					tag = CAN
-					has_idea = NATO_member
-				}
-				NOT = { tag = USA }
-				NOT = { tag = USB }
-				exists = yes
-			}
-			if = {
-				limit = { has_war_with = USA }
-				white_peace = USA
-			}
-			if = {
-				limit = { has_war_with = USB }
-				white_peace = USB
-			}
-			if = {
-				limit = { is_ai = yes }
-				add_ai_strategy = {
-					type = send_volunteers_desire
-					id = USA
-					value = 500
-				}
-				add_ai_strategy = {
-					type = support
-					id = USA
-					value = 250
-				}
-				add_ai_strategy = {
-					type = befriend
-					id = USA
-					value = 150
-				}
-				add_ai_strategy = {
-					type = antagonize
-					id = USB
-					value = 120
-				}
-			}
+		limit = {
+			has_idea = NATO_member
+			NOT = { tag = USA }
+			NOT = { tag = USB }
+			exists = yes
+		}
+		add_ai_strategy = {
+			type = send_volunteers_desire
+			id = USA
+			value = 300
+		}
+		add_ai_strategy = {
+			type = support
+			id = USA
+			value = 200
 		}
 	}
 }

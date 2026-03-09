@@ -18,7 +18,9 @@ focus_tree = {
 		cost = 5
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			factor = 8
+		}
 		completion_reward = {
 			add_political_power = 120
 			add_war_support = 0.02
@@ -34,7 +36,9 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
 		prerequisite = { focus = REV_USB_post_kelly_war_cabinet }
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			factor = 10
+		}
 		completion_reward = {
 			add_war_support = 0.06
 			add_stability = -0.02
@@ -50,7 +54,9 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_DEFENSE }
 		prerequisite = { focus = REV_USB_post_kelly_total_commitment }
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			factor = 10
+		}
 		completion_reward = {
 			random_owned_controlled_state = {
 				limit = { is_owned_by = ROOT is_controlled_by = ROOT }
@@ -72,7 +78,9 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_DEFENSE }
 		prerequisite = { focus = REV_USB_post_kelly_total_commitment }
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			factor = 10
+		}
 		completion_reward = {
 			random_owned_controlled_state = {
 				limit = { is_owned_by = ROOT is_controlled_by = ROOT }
@@ -95,7 +103,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
 		prerequisite = { focus = REV_USB_post_kelly_emergency_arms_i }
 		prerequisite = { focus = REV_USB_post_kelly_emergency_arms_ii }
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			factor = 10
+		}
 		completion_reward = {
 			add_war_support = 0.05
 			add_political_power = 100
@@ -115,7 +125,17 @@ focus_tree = {
 			country_exists = USA
 			NOT = { has_war_with = USA }
 		}
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0.15
+				USA = { strength_ratio = { tag = USB ratio > 1.9 } }
+			}
+			modifier = {
+				factor = 2.5
+				USA = { strength_ratio = { tag = USB ratio < 1.0 } }
+			}
+		}
 		completion_reward = {
 			add_war_support = 0.06
 			add_stability = -0.02
@@ -136,7 +156,17 @@ focus_tree = {
 			country_exists = USA
 			NOT = { has_war_with = USA }
 		}
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0.15
+				USA = { strength_ratio = { tag = USB ratio > 1.9 } }
+			}
+			modifier = {
+				factor = 2.5
+				USA = { strength_ratio = { tag = USB ratio < 1.0 } }
+			}
+		}
 		completion_reward = {
 			declare_war_on = {
 				target = USA
@@ -154,7 +184,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		prerequisite = { focus = REV_USB_post_kelly_mobilize_the_base }
-		ai_will_do = { base = 1 }
+		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_stability = -0.03
 			add_war_support = 0.03
@@ -171,7 +201,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		prerequisite = { focus = REV_USB_post_kelly_ethnic_reordering }
-		ai_will_do = { base = 1 }
+		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_stability = -0.04
 			add_war_support = 0.02
@@ -188,7 +218,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		prerequisite = { focus = REV_USB_post_kelly_end_womens_suffrage }
-		ai_will_do = { base = 1 }
+		ai_will_do = { factor = 1 }
 		completion_reward = {
 			set_politics = {
 				ruling_party = nationalist
@@ -215,7 +245,7 @@ focus_tree = {
 				country_exists = DEN
 			}
 		}
-		ai_will_do = { base = 1 }
+		ai_will_do = { factor = 1 }
 		completion_reward = {
 			if = {
 				limit = {

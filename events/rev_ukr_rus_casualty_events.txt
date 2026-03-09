@@ -14,6 +14,7 @@ country_event = {
 		name = rev_ukr_rus_cas.1.a
 		add_manpower = -950000
 		set_country_flag = rev_sov_2026_sanctions_active
+		add_idea = RUSSIA_SANCTIONS_BAN_DEBT
 		set_country_flag = rev_2026_casualty_adjustment_applied
 		# Russian border belt: add level 2 bunkers in SOV states bordering UKR.
 		694 = { # zap

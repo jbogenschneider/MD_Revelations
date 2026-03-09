@@ -23,3 +23,7 @@
  REV_UKR_counter_bombing_network_desc:0 "Layer anti-air assets and radar-linked fire control to degrade enemy strategic bombing effectiveness."
  REV_UKR_emergency_defense_logistics:0 "Emergency Defense Logistics"
  REV_UKR_emergency_defense_logistics_desc:0 "Strengthen rear-area logistics, mobility, and emergency transport capacity for defense operations."
+ REV_UKR_sea_drone_attacks:0 "Attack Shadow Fleet"
+ REV_UKR_sea_drone_attacks_desc:0 "Russia ships crude and Liquid Natural Gas if our sea drones can reach them we should try and hit the empty ones or disable the full ones."
+ REV_UKR_refinery_attacks:0 "Attack Refineries"
+ REV_UKR_refinery_attacks_desc:0 "Russian refineries are an easy target, very hard to defend for our long range drones.  Who would have imagined Russia having to import gasoline."

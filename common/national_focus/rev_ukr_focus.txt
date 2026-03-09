@@ -54,7 +54,7 @@ focus_tree = {
 
 	focus = {
 		id = REV_UKR_national_air_shield
-		icon = anti_war_with_big_gun
+		icon = SAM
 		x = 14
 		y = 1
 		cost = 10
@@ -176,10 +176,10 @@ focus_tree = {
 			}
 		}
 	}
-
+#icon = Generic_Submarine_Drone
 	focus = {
 		id = REV_UKR_offshore_suicide_drone_contracts
-		icon = Generic_Submarine_Drone
+		icon = drone
 		x = 14
 		y = 2
 		cost = 10
@@ -193,8 +193,50 @@ focus_tree = {
 	}
 
 	focus = {
+		id = REV_UKR_sea_drone_attacks
+		icon = Generic_Submarine_Drone
+		x = 14
+		y = 5
+		cost = 5
+		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_RESEARCH }
+		prerequisite = { focus = REV_UKR_wartime_defense_directorate }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			add_stability = 0.025
+			SOV = {
+				add_to_variable = { treasury = -20 }
+				add_resource = {
+					type = fuel
+					amount = -5000
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = REV_UKR_refinery_attacks
+		icon = modern_refinery_industry
+		x = 14
+		y = 6
+		cost = 10
+		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_RESEARCH }
+		prerequisite = { focus = REV_UKR_wartime_defense_directorate }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			add_stability = 0.05
+			SOV = {
+				add_to_variable = { treasury = -40 }
+				add_resource = {
+					type = fuel
+					amount = -10000
+				}
+			}
+		}
+	}
+
+	focus = {
 		id = REV_UKR_offshore_air_defense_contracts
-		icon = anti_war_with_big_gun
+		icon = air_defense
 		x = 14
 		y = 3
 		cost = 10
@@ -202,8 +244,12 @@ focus_tree = {
 		prerequisite = { focus = REV_UKR_wartime_defense_directorate }
 		ai_will_do = { base = 1 }
 		completion_reward = {
-			add_equipment_to_stockpile = { type = Anti_Air_2 amount = 1500 }
-			add_equipment_to_stockpile = { type = SP_Anti_Air_0 amount = 120 }
+			add_equipment_to_stockpile = { type = Anti_Air_2 amount = 500 }
+			add_equipment_to_stockpile = { type = SP_Anti_Air_2 amount = 120 }
+			add_equipment_to_stockpile = {
+				type = sam_missile_equipment_4
+				amount = 100
+			}
 			add_army_experience = 15
 		}
 	}
@@ -218,8 +264,8 @@ focus_tree = {
 		prerequisite = { focus = REV_UKR_wartime_defense_directorate }
 		ai_will_do = { base = 1 }
 		completion_reward = {
-			add_equipment_to_stockpile = { type = MR_Fighter2 amount = 24 }
-			add_equipment_to_stockpile = { type = AS_Fighter2 amount = 16 }
+			add_equipment_to_stockpile = { type = MR_Fighter3 amount = 24 }
+			add_equipment_to_stockpile = { type = AS_Fighter3 amount = 16 }
 			add_air_experience = 25
 		}
 	}
@@ -272,7 +318,7 @@ focus_tree = {
 		ai_will_do = { base = 1 }
 		completion_reward = {
 			add_command_power = 25
-			add_equipment_to_stockpile = { type = util_vehicle_2 amount = 1200 }
+			add_equipment_to_stockpile = { type = util_vehicle_3 amount = 1000 }
 			random_owned_controlled_state = {
 				limit = {
 					is_owned_by = ROOT

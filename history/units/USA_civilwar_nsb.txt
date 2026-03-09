@@ -1,3 +1,83 @@
 # Civil-war USA inventory hooks (NSB).
 # Keep this empty to preserve current USA armor/infantry stockpile as-is.
 # Add any USA-specific war-start stockpile here if needed.
+division_template = {
+	name = "Drone Defense Unit"
+
+	regiments = {
+		SP_AA_Bat = { x = 0 y = 0 }
+
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 0 y = 2 }
+	}
+	support = {
+		drone_tactical_company = { x = 0 y = 0 }
+        combat_service_support_company = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Drone Recon Unit"
+
+	regiments = {
+		SP_AA_Bat = { x = 0 y = 0 }
+
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 0 y = 2 }
+	}
+	support = {
+		drone_tactical_company = { x = 0 y = 0 }
+        L_Engi_Comp = { x = 0 y = 0 }
+		L_Recce_Comp = { x = 0 y = 1 }
+	}
+}
+
+division = {
+    #name = "900th International Volunteers"
+    division_name = {
+        is_name_ordered = yes
+        name_order = 2
+    }
+    location = 3894
+    division_template = "Drone Defense Unit"
+    start_experience_factor = 0.5
+    start_equipment_factor = 1.00
+}
+
+division = {
+    #name = "901st International Volunteers"
+    division_name = {
+        is_name_ordered = yes
+        name_order = 2
+    }
+    location = 3894
+    division_template = "Drone Defense Unit"
+    start_experience_factor = 0.5
+    start_equipment_factor = 1.00
+}
+
+division = {
+    #name = "902nd International Volunteers Recon"
+    division_name = {
+        is_name_ordered = yes
+        name_order = 2
+    }
+    location = 3894
+    division_template = "Drone Recon Unit"
+    start_experience_factor = 0.5
+    start_equipment_factor = 1.00
+}
+
+division = {
+    #name = "903rd International Volunteers Recon"
+    division_name = {
+        is_name_ordered = yes
+        name_order = 2
+    }
+    location = 3894
+    division_template = "Drone Recon Unit"
+    start_experience_factor = 0.5
+    start_equipment_factor = 1.00
+}

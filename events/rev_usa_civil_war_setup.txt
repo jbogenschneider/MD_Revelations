@@ -35,9 +35,16 @@ country_event = {
 	}
 
 	option = {
-		name = USA_standing_down_and_standing_by
+		name = USA_blame_canada
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 0.05
+				NOT = { has_dlc = "No Step Back" }
+			}
+		}
 		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.10.a"
-		custom_effect_tooltip = USA_standing_down_and_standing_by_desc
+		custom_effect_tooltip = USA_blame_canada_desc
 		set_country_flag = rev_usa_cw_aug_branch_fired
 		set_country_flag = rev_usa_cw_aug_plot_fired
 		set_country_flag = rev_usa_cw_stand_down_path
@@ -47,6 +54,9 @@ country_event = {
 	}
 	option = {
 		name = rev_usa_cw.10.b
+		ai_chance = {
+			factor = 10
+		}
 		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.10.b"
 		set_country_flag = rev_usa_cw_aug_branch_fired
 		set_country_flag = rev_usa_cw_go_quiet_path
@@ -99,6 +109,9 @@ country_event = {
 
 	option = {
 		name = rev_usa_cw.11.a
+		ai_chance = {
+			factor = 90
+		}
 		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.11.a"
 		set_country_flag = rev_usa_cw_sep_war_fired
 		set_country_flag = rev_usa_election_suspended_2028
@@ -114,6 +127,9 @@ country_event = {
 	}
 	option = {
 		name = rev_usa_cw.11.b
+		ai_chance = {
+			factor = 10
+		}
 		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.11.b"
 		set_country_flag = rev_usa_cw_sep_war_fired
 		set_country_flag = rev_usa_election_suspended_2028
@@ -273,22 +289,20 @@ country_event = {
 	id = rev_usa_cw.33
 	title = rev_usa_cw.33.t
 	desc = rev_usa_cw.33.d
-	picture = GFX_report_event_generic_war
+	picture = GFX_report_event_usa_politics
 	is_triggered_only = yes
 
 	trigger = {
 		tag = USA
 		has_country_flag = rev_usa_cw_kelly_inaugurated
 		USB = { has_country_flag = rev_usa_cw_usb_stays_out }
-		NOT = { has_country_flag = rev_usa_cw_matter_of_succession_fired }
+		NOT = { has_country_flag = rev_usa_cw_usb_debt_offer_fired }
 	}
 
 	option = {
 		name = rev_usa_cw.33.a
-		ai_chance = { factor = 90 }
 		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.33.a"
 		set_country_flag = rev_usa_cw_matter_of_succession_fired
-		set_country_flag = rev_usa_cw_launch_event_fired
 		set_country_flag = rev_usa_post_kelly_tree_active
 		add_political_power = 500
 		load_focus_tree = REV_usa_post_kelly_focus
@@ -297,21 +311,77 @@ country_event = {
 			add_political_power = 500
 			load_focus_tree = REV_usb_post_kelly_focus
 		}
+		# Informative only; the actual go/peace decision is now made by USB.
+	}
+}
+
+# Post-Kelly debt settlement: USB decides whether to start war by refusing 40% federal debt.
+country_event = {
+	id = rev_usa_cw.36
+	title = rev_usa_cw.36.t
+	desc = rev_usa_cw.36.d
+	picture = GFX_report_event_generic_war
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USB
+		USA = { has_country_flag = rev_usa_cw_kelly_inaugurated }
+		USA = { has_country_flag = rev_usa_cw_usb_stays_out }
+		USA = { NOT = { has_country_flag = rev_usa_cw_launch_event_fired } }
+		NOT = { has_country_flag = rev_usa_cw_usb_debt_offer_fired }
+	}
+
+	option = {
+		name = rev_usa_cw.36.a
+		ai_chance = { factor = 5 }
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.36.a"
+		add_political_power = 500
+		set_country_flag = rev_usa_cw_usb_debt_offer_fired
+		set_country_flag = rev_usa_cw_matter_of_succession_fired
+		set_country_flag = rev_usa_cw_launch_event_fired
+		set_country_flag = rev_usa_post_kelly_tree_active
+		USA = {
+			set_country_flag = rev_usa_post_kelly_tree_active
+			add_political_power = 500
+		}
+		USB = {
+			set_country_flag = rev_usb_post_kelly_tree_active
+		}
+		load_focus_tree = REV_usb_post_kelly_focus
+		USA = {
+			load_focus_tree = REV_usa_post_kelly_focus
+		}
 		rev_begin_usa_usb_war = yes
 	}
 	option = {
-		name = rev_usa_cw.33.b
-		ai_chance = { factor = 10 }
-		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.33.b"
+		name = rev_usa_cw.36.b
+		ai_chance = { factor = 95 }
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.36.b"
+		add_political_power = 500
+		set_country_flag = rev_usa_cw_usb_debt_offer_fired
 		set_country_flag = rev_usa_cw_matter_of_succession_fired
 		set_country_flag = rev_usa_cw_peaceful_partition_path
 		set_country_flag = rev_usa_post_kelly_tree_active
-		add_political_power = 500
-		load_focus_tree = REV_usa_post_kelly_focus
-		USB = {
-			set_country_flag = rev_usb_post_kelly_tree_active
+		USA = {
 			add_political_power = 500
-			load_focus_tree = REV_usb_post_kelly_focus
+			set_country_flag = rev_usa_post_kelly_tree_active
+		}
+		USB = {
+			add_political_power = 500
+			set_country_flag = rev_usb_post_kelly_tree_active
+		}
+		load_focus_tree = REV_usb_post_kelly_focus
+		USA = {
+			load_focus_tree = REV_usa_post_kelly_focus
+		}
+		if = {
+			limit = { check_variable = { debt > 0 } }
+			set_temp_variable = { debt_transfer = USA.debt }
+			multiply_temp_variable = { debt_transfer = 0.4 }
+			USB = {
+				add_to_variable = { debt = debt_transfer }
+			}
+			subtract_from_variable = { debt = debt_transfer }
 		}
 	}
 }
@@ -439,6 +509,12 @@ country_event = {
 		set_global_flag = rev_usa_cw_concluded
 		if = {
 			limit = { country_exists = USB }
+			USB = {
+				set_variable = { debt = 0 }
+			}
+		}
+		if = {
+			limit = { country_exists = USB }
 			annex_country = { target = USB transfer_troops = yes }
 		}
 		if = {
@@ -471,8 +547,10 @@ country_event = {
 		name = rev_usa_cw.41.a
 		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.41.a"
 		set_global_flag = rev_usa_cw_concluded
+		set_temp_variable = { usb_usa_debt = USA.debt }
 		if = {
 			limit = { country_exists = USA }
+			add_to_variable = { debt = usb_usa_debt }
 			annex_country = { target = USA transfer_troops = yes }
 		}
 		if = {
@@ -497,12 +575,32 @@ country_event = {
 		country_exists = USB
 		has_war_with = USB
 		NOT = { has_global_flag = rev_usa_cw_concluded }
+		# Keep white peace for balanced fronts only.
+		# NOTE: no direct script trigger for war-score was found; this uses
+		# strength + surrender progress as a close proxy.
+		NOT = {
+			OR = {
+				strength_ratio = { tag = USB ratio > 3.0 }
+				USB = { strength_ratio = { tag = USA ratio > 3.0 } }
+				surrender_progress > 0.75
+				USB = { surrender_progress > 0.75 }
+			}
+		}
 	}
 
 	option = {
 		name = rev_usa_cw.50.a
 		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.50.a"
 		set_global_flag = rev_usa_cw_concluded
+		if = {
+			limit = { check_variable = { debt > 0 } }
+			set_temp_variable = { debt_transfer = debt }
+			multiply_temp_variable = { debt_transfer = 0.4 }
+			USB = {
+				add_to_variable = { debt = debt_transfer }
+			}
+			subtract_from_variable = { debt = debt_transfer }
+		}
 		white_peace = USB
 		if = {
 			limit = {
@@ -518,8 +616,8 @@ country_event = {
 # 2026 Midterms: Democrats retake Congress.
 country_event = {
 	id = rev_usa_cw.20
-	title = USA_oppose_the_tyrant
-	desc = USA_oppose_the_tyrant_desc
+	title = USA_sweep_midterms
+	desc = USA_sweep_midterms_desc
 	picture = GFX_report_event_usa_election
 	is_triggered_only = yes
 

@@ -38,6 +38,7 @@ country_event = {
         }
         white_peace = UKR
         clr_country_flag = rev_sov_2026_sanctions_active
+        remove_idea = RUSSIA_SANCTIONS_BAN_DEBT
         set_country_flag = russia_accepted_current_lines_2026
         set_country_flag = russia_march_decision_done_2026
         add_stability = -0.03
@@ -81,11 +82,14 @@ country_event = {
 
         ai_chance = { factor = 100 }
 
-        add_manpower = 300000
-        add_to_variable = { var = debt value = 300 }
+		add_manpower = 300000
+        if = {
+			limit = { NOT = { has_country_flag = rev_sov_2026_sanctions_active } }
+			add_to_variable = { var = debt value = 300 }
+		}
 
         set_country_flag = russia_mobilized_2026
-    }
+	}
 }
 
 # ===============================
@@ -304,6 +308,7 @@ country_event = {
             transfer_state = 1085   # Kherson
         }
         clr_country_flag = rev_sov_2026_sanctions_active
+        remove_idea = RUSSIA_SANCTIONS_BAN_DEBT
         clr_country_flag = russia_pending_election_2026
         clr_country_flag = RUSSIA_ELECTION_ACTIVE
         set_country_flag = rev_russia_postwar_transition

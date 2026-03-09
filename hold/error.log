@@ -831,7 +831,7 @@ Has mutual exclusivity with USA_mingle_with_the_movement but the other focus doe
 [18:29:38][no_game_date][power_balance_effects.cpp:45]: common/national_focus/rev_usa_focus.txt:257: add_power_balance_value: Unable to find power balance with ID: USA_trust_bop
 [18:29:38][no_game_date][effectimplementation.cpp:2250]: common/national_focus/rev_usa_focus.txt:261: swap_ideas: Invalid idea: USA_oil_crisis_idea. If you wanted to reference a variable, you need to explicitly prefix it with var: or temp_var:.
 [18:29:38][no_game_date][effectimplementation.cpp:2250]: common/national_focus/rev_usa_focus.txt:261: swap_ideas: Invalid idea: USA_oil_crisis_idea1. If you wanted to reference a variable, you need to explicitly prefix it with var: or temp_var:.
-[18:29:38][no_game_date][effectimplementation.cpp:14051]: Invalid Decision ID for unlock_decision_tooltip USA_back_the_blue_decision
+[18:29:38][no_game_date][effectimplementation.cpp:14051]: Invalid Decision ID for unlock_decision_tooltip USA_close_the_border_decision
 [18:29:38][no_game_date][effectimplementation.cpp:14051]: Invalid Decision ID for unlock_decision_tooltip USA_encourage_militias
 [18:29:38][no_game_date][effectimplementation.cpp:14051]: Invalid Decision ID for unlock_decision_tooltip USA_end_the_chaos_decision
 [18:29:38][no_game_date][effectimplementation.cpp:14051]: Invalid Decision ID for unlock_decision_tooltip USA_fortify_the_election_decision

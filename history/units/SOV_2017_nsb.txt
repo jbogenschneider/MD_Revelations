@@ -1312,4 +1312,21 @@ instant_effect = {
 		type = command_control_equipment3 #C4I
 		amount = 1000
 	}
+
+	add_equipment_to_stockpile = {
+		type = guided_missile_equipment_4 
+		amount = 40
+	}
+	add_equipment_to_stockpile = {
+		type = sam_missile_equipment_4
+		amount = 200
+	}
+	add_equipment_to_stockpile = {
+		type = sam_missile_equipment_3
+		amount = 400
+	}
+	add_equipment_to_stockpile = {
+		type = sam_missile_equipment_2
+		amount = 900
+	}
 }
