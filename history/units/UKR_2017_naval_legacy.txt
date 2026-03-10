@@ -2,14 +2,17 @@
 
 	### Naval OOB ###
 	 fleet = {
-	   name = "1-a Bryhada nadvodnyh korabliv"
-	   naval_base = 11670
+		name = "Black Sea Submarine Fleet"
+		naval_base = 11670
 		task_force = {
-			name = "1-a Bryhada nadvodnyh korabliv"
+			name = "Black Sea Submarine Fleet"
 			location = 11670
-			ship = { name = "Hetman Sahaydachnyi" definition = frigate start_experience_factor = 0.50 equipment = { frigate_2 = { amount = 1 owner = UKR creator = SOV } } }
-			ship = { name = "Vinnytsia" definition = corvette start_experience_factor = 0.50 equipment = { corvette_2 = { amount = 1 owner = UKR creator = SOV  version_name = "Grisha-Class" } } }
-
+			ship = { name = "Sea Baby 1" definition = attack_submarine start_experience_factor = 0.50 equipment = { diesel_attack_submarine_3 = { amount = 1 owner = UKR } } }
+			ship = { name = "Sea Baby 2" definition = attack_submarine start_experience_factor = 0.50 equipment = { diesel_attack_submarine_3 = { amount = 1 owner = UKR } } }
+			ship = { name = "Sea Baby 3" definition = attack_submarine start_experience_factor = 0.50 equipment = { diesel_attack_submarine_3 = { amount = 1 owner = UKR } } }
+			ship = { name = "Sea Baby 4" definition = attack_submarine start_experience_factor = 0.50 equipment = { diesel_attack_submarine_3 = { amount = 1 owner = UKR } } }
+			ship = { name = "Sea Baby 5" definition = attack_submarine start_experience_factor = 0.50 equipment = { diesel_attack_submarine_3 = { amount = 1 owner = UKR } } }
+			ship = { name = "Sea Baby 6" definition = attack_submarine start_experience_factor = 0.50 equipment = { diesel_attack_submarine_3 = { amount = 1 owner = UKR } } }
 		}
 	}
 }

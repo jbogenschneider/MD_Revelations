@@ -14,9 +14,9 @@ capital = 1182
 	if = {
 		limit = { has_dlc = "No Step Back" }
 
-		set_oob = "USA_2000_nsb"
+		set_oob = "USA_2017_nsb"
 		else = {
-			set_oob = "USA_2000_nonnsb"
+			set_oob = "USA_2017_nonnsb"
 		}
 	}
 	set_naval_oob = "USA_2000_naval_mtg"
@@ -4898,7 +4898,7 @@ capital = 1182
 }
 2025.1.1 = {
 	if = { limit = { has_dlc = "No Step Back" }
-		set_oob = "USA_2000_nsb"
+		set_oob = "USA_2017_nsb"
 		else = {
 			set_oob = "USA_2017_nonnsb"
 		}

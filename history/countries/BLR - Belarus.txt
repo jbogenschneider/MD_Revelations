@@ -84,6 +84,7 @@ capital = 703
 	add_opinion_modifier = { target = ABK modifier = russian_proficient }
 	reverse_add_opinion_modifier = { target = ABK modifier = russian_proficient }
 
+	diplomatic_relation = { country = SOV relation = non_aggression_pact active = yes }
 	diplomatic_relation = { country = UKR relation = non_aggression_pact active = yes }
 
 	add_ideas = {
@@ -111,7 +112,6 @@ capital = 703
 		#Other
 		orthodox_christian
 		medium_far_right_movement
-		CSTO_member
 		BLR_outdated_army
 		BLR_unstable_national_currency4
 		BLR_cheln_trade

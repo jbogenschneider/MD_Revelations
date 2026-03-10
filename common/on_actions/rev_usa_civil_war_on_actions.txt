@@ -95,7 +95,6 @@ on_actions = {
 			if = {
 				limit = {
 					tag = USA
-					has_country_flag = USA_sided_with_trump_flag
 					NOT = { has_country_flag = rev_usa_cw_aug_branch_fired }
 					NOT = { has_country_flag = rev_usa_civil_war_initialized }
 					date > 2028.8.14
@@ -106,7 +105,6 @@ on_actions = {
 			if = {
 				limit = {
 					tag = USA
-					has_country_flag = USA_sided_with_trump_flag
 					has_country_flag = rev_usa_cw_stand_down_path
 					NOT = { has_country_flag = rev_usa_cw_scotus_fired }
 					NOT = { has_country_flag = rev_usa_civil_war_initialized }
@@ -118,7 +116,6 @@ on_actions = {
 			if = {
 				limit = {
 					tag = USA
-					has_country_flag = USA_sided_with_trump_flag
 					has_country_flag = rev_usa_cw_stand_down_path
 					has_country_flag = rev_usa_cw_scotus_fired
 					NOT = { has_country_flag = rev_usa_cw_sep_war_fired }
@@ -134,6 +131,7 @@ on_actions = {
 					has_country_flag = rev_usa_cw_sep_war_fired
 					has_country_flag = rev_usa_cw_player_side_chosen
 					NOT = { has_country_flag = rev_usa_cw_launch_event_fired }
+					NOT = { has_country_flag = rev_usa_cw_split_prepared }
 					NOT = { has_country_flag = rev_usa_civil_war_initialized }
 					date > 2028.9.24
 					date < 2028.10.2

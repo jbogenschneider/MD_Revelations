@@ -29,7 +29,6 @@ country_event = {
 
 	trigger = {
 		tag = USA
-		has_country_flag = USA_sided_with_trump_flag
 		NOT = { has_country_flag = rev_usa_cw_aug_branch_fired }
 		NOT = { has_country_flag = rev_usa_civil_war_initialized }
 	}
@@ -100,7 +99,6 @@ country_event = {
 
 	trigger = {
 		tag = USA
-		has_country_flag = USA_sided_with_trump_flag
 		has_country_flag = rev_usa_cw_stand_down_path
 		has_country_flag = rev_usa_cw_scotus_fired
 		NOT = { has_country_flag = rev_usa_cw_sep_war_fired }
@@ -163,12 +161,65 @@ country_event = {
 	option = {
 		name = rev_usa_cw.31.a
 		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.31.a"
-		set_country_flag = rev_usa_cw_launch_event_fired
+		set_country_flag = rev_usa_cw_split_prepared
 		rev_setup_usa_civil_war_sides_impeachment = yes
+		# Defer player tag transfer until a second step so split side selection is stable.
+		country_event = {
+			id = rev_usa_cw.311
+			days = 2
+		}
+	}
+}
+
+country_event = {
+	id = rev_usa_cw.311
+	title = rev_usa_cw.311.t
+	desc = rev_usa_cw.311.d
+	picture = GFX_report_event_generic_war
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = rev_usa_cw_split_prepared
+		has_country_flag = rev_usa_cw_player_side_chosen
+		NOT = { has_country_flag = rev_usa_cw_launch_event_fired }
+	}
+
+	option = {
+		name = rev_usa_cw.311.a
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0
+				has_country_flag = rev_usa_cw_player_side_usb
+			}
+		}
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.311.a"
+		# Continue on the constitutional side (remain in USA while keeping the split in place).
+		set_country_flag = rev_usa_cw_launch_event_fired
+		clr_country_flag = rev_usa_cw_player_side_usb
+		set_country_flag = rev_usa_cw_player_side_usa
+		clr_country_flag = rev_usa_cw_split_prepared
+	}
+	option = {
+		name = rev_usa_cw.311.b
+		# Go with Free States (trump side) and switch player control to USB after split.
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = rev_usa_cw_player_side_usb }
+			}
+		}
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.311.b"
 		if = {
 			limit = { has_country_flag = rev_usa_cw_player_side_usb }
 			USB = { change_tag_from = USA }
 		}
+		set_country_flag = rev_usa_cw_launch_event_fired
+		clr_country_flag = rev_usa_cw_player_side_usa
+		set_country_flag = rev_usa_cw_player_side_usb
+		clr_country_flag = rev_usa_cw_split_prepared
 	}
 }
 

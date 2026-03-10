@@ -121,3 +121,45 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = rev_usa_iran.2
+	is_triggered_only = yes
+	hidden = yes
+
+	trigger = {
+		tag = USA
+	}
+
+	immediate = {
+		# Keep this one-shot and fail silently if Iran is no longer in a state to receive aid.
+		if = {
+			limit = { country_exists = PER }
+			# Spend the requested US resources.
+			add_equipment_to_stockpile = {
+				type = infantry_weapons
+				amount = -1000
+			}
+			add_equipment_to_stockpile = {
+				type = util_vehicle_3
+				amount = -400
+			}
+
+			PER = {
+				add_equipment_to_stockpile = { type = infantry_weapons amount = 1000 }
+				add_equipment_to_stockpile = { type = util_vehicle_3 amount = 400 }
+
+				405 = {
+					create_unit = {
+						division = "name = \"Atesh Motorized Regiment I\" division_template = \"Lashkar-e Motorizeh\" start_experience_factor = 0.10"
+						owner = PER
+					}
+					create_unit = {
+						division = "name = \"Atesh Mobile Infantry\" division_template = \"Lashkar-e Motorizeh\" start_experience_factor = 0.10"
+						owner = PER
+					}
+				}
+			}
+		}
+	}
+}
