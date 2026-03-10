@@ -21,6 +21,7 @@ capital = 724
 	if = { limit = { has_dlc = "By Blood Alone" }
 		set_air_oob = "TAJ_2000_bba"
 	}
+	diplomatic_relation = { country = SOV relation = non_aggression_pact active = yes }
 	set_rule = {
 		can_not_declare_war = yes
 	}
@@ -48,7 +49,6 @@ capital = 724
 		TAJ_woes_of_the_civilwar
 		TAJ_201st_base
 		officer_advanced_training
-		CSTO_member
 
 		#CIS
 		CIS_member_state_idea

@@ -1,5 +1,5 @@
-capital = 875
-2024.1.1 = {
+﻿capital = 875
+2000.1.1 = {
 	set_cosmetic_tag = VEN
 	set_country_flag = dynamic_flag
 	set_country_flag = dynamic_rebel_flag
@@ -310,7 +310,7 @@ capital = 875
 	}
 	set_politics = {
 		ruling_party = communism
-		last_election = "2023.6.13"
+		last_election = "1999.6.13"
 		election_frequency = 48
 		elections_allowed = yes
 	}
@@ -349,14 +349,13 @@ capital = 875
 	startup_politics = yes
 
 	create_country_leader = {
-		name = "Hugo Chávez"
-		picture = "hugo_chavez.dds"
+		name = "Nicolas Maduro"
+		picture = "Nicolas_Maduro.dds"
 		ideology = anarchist_communism
 		traits = {
 			emerging_anarchist_communism
-			military_career
-			silent_workhorse
-			populist_president
+			union_man
+			career_politician
 		}
 	}
 

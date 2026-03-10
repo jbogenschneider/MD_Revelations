@@ -241,6 +241,30 @@ division_template = {
 
 units = {
 
+	division = {
+		#name = "4 Territorial"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 3701
+		division_template = "Natsionalna Hvardiya"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.50
+	}
+
+	division = {
+		#name = "5 Territorial"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11703
+		division_template = "Natsionalna Hvardiya"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.50
+	}
+
 	### Guard Brigades
 	division = {
 		#name = "101-a Okrema Bryhada Ohorony"
@@ -334,6 +358,19 @@ units = {
 			name_order = 1
 		}
 		location = 14445
+		division_template = "Artyleriyska Bryhada"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.50
+	}
+
+	### Artillery Brigades
+	division = {
+		#name = "26-g Okrema Artyleriyska Bryhada"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11670
 		division_template = "Artyleriyska Bryhada"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.50
@@ -558,7 +595,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 8
 		}
-		location = 3755
+		location = 6727
 		division_template = "Mekhanizovana Bryhada"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.50
@@ -633,7 +670,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 1
 		}
-		location = 11541
+		location = 3479
 		division_template = "Motopikhotna Bryhada"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.50
@@ -743,7 +780,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 7
 		}
-		location = 11437
+		location = 11703
 		division_template = "Bryhada Operatyvnoho Pryznachennya"
 		start_experience_factor = 0.9
 		start_equipment_factor = 0.50
@@ -825,7 +862,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 2
 		}
-		location = 11452
+		location = 11607
 		division_template = "Desantno-Shturmova Bryhada"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.50

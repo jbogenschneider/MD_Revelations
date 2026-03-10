@@ -1,0 +1,16 @@
+rev_ukr_keep_important_provinces = {
+	allowed = { tag = UKR }
+	enable = {
+		has_war = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.35
+		order_id = 990
+		states = { 333 695 1086 }
+		subtract_invasions_from_need = no
+		subtract_fronts_from_need = no
+	}
+}

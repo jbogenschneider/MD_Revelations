@@ -23,19 +23,11 @@ country_event = {
 
     option = {
         name = RUSSIA_MARCH_DECISION_2026_ACCEPT
-        ai_chance = { factor = 35 }
+        ai_chance = { factor = 25 }
 
         # Ceasefire on adjusted current lines:
         # SOV keeps Donetsk + Luhansk regions and south corridor,
         # UKR keeps Kramatorsk (1222), North Zaporizhzhia (1223), North Kherson (1224).
-        UKR = {
-            transfer_state = 693    # Donetsk (West Donetsk)
-            transfer_state = 1030   # Donetsk Oblast
-            transfer_state = 1075   # Luhansk
-            transfer_state = 1076   # Luhansk Oblast (West Luhansk)
-            transfer_state = 694    # Zaporizhzhia
-            transfer_state = 1085   # Kherson
-        }
         white_peace = UKR
         clr_country_flag = rev_sov_2026_sanctions_active
         remove_idea = RUSSIA_SANCTIONS_BAN_DEBT
@@ -47,11 +39,12 @@ country_event = {
 
     option = {
         name = RUSSIA_MARCH_DECISION_2026_CONTINUE
-        ai_chance = { factor = 65 }
+        ai_chance = { factor = 75 }
 
         set_country_flag = RUSSIA_PUTIN_PATH
         set_country_flag = russia_prepare_mobilization_2026
         set_country_flag = russia_march_decision_done_2026
+        set_country_flag = russia_delay_crisis_3
         add_war_support = 0.03
         add_stability = -0.01
     }
