@@ -174,7 +174,7 @@ focus_tree = {
 			VEN = {
 				if = {
 					limit = { has_idea = international_sanctions }
-					remove_idea = international_sanctions
+					remove_ideas = international_sanctions
 				}
 				create_country_leader = {
 					name = "Delcy Rodriguez"
@@ -194,7 +194,7 @@ focus_tree = {
 				}
 			}
 			swap_ideas = {
-				remove_idea = USA_oil_crisis_idea
+				remove_ideas = USA_oil_crisis_idea
 				add_idea = USA_oil_crisis_idea1
 			}
 		}
@@ -314,7 +314,7 @@ focus_tree = {
                     name = "Marco Rubio"
                     picture = "USC_marco_rubio.png"
                     expire = "2035.1.1"
-                    ideology = conservative
+                    ideology = Conservative
                     traits = {
                         career_politician
                     }

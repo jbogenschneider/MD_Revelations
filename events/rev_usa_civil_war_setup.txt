@@ -46,7 +46,7 @@ country_event = {
 		custom_effect_tooltip = USA_blame_canada_desc
 		set_country_flag = rev_usa_cw_aug_branch_fired
 		set_country_flag = rev_usa_cw_aug_plot_fired
-		set_country_flag = rev_usa_cw_stand_down_path
+		set_country_flag = rev_usa_cw_blame_canada
 		set_country_flag = rev_usa_canada_plot_flag
 		add_war_support = 0.03
 		add_stability = -0.02
@@ -75,7 +75,7 @@ country_event = {
 
 	trigger = {
 		tag = USA
-		has_country_flag = rev_usa_cw_stand_down_path
+		has_country_flag = rev_usa_cw_blame_canada
 		NOT = { has_country_flag = rev_usa_cw_scotus_fired }
 	}
 
@@ -99,13 +99,13 @@ country_event = {
 
 	trigger = {
 		tag = USA
-		has_country_flag = rev_usa_cw_stand_down_path
+		has_country_flag = rev_usa_cw_blame_canada
 		has_country_flag = rev_usa_cw_scotus_fired
 		NOT = { has_country_flag = rev_usa_cw_sep_war_fired }
 		NOT = { has_country_flag = rev_usa_civil_war_initialized }
 	}
 
-	option = {
+		option = {
 		name = rev_usa_cw.11.a
 		ai_chance = {
 			factor = 90
@@ -119,8 +119,14 @@ country_event = {
 		set_country_flag = rev_usa_cw_player_side_usb
 		clr_country_flag = rev_usa_cw_player_side_usa
 		set_politics = {
-			ruling_party = conservative
+			ruling_party = nationalist
 			elections_allowed = no
+		}
+		set_country_flag = rev_usa_cw_split_waiting_event
+		set_country_flag = rev_usa_cw_310_pending
+		country_event = {
+			id = rev_usa_cw.310
+			days = 0
 		}
 	}
 	option = {
@@ -140,6 +146,65 @@ country_event = {
 			ruling_party = democratic
 			elections_allowed = yes
 		}
+		set_country_flag = rev_usa_cw_split_waiting_event
+		set_country_flag = rev_usa_cw_310_pending
+		country_event = {
+			id = rev_usa_cw.310
+			days = 0
+		}
+	}
+}
+
+country_event = {
+	id = rev_usa_cw.310
+	title = rev_usa_cw.310.t
+	desc = rev_usa_cw.310.d
+	picture = GFX_report_event_generic_war
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = rev_usa_cw_sep_war_fired
+		has_country_flag = rev_usa_cw_player_side_chosen
+		has_country_flag = rev_usa_cw_310_pending
+		has_country_flag = rev_usa_cw_split_waiting_event
+		NOT = { has_country_flag = rev_usa_cw_launch_event_fired }
+	}
+
+		option = {
+		name = rev_usa_cw.310.a
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.310.a"
+		# Trump has fled the capital; execute split and prepare for side choice.
+		clr_country_flag = rev_usa_cw_310_pending
+		set_country_flag = rev_usa_cw_split_prepared
+		set_country_flag = rev_usa_cw_split_window_complete
+		if = {
+			limit = { country_exists = USB }
+			USB = { set_capital = { state = 790 } }   # Fort Bragg/Fayetteville
+		}
+		if = {
+			limit = { country_exists = USA }
+			USA = { set_capital = { state = 1182 } }  # Washington DC
+		}
+		if = {
+			limit = {
+				NOT = { has_country_flag = rev_usa_cw_player_side_usb }
+				NOT = { has_country_flag = rev_usa_cw_player_side_usa }
+			}
+			set_country_flag = rev_usa_cw_player_side_usa
+		}
+		if = {
+			limit = {
+				has_country_flag = rev_usa_cw_player_side_usb
+				has_country_flag = rev_usa_cw_player_side_usa
+			}
+			clr_country_flag = rev_usa_cw_player_side_usa
+		}
+		rev_setup_usa_civil_war_sides_impeachment = yes
+		country_event = {
+			id = rev_usa_cw.311
+			days = 1
+		}
 	}
 }
 
@@ -153,21 +218,17 @@ country_event = {
 
 	trigger = {
 		tag = USA
-		has_country_flag = rev_usa_cw_sep_war_fired
+		has_country_flag = rev_usa_cw_split_waiting_event
 		has_country_flag = rev_usa_cw_player_side_chosen
-		NOT = { has_country_flag = rev_usa_civil_war_initialized }
+		NOT = { has_country_flag = rev_usa_cw_split_prepared }
+		NOT = { has_country_flag = rev_usa_cw_split_window_complete }
+		has_country_flag = rev_usa_cw_310_pending
 	}
 
 	option = {
 		name = rev_usa_cw.31.a
 		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.31.a"
-		set_country_flag = rev_usa_cw_split_prepared
-		rev_setup_usa_civil_war_sides_impeachment = yes
-		# Defer player tag transfer until a second step so split side selection is stable.
-		country_event = {
-			id = rev_usa_cw.311
-			days = 2
-		}
+		country_event = { id = rev_usa_cw.310 }
 	}
 }
 
@@ -182,17 +243,32 @@ country_event = {
 		tag = USA
 		has_country_flag = rev_usa_cw_split_prepared
 		has_country_flag = rev_usa_cw_player_side_chosen
+		has_country_flag = rev_usa_cw_split_window_complete
 		NOT = { has_country_flag = rev_usa_cw_launch_event_fired }
+	}
+
+	immediate = {
+		# Ensure one and only one side flag exists for the side-choice event.
+		if = {
+			limit = {
+				NOT = { has_country_flag = rev_usa_cw_player_side_usb }
+				NOT = { has_country_flag = rev_usa_cw_player_side_usa }
+			}
+			set_country_flag = rev_usa_cw_player_side_usa
+		}
+		if = {
+			limit = {
+				has_country_flag = rev_usa_cw_player_side_usb
+				has_country_flag = rev_usa_cw_player_side_usa
+			}
+			clr_country_flag = rev_usa_cw_player_side_usa
+		}
 	}
 
 	option = {
 		name = rev_usa_cw.311.a
-		ai_chance = {
-			factor = 100
-			modifier = {
-				factor = 0
-				has_country_flag = rev_usa_cw_player_side_usb
-			}
+		trigger = {
+			NOT = { has_country_flag = rev_usa_cw_player_side_usb }
 		}
 		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.311.a"
 		# Continue on the constitutional side (remain in USA while keeping the split in place).
@@ -200,26 +276,47 @@ country_event = {
 		clr_country_flag = rev_usa_cw_player_side_usb
 		set_country_flag = rev_usa_cw_player_side_usa
 		clr_country_flag = rev_usa_cw_split_prepared
+		clr_country_flag = rev_usa_cw_split_waiting_event
 	}
 	option = {
 		name = rev_usa_cw.311.b
 		# Go with Free States (trump side) and switch player control to USB after split.
-		ai_chance = {
-			factor = 100
-			modifier = {
-				factor = 0
-				NOT = { has_country_flag = rev_usa_cw_player_side_usb }
-			}
+		trigger = {
+			has_country_flag = rev_usa_cw_player_side_usb
 		}
 		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.311.b"
-		if = {
-			limit = { has_country_flag = rev_usa_cw_player_side_usb }
-			USB = { change_tag_from = USA }
-		}
 		set_country_flag = rev_usa_cw_launch_event_fired
 		clr_country_flag = rev_usa_cw_player_side_usa
 		set_country_flag = rev_usa_cw_player_side_usb
 		clr_country_flag = rev_usa_cw_split_prepared
+		set_country_flag = rev_usa_cw_pending_usb_tag_transfer
+		clr_country_flag = rev_usa_cw_split_waiting_event
+		country_event = {
+			id = rev_usa_cw.312
+			days = 2
+		}
+	}
+}
+
+country_event = {
+	id = rev_usa_cw.312
+	title = rev_usa_cw.312.t
+	desc = rev_usa_cw.312.d
+	picture = GFX_report_event_generic_war
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = rev_usa_cw_pending_usb_tag_transfer
+		country_exists = USB
+	}
+
+	option = {
+		name = rev_usa_cw.312.a
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.312.a"
+		clr_country_flag = rev_usa_cw_pending_usb_tag_transfer
+		set_country_flag = rev_usa_cw_usb_player_requested
+		# Legacy safe-guard: only track side choice, do not hard-switch country tags.
 	}
 }
 
@@ -426,13 +523,15 @@ country_event = {
 			load_focus_tree = REV_usa_post_kelly_focus
 		}
 		if = {
-			limit = { check_variable = { debt > 0 } }
+			limit = { check_variable = { var = debt value > 0 } }
 			set_temp_variable = { debt_transfer = USA.debt }
 			multiply_temp_variable = { debt_transfer = 0.4 }
 			USB = {
 				add_to_variable = { debt = debt_transfer }
 			}
-			subtract_from_variable = { debt = debt_transfer }
+			USA = {
+				subtract_from_variable = { debt = debt_transfer }
+			}
 		}
 	}
 }
@@ -508,10 +607,10 @@ country_event = {
 		808 = { transfer_state_to = USB }   # Idaho
 		805 = { transfer_state_to = USB }   # Utah
 
-		# Southern capital moves to Austin, Texas.
-		USB = {
-			set_capital = 800
-		}
+	# Southern capital moves to Austin, Texas.
+	USB = {
+		set_capital = { state = 800 }
+	}
 	}
 }
 
@@ -644,7 +743,7 @@ country_event = {
 		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.50.a"
 		set_global_flag = rev_usa_cw_concluded
 		if = {
-			limit = { check_variable = { debt > 0 } }
+			limit = { check_variable = { var = debt value > 0 } }
 			set_temp_variable = { debt_transfer = debt }
 			multiply_temp_variable = { debt_transfer = 0.4 }
 			USB = {
@@ -706,7 +805,7 @@ country_event = {
 		add_opinion_modifier = { target = MEX modifier = large_commercial_relations }
 		if = {
 			limit = { has_idea = USA_tariff }
-			remove_idea = USA_tariff
+			remove_ideas = { USA_tariff }
 		}
 	}
 }

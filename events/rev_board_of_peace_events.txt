@@ -61,7 +61,7 @@ country_event = {
 				set_cosmetic_tag = HAM_BPH
 				load_focus_tree = REV_ham_board_of_peace_focus
 				set_politics = {
-					ruling_party = conservative
+					ruling_party = nationalist
 					elections_allowed = no
 				}
 				create_country_leader = {

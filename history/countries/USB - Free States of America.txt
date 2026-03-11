@@ -785,13 +785,11 @@ capital = 1182
 	}
 
 	create_country_leader = {
-		name = "Council of National Preservation"
-		picture = "Council_For_National_Preservation.dds"
-		desc = "COUNCIL_FOR_NATIONAL_PRESERVATION_DESC"
-		ideology = Autocracy
+		name = "Donald Trump"
+		picture = "USA_donald_trump9.dds"
+		ideology = conservatism
 		traits = {
-			emerging_Autocracy
-			defender_of_democracy
+			career_politician
 		}
 	}
 	set_variable = { term_limit = 2 }
