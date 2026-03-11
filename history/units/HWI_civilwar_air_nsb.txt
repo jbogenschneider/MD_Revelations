@@ -1,6 +1,6 @@
 # Air and missile parking pool for US civil war (non-NSB).
 # Copied from USA air-centric stockpile blocks so HWI can hold these assets out of the war.
-
+instant_effect = {
 add_equipment_to_stockpile = {
 	type = transport_plane1
 	amount = 222
@@ -238,4 +238,5 @@ add_equipment_to_stockpile = {
 add_equipment_to_stockpile = {
 	type = strategic_bomber1
 	amount = 92
+}
 }

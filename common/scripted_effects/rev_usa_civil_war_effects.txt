@@ -57,14 +57,10 @@ rev_setup_usa_civil_war_sides_impeachment = {
 		transfer_navy = { target = HWI }
 	}
 
-	# Capitals after split.
-	USB = { set_capital = 790 }   # Fort Bragg/Fayetteville
-	USA = { set_capital = 1182 }  # Washington DC
-
 	# USB is Trump-aligned side.
 	USB = {
 		set_politics = {
-			ruling_party = conservative
+			ruling_party = nationalist
 			elections_allowed = no
 		}
 		set_cosmetic_tag = USB_FreeStates_democratic
@@ -74,83 +70,12 @@ rev_setup_usa_civil_war_sides_impeachment = {
 		}
 		create_country_leader = {
 			name = "Donald Trump"
-			picture = "USA_donald_trump9.png"
+			picture = "USA_donald_trump9.dds"
 			ideology = conservatism
 			traits = {
 				career_politician
 			}
 		}
-		create_corps_commander = {
-			name = "Mason Hale"
-			portrait_path = "gfx/leaders/USB/generals/USC_Vance.png"
-			traits = { charismatic }
-			skill = 3
-			attack_skill = 3
-			defense_skill = 3
-			planning_skill = 3
-			logistics_skill = 2
-		}
-		create_corps_commander = {
-			name = "Caleb Mercer"
-			portrait_path = "gfx/leaders/USB/generals/USA_steward_rhodes.png"
-			traits = { trickster }
-			skill = 4
-			attack_skill = 4
-			defense_skill = 3
-			planning_skill = 3
-			logistics_skill = 2
-		}
-		create_corps_commander = {
-			name = "Nolan Briggs"
-			portrait_path = "gfx/leaders/USB/generals/USA_micheal_flynn.png"
-			traits = { commando }
-			skill = 4
-			attack_skill = 3
-			defense_skill = 4
-			planning_skill = 3
-			logistics_skill = 2
-		}
-		create_corps_commander = {
-			name = "Jonah Sloane"
-			portrait_path = "gfx/leaders/USB/generals/USA_herbert_raymond_mcmaster.png"
-			traits = { organizer }
-			skill = 3
-			attack_skill = 3
-			defense_skill = 3
-			planning_skill = 4
-			logistics_skill = 3
-		}
-		create_corps_commander = {
-			name = "Damon Voss"
-			portrait_path = "gfx/leaders/USB/generals/USA_troy_black.png"
-			traits = { infantry_officer }
-			skill = 3
-			attack_skill = 4
-			defense_skill = 2
-			planning_skill = 3
-			logistics_skill = 2
-		}
-		create_corps_commander = {
-			name = "Elias Rowan"
-			portrait_path = "gfx/leaders/USB/generals/USA_chris_hill.png"
-			traits = { defensive_doctrine }
-			skill = 2
-			attack_skill = 2
-			defense_skill = 4
-			planning_skill = 2
-			logistics_skill = 3
-		}
-		create_corps_commander = {
-			name = "Micah Trent"
-			portrait_path = "gfx/leaders/USB/generals/USA_joseph_rice.png"
-			traits = { logistics_wizard }
-			skill = 2
-			attack_skill = 2
-			defense_skill = 2
-			planning_skill = 3
-			logistics_skill = 1
-		}
-		# Impeachment branch advantage: USB inherits most deployable federal strength.
 		add_manpower = 500000
 		army_experience = 75
 		if = {
@@ -161,70 +86,75 @@ rev_setup_usa_civil_war_sides_impeachment = {
 			}
 		}
 		if = {
-			limit = {
-				USA = {
-					has_country_flag = rev_usa_border_patrol_agents_crush
+			limit = { NOT = { has_country_flag = rev_usb_civil_war_units_seeded } }
+			800 = {
+				create_unit = {
+					division = "name = \"1st Texas Infantry Regiment\" division_template = \"Infantry Division\" start_experience_factor = 0.15"
+					owner = USB
 				}
+				create_unit = {
+					division = "name = \"2nd Texas Infantry Regiment\" division_template = \"Infantry Division\" start_experience_factor = 0.15"
+					owner = USB
+				}
+				create_unit = {
+					division = "name = \"Border Patrol Agents (Founding Guard)\" division_template = \"Border Patrol Agents\" start_experience_factor = 0.20"
+					owner = USB
+				}
+			}
+			set_country_flag = rev_usb_civil_war_units_seeded
+		}
+		if = {
+			limit = {
+				USA = { has_country_flag = rev_usa_border_patrol_agents_crush }
 				NOT = { has_country_flag = rev_usb_border_patrol_agents_crush }
 			}
 			800 = {
 				create_unit = {
-                    division = "name = \"Border Patrol Agents (Crush the Rioters)\" division_template = \"Border Patrol Agents\" start_experience_factor = 0.2"
+					division = "name = \"Border Patrol Agents (Crush the Rioters)\" division_template = \"Border Patrol Agents\" start_experience_factor = 0.20"
 					owner = USB
-					prioritize_location = 15368
 				}
 			}
 			set_country_flag = rev_usb_border_patrol_agents_crush
 		}
 		if = {
 			limit = {
-				USA = {
-					has_country_flag = rev_usa_border_patrol_agents_keep_out
-				}
+				USA = { has_country_flag = rev_usa_border_patrol_agents_keep_out }
 				NOT = { has_country_flag = rev_usb_border_patrol_agents_keep_out }
 			}
 			800 = {
 				create_unit = {
-					division = "name = \"Border Patrol Agents (Keep Out of Site)\" division_template = \"Border Patrol Agents\" start_experience_factor = 0.2"
+					division = "name = \"Border Patrol Agents (Keep Out of Site)\" division_template = \"Border Patrol Agents\" start_experience_factor = 0.20"
 					owner = USB
-					prioritize_location = 15368
 				}
 			}
 			set_country_flag = rev_usb_border_patrol_agents_keep_out
 		}
 		if = {
 			limit = {
-				USA = {
-					has_country_flag = rev_usa_border_patrol_agents_end_chaos
-				}
+				USA = { has_country_flag = rev_usa_border_patrol_agents_end_chaos }
 				NOT = { has_country_flag = rev_usb_border_patrol_agents_end_chaos }
 			}
 			800 = {
 				create_unit = {
-					division = "name = \"Border Patrol Agents (End the Chaos)\" division_template = \"Border Patrol Agents\" start_experience_factor = 0.2"
+					division = "name = \"Border Patrol Agents (End the Chaos)\" division_template = \"Border Patrol Agents\" start_experience_factor = 0.20"
 					owner = USB
-					prioritize_location = 15368
 				}
 			}
 			set_country_flag = rev_usb_border_patrol_agents_end_chaos
 		}
 		if = {
 			limit = {
-				USA = {
-					has_country_flag = rev_usa_unify_the_military
-				}
+				USA = { has_country_flag = rev_usa_unify_the_military }
 				NOT = { has_country_flag = rev_usb_unify_the_military_bonus }
 			}
 			800 = {
 				create_unit = {
 					division = "name = \"1st Purged Regiment\" division_template = \"Infantry Division\" start_experience_factor = 0.15"
 					owner = USB
-					prioritize_location = 15368
 				}
 				create_unit = {
 					division = "name = \"2nd Purged Regiment\" division_template = \"Infantry Division\" start_experience_factor = 0.15"
 					owner = USB
-					prioritize_location = 15368
 				}
 			}
 			set_country_flag = rev_usb_unify_the_military_bonus
@@ -234,7 +164,6 @@ rev_setup_usa_civil_war_sides_impeachment = {
 
 	# USA is constitutional/removal side.
 	USA = {
-		# Border patrol detachments are non-federal in this scenario; they stay with USB after the split.
 		delete_units = {
 			division_template = "Border Patrol Agents"
 			disband = yes
@@ -253,66 +182,6 @@ rev_setup_usa_civil_war_sides_impeachment = {
 				career_politician
 			}
 		}
-		create_corps_commander = {
-			name = "Grant Holloway"
-			portrait_path = "gfx/leaders/USA/generals/USA_christopher_g_cavoli.png"
-			traits = { trickster }
-			skill = 4
-			attack_skill = 4
-			defense_skill = 3
-			planning_skill = 3
-			logistics_skill = 2
-		}
-		create_corps_commander = {
-			name = "Victor Harlan"
-			portrait_path = "gfx/leaders/USA/generals/USA_james_mattis.png"
-			traits = { commando }
-			skill = 4
-			attack_skill = 3
-			defense_skill = 4
-			planning_skill = 3
-			logistics_skill = 2
-		}
-		create_corps_commander = {
-			name = "Mason Ridley"
-			portrait_path = "gfx/leaders/USA/generals/USA_mark_milley.png"
-			traits = { organizer }
-			skill = 3
-			attack_skill = 3
-			defense_skill = 3
-			planning_skill = 4
-			logistics_skill = 3
-		}
-		create_corps_commander = {
-			name = "Owen Pike"
-			portrait_path = "gfx/leaders/USA/generals/USA_andrew_p_poppas.png"
-			traits = { infantry_officer }
-			skill = 3
-			attack_skill = 4
-			defense_skill = 2
-			planning_skill = 3
-			logistics_skill = 2
-		}
-		create_corps_commander = {
-			name = "Wesley Crane"
-			portrait_path = "gfx/leaders/USA/generals/USA_paul_lacamera.png"
-			traits = { defensive_doctrine }
-			skill = 2
-			attack_skill = 2
-			defense_skill = 4
-			planning_skill = 2
-			logistics_skill = 3
-		}
-		create_corps_commander = {
-			name = "Reed Talbot"
-			portrait_path = "gfx/leaders/USA/generals/USA_john_kelly.png"
-			traits = { logistics_wizard }
-			skill = 2
-			attack_skill = 2
-			defense_skill = 2
-			planning_skill = 3
-			logistics_skill = 1
-		}
 		if = {
 			limit = { has_dlc = "No Step Back" }
 			load_oob = "USA_civilwar_nsb"
@@ -320,7 +189,6 @@ rev_setup_usa_civil_war_sides_impeachment = {
 				load_oob = "USA_civilwar_nonnsb"
 			}
 		}
-		# Park strategic and tactical air/missile-capable assets in HWI stockpile.
 		add_equipment_to_stockpile = { type = AS_Fighter2 amount = -687 }
 		add_equipment_to_stockpile = { type = attack_helicopter1 amount = -511 }
 		add_equipment_to_stockpile = { type = attack_helicopter2 amount = -1979 }
@@ -509,3 +377,4 @@ rev_resolve_usa_civil_war_neutral_states = {
 		set_global_flag = rev_usa_cw_neutral_states_resolved
 	}
 }
+
