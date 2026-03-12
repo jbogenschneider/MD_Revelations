@@ -1,0 +1,12 @@
+ideas = {
+	country = {
+		USA_rule_by_decree_idea = {
+			allowed = { original_tag = USA }
+			picture = idea_political_campaign
+			modifier = {
+				stability_factor = -0.05
+				political_power_gain = -0.10
+			}
+		}
+	}
+}

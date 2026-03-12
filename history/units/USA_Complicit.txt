@@ -1,0 +1,217 @@
+
+division_template = {
+	name = "Militia"
+
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Guard Brigade"
+
+	regiments = {
+		Mech_Inf_Bat = { x = 0 y = 0 }
+		Mot_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 0 y = 2 }
+	}
+
+	support = {
+		L_Engi_Comp = { x = 0 y = 2 }
+		Mot_Recce_Comp = { x = 0 y = 1 }
+	}
+}
+units = {
+	division = {
+		name = "Florida National Guard"
+		location = 15954
+		division_template = "Guard Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.4
+	}
+	division = {
+		name = "Texas National Guard 1"
+		location = 4955
+		division_template = "Guard Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "Texas National Guard 2"
+		location = 10740
+		division_template = "Guard Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "Border Patrol Agents Tx1"
+		location = 10740
+		division_template = "Border Patrol Agents"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "Border Patrol Agents Tx2"
+		location = 15389
+		division_template = "Border Patrol Agents"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "Border Patrol Agents Tx3"
+		location = 5061
+		division_template = "Border Patrol Agents"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "Border Patrol Agents Tx4"
+		location = 15363
+		division_template = "Border Patrol Agents"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "Tennesse National Guard"
+		location = 15799
+		division_template = "Guard Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.4
+	}
+	division = {
+		name = "South Carolina National Guard"
+		location = 4653
+		division_template = "Guard Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.4
+	}
+	division = {
+		name = "Georgia National Guard"
+		location = 15986
+		division_template = "Guard Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.4
+	}
+	division = {
+		name = "WV National Guard"
+		location = 7588
+		division_template = "Guard Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.4
+	}
+	division = {
+		name = "Indiana National Guard"
+		location = 15765
+		division_template = "Guard Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.4
+	}
+	division = {
+		name = "Lousiana National Guard"
+		location = 4507
+		division_template = "Guard Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.4
+	}
+	division = {
+		name = "Ohio National Guard"
+		location = 3829
+		division_template = "Guard Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.4
+	}
+	division = {
+		name = "Oklahoma National Guard"
+		location = 5103
+		division_template = "Guard Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.4
+	}
+	division = {
+		name = "Wyoming National Guard"
+		location = 15091
+		division_template = "Guard Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.4
+	}
+	division = {
+		name = "Montana National Guard"
+		location = 4860
+		division_template = "Guard Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.4
+	}
+	division = {
+		name = "Missouri National Guard"
+		location = 1564
+		division_template = "Guard Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.4
+	}
+	division = {
+		name = "Arkansas National Guard"
+		location = 15633
+		division_template = "Guard Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.4
+	}
+	division = {
+		name = "Utah National Guard"
+		location = 4865
+		division_template = "Guard Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.4
+	}
+	division = {
+		name = "Mississippi National Guard"
+		location = 7668
+		division_template = "Guard Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.4
+	}
+	division = {
+		name = "Idaho National Guard"
+		location = 15301
+		division_template = "Guard Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.4
+	}
+	division = {
+		name = "Alabama National Guard"
+		location = 15894
+		division_template = "Guard Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.4
+	}
+	division = {
+		name = "Pennsylvania National Guard"
+		location = 6705
+		division_template = "Guard Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.4
+	}
+	division = {
+		name = "Michigan National Guard 1"
+		location = 15703
+		division_template = "Guard Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.4
+	}
+	division = {
+		name = "Michigan National Guard 2"
+		location = 5205
+		division_template = "Guard Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.4
+	}
+	division = {
+		name = "Illinois South National Guard"
+		location = 12305
+		division_template = "Guard Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.4
+	}
+}
+

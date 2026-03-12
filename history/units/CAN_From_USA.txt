@@ -1,0 +1,234 @@
+﻿
+division_template = {
+	name = "US National Guard Brigade"  #from the USA
+
+	regiments = {
+		armor_Bat = { x = 0 y = 0 }
+		Mech_Inf_Bat = { x = 0 y = 1 }
+		Mech_Inf_Bat = { x = 0 y = 2 }
+		SP_Arty_Bat = { x = 0 y = 3 }
+	}
+
+	support = {
+		L_Engi_Comp = { x = 0 y = 2 }
+		Mot_Recce_Comp = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "US National Guard Mobilized"  #from the USA
+
+	regiments = {
+		Mech_Inf_Bat = { x = 0 y = 0 }
+		Mot_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 0 y = 2 }
+	}
+
+	support = {
+		L_Engi_Comp = { x = 0 y = 2 }
+		Mot_Recce_Comp = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "US Resistance Militia"
+
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		drone_tactical_company = { x = 0 y = 0 }
+	}
+}
+
+units = {
+	division = {
+		name = "10th Mountain Division"
+		location = 7629		#New York
+		division_template = "Mountain Division"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "New York City Resistance Militia"
+		location = 3878
+		division_template = "US Resistance Militia"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "Twin Cities Resistance Militia"
+		location = 15596
+		division_template = "US Resistance Militia"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "Chicago Resistance Militia"
+		location = 15742
+		division_template = "US Resistance Militia"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "LA Resistance Militia"
+		location = 11757
+		division_template = "US Resistance Militia"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "Seatle Resistance Militia"
+		location = 7315
+		division_template = "US Resistance Militia"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "101st International"
+		location = 12149#Quebec
+		division_template = "Drone Defense Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "101st International"
+		location = 4345#Montreal, Quebec
+		division_template = "Drone Defense Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "Maine National Guard"
+		location = 16110
+		division_template = "US National Guard Mobilized"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "Vermont National Guard"
+		location =16149
+		division_template = "US National Guard Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "New Hampshire National Guard"
+		location = 16139
+		division_template = "US National Guard Mobilized"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "Mass National Guard Patriots"
+		location = 3710
+		division_template = "US National Guard Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "Mass National Guard Liberty or Death"
+		location = 715
+		division_template = "US National Guard Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "New England National Guard"
+		location = 9850
+		division_template = "US National Guard Mobilized"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "Minnesota National Guard"
+		location = 15602
+		division_template = "US National Guard Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "Wisconsin National Guard"
+		location = 15690
+		division_template = "US National Guard Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.99
+	}
+	division = {
+		name = "New York National Guard 1"
+		location = 9693
+		division_template = "US National Guard Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "New York National Guard 2"
+		location = 6911
+		division_template = "US National Guard Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "Maryland National Guard"
+		location = 16125
+		division_template = "US National Guard Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.99
+	}
+	division = {
+		name = "DC National Guard"
+		location = 11665
+		division_template = "US National Guard Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.99
+	}
+	division = {
+		name = "Illinois NG Lincoln Brigade"
+		location = 15720
+		division_template = "US National Guard Mobilized"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.99
+	}
+	division = {
+		name = "New Jersey National Guard"
+		location = 6882
+		division_template = "US National Guard Mobilized"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.99
+	}
+	# good guys
+	division = {
+		name = "172nd Infantry Brigade (Separate)"
+		location = 14146	#Grafenwohr, Germany
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "34th Infantry Division"
+		location = 6752		#Minnesota
+		division_template = "Infantry Division B"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "42nd Infantry Division"
+		location = 12214	#New York
+		division_template = "Mountain Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+	}
+	
+}
+instant_effect = {
+		add_equipment_to_stockpile = { type = infantry_weapons4 amount = 90000 }
+		add_equipment_to_stockpile = { type = command_control_equipment4 amount = 12000 }
+		add_equipment_to_stockpile = { type = Anti_tank_3 amount = 2800 }
+		add_equipment_to_stockpile = { type = Anti_Air_3 amount = 2200 }
+		add_equipment_to_stockpile = { type = IFV_4 amount = 800 }
+		add_equipment_to_stockpile = { type = APC_4 amount = 1200 }
+	}

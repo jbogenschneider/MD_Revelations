@@ -1,0 +1,224 @@
+﻿
+division_template = {
+	name = "US National Guard Brigade"  #from the USA
+
+	regiments = {
+		armor_Bat = { x = 0 y = 0 }
+		Mech_Inf_Bat = { x = 0 y = 1 }
+		Mech_Inf_Bat = { x = 0 y = 2 }
+		SP_Arty_Bat = { x = 0 y = 3 }
+	}
+
+	support = {
+		L_Engi_Comp = { x = 0 y = 2 }
+		Mot_Recce_Comp = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "US National Guard Mobilized"  #from the USA
+
+	regiments = {
+		Mech_Inf_Bat = { x = 0 y = 0 }
+		Mot_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 0 y = 2 }
+	}
+
+	support = {
+		L_Engi_Comp = { x = 0 y = 2 }
+		Mot_Recce_Comp = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "US Resistance Militia"
+
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		drone_tactical_company = { x = 0 y = 0 }
+	}
+}
+
+units = {
+	division = {
+		name = "LA Resistance Militia"
+		location = 11757
+		division_template = "US Resistance Militia"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "Seattle Resistance Militia"
+		location = 7315
+		division_template = "US Resistance Militia"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "Oakland Resistance Militia"
+		location = 3678
+		division_template = "US Resistance Militia"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "1st Nations Resistance Militia 1"
+		location = 15124
+		division_template = "US Resistance Militia"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "1st Nations Resistance Militia 2"
+		location = 12720
+		division_template = "US Resistance Militia"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "Denver Resistance Militia"
+		location = 15234
+		division_template = "US Resistance Militia"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "201st International"
+		location = 11757
+		division_template = "Drone Defense Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "201st International"
+		location = 7315
+		division_template = "Drone Defense Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "New Mexico National Guard"
+		location = 12791
+		division_template = "US National Guard Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "Nevada National Guard"
+		location = 4799
+		division_template = "US National Guard Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "Arizona National Guard 1"
+		location = 15145
+		division_template = "US National Guard Mobilized"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "Colorado National Guard 1"
+		location = 15238
+		division_template = "US National Guard Mobilized"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "Colorado National Guard 2"
+		location = 15236
+		division_template = "US National Guard Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "California National Guard La Resistance"
+		location = 7315
+		division_template = "US National Guard Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.99
+	}
+	division = {
+		name = "Washington National Guard 1"
+		location = 7386
+		division_template = "US National Guard Mobilized"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "Oregon National Guard 1"
+		location = 3513
+		division_template = "US National Guard Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.99
+	}
+	division = {
+		name = "Oregon National Guard 2"
+		location = 15104
+		division_template = "US National Guard Mobilized"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "California National Guard 4"
+		location = 15244
+		division_template = "US National Guard Mobilized"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "California National Guard Hollywood"
+		location = 3588
+		division_template = "US National Guard Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.99
+	}
+	#the good guys
+	division = {
+		name = "2nd Infantry Division 'Indian Head'"
+		location = 15244		#South Korea
+		division_template = "Infantry Division B"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.50
+	}
+	division = {
+		name = "25th Infantry Division"
+		location = 4180		#Hawaii
+		division_template = "Infantry Division"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.01
+	}
+	division = {
+		name = "4th Marine Division (Reserve)"
+		location = 1562
+		division_template = "Marine Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "7th Special Forces Group"
+		location = 16151	#Eglin AFB
+		division_template = "Special Forces Group"
+		start_experience_factor = 0.9
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "40th Infantry Division"
+		location = 7386		#California
+		division_template = "Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.9
+	}
+}
+instant_effect = {
+		add_equipment_to_stockpile = { type = infantry_weapons4 amount = 90000 }
+		add_equipment_to_stockpile = { type = command_control_equipment4 amount = 12000 }
+		add_equipment_to_stockpile = { type = Anti_tank_3 amount = 2800 }
+		add_equipment_to_stockpile = { type = Anti_Air_3 amount = 2200 }
+		add_equipment_to_stockpile = { type = IFV_4 amount = 800 }
+		add_equipment_to_stockpile = { type = APC_4 amount = 1200 }
+	}

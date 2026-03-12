@@ -70,7 +70,7 @@ rev_setup_usa_civil_war_sides_impeachment = {
 		}
 		create_country_leader = {
 			name = "Donald Trump"
-			picture = "USA_donald_trump9.dds"
+			picture = "Donald_Trump.dds"
 			ideology = conservatism
 			traits = {
 				career_politician
@@ -168,19 +168,45 @@ rev_setup_usa_civil_war_sides_impeachment = {
 			division_template = "Border Patrol Agents"
 			disband = yes
 		}
-		set_politics = {
-			ruling_party = democratic
-			elections_allowed = yes
-		}
-		add_stability = -0.08
-		add_war_support = -0.08
-		create_country_leader = {
-			name = "Hakeem Jeffries"
-			picture = "Hakeem-Jeffries.dds"
-			ideology = liberalism
-			traits = {
-				career_politician
+		if = {
+			limit = {
+				has_country_flag = rev_usa_cw_coup_successful
 			}
+			set_politics = {
+				ruling_party = nationalist
+				elections_allowed = no
+			}
+			create_country_leader = {
+				name = "Donald Trump"
+				picture = "Donald_Trump.dds"
+				ideology = conservatism
+				traits = {
+					career_politician
+				}
+			}
+			add_stability = -0.12
+			add_war_support = 0.12
+		}
+		else = {
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+			}
+			create_country_leader = {
+				name = "Hakeem Jeffries"
+				picture = "Hakeem-Jeffries.dds"
+				ideology = liberalism
+				traits = {
+					career_politician
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_country_flag = rev_usa_cw_coup_successful }
+			}
+			add_stability = -0.08
+			add_war_support = -0.08
 		}
 		if = {
 			limit = { has_dlc = "No Step Back" }

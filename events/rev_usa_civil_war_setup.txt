@@ -89,7 +89,7 @@ country_event = {
 	}
 }
 
-# Sept 20, 2028: impeachment succeeds; player picks the side to play.
+# Sept 20, 2028: impeachment succeeds; this is old not used
 country_event = {
 	id = rev_usa_cw.11
 	title = rev_usa_cw.11.t
@@ -101,29 +101,29 @@ country_event = {
 		tag = USA
 		has_country_flag = rev_usa_cw_blame_canada
 		has_country_flag = rev_usa_cw_scotus_fired
-		NOT = { has_country_flag = rev_usa_cw_sep_war_fired }
+		NOT = { has_country_flag = rev_usa_cw_coup_fired }
 		NOT = { has_country_flag = rev_usa_civil_war_initialized }
 	}
 
-		option = {
+	option = {
 		name = rev_usa_cw.11.a
 		ai_chance = {
 			factor = 90
 		}
 		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.11.a"
-		set_country_flag = rev_usa_cw_sep_war_fired
+		set_country_flag = rev_usa_cw_coup_fired
 		set_country_flag = rev_usa_election_suspended_2028
 		set_country_flag = rev_usa_insurrection_act_2028
 		set_country_flag = rev_usa_snap_impeachment_2028
-		set_country_flag = rev_usa_cw_player_side_chosen
-		set_country_flag = rev_usa_cw_player_side_usb
+		clr_country_flag = rev_usa_cw_player_side_chosen
+		clr_country_flag = rev_usa_cw_player_side_usb
 		clr_country_flag = rev_usa_cw_player_side_usa
-		set_politics = {
-			ruling_party = nationalist
-			elections_allowed = no
-		}
-		set_country_flag = rev_usa_cw_split_waiting_event
+		clr_country_flag = rev_usa_cw_player_side_failed
+		clr_country_flag = rev_usa_cw_split_waiting_event
+		clr_country_flag = rev_usa_cw_split_prepared
+		clr_country_flag = rev_usa_cw_split_window_complete
 		set_country_flag = rev_usa_cw_310_pending
+		set_country_flag = rev_usa_cw_player_coup_pending
 		country_event = {
 			id = rev_usa_cw.310
 			days = 0
@@ -135,23 +135,29 @@ country_event = {
 			factor = 10
 		}
 		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.11.b"
-		set_country_flag = rev_usa_cw_sep_war_fired
-		set_country_flag = rev_usa_election_suspended_2028
-		set_country_flag = rev_usa_insurrection_act_2028
-		set_country_flag = rev_usa_snap_impeachment_2028
-		set_country_flag = rev_usa_cw_player_side_chosen
-		set_country_flag = rev_usa_cw_player_side_usa
+		clr_country_flag = rev_usa_cw_coup_fired
+		clr_country_flag = rev_usa_election_suspended_2028
+		clr_country_flag = rev_usa_insurrection_act_2028
+		clr_country_flag = rev_usa_snap_impeachment_2028
+		clr_country_flag = rev_usa_cw_player_side_chosen
 		clr_country_flag = rev_usa_cw_player_side_usb
+		clr_country_flag = rev_usa_cw_player_side_usa
+		clr_country_flag = rev_usa_cw_player_side_failed
+		clr_country_flag = rev_usa_cw_split_waiting_event
+		clr_country_flag = rev_usa_cw_split_prepared
+		clr_country_flag = rev_usa_cw_split_window_complete
+		clr_country_flag = rev_usa_cw_310_pending
+		clr_country_flag = rev_usa_cw_player_coup_pending
+		set_country_flag = rev_usa_cw_go_quiet_path
+		set_country_flag = rev_usa_cw_2028_election_continues
+		remove_ideas = {
+			USA_rule_by_decree_idea
+		}
 		set_politics = {
 			ruling_party = democratic
 			elections_allowed = yes
 		}
-		set_country_flag = rev_usa_cw_split_waiting_event
-		set_country_flag = rev_usa_cw_310_pending
-		country_event = {
-			id = rev_usa_cw.310
-			days = 0
-		}
+		set_country_flag = rev_usa_post_kelly_tree_active
 	}
 }
 
@@ -161,50 +167,286 @@ country_event = {
 	desc = rev_usa_cw.310.d
 	picture = GFX_report_event_generic_war
 	is_triggered_only = yes
+	immediate = {
+		set_country_flag = rev_usa_election_suspended_2028
+		set_country_flag = rev_usa_insurrection_act_2028
+		set_country_flag = rev_usa_snap_impeachment_2028
+	}
+	trigger = {
+		tag = USA
+		NOT = { has_country_flag = rev_usa_cw_split_prepared }
+		NOT = { has_country_flag = rev_usa_cw_coup_fired }
+	}
+		option = {
+		name = rev_usa_cw.310.a
+		ai_chance = {
+			factor = 90
+		}
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.310.a"
+		# Coup succeeds: Trump consolidates control and the split is prepared.
+		set_country_flag = rev_usa_cw_coup_fired
+		set_country_flag = rev_usa_cw_split_waiting_event
+		set_country_flag = rev_usa_cw_player_side_chosen
+		set_country_flag = rev_usa_cw_coup_successful
+		set_country_flag = rev_usa_cw_coup_resolved
+		set_country_flag = rev_usa_cw_split_prepared
+		set_country_flag = rev_usa_cw_split_window_complete
+		set_politics = {
+			ruling_party = nationalist
+			elections_allowed = no
+		}
+		add_ideas = {
+			USA_rule_by_decree_idea
+		}
+		country_event = {
+			id = rev_usa_cw.313
+			days = 10
+		}
+		country_event = {
+			id = rev_usa_cw.314
+			days = 20
+		}
+	}
+		option = {
+		name = rev_usa_cw.310.b
+		ai_chance = {
+			factor = 10
+		}
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.310.b"
+		# Coup collapses; Trump is arrested and the elections run their course.
+		clr_country_flag = rev_usa_cw_player_coup_pending
+		clr_country_flag = rev_usa_cw_coup_fired
+		clr_country_flag = rev_usa_election_suspended_2028
+		clr_country_flag = rev_usa_insurrection_act_2028
+		clr_country_flag = rev_usa_snap_impeachment_2028
+		clr_country_flag = rev_usa_cw_player_side_chosen
+		clr_country_flag = rev_usa_cw_split_prepared
+		clr_country_flag = rev_usa_cw_split_window_complete
+		clr_country_flag = rev_usa_cw_split_waiting_event
+		clr_country_flag = rev_usa_cw_coup_successful
+		clr_country_flag = rev_usa_cw_launch_event_fired
+		set_country_flag = rev_usa_cw_go_quiet_path
+		set_country_flag = rev_usa_cw_2028_election_continues
+		set_country_flag = rev_usa_cw_coup_failed
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		remove_ideas = {
+			USA_rule_by_decree_idea
+		}
+	}
+}
+
+# Follow-up coup report shown after a successful coup branch holds for 10 days.
+country_event = {
+	id = rev_usa_cw.313
+	title = rev_usa_cw.313.t
+	desc = rev_usa_cw.313.d
+	picture = GFX_report_event_usa_politics
+	is_triggered_only = yes
 
 	trigger = {
 		tag = USA
-		has_country_flag = rev_usa_cw_sep_war_fired
-		has_country_flag = rev_usa_cw_player_side_chosen
-		has_country_flag = rev_usa_cw_310_pending
-		has_country_flag = rev_usa_cw_split_waiting_event
-		NOT = { has_country_flag = rev_usa_cw_launch_event_fired }
+		has_country_flag = rev_usa_cw_coup_successful
+		NOT = { has_country_flag = rev_usa_cw_coup_success_followup_seen }
 	}
 
-		option = {
-		name = rev_usa_cw.310.a
-		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.310.a"
-		# Trump has fled the capital; execute split and prepare for side choice.
-		clr_country_flag = rev_usa_cw_310_pending
-		set_country_flag = rev_usa_cw_split_prepared
-		set_country_flag = rev_usa_cw_split_window_complete
-		if = {
-			limit = { country_exists = USB }
-			USB = { set_capital = { state = 790 } }   # Fort Bragg/Fayetteville
-		}
-		if = {
-			limit = { country_exists = USA }
-			USA = { set_capital = { state = 1182 } }  # Washington DC
-		}
+	option = {
+		name = rev_usa_cw.313.a
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.313.a"
+		set_country_flag = rev_usa_cw_coup_success_followup_seen
+		add_stability = -0.03
+		add_war_support = 0.03
+		set_country_flag = rev_usa_rule_by_decree
+	}
+}
+
+country_event = {
+	id = rev_usa_cw.314
+	title = rev_usa_cw.314.t
+	desc = rev_usa_cw.314.d
+	picture = GFX_report_event_generic_war
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = rev_usa_cw_coup_successful
+		NOT = { has_country_flag = rev_usa_cw_canada_invasion_warning_seen }
+		NOT = { has_country_flag = rev_usa_cw_canada_invasion_justified }
+	}
+
+	immediate = {
 		if = {
 			limit = {
-				NOT = { has_country_flag = rev_usa_cw_player_side_usb }
-				NOT = { has_country_flag = rev_usa_cw_player_side_usa }
+				NOT = { has_country_leader = { name = "Donald Trump" ruling_only = yes } }
 			}
-			set_country_flag = rev_usa_cw_player_side_usa
+			set_politics = {
+				#ruling_party = nationalist
+				elections_allowed = no
+			}
+			create_country_leader = {
+				name = "Donald Trump"
+				picture = "Donald_Trump.dds"
+				ideology = Nat_Populism
+				traits = { career_politician }
+			}
 		}
+		set_country_flag = rev_usa_cw_canada_invasion_warning_seen
+		set_country_flag = rev_usa_cw_canada_invasion_justified
 		if = {
 			limit = {
-				has_country_flag = rev_usa_cw_player_side_usb
-				has_country_flag = rev_usa_cw_player_side_usa
+				CAN = {
+					exists = yes
+					NOT = { is_subject = yes }
+				}
 			}
-			clr_country_flag = rev_usa_cw_player_side_usa
+			if = {
+				limit = { has_idea = NATO_member }
+				NATO_leave = yes
+			}
+			create_wargoal = {
+				target = CAN
+				type = annex_everything
+			}
+			custom_effect_tooltip = rev_usa_cw.314.tt
 		}
-		rev_setup_usa_civil_war_sides_impeachment = yes
+		else = {
+			custom_effect_tooltip = rev_usa_cw.315.no_canada_tt
+		}
+	}
+
+	option = {
+		name = rev_usa_cw.314.a
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.314.a"
 		country_event = {
-			id = rev_usa_cw.311
-			days = 1
+			id = rev_usa_cw.315
+			days = 10
 		}
+	}
+}
+
+country_event = {
+	id = rev_usa_cw.315
+	title = rev_usa_cw.315.t
+	desc = rev_usa_cw.315.d
+	picture = GFX_report_event_generic_war
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = rev_usa_cw_canada_invasion_justified
+		NOT = { has_country_flag = rev_usa_cw_canada_invasion_launched }
+	}
+
+	option = {
+		name = rev_usa_cw.315.a
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.315.a"
+		set_country_flag = rev_usa_cw_canada_invasion_launched
+		if = {
+			limit = {
+				CAN = {
+					exists = yes
+					NOT = { is_subject = yes }
+					NOT = { has_war = yes }
+				}
+				NOT = { has_war_with = CAN }
+			}
+			declare_war_on = {
+				target = CAN
+				type = annex_everything
+			}
+			custom_effect_tooltip = rev_usa_cw.315.tt
+		}
+		else = {
+			custom_effect_tooltip = rev_usa_cw.315.no_canada_tt
+		}
+		country_event = {
+			id = rev_usa_cw.316
+			days = 10
+		}
+	}
+}
+
+country_event = {
+	id = rev_usa_cw.316
+	title = rev_usa_cw.316.t
+	desc = rev_usa_cw.316.d
+	picture = GFX_report_event_generic_war
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		has_country_leader = { name = "Donald Trump" ruling_only = yes }
+		has_war_with = CAN
+		NOT = { has_country_flag = rev_usa_cw_american_resistance_fired }
+	}
+
+	immediate = {
+		set_country_flag = rev_usa_cw_american_resistance_fired
+		load_oob = "USA_Complicit"
+		load_oob = "USA_2017_units_reposition"
+
+		if = {
+			limit = {
+				NOT = { country_exists = CAL }
+			}
+			release = CAL
+		}
+
+		# Pacific resistance bloc.
+		809 = { transfer_state_to = CAL add_core_of = CAL add_core_of = USA } # Washington
+		810 = { transfer_state_to = CAL add_core_of = CAL add_core_of = USA } # Oregon
+		817 = { transfer_state_to = CAL add_core_of = CAL add_core_of = USA } # Hawaii
+		806 = { transfer_state_to = CAL add_core_of = CAL add_core_of = USA } # Arizona
+		803 = { transfer_state_to = CAL add_core_of = CAL add_core_of = USA } # New Mexico
+		804 = { transfer_state_to = CAL add_core_of = CAL add_core_of = USA } # Colorado
+		807 = { transfer_state_to = CAL add_core_of = CAL add_core_of = USA } # Nevada
+
+		# New England + New York align with Canada and carry dual cores.
+		764 = { transfer_state_to = CAN add_core_of = CAN add_core_of = USA cancel_resistance = yes set_resistance = 0 set_compliance = 100 } # Maine
+		765 = { transfer_state_to = CAN add_core_of = CAN add_core_of = USA cancel_resistance = yes set_resistance = 0 set_compliance = 100 } # New Hampshire
+		766 = { transfer_state_to = CAN add_core_of = CAN add_core_of = USA cancel_resistance = yes set_resistance = 0 set_compliance = 100 } # Vermont
+		767 = { transfer_state_to = CAN add_core_of = CAN add_core_of = USA cancel_resistance = yes set_resistance = 0 set_compliance = 100 } # Massachusetts
+		769 = { transfer_state_to = CAN add_core_of = CAN add_core_of = USA cancel_resistance = yes set_resistance = 0 set_compliance = 100 } # New York
+		780 = { transfer_state_to = CAN add_core_of = CAN add_core_of = USA cancel_resistance = yes set_resistance = 0 set_compliance = 100 } # Minnesota
+
+		CAL = {
+			load_oob = "CAL_From_USA"
+
+			if = {
+				limit = { NOT = { has_war_with = USA } }
+				declare_war_on = {
+					target = USA
+					type = annex_everything
+				}
+			}
+
+			set_politics = {
+				ruling_party = democratic
+				last_election = "2028.11.5"
+				election_frequency = 48
+				elections_allowed = yes
+			}
+			create_country_leader = {
+				name = "Gavin Newsom"
+				ideology = liberalism
+				traits = { career_politician }
+			}
+			if = {
+				limit = { NOT = { has_idea = NATO_member } }
+				NATO_join = yes
+			}
+		}
+
+		CAN = {
+			load_oob = "CAN_From_USA"
+		}
+	}
+
+	option = {
+		name = rev_usa_cw.316.a
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.316.a"
 	}
 }
 
@@ -267,9 +509,6 @@ country_event = {
 
 	option = {
 		name = rev_usa_cw.311.a
-		trigger = {
-			NOT = { has_country_flag = rev_usa_cw_player_side_usb }
-		}
 		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.311.a"
 		# Continue on the constitutional side (remain in USA while keeping the split in place).
 		set_country_flag = rev_usa_cw_launch_event_fired
@@ -281,9 +520,6 @@ country_event = {
 	option = {
 		name = rev_usa_cw.311.b
 		# Go with Free States (trump side) and switch player control to USB after split.
-		trigger = {
-			has_country_flag = rev_usa_cw_player_side_usb
-		}
 		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.311.b"
 		set_country_flag = rev_usa_cw_launch_event_fired
 		clr_country_flag = rev_usa_cw_player_side_usa
@@ -331,7 +567,7 @@ country_event = {
 	trigger = {
 		tag = USB
 		NOT = { has_country_flag = rev_usa_cw_usb_election_decided }
-		USA = { has_country_flag = rev_usa_cw_sep_war_fired }
+		USA = { has_country_flag = rev_usa_cw_coup_fired }
 	}
 
 	option = {
@@ -398,6 +634,8 @@ country_event = {
 		name = rev_usa_cw.24.a
 		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.24.a"
 		set_country_flag = rev_usa_cw_kelly_inaugurated
+		set_country_flag = rev_usa_post_kelly_tree_active
+		load_focus_tree = REV_usa_post_kelly_focus
 		set_politics = {
 			ruling_party = democratic
 			elections_allowed = yes
@@ -423,7 +661,7 @@ country_event = {
 				annex_country = { target = HWI transfer_troops = yes }
 			}
 			clr_country_flag = rev_usa_civil_war_initialized
-			clr_country_flag = rev_usa_cw_sep_war_fired
+			clr_country_flag = rev_usa_cw_coup_fired
 			clr_country_flag = rev_usa_cw_player_side_chosen
 			clr_country_flag = rev_usa_cw_player_side_usb
 			clr_country_flag = rev_usa_cw_player_side_usa

@@ -1,0 +1,233 @@
+instant_effect = {
+	# Fill each id with the live division id from your save/debug output.
+	# 1st Infantry Division 'The Big Red One'
+	delete_unit = { id = 3035 disband = yes }
+	# 2nd Infantry Division 'Indian Head'
+	delete_unit = { id = 3036 disband = yes }
+	# 3rd Infantry Division 'Rock of the Marne'
+	delete_unit = { id = 3037 disband = yes }
+	# 4th Infantry Division 'Iron Horse'
+	delete_unit = { id = 3038 disband = yes }
+	# 10th Mountain Division
+	delete_unit = { id = 3039 disband = yes }
+	# 24th Infantry Division
+	delete_unit = { id = 2501 disband = yes }
+	# 25th Infantry Division
+	delete_unit = { id = 2296 disband = yes }
+	# 1st Armored Division
+	delete_unit = { id = 1887 disband = yes }
+	# 1st Cavalry Division
+	delete_unit = { id = 2734 disband = yes }
+	# 49th Armored Division
+	delete_unit = { id = 3044 disband = yes }
+	# 1st Marine Division
+	delete_unit = { id = 2286 disband = yes }
+	# 2nd Marine Division
+	delete_unit = { id = 2287 disband = yes }
+	# 3rd Marine Division
+	delete_unit = { id = 3047 disband = yes }
+	# 4th Marine Division (Reserve)
+	delete_unit = { id = 3048 disband = yes }
+	# 82nd Airborne Division
+	delete_unit = { id = 3049 disband = yes }
+	# 101st Airborne Division
+	delete_unit = { id = 3050 disband = yes }
+	# 1st Special Forces Group
+	delete_unit = { id = 3051 disband = yes }
+	# 3rd Special Forces Group
+	delete_unit = { id = 3052 disband = yes }
+	# 5th Special Forces Group
+	delete_unit = { id = 3053 disband = yes }
+	# 7th Special Forces Group
+	delete_unit = { id = 3054 disband = yes }
+	# 10th Special Forces Group
+	delete_unit = { id = 3055 disband = yes }
+	# 75th Ranger Regiment
+	delete_unit = { id = 3056 disband = yes }
+	# 172nd Infantry Brigade (Separate)
+	delete_unit = { id = 3057 disband = yes }
+	# 28th Infantry Division
+	delete_unit = { id = 2308 disband = yes }
+	# 29th Infantry Division
+	delete_unit = { id = 2637 disband = yes }
+	# 34th Infantry Division
+	delete_unit = { id = 1453 disband = yes }
+	# 35th Infantry Division
+	delete_unit = { id = 2564 disband = yes }
+	# 38th Infantry Division
+	delete_unit = { id = 1450 disband = yes }
+	# 40th Infantry Division
+	delete_unit = { id = 2553 disband = yes }
+	# 42nd Infantry Division
+	delete_unit = { id = 2502 disband = yes }
+}
+
+units = {
+	division = {
+		name = "1st Infantry Division 'The Big Red One'"
+		location = 11654	#Kansas
+		division_template = "Armored Division"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.9
+	}
+
+	division = {
+		name = "3rd Infantry Division 'Rock of the Marne'"
+		location = 6710		#Georgia
+		division_template = "Armored Division"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.9
+	}
+
+	division = {
+		name = "4th Infantry Division 'Iron Horse'"
+		location = 11654		#Washington
+		division_template = "Armored Division"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.9
+	}
+
+	division = {
+		name = "24th Infantry Division"
+		location = 15699	#Kansas
+		division_template = "Infantry Division"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.9
+	}
+
+	division = {
+		name = "1st Armored Division"
+		location = 9724	#Texas
+		division_template = "Armored Division"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.9
+	}
+
+	division = {
+		name = "1st Cavalry Division"
+		location = 9724	#Texas
+		division_template = "Armored Division"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.9
+	}
+
+	division = {
+		name = "49th Armored Division"
+		location = 15699	#Texas
+		division_template = "Armored Division"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.01
+	}
+
+	division = {
+		name = "1st Marine Division"
+		location = 10157
+		division_template = "Marine Division"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.9
+	}
+
+	division = {
+		name = "2nd Marine Division"
+		location = 10157
+		division_template = "Marine Division"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.9
+	}
+
+	division = {
+		name = "3rd Marine Division"
+		location = 15620
+		division_template = "Marine Division"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.9
+	}
+
+	division = {
+		name = "82nd Airborne Division"
+		location = 4759	#North Carolina
+		division_template = "Airborne Division"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.6
+	}
+
+	division = {
+		name = "101st Airborne Division"
+		location = 15112	#Kentucky
+		division_template = "Air Assault Division"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "1st Special Forces Group"
+		location = 15620	#Fort Lewis
+		division_template = "Special Forces Group"
+		start_experience_factor = 0.9
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "3rd Special Forces Group"
+		location = 10593	#Fort Bragg
+		division_template = "Special Forces Group"
+		start_experience_factor = 0.9
+		start_equipment_factor = 0.9
+	}
+
+	division = {
+		name = "5th Special Forces Group"
+		location = 9724	#Fort Campbell
+		division_template = "Special Forces Group"
+		start_experience_factor = 0.9
+		start_equipment_factor = 0.9
+	}
+
+	division = {
+		name = "10th Special Forces Group"
+		location = 6778	#Fort Carson
+		division_template = "Special Forces Group"
+		start_experience_factor = 0.9
+		start_equipment_factor = 0.9
+	}
+
+	division = {
+		name = "75th Ranger Regiment"
+		location = 598	#Fort Benning
+		division_template = "Special Forces Group"
+		start_experience_factor = 0.9
+		start_equipment_factor = 0.9
+	}
+
+	division = {
+		name = "28th Infantry Division"
+		location = 11654		#Pennsylvania
+		division_template = "Infantry Division B"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.7
+	}
+
+	division = {
+		name = "29th Infantry Division"
+		location = 1870	#Virginia
+		division_template = "Infantry Division B"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.7
+	}
+
+	division = {
+		name = "35th Infantry Division"
+		location = 10709	#Kansas
+		division_template = "Infantry Division B"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.7
+	}
+
+	division = {
+		name = "38th Infantry Division"
+		location = 598	#Indiana
+		division_template = "Infantry Division B"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.7
+	}
+}

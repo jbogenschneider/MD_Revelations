@@ -3,14 +3,12 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
-					OR = {
-						tag = USA
-						tag = USB
-					}
-					has_country_flag = rev_usa_civil_war_initialized
-					NOT = { has_global_flag = rev_usa_cw_concluded }
+					tag = USA
+					has_country_leader = { name = "Donald Trump" ruling_only = yes }
+					has_war_with = CAN
+					NOT = { has_country_flag = rev_usa_cw_american_resistance_fired }
 				}
-				rev_resolve_usa_civil_war_neutral_states = yes
+				country_event = { id = rev_usa_cw.316 }
 			}
 			if = {
 				limit = {
@@ -82,6 +80,7 @@ on_actions = {
 				}
 				country_event = { id = rev_usa_cw.21 }
 			}
+			#election field set rev_usa_cw_election_field_2028_fired
 			if = {
 				limit = {
 					tag = USA
@@ -92,6 +91,7 @@ on_actions = {
 				}
 				country_event = { id = rev_usa_cw.22 }
 			}
+			#election field set Blame Canada or retire
 			if = {
 				limit = {
 					tag = USA
@@ -102,7 +102,8 @@ on_actions = {
 				}
 				country_event = { id = rev_usa_cw.10 }
 			}
-			if = {
+			if = { #election field set supreme court stops insurrection act impeachment fired 
+				#rev_usa_snap_impeachment_2028 & rev_usa_cw_scotus_fired
 				limit = {
 					tag = USA
 					has_country_flag = rev_usa_cw_blame_canada
@@ -113,40 +114,23 @@ on_actions = {
 				}
 				country_event = { id = rev_usa_cw.30 }
 			}
-			if = {
+			if = {  # coup or not to coup
 				limit = {
 					tag = USA
 					has_country_flag = rev_usa_cw_blame_canada
 					has_country_flag = rev_usa_cw_scotus_fired
-					NOT = { has_country_flag = rev_usa_cw_sep_war_fired }
+					NOT = { has_country_flag = rev_usa_cw_coup_fired }
 					NOT = { has_country_flag = rev_usa_civil_war_initialized }
 					date > 2028.9.19
 					date < 2028.9.22
 				}
-				country_event = { id = rev_usa_cw.11 }
-			}
-			if = {
-				limit = {
-					tag = USA
-					has_country_flag = rev_usa_cw_sep_war_fired
-					has_country_flag = rev_usa_cw_player_side_chosen
-					has_country_flag = rev_usa_cw_split_waiting_event
-					has_country_flag = rev_usa_cw_310_pending
-					NOT = { has_country_flag = rev_usa_cw_launch_event_fired }
-					NOT = { has_country_flag = rev_usa_cw_split_prepared }
-					NOT = { has_country_flag = rev_usa_civil_war_initialized }
-				}
-				country_event = {
-					id = rev_usa_cw.310
-					days = 0
-				}
+				country_event = { id = rev_usa_cw.310 }
 			}
 			if = {
 				limit = {
 					tag = USB
-					USA = { has_country_flag = rev_usa_cw_sep_war_fired }
+					USA = { has_country_flag = rev_usa_cw_coup_fired }
 					USA = { NOT = { has_country_flag = rev_usa_cw_launch_event_fired } }
-					NOT = { has_country_flag = rev_usa_cw_usb_election_decided }
 					date > 2028.10.9
 					date < 2028.10.13
 				}
@@ -157,7 +141,7 @@ on_actions = {
 					tag = USA
 					OR = {
 						has_country_flag = rev_usa_cw_go_quiet_path
-						has_country_flag = rev_usa_cw_sep_war_fired
+						has_country_flag = rev_usa_cw_coup_failed
 					}
 					NOT = { has_country_flag = rev_usa_cw_launch_event_fired }
 					NOT = { has_country_flag = rev_usa_cw_kelly_win_announced }
