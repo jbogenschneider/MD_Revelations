@@ -3192,7 +3192,7 @@ capital = 56
 	create_country_leader = {
 		name = "Francois Hollande"
 		picture = "Francois_Hollande.dds"
-		expire = "2055.1.1"
+		expire = "2025.1.1"
 		ideology = socialism
 		traits = {
 			career_politician

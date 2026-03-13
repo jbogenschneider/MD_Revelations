@@ -1,0 +1,18 @@
+on_actions = {
+	on_daily = {
+		effect = {
+			if = {
+				limit = {
+					tag = USA
+					has_country_flag = rev_usa_invade_cuba_started
+					NOT = { has_country_flag = rev_usa_cuba_postwar_done }
+					CUB = {
+						exists = yes
+						has_capitulated = yes
+					}
+				}
+				country_event = { id = rev_usa_cuba.1 }
+			}
+		}
+	}
+}

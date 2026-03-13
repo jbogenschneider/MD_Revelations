@@ -803,8 +803,8 @@ capital = 46
 	startup_politics = yes
 
 	create_country_leader = {
-		name = "Wim Kok"
-		picture = "Wim_Kok.dds"
+		name = "Rob Jetten"
+		picture = "Rob_Jetten.dds"
 		ideology = socialism
 		traits = {
 			western_socialism

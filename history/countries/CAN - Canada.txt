@@ -1317,9 +1317,9 @@ capital = 763
 	startup_politics = yes
 
 	create_country_leader = {
-		name = "Justin Trudeau"
-		picture = "CAN_Justin_Trudeau.dds"
-		expire = "2019.10.21"
+		name = "Mark Carney"
+		picture = "mark_carney.dds"
+		expire = "2030.1.2"
 		ideology = liberalism
 		traits = {
 			western_liberalism

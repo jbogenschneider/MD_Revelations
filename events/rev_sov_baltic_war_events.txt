@@ -1,0 +1,61 @@
+add_namespace = rev_sov_baltic
+
+country_event = {
+	id = rev_sov_baltic.1
+	is_triggered_only = yes
+	hidden = yes
+
+	trigger = {
+		tag = SOV
+		has_country_leader = { name = "Vladimir Putin" ruling_only = yes }
+		NOT = { has_war = yes }
+		NOT = { has_country_flag = rev_sov_baltic_war_fired }
+		OR = {
+			USA = { has_war_with = CAN }
+			USA = { has_war_with = GER }
+		}
+	}
+
+	immediate = {
+		set_country_flag = rev_sov_baltic_war_fired
+
+		if = {
+			limit = {
+				LAT = { exists = yes NOT = { is_subject = yes } }
+				NOT = { has_war_with = LAT }
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = LAT
+			}
+		}
+		if = {
+			limit = {
+				EST = { exists = yes NOT = { is_subject = yes } }
+				NOT = { has_war_with = EST }
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = EST
+			}
+		}
+		if = {
+			limit = {
+				LIT = { exists = yes NOT = { is_subject = yes } }
+				NOT = { has_war_with = LIT }
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = LIT
+			}
+			declare_war_on = {
+				target = LIT
+				type = annex_everything
+			}
+		}
+	}
+
+	option = {
+		name = OK
+	}
+}

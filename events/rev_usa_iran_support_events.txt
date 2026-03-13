@@ -30,6 +30,18 @@ country_event = {
 				PER = { has_war_with = IRI }
 			}
 
+			PER = {
+				create_country_leader = {
+					name = "Mojtaba Khamenei"
+					picture = "Mojtaba_Khamenei.dds"
+					ideology = Vilayat_e_Faqih
+					traits = {
+						emerging_Vilayat_e_Faqih
+						cleric
+					}
+				}
+			}
+
 			# Identify regime side and apply asymmetrical readiness/support.
 			if = {
 				limit = { PER = { has_country_flag = PER_IRGC_GENERALS } }

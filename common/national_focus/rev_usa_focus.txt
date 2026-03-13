@@ -304,20 +304,37 @@ focus_tree = {
         completion_reward = {
             log = "[GetDateText]: [Root.GetName]: focus USA_blockade_cuba completion_reward"
             custom_effect_tooltip = USA_treasury_minus_50_tt
-            add_to_variable = { treasury = -50 }
-            CUB = {
-                set_politics = {
-                    ruling_party = democratic
-                    elections_allowed = yes
-                }
-                create_country_leader = {
-                    name = "Marco Rubio"
-                    picture = "USC_marco_rubio.png"
-                    expire = "2035.1.1"
-                    ideology = Conservative
-                    traits = {
-                        career_politician
+            add_to_variable = { treasury = -30 }
+            add_war_support = 0.02
+        }
+    }
+
+    focus = {
+        id = USA_Invade_Cuba
+        icon = blockadeeconomy
+        x = 4
+        y = 12
+        cost = 10
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+        prerequisite = { focus = USA_blockade_cuba }
+        ai_will_do = {
+            base = 1
+        }
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: focus USA_Invade_Cuba completion_reward"
+            set_country_flag = rev_usa_invade_cuba_started
+            if = {
+                limit = {
+                    CUB = {
+                        exists = yes
+                        NOT = { is_subject = yes }
                     }
+                    NOT = { has_war_with = CUB }
+                }
+                declare_war_on = {
+                    target = CUB
+                    type = annex_everything
                 }
             }
         }

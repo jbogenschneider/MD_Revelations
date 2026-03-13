@@ -14,7 +14,7 @@ focus_tree = {
 		icon = military_deal
 		x = 14
 		y = 0
-		cost = 10
+		cost = 5
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_NATO }
 		ai_will_do = { base = 1 }
@@ -29,7 +29,7 @@ focus_tree = {
 		icon = defense
 		x = 12
 		y = 1
-		cost = 10
+		cost = 5
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NATO }
 		prerequisite = { focus = REV_ICE_NATO_2026_security_compact }
 		ai_will_do = { base = 1 }
@@ -51,6 +51,14 @@ focus_tree = {
 		completion_reward = {
 			add_war_support = 0.03
 			add_army_experience = 10
+			add_equipment_to_stockpile = {
+				type = infantry_weapons5 #C7
+				amount = 10000
+			}
+			add_equipment_to_stockpile = {
+				type = command_control_equipment4 #C2 Equipment
+				amount = 3000
+			}
 		}
 	}
 
@@ -110,8 +118,25 @@ focus_tree = {
 		prerequisite = { focus = REV_ICE_NATO_expand_military_factories_ii }
 		ai_will_do = { base = 1 }
 		completion_reward = {
-			add_command_power = 30
-			add_army_experience = 15
+			add_equipment_to_stockpile = {
+				type = Anti_tank_3 #ERYX
+				amount = 900
+				producer = ICE
+			}
+			add_equipment_to_stockpile = {
+				type = Heavy_Anti_tank_3 #BGM-71 TOW
+				amount = 450
+				producer = USA
+			}
+			add_equipment_to_stockpile = {
+				type = Anti_Air_3 #ADATS
+				amount = 600
+				producer = USA
+			}
+			add_equipment_to_stockpile = {
+				type = util_vehicle_5
+				amount = 2000
+			}
 		}
 	}
 
@@ -125,7 +150,7 @@ focus_tree = {
 		prerequisite = { focus = REV_ICE_NATO_forward_stockpiles }
 		ai_will_do = { base = 1 }
 		completion_reward = {
-			add_army_experience = 25
+			add_army_experience = 20
 			add_navy_experience = 10
 			add_air_experience = 10
 		}
@@ -133,7 +158,7 @@ focus_tree = {
 
 	focus = {
 		id = REV_ICE_NATO_long_war_posture
-		icon = national_unity
+		icon = air_defense
 		x = 12
 		y = 7
 		cost = 10
@@ -143,6 +168,14 @@ focus_tree = {
 		completion_reward = {
 			add_war_support = 0.05
 			add_stability = 0.03
+			add_equipment_to_stockpile = {
+				type = sam_missile_equipment_4
+				amount = 200
+			}
+			add_equipment_to_stockpile = {
+				type = sam_missile_equipment_3
+				amount = 200
+			}
 		}
 	}
 
@@ -156,11 +189,24 @@ focus_tree = {
 		prerequisite = { focus = REV_ICE_NATO_2026_security_compact }
 		ai_will_do = { base = 1 }
 		completion_reward = {
-			add_tech_bonus = {
-				name = REV_ICE_NATO_land_drone_bonus_1
-				bonus = 0.5
-				uses = 1
-				technology = land_Drone_equipment2
+			add_army_experience = 15
+			if = {
+				limit = { NOT = { has_template = "Drone Defense Brigade" } }
+				division_template = {
+					name = "Drone Defense Brigade"
+
+					regiments = {
+						L_Inf_Bat = { x = 0 y = 0 }
+						L_Inf_Bat = { x = 0 y = 1 }
+						L_Inf_Bat = { x = 1 y = 0 }
+					}
+
+					support = {
+						drone_tactical_company = { x = 0 y = 0 }
+						SP_Arty_Battery = { x = 0 y = 1 }
+						combat_service_support_company = { x = 0 y = 2 }
+					}
+				}
 			}
 		}
 	}
@@ -170,19 +216,19 @@ focus_tree = {
 		icon = scientific_exchange
 		x = 14
 		y = 2
-		cost = 10
+		cost = 5
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NATO }
 		prerequisite = { focus = REV_ICE_NATO_land_drone_program }
 		ai_will_do = { base = 1 }
 		completion_reward = {
-			set_technology = { land_Drone_equipment2 = 1 }
-			add_army_experience = 15
+			set_technology = { land_Drone_equipment3 = 1 }
+			add_air_experience = 5
 		}
 	}
 
 	focus = {
 		id = REV_ICE_NATO_networked_drone_fires
-		icon = Generic_Intelligence_Gathering
+		icon = Jet_Fighters
 		x = 14
 		y = 3
 		cost = 10
@@ -190,8 +236,14 @@ focus_tree = {
 		prerequisite = { focus = REV_ICE_NATO_field_test_drone_wings }
 		ai_will_do = { base = 1 }
 		completion_reward = {
-			set_technology = { land_Drone_equipment3 = 1 }
-			add_army_experience = 20
+			add_equipment_to_stockpile = {
+				type = Strike_fighter3
+				amount = 30
+			}
+			add_equipment_to_stockpile = {
+				type = 	AS_Fighter4 
+				amount = 30
+			}
 		}
 	}
 
@@ -206,7 +258,7 @@ focus_tree = {
 		ai_will_do = { base = 1 }
 		completion_reward = {
 			set_technology = { land_Drone_equipment4 = 1 }
-			add_army_experience = 20
+			add_army_experience = 15
 		}
 	}
 
@@ -220,85 +272,8 @@ focus_tree = {
 		prerequisite = { focus = REV_ICE_NATO_autonomous_targeting_cells }
 		ai_will_do = { base = 1 }
 		completion_reward = {
-			add_tech_bonus = {
-				name = REV_ICE_NATO_ew_bonus
-				bonus = 0.3
-				uses = 1
-				category = electronics
-			}
+			set_technology = { rc_fire_support_drone = 1 }
 			add_command_power = 20
-		}
-	}
-
-	focus = {
-		id = REV_ICE_NATO_ukraine_intel_sharing
-		icon = Generic_Intelligence_Gathering
-		x = 16
-		y = 1
-		cost = 10
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_NATO }
-		prerequisite = { focus = REV_ICE_NATO_2026_security_compact }
-		ai_will_do = { base = 1 }
-		completion_reward = {
-			add_army_experience = 15
-			if = {
-				limit = { UKR = { exists = yes } }
-				add_opinion_modifier = { target = UKR modifier = NATO_commitment }
-				UKR = {
-					reverse_add_opinion_modifier = { target = ROOT modifier = NATO_commitment }
-					add_command_power = 15
-					add_army_experience = 10
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = REV_ICE_NATO_security_assistance_package
-		icon = volunteers
-		x = 16
-		y = 2
-		cost = 10
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_NATO }
-		prerequisite = { focus = REV_ICE_NATO_ukraine_intel_sharing }
-		ai_will_do = { base = 1 }
-		completion_reward = {
-			add_political_power = -50
-			if = {
-				limit = { UKR = { exists = yes } }
-				UKR = {
-					add_war_support = 0.05
-					add_stability = 0.03
-					add_army_experience = 15
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = REV_ICE_NATO_ukraine_development_package
-		icon = construction_development
-		x = 16
-		y = 3
-		cost = 10
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NATO }
-		prerequisite = { focus = REV_ICE_NATO_security_assistance_package }
-		ai_will_do = { base = 1 }
-		completion_reward = {
-			add_political_power = -50
-			if = {
-				limit = { UKR = { exists = yes } }
-				UKR = {
-					random_owned_controlled_state = {
-						limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
-						add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
-					}
-					random_owned_controlled_state = {
-						limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
-						add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
-					}
-				}
-			}
 		}
 	}
 
@@ -311,7 +286,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_NATO }
 		prerequisite = { focus = REV_ICE_NATO_long_war_posture }
 		prerequisite = { focus = REV_ICE_NATO_joint_ew_cells }
-		prerequisite = { focus = REV_ICE_NATO_ukraine_development_package }
 		ai_will_do = { base = 1 }
 		completion_reward = {
 			add_stability = 0.05
@@ -320,3 +294,4 @@ focus_tree = {
 		}
 	}
 }
+

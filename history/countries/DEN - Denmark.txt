@@ -655,8 +655,8 @@ capital = 4
 	startup_politics = yes
 
 	create_country_leader = {
-		name = "Poul Nyrup Rasmussen"
-		picture = "Poul_Nyrup_Rasmussen.dds"
+		name = "Mette Frederiksen"
+		picture = "Mette_Frederiksen.dds"
 		ideology = socialism
 		traits = {
 			western_socialism

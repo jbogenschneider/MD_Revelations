@@ -561,8 +561,8 @@ capital = 854
 	set_country_flag = party24_banned
 
 	create_country_leader = {
-		name = "Fidel Castro"
-		picture = "fidel_castro.dds"
+		name = "Miguel Diaz-Canel"
+		picture = "Miguel_Dias-Canel.dds"
 		ideology = Communist-State
 		traits = {
 			emerging_Communist-State

@@ -649,8 +649,8 @@ capital = 102
 	startup_politics = yes
 
 	create_country_leader = {
-		name = "Paavo Lipponen"
-		picture = "Paavo_Lipponen.dds"
+		name = "Petteri Orpo"
+		picture = "Petteri_Orpo.dds"
 		expire = "2065.1.1"
 		ideology = socialism
 		desc = FIN_paavo_lipponen_desc

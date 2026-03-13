@@ -1,0 +1,38 @@
+add_namespace = rev_usa_cuba
+
+country_event = {
+	id = rev_usa_cuba.1
+	is_triggered_only = yes
+	hidden = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = rev_usa_invade_cuba_started
+		NOT = { has_country_flag = rev_usa_cuba_postwar_done }
+		CUB = {
+			exists = yes
+			has_capitulated = yes
+		}
+	}
+
+	immediate = {
+		set_country_flag = rev_usa_cuba_postwar_done
+		clr_country_flag = rev_usa_invade_cuba_started
+
+		add_to_variable = { treasury = 70 }
+
+		create_country_leader = {
+			name = "Marco Rubio"
+			picture = "USC_marco_rubio.png"
+			expire = "2035.1.1"
+			ideology = conservatism
+			traits = {
+				career_politician
+			}
+		}
+	}
+
+	option = {
+		name = OK
+	}
+}

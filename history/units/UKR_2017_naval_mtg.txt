@@ -12,6 +12,13 @@ units = {
 			ship = { name = "Sea Baby 4" definition = attack_submarine start_experience_factor = 0.50 equipment = { diesel_attack_submarine_3 = { amount = 1 owner = UKR } } }
 			ship = { name = "Sea Baby 5" definition = attack_submarine start_experience_factor = 0.50 equipment = { diesel_attack_submarine_3 = { amount = 1 owner = UKR } } }
 			ship = { name = "Sea Baby 6" definition = attack_submarine start_experience_factor = 0.50 equipment = { diesel_attack_submarine_3 = { amount = 1 owner = UKR } } }
+			ship = { name = "Sea Baby 7" definition = attack_submarine start_experience_factor = 0.50 equipment = { diesel_attack_submarine_3 = { amount = 1 owner = UKR } } }
+			ship = { name = "Sea Baby 8" definition = attack_submarine start_experience_factor = 0.50 equipment = { diesel_attack_submarine_3 = { amount = 1 owner = UKR } } }
+			ship = { name = "Sea Baby 9" definition = attack_submarine start_experience_factor = 0.50 equipment = { diesel_attack_submarine_3 = { amount = 1 owner = UKR } } }
+			ship = { name = "Sea Baby 10" definition = attack_submarine start_experience_factor = 0.50 equipment = { diesel_attack_submarine_3 = { amount = 1 owner = UKR } } }
+			ship = { name = "Sea Baby 11" definition = attack_submarine start_experience_factor = 0.50 equipment = { diesel_attack_submarine_3 = { amount = 1 owner = UKR } } }
+			ship = { name = "Sea Baby 12" definition = attack_submarine start_experience_factor = 0.50 equipment = { diesel_attack_submarine_3 = { amount = 1 owner = UKR } } }
+			ship = { name = "Sea Baby 13" definition = attack_submarine start_experience_factor = 0.50 equipment = { diesel_attack_submarine_3 = { amount = 1 owner = UKR } } }
 		}
 	}
 }
