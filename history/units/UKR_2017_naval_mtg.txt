@@ -3,7 +3,11 @@ units = {
 	fleet = {
 		name = "Black Sea Submarine Fleet"
 		naval_base = 11670
+	fleet = {
+		name = "Black Sea Submarine Fleet"
+		naval_base = 11670
 		task_force = {
+			name = "Black Sea Submarine Fleet"
 			name = "Black Sea Submarine Fleet"
 			location = 11670
 			ship = { name = "Sea Baby 1" definition = attack_submarine start_experience_factor = 0.50 equipment = { diesel_attack_submarine_3 = { amount = 1 owner = UKR } } }

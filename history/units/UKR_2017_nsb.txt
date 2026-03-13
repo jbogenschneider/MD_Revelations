@@ -12,6 +12,7 @@
 	support = {
 		SP_AA_Battery = { x = 0 y = 0 }
 		combat_service_support_company = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 1 }
 	}
 }
 
@@ -25,6 +26,9 @@ division_template = {
 		L_Inf_Bat = { x = 0 y = 0 }
 		L_Inf_Bat = { x = 0 y = 1 }
 		L_Inf_Bat = { x = 0 y = 2 }
+	}
+	support = {
+		drone_tactical_company = { x = 0 y = 0 }
 	}
 	support = {
 		drone_tactical_company = { x = 0 y = 0 }
@@ -61,6 +65,7 @@ division_template = {
 
 	support = {
 		Mech_Recce_Comp = { x = 0 y = 0 }
+		Mech_Recce_Comp = { x = 0 y = 0 }
 		SP_Arty_Battery = { x = 0 y = 1 }
 		SP_AA_Battery = { x = 0 y = 2 }
 	}
@@ -81,6 +86,7 @@ division_template = {
 	support = {
 		Arty_Battery = { x = 0 y = 0 }
 		Mot_Recce_Comp = { x = 0 y = 1 }
+		Mot_Recce_Comp = { x = 0 y = 1 }
 	}
 }
 
@@ -97,6 +103,7 @@ division_template = {
 	support = {
 		L_Engi_Comp = { x = 0 y = 0 }
 		L_Recce_Comp = { x = 0 y = 1 }
+		L_Recce_Comp = { x = 0 y = 1 }
 	}
 	priority = 2
 }
@@ -112,6 +119,7 @@ division_template = {
 	}
 	support = {
 		L_Engi_Comp = { x = 0 y = 0 }
+		L_Recce_Comp = { x = 0 y = 1 }
 		L_Recce_Comp = { x = 0 y = 1 }
 	}
 }
@@ -130,6 +138,7 @@ division_template = {
 	support = {
 		SP_Arty_Battery = { x = 0 y = 0 }
 		SP_AA_Battery = { x = 0 y = 1 }
+		Mot_Recce_Comp = { x = 0 y = 2 }
 		Mot_Recce_Comp = { x = 0 y = 2 }
 	}
 }
@@ -150,6 +159,7 @@ division_template = {
 		SP_Arty_Battery = { x = 0 y = 1 }
 		SP_AA_Battery = { x = 0 y = 2 }
 		Mot_Recce_Comp = { x = 0 y = 3 }
+		Mot_Recce_Comp = { x = 0 y = 3 }
 	}
 }
 
@@ -166,6 +176,9 @@ division_template = {
 		SP_AA_Bat = { x = 1 y = 2 }
 		Mot_Inf_Bat = { x = 2 y = 0 }
 		L_Inf_Bat = { x = 2 y = 1 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
 	}
 	support = {
 		L_Recce_Comp = { x = 0 y = 0 }
@@ -189,6 +202,7 @@ division_template = {
 		L_Engi_Comp = { x = 0 y = 0 }
 		SP_AA_Battery = { x = 0 y = 1 }
 		L_Recce_Comp = { x = 0 y = 2 }
+		L_Recce_Comp = { x = 0 y = 2 }
 	}
 }
 
@@ -207,6 +221,7 @@ division_template = {
 	support = {
 		L_Engi_Comp = { x = 0 y = 0 }
 		L_Recce_Comp = { x = 0 y = 1 }
+		L_Recce_Comp = { x = 0 y = 1 }
 	}
 }
 
@@ -222,6 +237,7 @@ division_template = {
 	support = {
 		L_Engi_Comp = { x = 0 y = 0 }
 		L_Recce_Comp = { x = 0 y = 1 }
+		L_Recce_Comp = { x = 0 y = 1 }
 	}
 	priority = 2
 }
@@ -236,10 +252,35 @@ division_template = {
 	support = {
 		L_Engi_Comp = { x = 0 y = 0 }
 		combat_service_support_company = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 1 }
 	}
 }
 
 units = {
+
+	division = {
+		#name = "4 Territorial"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 3701
+		division_template = "Natsionalna Hvardiya"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.50
+	}
+
+	division = {
+		#name = "5 Territorial"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11703
+		division_template = "Natsionalna Hvardiya"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.50
+	}
 
 	division = {
 		#name = "4 Territorial"
@@ -358,6 +399,19 @@ units = {
 			name_order = 1
 		}
 		location = 14445
+		division_template = "Artyleriyska Bryhada"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.50
+	}
+
+	### Artillery Brigades
+	division = {
+		#name = "26-g Okrema Artyleriyska Bryhada"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11670
 		division_template = "Artyleriyska Bryhada"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.50
@@ -511,6 +565,7 @@ units = {
 		}
 		location = 6530
 		division_template = "Zenitnyi Raketnyi Polk"
+		division_template = "Zenitnyi Raketnyi Polk"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.50
 	}
@@ -523,6 +578,7 @@ units = {
 		}
 		location = 3755
 		division_template = "Zenitnyi Raketnyi Polk"
+		division_template = "Zenitnyi Raketnyi Polk"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.50
 	}
@@ -534,6 +590,7 @@ units = {
 			name_order = 4
 		}
 		location = 3491
+		division_template = "Zenitnyi Raketnyi Polk"
 		division_template = "Zenitnyi Raketnyi Polk"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.50
@@ -595,6 +652,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 8
 		}
+		location = 6727
 		location = 6727
 		division_template = "Mekhanizovana Bryhada"
 		start_experience_factor = 0.5
@@ -710,6 +768,7 @@ units = {
 		}
 		location = 6565
 		division_template = "Artyleriyska Bryhada"
+		division_template = "Artyleriyska Bryhada"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.50
 	}
@@ -721,6 +780,7 @@ units = {
 			name_order = 2
 		}
 		location = 6589
+		division_template = "Artyleriyska Bryhada"
 		division_template = "Artyleriyska Bryhada"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.50
@@ -734,6 +794,7 @@ units = {
 		}
 		location = 9556
 		division_template = "Artyleriyska Bryhada"
+		division_template = "Artyleriyska Bryhada"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.50
 	}
@@ -745,6 +806,7 @@ units = {
 			name_order = 4
 		}
 		location = 418
+		division_template = "Artyleriyska Bryhada"
 		division_template = "Artyleriyska Bryhada"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.50
@@ -780,6 +842,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 7
 		}
+		location = 11703
 		location = 11703
 		division_template = "Bryhada Operatyvnoho Pryznachennya"
 		start_experience_factor = 0.9
@@ -863,6 +926,7 @@ units = {
 			name_order = 2
 		}
 		location = 11607
+		location = 11607
 		division_template = "Desantno-Shturmova Bryhada"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.50
@@ -876,6 +940,7 @@ units = {
 		}
 		location = 502
 		division_template = "Artyleriyska Bryhada"
+		division_template = "Artyleriyska Bryhada"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.50
 	}
@@ -887,6 +952,7 @@ units = {
 			name_order = 4
 		}
 		location = 14445
+		division_template = "Artyleriyska Bryhada"
 		division_template = "Artyleriyska Bryhada"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.50
@@ -973,6 +1039,8 @@ instant_effect = {
 		variant_name = "T-62"
 		amount = 310
 		producer = SOV
+		amount = 310
+		producer = SOV
 	}
 	add_equipment_to_stockpile = {
 		type = mbt_hull_1 #T-72
@@ -988,6 +1056,7 @@ instant_effect = {
 	}
 	add_equipment_to_stockpile = {
 		type = Rec_tank_0 #BRDM2
+		amount = 350
 		amount = 350
 	}
 	add_equipment_to_stockpile = {
@@ -1007,10 +1076,12 @@ instant_effect = {
 	add_equipment_to_stockpile = {
 		type = IFV_1 #BMP-1
 		amount = 310 #+400 for balance
+		amount = 310 #+400 for balance
 		producer = SOV
 	}
 	add_equipment_to_stockpile = {
 		type = IFV_3 #BMP-2
+		amount = 360
 		amount = 360
 		producer = SOV
 	}
@@ -1104,6 +1175,7 @@ instant_effect = {
 	add_equipment_to_stockpile = {
 		type = transport_helicopter1 #Mil Mi-8
 		amount = 50
+		amount = 50
 		producer = SOV
 	}
 	add_equipment_to_stockpile = {
@@ -1154,6 +1226,23 @@ instant_effect = {
 		type = naval_plane1 #Be-12
 		amount = 2
 		producer = SOV
+	}
+
+	add_equipment_to_stockpile = {
+		type = guided_missile_equipment_3 
+		amount = 30
+	}
+	add_equipment_to_stockpile = {
+		type = sam_missile_equipment_4
+		amount = 200
+	}
+	add_equipment_to_stockpile = {
+		type = sam_missile_equipment_3
+		amount = 200
+	}
+	add_equipment_to_stockpile = {
+		type = sam_missile_equipment_2
+		amount = 300
 	}
 
 	add_equipment_to_stockpile = {

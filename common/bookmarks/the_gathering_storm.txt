@@ -644,6 +644,7 @@ bookmarks = {
 				set_technology = { hsupa = 1 }
 				set_technology = { lte = 1 }
 				#set_technology = { wimax = 1 }
+				#set_technology = { wimax = 1 }
 				#set_technology = { internet5 = 1 }
 				#set_technology = { lifi = 1 }
 
@@ -1322,6 +1323,8 @@ bookmarks = {
 				set_technology = { SAM2_non_got = 1 }
 				set_technology = { SAM3 = 1 }
 				set_technology = { SAM4 = 1 }
+				set_technology = { SAM3 = 1 }
+				set_technology = { SAM4 = 1 }
 				set_technology = { nuclear_engines = 1 }
 				set_technology = { IRBM1 = 1 }
 				set_technology = { IRBM2 = 1 }
@@ -1418,6 +1421,8 @@ bookmarks = {
 				set_technology = { SAM2_non_got = 1 }
 				set_technology = { SAM3 = 1 }
 				set_technology = { SAM4 = 1 }
+				set_technology = { SAM3 = 1 }
+				set_technology = { SAM4 = 1 }
 				set_technology = { TEL_3 = 1 }
 				set_technology = { GLCM1 = 1 }
 				set_technology = { GLCM2 = 1 }
@@ -1439,6 +1444,7 @@ bookmarks = {
 				set_technology = { command_control_equipment4 = 1 }
 				set_technology = { land_Drone_equipment3 = 1 }
 				set_technology = { land_Drone_equipment4 = 1 }
+				set_technology = { land_Drone_equipment4 = 1 }
 				set_technology = { Air_Kamikaze1 = 1 }
 				set_technology = { util_vehicle_5 = 1 }
 				set_technology = { mbt_tech_3 = 1 }	
@@ -1452,6 +1458,7 @@ bookmarks = {
 				set_technology = { Arty_upgrade_4 = 1 }
 				set_technology = { transport_helicopter4 = 1 }
 				set_technology = { SP_Anti_Air_3 = 1 }
+				set_technology = { Strike_fighter3 = 1 }
 				set_technology = { Strike_fighter3 = 1 }
 				set_technology = { Air_UAV1 = 1 }
 				set_technology = { awacs_plane2 = 1 }
@@ -1481,9 +1488,11 @@ bookmarks = {
 				set_technology = { Anti_Air_3 = 1 }
 				set_technology = { lifi = 1 }
 				set_technology = { internet5 = 1 }
+				set_technology = { internet5 = 1 }
 				set_technology = { modern_deep_learning = 1 }
 				set_technology = { fully_automated_drones = 1 }
 				set_technology = { crispr_treatment = 1 }
+				set_technology = { special_forces3 = 1 }
 				set_technology = { special_forces3 = 1 }
 
 				set_technology = { AS_Fighter4 = 1 }
@@ -1510,6 +1519,8 @@ bookmarks = {
 				set_technology = { SAM0_non_got = 1 }
 				set_technology = { SAM1_non_got = 1 }
 				set_technology = { SAM2_non_got = 1 }
+				set_technology = { SAM3 = 1 }
+				set_technology = { SAM4 = 1 }
 				set_technology = { SAM3 = 1 }
 				set_technology = { SAM4 = 1 }
 				set_technology = { nuclear_engines = 1 }
@@ -1550,6 +1561,7 @@ bookmarks = {
 				set_technology = { command_control_equipment3 = 1 }
 				set_technology = { land_Drone_equipment3 = 1 }
 				set_technology = { land_Drone_equipment4 = 1 }
+				set_technology = { land_Drone_equipment4 = 1 }
 				set_technology = { util_vehicle_5 = 1 }
 				set_technology = { mbt_tech_3 = 1 }	
 				set_technology = { MBT_5 = 1 }
@@ -1562,6 +1574,7 @@ bookmarks = {
 				set_technology = { Arty_upgrade_4 = 1 }
 				set_technology = { transport_helicopter4 = 1 }
 				set_technology = { SP_Anti_Air_3 = 1 }
+				set_technology = { Strike_fighter3 = 1 }
 				set_technology = { Strike_fighter3 = 1 }
 				set_technology = { Air_UAV1 = 1 }
 				set_technology = { awacs_plane2 = 1 }
@@ -1594,6 +1607,7 @@ bookmarks = {
 				set_technology = { fully_automated_drones = 1 }
 				set_technology = { crispr_treatment = 1 }
 				set_technology = { special_forces3 = 1 }
+				set_technology = { special_forces3 = 1 }
 
 				set_technology = { AS_Fighter4 = 1 }
 				set_technology = { infantry_weapons5 = 1 }
@@ -1620,6 +1634,8 @@ bookmarks = {
 				set_technology = { SAM0_non_got = 1 }
 				set_technology = { SAM1_non_got = 1 }
 				set_technology = { SAM2_non_got = 1 }
+				set_technology = { SAM3 = 1 }
+				set_technology = { SAM4 = 1 }
 				set_technology = { SAM3 = 1 }
 				set_technology = { SAM4 = 1 }
 				set_technology = { nuclear_engines = 1 }
@@ -1670,6 +1686,7 @@ bookmarks = {
 				set_technology = { transport_helicopter4 = 1 }
 				set_technology = { SP_Anti_Air_3 = 1 }
 				set_technology = { Strike_fighter3 = 1 }
+				set_technology = { Strike_fighter3 = 1 }
 				set_technology = { Air_UAV1 = 1 }
 				set_technology = { awacs_plane2 = 1 }
 				set_technology = { naval_plane4 = 1 }
@@ -1701,6 +1718,7 @@ bookmarks = {
 				set_technology = { fully_automated_drones = 1 }
 				set_technology = { crispr_treatment = 1 }
 				set_technology = { special_forces3 = 1 }
+				set_technology = { special_forces3 = 1 }
 
 				set_technology = { AS_Fighter4 = 1 }
 				set_technology = { infantry_weapons5 = 1 }
@@ -1727,6 +1745,8 @@ bookmarks = {
 				set_technology = { SAM0_non_got = 1 }
 				set_technology = { SAM1_non_got = 1 }
 				set_technology = { SAM2_non_got = 1 }
+				set_technology = { SAM3 = 1 }
+				set_technology = { SAM4 = 1 }
 				set_technology = { SAM3 = 1 }
 				set_technology = { SAM4 = 1 }
 				set_technology = { nuclear_engines = 1 }
@@ -1850,6 +1870,7 @@ bookmarks = {
 			}
 			USA = {
 				#complete_special_project = sp:sp_nuclear_warhead_program
+				#complete_special_project = sp:sp_nuclear_warhead_program
 				complete_special_project = sp:sp_space_program_gdm
 				complete_special_project = sp:sp_missile_project
 				complete_special_project = sp:sp_missile_project_non_got
@@ -1870,6 +1891,10 @@ bookmarks = {
 				set_technology = { transport_helicopter4 = 1 }
 				set_technology = { SP_Anti_Air_3 = 1 }
 				set_technology = { L_Strike_fighter3 = 1 }
+				set_technology = { Strike_fighter4 = 1 }
+				set_technology = { MR_Fighter4 = 1 }
+				set_technology = { Strike_fighter3 = 1 }
+				set_technology = { MR_Fighter3 = 1 }
 				set_technology = { Strike_fighter4 = 1 }
 				set_technology = { MR_Fighter4 = 1 }
 				set_technology = { Strike_fighter3 = 1 }
@@ -1932,6 +1957,8 @@ bookmarks = {
 				set_technology = { SAM0_non_got = 1 }
 				set_technology = { SAM1_non_got = 1 }
 				set_technology = { SAM2_non_got = 1 }
+				set_technology = { SAM3 = 1 }
+				set_technology = { SAM4 = 1 }
 				set_technology = { SAM3 = 1 }
 				set_technology = { SAM4 = 1 }
 				set_technology = { nuclear_engines = 1 }
@@ -2703,6 +2730,7 @@ bookmarks = {
 				set_technology = { SP_Anti_Air_3 = 1 }
 				set_technology = { L_Strike_fighter3 = 1 }
 				set_technology = { Strike_fighter3 = 1 }
+				set_technology = { Strike_fighter3 = 1 }
 				set_technology = { Air_UAV1 = 1 }
 				set_technology = { Air_UAV2 = 1 }
 				set_technology = { awacs_plane2 = 1 }
@@ -2737,6 +2765,9 @@ bookmarks = {
 				set_technology = { special_forces3 = 1 }
 				set_technology = { special_forces4 = 1 }
 				set_technology = { internet5 = 1 }
+				set_technology = { special_forces3 = 1 }
+				set_technology = { special_forces4 = 1 }
+				set_technology = { internet5 = 1 }
 
 				set_technology = { AS_Fighter4 = 1 }
 				set_technology = { infantry_weapons5 = 1 }
@@ -2762,6 +2793,8 @@ bookmarks = {
 				set_technology = { SAM0_non_got = 1 }
 				set_technology = { SAM1_non_got = 1 }
 				set_technology = { SAM2_non_got = 1 }
+				set_technology = { SAM3 = 1 }
+				set_technology = { SAM4 = 1 }
 				set_technology = { SAM3 = 1 }
 				set_technology = { SAM4 = 1 }
 				set_technology = { nuclear_engines = 1 }
