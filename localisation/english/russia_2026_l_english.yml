@@ -1,8 +1,11 @@
 ﻿l_english:
- RUSSIA_MARCH_DECISION_2026:0 "Ukraine Rejects Our Terms"
- RUSSIA_MARCH_DECISION_2026_DESC:0 "Ukraine has refused to concede to our demands. If we accept peace on the current lines of contact now, we can likely secure partial sanctions relief, but many at home will see it as a bitter compromise. If we continue the war, we must prepare for a major mobilization within a month."
- RUSSIA_MARCH_DECISION_2026_ACCEPT:0 "Accept Peace on Current Lines and Seek Sanctions Relief"
- RUSSIA_MARCH_DECISION_2026_CONTINUE:0 "Keep Fighting and Prepare Mobilization"
+ RUSSIA_PEACE_DECISION_2026:0 "Ukraine Rejects Our Terms"
+ RUSSIA_PEACE_DECISION_2026_DESC:0 "Ukraine has refused to concede to our demands. If we accept peace on the current lines of contact now, we can likely secure partial sanctions relief, but many at home will see it as a bitter compromise. If we continue the war, we must prepare for a major mobilization within a month."
+ RUSSIA_PEACE_DECISION_2026_ACCEPT:0 "Accept Peace on Current Lines and Seek Sanctions Relief"
+ RUSSIA_PEACE_DECISION_2026_CONTINUE:0 "Keep Fighting and Prepare Mobilization"
+ RUSSIA_WEEKLY_PEACE_KRAMATORSK_TITLE:0 "Operational Pause on Russian Terms"
+ RUSSIA_WEEKLY_PEACE_KRAMATORSK_DESC:0 "With Kramatorsk secured by Russian forces, Moscow imposes a ceasefire on updated lines and formalizes control of the area."
+ RUSSIA_WEEKLY_PEACE_KRAMATORSK_OK:0 "Enforce the Ceasefire"
 
  RUSSIA_MOBILIZATION_2026:0 "General Mobilization"
  RUSSIA_MOBILIZATION_2026_DESC:0 "On April 1, 2026, the Russian Federation announces a large-scale mobilization of 300,000 troops. With sanctions limiting access to foreign credit markets, the state finances the expansion through domestic debt issuance and monetary expansion, adding significant stress to the financial system."

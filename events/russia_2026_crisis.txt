@@ -1,57 +1,76 @@
 add_namespace = russia_2026
 
 # ===============================
-# MARCH 1 2026 - PEACE OR ESCALATION
+# WHITE PEACE FORCED BY UKRAINE
 # ===============================
 
 country_event = {
     id = russia_2026.6
-    title = RUSSIA_MARCH_DECISION_2026
-    desc = RUSSIA_MARCH_DECISION_2026_DESC
+    title = RUSSIA_PEACE_DECISION_2026
+    desc = RUSSIA_PEACE_DECISION_2026_DESC
     picture = GFX_report_event_peace_conference
     is_triggered_only = yes
 
     trigger = {
         tag = SOV
         has_war_with = UKR
-        NOT = { has_country_flag = russia_march_decision_done_2026 }
-        date > 2026.2.28
-        date < 2026.3.2
     }
 
     mean_time_to_happen = { days = 1 }
 
     option = {
-        name = RUSSIA_MARCH_DECISION_2026_ACCEPT
-        ai_chance = { factor = 25 }
+        name = RUSSIA_PEACE_DECISION_2026_ACCEPT
+        ai_chance = { factor = 100 }
 
         # Ceasefire on adjusted current lines:
         # SOV keeps Donetsk + Luhansk regions and south corridor,
         # UKR keeps Kramatorsk (1222), North Zaporizhzhia (1223), North Kherson (1224).
         white_peace = UKR
-        clr_country_flag = rev_sov_2026_sanctions_active
+        #clr_country_flag = rev_sov_2026_sanctions_active
         remove_ideas = RUSSIA_SANCTIONS_BAN_DEBT
         set_country_flag = russia_accepted_current_lines_2026
-        set_country_flag = russia_march_decision_done_2026
+        set_country_flag = russia_peace_decision_done_2026
+        set_country_flag = rev_russia_weekly_peace_check_done
         add_stability = -0.03
         add_war_support = -0.05
-    }
-
-    option = {
-        name = RUSSIA_MARCH_DECISION_2026_CONTINUE
-        ai_chance = { factor = 75 }
-
-        set_country_flag = RUSSIA_PUTIN_PATH
-        set_country_flag = russia_prepare_mobilization_2026
-        set_country_flag = russia_march_decision_done_2026
-        set_country_flag = russia_delay_crisis_3
-        add_war_support = 0.03
-        add_stability = -0.01
     }
 }
 
 # ===============================
-# MARCH 1 2026 - PEACE OR ESCALATION
+# WEEKLY WHITE PEACE FORCED BY RUSSIA
+# ===============================
+country_event = {
+    id = russia_2026.14
+    title = RUSSIA_WEEKLY_PEACE_KRAMATORSK_TITLE
+    desc = RUSSIA_WEEKLY_PEACE_KRAMATORSK_DESC
+    picture = GFX_report_event_peace_conference
+    is_triggered_only = yes
+
+    trigger = {
+        tag = SOV
+        has_war_with = UKR
+    }
+
+    option = {
+        name = RUSSIA_WEEKLY_PEACE_KRAMATORSK_OK
+        ai_chance = { factor = 100 }
+
+        # SOV secures Kramatorsk before ceasefire.
+        transfer_state = 1222
+
+        white_peace = UKR
+        #clr_country_flag = rev_sov_2026_sanctions_active
+        remove_ideas = RUSSIA_SANCTIONS_BAN_DEBT
+        set_country_flag = russia_slight_victory_2026
+        set_country_flag = russia_peace_decision_done_2026
+        set_country_flag = rev_russia_weekly_peace_check_done
+        add_stability = -0.03
+        add_war_support = -0.05
+    }
+}
+
+# ===============================
+# MARCH 1 2026 - MOBILIZATION OPTION
 # ===============================
 
 country_event = {
@@ -69,19 +88,23 @@ country_event = {
     }
 
     mean_time_to_happen = { days = 1 }
-
+    
     option = {
         name = OK
 
-        ai_chance = { factor = 100 }
+        ai_chance = { factor = 60 }
 
 		add_manpower = 300000
         if = {
 			limit = { NOT = { has_country_flag = rev_sov_2026_sanctions_active } }
-			add_to_variable = { var = debt value = 300 }
+			add_to_variable = { var = debt value = 200 }
 		}
 
         set_country_flag = russia_mobilized_2026
+	}
+    option = {
+		name = No
+		ai_chance = { factor = 40 }
 	}
 }
 
@@ -98,39 +121,15 @@ country_event = {
 
     trigger = {
         tag = SOV
-        has_country_flag = russia_mobilized_2026
-        OR = {
-            AND = {
-                NOT = { has_country_flag = russia_delay_crisis_1 }
-                NOT = { has_country_flag = russia_delay_crisis_2 }
-                NOT = { has_country_flag = russia_delay_crisis_3 }
-                date > 2026.6.6
-                date < 2026.6.8
-            }
-            AND = {
-                has_country_flag = russia_delay_crisis_1
-                date > 2026.9.6
-                date < 2026.9.8
-            }
-            AND = {
-                has_country_flag = russia_delay_crisis_2
-                date > 2027.2.6
-                date < 2027.2.8
-            }
-            AND = {
-                has_country_flag = russia_delay_crisis_3
-                date > 2027.6.6
-                date < 2027.6.8
-            }
-        }
+        check_variable = { treasury < 10 }
+        manpower < 30000
+    
     }
-
     mean_time_to_happen = { days = 1 }
-
+    set_country_flag =  russia_economic_crisis_2026
     option = {
         name = OK
-
-        add_manpower = -300000
+        add_manpower = -30000
         add_stability = -0.20
 	    add_war_support = -0.20
     }
@@ -149,39 +148,20 @@ country_event = {
 
     trigger = {
         tag = SOV
-        has_country_flag = russia_mobilized_2026
-        OR = {
-            AND = {
-                NOT = { has_country_flag = russia_delay_crisis_1 }
-                NOT = { has_country_flag = russia_delay_crisis_2 }
-                NOT = { has_country_flag = russia_delay_crisis_3 }
-                date > 2026.7.19
-                date < 2026.7.21
-            }
-            AND = {
-                has_country_flag = russia_delay_crisis_1
-                date > 2026.10.19
-                date < 2026.10.21
-            }
-            AND = {
-                has_country_flag = russia_delay_crisis_2
-                date > 2027.3.19
-                date < 2027.3.21
-            }
-            AND = {
-                has_country_flag = russia_delay_crisis_3
-                date > 2027.6.12
-                date < 2027.6.14
-            }
-        }
+        has_country_flag = russia_economic_crisis_2026
     }
 
     mean_time_to_happen = { days = 1 }
 
     option = {
         name = OK
-
-        add_manpower = -100000
+        # Purge all mobilized formations without manpower refund.
+        every_unit = {
+            limit = { division_template = "Moblics" }
+            delete_unit = { disband = no }
+        }
+        has_country_flag = russia_soldiers_unpaid_2026
+        add_manpower = -10000
         add_stability = -0.20
 	    add_war_support = -0.20
     }
@@ -200,31 +180,6 @@ country_event = {
 
     trigger = {
         tag = SOV
-        has_country_flag = russia_mobilized_2026
-        OR = {
-            AND = {
-                NOT = { has_country_flag = russia_delay_crisis_1 }
-                NOT = { has_country_flag = russia_delay_crisis_2 }
-                NOT = { has_country_flag = russia_delay_crisis_3 }
-                date > 2026.8.9
-                date < 2026.8.11
-            }
-            AND = {
-                has_country_flag = russia_delay_crisis_1
-                date > 2026.11.9
-                date < 2026.11.11
-            }
-            AND = {
-                has_country_flag = russia_delay_crisis_2
-                date > 2027.4.9
-                date < 2027.4.11
-            }
-            AND = {
-                has_country_flag = russia_delay_crisis_3
-                date > 2027.6.20
-                date < 2027.6.22
-            }
-        }
     }
 
     mean_time_to_happen = { days = 1 }
@@ -252,7 +207,6 @@ country_event = {
         }
 
         set_country_flag = russia_oligarch_council_active
-        set_country_flag = RUSSIA_OLIGARCH_PATH
         set_country_flag = rev_russia_volodin_cabinet_minister
         set_country_flag = rev_russia_orlov_cabinet_minister
         add_political_power = 120
@@ -275,8 +229,6 @@ country_event = {
     trigger = {
         tag = SOV
         has_country_flag = russia_oligarch_council_active
-        date > 2026.8.19
-        date < 2026.8.21
         has_war_with = UKR
     }
 
@@ -305,7 +257,8 @@ country_event = {
         clr_country_flag = russia_pending_election_2026
         clr_country_flag = RUSSIA_ELECTION_ACTIVE
         set_country_flag = rev_russia_postwar_transition
-
+        set_country_flag = rev_russia_weekly_peace_check_done
+				
         add_stability = 0.10
         add_war_support = -0.20
     }
@@ -538,5 +491,3 @@ country_event = {
 		set_country_flag = rev_china_far_east_offer_2028_done
 	}
 }
-
-

@@ -22,4 +22,93 @@ on_actions = {
 			}
 		}
 	}
+	on_weekly = {
+		effect = {
+			if = { #not great peace
+				limit = {
+					tag = SOV
+					has_war_with = UKR
+					NOT = { has_country_flag = rev_russia_weekly_peace_check_done }
+					NOT = { has_country_flag = russia_peace_decision_done_2026 }
+					NOT = { has_country_flag = russia_oligarch_council_active }
+					NOT = { has_country_flag = russia_economic_crisis_2026 }
+					OR = {
+						502 = { is_controlled_by = SOV }
+						453 = { is_controlled_by = SOV }
+						11670 = { is_controlled_by = SOV }
+					}
+				}
+				country_event = { id = russia_2026.14 }
+			}
+			if = {  # white peace
+				limit = {
+					tag = SOV
+					has_war_with = UKR
+					NOT = { has_country_flag = rev_russia_weekly_peace_check_done }
+					NOT = { has_country_flag = russia_peace_decision_done_2026 }
+					NOT = { has_country_flag = russia_oligarch_council_active }
+					NOT = { has_country_flag = russia_economic_crisis_2026 }
+					OR = {
+						15423 = { is_controlled_by = UKR }
+						3306 = { is_controlled_by = UKR }
+						3580 = { is_controlled_by = UKR }
+					}
+				}
+				country_event = { id = russia_2026.6 }
+			}
+			if = { # good peace
+				limit = {
+					tag = SOV
+					has_country_flag = russia_oligarch_council_active
+					has_country_flag = russia_economic_crisis_2026
+					has_war_with = UKR
+					6420 = { is_controlled_by = UKR }
+					3722 = { is_controlled_by = UKR }
+					6474 = { is_controlled_by = UKR }
+					NOT = { has_country_flag = rev_russia_weekly_peace_check_done }
+				}
+				country_event = { id = russia_2026.5 }
+			}
+			if = {  # trigger the bank crisis mobilized
+				limit = {
+					tag = SOV
+					has_country_flag = russia_mobilized_2026
+					NOT = { has_country_flag = russia_economic_crisis_2026 }
+					date > 2026.6.1
+				}
+				country_event = { id = russia_2026.2 }
+			}
+			if = {  # trigger the bank crisis not mobilized
+				limit = {
+					tag = SOV
+					NOT = { has_country_flag = russia_mobilized_2026 }
+					NOT = { has_country_flag = russia_economic_crisis_2026 }
+					date > 2026.8.1
+				}
+				country_event = { id = russia_2026.2 }
+			}
+			if = {
+				limit = {
+					tag = SOV
+					has_war = yes
+				}
+				add_manpower = -7000
+				add_equipment_to_stockpile = { type = util_vehicle_equipment amount = -100 }
+				add_equipment_to_stockpile = { type = MBT_equipment amount = -10 }
+				add_equipment_to_stockpile = { type = IFV_equipment amount = -10 }
+				add_equipment_to_stockpile = { type = APC_equipment amount = -5 }
+			}
+			if = {
+				limit = {
+					tag = UKR
+					has_war = yes
+				}
+				add_manpower = -700
+				add_equipment_to_stockpile = { type = util_vehicle_equipment amount = -30 }
+				add_equipment_to_stockpile = { type = MBT_equipment amount = -2 }
+				add_equipment_to_stockpile = { type = IFV_equipment amount = -3 }
+				add_equipment_to_stockpile = { type = APC_equipment amount = -2 }
+			}
+		}
+	}
 }
