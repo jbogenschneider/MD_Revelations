@@ -786,20 +786,6 @@ units = {
 		start_equipment_factor = 0.50
 	}
 
-
-	### Mountain Warfare Brigade
-	division = {
-		#name = "128-a Okrema Hirsko-Shturmova Bryhada"
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		}
-		location = 238
-		division_template = "Hirsko-Shturmova Bryhada"
-		start_experience_factor = 0.5
-		start_equipment_factor = 0.50
-	}
-
 	division = {
 		#name = "10-a Okrema Hirsko-Shturmova Bryhada 'Edelveys'"
 		division_name = {

@@ -303,6 +303,52 @@ country_event = {
 			}
 			if = {
 				limit = { has_idea = NATO_member }
+				set_global_flag = rev_nato_lock_ger_leader
+				if = {
+					limit = {
+						GER = {
+							exists = yes
+							is_in_faction_with = USA
+						}
+					}
+					GER = { set_faction_leader = yes }
+				}
+				if = {
+					limit = {
+						NOT = {
+							GER = {
+								exists = yes
+								is_in_faction_with = USA
+							}
+						}
+						FRA = {
+							exists = yes
+							is_in_faction_with = USA
+						}
+					}
+					FRA = { set_faction_leader = yes }
+				}
+				if = {
+					limit = {
+						NOT = {
+							GER = {
+								exists = yes
+								is_in_faction_with = USA
+							}
+						}
+						NOT = {
+							FRA = {
+								exists = yes
+								is_in_faction_with = USA
+							}
+						}
+						ENG = {
+							exists = yes
+							is_in_faction_with = USA
+						}
+					}
+					ENG = { set_faction_leader = yes }
+				}
 				NATO_leave = yes
 			}
 			create_wargoal = {

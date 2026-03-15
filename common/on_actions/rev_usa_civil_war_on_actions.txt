@@ -3,6 +3,16 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
+					tag = GER
+					has_global_flag = rev_nato_lock_ger_leader
+					has_faction_template = faction_template_nato
+					is_in_faction_with = USA
+					NOT = { is_faction_leader = yes }
+				}
+				set_faction_leader = yes
+			}
+			if = {
+				limit = {
 					tag = USA
 					has_country_leader = { name = "Donald Trump" ruling_only = yes }
 					has_war_with = CAN

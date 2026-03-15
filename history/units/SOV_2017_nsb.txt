@@ -1030,7 +1030,7 @@ instant_effect = {
 
 	add_equipment_to_stockpile = {
 		type = util_vehicle_3 #Tigr
-		amount = 30
+		amount = 130
 	}
 
 	add_equipment_to_stockpile = {

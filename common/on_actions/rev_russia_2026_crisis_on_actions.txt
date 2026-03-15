@@ -2,32 +2,36 @@ on_actions = {
 	on_daily = {
 		effect = {
 			if = {
+				limit = {
+					tag = SOV
+					has_war_with = UKR
+					NOT = { has_country_flag = rev_russia_2026_evt_22_fired }
+					date > 2026.2.1
+					date < 2026.2.4
+				}
+				set_country_flag = rev_russia_2026_evt_22_fired
+				country_event = { id = russia_2026.22 }
+			}
+			if = {
+				limit = {
+					tag = UKR
+					has_war_with = SOV
+					NOT = { has_country_flag = rev_russia_2026_evt_22_fired2 }
+					date > 2026.2.1
+					date < 2026.2.4
+				}
+				set_country_flag = rev_russia_2026_evt_22_fired2
+				country_event = { id = russia_2026.222 }
+			}
+			if = {
 				limit = {  # mobilize
 					tag = SOV
-					has_country_flag = russia_prepare_mobilization_2026
 					NOT = { has_country_flag = rev_russia_2026_evt_1_fired }
 					date > 2026.3.2
 					date < 2026.3.10
 				}
 				set_country_flag = rev_russia_2026_evt_1_fired
 				country_event = { id = russia_2026.1 }
-			}
-			if = {  #moblics unpaid
-				limit = {
-					tag = SOV
-					has_country_flag = russia_economic_crisis_2026
-					date > 2026.7.2
-				}
-				country_event = { id = russia_2026.3 }
-			}
-			if = {  #oligarchs coup
-				limit = {
-					tag = SOV
-					has_country_flag = russia_soldiers_unpaid_2026
-					NOT = { has_country_flag = russia_oligarch_council_active }
-					date > 2026.8.2
-				}
-				country_event = { id = russia_2026.4 }
 			}
 			if = {  # far east break away
 				limit = {

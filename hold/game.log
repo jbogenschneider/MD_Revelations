@@ -1,0 +1,120 @@
+[16:00:39][no_game_date][defines.cpp:259]: 4392 defines loaded
+[16:01:24][no_game_date][gamestate.cpp:2812]: Loaded 16304 provinces.
+[16:01:37][no_game_date][gameapplication.cpp:2948]: Resetting game
+[16:01:41][2026.01.01.12][history.cpp:163]: Executing History from -1.1.1.1 to  2.1.1.1
+[16:01:41][2026.01.01.12][effectbase.cpp:1782]: Altai update_government_coalition_strength
+[16:01:41][2026.01.01.12][effectbase.cpp:1798]: [16:01:41][2026.01.01.12][effectbase.cpp:1782]:  12:00, 1 January, 2026: Altai: startup_politics executed
+[16:01:41][2026.01.01.12][effectbase.cpp:1798]: [16:01:41][2000.01.01.12][history.cpp:163]: Executing History from 2.1.1.1 to  2000.1.1.12
+[16:01:41][2000.01.01.12][effectbase.cpp:1782]: Armenia update_government_coalition_strength
+[16:01:41][2000.01.01.12][effectbase.cpp:1798]: [16:01:41][2000.01.01.12][effectbase.cpp:1782]:  12:00, 1 January, 2000: Armenia: startup_politics executed
+[16:01:41][2000.01.01.12][effectbase.cpp:1798]: [16:01:41][2000.01.01.12][effectbase.cpp:1782]: Venezuela update_government_coalition_strength
+[16:01:41][2000.01.01.12][effectbase.cpp:1798]: [16:01:41][2000.01.01.12][effectbase.cpp:1782]:  12:00, 1 January, 2000: Venezuela: startup_politics executed
+[16:01:41][2000.01.01.12][effectbase.cpp:1798]: [16:02:41][2026.11.23.06][frontend.cpp:682]: 
+
+		[[ Launching SINGLEPLAYER-game ]]
+	Start-date: 2026.11.23.6
+
+[16:02:43][2026.11.23.06][ingameidler.cpp:5145]: Start RestoreDeviceObjects
+[16:02:48][2026.11.23.06][ingameidler.cpp:5295]: End RestoreDeviceObjects
+[16:03:06][2026.11.23.07][effectbase.cpp:1782]:  7:00, 23 November, 2026: Luxembourg: law_attitude_change: Changing law Social Spending (8), change type: -1, modifier 0.3
+[16:03:06][2026.11.23.07][effectbase.cpp:1798]: [16:03:06][2026.11.23.07][effectbase.cpp:1782]: Luxembourg update_government_coalition_strength
+[16:03:06][2026.11.23.07][effectbase.cpp:1798]: [16:03:06][2026.11.23.07][effectbase.cpp:1782]:  7:00, 23 November, 2026: Luxembourg: AI Population Lower Desire 0 Current Population Tax: 35 Current Treasury Rate: 0.72501
+[16:03:06][2026.11.23.07][effectbase.cpp:1798]: [16:03:06][2026.11.23.07][effectbase.cpp:1782]:  7:00, 23 November, 2026: Luxembourg: AI Corporate Lower Desire: 9.70795 Current Corporate Tax: 20 Current Treasury Rate: 0.72501
+[16:03:06][2026.11.23.07][effectbase.cpp:1798]: [16:03:06][2026.11.23.07][effectbase.cpp:1782]:  7:00, 23 November, 2026: Luxembourg: Highest Economic Expenditure: Index: 5 Value: 0.0567: Treasury Rate: 0.72501
+[16:03:06][2026.11.23.07][effectbase.cpp:1798]: [16:03:06][2026.11.23.07][effectbase.cpp:1782]:  7:00, 23 November, 2026: Luxembourg: Weekly Economic Update: Treasury: 5.48967 Treasury Rate: 0.74563 Debt: 0 Interest Rate: 0.8 Population Tax Rate: 35 Corporate Tax Rate: 20
+[16:03:06][2026.11.23.07][effectbase.cpp:1798]: [16:03:06][2026.11.23.07][effectbase.cpp:1782]:  7:00, 23 November, 2026: Luxembourg: add idea social_04 
+[16:03:06][2026.11.23.07][effectbase.cpp:1798]: [16:03:06][2026.11.23.07][effectbase.cpp:1782]:  7:00, 23 November, 2026: Germany: Decision GER_consult_with_an_advisor
+[16:03:06][2026.11.23.07][effectbase.cpp:1798]: [16:03:06][2026.11.23.07][effectbase.cpp:1782]:  7:00, 23 November, 2026: Poland: Decision send_money_to_ukraine
+[16:03:06][2026.11.23.07][effectbase.cpp:1798]: [16:03:06][2026.11.23.07][effectbase.cpp:1782]:  7:00, 23 November, 2026: Poland: DEBUG: Influence Change, Influencer: Poland, Influencee: Ukraine, Influence Domestic Independence: 0
+[16:03:06][2026.11.23.07][effectbase.cpp:1798]: [16:03:06][2026.11.23.07][effectbase.cpp:1782]:  7:00, 23 November, 2026: Myanmar: Decision BRM_minor_funding
+[16:03:06][2026.11.23.07][effectbase.cpp:1798]: [16:03:06][2026.11.23.07][effectbase.cpp:1782]:  7:00, 23 November, 2026: Germany:germany_divide.69420.a executed
+[16:03:06][2026.11.23.07][effectbase.cpp:1798]: [16:03:07][2026.11.23.09][effectbase.cpp:1782]:  9:00, 23 November, 2026: Croatia: mission timeout_effect EU_update_vars_mission
+[16:03:07][2026.11.23.09][effectbase.cpp:1798]: [16:03:07][2026.11.23.13][effectbase.cpp:1782]:  13:00, 23 November, 2026: Myanmar: Energy GUI  heavy_additional_consumption_button_click
+[16:03:07][2026.11.23.13][effectbase.cpp:1798]: [16:03:07][2026.11.23.13][effectbase.cpp:1782]:  13:00, 23 November, 2026: Myanmar: AI Population Lower Desire 0 Current Population Tax: 41 Current Treasury Rate: 0.22672
+[16:03:07][2026.11.23.13][effectbase.cpp:1798]: [16:03:07][2026.11.23.13][effectbase.cpp:1782]:  13:00, 23 November, 2026: Myanmar: AI Corporate Lower Desire: 1.34926 Current Corporate Tax: 19 Current Treasury Rate: 0.22672
+[16:03:07][2026.11.23.13][effectbase.cpp:1798]: [16:03:07][2026.11.23.13][effectbase.cpp:1782]:  13:00, 23 November, 2026: Myanmar: Highest Economic Expenditure: Index: 2 Value: 1.35147: Treasury Rate: 0.22672
+[16:03:07][2026.11.23.13][effectbase.cpp:1798]: [16:03:07][2026.11.23.13][effectbase.cpp:1782]:  13:00, 23 November, 2026: Myanmar: Weekly Economic Update: Treasury: 0.12339 Treasury Rate: 0.22672 Debt: 97.15035 Interest Rate: 2.0485 Population Tax Rate: 41 Corporate Tax Rate: 19
+[16:03:07][2026.11.23.13][effectbase.cpp:1798]: [16:03:07][2026.11.23.13][effectbase.cpp:1782]:  13:00, 23 November, 2026: Guyana: Energy GUI  heavy_additional_consumption_button_click
+[16:03:07][2026.11.23.13][effectbase.cpp:1798]: [16:03:07][2026.11.23.13][effectbase.cpp:1782]:  13:00, 23 November, 2026: Guyana: AI Population Lower Desire 0 Current Population Tax: 35 Current Treasury Rate: 0.47914
+[16:03:07][2026.11.23.13][effectbase.cpp:1798]: [16:03:07][2026.11.23.13][effectbase.cpp:1782]:  13:00, 23 November, 2026: Guyana: AI Corporate Lower Desire: 2.15613 Current Corporate Tax: 10 Current Treasury Rate: 0.47914
+[16:03:07][2026.11.23.13][effectbase.cpp:1798]: [16:03:07][2026.11.23.13][effectbase.cpp:1782]:  13:00, 23 November, 2026: Guyana: Highest Economic Expenditure: Index: 6 Value: 0.02537: Treasury Rate: 0.47914
+[16:03:07][2026.11.23.13][effectbase.cpp:1798]: [16:03:07][2026.11.23.13][effectbase.cpp:1782]:  13:00, 23 November, 2026: Guyana: Weekly Economic Update: Treasury: 17.65817 Treasury Rate: 0.47914 Debt: 19.95 Interest Rate: 6.6944 Population Tax Rate: 35 Corporate Tax Rate: 10
+[16:03:07][2026.11.23.13][effectbase.cpp:1798]: [16:03:08][2026.11.23.14][effectbase.cpp:1782]:  14:00, 23 November, 2026: Vanuatu: Energy GUI  heavy_additional_consumption_button_click
+[16:03:08][2026.11.23.14][effectbase.cpp:1798]: [16:03:08][2026.11.23.14][effectbase.cpp:1782]:  14:00, 23 November, 2026: Vanuatu: AI Population Lower Desire 0 Current Population Tax: 35 Current Treasury Rate: 0.52992
+[16:03:08][2026.11.23.14][effectbase.cpp:1798]: [16:03:08][2026.11.23.14][effectbase.cpp:1782]:  14:00, 23 November, 2026: Vanuatu: AI Corporate Lower Desire: 7.09575 Current Corporate Tax: 17 Current Treasury Rate: 0.52992
+[16:03:08][2026.11.23.14][effectbase.cpp:1798]: [16:03:08][2026.11.23.14][effectbase.cpp:1782]:  14:00, 23 November, 2026: Vanuatu: Highest Economic Expenditure: Index: 4 Value: 0.01826: Treasury Rate: 0.52992
+[16:03:08][2026.11.23.14][effectbase.cpp:1798]: [16:03:08][2026.11.23.14][effectbase.cpp:1782]:  14:00, 23 November, 2026: Vanuatu: Weekly Economic Update: Treasury: 23.58875 Treasury Rate: 0.52992 Debt: 0 Interest Rate: 0.8 Population Tax Rate: 35 Corporate Tax Rate: 17
+[16:03:08][2026.11.23.14][effectbase.cpp:1798]: [16:03:08][2026.11.23.15][effectbase.cpp:1782]:  15:00, 23 November, 2026: China: Decision AC_project_4_decision
+[16:03:08][2026.11.23.15][effectbase.cpp:1798]: [16:03:08][2026.11.23.15][effectbase.cpp:1782]:  15:00, 23 November, 2026: China: AC_event.0 executed
+[16:03:08][2026.11.23.15][effectbase.cpp:1798]: [16:03:08][2026.11.23.15][effectbase.cpp:1782]:  15:00, 23 November, 2026: China: AC_event.34 executed
+[16:03:08][2026.11.23.15][effectbase.cpp:1798]: [16:03:08][2026.11.23.15][effectbase.cpp:1782]:  15:00, 23 November, 2026: : AI Population Lower Desire 0 Current Population Tax: 35 Current Treasury Rate: 0.50693
+[16:03:08][2026.11.23.15][effectbase.cpp:1798]: [16:03:08][2026.11.23.15][effectbase.cpp:1782]:  15:00, 23 November, 2026: : AI Corporate Lower Desire: 6.7878 Current Corporate Tax: 20 Current Treasury Rate: 0.50693
+[16:03:08][2026.11.23.15][effectbase.cpp:1798]: [16:03:08][2026.11.23.15][effectbase.cpp:1782]:  15:00, 23 November, 2026: : Highest Economic Expenditure: Index: 2 Value: 0.00309: Treasury Rate: 0.50693
+[16:03:08][2026.11.23.15][effectbase.cpp:1798]: [16:03:08][2026.11.23.15][effectbase.cpp:1782]:  15:00, 23 November, 2026: : Weekly Economic Update: Treasury: 0.33165 Treasury Rate: 0.51224 Debt: 0 Interest Rate: 0.8 Population Tax Rate: 35 Corporate Tax Rate: 20
+[16:03:08][2026.11.23.15][effectbase.cpp:1798]: [16:03:08][2026.11.23.15][effectbase.cpp:1782]:  15:00, 23 November, 2026: : DEBUG: 1076 Max debt paid (Total Debt: 0b, Interest Rate: 0.8% balance:0.51224b, Total Treasury:0.33165, Total Treasury Rate:0.51224)
+[16:03:08][2026.11.23.15][effectbase.cpp:1798]: [16:03:08][2026.11.23.16][effectbase.cpp:1782]:  16:00, 23 November, 2026: Ukraine: ukraine_nato_help.2.a executed
+[16:03:08][2026.11.23.16][effectbase.cpp:1798]: [16:03:08][2026.11.23.19][effectbase.cpp:1782]:  19:00, 23 November, 2026: Barbados: Energy GUI  heavy_additional_consumption_button_click
+[16:03:08][2026.11.23.19][effectbase.cpp:1798]: [16:03:08][2026.11.23.19][effectbase.cpp:1782]:  19:00, 23 November, 2026: Barbados: AI Population Lower Desire 0 Current Population Tax: 35 Current Treasury Rate: 0.58411
+[16:03:08][2026.11.23.19][effectbase.cpp:1798]: [16:03:08][2026.11.23.19][effectbase.cpp:1782]:  19:00, 23 November, 2026: Barbados: AI Corporate Lower Desire: 7.82124 Current Corporate Tax: 19 Current Treasury Rate: 0.58411
+[16:03:08][2026.11.23.19][effectbase.cpp:1798]: [16:03:08][2026.11.23.19][effectbase.cpp:1782]:  19:00, 23 November, 2026: Barbados: Highest Economic Expenditure: Index: 2 Value: 0.01166: Treasury Rate: 0.58411
+[16:03:08][2026.11.23.19][effectbase.cpp:1798]: [16:03:08][2026.11.23.19][effectbase.cpp:1782]:  19:00, 23 November, 2026: Barbados: Weekly Economic Update: Treasury: 15.16686 Treasury Rate: 0.58411 Debt: 0 Interest Rate: 0.8 Population Tax Rate: 35 Corporate Tax Rate: 19
+[16:03:08][2026.11.23.19][effectbase.cpp:1798]: [16:03:08][2026.11.23.20][effectbase.cpp:1782]:  20:00, 23 November, 2026: Belarus: AI Population Lower Desire 0 Current Population Tax: 50 Current Treasury Rate: 0.21352
+[16:03:08][2026.11.23.20][effectbase.cpp:1798]: [16:03:08][2026.11.23.20][effectbase.cpp:1782]:  20:00, 23 November, 2026: Belarus: AI Corporate Lower Desire: 1.2707 Current Corporate Tax: 48 Current Treasury Rate: 0.21352
+[16:03:08][2026.11.23.20][effectbase.cpp:1798]: [16:03:08][2026.11.23.20][effectbase.cpp:1782]:  20:00, 23 November, 2026: Belarus: Highest Economic Expenditure: Index: 5 Value: 0.63384: Treasury Rate: 0.21352
+[16:03:08][2026.11.23.20][effectbase.cpp:1798]: [16:03:08][2026.11.23.20][effectbase.cpp:1782]:  20:00, 23 November, 2026: Belarus: Weekly Economic Update: Treasury: 0.41248 Treasury Rate: -0.93618 Debt: 47.77315 Interest Rate: 2.1787 Population Tax Rate: 50 Corporate Tax Rate: 48
+[16:03:08][2026.11.23.20][effectbase.cpp:1798]: [16:03:08][2026.11.23.20][effectbase.cpp:1782]:  20:00, 23 November, 2026: Libyan National Army: Energy GUI  heavy_additional_consumption_button_click
+[16:03:08][2026.11.23.20][effectbase.cpp:1798]: [16:03:08][2026.11.23.20][effectbase.cpp:1782]:  20:00, 23 November, 2026: Libyan National Army: AI Population Raise Desire 14.90437 Current Population Tax: 27 Current Treasury Rate: -0.39745
+[16:03:08][2026.11.23.20][effectbase.cpp:1798]: [16:03:08][2026.11.23.20][effectbase.cpp:1782]:  20:00, 23 November, 2026: Libyan National Army: AI Corporate Raise Desire: 0 Current Corporate Tax: 0 Current Treasury Rate: -0.39745
+[16:03:08][2026.11.23.20][effectbase.cpp:1798]: [16:03:08][2026.11.23.20][effectbase.cpp:1782]:  20:00, 23 November, 2026: Libyan National Army: Highest Economic Expenditure: Index: 1 Value: 0.68318: Treasury Rate: -0.39745
+[16:03:08][2026.11.23.20][effectbase.cpp:1798]: [16:03:08][2026.11.23.20][effectbase.cpp:1782]:  20:00, 23 November, 2026: Libyan National Army: Weekly Economic Update: Treasury: 0.65842 Treasury Rate: -0.39899 Debt: 28.62401 Interest Rate: 3.8572 Population Tax Rate: 27 Corporate Tax Rate: 0
+[16:03:08][2026.11.23.20][effectbase.cpp:1798]: [16:03:09][2026.11.23.22][effectbase.cpp:1782]:  22:00, 23 November, 2026: Micronesia: Decision combat_foreign_influence
+[16:03:09][2026.11.23.22][effectbase.cpp:1798]: [16:03:09][2026.11.23.22][effectbase.cpp:1782]:  22:00, 23 November, 2026: Korea DPR: AI Population Raise Desire 0 Current Population Tax: 45 Current Treasury Rate: -2.38823
+[16:03:09][2026.11.23.22][effectbase.cpp:1798]: [16:03:09][2026.11.23.22][effectbase.cpp:1782]:  22:00, 23 November, 2026: Korea DPR: AI Corporate Raise Desire: 0.59705 Current Corporate Tax: 15 Current Treasury Rate: -2.38823
+[16:03:09][2026.11.23.22][effectbase.cpp:1798]: [16:03:09][2026.11.23.22][effectbase.cpp:1782]:  22:00, 23 November, 2026: Korea DPR: Highest Economic Expenditure: Index: 1 Value: 1.67309: Treasury Rate: -2.38823
+[16:03:09][2026.11.23.22][effectbase.cpp:1798]: [16:03:09][2026.11.23.22][effectbase.cpp:1782]:  22:00, 23 November, 2026: Korea DPR: Weekly Economic Update: Treasury: 14.33766 Treasury Rate: -2.38823 Debt: 0 Interest Rate: 0.8 Population Tax Rate: 45 Corporate Tax Rate: 15
+[16:03:09][2026.11.23.22][effectbase.cpp:1798]: [16:03:09][2026.11.23.22][effectbase.cpp:1782]:  22:00, 23 November, 2026: Kazakhstan: AI Population Lower Desire 0 Current Population Tax: 9 Current Treasury Rate: 0.73656
+[16:03:09][2026.11.23.22][effectbase.cpp:1798]: [16:03:09][2026.11.23.22][effectbase.cpp:1782]:  22:00, 23 November, 2026: Kazakhstan: AI Corporate Lower Desire: 9.86274 Current Corporate Tax: 10 Current Treasury Rate: 0.73656
+[16:03:09][2026.11.23.22][effectbase.cpp:1798]: [16:03:09][2026.11.23.22][effectbase.cpp:1782]:  22:00, 23 November, 2026: Kazakhstan: Highest Economic Expenditure: Index: 5 Value: 1.05908: Treasury Rate: 0.73656
+[16:03:09][2026.11.23.22][effectbase.cpp:1798]: [16:03:09][2026.11.23.22][effectbase.cpp:1782]:  22:00, 23 November, 2026: Kazakhstan: Weekly Economic Update: Treasury: 9.46535 Treasury Rate: 0.73667 Debt: 17.064 Interest Rate: 0.8 Population Tax Rate: 9 Corporate Tax Rate: 10
+[16:03:09][2026.11.23.22][effectbase.cpp:1798]: [16:03:09][2026.11.23.22][effectbase.cpp:1782]:  22:00, 23 November, 2026: Kazakhstan: DEBUG: 1073 1b debt paid (Total Debt: 17.064b, Interest Rate: 0.8% balance:0.73667b, Total Treasury:9.46535, Total Treasury Rate:0.73667)
+[16:03:09][2026.11.23.22][effectbase.cpp:1798]: [16:03:09][2026.11.24.01][effectbase.cpp:1782]:  1:00, 24 November, 2026: Israel: focus ISR_shine_like_a_diamond executed
+[16:03:09][2026.11.24.01][effectbase.cpp:1798]: [16:03:10][2026.11.24.01][effectbase.cpp:1782]:  1:00, 24 November, 2026: Chechnya: Energy GUI  some_power_restrictions_button_click
+[16:03:10][2026.11.24.01][effectbase.cpp:1798]: [16:03:10][2026.11.24.01][effectbase.cpp:1782]:  1:00, 24 November, 2026: Chechnya: AI Population Raise Desire 3.97377 Current Population Tax: 15 Current Treasury Rate: -0.14129
+[16:03:10][2026.11.24.01][effectbase.cpp:1798]: [16:03:10][2026.11.24.01][effectbase.cpp:1782]:  1:00, 24 November, 2026: Chechnya: AI Corporate Raise Desire: 0 Current Corporate Tax: 10 Current Treasury Rate: -0.14129
+[16:03:10][2026.11.24.01][effectbase.cpp:1798]: [16:03:10][2026.11.24.01][effectbase.cpp:1782]:  1:00, 24 November, 2026: Chechnya: Highest Economic Expenditure: Index: 1 Value: 0.07161: Treasury Rate: -0.14129
+[16:03:10][2026.11.24.01][effectbase.cpp:1798]: [16:03:10][2026.11.24.01][effectbase.cpp:1782]:  1:00, 24 November, 2026: Chechnya: Weekly Economic Update: Treasury: 0.03042 Treasury Rate: -0.14538 Debt: 1.14552 Interest Rate: 50 Population Tax Rate: 15 Corporate Tax Rate: 10
+[16:03:10][2026.11.24.01][effectbase.cpp:1798]: [16:03:10][2026.11.24.01][effectbase.cpp:1782]:  1:00, 24 November, 2026: Hezbollah: Energy GUI  some_power_restrictions_button_click
+[16:03:10][2026.11.24.01][effectbase.cpp:1798]: [16:03:10][2026.11.24.01][effectbase.cpp:1782]:  1:00, 24 November, 2026: Hezbollah: AI Population Raise Desire 33.594 Current Population Tax: 35 Current Treasury Rate: -0.89584
+[16:03:10][2026.11.24.01][effectbase.cpp:1798]: [16:03:10][2026.11.24.01][effectbase.cpp:1782]:  1:00, 24 November, 2026: Hezbollah: AI Corporate Raise Desire: 0 Current Corporate Tax: 20 Current Treasury Rate: -0.89584
+[16:03:10][2026.11.24.01][effectbase.cpp:1798]: [16:03:10][2026.11.24.01][effectbase.cpp:1782]:  1:00, 24 November, 2026: Hezbollah: Highest Economic Expenditure: Index: 1 Value: 1.73083: Treasury Rate: -0.89584
+[16:03:10][2026.11.24.01][effectbase.cpp:1798]: [16:03:10][2026.11.24.01][effectbase.cpp:1782]:  1:00, 24 November, 2026: Hezbollah: Weekly Economic Update: Treasury: 1.09594 Treasury Rate: -0.90374 Debt: 29.49257 Interest Rate: 13.6373 Population Tax Rate: 35 Corporate Tax Rate: 20
+[16:03:10][2026.11.24.01][effectbase.cpp:1798]: [16:03:10][2026.11.24.02][effectbase.cpp:1782]:  2:00, 24 November, 2026: Palau: Energy GUI  heavy_additional_consumption_button_click
+[16:03:10][2026.11.24.02][effectbase.cpp:1798]: [16:03:10][2026.11.24.02][effectbase.cpp:1782]:  2:00, 24 November, 2026: Palau: AI Population Lower Desire 0 Current Population Tax: 35 Current Treasury Rate: 0.50221
+[16:03:10][2026.11.24.02][effectbase.cpp:1798]: [16:03:10][2026.11.24.02][effectbase.cpp:1782]:  2:00, 24 November, 2026: Palau: AI Corporate Lower Desire: 6.72459 Current Corporate Tax: 16 Current Treasury Rate: 0.50221
+[16:03:10][2026.11.24.02][effectbase.cpp:1798]: [16:03:10][2026.11.24.02][effectbase.cpp:1782]:  2:00, 24 November, 2026: Palau: Highest Economic Expenditure: Index: 4 Value: 0.00132: Treasury Rate: 0.50221
+[16:03:10][2026.11.24.02][effectbase.cpp:1798]: [16:03:10][2026.11.24.02][effectbase.cpp:1782]:  2:00, 24 November, 2026: Palau: Weekly Economic Update: Treasury: 23.64807 Treasury Rate: 0.50221 Debt: 0 Interest Rate: 0.8 Population Tax Rate: 35 Corporate Tax Rate: 16
+[16:03:10][2026.11.24.02][effectbase.cpp:1798]: [16:03:10][2026.11.24.04][effectbase.cpp:1782]:  4:00, 24 November, 2026: Egypt: AI Population Lower Desire 0 Current Population Tax: 42 Current Treasury Rate: 0.17618
+[16:03:10][2026.11.24.04][effectbase.cpp:1798]: [16:03:10][2026.11.24.04][effectbase.cpp:1782]:  4:00, 24 November, 2026: Egypt: AI Corporate Lower Desire: 0.79281 Current Corporate Tax: 32 Current Treasury Rate: 0.17618
+[16:03:10][2026.11.24.04][effectbase.cpp:1798]: [16:03:10][2026.11.24.04][effectbase.cpp:1782]:  4:00, 24 November, 2026: Egypt: Highest Economic Expenditure: Index: 7 Value: 4: Treasury Rate: 0.17618
+[16:03:10][2026.11.24.04][effectbase.cpp:1798]: [16:03:10][2026.11.24.04][effectbase.cpp:1782]:  4:00, 24 November, 2026: Egypt: Weekly Economic Update: Treasury: 0.20782 Treasury Rate: 0.41274 Debt: 495.81758 Interest Rate: 6.3258 Population Tax Rate: 42 Corporate Tax Rate: 32
+[16:03:10][2026.11.24.04][effectbase.cpp:1798]: [16:03:10][2026.11.24.04][effectbase.cpp:1782]:  4:00, 24 November, 2026: Egypt: law_attitude_change: Changing law tax_policy (0), change type: 1, modifier 0.04
+[16:03:10][2026.11.24.04][effectbase.cpp:1798]: [16:03:10][2026.11.24.04][effectbase.cpp:1782]: Egypt update_government_coalition_strength
+[16:03:10][2026.11.24.04][effectbase.cpp:1798]: [16:03:10][2026.11.24.04][effectbase.cpp:1782]:  4:00, 24 November, 2026: Egypt: DEBUG: 1050 Pop Tax Rate Increases: Old Pop Taxes: 41%, New Pop Taxes:42% (Balance:0.41274)
+[16:03:10][2026.11.24.04][effectbase.cpp:1798]: [16:03:10][2026.11.24.05][effectbase.cpp:1782]:  5:00, 24 November, 2026: Malta: Energy GUI  heavy_additional_consumption_button_click
+[16:03:10][2026.11.24.05][effectbase.cpp:1798]: [16:03:10][2026.11.24.05][effectbase.cpp:1782]:  5:00, 24 November, 2026: Malta: AI Population Lower Desire 0 Current Population Tax: 35 Current Treasury Rate: 0.54463
+[16:03:10][2026.11.24.05][effectbase.cpp:1798]: [16:03:10][2026.11.24.05][effectbase.cpp:1782]:  5:00, 24 November, 2026: Malta: AI Corporate Lower Desire: 7.29261 Current Corporate Tax: 20 Current Treasury Rate: 0.54463
+[16:03:10][2026.11.24.05][effectbase.cpp:1798]: [16:03:10][2026.11.24.05][effectbase.cpp:1782]:  5:00, 24 November, 2026: Malta: Highest Economic Expenditure: Index: 5 Value: 0.03465: Treasury Rate: 0.54463
+[16:03:10][2026.11.24.05][effectbase.cpp:1798]: [16:03:10][2026.11.24.05][effectbase.cpp:1782]:  5:00, 24 November, 2026: Malta: Weekly Economic Update: Treasury: 20.72575 Treasury Rate: 0.54463 Debt: 0 Interest Rate: 0.8 Population Tax Rate: 35 Corporate Tax Rate: 20
+[16:03:10][2026.11.24.05][effectbase.cpp:1798]: [16:03:10][2026.11.24.05][effectbase.cpp:1782]:  5:00, 24 November, 2026: Moldova: AI Population Raise Desire 0.5955 Current Population Tax: 32 Current Treasury Rate: -0.01191
+[16:03:10][2026.11.24.05][effectbase.cpp:1798]: [16:03:10][2026.11.24.05][effectbase.cpp:1782]:  5:00, 24 November, 2026: Moldova: AI Corporate Raise Desire: 0 Current Corporate Tax: 12 Current Treasury Rate: -0.01191
+[16:03:10][2026.11.24.05][effectbase.cpp:1798]: [16:03:10][2026.11.24.05][effectbase.cpp:1782]:  5:00, 24 November, 2026: Moldova: Highest Economic Expenditure: Index: 4 Value: 0.07696: Treasury Rate: -0.01191
+[16:03:10][2026.11.24.05][effectbase.cpp:1798]: [16:03:10][2026.11.24.05][effectbase.cpp:1782]:  5:00, 24 November, 2026: Moldova: Weekly Economic Update: Treasury: 0.25905 Treasury Rate: -0.0047 Debt: 17.71324 Interest Rate: 3.3181 Population Tax Rate: 32 Corporate Tax Rate: 12
+[16:03:10][2026.11.24.05][effectbase.cpp:1798]: [16:03:10][2026.11.24.05][effectbase.cpp:1782]:  5:00, 24 November, 2026: Moldova: law_attitude_change: Changing law tax_policy (0), change type: 1, modifier 0.04
+[16:03:10][2026.11.24.05][effectbase.cpp:1798]: [16:03:10][2026.11.24.05][effectbase.cpp:1782]: Moldova update_government_coalition_strength
+[16:03:10][2026.11.24.05][effectbase.cpp:1798]: [16:03:10][2026.11.24.05][effectbase.cpp:1782]:  5:00, 24 November, 2026: Moldova: DEBUG: 1050 Pop Tax Rate Increases: Old Pop Taxes: 31%, New Pop Taxes:32% (Balance:-0.0047)
+[16:03:10][2026.11.24.05][effectbase.cpp:1798]: [16:03:10][2026.11.24.05][effectbase.cpp:1782]:  5:00, 24 November, 2026: Monaco: Energy GUI  heavy_additional_consumption_button_click
+[16:03:10][2026.11.24.05][effectbase.cpp:1798]: [16:03:10][2026.11.24.05][effectbase.cpp:1782]:  5:00, 24 November, 2026: Monaco: AI Population Lower Desire 0 Current Population Tax: 35 Current Treasury Rate: 0.53243
+[16:03:10][2026.11.24.05][effectbase.cpp:1798]: [16:03:10][2026.11.24.05][effectbase.cpp:1782]:  5:00, 24 November, 2026: Monaco: AI Corporate Lower Desire: 7.12926 Current Corporate Tax: 18 Current Treasury Rate: 0.53243
+[16:03:10][2026.11.24.05][effectbase.cpp:1798]: [16:03:10][2026.11.24.05][effectbase.cpp:1782]:  5:00, 24 November, 2026: Monaco: Highest Economic Expenditure: Index: 5 Value: 0.00228: Treasury Rate: 0.53243
+[16:03:10][2026.11.24.05][effectbase.cpp:1798]: [16:03:10][2026.11.24.05][effectbase.cpp:1782]:  5:00, 24 November, 2026: Monaco: Weekly Economic Update: Treasury: 27.80799 Treasury Rate: 0.53243 Debt: 0 Interest Rate: 0.8 Population Tax Rate: 35 Corporate Tax Rate: 18
+[16:03:10][2026.11.24.05][effectbase.cpp:1798]: 

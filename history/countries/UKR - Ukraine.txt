@@ -875,11 +875,7 @@ capital = 698
 	add_stability = 0.20
 	add_war_support = 0.20
 	if = {
-		limit = { has_dlc = "No Step Back" }
-		set_oob = "UKR_2017_nsb"
-		else = {
-			set_oob = "UKR_2017_nonnsb"
-		}
+		set_oob = "UKR_2017_nonnsb"
 	}
 	if = {
 		limit = {

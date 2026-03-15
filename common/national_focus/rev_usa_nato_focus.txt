@@ -1,12 +1,6 @@
 focus_tree = {
 	id = REV_USA_nato_default_focus
-	country = {
-		factor = 0
-		modifier = {
-			add = 20000
-			tag = USA
-		}
-	}
+	
 	continuous_focus_position = { x = 50 y = 120 }
 
 	focus = {
@@ -35,7 +29,7 @@ focus_tree = {
 		ai_will_do = { base = 1 }
 		completion_reward = {
 			add_political_power = 50
-			add_army_experience = 10
+			army_experience = 10
 		}
 	}
 
@@ -50,7 +44,7 @@ focus_tree = {
 		ai_will_do = { base = 1 }
 		completion_reward = {
 			add_war_support = 0.03
-			add_army_experience = 10
+			army_experience = 10
 			add_equipment_to_stockpile = {
 				type = infantry_weapons5 #C7
 				amount = 10000
@@ -150,9 +144,9 @@ focus_tree = {
 		prerequisite = { focus = REV_USA_NATO_forward_stockpiles }
 		ai_will_do = { base = 1 }
 		completion_reward = {
-			add_army_experience = 20
-			add_navy_experience = 10
-			add_air_experience = 10
+			army_experience = 20
+			navy_experience = 10
+			air_experience = 10
 		}
 	}
 
@@ -189,7 +183,7 @@ focus_tree = {
 		prerequisite = { focus = REV_USA_NATO_2026_security_compact }
 		ai_will_do = { base = 1 }
 		completion_reward = {
-			add_army_experience = 15
+			army_experience = 15
 			if = {
 				limit = { NOT = { has_template = "Drone Defense Brigade" } }
 				division_template = {
@@ -222,7 +216,7 @@ focus_tree = {
 		ai_will_do = { base = 1 }
 		completion_reward = {
 			set_technology = { land_Drone_equipment3 = 1 }
-			add_air_experience = 5
+			air_experience = 5
 		}
 	}
 
@@ -258,7 +252,7 @@ focus_tree = {
 		ai_will_do = { base = 1 }
 		completion_reward = {
 			set_technology = { land_Drone_equipment4 = 1 }
-			add_army_experience = 15
+			army_experience = 15
 		}
 	}
 
@@ -287,14 +281,14 @@ focus_tree = {
 		prerequisite = { focus = REV_USA_NATO_2026_security_compact }
 		ai_will_do = { base = 1 }
 		completion_reward = {
-			add_army_experience = 15
+			army_experience = 15
 			if = {
 				limit = { UKR = { exists = yes } }
 				add_opinion_modifier = { target = UKR modifier = NATO_commitment }
 				UKR = {
 					reverse_add_opinion_modifier = { target = ROOT modifier = NATO_commitment }
 					add_command_power = 15
-					add_army_experience = 10
+					army_experience = 10
 				}
 			}
 		}
@@ -316,7 +310,7 @@ focus_tree = {
 				UKR = {
 					add_war_support = 0.05
 					add_stability = 0.03
-					add_army_experience = 15
+					army_experience = 15
 				}
 			}
 		}
@@ -415,8 +409,9 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.05
 			add_war_support = 0.05
-			add_army_experience = 20
+			army_experience = 20
 		}
 	}
 }
+
 
