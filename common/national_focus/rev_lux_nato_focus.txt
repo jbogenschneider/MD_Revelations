@@ -293,6 +293,33 @@ focus_tree = {
 			army_experience = 20
 		}
 	}
-}
 
+	focus = {
+		id = REV_LUX_NATO_rally_for_democracy
+		icon = democracy6
+		x = 18
+		y = 8
+		cost = 5
+		available = { has_war = yes }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_NATO }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			add_war_support = 0.03
+		}
+	}
+
+	focus = {
+		id = REV_LUX_NATO_rally_for_a_return_to_peace
+		icon = white_peace
+		x = 18
+		y = 9
+		cost = 5
+		available = { has_war = yes }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_NATO }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			add_war_support = 0.03
+		}
+	}
+}
 

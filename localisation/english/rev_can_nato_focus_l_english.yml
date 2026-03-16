@@ -50,3 +50,8 @@
  REV_CAN_NATO_reserve_build_up_iii:0 "Build Reserve Formations III"
  REV_CAN_NATO_reserve_build_up_iii_desc:0 "Complete the reserve expansion program and secure long-term national defense autonomy."
  
+ REV_CAN_NATO_rally_for_democracy:0 "Rally for Democracy"
+ REV_CAN_NATO_rally_for_democracy_desc:0 "Use wartime messaging to frame the conflict as a defense of democratic institutions, civil order, and national sovereignty."
+ REV_CAN_NATO_rally_for_a_return_to_peace:0 "Rally for a Return to Peace"
+ REV_CAN_NATO_rally_for_a_return_to_peace_desc:0 "Promise that victory and endurance are the fastest path back to peace, security, and normal life."
+

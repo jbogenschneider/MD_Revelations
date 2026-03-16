@@ -450,3 +450,347 @@ rev_resolve_usa_civil_war_neutral_states = {
 	}
 }
 
+rev_rebuild_nato_under_ger = {
+	if = {
+		limit = {
+			tag = GER
+			exists = yes
+			NOT = { is_subject = yes }
+			NOT = { is_in_faction = yes }
+			has_idea = NATO_member
+		}
+		log = "[GetDateText]: [Root.GetName]: rebuilding NATO under German leadership."
+		create_faction_from_template = faction_template_nato
+		if = {
+			limit = {
+				BEL = {
+					exists = yes
+					NOT = { is_subject = yes }
+					has_idea = NATO_member
+					NOT = { has_war_with = GER }
+				}
+			}
+			add_to_faction = BEL
+		}
+		if = {
+			limit = {
+				CAN = {
+					exists = yes
+					NOT = { is_subject = yes }
+					has_idea = NATO_member
+					NOT = { has_war_with = GER }
+				}
+			}
+			add_to_faction = CAN
+		}
+		if = {
+			limit = {
+				DEN = {
+					exists = yes
+					NOT = { is_subject = yes }
+					has_idea = NATO_member
+					NOT = { has_war_with = GER }
+				}
+			}
+			add_to_faction = DEN
+		}
+		if = {
+			limit = {
+				FRA = {
+					exists = yes
+					NOT = { is_subject = yes }
+					has_idea = NATO_member
+					NOT = { has_war_with = GER }
+				}
+			}
+			add_to_faction = FRA
+		}
+		if = {
+			limit = {
+				ICE = {
+					exists = yes
+					NOT = { is_subject = yes }
+					has_idea = NATO_member
+					NOT = { has_war_with = GER }
+				}
+			}
+			add_to_faction = ICE
+		}
+		if = {
+			limit = {
+				ITA = {
+					exists = yes
+					NOT = { is_subject = yes }
+					has_idea = NATO_member
+					NOT = { has_war_with = GER }
+				}
+			}
+			add_to_faction = ITA
+		}
+		if = {
+			limit = {
+				LUX = {
+					exists = yes
+					NOT = { is_subject = yes }
+					has_idea = NATO_member
+					NOT = { has_war_with = GER }
+				}
+			}
+			add_to_faction = LUX
+		}
+		if = {
+			limit = {
+				HOL = {
+					exists = yes
+					NOT = { is_subject = yes }
+					has_idea = NATO_member
+					NOT = { has_war_with = GER }
+				}
+			}
+			add_to_faction = HOL
+		}
+		if = {
+			limit = {
+				NOR = {
+					exists = yes
+					NOT = { is_subject = yes }
+					has_idea = NATO_member
+					NOT = { has_war_with = GER }
+				}
+			}
+			add_to_faction = NOR
+		}
+		if = {
+			limit = {
+				POR = {
+					exists = yes
+					NOT = { is_subject = yes }
+					has_idea = NATO_member
+					NOT = { has_war_with = GER }
+				}
+			}
+			add_to_faction = POR
+		}
+		if = {
+			limit = {
+				ENG = {
+					exists = yes
+					NOT = { is_subject = yes }
+					has_idea = NATO_member
+					NOT = { has_war_with = GER }
+				}
+			}
+			add_to_faction = ENG
+		}
+		if = {
+			limit = {
+				GRE = {
+					exists = yes
+					NOT = { is_subject = yes }
+					has_idea = NATO_member
+					NOT = { has_war_with = GER }
+				}
+			}
+			add_to_faction = GRE
+		}
+		if = {
+			limit = {
+				TUR = {
+					exists = yes
+					NOT = { is_subject = yes }
+					has_idea = NATO_member
+					NOT = { has_war_with = GER }
+				}
+			}
+			add_to_faction = TUR
+		}
+		if = {
+			limit = {
+				SPR = {
+					exists = yes
+					NOT = { is_subject = yes }
+					has_idea = NATO_member
+					NOT = { has_war_with = GER }
+				}
+			}
+			add_to_faction = SPR
+		}
+		if = {
+			limit = {
+				CZE = {
+					exists = yes
+					NOT = { is_subject = yes }
+					has_idea = NATO_member
+					NOT = { has_war_with = GER }
+				}
+			}
+			add_to_faction = CZE
+		}
+		if = {
+			limit = {
+				HUN = {
+					exists = yes
+					NOT = { is_subject = yes }
+					has_idea = NATO_member
+					NOT = { has_war_with = GER }
+				}
+			}
+			add_to_faction = HUN
+		}
+		if = {
+			limit = {
+				POL = {
+					exists = yes
+					NOT = { is_subject = yes }
+					has_idea = NATO_member
+					NOT = { has_war_with = GER }
+				}
+			}
+			add_to_faction = POL
+		}
+		if = {
+			limit = {
+				SWE = {
+					exists = yes
+					NOT = { is_subject = yes }
+					has_idea = NATO_member
+					NOT = { has_war_with = GER }
+				}
+			}
+			add_to_faction = SWE
+		}
+		if = {
+			limit = {
+				FIN = {
+					exists = yes
+					NOT = { is_subject = yes }
+					has_idea = NATO_member
+					NOT = { has_war_with = GER }
+				}
+			}
+			add_to_faction = FIN
+		}
+		if = {
+			limit = {
+				SLO = {
+					exists = yes
+					NOT = { is_subject = yes }
+					has_idea = NATO_member
+					NOT = { has_war_with = GER }
+				}
+			}
+			add_to_faction = SLO
+		}
+		if = {
+			limit = {
+				LAT = {
+					exists = yes
+					NOT = { is_subject = yes }
+					has_idea = NATO_member
+					NOT = { has_war_with = GER }
+				}
+			}
+			add_to_faction = LAT
+		}
+		if = {
+			limit = {
+				EST = {
+					exists = yes
+					NOT = { is_subject = yes }
+					has_idea = NATO_member
+					NOT = { has_war_with = GER }
+				}
+			}
+			add_to_faction = EST
+		}
+		if = {
+			limit = {
+				LIT = {
+					exists = yes
+					NOT = { is_subject = yes }
+					has_idea = NATO_member
+					NOT = { has_war_with = GER }
+				}
+			}
+			add_to_faction = LIT
+		}
+		if = {
+			limit = {
+				SLV = {
+					exists = yes
+					NOT = { is_subject = yes }
+					has_idea = NATO_member
+					NOT = { has_war_with = GER }
+				}
+			}
+			add_to_faction = SLV
+		}
+		if = {
+			limit = {
+				BUL = {
+					exists = yes
+					NOT = { is_subject = yes }
+					has_idea = NATO_member
+					NOT = { has_war_with = GER }
+				}
+			}
+			add_to_faction = BUL
+		}
+		if = {
+			limit = {
+				ROM = {
+					exists = yes
+					NOT = { is_subject = yes }
+					has_idea = NATO_member
+					NOT = { has_war_with = GER }
+				}
+			}
+			add_to_faction = ROM
+		}
+		if = {
+			limit = {
+				ALB = {
+					exists = yes
+					NOT = { is_subject = yes }
+					has_idea = NATO_member
+					NOT = { has_war_with = GER }
+				}
+			}
+			add_to_faction = ALB
+		}
+		if = {
+			limit = {
+				CRO = {
+					exists = yes
+					NOT = { is_subject = yes }
+					has_idea = NATO_member
+					NOT = { has_war_with = GER }
+				}
+			}
+			add_to_faction = CRO
+		}
+		if = {
+			limit = {
+				MNT = {
+					exists = yes
+					NOT = { is_subject = yes }
+					has_idea = NATO_member
+					NOT = { has_war_with = GER }
+				}
+			}
+			add_to_faction = MNT
+		}
+		if = {
+			limit = {
+				FYR = {
+					exists = yes
+					NOT = { is_subject = yes }
+					has_idea = NATO_member
+					NOT = { has_war_with = GER }
+				}
+			}
+			add_to_faction = FYR
+		}
+	}
+}
+

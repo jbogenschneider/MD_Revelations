@@ -24,7 +24,7 @@ country_event = {
 	id = rev_usa_cw.10
 	title = rev_usa_cw.10.t
 	desc = rev_usa_cw.10.d
-	picture = GFX_report_event_generic_war
+	picture = GFX_report_event_usa_politics
 	is_triggered_only = yes
 
 	trigger = {
@@ -36,11 +36,7 @@ country_event = {
 	option = {
 		name = USA_blame_canada
 		ai_chance = {
-			factor = 90
-			modifier = {
-				factor = 0.05
-				NOT = { has_dlc = "No Step Back" }
-			}
+			factor = 1000
 		}
 		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.10.a"
 		custom_effect_tooltip = USA_blame_canada_desc
@@ -48,13 +44,49 @@ country_event = {
 		set_country_flag = rev_usa_cw_aug_plot_fired
 		set_country_flag = rev_usa_cw_blame_canada
 		set_country_flag = rev_usa_canada_plot_flag
+		if = {
+			limit = {
+				CAN = {
+					exists = yes
+					NOT = { is_subject = yes }
+				}
+			}
+			CAN = { country_event = { id = rev_usa_cw.12 days = 1 } }
+		}
+		if = {
+			limit = {
+				GER = {
+					exists = yes
+					NOT = { is_subject = yes }
+				}
+			}
+			GER = { country_event = { id = rev_usa_cw.13 days = 1 } }
+		}
+		if = {
+			limit = {
+				ENG = {
+					exists = yes
+					NOT = { is_subject = yes }
+				}
+			}
+			ENG = { country_event = { id = rev_usa_cw.13 days = 1 } }
+		}
+		if = {
+			limit = {
+				FRA = {
+					exists = yes
+					NOT = { is_subject = yes }
+				}
+			}
+			FRA = { country_event = { id = rev_usa_cw.13 days = 1 } }
+		}
 		add_war_support = 0.03
 		add_stability = -0.02
 	}
 	option = {
 		name = rev_usa_cw.10.b
 		ai_chance = {
-			factor = 10
+			factor = 1
 		}
 		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.10.b"
 		set_country_flag = rev_usa_cw_aug_branch_fired
@@ -62,6 +94,68 @@ country_event = {
 		clr_country_flag = rev_usa_canada_plot_flag
 		add_stability = 0.03
 		add_war_support = -0.03
+	}
+}
+
+# Canada-facing alert when Washington publicly blames Ottawa.
+country_event = {
+	id = rev_usa_cw.12
+	title = rev_usa_cw.12.t
+	desc = rev_usa_cw.12.d
+	picture = GFX_news_press_conference
+	is_triggered_only = yes
+
+	trigger = {
+		tag = CAN
+	}
+
+	option = {
+		name = rev_usa_cw.12.a
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.12.a"
+		set_country_flag = rev_can_warned_of_usa_plot
+		add_opinion_modifier = { target = USA modifier = recent_actions_negative }
+		reverse_add_opinion_modifier = { target = USA modifier = recent_actions_negative }
+		if = {
+			limit = { is_ai = yes }
+			add_ai_strategy = {
+				type = antagonize
+				id = USA
+				value = 400
+			}
+		}
+	}
+}
+
+# NATO major warning when Washington publicly blames Ottawa.
+country_event = {
+	id = rev_usa_cw.13
+	title = rev_usa_cw.13.t
+	desc = rev_usa_cw.13.d
+	picture = GFX_news_press_conference
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			tag = GER
+			tag = ENG
+			tag = FRA
+		}
+	}
+
+	option = {
+		name = rev_usa_cw.13.a
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.13.a"
+		set_country_flag = rev_nato_warned_of_usa_plot
+		add_opinion_modifier = { target = USA modifier = recent_actions_negative }
+		reverse_add_opinion_modifier = { target = USA modifier = recent_actions_negative }
+		if = {
+			limit = { is_ai = yes }
+			add_ai_strategy = {
+				type = antagonize
+				id = USA
+				value = 250
+			}
+		}
 	}
 }
 
@@ -94,7 +188,7 @@ country_event = {
 	id = rev_usa_cw.11
 	title = rev_usa_cw.11.t
 	desc = rev_usa_cw.11.d
-	picture = GFX_report_event_generic_war
+	picture = GFX_report_event_usa_politics
 	is_triggered_only = yes
 
 	trigger = {
@@ -165,7 +259,7 @@ country_event = {
 	id = rev_usa_cw.310
 	title = rev_usa_cw.310.t
 	desc = rev_usa_cw.310.d
-	picture = GFX_report_event_generic_war
+	picture = GFX_report_event_usa_politics
 	is_triggered_only = yes
 	immediate = {
 		set_country_flag = rev_usa_election_suspended_2028
@@ -177,10 +271,10 @@ country_event = {
 		NOT = { has_country_flag = rev_usa_cw_split_prepared }
 		NOT = { has_country_flag = rev_usa_cw_coup_fired }
 	}
-		option = {
+	option = {
 		name = rev_usa_cw.310.a
 		ai_chance = {
-			factor = 90
+			factor = 1000
 		}
 		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.310.a"
 		# Coup succeeds: Trump consolidates control and the split is prepared.
@@ -207,10 +301,10 @@ country_event = {
 			days = 20
 		}
 	}
-		option = {
+	option = {
 		name = rev_usa_cw.310.b
 		ai_chance = {
-			factor = 10
+			factor = 1
 		}
 		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.310.b"
 		# Coup collapses; Trump is arrested and the elections run their course.
@@ -266,7 +360,7 @@ country_event = {
 	id = rev_usa_cw.314
 	title = rev_usa_cw.314.t
 	desc = rev_usa_cw.314.d
-	picture = GFX_report_event_generic_war
+	picture = GFX_report_event_usa_politics
 	is_triggered_only = yes
 
 	trigger = {
@@ -350,6 +444,15 @@ country_event = {
 					ENG = { set_faction_leader = yes }
 				}
 				NATO_leave = yes
+				if = {
+					limit = {
+						GER = {
+							exists = yes
+							NOT = { is_subject = yes }
+						}
+					}
+					GER = { country_event = { id = rev_usa_cw.317 hours = 1 } }
+				}
 			}
 			create_wargoal = {
 				target = CAN
@@ -376,7 +479,7 @@ country_event = {
 	id = rev_usa_cw.315
 	title = rev_usa_cw.315.t
 	desc = rev_usa_cw.315.d
-	picture = GFX_report_event_generic_war
+	picture = GFX_civil_war_world
 	is_triggered_only = yes
 
 	trigger = {
@@ -394,7 +497,6 @@ country_event = {
 				CAN = {
 					exists = yes
 					NOT = { is_subject = yes }
-					NOT = { has_war = yes }
 				}
 				NOT = { has_war_with = CAN }
 			}
@@ -409,7 +511,61 @@ country_event = {
 		}
 		country_event = {
 			id = rev_usa_cw.316
-			days = 10
+			days = 15
+		}
+	}
+}
+
+country_event = {
+	id = rev_usa_cw.317
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.317 rebuilding or reclaiming NATO leadership."
+		if = {
+			limit = {
+				tag = GER
+				exists = yes
+				NOT = { is_subject = yes }
+				is_in_faction = yes
+				NOT = { is_faction_leader = yes }
+			}
+			set_faction_leader = yes
+		}
+		if = {
+			limit = {
+				tag = GER
+				exists = yes
+				NOT = { is_subject = yes }
+				NOT = { is_in_faction = yes }
+			}
+			create_faction_from_template = faction_template_nato
+			if = { limit = { BEL = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } BEL = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = BEL }
+			if = { limit = { CAN = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } CAN = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = CAN }
+			if = { limit = { DEN = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } DEN = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = DEN }
+			if = { limit = { FRA = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } FRA = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = FRA }
+			if = { limit = { ICE = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } ICE = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = ICE }
+			if = { limit = { ITA = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } ITA = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = ITA }
+			if = { limit = { LUX = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } LUX = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = LUX }
+			if = { limit = { HOL = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } HOL = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = HOL }
+			if = { limit = { NOR = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } NOR = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = NOR }
+			if = { limit = { ENG = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } ENG = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = ENG }
+			if = { limit = { GRE = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } GRE = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = GRE }
+			if = { limit = { CZE = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } CZE = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = CZE }
+			if = { limit = { POL = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } POL = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = POL }
+			if = { limit = { SWE = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } SWE = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = SWE }
+			if = { limit = { FIN = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } FIN = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = FIN }
+			if = { limit = { SLO = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } SLO = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = SLO }
+			if = { limit = { LAT = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } LAT = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = LAT }
+			if = { limit = { EST = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } EST = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = EST }
+			if = { limit = { LIT = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } LIT = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = LIT }
+			if = { limit = { BUL = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } BUL = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = BUL }
+			if = { limit = { ROM = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } ROM = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = ROM }
+			if = { limit = { ALB = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } ALB = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = ALB }
+			if = { limit = { CRO = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } CRO = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = CRO }
+			if = { limit = { MNT = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } MNT = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = MNT }
+			if = { limit = { FYR = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } FYR = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = FYR }
 		}
 	}
 }
@@ -418,7 +574,7 @@ country_event = {
 	id = rev_usa_cw.316
 	title = rev_usa_cw.316.t
 	desc = rev_usa_cw.316.d
-	picture = GFX_report_event_generic_war
+	picture = GFX_civil_war_world
 	is_triggered_only = yes
 
 	trigger = {
@@ -440,6 +596,8 @@ country_event = {
 			release = CAL
 		}
 
+		CAL = { load_focus_tree = REV_cal_focus }
+
 		# Pacific resistance bloc.
 		809 = { transfer_state_to = CAL add_core_of = CAL add_core_of = USA } # Washington
 		810 = { transfer_state_to = CAL add_core_of = CAL add_core_of = USA } # Oregon
@@ -460,14 +618,6 @@ country_event = {
 		CAL = {
 			load_oob = "CAL_From_USA"
 
-			if = {
-				limit = { NOT = { has_war_with = USA } }
-				declare_war_on = {
-					target = USA
-					type = annex_everything
-				}
-			}
-
 			set_politics = {
 				ruling_party = democratic
 				last_election = "2028.11.5"
@@ -478,10 +628,6 @@ country_event = {
 				name = "Gavin Newsom"
 				ideology = liberalism
 				traits = { career_politician }
-			}
-			if = {
-				limit = { NOT = { has_idea = NATO_member } }
-				NATO_join = yes
 			}
 		}
 
@@ -501,7 +647,7 @@ country_event = {
 	id = rev_usa_cw.31
 	title = rev_usa_cw.31.t
 	desc = rev_usa_cw.31.d
-	picture = GFX_report_event_generic_war
+	picture = GFX_report_event_generic_military
 	is_triggered_only = yes
 
 	trigger = {
@@ -524,7 +670,7 @@ country_event = {
 	id = rev_usa_cw.311
 	title = rev_usa_cw.311.t
 	desc = rev_usa_cw.311.d
-	picture = GFX_report_event_generic_war
+	picture = GFX_report_event_usa_politics
 	is_triggered_only = yes
 
 	trigger = {
@@ -584,7 +730,7 @@ country_event = {
 	id = rev_usa_cw.312
 	title = rev_usa_cw.312.t
 	desc = rev_usa_cw.312.d
-	picture = GFX_report_event_generic_war
+	picture = GFX_report_event_usa_politics
 	is_triggered_only = yes
 
 	trigger = {
@@ -752,7 +898,7 @@ country_event = {
 	id = rev_usa_cw.36
 	title = rev_usa_cw.36.t
 	desc = rev_usa_cw.36.d
-	picture = GFX_report_event_generic_war
+	picture = GFX_report_event_usa_politics
 	is_triggered_only = yes
 
 	trigger = {
@@ -963,7 +1109,7 @@ country_event = {
 	id = rev_usa_cw.41
 	title = rev_usa_cw.41.t
 	desc = rev_usa_cw.41.d
-	picture = GFX_report_event_generic_war
+	picture = GFX_civil_war_world
 	is_triggered_only = yes
 
 	trigger = {
@@ -1124,3 +1270,4 @@ country_event = {
 		}
 	}
 }
+

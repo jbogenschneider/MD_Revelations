@@ -67,21 +67,14 @@ units = {
 	}
 	division = {
 		name = "Chicago Resistance Militia"
-		location = 15742
+		location = 15596
 		division_template = "US Resistance Militia"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.6
 	}
 	division = {
-		name = "LA Resistance Militia"
-		location = 11757
-		division_template = "US Resistance Militia"
-		start_experience_factor = 0.4
-		start_equipment_factor = 0.6
-	}
-	division = {
-		name = "Seatle Resistance Militia"
-		location = 7315
+		name = "Madison Resistance Militia"
+		location = 15596
 		division_template = "US Resistance Militia"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.6

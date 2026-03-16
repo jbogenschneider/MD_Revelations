@@ -55,115 +55,165 @@ capital = 811
 
 	# General Technology Setting
 	set_technology = {
-		nuclear_technology = 1
-		reactor1 = 1
-		reactor2 = 1
+		complete_special_project = sp:sp_space_program_gdm
+		complete_special_project = sp:sp_missile_project
+		complete_special_project = sp:sp_missile_project_non_got
+		set_technology = { night_vision_3 = 1 }
+		set_technology = { command_control_equipment3 = 1 }
+		set_technology = { command_control_equipment4 = 1 }
+		set_technology = { land_Drone_equipment3 = 1 }
+		set_technology = { util_vehicle_5 = 1 }
+		set_technology = { mbt_tech_3 = 1 }	
+		set_technology = { MBT_5 = 1 }
+		set_technology = { Rec_tank_3 = 1 }
+		set_technology = { IFV_5 = 1 }
+		set_technology = { IFV_6 = 1 }
+		set_technology = { APC_5 = 1 }
+		set_technology = { APC_6 = 1 }
+		set_technology = { artillery_3 = 1 }
+		set_technology = { Arty_upgrade_4 = 1 }
+		set_technology = { transport_helicopter4 = 1 }
+		set_technology = { SP_Anti_Air_3 = 1 }
+		set_technology = { L_Strike_fighter3 = 1 }
+		set_technology = { Strike_fighter4 = 1 }
+		set_technology = { MR_Fighter4 = 1 }
+		set_technology = { Strike_fighter3 = 1 }
+		set_technology = { MR_Fighter3 = 1 }
+		set_technology = { Strike_fighter4 = 1 }
+		set_technology = { MR_Fighter4 = 1 }
+		set_technology = { Strike_fighter3 = 1 }
+		set_technology = { MR_Fighter3 = 1 }
+		set_technology = { Air_UAV1 = 1 }
+		set_technology = { Air_UAV2 = 1 }
+		set_technology = { awacs_plane2 = 1 }
+		set_technology = { naval_plane4 = 1 }
+		set_technology = { self-replicated_3D_printer = 1 }
+		set_technology = { commercial_nanomanufacturing = 1 }
+		set_technology = { modern_3D_printing = 1 }
+		set_technology = { synthetic_life = 1 }
+		set_technology = { electrification_4 = 1 }
+		set_technology = { electrification_5 = 1 }
+		set_technology = { utility_scale_battery_storage2 = 1 }
+		set_technology = { energy_efficiency4 = 1 }
+		set_technology = { energy_efficiency5 = 1 }
+		#set_technology = { energy_efficiency6 = 1 }
+		set_technology = { improved_modern_renewables = 1 }
+		set_technology = { advanced_modern_renewables = 1 }
+		set_technology = { reactor3 = 1 }
+		#set_technology = { construction6 = 1 }
+		set_technology = { excavation6 = 1 }
+		set_technology = { satellite_based_agricultural_planning = 1 }
+		set_technology = { programmable_harvesters = 1 }
+		set_technology = { improved_harvesting_automation = 1 }
+		set_technology = { fuel_refining5 = 1 }
+		set_technology = { fuel_efficiency4 = 1 }
+		set_technology = { AT_upgrade_3 = 1 }
+		set_technology = { Anti_tank_3 = 1 }
+		set_technology = { Anti_Air_3 = 1 }
+		set_technology = { internet5 = 1 }
+		set_technology = { modern_deep_learning = 1 }
+		set_technology = { fully_automated_drones = 1 }
+		set_technology = { crispr_treatment = 1 }
+		set_technology = { special_forces5 = 1 }
 
-		integrated_transportation_system = 1
-		post_conventional_rail = 1
-		early_freight_locomotive = 1
-
-
-		combined_arms = 1
-
-		infantry_weapons = 1
-		infantry_weapons1 = 1
-		infantry_weapons2 = 1
-		infantry_weapons3 = 1
-		support_weapons = 1
-		squad_automatic_weapon = 1
-		tandem_charge_warheads = 1
-		support_weapons2 = 1
-		support_weapons3 = 1
-		special_forces = 1
-		special_forces2 = 1
-		special_forces3 = 1
-		special_forces4 = 1
-
-		combat_eng_equipment = 1
-
-		night_vision_1 = 1
-		night_vision_2 = 1
-		night_vision_3 = 1 #1985
-
-		command_control_equipment = 1
-		command_control_equipment1 = 1
-		command_control_equipment2 = 1
-		command_control_equipment3 = 1
-
-		land_Drone_equipment = 1
-		land_Drone_equipment1 = 1
-
-		body_armor_1980 = 1
-		body_armor_2000 = 1
-
-		camouflage = 1
-		camouflage2 = 1
-
-		util_vehicle_0 = 1
-		util_vehicle_1 = 1
-		util_vehicle_2 = 1
-		util_vehicle_3 = 1
-
-		Anti_tank_0 = 1
-		Heavy_Anti_tank_0 = 1
-		AT_upgrade_1 = 1
-		AT_upgrade_2 = 1
-		Anti_tank_1 = 1
-		Heavy_Anti_tank_1 = 1
-		Anti_tank_2 = 1
-		Heavy_Anti_tank_2 = 1
-
-
-		transport_helicopter1 = 1
-		nsb_transport_helicopter1 = 1
-		transport_helicopter2 = 1
-		nsb_transport_helicopter2 = 1
-
-
-
-		basic_computing = 1
-		integrated_circuit = 1
-		computing1 = 1
-		decryption1 = 1
-		encryption1 = 1
-		microprocessors = 1
-		computing2 = 1
-		decryption2 = 1
-		encryption2 = 1
-		computing3 = 1
-		decryption3 = 1
-		encryption3 = 1
-		DNA_fingerprinting = 1
-
-		radar = 1
-		internet1 = 1
-		internet2 = 1
-		gprs = 1
-		fuel_silos = 1
-
-		industrial_electrospun_polymeric_nanofibers = 1
-		multiwalled_carbon_nanotubes = 1
-		modern_electrospinning = 1
-		stereolitography = 1
-		early_3D_printers = 1
-		t3D_wax_printer = 1
-		DNA_fingerprinting = 1
-		modern_gmo = 1
-		fuel_refining = 1
-		fuel_refining2 = 1
-		energy_efficiency = 1
-		energy_efficiency2 = 1
-		fuel_efficiency = 1
-		early_renewables = 1
-		renewables = 1
-		electrification_1 = 1
-		construction1 = 1
-		stronghold_building_1 = 1
-		land_fort_building_1 = 1
-		construction2 = 1
-		excavation1 = 1
-		excavation2 = 1
+		set_technology = { AS_Fighter4 = 1 }
+		set_technology = { infantry_weapons5 = 1 }
+		set_technology = { night_vision_3 = 1 }
+		set_technology = { night_vision_4 = 1 }
+		set_technology = { util_vehicle_5 = 1 }
+		set_technology = { land_Drone_equipment3 = 1 }
+		set_technology = { support_weapons5 = 1 }
+		set_technology = { smart_drones = 1 }
+		set_technology = { decryption4 = 1 }
+		set_technology = { encryption4 = 1 }
+		set_technology = { decryption5 = 1 }
+		set_technology = { encryption5 = 1 }
+		set_technology = { computing5 = 1 }
+		set_technology = { nsb_attack_helicopter_tech_4 = 1 }
+		set_technology = { attack_helicopter4 = 1 }
+		set_technology = { Air_Kamikaze1 = 1 }
+		set_technology = { air_defense = 1 }
+		set_technology = { SAM0 = 1 }
+		set_technology = { SAM1 = 1 }
+		set_technology = { SAM2 = 1 }
+		set_technology = { SAM3 = 1 }
+		set_technology = { SAM4 = 1 }
+		set_technology = { SAM0_non_got = 1 }
+		set_technology = { SAM1_non_got = 1 }
+		set_technology = { SAM2_non_got = 1 }
+		set_technology = { SAM3 = 1 }
+		set_technology = { SAM4 = 1 }
+		set_technology = { SAM3 = 1 }
+		set_technology = { SAM4 = 1 }
+		set_technology = { nuclear_engines = 1 }
+		set_technology = { ICBM = 1 }
+		set_technology = { GNSS4 = 1 }
+		set_technology = { GNSS5 = 1 }
+		set_technology = { COMSAT4 = 1 }
+		set_technology = { COMSAT5 = 1 }
+		set_technology = { SPYSAT3 = 1 }
+		set_technology = { SPYSAT4 = 1 }
+		set_technology = { OLV3 = 1 }
+		set_technology = { OLV4 = 1 }
+		set_technology = { TEL_3 = 1 }
+		set_technology = { TEL_4 = 1 }
+		set_technology = { TEL_5 = 1 }
+		set_technology = { GLCM1 = 1 }
+		set_technology = { GLCM2 = 1 }
+		set_technology = { GLCM3 = 1 }
+		set_technology = { GLCM4 = 1 }
+		set_technology = { GLCM5 = 1 }
+		set_technology = { TEL_3_non_got = 1 }
+		set_technology = { TEL_4_non_got = 1 }
+		set_technology = { TEL_5_non_got = 1 }
+		set_technology = { GLCM1_non_got = 1 }
+		set_technology = { GLCM2_non_got = 1 }
+		set_technology = { GLCM3_non_got = 1 }
+		set_technology = { GLCM4_non_got = 1 }
+		set_technology = { GLCM5_non_got = 1 }
+	
+		set_technology = { corvette_hull_5 = 1 }
+		set_technology = { stealth_corvette_hull_1 = 1 }
+		#set_technology = { stealth_corvette_hull_2 = 1 }
+		set_technology = { frigate_hull_5 = 1 }
+		set_technology = { stealth_frigate_hull_1 = 1 }
+		#set_technology = { stealth_frigate_hull_2 = 1 }
+		set_technology = { stealth_destroyer_hull_1 = 1 }
+		set_technology = { cruiser_hull_4 = 1 }
+		set_technology = { aircraft_heli_engineering_3 = 1 }
+		set_technology = { helicopter_operator_hull_3 = 1 }
+		set_technology = { carrier_hull_2 = 1 }
+		set_technology = { carrier_hull_3 = 1 }
+		#set_technology = { carrier_hull_4 = 1 }
+		set_technology = { tech_submarine_engineering_3 = 1 }
+		set_technology = { attack_submarine_hull_3 = 1 }
+		set_technology = { attack_submarine_hull_4 = 1 }
+		#set_technology = { attack_submarine_hull_5 = 1 }
+		set_technology = { missile_submarine_hull_3 = 1 }
+		set_technology = { missile_submarine_hull_4 = 1 }
+		#set_technology = { missile_submarine_hull_5 = 1 }
+		set_technology = { tech_power_systems_2 = 1 }
+		set_technology = { tech_nuclear_power_systems_1 = 1 }
+		set_technology = { tech_nuclear_power_systems_2 = 1 }
+		set_technology = { tech_fire_control_1 = 1 }
+		set_technology = { tech_fire_control_2 = 1 }
+		set_technology = { tech_combat_radar_3 = 1 }
+		set_technology = { tech_combat_sonar_3 = 1 }
+		set_technology = { tech_rail_guns = 1 }
+		#set_technology = { tech_rail_guns_1 = 1 }
+		set_technology = { tech_point_defense_system_2 = 1 }
+		set_technology = { tech_point_defense_system_3 = 1 }
+		#set_technology = { tech_point_defense_system_4 = 1 }
+		set_technology = { tech_turret_missiles_surface_2 = 1 }
+		#set_technology = { tech_turret_missiles_surface_3 = 1 }
+		set_technology = { tech_turret_missiles_aa_2 = 1 }
+		#set_technology = { tech_turret_missiles_aa_3 = 1 }
+		set_technology = { tech_vls_surface_2 = 1 }
+		#set_technology = { tech_vls_surface_3 = 1 }
+		set_technology = { tech_vls_aa_3 = 1 }
+		set_technology = { tech_torpedoes_3 = 1 }
+		set_technology = { tech_specialized_protective_equipment = 1 }
+		set_technology = { tech_advanced_landing_craft = 1 }
 	}
 
 
@@ -531,7 +581,8 @@ capital = 811
 		}
 	}
 
-	set_variable = { var = treasury value = 10 }
+	set_variable = { var = debt value = 0 }
+	set_variable = { var = treasury value = 100 }
 	set_variable = { var = corporate_tax_rate value = 30 }
 	set_variable = { var = population_tax_rate value = 15 }
 

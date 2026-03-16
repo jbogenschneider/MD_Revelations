@@ -1,0 +1,123 @@
+focus_tree = {
+	id = REV_cal_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 20000
+			tag = CAL
+		}
+	}
+	continuous_focus_position = { x = 50 y = 120 }
+
+	focus = {
+		id = CAL_buy_weapons
+		icon = missile_artillery
+		x = 9
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_AIR_FOCUS }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			add_equipment_to_stockpile = { type = command_control_equipment4 amount = 2500 }
+			add_equipment_to_stockpile = { type = MR_Fighter4 amount = 24 }
+			add_equipment_to_stockpile = { type = Strike_fighter2 amount = 12 }
+			add_equipment_to_stockpile = { type = Air_UAV2 amount = 18 }
+			add_equipment_to_stockpile = { type = kamikaze_drone_2 amount = 600 }
+			add_equipment_to_stockpile = { type = sam_missile_equipment_4 amount = 60 }
+		}
+	}
+
+	focus = {
+		id = CAL_organize_military_leadership
+		icon = brothers_in_arms
+		x = 11
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MILITARY }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			add_war_support = 0.05
+			army_experience = 20
+			air_experience = 20
+			navy_experience = 20
+			create_corps_commander = {
+				name = "Laura Richardson"
+				traits = { infantry_officer }
+				skill = 3
+				attack_skill = 3
+				defense_skill = 3
+				planning_skill = 2
+				logistics_skill = 2
+			}
+			create_corps_commander = {
+				name = "Kenneth Wilsbach"
+				traits = { air_cavalry_leader }
+				skill = 3
+				attack_skill = 3
+				defense_skill = 2
+				planning_skill = 3
+				logistics_skill = 2
+			}
+			create_corps_commander = {
+				name = "Matthew Beevers"
+				traits = { artillery_officer }
+				skill = 2
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 3
+				logistics_skill = 3
+			}
+			create_corps_commander = {
+				name = "Evan Pettus"
+				traits = { logistics_wizard }
+				skill = 2
+				attack_skill = 1
+				defense_skill = 2
+				planning_skill = 2
+				logistics_skill = 4
+			}
+		}
+	}
+
+	focus = {
+		id = CAL_prepare_for_war
+		icon = industry_military
+		x = 10
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MILITARY FOCUS_FILTER_NATO }
+		prerequisite = {
+			focus = CAL_buy_weapons
+			focus = CAL_organize_military_leadership
+		}
+		available = {
+			NOT = { is_in_faction = yes }
+			GER = {
+				exists = yes
+				is_faction_leader = yes
+				has_faction_template = faction_template_nato
+			}
+		}
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = NATO_member } }
+				add_ideas = NATO_member
+			}
+			if = {
+				limit = {
+					GER = {
+						exists = yes
+						is_faction_leader = yes
+						has_faction_template = faction_template_nato
+					}
+					NOT = { is_in_faction = yes }
+				}
+				GER = { add_to_faction = ROOT }
+			}
+		}
+	}
+}

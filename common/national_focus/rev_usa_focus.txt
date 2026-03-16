@@ -564,4 +564,76 @@ focus_tree = {
             add_stability = 0.025
         }
     }
+
+    focus = {
+        id = USA_rally_southerners
+        icon = USA_south_carolina
+        x = 8
+        y = 8
+        cost = 3
+        available_if_capitulated = yes
+        available = {
+            has_country_leader = { name = "Donald Trump" ruling_only = yes }
+            any_country = {
+                has_idea = NATO_member
+                has_war_with = ROOT
+            }
+        }
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+        ai_will_do = {
+            base = 1
+        }
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: focus USA_rally_southerners completion_reward"
+            add_war_support = 0.03
+        }
+    }
+
+    focus = {
+        id = USA_rally_rural_and_west
+        icon = focus_ARG_anti_american_propaganda
+        x = 8
+        y = 9
+        cost = 3
+        available_if_capitulated = yes
+        available = {
+            has_country_leader = { name = "Donald Trump" ruling_only = yes }
+            any_country = {
+                has_idea = NATO_member
+                has_war_with = ROOT
+            }
+        }
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+        ai_will_do = {
+            base = 1
+        }
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: focus USA_rally_rural_and_west completion_reward"
+            add_war_support = 0.03
+        }
+    }
+
+    focus = {
+        id = USA_rally_christians
+        icon = american_christianity
+        x = 8
+        y = 10
+        cost = 3
+        available_if_capitulated = yes
+        available = {
+            has_country_leader = { name = "Donald Trump" ruling_only = yes }
+            any_country = {
+                has_idea = NATO_member
+                has_war_with = ROOT
+            }
+        }
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+        ai_will_do = {
+            base = 1
+        }
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: focus USA_rally_christians completion_reward"
+            add_war_support = 0.03
+        }
+    }
 }
