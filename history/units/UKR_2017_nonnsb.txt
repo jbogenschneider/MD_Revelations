@@ -913,18 +913,16 @@ units = {
 
 instant_effect = {
 	add_equipment_to_stockpile = {
-		type = kamikaze_drone_1
+		type = kamikaze_drone_2
 		amount = 1000
 	}
 	add_equipment_to_stockpile = {
-		type = infantry_weapons3 #AK-74
-		amount = 17000
-		producer = SOV
+		type = infantry_weapons4 
+		amount = 22000
 	}
 	add_equipment_to_stockpile = {
-		type = command_control_equipment3
-		amount = 2000
-		producer = SOV
+		type = command_control_equipment4
+		amount = 10000
 	}
 	add_equipment_to_stockpile = {
 		type = Anti_tank_1 #RPG-22
@@ -961,6 +959,10 @@ instant_effect = {
 		producer = SOV
 	}
 	add_equipment_to_stockpile = {
+		type = mbt_3 #nato
+		amount = 200
+	}
+	add_equipment_to_stockpile = {
 		type = mbt_hull_1 #T-72
 		variant_name = "T-72A"
 		amount = 70
@@ -973,10 +975,6 @@ instant_effect = {
 		producer = SOV
 	}
 	add_equipment_to_stockpile = {
-		type = Rec_tank_0 #BRDM2
-		amount = 350
-	}
-	add_equipment_to_stockpile = {
 		type = Rec_tank_0 #BRM-1K
 		amount = 115
 	}
@@ -987,12 +985,12 @@ instant_effect = {
 	}
 	add_equipment_to_stockpile = {
 		type = IFV_3
-		amount = 15
+		amount = 315
 		producer = SOV
 	}
 	add_equipment_to_stockpile = {
 		type = IFV_1 #BMP-1
-		amount = 310 #+400 for balance
+		amount = 50 #+400 for balance
 		producer = SOV
 	}
 	add_equipment_to_stockpile = {
@@ -1001,9 +999,8 @@ instant_effect = {
 		producer = SOV
 	}
 	add_equipment_to_stockpile = {
-		type = IFV_4 #BMP-3
-		amount = 4
-		producer = SOV
+		type = IFV_4 #nato
+		amount = 324
 	}
 	add_equipment_to_stockpile = {
 		type = APC_2
@@ -1016,26 +1013,20 @@ instant_effect = {
 	}
 	add_equipment_to_stockpile = {
 		type = APC_3 #BTR-70
-		amount = 235
+		amount = 205
 		producer = SOV
 	}
 	add_equipment_to_stockpile = {
-		type = APC_4 #BTR-80
+		type = APC_4 #nato
 		amount = 110
-		producer = SOV
 	}
 	add_equipment_to_stockpile = {
-		type = util_vehicle_0
-		amount = 180
+		type = util_vehicle_4
+		amount = 1480
 	}
 	add_equipment_to_stockpile = {
 		type = SP_arty_1 #2S19
-		amount = 241
-		producer = SOV
-	}
-	add_equipment_to_stockpile = {
-		type = SP_arty_0 #2S3
-		amount = 235
+		amount = 41
 		producer = SOV
 	}
 	add_equipment_to_stockpile = {
@@ -1049,8 +1040,8 @@ instant_effect = {
 		producer = SOV
 	}
 	add_equipment_to_stockpile = {
-		type = SP_arty_2 #2S7
-		amount = 6
+		type = SP_arty_3 #nato
+		amount = 56
 		producer = SOV
 	}
 	add_equipment_to_stockpile = {
@@ -1060,11 +1051,11 @@ instant_effect = {
 	}
 	add_equipment_to_stockpile = {
 		type = artillery_0 #2A36 Giatsint-B
-		amount = 180
+		amount = 80
 	}
 	add_equipment_to_stockpile = {
 		type = artillery_1 #2A65
-		amount = 230
+		amount = 30
 	}
 	add_equipment_to_stockpile = {
 		type = artillery_2 #2A65
@@ -1072,7 +1063,7 @@ instant_effect = {
 	}
 	add_equipment_to_stockpile = { #BM-21 Grad
 		type = SP_R_arty_0
-		amount = 203
+		amount = 33
 	}
 	add_equipment_to_stockpile = { #9P140 Uragan
 		type = SP_R_arty_1
@@ -1082,10 +1073,9 @@ instant_effect = {
 		type = SP_R_arty_2
 		amount = 75
 	}
-	add_equipment_to_stockpile = {
-		type = attack_helicopter1 #Mi-24 Hind
-		amount = 35
-		producer = SOV
+	add_equipment_to_stockpile = { #nato
+		type = SP_R_arty_3
+		amount = 25
 	}
 	add_equipment_to_stockpile = {
 		type = transport_helicopter1 #Mil Mi-8

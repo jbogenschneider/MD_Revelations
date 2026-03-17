@@ -11,7 +11,7 @@ focus_tree = {
 
 	focus = {
 		id = CAL_buy_weapons
-		icon = missile_artillery
+		icon = secret_weapons
 		x = 9
 		y = 0
 		cost = 10
@@ -86,7 +86,7 @@ focus_tree = {
 		icon = industry_military
 		x = 10
 		y = 1
-		cost = 10
+		cost = 5
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MILITARY FOCUS_FILTER_NATO }
 		prerequisite = {
@@ -94,11 +94,9 @@ focus_tree = {
 			focus = CAL_organize_military_leadership
 		}
 		available = {
-			NOT = { is_in_faction = yes }
 			GER = {
 				exists = yes
 				is_faction_leader = yes
-				has_faction_template = faction_template_nato
 			}
 		}
 		ai_will_do = { base = 1 }
@@ -112,7 +110,6 @@ focus_tree = {
 					GER = {
 						exists = yes
 						is_faction_leader = yes
-						has_faction_template = faction_template_nato
 					}
 					NOT = { is_in_faction = yes }
 				}

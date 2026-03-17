@@ -580,6 +580,7 @@ country_event = {
 	trigger = {
 		tag = USA
 		has_country_leader = { name = "Donald Trump" ruling_only = yes }
+		picture = "Donald_Trump.dds"
 		has_war_with = CAN
 		NOT = { has_country_flag = rev_usa_cw_american_resistance_fired }
 	}
@@ -614,9 +615,13 @@ country_event = {
 		767 = { transfer_state_to = CAN add_core_of = CAN add_core_of = USA cancel_resistance = yes set_resistance = 0 set_compliance = 100 } # Massachusetts
 		769 = { transfer_state_to = CAN add_core_of = CAN add_core_of = USA cancel_resistance = yes set_resistance = 0 set_compliance = 100 } # New York
 		780 = { transfer_state_to = CAN add_core_of = CAN add_core_of = USA cancel_resistance = yes set_resistance = 0 set_compliance = 100 } # Minnesota
+		768 = { transfer_state_to = CAN add_core_of = CAN add_core_of = USA cancel_resistance = yes set_resistance = 0 set_compliance = 100 } # conn
+		1084 = { transfer_state_to = CAN add_core_of = CAN add_core_of = USA cancel_resistance = yes set_resistance = 0 set_compliance = 100 } # rhode
+
 
 		CAL = {
 			load_oob = "CAL_From_USA"
+			rev_grant_california_split_technology = yes
 
 			set_politics = {
 				ruling_party = democratic
@@ -626,6 +631,7 @@ country_event = {
 			}
 			create_country_leader = {
 				name = "Gavin Newsom"
+				picture = "gavin_newsom.dds"
 				ideology = liberalism
 				traits = { career_politician }
 			}
@@ -1137,6 +1143,179 @@ country_event = {
 			limit = { country_exists = HWI }
 			annex_country = { target = HWI transfer_troops = yes }
 		}
+	}
+}
+
+# American Resistance victory resolution: NATO/CAN defeat Trump's USA and restore the federal government.
+country_event = {
+	id = rev_usa_cw.42
+	title = rev_usa_cw.42.t
+	desc = rev_usa_cw.42.d
+	picture = GFX_report_event_usa_election
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = rev_usa_cw_american_resistance_fired
+		has_war_with = CAN
+		1182 = {
+			NOT = { is_controlled_by = USA }
+		}
+		NOT = { has_global_flag = rev_usa_cw_concluded }
+	}
+
+	immediate = {
+		set_global_flag = rev_usa_cw_concluded
+		set_country_flag = rev_usa_cw_restoration_transition
+		clr_country_flag = rev_usa_cw_american_resistance_fired
+
+		every_country = {
+			limit = { has_war_with = USA }
+			white_peace = USA
+		}
+
+		every_state = {
+			limit = {
+				is_owned_by = CAN
+				is_core_of = USA
+			}
+			transfer_state_to = USA
+			cancel_resistance = yes
+			set_resistance = 0
+			set_compliance = 100
+		}
+
+		if = {
+			limit = { country_exists = CAL }
+			annex_country = { target = CAL transfer_troops = yes }
+		}
+
+		set_politics = {
+			ruling_party = democratic
+			last_election = "2028.11.5"
+			election_frequency = 48
+			elections_allowed = yes
+		}
+		set_popularities = {
+			democratic = 62
+			fascism = 0
+			communism = 4
+			neutrality = 24
+			nationalist = 10
+		}
+		create_country_leader = {
+			name = "Hakeem Jeffries"
+			picture = "Hakeem-Jeffries.dds"
+			ideology = liberalism
+			traits = {
+				career_politician
+			}
+		}
+		if = {
+			limit = { NOT = { has_idea = NATO_member } }
+			add_ideas = NATO_member
+		}
+		if = {
+			limit = {
+				NOT = { is_in_faction = yes }
+				GER = {
+					exists = yes
+					is_in_faction = yes
+					is_faction_leader = yes
+					NOT = { has_war_with = USA }
+				}
+			}
+			GER = { add_to_faction = USA }
+		}
+		if = {
+			limit = {
+				NOT = { is_in_faction = yes }
+				FRA = {
+					exists = yes
+					is_in_faction = yes
+					is_faction_leader = yes
+					NOT = { has_war_with = USA }
+				}
+			}
+			FRA = { add_to_faction = USA }
+		}
+		if = {
+			limit = {
+				NOT = { is_in_faction = yes }
+				ENG = {
+					exists = yes
+					is_in_faction = yes
+					is_faction_leader = yes
+					NOT = { has_war_with = USA }
+				}
+			}
+			ENG = { add_to_faction = USA }
+		}
+		if = {
+			limit = {
+				NOT = { is_in_faction = yes }
+				CAN = {
+					exists = yes
+					is_in_faction = yes
+					is_faction_leader = yes
+					NOT = { has_war_with = USA }
+				}
+			}
+			CAN = { add_to_faction = USA }
+		}
+		add_stability = 0.08
+		add_war_support = -0.12
+
+		clr_country_flag = rev_usa_civil_war_initialized
+		clr_country_flag = rev_usa_cw_launch_event_fired
+		clr_country_flag = rev_usa_cw_coup_fired
+		clr_country_flag = rev_usa_cw_player_side_chosen
+		clr_country_flag = rev_usa_cw_player_side_usb
+		clr_country_flag = rev_usa_cw_player_side_usa
+
+		country_event = { id = rev_usa_cw.43 days = 30 }
+	}
+
+	option = {
+		name = rev_usa_cw.42.a
+	}
+}
+
+country_event = {
+	id = rev_usa_cw.43
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = rev_usa_cw_restoration_transition
+		NOT = { has_country_flag = rev_usa_cw_restoration_kelly_done }
+	}
+
+	immediate = {
+		clr_country_flag = rev_usa_cw_restoration_transition
+		set_country_flag = rev_usa_cw_restoration_kelly_done
+		set_country_flag = rev_usa_post_kelly_tree_active
+		load_focus_tree = REV_usa_post_kelly_focus
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		create_country_leader = {
+			name = "Mark Kelly"
+			picture = "mark_kelly.dds"
+			expire = "2033.1.20"
+			ideology = liberalism
+			traits = {
+				career_politician
+			}
+		}
+		add_stability = 0.05
+		add_war_support = -0.05
+	}
+
+	option = {
+		name = OK
 	}
 }
 

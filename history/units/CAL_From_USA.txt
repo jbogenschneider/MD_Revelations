@@ -215,10 +215,33 @@ units = {
 	}
 }
 instant_effect = {
-		add_equipment_to_stockpile = { type = infantry_weapons4 amount = 90000 }
+		add_equipment_to_stockpile = { type = infantry_weapons4 amount = 80000 }
 		add_equipment_to_stockpile = { type = command_control_equipment4 amount = 12000 }
 		add_equipment_to_stockpile = { type = Anti_tank_3 amount = 2800 }
 		add_equipment_to_stockpile = { type = Anti_Air_3 amount = 2200 }
 		add_equipment_to_stockpile = { type = IFV_4 amount = 800 }
 		add_equipment_to_stockpile = { type = APC_4 amount = 1200 }
+		add_equipment_to_stockpile = { type = util_vehicle_5 amount = 2200 }
+		add_equipment_to_stockpile = { type = util_vehicle_4 amount = 2000 }
+		add_equipment_to_stockpile = { type = MBT_3 amount = 200 }
+		add_equipment_to_stockpile = {
+		type = AS_Fighter2 #F-15A Eagle
+			amount = 44
+		}
+		add_equipment_to_stockpile = {
+			type = Strike_fighter3 #F-15E Strike Eagle
+			amount = 70
+		}
+		add_equipment_to_stockpile = {
+			type = MR_Fighter2 #F-16A Fighting Falcon
+			amount = 65
+		}
+		add_equipment_to_stockpile = {
+			type = MR_Fighter3 #F-16C
+			amount = 95
+		}
+		add_equipment_to_stockpile = {
+			type = awacs_equipment_1 #E-3 Sentry
+			amount = 5
+		}
 	}

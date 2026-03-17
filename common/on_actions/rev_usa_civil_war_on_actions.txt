@@ -60,6 +60,18 @@ on_actions = {
 			if = {
 				limit = {
 					tag = USA
+					has_country_flag = rev_usa_cw_american_resistance_fired
+					NOT = { has_global_flag = rev_usa_cw_concluded }
+					has_war_with = CAN
+					1182 = {
+						NOT = { is_controlled_by = USA }
+					}
+				}
+				country_event = { id = rev_usa_cw.42 }
+			}
+			if = {
+				limit = {
+					tag = USA
 					has_country_flag = rev_usa_civil_war_initialized
 					has_country_flag = rev_usa_cw_launch_event_fired
 					NOT = { has_global_flag = rev_usa_cw_concluded }

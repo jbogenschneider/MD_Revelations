@@ -114,7 +114,7 @@ country_event = {
     option = {
         name = OK
 
-        ai_chance = { factor = 60 }
+        ai_chance = { factor = 40 }
 
 		add_manpower = 300000
         if = {
@@ -126,7 +126,7 @@ country_event = {
 	}
     option = {
 		name = No
-		ai_chance = { factor = 40 }
+		ai_chance = { factor = 60 }
 	}
 }
 

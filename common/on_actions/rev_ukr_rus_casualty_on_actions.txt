@@ -161,7 +161,7 @@ on_actions = {
 				}
 				# Baseline losses increased by 25% after Starlink/social media removal.
 				add_manpower = -12000
-				add_equipment_to_stockpile = { type = util_vehicle_equipment amount = -125 }
+				add_equipment_to_stockpile = { type = util_vehicle_equipment amount = -105 }
 				add_equipment_to_stockpile = { type = MBT_equipment amount = -13 }
 				add_equipment_to_stockpile = { type = IFV_equipment amount = -13 }
 				add_equipment_to_stockpile = { type = APC_equipment amount = -6 }
@@ -173,7 +173,7 @@ on_actions = {
 					NOT = { has_country_flag = rev_russia_starlink_social_removed_2026 }
 				}
 				add_manpower = -9000
-				add_equipment_to_stockpile = { type = util_vehicle_equipment amount = -100 }
+				add_equipment_to_stockpile = { type = util_vehicle_equipment amount = -80 }
 				add_equipment_to_stockpile = { type = MBT_equipment amount = -10 }
 				add_equipment_to_stockpile = { type = IFV_equipment amount = -10 }
 				add_equipment_to_stockpile = { type = APC_equipment amount = -5 }

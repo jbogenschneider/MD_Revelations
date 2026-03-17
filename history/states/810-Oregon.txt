@@ -34,7 +34,7 @@ state = {
 			arms_factory = 2
 			air_base = 4
 			anti_air_building = 1
-			industrial_complex = 3
+			industrial_complex = 4
 			offices = 4
 			agriculture_district = 2
 		}
