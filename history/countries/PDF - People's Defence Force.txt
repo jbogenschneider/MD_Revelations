@@ -1,0 +1,15 @@
+capital = 504
+
+2024.1.1 = {
+	set_popularities = {
+		democratic = 0
+		fascism = 0
+		communism = 20
+		neutrality = 80
+		nationalist = 0
+	}
+	set_politics = {
+		ruling_party = neutrality
+		elections_allowed = no
+	}
+}

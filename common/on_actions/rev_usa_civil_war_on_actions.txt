@@ -60,6 +60,33 @@ on_actions = {
 			if = {
 				limit = {
 					tag = USA
+					has_country_leader = { name = "Donald Trump" ruling_only = yes }
+					NOT = { has_country_flag = rev_usa_cw_nato_settlement_offer_fired }
+					OR = {
+						NOT = { country_exists = CAN }
+						CAN = { has_capitulated = yes }
+					}
+					OR = {
+						NOT = { country_exists = CAL }
+						CAL = { has_capitulated = yes }
+					}
+					1162 = {
+						is_controlled_by = USA
+					}
+					1161 = {
+						is_controlled_by = USA
+					}
+					any_country = {
+						has_idea = NATO_member
+						NOT = { tag = USA }
+						has_war_with = USA
+					}
+				}
+				country_event = { id = rev_usa_cw.44 }
+			}
+			if = {
+				limit = {
+					tag = USA
 					has_country_flag = rev_usa_cw_american_resistance_fired
 					NOT = { has_global_flag = rev_usa_cw_concluded }
 					has_war_with = CAN

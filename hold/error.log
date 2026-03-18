@@ -1,619 +1,482 @@
-[21:46:28][no_game_date][assetfactory_audio.cpp:499]: Could not find music file 'music/Ethiopia/ethiopian_highlands.ogg' in  file: music/music_bba.asset line: 7
-[21:46:28][no_game_date][assetfactory_audio.cpp:499]: Could not find music file 'music/Ethiopia/safer_grounds.ogg' in  file: music/music_bba.asset line: 13
-[21:46:28][no_game_date][assetfactory_audio.cpp:499]: Could not find music file 'music/Ethiopia/threat_from_red_sea.ogg' in  file: music/music_bba.asset line: 19
-[21:46:28][no_game_date][assetfactory_audio.cpp:499]: Could not find music file 'music/Ethiopia/wildlife_surroundings.ogg' in  file: music/music_bba.asset line: 25
-[21:46:28][no_game_date][assetfactory_audio.cpp:499]: Could not find music file 'music/Italy/cittadina_irresistibile.ogg' in  file: music/music_bba.asset line: 34
-[21:46:28][no_game_date][assetfactory_audio.cpp:499]: Could not find music file 'music/Italy/fino_a_combattere.ogg' in  file: music/music_bba.asset line: 40
-[21:46:28][no_game_date][assetfactory_audio.cpp:499]: Could not find music file 'music/Italy/la_marcia_dei_soldati.ogg' in  file: music/music_bba.asset line: 46
-[21:46:28][no_game_date][assetfactory_audio.cpp:499]: Could not find music file 'music/Italy/lotta_di_vecchi_amici.ogg' in  file: music/music_bba.asset line: 52
-[21:46:28][no_game_date][assetfactory_audio.cpp:499]: Could not find music file 'music/Switzerland/dem_vaterland.ogg' in  file: music/music_bba.asset line: 61
-[21:46:28][no_game_date][assetfactory_audio.cpp:499]: Could not find music file 'music/Switzerland/der_preis_fur_die_freiheit.ogg' in  file: music/music_bba.asset line: 67
-[21:46:28][no_game_date][assetfactory_audio.cpp:499]: Could not find music file 'music/Switzerland/die_parade.ogg' in  file: music/music_bba.asset line: 73
-[21:46:28][no_game_date][assetfactory_audio.cpp:499]: Could not find music file 'music/Switzerland/tag_der_heimkehr.ogg' in  file: music/music_bba.asset line: 79
-[21:46:32][no_game_date][persistent.cpp:66]: Error: "Malformed token: width, near line: 17
+[20:04:18][no_game_date][assetfactory_audio.cpp:499]: Could not find music file 'music/Ethiopia/ethiopian_highlands.ogg' in  file: music/music_bba.asset line: 7
+[20:04:18][no_game_date][assetfactory_audio.cpp:499]: Could not find music file 'music/Ethiopia/safer_grounds.ogg' in  file: music/music_bba.asset line: 13
+[20:04:18][no_game_date][assetfactory_audio.cpp:499]: Could not find music file 'music/Ethiopia/threat_from_red_sea.ogg' in  file: music/music_bba.asset line: 19
+[20:04:18][no_game_date][assetfactory_audio.cpp:499]: Could not find music file 'music/Ethiopia/wildlife_surroundings.ogg' in  file: music/music_bba.asset line: 25
+[20:04:18][no_game_date][assetfactory_audio.cpp:499]: Could not find music file 'music/Italy/cittadina_irresistibile.ogg' in  file: music/music_bba.asset line: 34
+[20:04:18][no_game_date][assetfactory_audio.cpp:499]: Could not find music file 'music/Italy/fino_a_combattere.ogg' in  file: music/music_bba.asset line: 40
+[20:04:18][no_game_date][assetfactory_audio.cpp:499]: Could not find music file 'music/Italy/la_marcia_dei_soldati.ogg' in  file: music/music_bba.asset line: 46
+[20:04:18][no_game_date][assetfactory_audio.cpp:499]: Could not find music file 'music/Italy/lotta_di_vecchi_amici.ogg' in  file: music/music_bba.asset line: 52
+[20:04:18][no_game_date][assetfactory_audio.cpp:499]: Could not find music file 'music/Switzerland/dem_vaterland.ogg' in  file: music/music_bba.asset line: 61
+[20:04:18][no_game_date][assetfactory_audio.cpp:499]: Could not find music file 'music/Switzerland/der_preis_fur_die_freiheit.ogg' in  file: music/music_bba.asset line: 67
+[20:04:18][no_game_date][assetfactory_audio.cpp:499]: Could not find music file 'music/Switzerland/die_parade.ogg' in  file: music/music_bba.asset line: 73
+[20:04:18][no_game_date][assetfactory_audio.cpp:499]: Could not find music file 'music/Switzerland/tag_der_heimkehr.ogg' in  file: music/music_bba.asset line: 79
+[20:04:23][no_game_date][persistent.cpp:66]: Error: "Malformed token: width, near line: 17
 Malformed token: height, near line: 17" in file: "interface/rev_gui_fallbacks.gui" near line: 17
-[21:46:40][no_game_date][pdx_particle.cpp:1608]: Particle name is not unique: sparks_file
-[21:46:48][no_game_date][assetfactory.cpp:876]: Couldn't find parent clone entity JAP_MD4_infantry_1_entity, in file "gfx/entities/JAP_MD_infantryandvehicle.asset", near line 1808
-[21:46:50][no_game_date][pdx_entity.cpp:324]: Failed to find entity "JAP_infantry_entity_desert" for attachment in infantry
-[21:46:50][no_game_date][pdx_entity.cpp:324]: Failed to find entity "JAP_infantry_entity_desert" for attachment in infantry
-[21:46:52][no_game_date][persistent.cpp:66]: Error: "Unexpected token: sub_unit_bonus, near line: 967" in file: "common/doctrines/subdoctrines/land/land_equipment.txt" near line: 976
-[21:46:52][no_game_date][persistent.cpp:66]: Error: "Unexpected token: airborn_forces_operations, near line: 371" in file: "common/doctrines/subdoctrines/special forces/special_forces.txt" near line: 477
-[21:46:52][no_game_date][persistent.cpp:66]: Error: "Unexpected token: ranger_forces_doctrine, near line: 478" in file: "common/doctrines/subdoctrines/special forces/special_forces.txt" near line: 553
-[21:46:55][no_game_date][raid_database.cpp:98]: common/raids/cruise_missile_strike.txt:1804: Missing or invalid requirements for raid type 'divisions_cruise_missile_strike'
-[21:47:09][no_game_date][effect.cpp:443]: Invalid effect 'ITL' in common/bookmarks/the_gathering_storm.txt line : 2523
-[21:47:09][no_game_date][effect.cpp:356]: Error: "Unknown effect-type: ITL, near line: 2523" in file: "common/bookmarks/the_gathering_storm.txt" near line: 2606
-[21:47:10][no_game_date][peace_conference_database.cpp:81]: Peace action modifier is missing 'enable' condition: cost_multiplier (file 'common/peace_conference/cost_modifiers/00_generic_peace.txt' lines 24-25)
-[21:47:10][no_game_date][database_scoped_variables.cpp:62]: invalid database object for effect/trigger:  file: history/countries/CHI - China.txt line: 4604 mbt_hull_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:10][no_game_date][effect.cpp:356]: Error: "Invalid module "additional_machine_guns" attached to slot "special_type_slot_1".: additional_machine_guns, near line: 4613" in file: "history/countries/CHI - China.txt" near line: 4622
-[21:47:11][no_game_date][texturehandler.cpp:160]: Texture Handler encountered missing texture file: gfx/interface/technologies/SWE/INF/Gustafearly.dds
-[21:47:11][no_game_date][texturehandler.cpp:216]: Couldn't find texture file: 'gfx/interface/technologies/SWE/INF/Gustafearly.dds'
-[21:47:11][no_game_date][texturehandler.cpp:160]: Texture Handler encountered missing texture file: gfx/interface/technologies/SWE/INF/INF1.dds
-[21:47:11][no_game_date][texturehandler.cpp:216]: Couldn't find texture file: 'gfx/interface/technologies/SWE/INF/INF1.dds'
-[21:47:11][no_game_date][texturehandler.cpp:160]: Texture Handler encountered missing texture file: gfx/interface/technologies/SWE/INF/INF2.dds
-[21:47:11][no_game_date][texturehandler.cpp:216]: Couldn't find texture file: 'gfx/interface/technologies/SWE/INF/INF2.dds'
-[21:47:11][no_game_date][scopedvariable.cpp:571]: mio:SWE_bae_systems_hagglunds_tank_manufacturer does not match any MIO in database
-[21:47:11][no_game_date][history.cpp:270]: PDF - is missing a history file.
-[21:47:11][no_game_date][musicmanager.cpp:137]: Missing music_station faceplate GUI component containerWindowType with name: allies_faceplate
-[21:47:11][no_game_date][pdx_audio.cpp:1369]: Could not find music named dance_your_troubles_away
-[21:47:11][no_game_date][pdx_audio.cpp:1369]: Could not find music named from_glen_to_glen
-[21:47:11][no_game_date][pdx_audio.cpp:1369]: Could not find music named the_man_on_the_british_countryside
-[21:47:11][no_game_date][pdx_audio.cpp:1369]: Could not find music named winter_came_spring
-[21:47:11][no_game_date][pdx_audio.cpp:1369]: Could not find music named ethiopian_highlands
-[21:47:11][no_game_date][pdx_audio.cpp:1369]: Could not find music named safer_grounds
-[21:47:11][no_game_date][pdx_audio.cpp:1369]: Could not find music named threat_from_red_sea
-[21:47:11][no_game_date][pdx_audio.cpp:1369]: Could not find music named wildlife_surroundings
-[21:47:11][no_game_date][pdx_audio.cpp:1369]: Could not find music named cittadina_irresistibile
-[21:47:11][no_game_date][pdx_audio.cpp:1369]: Could not find music named fino_a_combattere
-[21:47:11][no_game_date][pdx_audio.cpp:1369]: Could not find music named la_marcia_dei_soldati
-[21:47:11][no_game_date][pdx_audio.cpp:1369]: Could not find music named lotta_di_vecchi_amici
-[21:47:11][no_game_date][pdx_audio.cpp:1369]: Could not find music named dem_vaterland
-[21:47:11][no_game_date][pdx_audio.cpp:1369]: Could not find music named der_preis_fur_die_freiheit
-[21:47:11][no_game_date][pdx_audio.cpp:1369]: Could not find music named die_parade
-[21:47:11][no_game_date][pdx_audio.cpp:1369]: Could not find music named tag_der_heimkehr
-[21:47:11][no_game_date][musicmanager.cpp:137]: Missing music_station faceplate GUI component containerWindowType with name: axis_faceplate
-[21:47:11][no_game_date][pdx_audio.cpp:1369]: Could not find music named der_machtigste_konig_im_luftrevier
-[21:47:11][no_game_date][pdx_audio.cpp:1369]: Could not find music named panzerlied
-[21:47:11][no_game_date][pdx_audio.cpp:1369]: Could not find music named schwarzbraun_ist_die_haselnuss
-[21:47:11][no_game_date][pdx_audio.cpp:1369]: Could not find music named apocalyptic_weapons
-[21:47:11][no_game_date][pdx_audio.cpp:1369]: Could not find music named austria_peace
-[21:47:11][no_game_date][pdx_audio.cpp:1369]: Could not find music named austria_war
-[21:47:11][no_game_date][pdx_audio.cpp:1369]: Could not find music named belgium_peace
-[21:47:11][no_game_date][pdx_audio.cpp:1369]: Could not find music named belgium_war
-[21:47:11][no_game_date][pdx_audio.cpp:1369]: Could not find music named commando_raid
-[21:47:11][no_game_date][pdx_audio.cpp:1369]: Could not find music named germany_freedom
-[21:47:11][no_game_date][pdx_audio.cpp:1369]: Could not find music named germany_war
-[21:47:11][no_game_date][pdx_audio.cpp:1369]: Could not find music named great_empire_rises_again
-[21:47:11][no_game_date][pdx_audio.cpp:1369]: Could not find music named hungary_peace
-[21:47:11][no_game_date][pdx_audio.cpp:1369]: Could not find music named hungary_war
-[21:47:11][no_game_date][pdx_audio.cpp:1369]: Could not find music named liberty_equality_fraternity
-[21:47:11][no_game_date][pdx_audio.cpp:1369]: Could not find music named imperterrita
-[21:47:11][no_game_date][pdx_audio.cpp:1369]: Could not find music named cloak_and_dagger
-[21:47:11][no_game_date][pdx_audio.cpp:1369]: Could not find music named a_storm_coming
-[21:47:14][no_game_date][persistent.cpp:66]: Error: "Unexpected token: context_type, near line: 4" in file: "common/scripted_guis/02_conditional_peace_deals_scripted_gui.txt" near line: 4
-[21:47:14][no_game_date][persistent.cpp:66]: Error: "Unexpected token: context_type, near line: 99" in file: "common/scripted_guis/02_conditional_peace_deals_scripted_gui.txt" near line: 99
-[21:47:14][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: GER_train_locomotive_equipment_1_entity, near line: 36" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 36
-[21:47:14][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: GER_train_locomotive_equipment_2_entity, near line: 45" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 45
-[21:47:14][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: GER_train_locomotive_equipment_3_entity, near line: 54" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 54
-[21:47:14][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: ITA_train_locomotive_equipment_1_entity, near line: 63" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 63
-[21:47:14][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: SOV_train_locomotive_equipment_1_entity, near line: 72" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 72
-[21:47:14][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: SOV_train_locomotive_equipment_2_entity, near line: 81" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 81
-[21:47:14][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: SOV_train_locomotive_equipment_3_entity, near line: 90" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 90
-[21:47:14][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: USA_train_locomotive_equipment_1_entity, near line: 99" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 99
-[21:47:14][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: USA_train_locomotive_equipment_2_entity, near line: 108" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 108
-[21:47:14][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: JAP_train_locomotive_equipment_1_entity, near line: 117" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 117
-[21:47:14][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: JAP_train_locomotive_equipment_2_entity, near line: 126" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 126
-[21:47:14][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: JAP_train_locomotive_1_equipment_3_entity, near line: 135" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 135
-[21:47:14][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: JAP_train_locomotive_2_equipment_3_entity, near line: 144" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 144
-[21:47:14][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: FRA_train_locomotive_equipment_1_entity, near line: 153" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 153
-[21:47:14][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: FRA_train_locomotive_equipment_2_entity, near line: 162" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 162
-[21:47:14][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: ENG_train_locomotive_equipment_1_entity, near line: 171" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 171
-[21:47:14][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: ENG_train_locomotive_equipment_2_entity, near line: 180" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 180
-[21:47:14][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: GER_train_coal_equipment_1_entity, near line: 189" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 189
-[21:47:14][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: GER_train_coal_equipment_2_entity, near line: 197" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 197
-[21:47:14][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: GER_train_coal_equipment_3_entity, near line: 205" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 205
-[21:47:14][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: ITA_train_coal_equipment_1_entity, near line: 212" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 212
-[21:47:14][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: SOV_train_coal_equipment_1_entity, near line: 220" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 220
-[21:47:14][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: SOV_train_coal_equipment_2_entity, near line: 228" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 228
-[21:47:14][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: SOV_train_coal_equipment_3_entity, near line: 236" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 236
-[21:47:14][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: USA_train_coal_equipment_1_entity, near line: 244" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 244
-[21:47:14][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: USA_train_coal_equipment_2_entity, near line: 252" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 252
-[21:47:14][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: JAP_train_coal_equipment_1_entity, near line: 260" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 260
-[21:47:14][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: JAP_train_coal_equipment_2_entity, near line: 268" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 268
-[21:47:14][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: JAP_train_coal_equipment_3_entity, near line: 276" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 276
-[21:47:14][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: FRA_train_coal_equipment_1_entity, near line: 284" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 284
-[21:47:14][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: FRA_train_coal_equipment_2_entity, near line: 292" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 292
-[21:47:14][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: ENG_train_coal_equipment_1_entity, near line: 300" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 300
-[21:47:14][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: ENG_train_coal_equipment_2_entity, near line: 308" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 308
-[21:47:15][no_game_date][trigger.cpp:700]: Invalid trigger 'picture' in events/rev_usa_civil_war_setup.txt line : 583
-[21:47:15][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: picture, near line: 583" in file: "events/rev_usa_civil_war_setup.txt" near line: 585
-[21:47:15][no_game_date][lexer.cpp:184]: Trying to add empty dynamic token.
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_3. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_4. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: modern_carrier_0. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LPD_0. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: complete_special_project. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: complete_special_project. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: complete_special_project. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: set_technology. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: destroyer_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: destroyer_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_3. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: modern_carrier_0. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: modern_carrier_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: modern_carrier_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: modern_carrier_3. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: cruiser_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: cruiser_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_cruiser_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_cruiser_4. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_destroyer_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_destroyer_3. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_3. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_submarine_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_submarine_3. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: attack_submarine_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: attack_submarine_3. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_3. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LPD_0. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LPD_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LHA_0. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LHA_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: modern_landing_craft. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: modern_carrier_4. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_destroyer_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_destroyer_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_destroyer_3. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_3. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: modern_carrier_4. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_destroyer_4. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_3. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_4. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_3. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_4. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: attack_submarine_5. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_submarine_5. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_5. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_6. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LHA_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LPD_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_3. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_3. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_4. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_4. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_5. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: afv_tech. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: nsb_SP_arty_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: cruiser_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: cruiser_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: destroyer_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_3. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_4. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_destroyer_4. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_3. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_4. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LPD_0. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LPD_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LHA_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: afv_tech. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_3. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: tech_mtg_specialized_protective_equipment. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_3. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_3. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_4. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_cruiser_4. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: Nuclear_carrier_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LHA_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: attack_submarine_4. use var:var_name to explicitly use variables in effects/triggers
-[21:47:15][no_game_date][triggerimplementation.cpp:12335]: Invalid decision in has_decision trigger: has_decision = USA_finish_keystone_and_dakota_pipelines
-[21:47:15][no_game_date][trigger.cpp:117]: Trigger failed to validate: events/Canada.txt:1875: has_decision
-[21:47:16][no_game_date][effectimplementation.cpp:14349]: Invalid Decision ID for activate_mission USA_fugitive_countdown
-[21:47:16][no_game_date][state.cpp:719]: Error: Province with id: 13284 is already added to state "Anjouan" ( with id: 1214 ), adding it to state "Comoros" ( with id: 269) and thus overriding first state.
-[21:47:16][no_game_date][state.cpp:719]: Error: Province with id: 6114 is already added to state "Safed Koh" ( with id: 1207 ), adding it to state "Hindu Kush" ( with id: 414) and thus overriding first state.
-[21:47:16][no_game_date][state.cpp:719]: Error: Province with id: 8090 is already added to state "Qalat" ( with id: 1208 ), adding it to state "Hindu Kush" ( with id: 414) and thus overriding first state.
-[21:47:16][no_game_date][state.cpp:719]: Error: Province with id: 10789 is already added to state "Qalat" ( with id: 1208 ), adding it to state "Hindu Kush" ( with id: 414) and thus overriding first state.
-[21:47:16][no_game_date][state.cpp:719]: Error: Province with id: 12831 is already added to state "Safed Koh" ( with id: 1207 ), adding it to state "Hindu Kush" ( with id: 414) and thus overriding first state.
-[21:47:16][no_game_date][state.cpp:719]: Error: Province with id: 14686 is already added to state "Safed Koh" ( with id: 1207 ), adding it to state "Hindu Kush" ( with id: 414) and thus overriding first state.
-[21:47:16][no_game_date][state.cpp:719]: Error: Province with id: 14688 is already added to state "Qalat" ( with id: 1208 ), adding it to state "Hindu Kush" ( with id: 414) and thus overriding first state.
-[21:47:16][no_game_date][state.cpp:719]: Error: Province with id: 4155 is already added to state "United States Virgin Islands" ( with id: 1212 ), adding it to state "Puerto Rico" ( with id: 815) and thus overriding first state.
-[21:47:16][no_game_date][state.cpp:719]: Error: Province with id: 7630 is already added to state "Darien Gap" ( with id: 1213 ), adding it to state "Panama" ( with id: 853) and thus overriding first state.
-[21:47:16][no_game_date][state.cpp:719]: Error: Province with id: 10482 is already added to state "Darien Gap" ( with id: 1213 ), adding it to state "Panama" ( with id: 853) and thus overriding first state.
-[21:47:16][no_game_date][state.cpp:719]: Error: Province with id: 9732 is already added to state "Darien Gap" ( with id: 1213 ), adding it to state "Panama" ( with id: 853) and thus overriding first state.
-[21:47:16][no_game_date][state.cpp:719]: Error: Province with id: 6114 is already added to state "Hindu Kush" ( with id: 414 ), adding it to state "Safed Koh" ( with id: 1207) and thus overriding first state.
-[21:47:16][no_game_date][state.cpp:719]: Error: Province with id: 12831 is already added to state "Hindu Kush" ( with id: 414 ), adding it to state "Safed Koh" ( with id: 1207) and thus overriding first state.
-[21:47:16][no_game_date][state.cpp:719]: Error: Province with id: 14686 is already added to state "Hindu Kush" ( with id: 414 ), adding it to state "Safed Koh" ( with id: 1207) and thus overriding first state.
-[21:47:16][no_game_date][state.cpp:719]: Error: Province with id: 8090 is already added to state "Hindu Kush" ( with id: 414 ), adding it to state "Qalat" ( with id: 1208) and thus overriding first state.
-[21:47:16][no_game_date][state.cpp:719]: Error: Province with id: 10789 is already added to state "Hindu Kush" ( with id: 414 ), adding it to state "Qalat" ( with id: 1208) and thus overriding first state.
-[21:47:16][no_game_date][state.cpp:719]: Error: Province with id: 14688 is already added to state "Hindu Kush" ( with id: 414 ), adding it to state "Qalat" ( with id: 1208) and thus overriding first state.
-[21:47:16][no_game_date][state.cpp:719]: Error: Province with id: 4155 is already added to state "Puerto Rico" ( with id: 815 ), adding it to state "United States Virgin Islands" ( with id: 1212) and thus overriding first state.
-[21:47:16][no_game_date][state.cpp:719]: Error: Province with id: 7630 is already added to state "Panama" ( with id: 853 ), adding it to state "Darien Gap" ( with id: 1213) and thus overriding first state.
-[21:47:16][no_game_date][state.cpp:719]: Error: Province with id: 9732 is already added to state "Panama" ( with id: 853 ), adding it to state "Darien Gap" ( with id: 1213) and thus overriding first state.
-[21:47:16][no_game_date][state.cpp:719]: Error: Province with id: 10482 is already added to state "Panama" ( with id: 853 ), adding it to state "Darien Gap" ( with id: 1213) and thus overriding first state.
-[21:47:16][no_game_date][state.cpp:719]: Error: Province with id: 13284 is already added to state "Comoros" ( with id: 269 ), adding it to state "Anjouan" ( with id: 1214) and thus overriding first state.
-[21:47:21][no_game_date][flagtextureatlas.cpp:524]: Error loading flag for country ARK : Ideology democratic : Path gfx/flags/ : Warning slow to read format - Consider using 32bpp instead of 24bpp
-[21:47:21][no_game_date][flagtextureatlas.cpp:524]: Error loading flag for country ARK : Ideology democratic : Path gfx/flags/medium/ : Warning slow to read format - Consider using 32bpp instead of 24bpp
-[21:47:21][no_game_date][flagtextureatlas.cpp:524]: Error loading flag for country ARK : Ideology democratic : Path gfx/flags/small/ : Warning slow to read format - Consider using 32bpp instead of 24bpp
-[21:47:29][no_game_date][gameapplication.cpp:842]: The game has loc key collisions. Check logs/text.log for more details
-[21:47:30][no_game_date][state.cpp:719]: Error: Province with id: 6114 is already added to state "Hindu Kush" ( with id: 414 ), adding it to state "Safed Koh" ( with id: 1207) and thus overriding first state.
-[21:47:30][no_game_date][state.cpp:719]: Error: Province with id: 12831 is already added to state "Hindu Kush" ( with id: 414 ), adding it to state "Safed Koh" ( with id: 1207) and thus overriding first state.
-[21:47:30][no_game_date][state.cpp:719]: Error: Province with id: 14686 is already added to state "Hindu Kush" ( with id: 414 ), adding it to state "Safed Koh" ( with id: 1207) and thus overriding first state.
-[21:47:30][no_game_date][state.cpp:719]: Error: Province with id: 8090 is already added to state "Hindu Kush" ( with id: 414 ), adding it to state "Qalat" ( with id: 1208) and thus overriding first state.
-[21:47:30][no_game_date][state.cpp:719]: Error: Province with id: 10789 is already added to state "Hindu Kush" ( with id: 414 ), adding it to state "Qalat" ( with id: 1208) and thus overriding first state.
-[21:47:30][no_game_date][state.cpp:719]: Error: Province with id: 14688 is already added to state "Hindu Kush" ( with id: 414 ), adding it to state "Qalat" ( with id: 1208) and thus overriding first state.
-[21:47:30][no_game_date][state.cpp:719]: Error: Province with id: 4155 is already added to state "Puerto Rico" ( with id: 815 ), adding it to state "United States Virgin Islands" ( with id: 1212) and thus overriding first state.
-[21:47:30][no_game_date][state.cpp:719]: Error: Province with id: 7630 is already added to state "Panama" ( with id: 853 ), adding it to state "Darien Gap" ( with id: 1213) and thus overriding first state.
-[21:47:30][no_game_date][state.cpp:719]: Error: Province with id: 9732 is already added to state "Panama" ( with id: 853 ), adding it to state "Darien Gap" ( with id: 1213) and thus overriding first state.
-[21:47:30][no_game_date][state.cpp:719]: Error: Province with id: 10482 is already added to state "Panama" ( with id: 853 ), adding it to state "Darien Gap" ( with id: 1213) and thus overriding first state.
-[21:47:30][no_game_date][state.cpp:719]: Error: Province with id: 13284 is already added to state "Comoros" ( with id: 269 ), adding it to state "Anjouan" ( with id: 1214) and thus overriding first state.
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:62]: invalid database object for effect/trigger:  file: history/countries/CHI - China.txt line: 4604 mbt_hull_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][effect.cpp:356]: Error: "Invalid module "additional_machine_guns" attached to slot "special_type_slot_1".: additional_machine_guns, near line: 4613" in file: "history/countries/CHI - China.txt" near line: 4622
-[21:47:33][2026.01.01.12][scopedvariable.cpp:571]: mio:SWE_bae_systems_hagglunds_tank_manufacturer does not match any MIO in database
-[21:47:33][2026.01.01.12][history.cpp:270]: PDF - is missing a history file.
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_3. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_4. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: modern_carrier_0. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LPD_0. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: complete_special_project. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: complete_special_project. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: complete_special_project. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: set_technology. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: destroyer_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: destroyer_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_3. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: modern_carrier_0. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: modern_carrier_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: modern_carrier_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: modern_carrier_3. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: cruiser_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: cruiser_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_cruiser_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_cruiser_4. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_destroyer_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_destroyer_3. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_3. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_submarine_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_submarine_3. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: attack_submarine_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: attack_submarine_3. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_3. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LPD_0. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LPD_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LHA_0. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LHA_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: modern_landing_craft. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: modern_carrier_4. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_destroyer_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_destroyer_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_destroyer_3. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_3. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: modern_carrier_4. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_destroyer_4. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_3. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_4. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_3. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_4. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: attack_submarine_5. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_submarine_5. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_5. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_6. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LHA_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LPD_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_3. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_3. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_4. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_4. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_5. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: afv_tech. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: nsb_SP_arty_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: cruiser_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: cruiser_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: destroyer_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_3. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_4. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_destroyer_4. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_3. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_4. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LPD_0. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LPD_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LHA_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: afv_tech. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_3. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_1. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: tech_mtg_specialized_protective_equipment. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_3. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_3. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_4. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_cruiser_4. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: Nuclear_carrier_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LHA_2. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: attack_submarine_4. use var:var_name to explicitly use variables in effects/triggers
-[21:47:33][2026.01.01.12][country.cpp:6942]: Attempting to set capital state #706 for Nepal, they dont own it!
-[21:47:36][2000.01.01.12][mapbuildings.cpp:1657]: Building landmark_binnenhof doesn't have an entity
-[21:47:36][2000.01.01.12][mapbuildings.cpp:716]: map/buildings.txt error at line 57471: map building(Land Fort) location is not within specified state. Supposed to be '1222 - Kramatorsk' but was '1030 - West Donetsk'for province 3479. BUILDING IGNORED!
-[21:47:36][2000.01.01.12][mapbuildings.cpp:634]: map/buildings.txt error at line 78690: invalid arguments count.
-[21:47:38][2000.01.01.12][containerwindow.cpp:991]: interface/rev_gui_fallbacks.gui (line 2 ): Could not find "background_selection_list" in window change_background
-[21:47:38][2000.01.01.12][containerwindow.cpp:983]: interface/rev_gui_fallbacks.gui (line 8 ): Could not find "available_backgrounds" in window background_selection
-[21:47:38][2000.01.01.12][containerwindow.cpp:927]: interface/rev_gui_fallbacks.gui (line 8 ): Could not find "select_all_checkbox" in window background_selection
-[21:48:14][no_game_date][state.cpp:719]: Error: Province with id: 6114 is already added to state "Hindu Kush" ( with id: 414 ), adding it to state "Safed Koh" ( with id: 1207) and thus overriding first state.
-[21:48:14][no_game_date][state.cpp:719]: Error: Province with id: 12831 is already added to state "Hindu Kush" ( with id: 414 ), adding it to state "Safed Koh" ( with id: 1207) and thus overriding first state.
-[21:48:14][no_game_date][state.cpp:719]: Error: Province with id: 14686 is already added to state "Hindu Kush" ( with id: 414 ), adding it to state "Safed Koh" ( with id: 1207) and thus overriding first state.
-[21:48:14][no_game_date][state.cpp:719]: Error: Province with id: 8090 is already added to state "Hindu Kush" ( with id: 414 ), adding it to state "Qalat" ( with id: 1208) and thus overriding first state.
-[21:48:14][no_game_date][state.cpp:719]: Error: Province with id: 10789 is already added to state "Hindu Kush" ( with id: 414 ), adding it to state "Qalat" ( with id: 1208) and thus overriding first state.
-[21:48:14][no_game_date][state.cpp:719]: Error: Province with id: 14688 is already added to state "Hindu Kush" ( with id: 414 ), adding it to state "Qalat" ( with id: 1208) and thus overriding first state.
-[21:48:14][no_game_date][state.cpp:719]: Error: Province with id: 4155 is already added to state "Puerto Rico" ( with id: 815 ), adding it to state "United States Virgin Islands" ( with id: 1212) and thus overriding first state.
-[21:48:14][no_game_date][state.cpp:719]: Error: Province with id: 7630 is already added to state "Panama" ( with id: 853 ), adding it to state "Darien Gap" ( with id: 1213) and thus overriding first state.
-[21:48:14][no_game_date][state.cpp:719]: Error: Province with id: 9732 is already added to state "Panama" ( with id: 853 ), adding it to state "Darien Gap" ( with id: 1213) and thus overriding first state.
-[21:48:14][no_game_date][state.cpp:719]: Error: Province with id: 10482 is already added to state "Panama" ( with id: 853 ), adding it to state "Darien Gap" ( with id: 1213) and thus overriding first state.
-[21:48:14][no_game_date][state.cpp:719]: Error: Province with id: 13284 is already added to state "Comoros" ( with id: 269 ), adding it to state "Anjouan" ( with id: 1214) and thus overriding first state.
-[21:48:16][no_game_date][strategicair.cpp:5591]: MAP_ERROR: no rocket site defined for state 694
-[21:48:16][no_game_date][strategicair.cpp:5611]: MAP_ERROR: no gun emplacement defined for state 694
-[21:48:16][no_game_date][strategicair.cpp:5571]: MAP_ERROR: no air base site defined for state 1085
-[21:48:17][2029.05.01.01][persistent.cpp:66]: Error: "Invalid subunit.: none, near line: 965188" in file: "save games/autosave.hoi4" near line: 965191
-[21:48:19][2029.05.01.01][icon_entry.cpp:38]: Icon definition "" does neither look like a file path nor a GFX entry as it does not start with "GFX_"
-[21:48:19][2029.05.01.01][icon_entry.cpp:38]: Icon definition "" does neither look like a file path nor a GFX entry as it does not start with "GFX_"
-[21:48:19][2029.05.01.01][icon_entry.cpp:38]: Icon definition "" does neither look like a file path nor a GFX entry as it does not start with "GFX_"
-[21:48:19][2029.05.01.01][icon_entry.cpp:38]: Icon definition "" does neither look like a file path nor a GFX entry as it does not start with "GFX_"
-[21:48:19][2029.05.01.01][icon_entry.cpp:38]: Icon definition "" does neither look like a file path nor a GFX entry as it does not start with "GFX_"
-[21:48:19][2029.05.01.01][icon_entry.cpp:38]: Icon definition "" does neither look like a file path nor a GFX entry as it does not start with "GFX_"
-[21:48:19][2029.05.01.01][icon_entry.cpp:38]: Icon definition "" does neither look like a file path nor a GFX entry as it does not start with "GFX_"
-[21:48:19][2029.05.01.01][icon_entry.cpp:38]: Icon definition "" does neither look like a file path nor a GFX entry as it does not start with "GFX_"
-[21:48:19][2029.05.01.01][icon_entry.cpp:38]: Icon definition "" does neither look like a file path nor a GFX entry as it does not start with "GFX_"
-[21:48:30][2029.05.01.01][strategicair.cpp:5591]: MAP_ERROR: no rocket site defined for state 694
-[21:48:30][2029.05.01.01][strategicair.cpp:5611]: MAP_ERROR: no gun emplacement defined for state 694
-[21:48:30][2029.05.01.01][strategicair.cpp:5571]: MAP_ERROR: no air base site defined for state 1085
-[21:48:33][2029.05.01.01][flagtextureatlas.cpp:524]: Error loading flag for country ARK : Ideology nationalist : Path gfx/flags/ : Warning slow to read format - Consider using 32bpp instead of 24bpp
-[21:48:33][2029.05.01.01][flagtextureatlas.cpp:524]: Error loading flag for country ARK : Ideology nationalist : Path gfx/flags/medium/ : Warning slow to read format - Consider using 32bpp instead of 24bpp
-[21:48:33][2029.05.01.01][flagtextureatlas.cpp:524]: Error loading flag for country ARK : Ideology nationalist : Path gfx/flags/small/ : Warning slow to read format - Consider using 32bpp instead of 24bpp
-[21:48:35][2029.05.01.01][theatre.cpp:4904]: Theaters or fronts has been fixed, as some spots was incorrect as in the savegame.
-[21:48:36][2029.05.01.01][containerwindow.cpp:822]: interface/rev_gui_fallbacks.gui (line 41 ): Could not find "select_station_button" in window allies_stations_entry
-[21:48:36][2029.05.01.01][containerwindow.cpp:822]: interface/rev_gui_fallbacks.gui (line 53 ): Could not find "select_station_button" in window axis_stations_entry
-[21:48:41][2029.05.01.01][graphics.cpp:1280]: No font with name 
-[21:48:41][2029.05.01.01][graphics.cpp:1280]: No font with name 
-[21:48:41][2029.05.01.01][graphics.cpp:1280]: No font with name center
-[21:48:41][2029.05.01.01][graphics.cpp:1280]: No font with name center
-[21:48:41][2029.05.01.01][graphics.cpp:1280]: No font with name 
-[21:48:41][2029.05.01.01][graphics.cpp:1280]: No font with name 
-[21:48:41][2029.05.01.01][graphics.cpp:1280]: No font with name 
-[21:48:55][2029.05.01.16][state_effect_implementation.cpp:2184]: events/rev_usa_civil_war_setup.txt:1183: cancel_resistance Maine does not have resistance
-[21:48:55][2029.05.01.16][state_effect_implementation.cpp:2184]: events/rev_usa_civil_war_setup.txt:1183: cancel_resistance New Hampshire does not have resistance
-[21:48:55][2029.05.01.16][state_effect_implementation.cpp:2184]: events/rev_usa_civil_war_setup.txt:1183: cancel_resistance Vermont does not have resistance
-[21:48:55][2029.05.01.16][state_effect_implementation.cpp:2184]: events/rev_usa_civil_war_setup.txt:1183: cancel_resistance Massachusetts does not have resistance
-[21:48:55][2029.05.01.16][state_effect_implementation.cpp:2184]: events/rev_usa_civil_war_setup.txt:1183: cancel_resistance Connecticut does not have resistance
-[21:48:56][2029.05.01.16][state_effect_implementation.cpp:2184]: events/rev_usa_civil_war_setup.txt:1183: cancel_resistance New York does not have resistance
-[21:48:57][2029.05.01.16][state_effect_implementation.cpp:2184]: events/rev_usa_civil_war_setup.txt:1183: cancel_resistance Minnesota does not have resistance
-[21:48:58][2029.05.01.16][state_effect_implementation.cpp:2184]: events/rev_usa_civil_war_setup.txt:1183: cancel_resistance Rhode Island does not have resistance
-[21:49:06][no_game_date][state.cpp:719]: Error: Province with id: 6114 is already added to state "Hindu Kush" ( with id: 414 ), adding it to state "Safed Koh" ( with id: 1207) and thus overriding first state.
-[21:49:06][no_game_date][state.cpp:719]: Error: Province with id: 12831 is already added to state "Hindu Kush" ( with id: 414 ), adding it to state "Safed Koh" ( with id: 1207) and thus overriding first state.
-[21:49:06][no_game_date][state.cpp:719]: Error: Province with id: 14686 is already added to state "Hindu Kush" ( with id: 414 ), adding it to state "Safed Koh" ( with id: 1207) and thus overriding first state.
-[21:49:06][no_game_date][state.cpp:719]: Error: Province with id: 8090 is already added to state "Hindu Kush" ( with id: 414 ), adding it to state "Qalat" ( with id: 1208) and thus overriding first state.
-[21:49:06][no_game_date][state.cpp:719]: Error: Province with id: 10789 is already added to state "Hindu Kush" ( with id: 414 ), adding it to state "Qalat" ( with id: 1208) and thus overriding first state.
-[21:49:06][no_game_date][state.cpp:719]: Error: Province with id: 14688 is already added to state "Hindu Kush" ( with id: 414 ), adding it to state "Qalat" ( with id: 1208) and thus overriding first state.
-[21:49:06][no_game_date][state.cpp:719]: Error: Province with id: 4155 is already added to state "Puerto Rico" ( with id: 815 ), adding it to state "United States Virgin Islands" ( with id: 1212) and thus overriding first state.
-[21:49:06][no_game_date][state.cpp:719]: Error: Province with id: 7630 is already added to state "Panama" ( with id: 853 ), adding it to state "Darien Gap" ( with id: 1213) and thus overriding first state.
-[21:49:06][no_game_date][state.cpp:719]: Error: Province with id: 9732 is already added to state "Panama" ( with id: 853 ), adding it to state "Darien Gap" ( with id: 1213) and thus overriding first state.
-[21:49:06][no_game_date][state.cpp:719]: Error: Province with id: 10482 is already added to state "Panama" ( with id: 853 ), adding it to state "Darien Gap" ( with id: 1213) and thus overriding first state.
-[21:49:06][no_game_date][state.cpp:719]: Error: Province with id: 13284 is already added to state "Comoros" ( with id: 269 ), adding it to state "Anjouan" ( with id: 1214) and thus overriding first state.
-[21:49:10][no_game_date][state.cpp:719]: Error: Province with id: 6114 is already added to state "Hindu Kush" ( with id: 414 ), adding it to state "Safed Koh" ( with id: 1207) and thus overriding first state.
-[21:49:10][no_game_date][state.cpp:719]: Error: Province with id: 12831 is already added to state "Hindu Kush" ( with id: 414 ), adding it to state "Safed Koh" ( with id: 1207) and thus overriding first state.
-[21:49:10][no_game_date][state.cpp:719]: Error: Province with id: 14686 is already added to state "Hindu Kush" ( with id: 414 ), adding it to state "Safed Koh" ( with id: 1207) and thus overriding first state.
-[21:49:10][no_game_date][state.cpp:719]: Error: Province with id: 8090 is already added to state "Hindu Kush" ( with id: 414 ), adding it to state "Qalat" ( with id: 1208) and thus overriding first state.
-[21:49:10][no_game_date][state.cpp:719]: Error: Province with id: 10789 is already added to state "Hindu Kush" ( with id: 414 ), adding it to state "Qalat" ( with id: 1208) and thus overriding first state.
-[21:49:10][no_game_date][state.cpp:719]: Error: Province with id: 14688 is already added to state "Hindu Kush" ( with id: 414 ), adding it to state "Qalat" ( with id: 1208) and thus overriding first state.
-[21:49:10][no_game_date][state.cpp:719]: Error: Province with id: 4155 is already added to state "Puerto Rico" ( with id: 815 ), adding it to state "United States Virgin Islands" ( with id: 1212) and thus overriding first state.
-[21:49:10][no_game_date][state.cpp:719]: Error: Province with id: 7630 is already added to state "Panama" ( with id: 853 ), adding it to state "Darien Gap" ( with id: 1213) and thus overriding first state.
-[21:49:10][no_game_date][state.cpp:719]: Error: Province with id: 9732 is already added to state "Panama" ( with id: 853 ), adding it to state "Darien Gap" ( with id: 1213) and thus overriding first state.
-[21:49:10][no_game_date][state.cpp:719]: Error: Province with id: 10482 is already added to state "Panama" ( with id: 853 ), adding it to state "Darien Gap" ( with id: 1213) and thus overriding first state.
-[21:49:10][no_game_date][state.cpp:719]: Error: Province with id: 13284 is already added to state "Comoros" ( with id: 269 ), adding it to state "Anjouan" ( with id: 1214) and thus overriding first state.
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:62]: invalid database object for effect/trigger:  file: history/countries/CHI - China.txt line: 4604 mbt_hull_2. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][effect.cpp:356]: Error: "Invalid module "additional_machine_guns" attached to slot "special_type_slot_1".: additional_machine_guns, near line: 4613" in file: "history/countries/CHI - China.txt" near line: 4622
-[21:49:12][2026.01.01.12][scopedvariable.cpp:571]: mio:SWE_bae_systems_hagglunds_tank_manufacturer does not match any MIO in database
-[21:49:12][2026.01.01.12][history.cpp:270]: PDF - is missing a history file.
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_3. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_4. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_1. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_2. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_1. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_2. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_1. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_2. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: modern_carrier_0. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LPD_0. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_1. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_2. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_1. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_1. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_2. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_1. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_2. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: complete_special_project. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: complete_special_project. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: complete_special_project. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: set_technology. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_1. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_2. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_1. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: destroyer_1. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: destroyer_2. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_3. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: modern_carrier_0. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: modern_carrier_1. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: modern_carrier_2. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: modern_carrier_3. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: cruiser_1. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: cruiser_2. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_cruiser_1. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_cruiser_4. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_destroyer_2. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_destroyer_3. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_1. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_2. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_2. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_3. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_submarine_2. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_submarine_3. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: attack_submarine_2. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: attack_submarine_3. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_3. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LPD_0. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LPD_1. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LHA_0. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LHA_1. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: modern_landing_craft. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: modern_carrier_4. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_destroyer_1. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_destroyer_2. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_destroyer_3. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_1. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_2. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_3. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: modern_carrier_4. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_destroyer_4. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_3. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_4. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_3. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_4. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: attack_submarine_5. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_submarine_5. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_5. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_6. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LHA_1. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LPD_2. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_2. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_3. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_1. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_2. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_1. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_2. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_3. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_4. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_4. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_5. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_1. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_2. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_1. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_2. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: afv_tech. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: nsb_SP_arty_1. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: cruiser_1. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: cruiser_2. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: destroyer_1. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_1. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_2. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_1. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_2. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_1. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_1. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_2. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_1. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_2. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_2. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_3. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_4. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_destroyer_4. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_3. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_4. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LPD_0. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LPD_1. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LHA_2. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: afv_tech. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_1. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_2. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_1. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_1. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_2. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_3. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_1. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_1. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: tech_mtg_specialized_protective_equipment. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_2. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_3. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_2. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_3. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_4. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_cruiser_4. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: Nuclear_carrier_2. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LHA_2. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: attack_submarine_4. use var:var_name to explicitly use variables in effects/triggers
-[21:49:12][2026.01.01.12][country.cpp:6942]: Attempting to set capital state #706 for Nepal, they dont own it!
-[21:49:13][2000.01.01.12][containerwindow.cpp:991]: interface/rev_gui_fallbacks.gui (line 2 ): Could not find "background_selection_list" in window change_background
-[21:49:13][2000.01.01.12][containerwindow.cpp:983]: interface/rev_gui_fallbacks.gui (line 8 ): Could not find "available_backgrounds" in window background_selection
-[21:49:13][2000.01.01.12][containerwindow.cpp:927]: interface/rev_gui_fallbacks.gui (line 8 ): Could not find "select_all_checkbox" in window background_selection
-[21:49:15][2000.01.01.12][flagtextureatlas.cpp:524]: Error loading flag for country ARK : Ideology democratic : Path gfx/flags/ : Warning slow to read format - Consider using 32bpp instead of 24bpp
-[21:49:15][2000.01.01.12][flagtextureatlas.cpp:524]: Error loading flag for country ARK : Ideology democratic : Path gfx/flags/medium/ : Warning slow to read format - Consider using 32bpp instead of 24bpp
-[21:49:15][2000.01.01.12][flagtextureatlas.cpp:524]: Error loading flag for country ARK : Ideology democratic : Path gfx/flags/small/ : Warning slow to read format - Consider using 32bpp instead of 24bpp
+[20:04:30][no_game_date][pdx_particle.cpp:1608]: Particle name is not unique: sparks_file
+[20:04:37][no_game_date][assetfactory.cpp:876]: Couldn't find parent clone entity JAP_MD4_infantry_1_entity, in file "gfx/entities/JAP_MD_infantryandvehicle.asset", near line 1808
+[20:04:38][no_game_date][pdx_entity.cpp:324]: Failed to find entity "JAP_infantry_entity_desert" for attachment in infantry
+[20:04:38][no_game_date][pdx_entity.cpp:324]: Failed to find entity "JAP_infantry_entity_desert" for attachment in infantry
+[20:04:41][no_game_date][persistent.cpp:66]: Error: "Unexpected token: sub_unit_bonus, near line: 967" in file: "common/doctrines/subdoctrines/land/land_equipment.txt" near line: 976
+[20:04:41][no_game_date][persistent.cpp:66]: Error: "Unexpected token: airborn_forces_operations, near line: 371" in file: "common/doctrines/subdoctrines/special forces/special_forces.txt" near line: 477
+[20:04:41][no_game_date][persistent.cpp:66]: Error: "Unexpected token: ranger_forces_doctrine, near line: 478" in file: "common/doctrines/subdoctrines/special forces/special_forces.txt" near line: 553
+[20:04:44][no_game_date][raid_database.cpp:98]: common/raids/cruise_missile_strike.txt:1804: Missing or invalid requirements for raid type 'divisions_cruise_missile_strike'
+[20:04:58][no_game_date][effect.cpp:443]: Invalid effect 'ITL' in common/bookmarks/the_gathering_storm.txt line : 2523
+[20:04:58][no_game_date][effect.cpp:356]: Error: "Unknown effect-type: ITL, near line: 2523" in file: "common/bookmarks/the_gathering_storm.txt" near line: 2606
+[20:04:58][no_game_date][peace_conference_database.cpp:81]: Peace action modifier is missing 'enable' condition: cost_multiplier (file 'common/peace_conference/cost_modifiers/00_generic_peace.txt' lines 24-25)
+[20:04:59][no_game_date][database_scoped_variables.cpp:62]: invalid database object for effect/trigger:  file: history/countries/CHI - China.txt line: 4604 mbt_hull_2. use var:var_name to explicitly use variables in effects/triggers
+[20:04:59][no_game_date][effect.cpp:356]: Error: "Invalid module "additional_machine_guns" attached to slot "special_type_slot_1".: additional_machine_guns, near line: 4613" in file: "history/countries/CHI - China.txt" near line: 4622
+[20:04:59][no_game_date][texturehandler.cpp:160]: Texture Handler encountered missing texture file: gfx/interface/technologies/SWE/INF/Gustafearly.dds
+[20:04:59][no_game_date][texturehandler.cpp:216]: Couldn't find texture file: 'gfx/interface/technologies/SWE/INF/Gustafearly.dds'
+[20:04:59][no_game_date][texturehandler.cpp:160]: Texture Handler encountered missing texture file: gfx/interface/technologies/SWE/INF/INF1.dds
+[20:04:59][no_game_date][texturehandler.cpp:216]: Couldn't find texture file: 'gfx/interface/technologies/SWE/INF/INF1.dds'
+[20:04:59][no_game_date][texturehandler.cpp:160]: Texture Handler encountered missing texture file: gfx/interface/technologies/SWE/INF/INF2.dds
+[20:04:59][no_game_date][texturehandler.cpp:216]: Couldn't find texture file: 'gfx/interface/technologies/SWE/INF/INF2.dds'
+[20:04:59][no_game_date][scopedvariable.cpp:571]: mio:SWE_bae_systems_hagglunds_tank_manufacturer does not match any MIO in database
+[20:04:59][no_game_date][history.cpp:270]: PDF - is missing a history file.
+[20:05:00][no_game_date][musicmanager.cpp:137]: Missing music_station faceplate GUI component containerWindowType with name: allies_faceplate
+[20:05:00][no_game_date][pdx_audio.cpp:1369]: Could not find music named dance_your_troubles_away
+[20:05:00][no_game_date][pdx_audio.cpp:1369]: Could not find music named from_glen_to_glen
+[20:05:00][no_game_date][pdx_audio.cpp:1369]: Could not find music named the_man_on_the_british_countryside
+[20:05:00][no_game_date][pdx_audio.cpp:1369]: Could not find music named winter_came_spring
+[20:05:00][no_game_date][pdx_audio.cpp:1369]: Could not find music named ethiopian_highlands
+[20:05:00][no_game_date][pdx_audio.cpp:1369]: Could not find music named safer_grounds
+[20:05:00][no_game_date][pdx_audio.cpp:1369]: Could not find music named threat_from_red_sea
+[20:05:00][no_game_date][pdx_audio.cpp:1369]: Could not find music named wildlife_surroundings
+[20:05:00][no_game_date][pdx_audio.cpp:1369]: Could not find music named cittadina_irresistibile
+[20:05:00][no_game_date][pdx_audio.cpp:1369]: Could not find music named fino_a_combattere
+[20:05:00][no_game_date][pdx_audio.cpp:1369]: Could not find music named la_marcia_dei_soldati
+[20:05:00][no_game_date][pdx_audio.cpp:1369]: Could not find music named lotta_di_vecchi_amici
+[20:05:00][no_game_date][pdx_audio.cpp:1369]: Could not find music named dem_vaterland
+[20:05:00][no_game_date][pdx_audio.cpp:1369]: Could not find music named der_preis_fur_die_freiheit
+[20:05:00][no_game_date][pdx_audio.cpp:1369]: Could not find music named die_parade
+[20:05:00][no_game_date][pdx_audio.cpp:1369]: Could not find music named tag_der_heimkehr
+[20:05:00][no_game_date][musicmanager.cpp:137]: Missing music_station faceplate GUI component containerWindowType with name: axis_faceplate
+[20:05:00][no_game_date][pdx_audio.cpp:1369]: Could not find music named der_machtigste_konig_im_luftrevier
+[20:05:00][no_game_date][pdx_audio.cpp:1369]: Could not find music named panzerlied
+[20:05:00][no_game_date][pdx_audio.cpp:1369]: Could not find music named schwarzbraun_ist_die_haselnuss
+[20:05:00][no_game_date][pdx_audio.cpp:1369]: Could not find music named apocalyptic_weapons
+[20:05:00][no_game_date][pdx_audio.cpp:1369]: Could not find music named austria_peace
+[20:05:00][no_game_date][pdx_audio.cpp:1369]: Could not find music named austria_war
+[20:05:00][no_game_date][pdx_audio.cpp:1369]: Could not find music named belgium_peace
+[20:05:00][no_game_date][pdx_audio.cpp:1369]: Could not find music named belgium_war
+[20:05:00][no_game_date][pdx_audio.cpp:1369]: Could not find music named commando_raid
+[20:05:00][no_game_date][pdx_audio.cpp:1369]: Could not find music named germany_freedom
+[20:05:00][no_game_date][pdx_audio.cpp:1369]: Could not find music named germany_war
+[20:05:00][no_game_date][pdx_audio.cpp:1369]: Could not find music named great_empire_rises_again
+[20:05:00][no_game_date][pdx_audio.cpp:1369]: Could not find music named hungary_peace
+[20:05:00][no_game_date][pdx_audio.cpp:1369]: Could not find music named hungary_war
+[20:05:00][no_game_date][pdx_audio.cpp:1369]: Could not find music named liberty_equality_fraternity
+[20:05:00][no_game_date][pdx_audio.cpp:1369]: Could not find music named imperterrita
+[20:05:00][no_game_date][pdx_audio.cpp:1369]: Could not find music named cloak_and_dagger
+[20:05:00][no_game_date][pdx_audio.cpp:1369]: Could not find music named a_storm_coming
+[20:05:02][no_game_date][persistent.cpp:66]: Error: "Unexpected token: context_type, near line: 4" in file: "common/scripted_guis/02_conditional_peace_deals_scripted_gui.txt" near line: 4
+[20:05:02][no_game_date][persistent.cpp:66]: Error: "Unexpected token: context_type, near line: 99" in file: "common/scripted_guis/02_conditional_peace_deals_scripted_gui.txt" near line: 99
+[20:05:02][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: GER_train_locomotive_equipment_1_entity, near line: 36" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 36
+[20:05:02][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: GER_train_locomotive_equipment_2_entity, near line: 45" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 45
+[20:05:02][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: GER_train_locomotive_equipment_3_entity, near line: 54" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 54
+[20:05:02][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: ITA_train_locomotive_equipment_1_entity, near line: 63" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 63
+[20:05:02][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: SOV_train_locomotive_equipment_1_entity, near line: 72" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 72
+[20:05:02][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: SOV_train_locomotive_equipment_2_entity, near line: 81" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 81
+[20:05:02][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: SOV_train_locomotive_equipment_3_entity, near line: 90" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 90
+[20:05:02][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: USA_train_locomotive_equipment_1_entity, near line: 99" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 99
+[20:05:02][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: USA_train_locomotive_equipment_2_entity, near line: 108" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 108
+[20:05:02][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: JAP_train_locomotive_equipment_1_entity, near line: 117" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 117
+[20:05:02][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: JAP_train_locomotive_equipment_2_entity, near line: 126" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 126
+[20:05:02][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: JAP_train_locomotive_1_equipment_3_entity, near line: 135" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 135
+[20:05:02][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: JAP_train_locomotive_2_equipment_3_entity, near line: 144" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 144
+[20:05:02][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: FRA_train_locomotive_equipment_1_entity, near line: 153" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 153
+[20:05:02][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: FRA_train_locomotive_equipment_2_entity, near line: 162" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 162
+[20:05:02][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: ENG_train_locomotive_equipment_1_entity, near line: 171" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 171
+[20:05:02][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: ENG_train_locomotive_equipment_2_entity, near line: 180" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 180
+[20:05:02][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: GER_train_coal_equipment_1_entity, near line: 189" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 189
+[20:05:02][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: GER_train_coal_equipment_2_entity, near line: 197" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 197
+[20:05:02][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: GER_train_coal_equipment_3_entity, near line: 205" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 205
+[20:05:02][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: ITA_train_coal_equipment_1_entity, near line: 212" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 212
+[20:05:02][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: SOV_train_coal_equipment_1_entity, near line: 220" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 220
+[20:05:02][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: SOV_train_coal_equipment_2_entity, near line: 228" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 228
+[20:05:02][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: SOV_train_coal_equipment_3_entity, near line: 236" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 236
+[20:05:02][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: USA_train_coal_equipment_1_entity, near line: 244" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 244
+[20:05:02][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: USA_train_coal_equipment_2_entity, near line: 252" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 252
+[20:05:02][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: JAP_train_coal_equipment_1_entity, near line: 260" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 260
+[20:05:02][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: JAP_train_coal_equipment_2_entity, near line: 268" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 268
+[20:05:02][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: JAP_train_coal_equipment_3_entity, near line: 276" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 276
+[20:05:02][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: FRA_train_coal_equipment_1_entity, near line: 284" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 284
+[20:05:02][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: FRA_train_coal_equipment_2_entity, near line: 292" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 292
+[20:05:02][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: ENG_train_coal_equipment_1_entity, near line: 300" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 300
+[20:05:02][no_game_date][pdx_parser.h:2201]: Error: "invalid entity: ENG_train_coal_equipment_2_entity, near line: 308" in file: "gfx/train_gfx_database/NSB_generic.txt" near line: 308
+[20:05:03][no_game_date][lexer.cpp:184]: Trying to add empty dynamic token.
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_3. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_4. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: modern_carrier_0. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LPD_0. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: complete_special_project. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: complete_special_project. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: complete_special_project. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: set_technology. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: destroyer_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: destroyer_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_3. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: modern_carrier_0. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: modern_carrier_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: modern_carrier_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: modern_carrier_3. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: cruiser_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: cruiser_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_cruiser_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_cruiser_4. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_destroyer_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_destroyer_3. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_3. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_submarine_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_submarine_3. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: attack_submarine_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: attack_submarine_3. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_3. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LPD_0. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LPD_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LHA_0. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LHA_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: modern_landing_craft. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: modern_carrier_4. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_destroyer_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_destroyer_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_destroyer_3. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_3. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: modern_carrier_4. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_destroyer_4. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_3. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_4. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_3. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_4. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: attack_submarine_5. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_submarine_5. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_5. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_6. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LHA_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LPD_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_3. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_3. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_4. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_4. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_5. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: afv_tech. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: nsb_SP_arty_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: cruiser_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: cruiser_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: destroyer_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_3. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_4. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_destroyer_4. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_3. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_4. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LPD_0. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LPD_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LHA_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: afv_tech. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_3. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: tech_mtg_specialized_protective_equipment. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_3. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_3. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_4. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_cruiser_4. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: Nuclear_carrier_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LHA_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:03][no_game_date][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: attack_submarine_4. use var:var_name to explicitly use variables in effects/triggers
+[20:05:04][no_game_date][triggerimplementation.cpp:12335]: Invalid decision in has_decision trigger: has_decision = USA_finish_keystone_and_dakota_pipelines
+[20:05:04][no_game_date][trigger.cpp:117]: Trigger failed to validate: events/Canada.txt:1875: has_decision
+[20:05:04][no_game_date][effectimplementation.cpp:14349]: Invalid Decision ID for activate_mission USA_fugitive_countdown
+[20:05:04][no_game_date][state.cpp:719]: Error: Province with id: 13284 is already added to state "Anjouan" ( with id: 1214 ), adding it to state "Comoros" ( with id: 269) and thus overriding first state.
+[20:05:04][no_game_date][state.cpp:719]: Error: Province with id: 6114 is already added to state "Safed Koh" ( with id: 1207 ), adding it to state "Hindu Kush" ( with id: 414) and thus overriding first state.
+[20:05:04][no_game_date][state.cpp:719]: Error: Province with id: 8090 is already added to state "Qalat" ( with id: 1208 ), adding it to state "Hindu Kush" ( with id: 414) and thus overriding first state.
+[20:05:04][no_game_date][state.cpp:719]: Error: Province with id: 10789 is already added to state "Qalat" ( with id: 1208 ), adding it to state "Hindu Kush" ( with id: 414) and thus overriding first state.
+[20:05:04][no_game_date][state.cpp:719]: Error: Province with id: 12831 is already added to state "Safed Koh" ( with id: 1207 ), adding it to state "Hindu Kush" ( with id: 414) and thus overriding first state.
+[20:05:04][no_game_date][state.cpp:719]: Error: Province with id: 14686 is already added to state "Safed Koh" ( with id: 1207 ), adding it to state "Hindu Kush" ( with id: 414) and thus overriding first state.
+[20:05:04][no_game_date][state.cpp:719]: Error: Province with id: 14688 is already added to state "Qalat" ( with id: 1208 ), adding it to state "Hindu Kush" ( with id: 414) and thus overriding first state.
+[20:05:04][no_game_date][state.cpp:719]: Error: Province with id: 4155 is already added to state "United States Virgin Islands" ( with id: 1212 ), adding it to state "Puerto Rico" ( with id: 815) and thus overriding first state.
+[20:05:04][no_game_date][state.cpp:719]: Error: Province with id: 7630 is already added to state "Darien Gap" ( with id: 1213 ), adding it to state "Panama" ( with id: 853) and thus overriding first state.
+[20:05:04][no_game_date][state.cpp:719]: Error: Province with id: 10482 is already added to state "Darien Gap" ( with id: 1213 ), adding it to state "Panama" ( with id: 853) and thus overriding first state.
+[20:05:04][no_game_date][state.cpp:719]: Error: Province with id: 9732 is already added to state "Darien Gap" ( with id: 1213 ), adding it to state "Panama" ( with id: 853) and thus overriding first state.
+[20:05:04][no_game_date][state.cpp:719]: Error: Province with id: 6114 is already added to state "Hindu Kush" ( with id: 414 ), adding it to state "Safed Koh" ( with id: 1207) and thus overriding first state.
+[20:05:04][no_game_date][state.cpp:719]: Error: Province with id: 12831 is already added to state "Hindu Kush" ( with id: 414 ), adding it to state "Safed Koh" ( with id: 1207) and thus overriding first state.
+[20:05:04][no_game_date][state.cpp:719]: Error: Province with id: 14686 is already added to state "Hindu Kush" ( with id: 414 ), adding it to state "Safed Koh" ( with id: 1207) and thus overriding first state.
+[20:05:04][no_game_date][state.cpp:719]: Error: Province with id: 8090 is already added to state "Hindu Kush" ( with id: 414 ), adding it to state "Qalat" ( with id: 1208) and thus overriding first state.
+[20:05:04][no_game_date][state.cpp:719]: Error: Province with id: 10789 is already added to state "Hindu Kush" ( with id: 414 ), adding it to state "Qalat" ( with id: 1208) and thus overriding first state.
+[20:05:04][no_game_date][state.cpp:719]: Error: Province with id: 14688 is already added to state "Hindu Kush" ( with id: 414 ), adding it to state "Qalat" ( with id: 1208) and thus overriding first state.
+[20:05:04][no_game_date][state.cpp:719]: Error: Province with id: 4155 is already added to state "Puerto Rico" ( with id: 815 ), adding it to state "United States Virgin Islands" ( with id: 1212) and thus overriding first state.
+[20:05:04][no_game_date][state.cpp:719]: Error: Province with id: 7630 is already added to state "Panama" ( with id: 853 ), adding it to state "Darien Gap" ( with id: 1213) and thus overriding first state.
+[20:05:04][no_game_date][state.cpp:719]: Error: Province with id: 9732 is already added to state "Panama" ( with id: 853 ), adding it to state "Darien Gap" ( with id: 1213) and thus overriding first state.
+[20:05:04][no_game_date][state.cpp:719]: Error: Province with id: 10482 is already added to state "Panama" ( with id: 853 ), adding it to state "Darien Gap" ( with id: 1213) and thus overriding first state.
+[20:05:04][no_game_date][state.cpp:719]: Error: Province with id: 13284 is already added to state "Comoros" ( with id: 269 ), adding it to state "Anjouan" ( with id: 1214) and thus overriding first state.
+[20:05:09][no_game_date][flagtextureatlas.cpp:524]: Error loading flag for country ARK : Ideology democratic : Path gfx/flags/ : Warning slow to read format - Consider using 32bpp instead of 24bpp
+[20:05:09][no_game_date][flagtextureatlas.cpp:524]: Error loading flag for country ARK : Ideology democratic : Path gfx/flags/medium/ : Warning slow to read format - Consider using 32bpp instead of 24bpp
+[20:05:09][no_game_date][flagtextureatlas.cpp:524]: Error loading flag for country ARK : Ideology democratic : Path gfx/flags/small/ : Warning slow to read format - Consider using 32bpp instead of 24bpp
+[20:05:17][no_game_date][gameapplication.cpp:842]: The game has loc key collisions. Check logs/text.log for more details
+[20:05:19][no_game_date][state.cpp:719]: Error: Province with id: 6114 is already added to state "Hindu Kush" ( with id: 414 ), adding it to state "Safed Koh" ( with id: 1207) and thus overriding first state.
+[20:05:19][no_game_date][state.cpp:719]: Error: Province with id: 12831 is already added to state "Hindu Kush" ( with id: 414 ), adding it to state "Safed Koh" ( with id: 1207) and thus overriding first state.
+[20:05:19][no_game_date][state.cpp:719]: Error: Province with id: 14686 is already added to state "Hindu Kush" ( with id: 414 ), adding it to state "Safed Koh" ( with id: 1207) and thus overriding first state.
+[20:05:19][no_game_date][state.cpp:719]: Error: Province with id: 8090 is already added to state "Hindu Kush" ( with id: 414 ), adding it to state "Qalat" ( with id: 1208) and thus overriding first state.
+[20:05:19][no_game_date][state.cpp:719]: Error: Province with id: 10789 is already added to state "Hindu Kush" ( with id: 414 ), adding it to state "Qalat" ( with id: 1208) and thus overriding first state.
+[20:05:19][no_game_date][state.cpp:719]: Error: Province with id: 14688 is already added to state "Hindu Kush" ( with id: 414 ), adding it to state "Qalat" ( with id: 1208) and thus overriding first state.
+[20:05:19][no_game_date][state.cpp:719]: Error: Province with id: 4155 is already added to state "Puerto Rico" ( with id: 815 ), adding it to state "United States Virgin Islands" ( with id: 1212) and thus overriding first state.
+[20:05:19][no_game_date][state.cpp:719]: Error: Province with id: 7630 is already added to state "Panama" ( with id: 853 ), adding it to state "Darien Gap" ( with id: 1213) and thus overriding first state.
+[20:05:19][no_game_date][state.cpp:719]: Error: Province with id: 9732 is already added to state "Panama" ( with id: 853 ), adding it to state "Darien Gap" ( with id: 1213) and thus overriding first state.
+[20:05:19][no_game_date][state.cpp:719]: Error: Province with id: 10482 is already added to state "Panama" ( with id: 853 ), adding it to state "Darien Gap" ( with id: 1213) and thus overriding first state.
+[20:05:19][no_game_date][state.cpp:719]: Error: Province with id: 13284 is already added to state "Comoros" ( with id: 269 ), adding it to state "Anjouan" ( with id: 1214) and thus overriding first state.
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:62]: invalid database object for effect/trigger:  file: history/countries/CHI - China.txt line: 4604 mbt_hull_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][effect.cpp:356]: Error: "Invalid module "additional_machine_guns" attached to slot "special_type_slot_1".: additional_machine_guns, near line: 4613" in file: "history/countries/CHI - China.txt" near line: 4622
+[20:05:21][2026.01.01.12][scopedvariable.cpp:571]: mio:SWE_bae_systems_hagglunds_tank_manufacturer does not match any MIO in database
+[20:05:21][2026.01.01.12][history.cpp:270]: PDF - is missing a history file.
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_3. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_4. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: modern_carrier_0. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LPD_0. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: complete_special_project. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: complete_special_project. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: complete_special_project. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: set_technology. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: destroyer_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: destroyer_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_3. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: modern_carrier_0. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: modern_carrier_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: modern_carrier_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: modern_carrier_3. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: cruiser_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: cruiser_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_cruiser_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_cruiser_4. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_destroyer_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_destroyer_3. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_3. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_submarine_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_submarine_3. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: attack_submarine_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: attack_submarine_3. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_3. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LPD_0. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LPD_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LHA_0. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LHA_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: modern_landing_craft. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: modern_carrier_4. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_destroyer_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_destroyer_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_destroyer_3. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_3. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: modern_carrier_4. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_destroyer_4. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_3. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_4. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_3. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_4. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: attack_submarine_5. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_submarine_5. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_5. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_6. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LHA_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LPD_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_3. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_3. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_4. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_4. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_5. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: afv_tech. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: nsb_SP_arty_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: cruiser_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: cruiser_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: destroyer_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_3. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_4. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_destroyer_4. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_3. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: diesel_attack_submarine_4. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LPD_0. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LPD_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LHA_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: afv_tech. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_3. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: corvette_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: frigate_1. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: tech_mtg_specialized_protective_equipment. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_corvette_3. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_3. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_frigate_4. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: missile_cruiser_4. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: Nuclear_carrier_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: LHA_2. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][database_scoped_variables.cpp:266]: invalid database object for effect/trigger: attack_submarine_4. use var:var_name to explicitly use variables in effects/triggers
+[20:05:21][2026.01.01.12][country.cpp:6949]: Attempting to set capital state #706 for Nepal, they dont own it!
+[20:05:24][2000.01.01.12][mapbuildings.cpp:1657]: Building landmark_binnenhof doesn't have an entity
+[20:05:24][2000.01.01.12][mapbuildings.cpp:716]: map/buildings.txt error at line 57471: map building(Land Fort) location is not within specified state. Supposed to be '1222 - Kramatorsk' but was '1030 - West Donetsk'for province 3479. BUILDING IGNORED!
+[20:05:24][2000.01.01.12][mapbuildings.cpp:634]: map/buildings.txt error at line 78690: invalid arguments count.
+[20:05:26][2000.01.01.12][containerwindow.cpp:991]: interface/rev_gui_fallbacks.gui (line 2 ): Could not find "background_selection_list" in window change_background
+[20:05:26][2000.01.01.12][containerwindow.cpp:983]: interface/rev_gui_fallbacks.gui (line 8 ): Could not find "available_backgrounds" in window background_selection
+[20:05:26][2000.01.01.12][containerwindow.cpp:927]: interface/rev_gui_fallbacks.gui (line 8 ): Could not find "select_all_checkbox" in window background_selection
+[20:07:14][no_game_date][state.cpp:719]: Error: Province with id: 6114 is already added to state "Hindu Kush" ( with id: 414 ), adding it to state "Safed Koh" ( with id: 1207) and thus overriding first state.
+[20:07:14][no_game_date][state.cpp:719]: Error: Province with id: 12831 is already added to state "Hindu Kush" ( with id: 414 ), adding it to state "Safed Koh" ( with id: 1207) and thus overriding first state.
+[20:07:14][no_game_date][state.cpp:719]: Error: Province with id: 14686 is already added to state "Hindu Kush" ( with id: 414 ), adding it to state "Safed Koh" ( with id: 1207) and thus overriding first state.
+[20:07:14][no_game_date][state.cpp:719]: Error: Province with id: 8090 is already added to state "Hindu Kush" ( with id: 414 ), adding it to state "Qalat" ( with id: 1208) and thus overriding first state.
+[20:07:14][no_game_date][state.cpp:719]: Error: Province with id: 10789 is already added to state "Hindu Kush" ( with id: 414 ), adding it to state "Qalat" ( with id: 1208) and thus overriding first state.
+[20:07:14][no_game_date][state.cpp:719]: Error: Province with id: 14688 is already added to state "Hindu Kush" ( with id: 414 ), adding it to state "Qalat" ( with id: 1208) and thus overriding first state.
+[20:07:14][no_game_date][state.cpp:719]: Error: Province with id: 4155 is already added to state "Puerto Rico" ( with id: 815 ), adding it to state "United States Virgin Islands" ( with id: 1212) and thus overriding first state.
+[20:07:14][no_game_date][state.cpp:719]: Error: Province with id: 7630 is already added to state "Panama" ( with id: 853 ), adding it to state "Darien Gap" ( with id: 1213) and thus overriding first state.
+[20:07:14][no_game_date][state.cpp:719]: Error: Province with id: 9732 is already added to state "Panama" ( with id: 853 ), adding it to state "Darien Gap" ( with id: 1213) and thus overriding first state.
+[20:07:14][no_game_date][state.cpp:719]: Error: Province with id: 10482 is already added to state "Panama" ( with id: 853 ), adding it to state "Darien Gap" ( with id: 1213) and thus overriding first state.
+[20:07:14][no_game_date][state.cpp:719]: Error: Province with id: 13284 is already added to state "Comoros" ( with id: 269 ), adding it to state "Anjouan" ( with id: 1214) and thus overriding first state.
+[20:07:16][no_game_date][strategicair.cpp:5591]: MAP_ERROR: no rocket site defined for state 694
+[20:07:16][no_game_date][strategicair.cpp:5611]: MAP_ERROR: no gun emplacement defined for state 694
+[20:07:16][no_game_date][strategicair.cpp:5571]: MAP_ERROR: no air base site defined for state 1085
+[20:07:18][2026.01.16.24][persistent.cpp:66]: Error: "Invalid subunit.: none, near line: 945923" in file: "save games/PER_2026_01_16_24.hoi4" near line: 945926
+[20:07:30][2026.01.16.24][strategicair.cpp:5591]: MAP_ERROR: no rocket site defined for state 694
+[20:07:30][2026.01.16.24][strategicair.cpp:5611]: MAP_ERROR: no gun emplacement defined for state 694
+[20:07:30][2026.01.16.24][strategicair.cpp:5571]: MAP_ERROR: no air base site defined for state 1085
+[20:07:33][2026.01.16.24][flagtextureatlas.cpp:524]: Error loading flag for country ARK : Ideology nationalist : Path gfx/flags/ : Warning slow to read format - Consider using 32bpp instead of 24bpp
+[20:07:33][2026.01.16.24][flagtextureatlas.cpp:524]: Error loading flag for country ARK : Ideology nationalist : Path gfx/flags/medium/ : Warning slow to read format - Consider using 32bpp instead of 24bpp
+[20:07:33][2026.01.16.24][flagtextureatlas.cpp:524]: Error loading flag for country ARK : Ideology nationalist : Path gfx/flags/small/ : Warning slow to read format - Consider using 32bpp instead of 24bpp
+[20:07:42][2026.01.16.24][containerwindow.cpp:1026]: interface/divisiondesignerview.gui (line 193 ): Could not find "toggle_model_selector_button" in window countrydivisiondesignerview
+[20:07:42][2026.01.16.24][theatre.cpp:4904]: Theaters or fronts has been fixed, as some spots was incorrect as in the savegame.
+[20:07:44][2026.01.16.24][containerwindow.cpp:1026]: interface/divisiondesignerview.gui (line 193 ): Could not find "toggle_model_selector_button" in window countrydivisiondesignerview
+[20:07:44][2026.01.16.24][containerwindow.cpp:822]: interface/rev_gui_fallbacks.gui (line 41 ): Could not find "select_station_button" in window allies_stations_entry
+[20:07:44][2026.01.16.24][containerwindow.cpp:822]: interface/rev_gui_fallbacks.gui (line 53 ): Could not find "select_station_button" in window axis_stations_entry
+[20:07:49][2026.01.16.24][graphics.cpp:1280]: No font with name 
+[20:07:49][2026.01.16.24][graphics.cpp:1280]: No font with name 
+[20:07:49][2026.01.16.24][graphics.cpp:1280]: No font with name center
+[20:07:49][2026.01.16.24][graphics.cpp:1280]: No font with name center
+[20:07:49][2026.01.16.24][graphics.cpp:1280]: No font with name 
+[20:07:49][2026.01.16.24][graphics.cpp:1280]: No font with name 
+[20:07:49][2026.01.16.24][graphics.cpp:1280]: No font with name 
+[20:07:49][2026.01.16.24][gfxairplanes.cpp:692]: Failed to load entity of internal airplane scene: C-130 Hercules (C-130 Hercules)
+[20:07:49][2026.01.16.24][gfxairplanes.cpp:692]: Failed to load entity of internal airplane scene: C-130 Hercules (C-130 Hercules)
+[20:07:49][2026.01.16.24][gfxairplanes.cpp:692]: Failed to load entity of internal airplane scene: C-130 Hercules (C-130 Hercules)
+[20:07:49][2026.01.16.24][gfxairplanes.cpp:692]: Failed to load entity of internal airplane scene: C-130 Hercules (C-130 Hercules)
+[20:07:49][2026.01.16.24][gfxairplanes.cpp:692]: Failed to load entity of internal airplane scene: C-130 Hercules (C-130 Hercules)
+[20:07:49][2026.01.16.24][gfxairplanes.cpp:692]: Failed to load entity of internal airplane scene: AV-8B Harrier II (AV-8B Harrier II)
+[20:07:49][2026.01.16.24][gfxairplanes.cpp:692]: Failed to load entity of internal airplane scene: C-130 Hercules (C-130 Hercules)
+[20:07:49][2026.01.16.24][gfxairplanes.cpp:692]: Failed to load entity of internal airplane scene: C-130 Hercules (C-130 Hercules)
+[20:07:49][2026.01.16.24][gfxairplanes.cpp:692]: Failed to load entity of internal airplane scene: C-130 Hercules (C-130 Hercules)
+[20:07:49][2026.01.16.24][gfxairplanes.cpp:692]: Failed to load entity of internal airplane scene: C-130 Hercules (C-130 Hercules)
+[20:07:49][2026.01.16.24][gfxairplanes.cpp:692]: Failed to load entity of internal airplane scene: C-130 Hercules (C-130 Hercules)
+[20:07:49][2026.01.16.24][gfxairplanes.cpp:692]: Failed to load entity of internal airplane scene: AV-8B Harrier II (AV-8B Harrier II)
+[20:07:49][2026.01.16.24][gfxairplanes.cpp:692]: Failed to load entity of internal airplane scene: Lockheed P-3C Orion (Lockheed P-3C Orion)
+[20:07:49][2026.01.16.24][gfxairplanes.cpp:692]: Failed to load entity of internal airplane scene: S-3 Viking (Lockheed P2V Neptune)
+[20:07:49][2026.01.16.24][gfxairplanes.cpp:692]: Failed to load entity of internal airplane scene: C-130 Hercules (C-130 Hercules)
+[20:07:49][2026.01.16.24][gfxairplanes.cpp:692]: Failed to load entity of internal airplane scene: Douglas A-4 Skyhawk (Douglas A-4 Skyhawk)
+[20:07:49][2026.01.16.24][gfxairplanes.cpp:692]: Failed to load entity of internal airplane scene: C-130 Hercules (C-130 Hercules)
+[20:07:51][2026.01.16.24][gfxairplanes.cpp:692]: Failed to load entity of internal airplane scene: C-130 Hercules (C-130 Hercules)
+[20:07:51][2026.01.16.24][gfxairplanes.cpp:692]: Failed to load entity of internal airplane scene: C-130 Hercules (C-130 Hercules)
+[20:07:51][2026.01.16.24][gfxairplanes.cpp:692]: Failed to load entity of internal airplane scene: C-130 Hercules (C-130 Hercules)
+[20:07:51][2026.01.16.24][gfxairplanes.cpp:692]: Failed to load entity of internal airplane scene: C-130 Hercules (C-130 Hercules)
+[20:07:51][2026.01.16.24][gfxairplanes.cpp:692]: Failed to load entity of internal airplane scene: C-130 Hercules (C-130 Hercules)
+[20:07:51][2026.01.16.24][gfxairplanes.cpp:692]: Failed to load entity of internal airplane scene: S-3 Viking (Lockheed P2V Neptune)
+[20:07:51][2026.01.16.24][gfxairplanes.cpp:692]: Failed to load entity of internal airplane scene: Douglas A-4 Skyhawk (Douglas A-4 Skyhawk)
+[20:07:51][2026.01.16.24][gfxairplanes.cpp:692]: Failed to load entity of internal airplane scene: Lockheed P-3C Orion (Lockheed P-3C Orion)
+[20:07:51][2026.01.16.24][gfxairplanes.cpp:692]: Failed to load entity of internal airplane scene: C-130 Hercules (C-130 Hercules)
+[20:07:51][2026.01.16.24][gfxairplanes.cpp:692]: Failed to load entity of internal airplane scene: C-130 Hercules (C-130 Hercules)
+[20:07:53][2026.01.16.24][gfxairplanes.cpp:692]: Failed to load entity of internal airplane scene: Lockheed P-3C Orion (Lockheed P-3C Orion)
+[20:07:53][2026.01.16.24][gfxairplanes.cpp:692]: Failed to load entity of internal airplane scene: C-130 Hercules (C-130 Hercules)
+[20:07:53][2026.01.16.24][gfxairplanes.cpp:692]: Failed to load entity of internal airplane scene: AV-8B Harrier II (AV-8B Harrier II)
+[20:07:53][2026.01.16.24][gfxairplanes.cpp:692]: Failed to load entity of internal airplane scene: Lockheed P-3C Orion (Lockheed P-3C Orion)
+[20:07:53][2026.01.16.24][gfxairplanes.cpp:692]: Failed to load entity of internal airplane scene: C-130 Hercules (C-130 Hercules)
+[20:07:53][2026.01.16.24][gfxairplanes.cpp:692]: Failed to load entity of internal airplane scene: C-130 Hercules (C-130 Hercules)
+[20:07:55][2026.01.16.24][gfxairplanes.cpp:692]: Failed to load entity of internal airplane scene: C-130 Hercules (C-130 Hercules)
+[20:07:55][2026.01.16.24][gfxairplanes.cpp:692]: Failed to load entity of internal airplane scene: C-130 Hercules (C-130 Hercules)
+[20:07:55][2026.01.16.24][gfxairplanes.cpp:692]: Failed to load entity of internal airplane scene: AV-8B Harrier II (AV-8B Harrier II)
+[20:07:55][2026.01.16.24][gfxairplanes.cpp:692]: Failed to load entity of internal airplane scene: C-130 Hercules (C-130 Hercules)
+[20:07:55][2026.01.16.24][gfxairplanes.cpp:692]: Failed to load entity of internal airplane scene: C-130 Hercules (C-130 Hercules)
+[20:07:57][2026.01.16.24][gfxairplanes.cpp:692]: Failed to load entity of internal airplane scene: C-130 Hercules (C-130 Hercules)

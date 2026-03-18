@@ -580,7 +580,6 @@ country_event = {
 	trigger = {
 		tag = USA
 		has_country_leader = { name = "Donald Trump" ruling_only = yes }
-		picture = "Donald_Trump.dds"
 		has_war_with = CAN
 		NOT = { has_country_flag = rev_usa_cw_american_resistance_fired }
 	}
@@ -1316,6 +1315,60 @@ country_event = {
 
 	option = {
 		name = OK
+	}
+}
+
+country_event = {
+	id = rev_usa_cw.44
+	title = rev_usa_cw.44.t
+	desc = rev_usa_cw.44.d
+	picture = GFX_report_event_usa_politics
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		has_country_leader = { name = "Donald Trump" ruling_only = yes }
+		NOT = { has_country_flag = rev_usa_cw_nato_settlement_offer_fired }
+		OR = {
+			NOT = { country_exists = CAN }
+			CAN = { has_capitulated = yes }
+		}
+		OR = {
+			NOT = { country_exists = CAL }
+			CAL = { has_capitulated = yes }
+		}
+		1162 = {
+			is_controlled_by = USA
+		}
+		1161 = {
+			is_controlled_by = USA
+		}
+		any_country = {
+			has_idea = NATO_member
+			NOT = { tag = USA }
+			has_war_with = USA
+		}
+	}
+
+	option = {
+		name = rev_usa_cw.44.a
+		ai_chance = { factor = 90 }
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.44.a"
+		set_country_flag = rev_usa_cw_nato_settlement_offer_fired
+		every_country = {
+			limit = {
+				has_idea = NATO_member
+				NOT = { tag = USA }
+				has_war_with = USA
+			}
+			white_peace = USA
+		}
+	}
+	option = {
+		name = rev_usa_cw.44.b
+		ai_chance = { factor = 10 }
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.44.b"
+		set_country_flag = rev_usa_cw_nato_settlement_offer_fired
 	}
 }
 
