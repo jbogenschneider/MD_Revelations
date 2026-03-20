@@ -33,7 +33,6 @@ focus_tree = {
 	        y = 1
 	        cost = 1
 	        available_if_capitulated = yes
-	        available = { has_country_flag = USA_sided_with_trump_flag }
 	        search_filters = { FOCUS_FILTER_POLITICAL }
 	        prerequisite = { focus = USA_state_of_the_union }
         allow_branch = {

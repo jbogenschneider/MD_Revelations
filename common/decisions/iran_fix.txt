@@ -1,0 +1,56 @@
+PER_lor_resistance = {
+	PER_mobilize_the_tribes = {
+		allowed = { original_tag = PER }
+		icon = GFX_decision_generic_independence
+		fire_only_once = yes
+		days_remove = 30
+		highlight_states = {
+			highlight_state_targets = {
+				state = 406
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision PER_mobilize_the_tribes"
+			custom_effect_tooltip = PER_lor_units_TT
+			hidden_effect = {
+				PER = {
+					set_province_controller = 3908
+					set_province_controller = 1922
+					set_province_controller = 15483
+					set_province_controller = 9074
+				}
+				406 = {
+					create_unit = {
+						division = "name = \"Niru-ye Moghavemat-e Bakhtiari\" division_template = \"Tip-e Piade Nezam\" start_experience_factor = 0.45 start_equipment_factor = 0.15"
+						count = 1
+						prioritize_location = 3908
+						owner = PER
+					}
+					create_unit = {
+						division = "name = \"Niru-ye Moghavemat-e Shahr-e Kord\" division_template = \"Tip-e Piade Nezam\" start_experience_factor = 0.45 start_equipment_factor = 0.15"
+						count = 1
+						prioritize_location = 1922
+						owner = PER
+					}
+					create_unit = {
+						division = "name = \"Niru-ye Moghavemat-e Khorramabad\" division_template = \"Tip-e Piade Nezam\" start_experience_factor = 0.45 start_equipment_factor = 0.15"
+						count = 1
+						prioritize_location = 15483
+						owner = PER
+					}
+					create_unit = {
+						division = "name = \"Niru-ye Moghavemat-e Borujerd\" division_template = \"Tip-e Piade Nezam\" start_experience_factor = 0.45 start_equipment_factor = 0.15"
+						count = 1
+						prioritize_location = 9074
+						owner = PER
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+}

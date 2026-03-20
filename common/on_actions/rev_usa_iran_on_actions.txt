@@ -1,0 +1,14 @@
+on_actions = {
+	on_daily = {
+		effect = {
+			if = {
+				limit = {
+					tag = USA
+					NOT = { has_country_flag = rev_usa_iran_ai_resolution_done }
+					PER = { exists = yes }
+				}
+				country_event = { id = rev_usa_iran.10 }
+			}
+		}
+	}
+}

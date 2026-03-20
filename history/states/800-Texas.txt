@@ -78,6 +78,7 @@ state = {
 				synthetic_refinery = 6
 				infrastructure = 5
 				arms_factory = 6
+				industrial_complex = 12
 				offices = 6
 				fuel_silo = 4
 				agriculture_district = 4

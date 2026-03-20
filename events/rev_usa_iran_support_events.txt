@@ -175,3 +175,109 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = rev_usa_iran.10
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		NOT = { has_country_flag = rev_usa_iran_ai_resolution_done }
+		PER = {
+			exists = yes
+			NOT = { has_cosmetic_tag = PER_democratic }
+			OR = {
+				has_capitulated = yes
+				surrender_progress > 0.65
+			}
+		}
+		OR = {
+			has_war_with = PER
+			any_owned_state = {
+				is_core_of = PER
+			}
+		}
+		405 = { NOT = { is_controlled_by = PER } } # Tehran
+		OR = {
+			399 = { NOT = { is_controlled_by = PER } } # Khuzestan
+			978 = { NOT = { is_controlled_by = PER } } # Hormuzgan
+		}
+		OR = {
+			400 = { NOT = { is_controlled_by = PER } } # Fars
+			976 = { NOT = { is_controlled_by = PER } } # Isfahan
+			977 = { NOT = { is_controlled_by = PER } } # Kerman
+		}
+	}
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: AI Iran war resolution fired after decisive occupation and surrender progress."
+		set_country_flag = rev_usa_iran_ai_resolution_done
+		annex_country = {
+			target = PER
+			transfer_troops = yes
+		}
+		if = {
+			limit = {
+				NOT = { country_exists = PER }
+			}
+			release = PER
+			set_autonomy = {
+				target = PER
+				autonomy_state = autonomy_free
+			}
+			PER = {
+				set_cosmetic_tag = PER_democratic
+				set_politics = {
+					ruling_party = democratic
+					last_election = "2026.6.12"
+					election_frequency = 48
+					elections_allowed = yes
+				}
+				set_popularities = {
+					democratic = 68.0
+					communism = 2.0
+					fascism = 3.0
+					neutrality = 22.0
+					nationalist = 5.0
+				}
+				retire_country_leader = yes
+				create_country_leader = {
+					name = "Sayyid Mohammad Khatami"
+					picture = "Mohammad_Khatami.dds"
+					expire = "2034.1.1"
+					ideology = liberalism
+					traits = {
+						career_politician
+					}
+				}
+				clr_country_flag = PER_mullahs_government
+				clr_country_flag = party0_banned
+				clr_country_flag = party1_banned
+				clr_country_flag = party2_banned
+				clr_country_flag = party3_banned
+				clr_country_flag = party4_banned
+				clr_country_flag = party5_banned
+				clr_country_flag = party6_banned
+				clr_country_flag = party7_banned
+				clr_country_flag = party8_banned
+				clr_country_flag = party9_banned
+				clr_country_flag = party10_banned
+				clr_country_flag = party11_banned
+				clr_country_flag = party12_banned
+				clr_country_flag = party13_banned
+				clr_country_flag = party14_banned
+				clr_country_flag = party15_banned
+				clr_country_flag = party16_banned
+				clr_country_flag = party17_banned
+				clr_country_flag = party18_banned
+				clr_country_flag = party19_banned
+				clr_country_flag = party20_banned
+				clr_country_flag = party21_banned
+				clr_country_flag = party22_banned
+				clr_country_flag = party23_banned
+				clr_country_flag = party24_banned
+			}
+		}
+	}
+}
