@@ -6,9 +6,9 @@ capital = 811
 
 	add_ideas = {
 		#Economic Cycle
-		recession
+		stable_growth
 		#Corruption
-		medium_corruption
+		slight_corruption
 		#Faction 1
 		international_bankers
 		#Faction 2
@@ -17,9 +17,9 @@ capital = 811
 		labour_unions
 
 		#Bureacracy
-		bureau_01
+		bureau_03
 		#Military Spending?
-		defence_01
+		defence_04
 		#Internal Security
 		police_01
 		#Education budget
@@ -54,10 +54,54 @@ capital = 811
 	startup_influence = yes
 
 	# General Technology Setting
-	set_technology = {
 		complete_special_project = sp:sp_space_program_gdm
 		complete_special_project = sp:sp_missile_project
 		complete_special_project = sp:sp_missile_project_non_got
+
+		# Artillery
+		set_technology = { artillery_0 = 1 }
+		set_technology = { SP_arty_0 = 1 }
+		set_technology = { SP_R_arty_0 = 1 }
+		set_technology = { artillery_1 = 1 }
+		set_technology = { artillery_2 = 1 }
+		#set_technology = { artillery_3 = 1 }
+		set_technology = { Arty_upgrade_1 = 1 }
+		set_technology = { Arty_upgrade_2 = 1 }
+		set_technology = { Arty_upgrade_3 = 1 }
+		#set_technology = { Arty_upgrade_4 = 1 }
+		set_technology = { SP_arty_1 = 1 }
+		set_technology = { SP_R_arty_1 = 1 }
+		set_technology = { SP_arty_2 = 1 }
+		set_technology = { SP_R_arty_2 = 1 }
+		# Engineering
+		set_technology = { neural_networks_revival = 1 }
+		set_technology = { data_mining = 1 }
+		set_technology = { machine_learning = 1 }
+		set_technology = { sociable_machines = 1 }
+		set_technology = { early_ai_robotics = 1 }
+		#set_technology = { humanoid_robot = 1 }
+		#set_technology = { advanced_industrial_robotics = 1 }
+		#set_technology = { smart_drones = 1 }
+		#set_technology = { fully_automated_drones = 1 }
+		set_technology = { advanced_ai = 1 }
+		#set_technology = { modern_deep_learning = 1 }
+		#set_technology = { human_imitation_ai = 1 }
+		set_technology = { basic_computing = 1 }
+		set_technology = { integrated_circuit = 1 }
+		set_technology = { computing1 = 1 }
+		set_technology = { microprocessors = 1 }
+		set_technology = { computing2 = 1 }
+		set_technology = { computing3 = 1 }
+		set_technology = { computing4 = 1 }
+		#set_technology = { computing5 = 1 }
+		set_technology = { decryption1 = 1 }
+		set_technology = { decryption2 = 1 }
+		set_technology = { decryption3 = 1 }
+		#set_technology = { decryption4 = 1 }
+		#set_technology = { decryption5 = 1 }
+		set_technology = { encryption1 = 1 }
+		set_technology = { encryption2 = 1 }
+		set_technology = { encryption3 = 1 }
 		set_technology = { night_vision_3 = 1 }
 		set_technology = { command_control_equipment3 = 1 }
 		set_technology = { command_control_equipment4 = 1 }
@@ -214,7 +258,95 @@ capital = 811
 		set_technology = { tech_torpedoes_3 = 1 }
 		set_technology = { tech_specialized_protective_equipment = 1 }
 		set_technology = { tech_advanced_landing_craft = 1 }
-	}
+		# Industry
+		set_technology = { industrial_electrospun_polymeric_nanofibers = 1 }
+		set_technology = { multiwalled_carbon_nanotubes = 1 }
+		set_technology = { modern_electrospinning = 1 }
+		set_technology = { inorganic_fibers_fabrication = 1 }
+		set_technology = { industrial_production_of_nanofibers = 1 }
+		set_technology = { nanofibers_in_medicine = 1 }
+		#set_technology = { centrifugal_spinning = 1 }
+		set_technology = { stereolitography = 1 }
+		set_technology = { early_3D_printers = 1 }
+		set_technology = { t3D_wax_printer = 1 }
+		set_technology = { large_scale_3D_printing = 1 }
+		#set_technology = { self-replicated_3D_printer = 1 }
+		#set_technology = { commercial_nanomanufacturing = 1 }
+		#set_technology = { modern_3D_printing = 1 }
+		#set_technology = { DNA_fingerprinting = 1 }
+		set_technology = { modern_gmo = 1 }
+		set_technology = { gene_therapy = 1 }
+		set_technology = { genetically_modified_crops = 1 }
+		set_technology = { gene_targeting_pesticides = 1 }
+		#set_technology = { synthetic_life = 1 }
+		#set_technology = { safe_cloning = 1 }
+		#set_technology = { crispr_treatment = 1 }
+		set_technology = { fuel_silos = 1 }
+		set_technology = { electrification_1 = 1 }
+		set_technology = { electrification_2 = 1 }
+		set_technology = { electrification_3 = 1 }
+		#set_technology = { electrification_4 = 1 }
+		#set_technology = { electrification_5 = 1 }
+		#set_technology = { electrification_6 = 1 }
+		set_technology = { utility_scale_battery_storage = 1 }
+		#set_technology = { utility_scale_battery_storage2 = 1 }
+		#set_technology = { utility_scale_battery_storage3 = 1 }
+		set_technology = { fuel_efficiency = 1 }
+		set_technology = { fuel_efficiency2 = 1 }
+		set_technology = { fuel_efficiency3 = 1 }
+		#set_technology = { fuel_efficiency4 = 1 }
+		set_technology = { energy_efficiency = 1 }
+		set_technology = { energy_efficiency2 = 1 }
+		set_technology = { energy_efficiency3 = 1 }
+		#set_technology = { energy_efficiency4 = 1 }
+		#set_technology = { energy_efficiency5 = 1 }
+		#set_technology = { energy_efficiency6 = 1 }
+		set_technology = { fuel_refining = 1 }
+		set_technology = { fuel_refining2 = 1 }
+		set_technology = { fuel_refining3 = 1 }
+		set_technology = { fuel_refining4 = 1 }
+		#set_technology = { fuel_refining5 = 1 }
+		set_technology = { early_renewables = 1 }
+		set_technology = { renewables = 1 }
+		set_technology = { improved_renewables = 1 }
+		set_technology = { advanced_renewables = 1 }
+		set_technology = { modern_renewables = 1 }
+		#set_technology = { improved_modern_renewables = 1 }
+		#set_technology = { advanced_modern_renewables = 1 }
+		set_technology = { nuclear_technology = 1 }
+		set_technology = { reactor1 = 1 }
+		set_technology = { reactor2 = 1 }
+		#set_technology = { reactor3 = 1 }
+		#set_technology = { reactor4 = 1 }
+		#set_technology = { reactor5 = 1 }
+		set_technology = { construction1 = 1 }
+		set_technology = { excavation1 = 1 }
+		set_technology = { land_fort_building_1 = 1 }
+		set_technology = { stronghold_building_1 = 1 }
+		set_technology = { construction2 = 1 }
+		set_technology = { excavation2 = 1 }
+		set_technology = { construction3 = 1 }
+		set_technology = { excavation3 = 1 }
+		set_technology = { land_fort_building_2 = 1 }
+		set_technology = { construction4 = 1 }
+		set_technology = { excavation4 = 1 }
+		set_technology = { construction5 = 1 }
+		set_technology = { excavation5 = 1 }
+		set_technology = { land_fort_building_3 = 1 }
+		#set_technology = { construction6 = 1 }
+		#set_technology = { excavation6 = 1 }
+		#set_technology = { land_fort_building_4 = 1 }
+		set_technology = { integrated_transportation_system = 1 }
+		set_technology = { post_conventional_rail = 1 }
+		set_technology = { early_freight_locomotive = 1 }
+		set_technology = { early_high_speed_rail = 1 }
+		set_technology = { high_speed_rail = 1 }
+		set_technology = { modern_high_speed_rail = 1 }
+		set_technology = { freight_locomotive = 1 }
+		set_technology = { gps_agricultural_applications = 1 }
+		set_technology = { automated_irrigation_systems = 1 }
+		set_technology = { farming_data_analytic_softwares = 1 }
+		set_technology = { limited_automated_harvesting_software = 1 }
 
 
 	complete_special_project = sp:sp_aircraft_project
@@ -585,6 +717,9 @@ capital = 811
 	set_variable = { var = treasury value = 100 }
 	set_variable = { var = corporate_tax_rate value = 30 }
 	set_variable = { var = population_tax_rate value = 15 }
+	add_stability = 0.75
+	add_political_power = 1000
+	set_war_support = 0.75
 
 	set_popularities = {
 		democratic = 70.0
@@ -630,4 +765,3 @@ capital = 811
 
 	recruit_character = CAL_air_chief
 }
-

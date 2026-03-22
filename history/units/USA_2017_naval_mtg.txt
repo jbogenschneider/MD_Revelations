@@ -10,7 +10,7 @@
 		naval_base = 1562
 		task_force = {
 			name = "(CSG-11) - USS Kitty Hawk - NB Kitsap-Bremerton, WA"
-			location = 7386
+			location = 1562
 
 			ship = { name = "USS Kitty Hawk (CV-63)" definition = carrier start_experience_factor = 0.75 equipment = { carrier_hull_1 = { amount = 1 owner = USA version_name = "Kitty Hawk Class" } }
 				#air_wings = {
@@ -32,7 +32,7 @@
 		}
 		task_force = {
 			name = "(CSG-1) - USS Enterprise - NB Kitsap-Bremerton, WA"
-			location = 7386
+			location = 1562
 
 			ship = { name = "USS Enterprise (CVN-65)" definition = carrier start_experience_factor = 0.75 equipment = { carrier_hull_1 = { amount = 1 owner = USA version_name = "Enterprise Class" } } }
 
@@ -196,7 +196,7 @@
 		}
 		task_force = {
 			name = "(SUBRON-17) - NB Kitsap-Bangor, WA"
-			location = 7386
+			location = 4180
 
 			ship = { name = "USS Henry M. Jackson (SSBN-730)" definition = missile_submarine start_experience_factor = 0.75 equipment = { missile_submarine_hull_2 = { amount = 1 owner = USA version_name = "Ohio Class" } } }
 			ship = { name = "USS Alabama (SSBN-731)" definition = missile_submarine start_experience_factor = 0.75 equipment = { missile_submarine_hull_2 = { amount = 1 owner = USA version_name = "Ohio Class" } } }
@@ -209,7 +209,7 @@
 		}
 		task_force = {
 			name = "(SUBRON-19) - NB Kitsap-Bangor, WA"
-			location = 7386
+			location = 4180
 
 			ship = { name = "USS Bremerton (SSN-698)" definition = attack_submarine start_experience_factor = 0.75 equipment = { attack_submarine_hull_2 = { amount = 1 owner = USA version_name = "Los Angeles Class - Flight I" } } }
 			ship = { name = "USS Jacksonville (SSN-699)" definition = attack_submarine start_experience_factor = 0.75 equipment = { attack_submarine_hull_2 = { amount = 1 owner = USA version_name = "Los Angeles Class - Flight I" } } }
@@ -222,7 +222,7 @@
 		}
 		task_force = {
 			name = "(SUBDEVRON-19) - NB Kitsap-Bremerton, WA"
-			location = 7315
+			location = 4180
 
 			ship = { name = "USS Seawolf (SSN-21)" definition = attack_submarine start_experience_factor = 0.75 equipment = { attack_submarine_hull_3 = { amount = 1 owner = USA version_name = "Seawolf Class" } } }
 			ship = { name = "USS Connecticut (SSN-22)" definition = attack_submarine start_experience_factor = 0.75 equipment = { attack_submarine_hull_3 = { amount = 1 owner = USA version_name = "Seawolf Class" } } }
@@ -318,7 +318,7 @@
 		}
 		task_force = {
 			name = "(CDESRON-12) - NS Mayport, FL"
-			location = 7388
+			location = 865
 
 			ship = { name = "USS Thomas S. Gates (CG-51)" definition = cruiser start_experience_factor = 0.75 equipment = { cruiser_hull_2 = { amount = 1 owner = USA version_name = "Ticonderoga Class - Mark 26 Twin-Arm Missile Variant" } } }
 
@@ -326,7 +326,7 @@
 		}
 		task_force = {
 			name = "(DESRON-14) - NS Mayport, FL"
-			location = 12381
+			location = 865
 
 			ship = { name = "USS Hué City (CG-66)" definition = cruiser start_experience_factor = 0.75 equipment = { cruiser_hull_2 = { amount = 1 owner = USA version_name = "Ticonderoga Class - Mark 41 VLS Variant" } } }
 
@@ -369,7 +369,7 @@
 		}
 		task_force = {
 			name = "(SUBRON-4) - NSB New London, CT"
-			location = 9832
+			location = 865
 
 			ship = { name = "USS Hartford (SSN-768)" definition = attack_submarine start_experience_factor = 0.75 equipment = { attack_submarine_hull_2 = { amount = 1 owner = USA version_name = "Los Angeles Class - Flight III" } } }
 			ship = { name = "USS Hyman G. Rickover (SSN-709)" definition = attack_submarine start_experience_factor = 0.75 equipment = { attack_submarine_hull_2 = { amount = 1 owner = USA version_name = "Los Angeles Class - Flight I" } } }
@@ -381,7 +381,7 @@
 		}
 		task_force = {
 			name = "(SUBRON-4) - NSB New London, CT"
-			location = 9832
+			location = 865
 
 			ship = { name = "USS Toledo (SSN-769)" definition = attack_submarine start_experience_factor = 0.75 equipment = { attack_submarine_hull_2 = { amount = 1 owner = USA version_name = "Los Angeles Class - Flight III" } } }
 			ship = { name = "USS Providence (SSN-719)" definition = attack_submarine start_experience_factor = 0.75 equipment = { attack_submarine_hull_2 = { amount = 1 owner = USA version_name = "Los Angeles Class - Flight II" } } }
@@ -392,7 +392,7 @@
 		}
 		task_force = {
 			name = "(SUBRON-16) - NSB Kings Bay, GA"
-			location = 1480
+			location = 865
 
 			ship = { name = "USS Florida (SSGN-728)" definition = missile_submarine start_experience_factor = 0.75 equipment = { missile_submarine_hull_2 = { amount = 1 owner = USA version_name = "Ohio Class" } } }
 			ship = { name = "USS Georgia (SSGN-729)" definition = missile_submarine start_experience_factor = 0.75 equipment = { missile_submarine_hull_2 = { amount = 1 owner = USA version_name = "Ohio Class" } } }
@@ -401,7 +401,7 @@
 		}
 		task_force = {
 			name = "(SUBRON-20) - NSB Kings Bay, GA"
-			location = 1480
+			location = 865
 
 			ship = { name = "USS Alaska (SSBN-732)" definition = missile_submarine start_experience_factor = 0.75 equipment = { missile_submarine_hull_2 = { amount = 1 owner = USA version_name = "Ohio Class" } } }
 			ship = { name = "USS Maryland (SSBN-738)" definition = missile_submarine start_experience_factor = 0.75 equipment = { missile_submarine_hull_2 = { amount = 1 owner = USA version_name = "Ohio Class" } } }
@@ -454,7 +454,7 @@
 		}
 		task_force = {
 			name = "(SURFRON-5) - NSA Bahrain, Bahrain"
-			location = 11181
+			location = 1562
 
 			ship = { name = "USS Sentry (MCM-3)" definition = corvette start_experience_factor = 0.75 equipment = { corvette_hull_2 = { amount = 1 owner = USA version_name = "Avenger Class" } } }
 			ship = { name = "USS Devastator (MCM-6)" definition = corvette start_experience_factor = 0.75 equipment = { corvette_hull_2 = { amount = 1 owner = USA version_name = "Avenger Class" } } }
@@ -498,7 +498,7 @@
 		}
 		task_force = {
 			name = "(ESG-7) - CFA Sasebo, Japan"
-			location = 1158
+			location = 9998
 
 			ship = { name = "USS Kearsarge (LHD-3)" definition = helicopter_operator start_experience_factor = 0.75 equipment = { helicopter_operator_hull_2 = { amount = 1 owner = USA version_name = "Wasp Class" } } }
 
@@ -509,7 +509,7 @@
 		}
 		task_force = {
 			name = "(MCMRON-7) - USFA Sasebo, Japan"
-			location = 1158
+			location = 9998
 
 			ship = { name = "USS Patriot (MCM-7)" definition = corvette start_experience_factor = 0.75 equipment = { corvette_hull_2 = { amount = 1 owner = USA version_name = "Avenger Class" } } }
 			ship = { name = "USS Pioneer (MCM-9)" definition = corvette start_experience_factor = 0.75 equipment = { corvette_hull_2 = { amount = 1 owner = USA version_name = "Avenger Class" } } }

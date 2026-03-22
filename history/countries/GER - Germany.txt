@@ -3036,18 +3036,18 @@ capital = 45
 			not = { has_dlc = "Man the Guns" }
 		}
 		set_technology = {
-			missile_corvette_2 = 1
-			missile_corvette_3 = 1 #Braunschweig class
+			corvette_hull_4 = 1
+			corvette_hull_5 = 1 #Braunschweig class
 
-			frigate_1 = 1
-			frigate_2 = 1 #Bremen class
-			missile_frigate_1 = 1
-			missile_frigate_2 = 1 #Brandenburg class
-			missile_frigate_3 = 1
-			missile_frigate_4 = 1 #Baden-W�rttemberg class
+			frigate_hull_1 = 1
+			frigate_hull_2 = 1 #Bremen class
+			frigate_hull_3 = 1
+			frigate_hull_4 = 1 #Brandenburg class
+			frigate_hull_5 = 1
+			frigate_hull_6 = 1 #Baden-W�rttemberg class
 
-			diesel_attack_submarine_4 = 1 #Type 212
-			diesel_attack_submarine_5 = 1 #Type 216
+			attack_submarine_hull_3 = 1 #Type 212
+			attack_submarine_hull_4 = 1 #Type 216
 		}
 	}
 	if = {

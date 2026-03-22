@@ -200,13 +200,6 @@ units = {
 		start_equipment_factor = 0.9
 	}
 	division = {
-		name = "7th Special Forces Group"
-		location = 16151	#Eglin AFB
-		division_template = "Special Forces Group"
-		start_experience_factor = 0.9
-		start_equipment_factor = 0.9
-	}
-	division = {
 		name = "40th Infantry Division"
 		location = 7386		#California
 		division_template = "Infantry Division"

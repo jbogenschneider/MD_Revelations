@@ -91,6 +91,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MILITARY FOCUS_FILTER_NATO }
 		prerequisite = {
 			focus = CAL_buy_weapons
+		}
+		prerequisite = {
 			focus = CAL_organize_military_leadership
 		}
 		available = {

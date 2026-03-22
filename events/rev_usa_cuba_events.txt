@@ -21,13 +21,176 @@ country_event = {
 
 		add_to_variable = { treasury = 70 }
 
-		create_country_leader = {
-			name = "Marco Rubio"
-			picture = "USC_marco_rubio.png"
-			expire = "2035.1.1"
-			ideology = conservatism
-			traits = {
-				career_politician
+		CUB = {
+			set_country_flag = rev_cub_marco_installed
+			clr_country_flag = is_CUB_communists_nationalists_in_power
+			set_politics = {
+				ruling_party = democratic
+				last_election = "2028.1.1"
+				election_frequency = 48
+				elections_allowed = yes
+			}
+			set_popularities = {
+				democratic = 65.0
+				communism = 10.0
+				fascism = 3.0
+				neutrality = 17.0
+				nationalist = 5.0
+			}
+			if = {
+				limit = { has_idea = communist_cadres }
+				remove_ideas = communist_cadres
+			}
+			if = {
+				limit = { has_idea = CUB_idea_special_period }
+				remove_ideas = CUB_idea_special_period
+			}
+			if = {
+				limit = { has_idea = CUB_idea_blockade1 }
+				remove_ideas = CUB_idea_blockade1
+			}
+			if = {
+				limit = { has_idea = CUB_disorg_in_army_idea_1 }
+				remove_ideas = CUB_disorg_in_army_idea_1
+			}
+			if = {
+				limit = { has_idea = CUB_land_of_freedom_idea }
+				remove_ideas = CUB_land_of_freedom_idea
+			}
+			if = {
+				limit = { has_idea = CUB_old_command_economy }
+				remove_ideas = CUB_old_command_economy
+			}
+			if = {
+				limit = { has_idea = CUB_cpc_idea1 }
+				remove_ideas = CUB_cpc_idea1
+			}
+			if = {
+				limit = { has_idea = CUB_idea_migration_crisis }
+				remove_ideas = CUB_idea_migration_crisis
+			}
+			if = {
+				limit = { has_idea = CUB_idea_castroism }
+				remove_ideas = CUB_idea_castroism
+			}
+			if = {
+				limit = { has_idea = CUB_youth_castro_organisation }
+				remove_ideas = CUB_youth_castro_organisation
+			}
+			if = {
+				limit = { has_idea = CUB_cdr }
+				remove_ideas = CUB_cdr
+			}
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Marco Rubio"
+				picture = "Marco_Rubio.dds"
+				expire = "2035.1.1"
+				ideology = conservatism
+				traits = {
+					career_politician
+				}
+			}
+		}
+	}
+
+	option = {
+		name = OK
+	}
+}
+
+country_event = {
+	id = rev_usa_cuba.2
+	is_triggered_only = yes
+	hidden = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = rev_usa_invade_cuba_started
+		NOT = { has_country_flag = rev_usa_cuba_postwar_done }
+		CUB = {
+			exists = yes
+			NOT = { has_war_with = USA }
+			NOT = { has_country_flag = rev_cub_marco_installed }
+		}
+		NOT = { has_war_with = CUB }
+	}
+
+	immediate = {
+		set_country_flag = rev_usa_cuba_postwar_done
+		clr_country_flag = rev_usa_invade_cuba_started
+
+		add_to_variable = { treasury = 70 }
+
+		CUB = {
+			set_country_flag = rev_cub_marco_installed
+			clr_country_flag = is_CUB_communists_nationalists_in_power
+			set_politics = {
+				ruling_party = democratic
+				last_election = "2028.1.1"
+				election_frequency = 48
+				elections_allowed = yes
+			}
+			set_popularities = {
+				democratic = 65.0
+				communism = 10.0
+				fascism = 3.0
+				neutrality = 17.0
+				nationalist = 5.0
+			}
+			if = {
+				limit = { has_idea = communist_cadres }
+				remove_ideas = communist_cadres
+			}
+			if = {
+				limit = { has_idea = CUB_idea_special_period }
+				remove_ideas = CUB_idea_special_period
+			}
+			if = {
+				limit = { has_idea = CUB_idea_blockade1 }
+				remove_ideas = CUB_idea_blockade1
+			}
+			if = {
+				limit = { has_idea = CUB_disorg_in_army_idea_1 }
+				remove_ideas = CUB_disorg_in_army_idea_1
+			}
+			if = {
+				limit = { has_idea = CUB_land_of_freedom_idea }
+				remove_ideas = CUB_land_of_freedom_idea
+			}
+			if = {
+				limit = { has_idea = CUB_old_command_economy }
+				remove_ideas = CUB_old_command_economy
+			}
+			if = {
+				limit = { has_idea = CUB_cpc_idea1 }
+				remove_ideas = CUB_cpc_idea1
+			}
+			if = {
+				limit = { has_idea = CUB_idea_migration_crisis }
+				remove_ideas = CUB_idea_migration_crisis
+			}
+			if = {
+				limit = { has_idea = CUB_idea_castroism }
+				remove_ideas = CUB_idea_castroism
+			}
+			if = {
+				limit = { has_idea = CUB_youth_castro_organisation }
+				remove_ideas = CUB_youth_castro_organisation
+			}
+			if = {
+				limit = { has_idea = CUB_cdr }
+				remove_ideas = CUB_cdr
+			}
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Marco Rubio"
+				picture = "Marco_Rubio.dds"
+				expire = "2035.1.1"
+				ideology = conservatism
+				traits = {
+					career_politician
+				}
 			}
 		}
 	}

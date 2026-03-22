@@ -5157,7 +5157,7 @@ capital = 1182
 
 			tech_landing_craft = 1
 			tech_modern_landing_craft = 1
-			tech_mtg_specialized_protective_equipment = 1
+			tech_specialized_protective_equipment = 1
 		}
 
 		#Gerald R. Ford Class
@@ -5180,7 +5180,7 @@ capital = 1182
 				mid_2_custom_slot = module_helipads_3
 				mid_3_custom_slot = module_helipads_3
 				rear_1_custom_slot = module_ram_4
-				rear_2_custom_slot = module_ciws_4
+				rear_2_custom_slot = module_helipads_3
 			}
 		}
 		#America Class
@@ -5313,20 +5313,20 @@ capital = 1182
 			set_technology = {
 				transport_helicopter3 = 1
 
-				missile_corvette_2 = 1
-				missile_corvette_3 = 1
+				corvette_hull_4 = 1
+				corvette_hull_5 = 1
 
-				missile_frigate_2 = 1
-				missile_frigate_3 = 1
-				missile_frigate_4 = 1 #Freedom Class
+				frigate_hull_4 = 1
+				frigate_hull_5 = 1
+				frigate_hull_6 = 1 #Freedom Class
 
-				missile_cruiser_4 = 1
+				cruiser_hull_4 = 1
 
-				Nuclear_carrier_2 = 1 #Ford class
+				carrier_hull_3 = 1 #Ford class
 
-				LHA_2 = 1 #America Class
+				helicopter_operator_hull_3 = 1 #America Class
 
-				attack_submarine_4 = 1
+				attack_submarine_hull_3 = 1
 			}
 
 			create_equipment_variant = {

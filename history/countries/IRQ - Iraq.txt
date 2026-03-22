@@ -581,7 +581,7 @@ capital = 557
 
 		L_Strike_fighter1 = 1
 
-		corvette_1 = 1
+		corvette_hull_1 = 1
 		attack_submarine_hull_1 = 1
 
 

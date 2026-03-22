@@ -143,8 +143,8 @@ capital = 391
 		Anti_Air_0 = 1
 		util_vehicle_0 = 1
 
-		corvette_1 = 1
-		corvette_2 = 1
+		corvette_hull_1 = 1
+		corvette_hull_2 = 1
 
 		tech_landing_craft = 1
 

@@ -4974,7 +4974,7 @@ capital = 547
 				mid_2_custom_slot = module_helipads_2
 				mid_3_custom_slot = module_helipads_2
 				rear_1_custom_slot = module_ram_3
-				rear_2_custom_slot = module_ciws_3
+				rear_2_custom_slot = module_helipads_2
 
 			}
 		}
@@ -4999,7 +4999,7 @@ capital = 547
 				mid_2_custom_slot = module_helipads_2
 				mid_3_custom_slot = module_helipads_2
 				rear_1_custom_slot = module_ram_4
-				rear_2_custom_slot = module_ciws_4
+				rear_2_custom_slot = module_helipads_2
 
 			}
 		}
@@ -5084,43 +5084,43 @@ capital = 547
 
 		else = {
 			set_technology = {
-				modern_carrier_0 = 1
-				modern_carrier_1 = 1
-				modern_carrier_2 = 1 #Type 001 aircraft carrier
-				modern_carrier_3 = 1
+				carrier_hull_1 = 1
+				carrier_hull_2 = 1
+				carrier_hull_3 = 1 #Type 001 aircraft carrier
+				carrier_hull_4 = 1
 
-				cruiser_1 = 1
-				cruiser_2 = 1
-				missile_cruiser_1 = 1
-				missile_cruiser_4 = 1
+				cruiser_hull_1 = 1
+				cruiser_hull_2 = 1
+				cruiser_hull_3 = 1
+				cruiser_hull_4 = 1
 
-				missile_destroyer_2 = 1
-				missile_destroyer_3 = 1 #Type 052C destroyer, Type 052D Luyang III-Class
+				destroyer_hull_4 = 1
+				destroyer_hull_5 = 1 #Type 052C destroyer, Type 052D Luyang III-Class
 
-				missile_corvette_1 = 1
-				missile_corvette_2 = 1 #Type 056 corvette, Type 056A Jiangdao-Class
+				corvette_hull_3 = 1
+				corvette_hull_4 = 1 #Type 056 corvette, Type 056A Jiangdao-Class
 
-				missile_frigate_2 = 1
-				missile_frigate_3 = 1 #Type 054A frigate Jiangkai II class,
+				frigate_hull_4 = 1
+				frigate_hull_5 = 1 #Type 054A frigate Jiangkai II class,
 
 				attack_submarine_hull_1 = 1
 
-				missile_submarine_2 = 1 #Jin-class
-				missile_submarine_3 = 1 #093B-class
+				missile_submarine_hull_2 = 1 #Jin-class
+				missile_submarine_hull_3 = 1 #093B-class
 
-				attack_submarine_2 = 1
-				attack_submarine_3 = 1 #Shang-class
+				attack_submarine_hull_2 = 1
+				attack_submarine_hull_3 = 1 #Shang-class
 
 				attack_submarine_hull_2 = 1 #Song-class
-				diesel_attack_submarine_3 = 1 #Kilo-class
+				attack_submarine_hull_3 = 1 #Kilo-class
 
-				LPD_0 = 1
-				LPD_1 = 1  #Type 071 amphibious transport dock
+				helicopter_operator_hull_1 = 1
+				helicopter_operator_hull_2 = 1  #Type 071 amphibious transport dock
 
-				LHA_0 = 1
-				LHA_1 = 1 #Type 075 LHA
+				helicopter_operator_hull_1 = 1
+				helicopter_operator_hull_2 = 1 #Type 075 LHA
 
-				modern_landing_craft = 1
+				tech_modern_landing_craft = 1
 			}
 
 			create_equipment_variant = {

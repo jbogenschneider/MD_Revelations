@@ -1,0 +1,26 @@
+add_namespace = rev_cal_cleanup
+
+country_event = {
+	id = rev_cal_cleanup.1
+	title = rev_cal_cleanup.1.t
+	desc = rev_cal_cleanup.1.d
+	picture = GFX_report_event_generic
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		remove_ideas = minor_power
+		remove_ideas = non_power
+		remove_ideas = IP_anti_military
+		remove_ideas = sp_wireless_power_grid_expansion_idea
+		if = {
+			limit = { has_dynamic_modifier = { modifier = no_fuel_penalties_modifier } }
+			remove_dynamic_modifier = { modifier = no_fuel_penalties_modifier }
+		}
+	}
+
+	option = {
+		name = OK
+	}
+}

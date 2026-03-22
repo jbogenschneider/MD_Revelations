@@ -11,6 +11,9 @@ state = {
 		buildings = {
 			infrastructure = 2
 			stronghold_network = 1
+			11405 = {
+				air_facility = 1
+			}
 		}
 	}
 

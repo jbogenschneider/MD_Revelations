@@ -2748,12 +2748,12 @@ capital = 13
 				fixed_ship_auxillary_slot = module_esm_2
 				fixed_ship_flight_deck = module_flight_deck_4
 				front_1_custom_slot = module_ciws_5
-				front_2_custom_slot = module_ciws_5
+				front_2_custom_slot = module_helipads_3
 				mid_1_custom_slot = module_helipads_3
 				mid_2_custom_slot = module_helipads_3
 				mid_3_custom_slot = module_ciws_5
 				rear_1_custom_slot = module_ciws_5
-				rear_2_custom_slot = module_ciws_5
+				rear_2_custom_slot = module_helipads_3
 			}
 		}
 		#Astute Class
@@ -2813,16 +2813,16 @@ capital = 13
 
 		else = {
 			set_technology = {
-				modern_carrier_4 = 1 #Queen Elizabeth-class aircraft carrier
+				carrier_hull_5 = 1 #Queen Elizabeth-class aircraft carrier
 
-				missile_destroyer_1 = 1
-				missile_destroyer_2 = 1
-				missile_destroyer_3 = 1 #Type 45 class
+				destroyer_hull_3 = 1
+				destroyer_hull_4 = 1
+				destroyer_hull_5 = 1 #Type 45 class
 
-				missile_frigate_1 = 1 #Type 23 class
+				frigate_hull_3 = 1 #Type 23 class
 
-				missile_corvette_2 = 1
-				missile_corvette_3 = 1 #Khareef-Class
+				corvette_hull_4 = 1
+				corvette_hull_5 = 1 #Khareef-Class
 			}
 		}
 	}

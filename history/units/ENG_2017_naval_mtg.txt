@@ -18,7 +18,7 @@
 		}
 		task_force = {
 			name = "2nd RN Submarine Squadron - HMNB Devonport"
-			location = 540
+			location = 6395
 
 			ship = { name = "HMS Trafalgar (S107)" definition = attack_submarine start_experience_factor = 0.65 equipment = { attack_submarine_hull_2 = { amount = 1 owner = ENG version_name = "Trafalgar Class" } } }
 			ship = { name = "HMS Turbulent (S87)" definition = attack_submarine start_experience_factor = 0.65 equipment = { attack_submarine_hull_2 = { amount = 1 owner = ENG version_name = "Trafalgar Class" } } }
@@ -55,7 +55,7 @@
 		}
 		task_force = {
 			name = "2nd Frigate Squadron - HMNB Devonport"
-			location = 540
+			location = 9458
 
 			ship = { name = "HMS Cornwall (F99)" definition = frigate start_experience_factor = 0.65 equipment = { frigate_hull_2 = { amount = 1 owner = ENG version_name = "Type 22 Class - Batch 3" } } }
 			ship = { name = "HMS Campbeltown (F86)" definition = frigate start_experience_factor = 0.65 equipment = { frigate_hull_2 = { amount = 1 owner = ENG version_name = "Type 22 Class - Batch 3" } } }
@@ -125,7 +125,7 @@
 		}
 		task_force = {
 			name = "RN Commander Littoral Strike Group - HMNB Gibraltar"
-			location = 4135
+			location = 9458
 
 			ship = { name = "HMS Pembroke (M107)" definition = corvette start_experience_factor = 0.65 equipment = { corvette_hull_3 = { amount = 1 owner = ENG version_name = "Sandown Class" } } }
 
@@ -134,7 +134,7 @@
 		}
 		task_force = {
 			name = "RN Commander Littoral Strike Group - Mare Harbour"
-			location = 14578
+			location = 9458
 
 			ship = { name = "HMS Leeds Castle (P258)" definition = corvette start_experience_factor = 0.65 equipment = { corvette_hull_2 = { amount = 1 owner = ENG version_name = "Castle Class" } } }
 
@@ -142,7 +142,7 @@
 		}
 		task_force = {
 			name = "RN Commander Littoral Strike Group - UK National Support Element Bahrain"
-			location = 2691
+			location = 9458
 
 			ship = { name = "HMS Cattistock (M31)" definition = corvette start_experience_factor = 0.65 equipment = { corvette_hull_2 = { amount = 1 owner = ENG version_name = "Hunt Class" } } }
 			ship = { name = "HMS Hurworth (M39)" definition = corvette start_experience_factor = 0.65 equipment = { corvette_hull_2 = { amount = 1 owner = ENG version_name = "Hunt Class" } } }
@@ -153,7 +153,7 @@
 		}
 		task_force = {
 			name = "RN Commander Littoral Strike Group - UK Joint Logistics Base Oman"
-			location = 10760
+			location = 9458
 
 			ship = { name = "HMS Brecon (M29)" definition = corvette start_experience_factor = 0.65 equipment = { corvette_hull_2 = { amount = 1 owner = ENG version_name = "Hunt Class" } } }
 			ship = { name = "HMS Middleton (M34)" definition = corvette start_experience_factor = 0.65 equipment = { corvette_hull_2 = { amount = 1 owner = ENG version_name = "Hunt Class" } } }
@@ -163,7 +163,7 @@
 		}
 		task_force = {
 			name = "RN Commander Littoral Strike Group - British Defence Singapore Support Unit"
-			location = 12299
+			location = 9458
 
 			ship = { name = "HMS Argyll (F231)" definition = frigate start_experience_factor = 0.65 equipment = { frigate_hull_3 = { amount = 1 owner = ENG version_name = "Type 23 Class" } } }
 
@@ -172,7 +172,7 @@
 		}
 		task_force = {
 			name = "RN Fishery Protection Squadron HMNB Clyde"
-			location = 6395
+			location = 9458
 
 			ship = { name = "HMS Dumbarton Castle (P265)" definition = corvette start_experience_factor = 0.65 equipment = { corvette_hull_2 = { amount = 1 owner = ENG version_name = "Castle Class" } } }
 			ship = { name = "HMS Penzance (M106)" definition = corvette start_experience_factor = 0.65 equipment = { corvette_hull_3 = { amount = 1 owner = ENG version_name = "Sandown Class" } } }

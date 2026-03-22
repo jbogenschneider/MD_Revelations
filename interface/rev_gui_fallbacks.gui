@@ -11,11 +11,12 @@ guiTypes = {
 			size = { width = 10 height = 10 }
 		}
 
-		listboxType = {
+		listBoxType = {
 			name = "background_selection_list"
 			position = { x = 0 y = 0 }
-			size = { width = 10 height = 10 }
+			size = { x = 10 y = 10 }
 			scrollbartype = "standardlistbox_slider"
+			offset = { x = 0 y = 0 }
 		}
 
 		containerWindowType = {
@@ -24,7 +25,7 @@ guiTypes = {
 			size = { width = 10 height = 10 }
 		}
 
-		checkboxType = {
+		checkBoxType = {
 			name = "select_all_checkbox"
 			position = { x = 0 y = 0 }
 			quadTextureSprite = "GFX_generic_checkbox"
@@ -42,11 +43,11 @@ guiTypes = {
 		name = "allies_stations_entry"
 		size = { width = 10 height = 10 }
 		clipping = no
-		buttonType = {
+		checkBoxType = {
 			name = "select_station_button"
 			position = { x = 0 y = 0 }
-			quadTextureSprite = "GFX_closebutton"
-			clicksound = click_default
+			quadTextureSprite = "GFX_MD_album_art"
+			clicksound = decisions_ui_button
 		}
 	}
 
@@ -54,11 +55,11 @@ guiTypes = {
 		name = "axis_stations_entry"
 		size = { width = 10 height = 10 }
 		clipping = no
-		buttonType = {
+		checkBoxType = {
 			name = "select_station_button"
 			position = { x = 0 y = 0 }
-			quadTextureSprite = "GFX_closebutton"
-			clicksound = click_default
+			quadTextureSprite = "GFX_MD_album_art"
+			clicksound = decisions_ui_button
 		}
 	}
 }

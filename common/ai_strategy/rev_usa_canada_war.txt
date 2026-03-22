@@ -1,0 +1,273 @@
+USA_crush_canada_phase_1 = {
+	allowed = { tag = USA }
+
+	enable = {
+		has_war_with = CAN
+		OR = {
+			NOT = { controls_state = 769 } # New York
+			NOT = { controls_state = 763 } # Ontario (Toronto/Ottawa)
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		tag = CAN
+		priority = 200
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+		manual_attack = yes
+	}
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.40
+		order_id = 990
+		states = { 769 } # New York
+		subtract_invasions_from_need = no
+		subtract_fronts_from_need = no
+	}
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.18
+		order_id = 991
+		states = { 767 780 } # Massachusetts, Minnesota
+		subtract_invasions_from_need = no
+		subtract_fronts_from_need = no
+	}
+}
+
+USA_crush_canada_phase_2 = {
+	allowed = { tag = USA }
+
+	enable = {
+		has_war_with = CAN
+		controls_state = 769   # New York
+		controls_state = 763   # Ontario (Toronto/Ottawa)
+		OR = {
+			NOT = { controls_state = 1159 } # Western Quebec (Montreal)
+			NOT = { controls_state = 762 }  # Eastern Quebec (Quebec City)
+			NOT = { controls_state = 767 }  # Massachusetts (Boston)
+			NOT = { controls_state = 780 }  # Minnesota (Minneapolis)
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		tag = CAN
+		priority = 170
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+		manual_attack = yes
+	}
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.28
+		order_id = 992
+		states = { 767 780 } # Boston, Minneapolis
+		subtract_invasions_from_need = no
+		subtract_fronts_from_need = no
+	}
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.12
+		order_id = 993
+		states = { 769 } # keep pressure east after Ontario falls
+		subtract_invasions_from_need = no
+		subtract_fronts_from_need = no
+	}
+}
+
+USA_crush_canada_phase_3 = {
+	allowed = { tag = USA }
+
+	enable = {
+		has_war_with = CAN
+		controls_state = 769    # New York
+		controls_state = 763    # Ontario
+		controls_state = 1159   # Western Quebec
+		controls_state = 762    # Eastern Quebec
+		NOT = { has_war_with = CAL }
+		NOT = { controls_state = 754 } # British Columbia (Vancouver)
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		tag = CAN
+		priority = 140
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+		manual_attack = yes
+	}
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.22
+		order_id = 994
+		states = { 809 780 } # Washington, Minnesota
+		subtract_invasions_from_need = no
+		subtract_fronts_from_need = no
+	}
+}
+
+USA_crush_california_after_canada = {
+	allowed = { tag = USA }
+
+	enable = {
+		has_war_with = CAL
+		controls_state = 769    # New York
+		controls_state = 763    # Ontario
+		controls_state = 1159   # Western Quebec
+		controls_state = 762    # Eastern Quebec
+		NOT = { controls_state = 811 } # California
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		tag = CAL
+		priority = 220
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+		manual_attack = yes
+	}
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.30
+		order_id = 995
+		states = { 809 810 } # Washington and Oregon staging for California
+		subtract_invasions_from_need = no
+		subtract_fronts_from_need = no
+	}
+}
+
+USA_finish_washington_after_california = {
+	allowed = { tag = USA }
+
+	enable = {
+		has_war_with = CAL
+		controls_state = 811   # California
+		NOT = { controls_state = 809 } # Washington
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		tag = CAL
+		priority = 180
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+		manual_attack = yes
+	}
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.24
+		order_id = 996
+		states = { 810 } # Oregon staging for Washington
+		subtract_invasions_from_need = no
+		subtract_fronts_from_need = no
+	}
+}
+
+USA_take_greenland_from_denmark = {
+	allowed = { tag = USA }
+
+	enable = {
+		has_war_with = DEN
+		OR = {
+			NOT = { country_exists = CAN }
+			CAN = { has_capitulated = yes }
+			NOT = { has_war_with = CAN }
+		}
+		OR = {
+			NOT = { country_exists = CAL }
+			CAL = { has_capitulated = yes }
+			NOT = { has_war_with = CAL }
+		}
+		OR = {
+			NOT = { controls_state = 1161 }
+			NOT = { controls_state = 1162 }
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		tag = DEN
+		priority = 130
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+		manual_attack = yes
+	}
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.12
+		order_id = 997
+		states = { 763 1159 762 } # Ontario and Quebec staging for Greenland
+		subtract_invasions_from_need = no
+		subtract_fronts_from_need = no
+	}
+}
+
+USA_take_greenland_from_grl = {
+	allowed = { tag = USA }
+
+	enable = {
+		has_war_with = GRL
+		OR = {
+			NOT = { country_exists = CAN }
+			CAN = { has_capitulated = yes }
+			NOT = { has_war_with = CAN }
+		}
+		OR = {
+			NOT = { country_exists = CAL }
+			CAL = { has_capitulated = yes }
+			NOT = { has_war_with = CAL }
+		}
+		OR = {
+			NOT = { controls_state = 1161 }
+			NOT = { controls_state = 1162 }
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		tag = GRL
+		priority = 130
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+		manual_attack = yes
+	}
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.12
+		order_id = 998
+		states = { 763 1159 762 } # Ontario and Quebec staging for Greenland
+		subtract_invasions_from_need = no
+		subtract_fronts_from_need = no
+	}
+}

@@ -281,3 +281,120 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = rev_usa_iran.11
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		D01 = { exists = yes }
+		OR = {
+			402 = { is_owned_by = USA }
+			977 = { is_owned_by = USA }
+			1147 = { is_owned_by = USA }
+			1151 = { is_owned_by = USA }
+			1150 = { is_owned_by = USA }
+		}
+	}
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: transferring occupied Atesh states from USA to D01."
+		if = {
+			limit = { 402 = { is_owned_by = USA } }
+			402 = { transfer_state_to = D01 cancel_resistance = yes set_resistance = 0 set_compliance = 100 }
+		}
+		if = {
+			limit = { 977 = { is_owned_by = USA } }
+			977 = { transfer_state_to = D01 cancel_resistance = yes set_resistance = 0 set_compliance = 100 }
+		}
+		if = {
+			limit = { 1147 = { is_owned_by = USA } }
+			1147 = { transfer_state_to = D01 cancel_resistance = yes set_resistance = 0 set_compliance = 100 }
+		}
+		if = {
+			limit = { 1151 = { is_owned_by = USA } }
+			1151 = { transfer_state_to = D01 cancel_resistance = yes set_resistance = 0 set_compliance = 100 }
+		}
+		if = {
+			limit = { 1150 = { is_owned_by = USA } }
+			1150 = { transfer_state_to = D01 cancel_resistance = yes set_resistance = 0 set_compliance = 100 }
+		}
+	}
+}
+
+country_event = {
+	id = rev_usa_iran.12
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = D01
+		#NOT = { country_exists = PER }
+		OR = {
+			399 = { is_owned_by = D01 }
+			400 = { is_owned_by = D01 }
+			402 = { is_owned_by = D01 }
+			405 = { is_owned_by = D01 }
+			976 = { is_owned_by = D01 }
+			977 = { is_owned_by = D01 }
+			978 = { is_owned_by = D01 }
+			1147 = { is_owned_by = D01 }
+			1150 = { is_owned_by = D01 }
+			1151 = { is_owned_by = D01 }
+		}
+	}
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: restoring Persia from D01 successor state."
+		release = PER
+		if = {
+			limit = { country_exists = PER }
+			PER = {
+				if = {
+					limit = { D01 = { is_ai = no } }
+					change_tag_from = D01
+				}
+				annex_country = {
+					target = D01
+					transfer_troops = yes
+				}
+				set_cosmetic_tag = PER_democratic
+				set_politics = {
+					ruling_party = democratic
+					last_election = "2026.6.12"
+					election_frequency = 48
+					elections_allowed = yes
+				}
+				set_popularities = {
+					democratic = 68.0
+					communism = 2.0
+					fascism = 3.0
+					neutrality = 22.0
+					nationalist = 5.0
+				}
+				retire_country_leader = yes
+				create_country_leader = {
+					name = "Sayyid Mohammad Khatami"
+					picture = "Mohammad_Khatami.dds"
+					expire = "2034.1.1"
+					ideology = liberalism
+					traits = {
+						career_politician
+					}
+				}
+				clr_country_flag = PER_mullahs_government
+				clr_country_flag = party0_banned
+				clr_country_flag = party1_banned
+				clr_country_flag = party2_banned
+				clr_country_flag = party3_banned
+				clr_country_flag = party4_banned
+				clr_country_flag = party5_banned
+				clr_country_flag = party6_banned
+				clr_country_flag = party7_banned
+				clr_country_flag = party8_banned
+			}
+		}
+	}
+}

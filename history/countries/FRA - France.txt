@@ -3067,26 +3067,26 @@ capital = 56
 
 		else = {
 			set_technology = {
-				modern_carrier_4 = 1 #Porte Avion Classe Philippe Leclerc de Hauteclocque		#Fictionnal
+				carrier_hull_5 = 1 #Porte Avion Classe Philippe Leclerc de Hauteclocque		#Fictionnal
 
-				missile_destroyer_4 = 1 	#Frégate Européenne Multi-Mission Aquitaine
+				destroyer_hull_4 = 1 	#Frégate Européenne Multi-Mission Aquitaine
 
-				missile_corvette_3 = 1 	#Corvette Hèrmes		#Fictionnal
-				missile_corvette_4 = 1 	#Gowind-Class
+				corvette_hull_5 = 1 	#Corvette Hèrmes		#Fictionnal
+				corvette_hull_6 = 1 	#Gowind-Class
 
-				missile_frigate_3 = 1 #Frégate Légère Furtive Modernisé
-				missile_frigate_4 = 1 #Frégates de taille intermédiaire Marseillaise
+				frigate_hull_5 = 1 #Frégate Légère Furtive Modernisé
+				frigate_hull_6 = 1 #Frégates de taille intermédiaire Marseillaise
 
-				attack_submarine_5 = 1 #Classe Suffren/Barracuda
+				attack_submarine_hull_4 = 1 #Classe Suffren/Barracuda
 
-				missile_submarine_5 = 1	#SNLE Classe Le Triomphant M51
+				missile_submarine_hull_5 = 1	#SNLE Classe Le Triomphant M51
 
-				diesel_attack_submarine_5 = 1 	#Classe Scorpène 2000
-				diesel_attack_submarine_6 = 1 	#Barracuda Shortfin
+				attack_submarine_hull_4 = 1 	#Classe Scorpène 2000
+				attack_submarine_hull_5 = 1 	#Barracuda Shortfin
 
-				LHA_1 = 1		#Porte Hélicoptère Chimère
+				helicopter_operator_hull_2 = 1		#Porte Hélicoptère Chimère
 
-				LPD_2 = 1		#BPC Mistral #Should be LHA but LHA are considered in game as STOVL Carrier
+				helicopter_operator_hull_3 = 1		#BPC Mistral #Should be LHA but LHA are considered in game as STOVL Carrier
 			}
 
 			#Naval variants

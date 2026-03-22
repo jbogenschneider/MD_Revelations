@@ -647,15 +647,15 @@ capital = 504
 			set_technology = {
 				tech_landing_craft = 1
 				#Anawratha-class
-				corvette_1 = 1
-				corvette_2 = 1
-				missile_corvette_1 = 1
+				corvette_hull_1 = 1
+				corvette_hull_2 = 1
+				corvette_hull_3 = 1
 
 				#Kyan Sittha-Class
-				frigate_1 = 1
-				frigate_2 = 1
-				missile_frigate_1 = 1
-				missile_frigate_2 = 1
+				frigate_hull_1 = 1
+				frigate_hull_2 = 1
+				frigate_hull_3 = 1
+				frigate_hull_4 = 1
 			}
 		}
 	}

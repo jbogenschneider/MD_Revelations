@@ -1,0 +1,20 @@
+on_actions = {
+	on_daily = {
+		effect = {
+			CAL = {
+				if = {
+					limit = {
+						OR = {
+							has_idea = minor_power
+							has_idea = non_power
+							has_idea = IP_anti_military
+							has_idea = sp_wireless_power_grid_expansion_idea
+							has_dynamic_modifier = { modifier = no_fuel_penalties_modifier }
+						}
+					}
+					country_event = { id = rev_cal_cleanup.1 }
+				}
+			}
+		}
+	}
+}

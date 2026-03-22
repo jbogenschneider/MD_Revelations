@@ -904,9 +904,9 @@ set_research_slots = 3
 				attack_submarine_hull_2 = 1
 
 				#Kotor-Class
-				corvette_1 = 1
-				corvette_2 = 1
-				missile_corvette_1 = 1
+				corvette_hull_1 = 1
+				corvette_hull_2 = 1
+				corvette_hull_3 = 1
 			}
 		}
 	}

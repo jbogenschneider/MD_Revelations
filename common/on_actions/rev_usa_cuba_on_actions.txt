@@ -13,6 +13,20 @@ on_actions = {
 				}
 				country_event = { id = rev_usa_cuba.1 }
 			}
+			if = {
+				limit = {
+					tag = USA
+					has_country_flag = rev_usa_invade_cuba_started
+					NOT = { has_country_flag = rev_usa_cuba_postwar_done }
+					CUB = {
+						exists = yes
+						NOT = { has_war_with = USA }
+						NOT = { has_country_flag = rev_cub_marco_installed }
+					}
+					NOT = { has_war_with = CUB }
+				}
+				country_event = { id = rev_usa_cuba.2 }
+			}
 		}
 	}
 }

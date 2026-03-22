@@ -2107,22 +2107,22 @@ capital = 81
 			not = { has_dlc = "Man the Guns" }
 		}
 		set_technology = {
-			missile_frigate_2 = 1
-			missile_frigate_3 = 1
-			missile_frigate_4 = 1 #Bergamini-class
+			frigate_hull_4 = 1
+			frigate_hull_5 = 1
+			frigate_hull_6 = 1 #Bergamini-class
 
-			missile_destroyer_4 = 1 #Fregate europee multi-missione Bergamini-Class
+			destroyer_hull_4 = 1 #Fregate europee multi-missione Bergamini-Class
 
-			diesel_attack_submarine_3 = 1 #Sauro class
-			diesel_attack_submarine_4 = 1 #Todaro class
+			attack_submarine_hull_2 = 1 #Sauro class
+			attack_submarine_hull_3 = 1 #Todaro class
 
 			#San Giorgio-Class
-			LPD_0 = 1
-			LPD_1 = 1 #San Giorgio-class
+			helicopter_operator_hull_1 = 1
+			helicopter_operator_hull_2 = 1 #San Giorgio-class
 
 			#Trieste-Class
 
-			LHA_2 = 1
+			helicopter_operator_hull_3 = 1
 		}
 	}
 	if = {

@@ -162,9 +162,7 @@ capital = 396
 
 		set_technology = {
 			mbt_tech = 1
-			afv_tech = 1
 			nsb_artillery_0 = 1
-			nsb_SP_arty_1 = 1
 			nsb_Anti_Air_0 = 1
 		}
 
@@ -193,13 +191,13 @@ capital = 396
 				tech_landing_craft = 1
 				attack_submarine_hull_1 = 1
 				attack_submarine_hull_1 = 1
-				cruiser_1 = 1
-				cruiser_2 = 1
-				destroyer_1 = 1
-				frigate_1 = 1
-				frigate_2 = 1
-				corvette_1 = 1
-				corvette_2 = 1
+				cruiser_hull_1 = 1
+				cruiser_hull_2 = 1
+				destroyer_hull_1 = 1
+				frigate_hull_1 = 1
+				frigate_hull_2 = 1
+				corvette_hull_1 = 1
+				corvette_hull_2 = 1
 			}
 		}
 	}

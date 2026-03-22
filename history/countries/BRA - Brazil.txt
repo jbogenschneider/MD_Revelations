@@ -1240,7 +1240,7 @@ capital = 885
 				fixed_ship_auxillary_slot_3 = module_fuel_tank
 				fixed_ship_auxillary_slot_2 = module_chain_gun
 				fixed_ship_auxillary_slot = module_aa_missiles_2
-				fixed_ship_battery_slot = module_chain_gun
+				fixed_ship_battery_slot = module_light_flight_deck_2
 				front_1_custom_slot = module_helipads_2
 				mid_1_custom_slot = module_fuel_tank
 				rear_1_custom_slot = module_helipads_2
@@ -1254,22 +1254,22 @@ capital = 885
 
 				attack_submarine_hull_1 = 1
 				attack_submarine_hull_2 = 1
-				diesel_attack_submarine_3 = 1
-				diesel_attack_submarine_4 = 1
+				attack_submarine_hull_2 = 1
+				attack_submarine_hull_3 = 1
 
 				#Niterói Class
-				frigate_1 = 1
-				frigate_2 = 1
+				frigate_hull_1 = 1
+				frigate_hull_2 = 1
 
 				#Barroso-Class
-				corvette_1 = 1
-				corvette_2 = 1
-				missile_corvette_1 = 1
-				missile_corvette_2 = 1
+				corvette_hull_1 = 1
+				corvette_hull_2 = 1
+				corvette_hull_3 = 1
+				corvette_hull_4 = 1
 
-				modern_carrier_0 = 1
+				carrier_hull_1 = 1
 
-				LPD_0 = 1
+				helicopter_operator_hull_1 = 1
 			}
 		}
 	}

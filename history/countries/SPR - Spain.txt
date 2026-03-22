@@ -1264,9 +1264,9 @@ capital = 91
 			not = { has_dlc = "Man the Guns" }
 		}
 		set_technology = {
-			missile_frigate_1 = 1
-			missile_frigate_2 = 1
-			missile_frigate_3 = 1
+			frigate_hull_3 = 1
+			frigate_hull_4 = 1
+			frigate_hull_5 = 1
 		}
 	}
 	if = {
@@ -1493,7 +1493,7 @@ capital = 91
 				fixed_ship_auxillary_slot = module_esm_1
 				fixed_ship_battery_slot = module_light_flight_deck_3
 				front_1_custom_slot = module_chain_gun
-				mid_1_custom_slot = module_chain_gun
+				mid_1_custom_slot = module_helipads_1
 				rear_1_custom_slot = module_chain_gun
 			}
 		}

@@ -7,7 +7,7 @@
  RUSSIA_WEEKLY_PEACE_KRAMATORSK_DESC:0 "With Kramatorsk secured by Russian forces, Moscow imposes a ceasefire on updated lines and formalizes control of the area."
  RUSSIA_WEEKLY_PEACE_KRAMATORSK_OK:0 "Enforce the Ceasefire"
  RUSSIA_STARLINK_SOCIAL_BLACKOUT_2026:0 "Starlink and Social Media Cut Off"
- RUSSIA_STARLINK_SOCIAL_BLACKOUT_2026_DESC:0 "External digital channels are curtailed across Russian networks. Battlefield transparency drops, but command friction and fog-of-war increase attrition across frontline operations."
+ RUSSIA_STARLINK_SOCIAL_BLACKOUT_2026_DESC:0 "Frontline communication channels have been lost or severly degraded at a time that Ukraine's drone lines are reaching deeper behind our lines. We are seeing much higher attrition and losing ground in some places."
 
  RUSSIA_MOBILIZATION_2026:0 "General Mobilization"
  RUSSIA_MOBILIZATION_2026_DESC:0 "On April 1, 2026, the Russian Federation announces a large-scale mobilization of 300,000 troops. With sanctions limiting access to foreign credit markets, the state finances the expansion through domestic debt issuance and monetary expansion, adding significant stress to the financial system."
@@ -16,7 +16,7 @@
  RUSSIA_BANK_CRISIS_2026_DESC:0 "The mobilization placed enormous strain on an already fragile banking system. Unable to borrow externally due to sanctions, Russia printed money to sustain military spending. Liquidity evaporated, and cascading bank failures triggered a full financial crisis."
 
  RUSSIA_MOBLIKS_UNPAID_2026:0 "Mobilized Troops Unpaid"
- RUSSIA_MOBLIKS_UNPAID_2026_DESC:0 "With the state unable to sustain payments, mobilized units are going unpaid. Death benefits are withheld and wages delayed indefinitely. Confidence in the ruble collapses, and entire regiments abandon their posts and return home."
+ RUSSIA_MOBLIKS_UNPAID_2026_DESC:0 "With the state unable to sustain payments, mobilized units are going unpaid. Death benefits are withheld and wages for non contract soldiers delayed indefinitely. Confidence in the ruble collapses, and entire regiments abandon their posts and return home."
 
  RUSSIA_OLIGARCH_COUNCIL_2026:0 "The Council of National Restoration"
  RUSSIA_OLIGARCH_COUNCIL_2026_DESC:0 "Russian oligarchs, alarmed by rapid financial collapse, coordinated with senior military officials to remove President Putin from office. A provisional Council of National Restoration now governs, promising to stabilize the economy, resume troop payments, and negotiate an end to the war in exchange for sanctions relief."
