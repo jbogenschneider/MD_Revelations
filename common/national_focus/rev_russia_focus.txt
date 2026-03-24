@@ -241,13 +241,14 @@ focus_tree = {
 		y = 1
 		cost = 5
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		prerequisite = { focus = rev_SOV_sokolov_bank_restart }
 		available = {
 			has_war = no
 			NOT = { has_country_leader = { name = "Vladimir Putin" ruling_only = yes }}
 		}
 		completion_reward = {
 			add_stability = 0.04
+			custom_effect_tooltip = rev_SOV_treasury_plus_20_tt
+			add_to_variable = { var = treasury value = 20 }
 			clr_country_flag = rev_sov_2026_sanctions_active
 			if = {
 				limit = { owns_state = 1222 }
@@ -400,6 +401,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		prerequisite = {
 			focus = rev_SOV_volodin_admin_cleanup
+			focus = rev_SOV_resume_western_trade
 		}
 		completion_reward = {
 			add_stability = 0.03
@@ -464,6 +466,116 @@ focus_tree = {
 				}
 				add_ideas = {
 					social_03
+				}
+			}
+		}
+		ai_will_do = { base = 80 }
+	}
+
+	focus = {
+		id = rev_SOV_drone_defense_brigades
+		icon = recon
+		relative_position_id = rev_SOV_restore_welfare
+		x = 2
+		y = 0
+		cost = 5
+		search_filters = { FOCUS_FILTER_MILITARY FOCUS_FILTER_RESEARCH }
+		prerequisite = { focus = rev_SOV_restore_welfare }
+		completion_reward = {
+			custom_effect_tooltip = rev_SOV_unlock_drone_defense_brigade_tt
+			army_experience = 10
+			if = {
+				limit = { NOT = { has_template = "Drone Defense Brigade" } }
+				division_template = {
+					name = "Drone Defense Brigade"
+
+					regiments = {
+						L_Inf_Bat = { x = 0 y = 0 }
+						L_Inf_Bat = { x = 0 y = 1 }
+						L_Inf_Bat = { x = 1 y = 0 }
+					}
+
+					support = {
+						drone_tactical_company = { x = 0 y = 0 }
+						SP_Arty_Battery = { x = 0 y = 1 }
+						combat_service_support_company = { x = 0 y = 2 }
+					}
+				}
+			}
+		}
+		ai_will_do = { base = 80 }
+	}
+
+	focus = {
+		id = rev_SOV_raise_drone_defense_brigades_i
+		icon = recon
+		relative_position_id = rev_SOV_drone_defense_brigades
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_MILITARY }
+		prerequisite = { focus = rev_SOV_drone_defense_brigades }
+		completion_reward = {
+			custom_effect_tooltip = rev_SOV_treasury_minus_3_tt
+			add_to_variable = { var = treasury value = -3 }
+			652 = {
+				create_unit = {
+					division = "name = \"1st Drone Defense Brigade\" division_template = \"Drone Defense Brigade\" start_experience_factor = 0.15"
+					owner = ROOT
+					prioritize_location = 6380
+				}
+				create_unit = {
+					division = "name = \"2nd Drone Defense Brigade\" division_template = \"Drone Defense Brigade\" start_experience_factor = 0.15"
+					owner = ROOT
+					prioritize_location = 6380
+				}
+				create_unit = {
+					division = "name = \"3rd Drone Defense Brigade\" division_template = \"Drone Defense Brigade\" start_experience_factor = 0.15"
+					owner = ROOT
+					prioritize_location = 6380
+				}
+				create_unit = {
+					division = "name = \"4th Drone Defense Brigade\" division_template = \"Drone Defense Brigade\" start_experience_factor = 0.15"
+					owner = ROOT
+					prioritize_location = 6380
+				}
+			}
+		}
+		ai_will_do = { base = 80 }
+	}
+
+	focus = {
+		id = rev_SOV_raise_drone_defense_brigades_ii
+		icon = recon
+		relative_position_id = rev_SOV_raise_drone_defense_brigades_i
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_MILITARY }
+		prerequisite = { focus = rev_SOV_raise_drone_defense_brigades_i }
+		completion_reward = {
+			custom_effect_tooltip = rev_SOV_treasury_minus_3_tt
+			add_to_variable = { var = treasury value = -3 }
+			652 = {
+				create_unit = {
+					division = "name = \"5th Drone Defense Brigade\" division_template = \"Drone Defense Brigade\" start_experience_factor = 0.15"
+					owner = ROOT
+					prioritize_location = 6380
+				}
+				create_unit = {
+					division = "name = \"6th Drone Defense Brigade\" division_template = \"Drone Defense Brigade\" start_experience_factor = 0.15"
+					owner = ROOT
+					prioritize_location = 6380
+				}
+				create_unit = {
+					division = "name = \"7th Drone Defense Brigade\" division_template = \"Drone Defense Brigade\" start_experience_factor = 0.15"
+					owner = ROOT
+					prioritize_location = 6380
+				}
+				create_unit = {
+					division = "name = \"8th Drone Defense Brigade\" division_template = \"Drone Defense Brigade\" start_experience_factor = 0.15"
+					owner = ROOT
+					prioritize_location = 6380
 				}
 			}
 		}

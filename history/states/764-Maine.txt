@@ -22,7 +22,7 @@ state = {
 		buildings = {
 			infrastructure = 3
 			internet_station = 2
-			dockyard = 2
+			dockyard = 0
 			industrial_complex = 2
 			offices = 1
 			3732 = {
@@ -38,7 +38,7 @@ state = {
 			add_manpower = 60984
 			buildings = {
 				internet_station = 4
-				dockyard = 2
+				dockyard = 0
 				industrial_complex = 0
 			}
 		}

@@ -449,7 +449,7 @@ capital = 4
 		industrial_conglomerates
 
 		bureau_02
-		defence_01
+		defence_02
 		police_01
 		edu_05
 		health_05

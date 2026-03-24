@@ -1,0 +1,25 @@
+NATO_take_washington_dc = {
+	allowed = {
+		has_idea = NATO_member
+		NOT = { tag = USA }
+	}
+
+	enable = {
+		has_idea = NATO_member
+		NOT = { tag = USA }
+		has_war_with = USA
+		1182 = { is_controlled_by = USA }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		tag = USA
+		priority = 240
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+		manual_attack = yes
+	}
+}

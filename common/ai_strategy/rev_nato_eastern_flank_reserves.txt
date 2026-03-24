@@ -1,0 +1,199 @@
+rev_fin_hold_against_sov_during_usa_war = {
+	allowed = { tag = FIN }
+
+	enable = {
+		has_war_with = USA
+		country_exists = SOV
+		SOV = {
+			exists = yes
+			NOT = { is_subject = yes }
+		}
+		NOT = { is_in_faction_with = SOV }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.65
+		order_id = 950
+		states = { 100 103 } # Lappi, Savo-Karjala
+		subtract_invasions_from_need = no
+		subtract_fronts_from_need = no
+	}
+}
+
+rev_est_hold_against_sov_during_usa_war = {
+	allowed = { tag = EST }
+
+	enable = {
+		has_war_with = USA
+		country_exists = SOV
+		SOV = {
+			exists = yes
+			NOT = { is_subject = yes }
+		}
+		NOT = { is_in_faction_with = SOV }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.70
+		order_id = 951
+		states = { 105 106 } # Harju, Tartu
+		subtract_invasions_from_need = no
+		subtract_fronts_from_need = no
+	}
+}
+
+rev_lat_hold_against_sov_during_usa_war = {
+	allowed = { tag = LAT }
+
+	enable = {
+		has_war_with = USA
+		country_exists = SOV
+		SOV = {
+			exists = yes
+			NOT = { is_subject = yes }
+		}
+		NOT = { is_in_faction_with = SOV }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.70
+		order_id = 952
+		states = { 1013 1058 } # Latgale, Vidzeme
+		subtract_invasions_from_need = no
+		subtract_fronts_from_need = no
+	}
+}
+
+rev_lit_hold_against_sov_during_usa_war = {
+	allowed = { tag = LIT }
+
+	enable = {
+		has_war_with = USA
+		country_exists = SOV
+		SOV = {
+			exists = yes
+			NOT = { is_subject = yes }
+		}
+		NOT = { is_in_faction_with = SOV }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.65
+		order_id = 953
+		states = { 109 110 1044 } # Samogitia-Aukstaitija, Vilnius, Sudovia
+		subtract_invasions_from_need = no
+		subtract_fronts_from_need = no
+	}
+}
+
+rev_pol_hold_against_sov_during_usa_war = {
+	allowed = { tag = POL }
+
+	enable = {
+		has_war_with = USA
+		country_exists = SOV
+		SOV = {
+			exists = yes
+			NOT = { is_subject = yes }
+		}
+		NOT = { is_in_faction_with = SOV }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.55
+		order_id = 954
+		states = { 1014 114 116 628 } # Podlasie, Masovia, Warmia, Subcarpathia
+		subtract_invasions_from_need = no
+		subtract_fronts_from_need = no
+	}
+}
+
+rev_bul_hold_against_sov_during_usa_war = {
+	allowed = { tag = BUL }
+
+	enable = {
+		has_war_with = USA
+		country_exists = SOV
+		SOV = {
+			exists = yes
+			NOT = { is_subject = yes }
+		}
+		NOT = { is_in_faction_with = SOV }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.45
+		order_id = 955
+		states = { 154 996 } # Eastern Bulgaria, South Dobruja
+		subtract_invasions_from_need = no
+		subtract_fronts_from_need = no
+	}
+}
+
+rev_rom_hold_against_sov_during_usa_war = {
+	allowed = { tag = ROM }
+
+	enable = {
+		has_war_with = USA
+		country_exists = SOV
+		SOV = {
+			exists = yes
+			NOT = { is_subject = yes }
+		}
+		NOT = { is_in_faction_with = SOV }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.55
+		order_id = 956
+		states = { 152 284 910 } # Moldavia, Dobrogea, Banat
+		subtract_invasions_from_need = no
+		subtract_fronts_from_need = no
+	}
+}
+
+rev_tur_hold_against_sov_during_usa_war = {
+	allowed = { tag = TUR }
+
+	enable = {
+		has_war_with = USA
+		country_exists = SOV
+		SOV = {
+			exists = yes
+			NOT = { is_subject = yes }
+		}
+		NOT = { is_in_faction_with = SOV }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.45
+		order_id = 957
+		states = { 160 163 934 } # Turkish Black Sea, Northeast Anatolia, East Thrace
+		subtract_invasions_from_need = no
+		subtract_fronts_from_need = no
+	}
+}

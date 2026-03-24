@@ -1,0 +1,29 @@
+NATO_force_per_breakthrough_for_d01 = {
+	allowed = {
+		has_idea = NATO_member
+	}
+
+	enable = {
+		has_idea = NATO_member
+		has_war_with = PER
+		D01 = {
+			exists = yes
+			NOT = { is_subject = yes }
+		}
+		402 = {
+			NOT = { is_owned_by = D01 }
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		tag = PER
+		priority = 260
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+		manual_attack = yes
+	}
+}

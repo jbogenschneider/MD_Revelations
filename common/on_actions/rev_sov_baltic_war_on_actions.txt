@@ -4,12 +4,17 @@ on_actions = {
 			if = {
 				limit = {
 					tag = SOV
-					has_country_leader = { name = "Vladimir Putin" ruling_only = yes }
-					NOT = { has_war = yes }
+					date > 2029.1.5
+					#NOT = { has_war = yes }
 					NOT = { has_country_flag = rev_sov_baltic_war_fired }
+					OR = {
+						1222 = { is_controlled_by = SOV }
+						NOT = { is_ai = yes }
+					}
 					OR = {
 						USA = { has_war_with = CAN }
 						USA = { has_war_with = GER }
+						USA = { has_war_with = POL }
 					}
 				}
 				country_event = { id = rev_sov_baltic.1 }

@@ -393,21 +393,56 @@ country_event = {
 		country_exists = FAR
 		FAR = { exists = yes }
 		FAR = { NOT = { is_subject_of = CHI } }
+		OR = {
+			NOT = { country_exists = SOV }
+			NOT = { has_war_with = SOV }
+		}
 		NOT = { has_country_flag = rev_china_far_east_offer_2027_done }
-		date > 2027.3.31
-		date < 2027.4.3
+		date > 2027.4.30
+		date < 2027.5.3
 	}
 
 	option = {
 		name = CHINA_FAR_EAST_PUPPET_OFFER_SEND
 		ai_chance = { factor = 80 }
 		set_country_flag = rev_china_far_east_offer_2027_done
+		clr_country_flag = rev_china_far_east_offer_2027_retry_active
 		FAR = { country_event = { id = russia_2026.11 } }
 	}
 	option = {
 		name = CHINA_FAR_EAST_PUPPET_OFFER_HOLD
 		ai_chance = { factor = 20 }
 		set_country_flag = rev_china_far_east_offer_2027_done
+		clr_country_flag = rev_china_far_east_offer_2027_retry_active
+	}
+}
+
+country_event = {
+	id = russia_2026.101
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = CHI
+		country_exists = FAR
+		FAR = { exists = yes }
+		FAR = { NOT = { is_subject_of = CHI } }
+		NOT = { has_country_flag = rev_china_far_east_offer_2027_done }
+		has_country_flag = rev_china_far_east_offer_2027_retry_active
+		date > 2027.3.31
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					NOT = { country_exists = SOV }
+					NOT = { has_war_with = SOV }
+				}
+			}
+			clr_country_flag = rev_china_far_east_offer_2027_retry_active
+			country_event = { id = russia_2026.10 }
+		}
 	}
 }
 
@@ -426,7 +461,15 @@ country_event = {
 
 	option = {
 		name = FAR_PUPPET_OFFER_ACCEPT
-		trigger = { NOT = { has_war_with = CHI } }
+		trigger = {
+			NOT = { has_war_with = CHI }
+			CHI = {
+				OR = {
+					NOT = { country_exists = SOV }
+					NOT = { has_war_with = SOV }
+				}
+			}
+		}
 		ai_chance = { factor = 75 }
 		CHI = {
 			set_autonomy = {
@@ -435,6 +478,10 @@ country_event = {
 			}
 		}
 		set_country_flag = rev_far_east_china_puppet
+		every_country = {
+			limit = { NOT = { is_ai = yes } }
+			country_event = { id = russia_2026.15 }
+		}
 		if = {
 			limit = { country_exists = SOV }
 			SOV = {
@@ -455,6 +502,18 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = russia_2026.15
+	title = CHINA_FAR_EAST_PUPPETED_TITLE
+	desc = CHINA_FAR_EAST_PUPPETED_DESC
+	picture = GFX_report_event_generic_political_meeting
+	is_triggered_only = yes
+
+	option = {
+		name = CHINA_FAR_EAST_PUPPETED_OK
+	}
+}
+
 # ===============================
 # APRIL 15 2027 - CEREMONIAL RETURN OF STRATEGIC ASSETS
 # ===============================
@@ -470,8 +529,8 @@ country_event = {
 		country_exists = FAR
 		FAR = { is_subject_of = CHI }
 		NOT = { has_country_flag = rev_china_returns_assets_done_2027 }
-		date > 2027.4.14
-		date < 2027.4.17
+		date > 2027.6.14
+		date < 2027.6.17
 	}
 
 	option = {
@@ -504,6 +563,10 @@ country_event = {
 		country_exists = FAR
 		FAR = { exists = yes }
 		FAR = { NOT = { is_subject_of = CHI } }
+		OR = {
+			NOT = { country_exists = SOV }
+			NOT = { has_war_with = SOV }
+		}
 		NOT = { has_country_flag = rev_china_far_east_offer_2028_done }
 		date > 2028.1.9
 		date < 2028.1.12
@@ -513,11 +576,13 @@ country_event = {
 		name = CHINA_FAR_EAST_PUPPET_OFFER_SEND
 		ai_chance = { factor = 80 }
 		set_country_flag = rev_china_far_east_offer_2028_done
+		clr_country_flag = rev_china_far_east_offer_2028_retry_active
 		FAR = { country_event = { id = russia_2026.11 } }
 	}
 	option = {
 		name = CHINA_FAR_EAST_PUPPET_OFFER_HOLD
 		ai_chance = { factor = 20 }
 		set_country_flag = rev_china_far_east_offer_2028_done
+		clr_country_flag = rev_china_far_east_offer_2028_retry_active
 	}
 }

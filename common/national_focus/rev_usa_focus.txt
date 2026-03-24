@@ -49,6 +49,55 @@ focus_tree = {
     }
 
     focus = {
+        id = USA_reactivate_mothballed_shipbuilding
+        icon = maritime_trade
+        x = 8
+        y = 1
+        cost = 5
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_INDUSTRY }
+        ai_will_do = {
+            base = 0
+        }
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: focus USA_reactivate_mothballed_shipbuilding completion_reward"
+            custom_effect_tooltip = USA_treasury_minus_20_tt
+            add_to_variable = { treasury = -20 }
+            767 = { add_building_construction = { type = dockyard level = 1 instant_build = yes } }
+            773 = { add_building_construction = { type = dockyard level = 1 instant_build = yes } }
+            790 = { add_building_construction = { type = dockyard level = 1 instant_build = yes } }
+            795 = { add_building_construction = { type = dockyard level = 1 instant_build = yes } }
+            809 = { add_building_construction = { type = dockyard level = 1 instant_build = yes } }
+            811 = { add_building_construction = { type = dockyard level = 1 instant_build = yes } }
+        }
+    }
+
+    focus = {
+        id = USA_expand_mothballed_shipbuilding
+        icon = maritime_trade
+        x = 8
+        y = 2
+        cost = 5
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_INDUSTRY }
+        prerequisite = { focus = USA_reactivate_mothballed_shipbuilding }
+        ai_will_do = {
+            base = 0
+        }
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: focus USA_expand_mothballed_shipbuilding completion_reward"
+            custom_effect_tooltip = USA_treasury_minus_20_tt
+            add_to_variable = { treasury = -20 }
+            767 = { add_building_construction = { type = dockyard level = 1 instant_build = yes } }
+            773 = { add_building_construction = { type = dockyard level = 1 instant_build = yes } }
+            790 = { add_building_construction = { type = dockyard level = 1 instant_build = yes } }
+            795 = { add_building_construction = { type = dockyard level = 1 instant_build = yes } }
+            809 = { add_building_construction = { type = dockyard level = 1 instant_build = yes } }
+            811 = { add_building_construction = { type = dockyard level = 1 instant_build = yes } }
+        }
+    }
+
+    focus = {
         id = USA_implement_tariffs
         icon = protectionist_economics
         x = 2
@@ -137,7 +186,7 @@ focus_tree = {
         icon = maritime_trade
         x = 2
         y = 4
-        cost = 5
+        cost = 1
         available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_POLITICAL }
         prerequisite = { focus = USA_pressure_ukraine focus = USA_help_ukraine }
@@ -217,12 +266,16 @@ focus_tree = {
 	focus = {
 		id = USA_civil_war_in_iran
 		icon = iran_take_down_the_nation
-		x = 3
+		x = 1
 		y = 8
 		cost = 3
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
 		prerequisite = { focus = USA_attack_iran }
+		mutually_exclusive = {
+			focus = USA_democracy_for_iran
+			focus = USA_negotiated_peace_with_iran
+		}
 		ai_will_do = {
 			base = 1
         }
@@ -256,20 +309,90 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
 		prerequisite = { focus = USA_attack_iran }
-		ai_will_do = {
-			base = 1
+		mutually_exclusive = {
+			focus = USA_civil_war_in_iran
+			focus = USA_negotiated_peace_with_iran
 		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: focus USA_democracy_for_iran completion_reward"
+		ai_will_do = {
+			base = 0
+		}
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: focus USA_democracy_for_iran completion_reward"
             add_stability = -0.03
+			if = {
+				limit = { D01 = { exists = yes } }
+				D01 = { give_military_access = USA }
+			}
 			if = {
 				limit = {
 					country_exists = PER
 					NOT = { has_war_with = PER }
 				}
+				978 = { transfer_state_to = USA }
+				978 = {
+					create_unit = {
+						division = "name = \"Hormuz Marine Division I\" division_template = \"Marine Division\" start_experience_factor = 0.2"
+						owner = ROOT
+						prioritize_location = 14267
+					}
+					create_unit = {
+						division = "name = \"Hormuz Marine Division II\" division_template = \"Marine Division\" start_experience_factor = 0.2"
+						owner = ROOT
+						prioritize_location = 14666
+					}
+					create_unit = {
+						division = "name = \"Hormuz Mountain Division I\" division_template = \"Mountain Division\" start_experience_factor = 0.2"
+						owner = ROOT
+						prioritize_location = 3744
+					}
+					create_unit = {
+						division = "name = \"Hormuz Mountain Division II\" division_template = \"Mountain Division\" start_experience_factor = 0.2"
+						owner = ROOT
+						prioritize_location = 4959
+					}
+				}
 				declare_war_on = {
 					target = PER
 					type = topple_government
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = USA_negotiated_peace_with_iran
+		icon = white_peace
+		x = 3
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = { focus = USA_attack_iran }
+		mutually_exclusive = {
+			focus = USA_civil_war_in_iran
+			focus = USA_democracy_for_iran
+		}
+		ai_will_do = {
+			base = 1
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: focus USA_negotiated_peace_with_iran completion_reward"
+			add_stability = 0.03
+			custom_effect_tooltip = USA_debt_plus_100_tt
+			add_to_variable = { var = debt value = 100 }
+			if = {
+				limit = { country_exists = PER }
+				PER = {
+					retire_country_leader = yes
+					create_country_leader = {
+						name = "Mojtaba Khamenei"
+						picture = "Mojtaba_Khamenei.dds"
+						ideology = Vilayat_e_Faqih
+						traits = {
+							emerging_Vilayat_e_Faqih
+							cleric
+						}
+					}
 				}
 			}
 		}
@@ -293,14 +416,14 @@ focus_tree = {
 	}
 
     focus = {
-		id = USA_the_home_front
-		icon = focus_generic_court
-		x = 3
+        id = USA_the_home_front
+        icon = focus_generic_court
+        x = 3
 		y = 9
 		cost = 5
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
-		prerequisite = { focus = USA_civil_war_in_iran focus = USA_democracy_for_iran }
+		prerequisite = { focus = USA_civil_war_in_iran focus = USA_democracy_for_iran focus = USA_negotiated_peace_with_iran }
 		ai_will_do = {
 			base = 1
 		}
@@ -313,11 +436,57 @@ focus_tree = {
     }
 
     focus = {
+        id = USA_expand_border_patrol_detachments
+        icon = mexican_border_wall
+        x = 1
+        y = 13
+        cost = 10
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+        prerequisite = { focus = USA_visit_gaza_and_israel }
+        ai_will_do = {
+            base = 1
+        }
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: focus USA_expand_border_patrol_detachments completion_reward"
+            custom_effect_tooltip = USA_treasury_minus_10_tt
+            add_to_variable = { treasury = -10 }
+            794 = {
+                create_unit = {
+                    division = "name = \"Border Patrol Agents\" division_template = \"Border Patrol Agents\" start_experience_factor = 0.2"
+                    owner = ROOT
+                    prioritize_location = 15907
+                }
+                create_unit = {
+                    division = "name = \"Border Patrol Agents\" division_template = \"Border Patrol Agents\" start_experience_factor = 0.2"
+                    owner = ROOT
+                    prioritize_location = 15907
+                }
+                create_unit = {
+                    division = "name = \"Border Patrol Agents\" division_template = \"Border Patrol Agents\" start_experience_factor = 0.2"
+                    owner = ROOT
+                    prioritize_location = 15907
+                }
+                create_unit = {
+                    division = "name = \"Border Patrol Agents\" division_template = \"Border Patrol Agents\" start_experience_factor = 0.2"
+                    owner = ROOT
+                    prioritize_location = 15907
+                }
+                create_unit = {
+                    division = "name = \"Border Patrol Agents\" division_template = \"Border Patrol Agents\" start_experience_factor = 0.2"
+                    owner = ROOT
+                    prioritize_location = 15907
+                }
+            }
+        }
+    }
+
+    focus = {
         id = USA_blockade_cuba
         icon = blockadeeconomy
         x = 3
         y = 11
-        cost = 10
+        cost = 5
         available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
         prerequisite = { focus = USA_golf_and_make_videos }
@@ -337,7 +506,7 @@ focus_tree = {
         icon = cubadrills
         x = 5
         y = 12
-        cost = 10
+        cost = 5
         available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
         prerequisite = { focus = USA_blockade_cuba }
@@ -403,6 +572,37 @@ focus_tree = {
     }
 
     focus = {
+        id = USA_raise_loyalist_formations
+        icon = focus_generic_fascist_militarism
+        x = 5
+        y = 11
+        cost = 10
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+        prerequisite = { focus = USA_unify_the_military }
+        ai_will_do = {
+            base = 1
+        }
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: focus USA_raise_loyalist_formations completion_reward"
+            custom_effect_tooltip = USA_treasury_minus_10_tt
+            add_to_variable = { treasury = -10 }
+            1182 = {
+                create_unit = {
+                    division = "name = \"Donald's Very Special Forces\" division_template = \"Special Forces Group\" start_experience_factor = 0.2"
+                    owner = ROOT
+                    prioritize_location = 16093
+                }
+                create_unit = {
+                    division = "name = \"Donald's Extra Loyal Armored Division\" division_template = \"Armored Division\" start_experience_factor = 0.2"
+                    owner = ROOT
+                    prioritize_location = 16093
+                }
+            }
+        }
+    }
+
+    focus = {
         id = USA_close_the_border
         icon = mexican_border_wall
         x = 6
@@ -432,7 +632,7 @@ focus_tree = {
 		icon = anti_immigration1
 		x = 5
 		y = 3
-        cost = 5
+        cost = 1
         available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
         prerequisite = { focus = USA_close_the_border }
@@ -489,7 +689,7 @@ focus_tree = {
         icon = ssnp_thug
         x = 6
         y = 4
-        cost = 5
+        cost = 1
         available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
         prerequisite = { focus = USA_keep_out_of_site focus = USA_crush_the_rioters }
@@ -515,7 +715,7 @@ focus_tree = {
         icon = attack_greenland
         x = 5
         y = 5
-        cost = 5
+        cost = 1
         available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
         prerequisite = { focus = USA_end_the_chaos }
@@ -534,7 +734,7 @@ focus_tree = {
         icon = better_money
         x = 4
         y = 2
-        cost = 5
+        cost = 1
         available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_INDUSTRY }
         prerequisite = { focus = USA_project_2025 }
@@ -554,7 +754,7 @@ focus_tree = {
         icon = economic_prosperity2
         x = 4
         y = 4
-        cost = 5
+        cost = 1
         available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
         prerequisite = { focus = USA_stimulate_the_economy }
@@ -577,6 +777,7 @@ focus_tree = {
                 has_idea = NATO_member
                 has_war_with = ROOT
             }
+            has_war = yes
         }
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
         ai_will_do = {
@@ -601,6 +802,7 @@ focus_tree = {
                 has_idea = NATO_member
                 has_war_with = ROOT
             }
+            has_war = yes
         }
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
         ai_will_do = {
@@ -625,6 +827,7 @@ focus_tree = {
                 has_idea = NATO_member
                 has_war_with = ROOT
             }
+            has_war = yes
         }
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
         ai_will_do = {

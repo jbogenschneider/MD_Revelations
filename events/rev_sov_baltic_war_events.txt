@@ -3,21 +3,49 @@ add_namespace = rev_sov_baltic
 country_event = {
 	id = rev_sov_baltic.1
 	is_triggered_only = yes
-	hidden = yes
+	hidden = no
+	title = rev_sov_baltic.1.t
+	desc = rev_sov_baltic.1.d
 
 	trigger = {
 		tag = SOV
-		has_country_leader = { name = "Vladimir Putin" ruling_only = yes }
-		NOT = { has_war = yes }
+		date > 2029.1.5
+		#NOT = { has_war = yes }
 		NOT = { has_country_flag = rev_sov_baltic_war_fired }
+		OR = {
+			1222 = { is_controlled_by = SOV }
+			NOT = { is_ai = yes }
+		}
 		OR = {
 			USA = { has_war_with = CAN }
 			USA = { has_war_with = GER }
+			USA = { has_war_with = POL }
 		}
 	}
 
-	immediate = {
+	option = {
+		name = rev_sov_baltic.1.a
+		ai_chance = {
+			base = 0
+			modifier = {
+				factor = 100
+				1222 = { is_controlled_by = SOV }
+			}
+		}
 		set_country_flag = rev_sov_baltic_war_fired
+
+		if = {
+			limit = {
+				BLR = {
+					exists = yes
+					NOT = { is_subject_of = SOV }
+				}
+			}
+			set_autonomy = {
+				target = BLR
+				autonomy_state = autonomy_puppet_state
+			}
+		}
 
 		if = {
 			limit = {
@@ -52,6 +80,59 @@ country_event = {
 				target = LIT
 				type = annex_everything
 			}
+		}
+
+		if = {
+			limit = {
+				UKR = {
+					exists = yes
+					NOT = { is_subject = yes }
+					NOT = { has_idea = NATO_member }
+				}
+			}
+			UKR = { country_event = { id = rev_sov_baltic.2 days = 30 } }
+		}
+	}
+
+	option = {
+		name = rev_sov_baltic.1.b
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 0
+				1222 = { is_controlled_by = SOV }
+			}
+		}
+		set_country_flag = rev_sov_baltic_war_fired
+	}
+}
+
+country_event = {
+	id = rev_sov_baltic.2
+	is_triggered_only = yes
+	hidden = yes
+
+	trigger = {
+		tag = UKR
+		exists = yes
+		NOT = { is_subject = yes }
+		NOT = { has_idea = NATO_member }
+	}
+
+	immediate = {
+		if = {
+			limit = { NOT = { has_idea = NATO_member } }
+			add_ideas = NATO_member
+		}
+		if = {
+			limit = {
+				GER = {
+					exists = yes
+					is_faction_leader = yes
+				}
+				NOT = { is_in_faction = yes }
+			}
+			GER = { add_to_faction = UKR }
 		}
 	}
 

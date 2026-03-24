@@ -55,7 +55,19 @@ on_actions = {
 					date < 2027.4.3
 				}
 				set_country_flag = rev_russia_2026_evt_10_fired
-				country_event = { id = russia_2026.10 }
+				if = {
+					limit = {
+						OR = {
+							NOT = { country_exists = SOV }
+							NOT = { has_war_with = SOV }
+						}
+					}
+					country_event = { id = russia_2026.10 }
+				}
+				else = {
+					set_country_flag = rev_china_far_east_offer_2027_retry_active
+					country_event = { id = russia_2026.101 days = 30 }
+				}
 			}
 			if = {
 				limit = {
@@ -63,8 +75,8 @@ on_actions = {
 					country_exists = FAR
 					FAR = { is_subject_of = CHI }
 					NOT = { has_country_flag = rev_russia_2026_evt_12_fired }
-					date > 2027.4.14
-					date < 2027.4.17
+					date > 2027.6.14
+					date < 2027.6.17
 				}
 				set_country_flag = rev_russia_2026_evt_12_fired
 				country_event = { id = russia_2026.12 }
@@ -80,7 +92,19 @@ on_actions = {
 					date < 2028.1.12
 				}
 				set_country_flag = rev_russia_2026_evt_13_fired
-				country_event = { id = russia_2026.13 }
+				if = {
+					limit = {
+						OR = {
+							NOT = { country_exists = SOV }
+							NOT = { has_war_with = SOV }
+						}
+					}
+					country_event = { id = russia_2026.13 }
+				}
+				else = {
+					set_country_flag = rev_china_far_east_offer_2028_retry_active
+					country_event = { id = russia_2026.102 days = 30 }
+				}
 			}
 		}
 	}
