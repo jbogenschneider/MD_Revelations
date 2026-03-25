@@ -298,4 +298,27 @@ on_actions = {
 			}
 		}
 	}
+
+	on_weekly = {
+		effect = {
+			if = {
+				limit = {
+					tag = CHI
+					NOT = { has_country_flag = rev_chi_tw_nato_window_used }
+					NOT = { has_war_with = TAI }
+					TAI = {
+						exists = yes
+						NOT = { is_subject_of = CHI }
+					}
+					USA = { exists = yes }
+					any_country = {
+						has_idea = NATO_member
+						NOT = { tag = USA }
+						has_war_with = USA
+					}
+				}
+				country_event = { id = rev_chi_tw.10 }
+			}
+		}
+	}
 }

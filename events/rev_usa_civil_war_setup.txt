@@ -296,9 +296,22 @@ country_event = {
 			id = rev_usa_cw.313
 			days = 10
 		}
-		country_event = {
-			id = rev_usa_cw.314
-			days = 20
+		if = {
+			limit = {
+				has_country_flag = rev_usa_cw_china_conflict_selected
+				CHI = { exists = yes }
+				TAI = { exists = yes }
+			}
+			country_event = {
+				id = rev_usa_cw.318
+				days = 20
+			}
+		}
+		else = {
+			country_event = {
+				id = rev_usa_cw.314
+				days = 20
+			}
 		}
 	}
 	option = {
@@ -494,6 +507,19 @@ country_event = {
 		set_country_flag = rev_usa_cw_canada_invasion_launched
 		if = {
 			limit = {
+				TAI = {
+					exists = yes
+					is_guaranteed_by = USA
+				}
+			}
+			diplomatic_relation = {
+				country = TAI
+				relation = guarantee
+				active = no
+			}
+		}
+		if = {
+			limit = {
 				CAN = {
 					exists = yes
 					NOT = { is_subject = yes }
@@ -566,6 +592,282 @@ country_event = {
 			if = { limit = { CRO = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } CRO = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = CRO }
 			if = { limit = { MNT = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } MNT = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = MNT }
 			if = { limit = { FYR = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } FYR = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = FYR }
+		}
+	}
+}
+
+country_event = {
+	id = rev_usa_cw.318
+	title = rev_usa_cw.318.t
+	desc = rev_usa_cw.318.d
+	picture = GFX_report_event_usa_politics
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = rev_usa_cw_coup_successful
+		has_country_flag = rev_usa_cw_china_conflict_selected
+		NOT = { has_country_flag = rev_usa_cw_china_war_warning_seen }
+		NOT = { has_country_flag = rev_usa_cw_china_war_justified }
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_country_leader = { name = "Donald Trump" ruling_only = yes } }
+			}
+			set_politics = {
+				elections_allowed = no
+			}
+			create_country_leader = {
+				name = "Donald Trump"
+				picture = "Donald_Trump.dds"
+				ideology = Nat_Populism
+				traits = { career_politician }
+			}
+		}
+		set_country_flag = rev_usa_cw_china_war_warning_seen
+		set_country_flag = rev_usa_cw_china_war_justified
+		if = {
+			limit = {
+				CHI = { exists = yes }
+				TAI = { exists = yes }
+			}
+			if = {
+				limit = { has_idea = NATO_member }
+				set_global_flag = rev_nato_lock_ger_leader
+				if = {
+					limit = {
+						GER = {
+							exists = yes
+							is_in_faction_with = USA
+						}
+					}
+					GER = { set_faction_leader = yes }
+				}
+				if = {
+					limit = {
+						NOT = {
+							GER = {
+								exists = yes
+								is_in_faction_with = USA
+							}
+						}
+						FRA = {
+							exists = yes
+							is_in_faction_with = USA
+						}
+					}
+					FRA = { set_faction_leader = yes }
+				}
+				if = {
+					limit = {
+						NOT = {
+							GER = {
+								exists = yes
+								is_in_faction_with = USA
+							}
+						}
+						NOT = {
+							FRA = {
+								exists = yes
+								is_in_faction_with = USA
+							}
+						}
+						ENG = {
+							exists = yes
+							is_in_faction_with = USA
+						}
+					}
+					ENG = { set_faction_leader = yes }
+				}
+				NATO_leave = yes
+				if = {
+					limit = {
+						GER = {
+							exists = yes
+							NOT = { is_subject = yes }
+						}
+					}
+					GER = { country_event = { id = rev_usa_cw.317 hours = 1 } }
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = faction_seato_alliance } }
+				add_ideas = faction_seato_alliance
+			}
+			create_faction_from_template = faction_template_seato
+			if = {
+				limit = {
+					TAI = {
+						exists = yes
+						NOT = { is_subject = yes }
+						NOT = { has_war_with = USA }
+					}
+				}
+				add_to_faction = TAI
+			}
+			if = {
+				limit = {
+					JAP = {
+						exists = yes
+						NOT = { is_subject = yes }
+						NOT = { has_war_with = USA }
+						NOT = { is_in_faction_with = CHI }
+					}
+				}
+				add_to_faction = JAP
+			}
+			if = {
+				limit = {
+					AUS = {
+						exists = yes
+						NOT = { is_subject = yes }
+						NOT = { has_war_with = USA }
+						NOT = { is_in_faction_with = CHI }
+					}
+				}
+				add_to_faction = AUS
+			}
+			if = {
+				limit = {
+					PHI = {
+						exists = yes
+						NOT = { is_subject = yes }
+						NOT = { has_war_with = USA }
+						NOT = { is_in_faction_with = CHI }
+					}
+				}
+				add_to_faction = PHI
+			}
+			CHI = {
+				create_wargoal = {
+					target = TAI
+					type = annex_everything
+				}
+			}
+			create_wargoal = {
+				target = CHI
+				type = annex_everything
+			}
+			custom_effect_tooltip = rev_usa_cw.318.tt
+		}
+		else = {
+			custom_effect_tooltip = rev_usa_cw.318.no_china_tt
+		}
+	}
+
+	option = {
+		name = rev_usa_cw.318.a
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.318.a"
+		country_event = {
+			id = rev_usa_cw.319
+			days = 10
+		}
+	}
+}
+
+country_event = {
+	id = rev_usa_cw.319
+	title = rev_usa_cw.319.t
+	desc = rev_usa_cw.319.d
+	picture = GFX_civil_war_world
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = rev_usa_cw_china_war_justified
+		NOT = { has_country_flag = rev_usa_cw_china_war_launched }
+	}
+
+	option = {
+		name = rev_usa_cw.319.a
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.319.a"
+		set_country_flag = rev_usa_cw_china_war_launched
+		if = {
+			limit = {
+				CHI = {
+					exists = yes
+					NOT = { is_subject = yes }
+				}
+				NOT = { has_war_with = CHI }
+			}
+			declare_war_on = {
+				target = CHI
+				type = annex_everything
+			}
+			if = {
+				limit = {
+					TAI = {
+						exists = yes
+						is_in_faction_with = USA
+						NOT = { has_war_with = CHI }
+					}
+				}
+				TAI = {
+					add_to_war = {
+						targeted_alliance = USA
+						enemy = CHI
+						hostility_reason = asked_to_join
+						single_target_only = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					JAP = {
+						exists = yes
+						is_in_faction_with = USA
+						NOT = { has_war_with = CHI }
+					}
+				}
+				JAP = {
+					add_to_war = {
+						targeted_alliance = USA
+						enemy = CHI
+						hostility_reason = asked_to_join
+						single_target_only = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					AUS = {
+						exists = yes
+						is_in_faction_with = USA
+						NOT = { has_war_with = CHI }
+					}
+				}
+				AUS = {
+					add_to_war = {
+						targeted_alliance = USA
+						enemy = CHI
+						hostility_reason = asked_to_join
+						single_target_only = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					PHI = {
+						exists = yes
+						is_in_faction_with = USA
+						NOT = { has_war_with = CHI }
+					}
+				}
+				PHI = {
+					add_to_war = {
+						targeted_alliance = USA
+						enemy = CHI
+						hostility_reason = asked_to_join
+						single_target_only = yes
+					}
+				}
+			}
+			custom_effect_tooltip = rev_usa_cw.319.tt
+		}
+		else = {
+			custom_effect_tooltip = rev_usa_cw.318.no_china_tt
 		}
 	}
 }
@@ -1442,6 +1744,10 @@ country_event = {
 		name = rev_usa_cw.20.a
 		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.20.a"
 		set_country_flag = rev_usa_cw_midterms_2026_fired
+		add_to_variable = { var = party_pop_array^2 value = 0.15 } # democrat
+		add_to_variable = { var = party_pop_array^1 value = -0.09 } # republican
+		add_to_variable = { var = party_pop_array^14 value = -0.04 } # republican
+		add_to_variable = { var = party_pop_array^16 value = -0.02 } # liber
 	}
 }
 

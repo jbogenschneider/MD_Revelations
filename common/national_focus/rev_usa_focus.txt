@@ -532,6 +532,51 @@ focus_tree = {
         }
     }
 
+    focus = {
+        id = USA_instigate_a_conflict_with_china
+        icon = attack_china
+        x = 4
+        y = 13
+        cost = 5
+        available_if_capitulated = yes
+        available = {
+            TAI = { exists = yes }
+        }
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+        prerequisite = { focus = USA_Invade_Cuba }
+        mutually_exclusive = { focus = USA_prepare_to_invade_canada }
+        ai_will_do = {
+            base = 20
+        }
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: focus USA_instigate_a_conflict_with_china completion_reward"
+            custom_effect_tooltip = USA_instigate_a_conflict_with_china_tt
+            set_country_flag = rev_usa_cw_china_conflict_selected
+            clr_country_flag = rev_usa_cw_canada_conflict_selected
+        }
+    }
+
+    focus = {
+        id = USA_prepare_to_invade_canada
+        icon = attack_canada
+        x = 6
+        y = 13
+        cost = 5
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+        prerequisite = { focus = USA_Invade_Cuba }
+        mutually_exclusive = { focus = USA_instigate_a_conflict_with_china }
+        ai_will_do = {
+            base = 80
+        }
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: focus USA_prepare_to_invade_canada completion_reward"
+            custom_effect_tooltip = USA_prepare_to_invade_canada_tt
+            set_country_flag = rev_usa_cw_canada_conflict_selected
+            clr_country_flag = rev_usa_cw_china_conflict_selected
+        }
+    }
+
 	focus = {
 		id = USA_visit_gaza_and_israel
 		icon = align_to_israel
@@ -709,9 +754,64 @@ focus_tree = {
             }
         }
     }
-#USA_by_law
+#USA_ignore_greenland
     focus = {
-        id = USA_by_law
+        id = USA_demand_greenland
+        icon = attack_greenland
+        x = 7
+        y = 5
+        cost = 1
+        available_if_capitulated = yes
+        available = {
+            date > 2026.12.31
+            has_idea = NATO_member
+            DEN = { exists = yes }
+            1 = { is_owned_by = DEN }
+        }
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+        mutually_exclusive = { focus = USA_ignore_greenland }
+        ai_will_do = {
+            base = 20
+        }
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: focus USA_demand_greenland completion_reward"
+            add_stability = -0.05
+            if = {
+                limit = { has_idea = NATO_member }
+                set_global_flag = rev_nato_lock_ger_leader
+                if = {
+                    limit = {
+                        GER = {
+                            exists = yes
+                            is_in_faction_with = USA
+                        }
+                    }
+                    GER = { set_faction_leader = yes }
+                }
+                every_other_country = {
+                    limit = {
+                        has_idea = NATO_member
+                        is_in_faction_with = USA
+                    }
+                    add_war_support = 0.20
+                    if = {
+                        limit = { NOT = { has_idea = NATO_Betrayed } }
+                        add_ideas = NATO_Betrayed
+                    }
+                }
+                NATO_leave = yes
+            }
+            1 = {
+                transfer_state_to = USA
+                cancel_resistance = yes
+                set_resistance = 0
+                set_compliance = 100
+            }
+        }
+    }
+
+    focus = {
+        id = USA_ignore_greenland
         icon = attack_greenland
         x = 5
         y = 5
@@ -720,8 +820,9 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
         prerequisite = { focus = USA_end_the_chaos }
         prerequisite = { focus = USA_reinvigorate_the_economy }
+        mutually_exclusive = { focus = USA_demand_greenland }
         ai_will_do = {
-            base = 1
+            base = 80
         }
         completion_reward = {
             log = "[GetDateText]: [Root.GetName]: focus USA_lasting_peace completion_reward"

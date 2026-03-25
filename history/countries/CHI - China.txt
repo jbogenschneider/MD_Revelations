@@ -4601,7 +4601,7 @@ capital = 547
 		limit = { has_dlc = "No Step Back" }
 		create_equipment_variant = {
 			name = "Type-99A"
-			type = mbt_hull_2
+			type = medium_tank_chassis_2
 			parent_version = 0
 			modules = {
 				main_armament_slot = tank_medium_cannon_2
@@ -4610,10 +4610,11 @@ capital = 547
 				armor_type_slot = tank_composite_armor_gen2
 				engine_type_slot = tank_diesel_engine_gen5
 				reload_type_slot = automatic_loading
-				special_type_slot_1 = additional_machine_guns
+				special_type_slot_1 = empty
 				special_type_slot_2 = smoke_launchers
 				special_type_slot_4 = tank_battlestation_3
-				special_type_slot_5 = reactive_armor_gen2
+				special_type_slot_5 = additional_machine_guns
+				special_type_slot_6 = reactive_armor_gen2
 			}
 			upgrades = {
 				tank_nsb_armor_upgrade = 4

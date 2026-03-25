@@ -51,8 +51,8 @@ on_actions = {
 					FAR = { exists = yes }
 					FAR = { NOT = { is_subject_of = CHI } }
 					NOT = { has_country_flag = rev_russia_2026_evt_10_fired }
-					date > 2027.3.31
-					date < 2027.4.3
+					date > 2027.4.30
+					date < 2027.5.3
 				}
 				set_country_flag = rev_russia_2026_evt_10_fired
 				if = {
@@ -63,10 +63,6 @@ on_actions = {
 						}
 					}
 					country_event = { id = russia_2026.10 }
-				}
-				else = {
-					set_country_flag = rev_china_far_east_offer_2027_retry_active
-					country_event = { id = russia_2026.101 days = 30 }
 				}
 			}
 			if = {
@@ -100,10 +96,6 @@ on_actions = {
 						}
 					}
 					country_event = { id = russia_2026.13 }
-				}
-				else = {
-					set_country_flag = rev_china_far_east_offer_2028_retry_active
-					country_event = { id = russia_2026.102 days = 30 }
 				}
 			}
 		}

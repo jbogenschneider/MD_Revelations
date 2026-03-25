@@ -2520,7 +2520,7 @@ bookmarks = {
 
 			
 			}
-			ITL = {
+			ITA = {
 				set_technology = { night_vision_3 = 1 }
 				set_technology = { land_Drone_equipment3 = 1 }
 				set_technology = { land_Drone_equipment4 = 1 }

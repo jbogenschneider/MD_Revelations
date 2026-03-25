@@ -37,6 +37,8 @@
  rev_SOV_belarus_on_own_desc:0 "We won't be funding Belarus for a while."
  rev_SOV_orlov_national_cohesion:0 "Some Investment"
  rev_SOV_orlov_national_cohesion_desc:0 "Russian Oblasts haven't received anything from the Federation for years, it's time to start sending some tax revenue back to the oblasts."
+ rev_SOV_stability_floor_program:0 "Emergency Stability Program"
+ rev_SOV_stability_floor_program_desc:0 "With the war over and the worst economic distortions behind us, the state can focus on restoring basic confidence and pushing national stability back to a minimum viable level."
  rev_SOV_restore_services:0 "Restore Some Services"
  rev_SOV_restore_services_desc:0 "Besides military death benefits common Russians don't get much from the government, we can now at least increase welfare again."
  rev_SOV_restore_welfare:0 "Restore Welfare"
@@ -48,6 +50,7 @@
  rev_SOV_raise_drone_defense_brigades_ii:0 "Raise More Drone Defense Brigades"
  rev_SOV_raise_drone_defense_brigades_ii_desc:0 "Double down on the program and push a second wave of drone defense brigades into service."
  rev_SOV_unlock_drone_defense_brigade_tt:0 "Unlocks the §YDrone Defense Brigade§! division template."
+ rev_SOV_remove_broken_economy_tt:0 "If active, remove §YBroken Economy§!."
 
  rev_SOV_putin_bomb_ukr_energy:0 "Bomb Ukrainian Energy Infrastructure"
  rev_SOV_putin_bomb_ukr_energy_desc:0 "Escalate strategic strikes against Ukraine's power grid to force winter pressure and political fatigue."

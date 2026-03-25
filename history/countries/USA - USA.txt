@@ -71,10 +71,8 @@ capital = 1182
 		christian
 		land_of_the_free
 		political_establishment
-		congress_authority
 		g7_member
 		american_militarism
-		us_war_on_drugs
 		us_mass_media_problems
 		heavy_additional_consumption_spirit
 		petro_dollar
@@ -4690,12 +4688,12 @@ capital = 1182
 	start_politics_input = yes
 	#2000 popularities
 	set_variable = { party_pop_array^1 = 0.150 } #republican
-	set_variable = { party_pop_array^14 = 0.050 } #republican constitutionists
-	set_variable = { party_pop_array^20 = 0.120 } #republican right populists
-	set_variable = { party_pop_array^21 = 0.010 } #neo-fascist & fringe republicans
+	set_variable = { party_pop_array^14 = 0.100 } #republican constitutionists
+	set_variable = { party_pop_array^20 = 0.070 } #republican right populists
+	set_variable = { party_pop_array^21 = 0.030 } #neo-fascist & fringe republicans
 	set_variable = { party_pop_array^22 = 0.020 } #militarist & pentagon lobbiest
 	set_variable = { party_pop_array^2 = 0.340 } #democrat
-	set_variable = { party_pop_array^3 = 0.140 } #democrat progressives
+	set_variable = { party_pop_array^3 = 0.080 } #democrat progressives
 	set_variable = { party_pop_array^18 = 0.015 } #democratic socialist fringes
 	set_variable = { party_pop_array^4 = 0.015 } #CPUSA
 	set_variable = { party_pop_array^5 = 0.025 } #PSL
@@ -4703,16 +4701,18 @@ capital = 1182
 	set_variable = { party_pop_array^16 = 0.160 } #libertarians
 	set_variable = { party_pop_array^17 = 0.035 } #Greens
 
-	add_to_array = { ruling_party = 2 } #democrat
-	add_to_array = { gov_coalition_array = 3 } #democrat progressives
-	add_to_array = { gov_coalition_array = 18 } #democratic socialist fringes
+	add_to_array = { ruling_party = 1 } #rup
+	add_to_array = { gov_coalition_array = 14 }
+	add_to_array = { gov_coalition_array = 20 } 
 
 	#1996 elections estimated - only over threshold added
-	set_variable = { party_pop_elect_array^1 = 0.407 } #repubs
-	set_variable = { party_pop_elect_array^2 = 0.437 } #dem libs
-	set_variable = { party_pop_elect_array^3 = 0.055 } #soc. dem
-	set_variable = { party_pop_elect_array^13 = 0.084 } #reform party
-	set_variable = { party_pop_elect_array^14 = 0.0 } #N/A cons cons
+	set_variable = { party_pop_elect_array^1 = 0.157 } #repubs
+	set_variable = { party_pop_elect_array^14 = 0.080 } #republican constitutionists
+	set_variable = { party_pop_elect_array^2 = 0.537 } #dem libs
+	set_variable = { party_pop_elect_array^3 = 0.095 } #soc. dem
+	set_variable = { party_pop_elect_array^16 = 0.154 } #reform party
+	set_variable = { party_pop_elect_array^20 = 0.07 } #N/A cons cons
+	set_variable = { party_pop_elect_array^21 = 0.030 } #neo-fascist & fringe republicans
 
 	startup_politics = yes
 

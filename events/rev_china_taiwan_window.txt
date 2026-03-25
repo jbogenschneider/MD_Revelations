@@ -1,0 +1,105 @@
+add_namespace = rev_chi_tw
+
+country_event = {
+	id = rev_chi_tw.10
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = CHI
+		NOT = { has_country_flag = rev_chi_tw_nato_window_used }
+		NOT = { has_war_with = TAI }
+		TAI = {
+			exists = yes
+			NOT = { is_subject_of = CHI }
+		}
+		USA = { exists = yes }
+		any_country = {
+			has_idea = NATO_member
+			NOT = { tag = USA }
+			has_war_with = USA
+		}
+	}
+
+	immediate = {
+		set_country_flag = rev_chi_tw_nato_window_used
+		TAI = {
+			country_event = { id = rev_chi_tw.11 hours = 6 }
+		}
+	}
+
+	option = {
+		name = OK
+	}
+}
+
+country_event = {
+	id = rev_chi_tw.11
+	title = rev_chi_tw.11.t
+	desc = rev_chi_tw.11.d
+	picture = GFX_report_event_generic_political_meeting
+	is_triggered_only = yes
+
+	trigger = {
+		tag = TAI
+		CHI = { exists = yes }
+		NOT = { is_subject_of = CHI }
+		NOT = { has_war_with = CHI }
+		USA = { exists = yes }
+		any_country = {
+			has_idea = NATO_member
+			NOT = { tag = USA }
+			has_war_with = USA
+		}
+	}
+
+	option = {
+		name = rev_chi_tw.11.a
+		ai_chance = {
+			factor = 90
+		}
+		CHI = {
+			set_autonomy = {
+				target = TAI
+				autonomy_state = autonomy_puppet_state
+			}
+		}
+		set_country_flag = rev_chi_tw_ultimatum_accepted
+	}
+
+	option = {
+		name = rev_chi_tw.11.b
+		ai_chance = {
+			factor = 10
+		}
+		set_country_flag = rev_chi_tw_ultimatum_refused
+		CHI = {
+			country_event = { id = rev_chi_tw.12 days = 5 }
+		}
+	}
+}
+
+country_event = {
+	id = rev_chi_tw.12
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = CHI
+		NOT = { has_war_with = TAI }
+		TAI = {
+			exists = yes
+			NOT = { is_subject_of = CHI }
+			has_country_flag = rev_chi_tw_ultimatum_refused
+		}
+	}
+
+	option = {
+		name = OK
+		log = "[GetDateText]: [Root.GetName]: rev_chi_tw.12 war fired against Taiwan after the ultimatum was refused."
+		declare_war_on = {
+			target = TAI
+			type = annex_everything
+		}
+	}
+}
