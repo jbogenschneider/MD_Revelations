@@ -17,5 +17,10 @@ ideas = {
 				production_speed_dockyard_factor = 0.20
 			}
 		}
+
+		USA_Idea_Bad_Debt = {
+			allowed = { original_tag = USA }
+			picture = idea_political_campaign
+		}
 	}
 }

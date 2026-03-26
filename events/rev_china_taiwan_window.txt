@@ -103,3 +103,168 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = rev_chi_tw.20
+	title = rev_chi_tw.20.t
+	desc = rev_chi_tw.20.d
+	picture = GFX_civil_war_world
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = rev_usa_cw_china_war_launched
+		has_country_flag = rev_chi_tw_china_victory_offer_pending
+		has_war_with = CHI
+		CHI = { exists = yes }
+	}
+
+	option = {
+		name = rev_chi_tw.20.a
+		ai_chance = {
+			factor = 100
+		}
+		clr_country_flag = rev_chi_tw_china_victory_offer_pending
+		set_country_flag = rev_chi_tw_peace_resolved
+		set_country_flag = rev_chi_tw_china_victory_peace
+		set_variable = { rev_chi_tw_war_weeks = 0 }
+		1015 = { transfer_state_to = CHI } # Pratas
+		1109 = { transfer_state_to = CHI } # Lienchiang
+		1155 = { transfer_state_to = CHI } # Hsinchu
+		1156 = { transfer_state_to = CHI } # Taichung
+		1157 = { transfer_state_to = CHI } # Tainan
+		1158 = { transfer_state_to = CHI } # Penghu
+		CHI = {
+			set_country_flag = rev_chi_tw_peace_resolved
+			set_country_flag = rev_chi_tw_china_victory_peace
+			annex_country = { target = TAI transfer_troops = yes }
+		}
+		if = {
+			limit = { has_war_with = CHI }
+			white_peace = CHI
+		}
+		JAP = {
+			if = {
+				limit = {
+					exists = yes
+					has_war_with = CHI
+				}
+				white_peace = CHI
+			}
+		}
+		AUS = {
+			if = {
+				limit = {
+					exists = yes
+					has_war_with = CHI
+				}
+				white_peace = CHI
+			}
+		}
+		PHI = {
+			if = {
+				limit = {
+					exists = yes
+					has_war_with = CHI
+				}
+				white_peace = CHI
+			}
+		}
+	}
+
+	option = {
+		name = rev_chi_tw.20.b
+		ai_chance = {
+			factor = 0
+		}
+		clr_country_flag = rev_chi_tw_china_victory_offer_pending
+		set_country_flag = rev_chi_tw_china_victory_offer_refused
+		add_stability = -0.10
+		add_war_support = -0.10
+	}
+}
+
+country_event = {
+	id = rev_chi_tw.30
+	title = rev_chi_tw.30.t
+	desc = rev_chi_tw.30.d
+	picture = GFX_report_event_generic_peace_conference
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = rev_usa_cw_china_war_launched
+		has_country_flag = rev_chi_tw_usa_white_peace_pending
+		has_war_with = CHI
+		CHI = { exists = yes }
+		TAI = { exists = yes }
+	}
+
+	option = {
+		name = rev_chi_tw.30.a
+		ai_chance = {
+			factor = 100
+		}
+		clr_country_flag = rev_chi_tw_usa_white_peace_pending
+		set_country_flag = rev_chi_tw_peace_resolved
+		set_country_flag = rev_chi_tw_usa_white_peace_resolved
+		set_variable = { rev_chi_tw_war_weeks = 0 }
+		1015 = { transfer_state_to = TAI } # Pratas
+		1109 = { transfer_state_to = TAI } # Lienchiang
+		1155 = { transfer_state_to = TAI } # Hsinchu
+		1156 = { transfer_state_to = TAI } # Taichung
+		1157 = { transfer_state_to = TAI } # Tainan
+		1158 = { transfer_state_to = TAI } # Penghu
+		CHI = {
+			set_country_flag = rev_chi_tw_peace_resolved
+			set_country_flag = rev_chi_tw_usa_white_peace_resolved
+		}
+		TAI = {
+			if = {
+				limit = { exists = yes }
+				set_country_flag = rev_chi_tw_peace_resolved
+				set_country_flag = rev_chi_tw_usa_white_peace_resolved
+			}
+		}
+		if = {
+			limit = { has_war_with = CHI }
+			white_peace = CHI
+		}
+		TAI = {
+			if = {
+				limit = {
+					exists = yes
+					has_war_with = CHI
+				}
+				white_peace = CHI
+			}
+		}
+		JAP = {
+			if = {
+				limit = {
+					exists = yes
+					has_war_with = CHI
+				}
+				white_peace = CHI
+			}
+		}
+		AUS = {
+			if = {
+				limit = {
+					exists = yes
+					has_war_with = CHI
+				}
+				white_peace = CHI
+			}
+		}
+		PHI = {
+			if = {
+				limit = {
+					exists = yes
+					has_war_with = CHI
+				}
+				white_peace = CHI
+			}
+		}
+	}
+}

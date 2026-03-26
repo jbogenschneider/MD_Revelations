@@ -104,6 +104,12 @@ focus_tree = {
 		ai_will_do = { base = 1 }
 		completion_reward = {
 			if = {
+				limit = { USA = { exists = yes } }
+				808 = { transfer_state_to = USA } # Idaho
+				788 = { transfer_state_to = USA } # Montana
+				787 = { transfer_state_to = USA } # North Dakota
+			}
+			if = {
 				limit = { NOT = { has_idea = NATO_member } }
 				add_ideas = NATO_member
 			}

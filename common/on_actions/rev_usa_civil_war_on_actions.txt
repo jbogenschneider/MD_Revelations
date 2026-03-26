@@ -99,6 +99,30 @@ on_actions = {
 			if = {
 				limit = {
 					tag = USA
+					NOT = { has_country_flag = rev_usa_cw_end_of_content_2031_fired }
+					date > 2031.12.5
+					date < 2031.12.7
+				}
+				country_event = { id = rev_usa_cw.45 }
+			}
+			if = {
+				limit = {
+					tag = USA
+					has_country_flag = rev_usa_cw_china_war_launched
+					has_war_with = CHI
+					TAI = { exists = yes }
+					NOT = { has_country_flag = rev_chi_tw_peace_resolved }
+					NOT = { has_country_flag = rev_chi_tw_china_victory_offer_pending }
+					NOT = { has_country_flag = rev_chi_tw_usa_white_peace_pending }
+					date > 2029.6.2
+					date < 2029.6.5
+				}
+				set_country_flag = rev_chi_tw_usa_white_peace_pending
+				country_event = { id = rev_chi_tw.30 }
+			}
+			if = {
+				limit = {
+					tag = USA
 					has_country_flag = rev_usa_civil_war_initialized
 					has_country_flag = rev_usa_cw_launch_event_fired
 					NOT = { has_global_flag = rev_usa_cw_concluded }
@@ -318,6 +342,36 @@ on_actions = {
 					}
 				}
 				country_event = { id = rev_chi_tw.10 }
+			}
+			if = {
+				limit = {
+					tag = CHI
+					has_war_with = TAI
+					USA = {
+						exists = yes
+						has_country_flag = rev_usa_cw_china_war_launched
+						NOT = { has_country_flag = rev_chi_tw_peace_resolved }
+						NOT = { has_country_flag = rev_chi_tw_china_victory_offer_pending }
+						NOT = { has_country_flag = rev_chi_tw_china_victory_offer_refused }
+					}
+					OR = { 1015 = { is_owned_by = CHI } 1015 = { is_controlled_by = CHI } }
+					OR = { 1109 = { is_owned_by = CHI } 1109 = { is_controlled_by = CHI } }
+					OR = { 1155 = { is_owned_by = CHI } 1155 = { is_controlled_by = CHI } }
+					OR = { 1156 = { is_owned_by = CHI } 1156 = { is_controlled_by = CHI } }
+					OR = { 1157 = { is_owned_by = CHI } 1157 = { is_controlled_by = CHI } }
+					OR = { 1158 = { is_owned_by = CHI } 1158 = { is_controlled_by = CHI } }
+				}
+				USA = {
+					set_country_flag = rev_chi_tw_china_victory_offer_pending
+					country_event = { id = rev_chi_tw.20 }
+				}
+			}
+			if = {
+				limit = {
+					tag = USA
+					has_idea = USA_Idea_Bad_Debt
+				}
+				add_to_variable = { var = treasury value = -7 }
 			}
 		}
 	}

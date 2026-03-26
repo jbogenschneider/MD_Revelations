@@ -557,6 +557,112 @@ focus_tree = {
     }
 
     focus = {
+        id = USA_ramp_up_secret_arming_of_taiwan
+        icon = taiwan_plane_upg
+        x = 4
+        y = 14
+        cost = 5
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+        prerequisite = { focus = USA_instigate_a_conflict_with_china }
+        ai_will_do = {
+            base = 1
+        }
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: focus USA_ramp_up_secret_arming_of_taiwan completion_reward"
+            custom_effect_tooltip = USA_ramp_up_secret_arming_of_taiwan_tt
+            add_to_variable = { var = debt value = 50 }
+            set_country_flag = rev_usa_secret_taiwan_bunker_prepared
+            TAI = {
+                if = {
+                    limit = { exists = yes }
+                    add_equipment_to_stockpile = {
+                        type = kamikaze_drone_2
+                        amount = 1000
+                    }
+                    add_equipment_to_stockpile = {
+                        type = sam_missile_equipment_4
+                        amount = 200
+                    }
+                    add_equipment_to_stockpile = {
+                        type = Anti_Air_3
+                        amount = 250
+                    }
+                    add_equipment_to_stockpile = {
+                        type = guided_missile_equipment_4
+                        amount = 60
+                    }
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = USA_build_more_suicide_drones
+        icon = Drones
+        x = 2
+        y = 14
+        cost = 10
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_AIR_FOCUS }
+        prerequisite = { focus = USA_instigate_a_conflict_with_china }
+        ai_will_do = {
+            base = 1
+        }
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: focus USA_build_more_suicide_drones completion_reward"
+            custom_effect_tooltip = USA_treasury_minus_10_tt
+            custom_effect_tooltip = USA_build_more_suicide_drones_tt
+            add_to_variable = { var = treasury value = -10 }
+            add_equipment_to_stockpile = {
+                type = kamikaze_drone_2
+                amount = 1000
+            }
+        }
+    }
+
+    focus = {
+        id = USA_turn_on_canada_after_china
+        icon = attack_canada
+        x = 10
+        y = 15
+        cost = 10
+        available_if_capitulated = no
+        available = {
+            has_war = no
+            has_country_leader = { name = "Donald Trump" ruling_only = yes }
+            OR = {
+                has_country_flag = rev_chi_tw_china_victory_peace
+                has_country_flag = rev_chi_tw_usa_white_peace_resolved
+            }
+        }
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+        ai_will_do = {
+            base = 1
+        }
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: focus USA_turn_on_canada_after_china completion_reward"
+            if = {
+                limit = { is_in_faction = yes }
+                leave_faction = yes
+            }
+            if = {
+                limit = {
+                    CAN = {
+                        exists = yes
+                        NOT = { is_subject = yes }
+                    }
+                    NOT = { has_war_with = CAN }
+                }
+                declare_war_on = {
+                    target = CAN
+                    type = annex_everything
+                }
+            }
+        }
+    }
+
+    focus = {
         id = USA_prepare_to_invade_canada
         icon = attack_canada
         x = 6
@@ -574,6 +680,46 @@ focus_tree = {
             custom_effect_tooltip = USA_prepare_to_invade_canada_tt
             set_country_flag = rev_usa_cw_canada_conflict_selected
             clr_country_flag = rev_usa_cw_china_conflict_selected
+        }
+    }
+
+    focus = {
+        id = USA_encourage_democrat_elites_to_leave
+        icon = USA_leave_admin
+        x = 6
+        y = 14
+        cost = 5
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+        prerequisite = { focus = USA_prepare_to_invade_canada }
+        ai_will_do = {
+            base = 1
+        }
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: focus USA_encourage_democrat_elites_to_leave completion_reward"
+            add_stability = 0.08
+            add_to_variable = { var = debt value = -100 }
+        }
+    }
+
+    focus = {
+        id = USA_restore_bond_market_access
+        icon = focus_SWI_issue_war_bonds
+        x = 10
+        y = 12
+        cost = 5
+        available_if_capitulated = yes
+        available = {
+            has_war = no
+            has_idea = USA_Idea_Bad_Debt
+        }
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY }
+        ai_will_do = {
+            base = 1
+        }
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: focus USA_restore_bond_market_access completion_reward"
+            remove_ideas = USA_Idea_Bad_Debt
         }
     }
 
@@ -807,6 +953,18 @@ focus_tree = {
                 set_resistance = 0
                 set_compliance = 100
             }
+            1161 = {
+                transfer_state_to = USA
+                cancel_resistance = yes
+                set_resistance = 0
+                set_compliance = 100
+            }
+            1162 = {
+                transfer_state_to = USA
+                cancel_resistance = yes
+                set_resistance = 0
+                set_compliance = 100
+            }
         }
     }
 
@@ -937,6 +1095,70 @@ focus_tree = {
         completion_reward = {
             log = "[GetDateText]: [Root.GetName]: focus USA_rally_christians completion_reward"
             add_war_support = 0.03
+        }
+    }
+
+    focus = {
+        id = USA_crush_dissent_among_republicans
+        icon = USA_republican_party
+        x = 10
+        y = 8
+        cost = 3
+        available_if_capitulated = yes
+        available = {
+            has_country_flag = rev_usa_cw_coup_successful
+            has_country_leader = { name = "Donald Trump" ruling_only = yes }
+        }
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+        ai_will_do = {
+            base = 1
+        }
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: focus USA_crush_dissent_among_republicans completion_reward"
+            add_stability = 0.05
+            add_war_support = 0.01
+        }
+    }
+
+    focus = {
+        id = USA_find_another_place_to_silence_dissent
+        icon = colonial_crackdown
+        x = 10
+        y = 9
+        cost = 3
+        available_if_capitulated = yes
+        available = {
+            has_country_flag = rev_usa_cw_coup_successful
+            has_country_leader = { name = "Donald Trump" ruling_only = yes }
+        }
+        ai_will_do = {
+            base = 1
+        }
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: focus USA_find_another_place_to_silence_dissent completion_reward"
+            add_stability = 0.02
+            add_political_power = -8
+        }
+    }
+
+    focus = {
+        id = USA_find_another_place_to_silence_dissent2
+        icon = colonial_crackdown
+        x = 10
+        y = 10
+        cost = 3
+        available_if_capitulated = yes
+        available = {
+            has_country_flag = rev_usa_cw_coup_successful
+            has_country_leader = { name = "Donald Trump" ruling_only = yes }
+        }
+        ai_will_do = {
+            base = 1
+        }
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: focus USA_find_another_place_to_silence_dissent completion_reward"
+            add_stability = 0.02
+            add_political_power = -8
         }
     }
 }

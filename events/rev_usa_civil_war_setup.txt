@@ -506,6 +506,10 @@ country_event = {
 		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.315.a"
 		set_country_flag = rev_usa_cw_canada_invasion_launched
 		if = {
+			limit = { NOT = { has_idea = USA_Idea_Bad_Debt } }
+			add_ideas = USA_Idea_Bad_Debt
+		}
+		if = {
 			limit = {
 				TAI = {
 					exists = yes
@@ -746,10 +750,6 @@ country_event = {
 					type = annex_everything
 				}
 			}
-			create_wargoal = {
-				target = CHI
-				type = annex_everything
-			}
 			custom_effect_tooltip = rev_usa_cw.318.tt
 		}
 		else = {
@@ -785,12 +785,33 @@ country_event = {
 		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.319.a"
 		set_country_flag = rev_usa_cw_china_war_launched
 		if = {
+			limit = { NOT = { has_idea = USA_Idea_Bad_Debt } }
+			add_ideas = USA_Idea_Bad_Debt
+		}
+		if = {
+			limit = { has_country_flag = rev_usa_secret_taiwan_bunker_prepared }
+			custom_effect_tooltip = rev_usa_cw.319.secret_taiwan_tt
+		}
+		clr_country_flag = rev_chi_tw_peace_resolved
+		clr_country_flag = rev_chi_tw_china_victory_peace
+		clr_country_flag = rev_chi_tw_china_victory_offer_pending
+		clr_country_flag = rev_chi_tw_china_victory_offer_refused
+		clr_country_flag = rev_chi_tw_usa_white_peace_resolved
+		clr_country_flag = rev_chi_tw_usa_white_peace_pending
+		set_variable = { rev_chi_tw_war_weeks = 0 }
+		if = {
 			limit = {
 				CHI = {
 					exists = yes
 					NOT = { is_subject = yes }
 				}
 				NOT = { has_war_with = CHI }
+			}
+			CHI = {
+				clr_country_flag = rev_chi_tw_peace_resolved
+			}
+			TAI = {
+				clr_country_flag = rev_chi_tw_peace_resolved
 			}
 			declare_war_on = {
 				target = CHI
@@ -815,6 +836,34 @@ country_event = {
 			}
 			if = {
 				limit = {
+					has_country_flag = rev_usa_secret_taiwan_bunker_prepared
+					TAI = { exists = yes }
+				}
+				598 = {
+					create_unit = {
+						division = "name = \"Taiwan Special Forces Detachment I\" division_template = \"Air Cavalry Brigade\" start_experience_factor = 0.2"
+						owner = ROOT
+						prioritize_location = 7186
+					}
+					create_unit = {
+						division = "name = \"Taiwan Special Forces Detachment II\" division_template = \"Air Cavalry Brigade\" start_experience_factor = 0.2"
+						owner = ROOT
+						prioritize_location = 7186
+					}
+					create_unit = {
+						division = "name = \"Taiwan Special Forces Detachment III\" division_template = \"Air Cavalry Brigade\" start_experience_factor = 0.2"
+						owner = ROOT
+						prioritize_location = 7186
+					}
+					create_unit = {
+						division = "name = \"Taiwan Special Forces Detachment IV\" division_template = \"Air Cavalry Brigade\" start_experience_factor = 0.2"
+						owner = ROOT
+						prioritize_location = 7186
+					}
+				}
+			}
+			if = {
+				limit = {
 					JAP = {
 						exists = yes
 						is_in_faction_with = USA
@@ -832,13 +881,13 @@ country_event = {
 			}
 			if = {
 				limit = {
-					AUS = {
+					AST = {
 						exists = yes
 						is_in_faction_with = USA
 						NOT = { has_war_with = CHI }
 					}
 				}
-				AUS = {
+				AST = {
 					add_to_war = {
 						targeted_alliance = USA
 						enemy = CHI
@@ -908,6 +957,9 @@ country_event = {
 		803 = { transfer_state_to = CAL add_core_of = CAL add_core_of = USA } # New Mexico
 		804 = { transfer_state_to = CAL add_core_of = CAL add_core_of = USA } # Colorado
 		807 = { transfer_state_to = CAL add_core_of = CAL add_core_of = USA } # Nevada
+		808 = { transfer_state_to = CAL add_core_of = CAL add_core_of = USA } # Idaho
+		788 = { transfer_state_to = CAL add_core_of = CAL add_core_of = USA } # Montana
+		787 = { transfer_state_to = CAL add_core_of = CAL add_core_of = USA } # North Dakota
 
 		# New England + New York align with Canada and carry dual cores.
 		764 = { transfer_state_to = CAN add_core_of = CAN add_core_of = USA cancel_resistance = yes set_resistance = 0 set_compliance = 100 } # Maine
@@ -1490,6 +1542,15 @@ country_event = {
 			limit = { country_exists = CAL }
 			annex_country = { target = CAL transfer_troops = yes }
 		}
+		if = {
+			limit = { DEN = { exists = yes } }
+			1 = {
+				transfer_state_to = DEN
+				cancel_resistance = yes
+				set_resistance = 0
+				set_compliance = 100
+			}
+		}
 
 		set_politics = {
 			ruling_party = democratic
@@ -1806,6 +1867,168 @@ country_event = {
 			ruling_party = democratic
 			elections_allowed = yes
 		}
+	}
+}
+
+country_event = {
+	id = rev_usa_cw.45
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		NOT = { has_country_flag = rev_usa_cw_end_of_content_2031_fired }
+		date > 2031.12.5
+		date < 2031.12.7
+	}
+
+	immediate = {
+		set_country_flag = rev_usa_cw_end_of_content_2031_fired
+		clr_country_flag = rev_usa_cw_end_trump_active
+		clr_country_flag = rev_usa_cw_end_trump_china_cutoff
+		clr_country_flag = rev_usa_cw_end_trump_nato_cutoff
+
+		if = {
+			limit = { has_country_leader = { name = "Donald Trump" ruling_only = yes } }
+			set_country_flag = rev_usa_cw_end_trump_active
+		}
+		if = {
+			limit = {
+				has_country_flag = rev_usa_cw_end_trump_active
+				has_war_with = CHI
+				CHI = { exists = yes }
+				TAI = { exists = yes }
+			}
+			set_country_flag = rev_usa_cw_end_trump_china_cutoff
+		}
+		if = {
+			limit = {
+				has_country_flag = rev_usa_cw_end_trump_active
+				any_country = {
+					has_idea = NATO_member
+					NOT = { tag = USA }
+					has_war_with = USA
+				}
+			}
+			set_country_flag = rev_usa_cw_end_trump_nato_cutoff
+		}
+
+		if = {
+			limit = {
+				has_country_flag = rev_usa_cw_end_trump_china_cutoff
+			}
+			clr_country_flag = rev_chi_tw_china_victory_offer_pending
+			clr_country_flag = rev_chi_tw_china_victory_offer_refused
+			clr_country_flag = rev_chi_tw_usa_white_peace_resolved
+			clr_country_flag = rev_chi_tw_usa_white_peace_pending
+			set_country_flag = rev_chi_tw_peace_resolved
+			set_country_flag = rev_chi_tw_china_victory_peace
+			set_variable = { rev_chi_tw_war_weeks = 0 }
+			1015 = { transfer_state_to = CHI } # Pratas
+			1109 = { transfer_state_to = CHI } # Lienchiang
+			1155 = { transfer_state_to = CHI } # Hsinchu
+			1156 = { transfer_state_to = CHI } # Taichung
+			1157 = { transfer_state_to = CHI } # Tainan
+			1158 = { transfer_state_to = CHI } # Penghu
+			CHI = {
+				set_country_flag = rev_chi_tw_peace_resolved
+				set_country_flag = rev_chi_tw_china_victory_peace
+				annex_country = { target = TAI transfer_troops = yes }
+			}
+			if = {
+				limit = { has_war_with = CHI }
+				white_peace = CHI
+			}
+			JAP = {
+				if = {
+					limit = {
+						exists = yes
+						has_war_with = CHI
+					}
+					white_peace = CHI
+				}
+			}
+			AUS = {
+				if = {
+					limit = {
+						exists = yes
+						has_war_with = CHI
+					}
+					white_peace = CHI
+				}
+			}
+			PHI = {
+				if = {
+					limit = {
+						exists = yes
+						has_war_with = CHI
+					}
+					white_peace = CHI
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				has_country_flag = rev_usa_cw_end_trump_nato_cutoff
+			}
+			retire_country_leader = yes
+			if = {
+				limit = { DEN = { exists = yes } }
+				1 = {
+					transfer_state_to = DEN
+					cancel_resistance = yes
+					set_resistance = 0
+					set_compliance = 100
+				}
+			}
+			country_event = { id = rev_usa_cw.42 hours = 1 }
+		}
+		else_if = {
+			limit = {
+				has_country_flag = rev_usa_cw_end_trump_active
+			}
+			retire_country_leader = yes
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+			}
+			create_country_leader = {
+				name = "Hakeem Jeffries"
+				picture = "Hakeem-Jeffries.dds"
+				ideology = liberalism
+				traits = {
+					career_politician
+				}
+			}
+		}
+
+		clr_country_flag = rev_usa_cw_end_trump_active
+		clr_country_flag = rev_usa_cw_end_trump_china_cutoff
+		clr_country_flag = rev_usa_cw_end_trump_nato_cutoff
+		country_event = { id = rev_usa_cw.46 hours = 2 }
+	}
+
+	option = {
+		name = OK
+	}
+}
+
+country_event = {
+	id = rev_usa_cw.46
+	title = rev_usa_cw.46.t
+	desc = rev_usa_cw.46.d
+	picture = GFX_report_event_usa_politics
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = rev_usa_cw_end_of_content_2031_fired
+	}
+
+	option = {
+		name = rev_usa_cw.46.a
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.46.a"
 	}
 }
 
