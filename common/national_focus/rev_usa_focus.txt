@@ -622,10 +622,37 @@ focus_tree = {
     }
 
     focus = {
+        id = USA_weve_got_that_out_of_our_system
+        icon = white_peace
+        x = 8
+        y = 14
+        cost = 10
+        available_if_capitulated = yes
+        available = {
+            has_country_flag = rev_usa_cw_china_war_launched
+            has_war_with = CHI
+            TAI = { exists = yes }
+            NOT = { has_country_flag = rev_chi_tw_peace_resolved }
+            NOT = { has_country_flag = rev_chi_tw_china_victory_offer_pending }
+            NOT = { has_country_flag = rev_chi_tw_usa_white_peace_pending }
+            date > 2029.2.1
+        }
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+        ai_will_do = {
+            base = 1
+        }
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: focus USA_weve_got_that_out_of_our_system completion_reward"
+            set_country_flag = rev_chi_tw_usa_white_peace_pending
+            country_event = { id = rev_chi_tw.30 }
+        }
+    }
+
+    focus = {
         id = USA_turn_on_canada_after_china
         icon = attack_canada
         x = 10
-        y = 15
+        y = 14
         cost = 10
         available_if_capitulated = no
         available = {
@@ -657,6 +684,7 @@ focus_tree = {
                 declare_war_on = {
                     target = CAN
                     type = annex_everything
+                    add_stability = 0.11
                 }
             }
         }
@@ -720,6 +748,31 @@ focus_tree = {
         completion_reward = {
             log = "[GetDateText]: [Root.GetName]: focus USA_restore_bond_market_access completion_reward"
             remove_ideas = USA_Idea_Bad_Debt
+        }
+    }
+
+    focus = {
+        id = USA_restore_trade_with_china
+        icon = trade_with_china
+        x = 8
+        y = 12
+        cost = 5
+        available_if_capitulated = yes
+        available = {
+            has_war = no
+            has_idea = USA_China_War_Idea
+        }
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+        ai_will_do = {
+            base = 1
+        }
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: focus USA_restore_trade_with_china completion_reward"
+            remove_wargoal = {
+                target = CHI
+                type = annex_everything
+            }
+            remove_ideas = USA_China_War_Idea
         }
     }
 

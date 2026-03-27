@@ -717,6 +717,11 @@ capital = 811
 	set_variable = { var = treasury value = 100 }
 	set_variable = { var = corporate_tax_rate value = 30 }
 	set_variable = { var = population_tax_rate value = 15 }
+	set_variable = { var = civilian_factory_employment_var value = 1 }
+	set_variable = { var = military_factory_employment_var value = 1 }
+	set_variable = { var = naval_factory_employment_var value = 1 }
+	set_variable = { var = office_employment_var value = 1 }
+	set_variable = { var = agriculture_district_employment_var value = 1 }
 	add_stability = 0.75
 	add_political_power = 1000
 	set_war_support = 0.75

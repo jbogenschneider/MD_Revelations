@@ -122,6 +122,14 @@ on_actions = {
 			}
 			if = {
 				limit = {
+					tag = CHI
+					has_idea = USA_trade_embargo
+					has_war = no
+				}
+				remove_ideas = USA_trade_embargo
+			}
+			if = {
+				limit = {
 					tag = USA
 					has_country_flag = rev_usa_civil_war_initialized
 					has_country_flag = rev_usa_cw_launch_event_fired
@@ -372,6 +380,20 @@ on_actions = {
 					has_idea = USA_Idea_Bad_Debt
 				}
 				add_to_variable = { var = treasury value = -7 }
+			}
+			if = {
+				limit = {
+					tag = USA
+					has_idea = USA_China_War_Idea
+				}
+				add_to_variable = { var = treasury value = -8 }
+			}
+			if = {
+				limit = {
+					tag = CHI
+					has_idea = USA_trade_embargo
+				}
+				add_to_variable = { var = treasury value = -8 }
 			}
 		}
 	}

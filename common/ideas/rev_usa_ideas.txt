@@ -22,5 +22,15 @@ ideas = {
 			allowed = { original_tag = USA }
 			picture = idea_political_campaign
 		}
+
+		USA_China_War_Idea = {
+			allowed = { original_tag = USA }
+			picture = idea_political_campaign
+		}
+
+		USA_trade_embargo = {
+			allowed = { original_tag = CHI }
+			picture = idea_political_campaign
+		}
 	}
 }

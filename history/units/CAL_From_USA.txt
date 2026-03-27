@@ -10,7 +10,7 @@ division_template = {
 	}
 
 	support = {
-		L_Engi_Comp = { x = 0 y = 2 }
+		L_Engi_Comp = { x = 0 y = 0 }
 		Mot_Recce_Comp = { x = 0 y = 1 }
 	}
 }
@@ -25,7 +25,7 @@ division_template = {
 	}
 
 	support = {
-		L_Engi_Comp = { x = 0 y = 2 }
+		L_Engi_Comp = { x = 0 y = 0 }
 		Mot_Recce_Comp = { x = 0 y = 1 }
 	}
 }
@@ -37,9 +37,12 @@ division_template = {
 		L_Inf_Bat = { x = 0 y = 0 }
 		L_Inf_Bat = { x = 0 y = 1 }
 		L_Inf_Bat = { x = 1 y = 0 }
+		L_Inf_Bat = { x = 1 y = 1 }
 	}
 	support = {
 		drone_tactical_company = { x = 0 y = 0 }
+		L_Engi_Comp = { x = 0 y = 1 }
+		Mot_Recce_Comp = { x = 0 y = 2 }
 	}
 }
 
@@ -208,7 +211,8 @@ units = {
 	}
 }
 instant_effect = {
-		add_equipment_to_stockpile = { type = infantry_weapons4 amount = 80000 }
+		add_equipment_to_stockpile = { type = infantry_weapons4 amount = 50000 }
+		add_equipment_to_stockpile = { type = infantry_weapons5 amount = 40000 }
 		add_equipment_to_stockpile = { type = command_control_equipment4 amount = 12000 }
 		add_equipment_to_stockpile = { type = Anti_tank_3 amount = 2800 }
 		add_equipment_to_stockpile = { type = Anti_Air_3 amount = 2200 }

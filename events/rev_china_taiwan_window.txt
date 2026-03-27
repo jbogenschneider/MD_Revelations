@@ -209,6 +209,7 @@ country_event = {
 		set_country_flag = rev_chi_tw_peace_resolved
 		set_country_flag = rev_chi_tw_usa_white_peace_resolved
 		set_variable = { rev_chi_tw_war_weeks = 0 }
+		add_stability = 0.15
 		1015 = { transfer_state_to = TAI } # Pratas
 		1109 = { transfer_state_to = TAI } # Lienchiang
 		1155 = { transfer_state_to = TAI } # Hsinchu
@@ -218,6 +219,7 @@ country_event = {
 		CHI = {
 			set_country_flag = rev_chi_tw_peace_resolved
 			set_country_flag = rev_chi_tw_usa_white_peace_resolved
+			add_stability = 0.15
 		}
 		TAI = {
 			if = {
@@ -229,6 +231,24 @@ country_event = {
 		if = {
 			limit = { has_war_with = CHI }
 			white_peace = CHI
+		}
+		SOV = {
+			if = {
+				limit = {
+					exists = yes
+					has_war_with = USA
+				}
+				white_peace = USA
+			}
+		}
+		ABK = {
+			if = {
+				limit = {
+					exists = yes
+					has_war_with = USA
+				}
+				white_peace = USA
+			}
 		}
 		TAI = {
 			if = {

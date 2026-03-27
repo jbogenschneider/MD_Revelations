@@ -789,6 +789,10 @@ country_event = {
 			add_ideas = USA_Idea_Bad_Debt
 		}
 		if = {
+			limit = { NOT = { has_idea = USA_China_War_Idea } }
+			add_ideas = USA_China_War_Idea
+		}
+		if = {
 			limit = { has_country_flag = rev_usa_secret_taiwan_bunker_prepared }
 			custom_effect_tooltip = rev_usa_cw.319.secret_taiwan_tt
 		}
@@ -809,6 +813,10 @@ country_event = {
 			}
 			CHI = {
 				clr_country_flag = rev_chi_tw_peace_resolved
+				if = {
+					limit = { NOT = { has_idea = USA_trade_embargo } }
+					add_ideas = USA_trade_embargo
+				}
 			}
 			TAI = {
 				clr_country_flag = rev_chi_tw_peace_resolved
@@ -975,6 +983,11 @@ country_event = {
 		CAL = {
 			load_oob = "CAL_From_USA"
 			rev_grant_california_split_technology = yes
+			set_variable = { var = civilian_factory_employment_var value = 1 }
+			set_variable = { var = military_factory_employment_var value = 1 }
+			set_variable = { var = naval_factory_employment_var value = 1 }
+			set_variable = { var = office_employment_var value = 1 }
+			set_variable = { var = agriculture_district_employment_var value = 1 }
 
 			set_politics = {
 				ruling_party = democratic
@@ -992,6 +1005,16 @@ country_event = {
 
 		CAN = {
 			load_oob = "CAN_From_USA"
+		}
+
+		USA = {
+			ingame_update_setup = yes
+		}
+		CAL = {
+			ingame_update_setup = yes
+		}
+		CAN = {
+			ingame_update_setup = yes
 		}
 	}
 
