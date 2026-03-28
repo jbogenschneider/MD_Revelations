@@ -32,5 +32,10 @@ ideas = {
 			allowed = { original_tag = CHI }
 			picture = idea_political_campaign
 		}
+
+		USA_Nobody_to_Borrow_From = {
+			allowed = { original_tag = USA }
+			picture = idea_political_campaign
+		}
 	}
 }

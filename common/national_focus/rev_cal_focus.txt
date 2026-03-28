@@ -42,10 +42,20 @@ focus_tree = {
 			army_experience = 20
 			air_experience = 20
 			navy_experience = 20
+			create_field_marshal = {
+				name = "Mark Milley"
+				picture = "Mark_Miley.dds"
+				traits = { logistics_wizard }
+				skill = 5
+				attack_skill = 3
+				defense_skill = 4
+				planning_skill = 5
+				logistics_skill = 5
+			}
 			create_corps_commander = {
 				name = "Laura Richardson"
 				traits = { infantry_officer }
-				skill = 3
+				skill = 5
 				attack_skill = 3
 				defense_skill = 3
 				planning_skill = 2
@@ -54,7 +64,7 @@ focus_tree = {
 			create_corps_commander = {
 				name = "Kenneth Wilsbach"
 				traits = { air_cavalry_leader }
-				skill = 3
+				skill = 5
 				attack_skill = 3
 				defense_skill = 2
 				planning_skill = 3
@@ -63,7 +73,7 @@ focus_tree = {
 			create_corps_commander = {
 				name = "Matthew Beevers"
 				traits = { artillery_officer }
-				skill = 2
+				skill = 4
 				attack_skill = 2
 				defense_skill = 2
 				planning_skill = 3
@@ -72,8 +82,17 @@ focus_tree = {
 			create_corps_commander = {
 				name = "Evan Pettus"
 				traits = { logistics_wizard }
-				skill = 2
+				skill = 4
 				attack_skill = 1
+				defense_skill = 2
+				planning_skill = 3
+				logistics_skill = 4
+			}
+			create_corps_commander = {
+				name = "Clay Smith"
+				traits = { infantry_officer }
+				skill = 4
+				attack_skill = 3
 				defense_skill = 2
 				planning_skill = 2
 				logistics_skill = 4
@@ -122,6 +141,209 @@ focus_tree = {
 					NOT = { is_in_faction = yes }
 				}
 				GER = { add_to_faction = ROOT }
+			}
+		}
+	}
+
+	focus = {
+		id = CAL_emergency_formations_los_angeles
+		icon = Generic_Urban_Partisans
+		x = 9
+		y = 2
+		cost = 3
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MILITARY }
+		prerequisite = { focus = CAL_prepare_for_war }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			create_unit = {
+				division = "name = \"LA Emergency Formation I\" division_template = \"US Resistance Militia\" start_experience_factor = 0.2"
+				owner = ROOT
+				prioritize_location = 11757
+			}
+			create_unit = {
+				division = "name = \"LA Emergency Formation II\" division_template = \"US Resistance Militia\" start_experience_factor = 0.2"
+				owner = ROOT
+				prioritize_location = 11757
+			}
+			create_unit = {
+				division = "name = \"LA Emergency Formation III\" division_template = \"US Resistance Militia\" start_experience_factor = 0.2"
+				owner = ROOT
+				prioritize_location = 11757
+			}
+			create_unit = {
+				division = "name = \"LA Emergency Formation IV\" division_template = \"US Resistance Militia\" start_experience_factor = 0.2"
+				owner = ROOT
+				prioritize_location = 11757
+			}
+		}
+	}
+
+	focus = {
+		id = CAL_emergency_formations_seattle
+		icon = USA_expand_the_national_guard
+		x = 9
+		y = 3
+		cost = 3
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MILITARY }
+		prerequisite = { focus = CAL_emergency_formations_los_angeles }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			create_unit = {
+				division = "name = \"National Gaurd Formation I\" division_template = \"US Resistance Militia\" start_experience_factor = 0.2"
+				owner = ROOT
+				prioritize_location = 7315
+			}
+			create_unit = {
+				division = "name = \"National Gaurd Formation II\" division_template = \"US Resistance Militia\" start_experience_factor = 0.2"
+				owner = ROOT
+				prioritize_location = 7315
+			}
+			create_unit = {
+				division = "name = \"National Gaurd Formation III\" division_template = \"US Resistance Militia\" start_experience_factor = 0.2"
+				owner = ROOT
+				prioritize_location = 7315
+			}
+			create_unit = {
+				division = "name = \"National Gaurd Formation IV\" division_template = \"US Resistance Militia\" start_experience_factor = 0.2"
+				owner = ROOT
+				prioritize_location = 7315
+			}
+		}
+	}
+
+	focus = {
+		id = CAL_volunteers_from_mexican_army
+		icon = align_to_mexico
+		x = 13
+		y = 2
+		cost = 3
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MILITARY }
+		prerequisite = { focus = CAL_prepare_for_war }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			create_unit = {
+				division = "name = \"Mexican Volunteer Battalion I\" division_template = \"US Resistance Militia\" start_experience_factor = 0.25"
+				owner = ROOT
+				prioritize_location = 11757
+			}
+			create_unit = {
+				division = "name = \"Mexican Volunteer Battalion II\" division_template = \"US Resistance Militia\" start_experience_factor = 0.25"
+				owner = ROOT
+				prioritize_location = 11757
+			}
+			create_unit = {
+				division = "name = \"Mexican Volunteer Battalion III\" division_template = \"US Resistance Militia\" start_experience_factor = 0.25"
+				owner = ROOT
+				prioritize_location = 11757
+			}
+			create_unit = {
+				division = "name = \"Mexican Volunteer Battalion IV\" division_template = \"US Resistance Militia\" start_experience_factor = 0.25"
+				owner = ROOT
+				prioritize_location = 11757
+			}
+		}
+	}
+
+	focus = {
+		id = CAL_volunteers_from_south_america
+		icon = invitecolumbia
+		x = 15
+		y = 2
+		cost = 3
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MILITARY }
+		prerequisite = { focus = CAL_prepare_for_war }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			create_unit = {
+				division = "name = \"South American Volunteer Column I\" division_template = \"US Resistance Militia\" start_experience_factor = 0.25"
+				owner = ROOT
+				prioritize_location = 3678
+			}
+			create_unit = {
+				division = "name = \"South American Volunteer Column II\" division_template = \"US Resistance Militia\" start_experience_factor = 0.25"
+				owner = ROOT
+				prioritize_location = 3678
+			}
+			create_unit = {
+				division = "name = \"South American Volunteer Column III\" division_template = \"US Resistance Militia\" start_experience_factor = 0.25"
+				owner = ROOT
+				prioritize_location = 3678
+			}
+			create_unit = {
+				division = "name = \"South American Volunteer Column IV\" division_template = \"US Resistance Militia\" start_experience_factor = 0.25"
+				owner = ROOT
+				prioritize_location = 3678
+			}
+		}
+	}
+
+	focus = {
+		id = CAL_volunteers_from_asia
+		icon = USA_prism
+		x = 11
+		y = 2
+		cost = 3
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MILITARY }
+		prerequisite = { focus = CAL_prepare_for_war }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			create_unit = {
+				division = "name = \"Asian Volunteer Group I\" division_template = \"US Resistance Militia\" start_experience_factor = 0.25"
+				owner = ROOT
+				prioritize_location = 7315
+			}
+			create_unit = {
+				division = "name = \"Asian Volunteer Group II\" division_template = \"US Resistance Militia\" start_experience_factor = 0.25"
+				owner = ROOT
+				prioritize_location = 7315
+			}
+			create_unit = {
+				division = "name = \"Asian Volunteer Group III\" division_template = \"US Resistance Militia\" start_experience_factor = 0.25"
+				owner = ROOT
+				prioritize_location = 7315
+			}
+			create_unit = {
+				division = "name = \"Asian Volunteer Group IV\" division_template = \"US Resistance Militia\" start_experience_factor = 0.25"
+				owner = ROOT
+				prioritize_location = 7315
+			}
+		}
+	}
+
+	focus = {
+		id = CAL_volunteers_from_eastern_usa
+		icon = Generic_Volunteer_Corps
+		x = 11
+		y = 3
+		cost = 3
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MILITARY }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			create_unit = {
+				division = "name = \"Eastern Volunteer Regiment I\" division_template = \"US Resistance Militia\" start_experience_factor = 0.25"
+				owner = ROOT
+				prioritize_location = 15368
+			}
+			create_unit = {
+				division = "name = \"Eastern Volunteer Regiment II\" division_template = \"US Resistance Militia\" start_experience_factor = 0.25"
+				owner = ROOT
+				prioritize_location = 15368
+			}
+			create_unit = {
+				division = "name = \"Eastern Volunteer Regiment III\" division_template = \"US Resistance Militia\" start_experience_factor = 0.25"
+				owner = ROOT
+				prioritize_location = 15368
+			}
+			create_unit = {
+				division = "name = \"Eastern Volunteer Regiment IV\" division_template = \"US Resistance Militia\" start_experience_factor = 0.25"
+				owner = ROOT
+				prioritize_location = 15368
 			}
 		}
 	}

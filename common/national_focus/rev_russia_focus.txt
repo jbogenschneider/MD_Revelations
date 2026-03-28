@@ -159,7 +159,9 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = rev_SOV_treasury_plus_20_tt
+			custom_effect_tooltip = rev_SOV_debt_plus_20_tt
 			add_to_variable = { var = treasury value = 20 }
+			add_to_variable = { var = debt value = 20 }
 		}
 
 		ai_will_do = {
@@ -227,7 +229,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.05
 			remove_ideas = RUSSIA_SANCTIONS_BAN_DEBT
-			add_to_variable = { var = debt value = -35 }
+			add_to_variable = { var = debt value = 35 }
 			
 		}
 		ai_will_do = { base = 80 }
@@ -351,7 +353,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_stability = 0.05
-			add_to_variable = { var = debt value = -30 }
+			add_to_variable = { var = debt value = 30 }
 		}
 		ai_will_do = { base = 80 }
 	}
@@ -368,7 +370,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.01
 			add_war_support = 0.02
-			add_to_variable = { var = debt value = -25 }
+			add_to_variable = { var = debt value = 25 }
 		}
 		ai_will_do = { base = 80 }
 	}
@@ -406,7 +408,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.05
 			add_manpower = 50000
-			add_to_variable = { var = debt value = -20 }
+			add_to_variable = { var = debt value = 20 }
 			custom_effect_tooltip = rev_SOV_remove_broken_economy_tt
 			if = {
 				limit = { has_idea = SOV_russian_bad_economy_idea }
@@ -450,7 +452,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.04
 			add_manpower = 50000
-			add_to_variable = { var = debt value = -10 }
+			add_to_variable = { var = debt value = 10 }
 			if = {
 				limit = { NOT = { has_idea = health_04 } }
 				remove_ideas = {
@@ -480,7 +482,7 @@ focus_tree = {
 		prerequisite = { focus = rev_SOV_restore_services }
 		completion_reward = {
 			add_stability = 0.04
-			add_to_variable = { var = debt value = -10 }
+			add_to_variable = { var = debt value = 10 }
 			custom_effect_tooltip = rev_SOV_remove_broken_economy_tt
 			if = {
 				limit = { NOT = { has_idea = social_03 } }
@@ -666,6 +668,23 @@ focus_tree = {
 			add_stability = -.01
 			custom_effect_tooltip = rev_SOV_treasury_plus_80_tt
 			add_to_variable = { var = treasury value = 80 }
+		}
+		ai_will_do = { base = 90 }
+	}
+
+	focus = {
+		id = rev_SOV_putin_asks_oligarchs_for_donations
+		icon = gold_standard
+		relative_position_id = rev_SOV_putin_sell_gold2
+		x = 2
+		y = 1
+		cost = 2
+		search_filters = { FOCUS_FILTER_ECONOMY }
+		prerequisite = { focus = rev_SOV_putin_sell_gold2 }
+		completion_reward = {
+			custom_effect_tooltip = rev_SOV_treasury_plus_20_tt
+			add_to_variable = { var = treasury value = 20 }
+			add_to_variable = { var = debt value = 10 }
 		}
 		ai_will_do = { base = 90 }
 	}

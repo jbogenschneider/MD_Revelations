@@ -669,6 +669,7 @@ focus_tree = {
         }
         completion_reward = {
             log = "[GetDateText]: [Root.GetName]: focus USA_turn_on_canada_after_china completion_reward"
+            add_manpower = -100000
             if = {
                 limit = { is_in_faction = yes }
                 leave_faction = yes
@@ -684,8 +685,8 @@ focus_tree = {
                 declare_war_on = {
                     target = CAN
                     type = annex_everything
-                    add_stability = 0.11
                 }
+                add_stability = 0.11
             }
         }
     }
@@ -725,8 +726,9 @@ focus_tree = {
         }
         completion_reward = {
             log = "[GetDateText]: [Root.GetName]: focus USA_encourage_democrat_elites_to_leave completion_reward"
+            add_manpower = -100000
             add_stability = 0.08
-            add_to_variable = { var = debt value = -100 }
+            add_to_variable = { var = debt value = 100 }
         }
     }
 
@@ -773,6 +775,76 @@ focus_tree = {
                 type = annex_everything
             }
             remove_ideas = USA_China_War_Idea
+        }
+    }
+
+    focus = {
+        id = USA_invade_mexico
+        icon = attack_mexico
+        x = 8
+        y = 13
+        cost = 5
+        available_if_capitulated = yes
+        available = {
+            has_war = no
+            has_country_leader = { name = "Donald Trump" ruling_only = yes }
+            has_country_flag = rev_usa_cw_canada_invasion_launched
+            date > 2030.1.1
+            MEX = {
+                exists = yes
+                NOT = { is_subject = yes }
+            }
+        }
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+        ai_will_do = {
+            base = 1
+        }
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: focus USA_invade_mexico completion_reward"
+            add_manpower = -100000
+            create_wargoal = {
+                type = puppet_wargoal_focus
+                target = MEX
+            }
+        }
+    }
+
+    focus = {
+        id = USA_secure_panama_forever
+        icon = generic_ship_fix
+        x = 10
+        y = 13
+        cost = 10
+        available_if_capitulated = yes
+        available = {
+            has_war = no
+            has_country_leader = { name = "Donald Trump" ruling_only = yes }
+            has_country_flag = rev_usa_cw_canada_invasion_launched
+            date > 2030.1.1
+            PAN = {
+                exists = yes
+                NOT = { is_subject_of = USA }
+            }
+        }
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+        ai_will_do = {
+            base = 1
+        }
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: focus USA_secure_panama_forever completion_reward"
+            add_stability = 0.05
+            if = {
+                limit = {
+                    PAN = {
+                        exists = yes
+                        NOT = { is_subject_of = USA }
+                    }
+                }
+                set_autonomy = {
+                    target = PAN
+                    autonomy_state = autonomy_puppet_state
+                }
+            }
         }
     }
 
@@ -1152,6 +1224,64 @@ focus_tree = {
     }
 
     focus = {
+        id = USA_russian_volunteers
+        icon = volunteers
+        x = 9
+        y = 11
+        cost = 3
+        available_if_capitulated = yes
+        available = {
+            OR = {
+                has_war_with = GER
+                has_war_with = CAN
+            }
+            NOT = { has_war_with = CHI }
+            NOT = { has_war_with = SOV }
+        }
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MILITARY }
+        ai_will_do = {
+            base = 1
+        }
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: focus USA_russian_volunteers completion_reward"
+            if = {
+                limit = { NOT = { has_template = "Russian Volunteers Unit" } }
+                division_template = {
+                    name = "Russian Volunteers Unit"
+
+                    regiments = {
+                        L_Inf_Bat = { x = 0 y = 0 }
+                        L_Inf_Bat = { x = 0 y = 1 }
+                        L_Inf_Bat = { x = 1 y = 0 }
+                        L_Inf_Bat = { x = 1 y = 1 }
+                    }
+                    support = {
+                        drone_tactical_company = { x = 0 y = 0 }
+                        Mot_Recce_Comp = { x = 0 y = 1 }
+                    }
+                }
+            }
+            794 = {
+                create_unit = {
+                    division = "name = \"Russian Volunteer Unit I\" division_template = \"Russian Volunteers Unit\" start_experience_factor = 0.35"
+                    owner = ROOT
+                    prioritize_location = 15907
+                }
+                create_unit = {
+                    division = "name = \"Russian Volunteer Unit II\" division_template = \"Russian Volunteers Unit\" start_experience_factor = 0.35"
+                    owner = ROOT
+                    prioritize_location = 15907
+                }
+                create_unit = {
+                    division = "name = \"Russian Volunteer Unit III\" division_template = \"Russian Volunteers Unit\" start_experience_factor = 0.35"
+                    owner = ROOT
+                    prioritize_location = 15907
+                }
+            }
+        }
+    }
+
+    focus = {
         id = USA_crush_dissent_among_republicans
         icon = USA_republican_party
         x = 10
@@ -1170,6 +1300,141 @@ focus_tree = {
             log = "[GetDateText]: [Root.GetName]: focus USA_crush_dissent_among_republicans completion_reward"
             add_stability = 0.05
             add_war_support = 0.01
+        }
+    }
+
+    focus = {
+        id = USA_raise_corporate_taxes
+        icon = money
+        x = 11
+        y = 7
+        cost = 3
+        available_if_capitulated = yes
+        available = {
+            has_country_flag = rev_usa_cw_coup_successful
+            has_country_leader = { name = "Donald Trump" ruling_only = yes }
+        }
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY }
+        ai_will_do = {
+            base = 1
+        }
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: focus USA_raise_corporate_taxes completion_reward"
+            add_stability = 0.05
+            add_to_variable = { var = corporate_tax_rate value = 4 }
+        }
+    }
+
+    focus = {
+        id = USA_only_friendly_media
+        icon = USA_two_party_media
+        x = 12
+        y = 8
+        cost = 3
+        available_if_capitulated = yes
+        available = {
+            has_country_flag = rev_usa_cw_coup_successful
+            has_country_leader = { name = "Donald Trump" ruling_only = yes }
+        }
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+        ai_will_do = {
+            base = 1
+        }
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: focus USA_only_friendly_media completion_reward"
+            add_stability = -0.10
+        }
+    }
+
+    focus = {
+        id = USA_veteran_propaganda
+        icon = zsr_propaganda
+        x = 12
+        y = 9
+        cost = 3
+        available_if_capitulated = yes
+        available = {
+            has_country_flag = rev_usa_cw_coup_successful
+            has_country_leader = { name = "Donald Trump" ruling_only = yes }
+            NOT = { has_war_support > 0.79 }
+        }
+        prerequisite = { focus = USA_only_friendly_media }
+        ai_will_do = {
+            base = 1
+        }
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: focus USA_veteran_propaganda completion_reward"
+            add_stability = 0.05
+            add_war_support = 0.05
+        }
+    }
+
+    focus = {
+        id = USA_elderly_propaganda
+        icon = propaganda
+        x = 12
+        y = 9
+        cost = 3
+        available_if_capitulated = yes
+        available = {
+            has_country_flag = rev_usa_cw_coup_successful
+            has_country_leader = { name = "Donald Trump" ruling_only = yes }
+            NOT = { has_war_support > 0.79 }
+        }
+        prerequisite = { focus = USA_only_friendly_media }
+        ai_will_do = {
+            base = 1
+        }
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: focus USA_elderly_propaganda completion_reward"
+            add_stability = 0.05
+            add_war_support = 0.03
+        }
+    }
+
+    focus = {
+        id = USA_worker_propaganda
+        icon = politic_propaganda_close
+        x = 14
+        y = 9
+        cost = 3
+        available_if_capitulated = yes
+        available = {
+            has_country_flag = rev_usa_cw_coup_successful
+            has_country_leader = { name = "Donald Trump" ruling_only = yes }
+            NOT = { has_war_support > 0.79 }
+        }
+        prerequisite = { focus = USA_only_friendly_media }
+        ai_will_do = {
+            base = 1
+        }
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: focus USA_worker_propaganda completion_reward"
+            add_stability = 0.05
+            add_war_support = 0.05
+        }
+    }
+
+    focus = {
+        id = USA_independents_propaganda
+        icon = anti_democracy
+        x = 12
+        y = 10
+        cost = 3
+        available_if_capitulated = yes
+        available = {
+            has_country_flag = rev_usa_cw_coup_successful
+            has_country_leader = { name = "Donald Trump" ruling_only = yes }
+            NOT = { has_war_support > 0.79 }
+        }
+        prerequisite = { focus = USA_only_friendly_media }
+        ai_will_do = {
+            base = 1
+        }
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: focus USA_independents_propaganda completion_reward"
+            add_stability = 0.05
+            add_war_support = 0.05
         }
     }
 
@@ -1214,4 +1479,123 @@ focus_tree = {
             add_political_power = -8
         }
     }
+
+    focus = {
+		id = REV_USA_post_kelly_rebuild_command
+		icon = build_airport
+		x = 10
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+        available = {
+            has_country_flag = rev_usa_cw_restoration_kelly_done
+            has_country_leader = { name = "Mark Kelly" ruling_only = yes }
+        }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			add_political_power = 120
+			add_stability = 0.03
+            add_manpower = 200000
+		}
+	}
+
+	focus = {
+		id = REV_USA_post_kelly_unity_campaign
+		icon = national_unity
+		x = 10
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+        available = {
+            has_country_flag = rev_usa_cw_restoration_kelly_done
+            has_country_leader = { name = "Mark Kelly" ruling_only = yes }
+        }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+            add_stability = 0.15
+			add_political_power = 100
+		}
+	}
+
+    focus = {
+		id = REV_USA_post_kelly_prosecute_war_criminals
+		icon = NKO_jail
+		x = 10
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+        available = {
+            has_country_flag = rev_usa_cw_restoration_kelly_done
+            has_country_leader = { name = "Mark Kelly" ruling_only = yes }
+        }
+		prerequisite = { focus = REV_USA_post_kelly_unity_campaign }
+		ai_will_do = { base = 8 }
+		completion_reward = {
+			add_stability = 0.10
+			add_political_power = 50
+			add_to_variable = { var = treasury value = 50 }
+			remove_wargoal = {
+				target = CHI
+				type = annex_everything
+			}
+			remove_wargoal = {
+				target = CAN
+				type = annex_everything
+			}
+			remove_wargoal = {
+				target = GER
+				type = annex_everything
+			}
+			remove_wargoal = {
+				target = MEX
+				type = puppet_wargoal_focus
+			}
+		}
+	}
+
+    focus = {
+		id = REV_USA_post_kelly_put_things_right
+		icon = peace
+		x = 10
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+        available = {
+            has_country_flag = rev_usa_cw_restoration_kelly_done
+            has_country_leader = { name = "Mark Kelly" ruling_only = yes }
+        }
+		prerequisite = { focus = REV_USA_post_kelly_prosecute_war_criminals }
+		ai_will_do = { base = 8 }
+		completion_reward = {
+			if = {
+				limit = {
+					PAN = {
+						exists = yes
+						is_subject_of = USA
+					}
+				}
+				set_autonomy = {
+					target = PAN
+					autonomy_state = autonomy_free
+				}
+			}
+			if = {
+				limit = {
+					MEX = {
+						exists = yes
+						is_subject_of = USA
+					}
+				}
+				set_autonomy = {
+					target = MEX
+					autonomy_state = autonomy_free
+				}
+			}
+            add_manpower = 200000
+		}
+	}
 }

@@ -398,9 +398,15 @@ country_event = {
 					limit = { D01 = { is_ai = no } }
 					change_tag_from = D01
 				}
-				annex_country = {
-					target = D01
-					transfer_troops = yes
+				if = {
+					limit = {
+						D01 = { exists = yes }
+						D01 = { is_ai = yes }
+					}
+					annex_country = {
+						target = D01
+						transfer_troops = yes
+					}
 				}
 				set_cosmetic_tag = PER_democratic
 				set_politics = {

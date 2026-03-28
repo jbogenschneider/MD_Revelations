@@ -565,5 +565,38 @@ focus_tree = {
 			add_war_support = 0.03
 		}
 	}
+
+	focus = {
+		id = REV_CAN_NATO_volunteers_from_asia
+		icon = volunteers
+		x = 16
+		y = 9
+		cost = 3
+		available = { has_war_with = USA }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_NATO }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			create_unit = {
+				division = "name = \"Asian Volunteer Group I\" division_template = \"US Resistance Militia\" start_experience_factor = 0.25"
+				owner = ROOT
+				prioritize_location = 1408
+			}
+			create_unit = {
+				division = "name = \"Asian Volunteer Group II\" division_template = \"US Resistance Militia\" start_experience_factor = 0.25"
+				owner = ROOT
+				prioritize_location = 1408
+			}
+			create_unit = {
+				division = "name = \"Asian Volunteer Group III\" division_template = \"US Resistance Militia\" start_experience_factor = 0.25"
+				owner = ROOT
+				prioritize_location = 1408
+			}
+			create_unit = {
+				division = "name = \"Asian Volunteer Group IV\" division_template = \"US Resistance Militia\" start_experience_factor = 0.25"
+				owner = ROOT
+				prioritize_location = 1408
+			}
+		}
+	}
 }
 

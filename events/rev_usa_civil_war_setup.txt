@@ -1181,65 +1181,11 @@ country_event = {
 		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.23.a"
 		set_country_flag = rev_usa_cw_kelly_win_announced
 		set_popularities = {
-			democratic = 62
+			democratic = 72
 			fascism = 0
 			communism = 4
-			neutrality = 24
+			neutrality = 14
 			nationalist = 10
-		}
-	}
-}
-
-# Peaceful branch: Jan 20, 2029 inauguration.
-country_event = {
-	id = rev_usa_cw.24
-	title = rev_usa_cw.24.t
-	desc = rev_usa_cw.24.d
-	picture = GFX_report_event_usa_election
-	is_triggered_only = yes
-
-	trigger = {
-		tag = USA
-		has_country_flag = rev_usa_cw_kelly_win_announced
-		NOT = { has_country_flag = rev_usa_cw_kelly_inaugurated }
-	}
-
-	option = {
-		name = rev_usa_cw.24.a
-		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.24.a"
-		set_country_flag = rev_usa_cw_kelly_inaugurated
-		set_country_flag = rev_usa_post_kelly_tree_active
-		load_focus_tree = REV_usa_post_kelly_focus
-		set_politics = {
-			ruling_party = democratic
-			elections_allowed = yes
-		}
-		create_country_leader = {
-			name = "Mark Kelly"
-			picture = "mark_kelly.dds"
-			expire = "2033.1.20"
-			ideology = liberalism
-			traits = {
-				career_politician
-			}
-		}
-		add_stability = 0.05
-		add_war_support = -0.05
-		if = {
-			limit = {
-				USB = { has_country_flag = rev_usa_cw_usb_rejoin_post_election }
-			}
-			annex_country = { target = USB transfer_troops = yes }
-			if = {
-				limit = { country_exists = HWI }
-				annex_country = { target = HWI transfer_troops = yes }
-			}
-			clr_country_flag = rev_usa_civil_war_initialized
-			clr_country_flag = rev_usa_cw_coup_fired
-			clr_country_flag = rev_usa_cw_player_side_chosen
-			clr_country_flag = rev_usa_cw_player_side_usb
-			clr_country_flag = rev_usa_cw_player_side_usa
-			clr_country_flag = rev_usa_cw_launch_event_fired
 		}
 	}
 }
@@ -1588,6 +1534,20 @@ country_event = {
 			neutrality = 24
 			nationalist = 10
 		}
+		if = {
+			limit = { has_idea = USA_Nobody_to_Borrow_From }
+			remove_ideas = USA_Nobody_to_Borrow_From
+		}
+		if = {
+			limit = { has_idea = USA_Idea_Bad_Debt }
+			remove_ideas = USA_Idea_Bad_Debt
+		}
+		if = {
+			limit = { has_idea = USA_rule_by_decree_idea }
+			remove_ideas = USA_rule_by_decree_idea
+		}
+		add_to_variable = { var = party_pop_array^2 value = 0.15 } # democrat
+		add_to_variable = { var = party_pop_array^1 value = -0.15 } # republican
 		create_country_leader = {
 			name = "Hakeem Jeffries"
 			picture = "Hakeem-Jeffries.dds"
@@ -1681,7 +1641,9 @@ country_event = {
 		clr_country_flag = rev_usa_cw_restoration_transition
 		set_country_flag = rev_usa_cw_restoration_kelly_done
 		set_country_flag = rev_usa_post_kelly_tree_active
-		load_focus_tree = REV_usa_post_kelly_focus
+		
+		add_to_variable = { var = party_pop_array^2 value = 0.05 } # democrat
+		add_to_variable = { var = party_pop_array^1 value = -0.05 } # republican
 		set_politics = {
 			ruling_party = democratic
 			elections_allowed = yes
@@ -1697,10 +1659,23 @@ country_event = {
 		}
 		add_stability = 0.05
 		add_war_support = -0.05
+		news_event = { id = rev_usa_cw.52 hours = 3 }
 	}
 
 	option = {
 		name = OK
+	}
+}
+
+news_event = {
+	id = rev_usa_cw.52
+	title = rev_usa_cw.52.t
+	desc = rev_usa_cw.52.d
+	picture = GFX_report_event_usa_politics
+	is_triggered_only = yes
+
+	option = {
+		name = rev_usa_cw.52.a
 	}
 }
 
@@ -2052,6 +2027,122 @@ country_event = {
 	option = {
 		name = rev_usa_cw.46.a
 		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.46.a"
+	}
+}
+
+country_event = {
+	id = rev_usa_cw.47
+	title = rev_usa_cw.47.t
+	desc = rev_usa_cw.47.d
+	picture = GFX_report_event_generic_economic
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		has_war = yes
+		has_country_leader = { name = "Donald Trump" ruling_only = yes }
+		OR = {
+			has_war_with = CAN
+			has_war_with = GER
+		}
+		has_variable = USA_debt_warning_threshold
+		NOT = { has_country_flag = rev_usa_debt_warning_fired }
+	}
+
+	option = {
+		name = rev_usa_cw.47.a
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.47.a"
+		set_country_flag = rev_usa_debt_warning_fired
+		if = {
+			limit = { NOT = { has_idea = USA_Nobody_to_Borrow_From } }
+			add_ideas = USA_Nobody_to_Borrow_From
+		}
+	}
+}
+
+country_event = {
+	id = rev_usa_cw.48
+	title = rev_usa_cw.48.t
+	desc = rev_usa_cw.48.d
+	picture = GFX_report_event_generic_civil_unrest
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		has_war = yes
+		has_country_leader = { name = "Donald Trump" ruling_only = yes }
+		OR = {
+			has_war_with = CAN
+			has_war_with = GER
+		}
+		has_variable = USA_debt_first_loss_threshold
+		has_country_flag = rev_usa_debt_warning_fired
+		NOT = { has_country_flag = rev_usa_debt_unpaid_troops_fired }
+	}
+
+	option = {
+		name = rev_usa_cw.48.a
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.48.a"
+		set_country_flag = rev_usa_debt_unpaid_troops_fired
+		delete_units = {
+			division_template = "Russian Volunteers Unit"
+			disband = no
+		}
+		delete_units = {
+			division_template = "Border Patrol Agents"
+			disband = no
+		}
+		delete_units = {
+			division_template = "Infantry Division B"
+			disband = no
+		}
+		delete_units = {
+			division_template = "Infantry Division"
+			disband = no
+		}
+		add_stability = -0.10
+		add_war_support = -0.10
+	}
+}
+
+country_event = {
+	id = rev_usa_cw.49
+	title = rev_usa_cw.49.t
+	desc = rev_usa_cw.49.d
+	picture = GFX_report_event_generic_civil_unrest
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		has_war = yes
+		has_country_leader = { name = "Donald Trump" ruling_only = yes }
+		OR = {
+			has_war_with = CAN
+			has_war_with = GER
+		}
+		has_variable = USA_debt_second_loss_threshold
+		has_country_flag = rev_usa_debt_unpaid_troops_fired
+		NOT = { has_country_flag = rev_usa_debt_second_unpaid_troops_fired }
+	}
+
+	option = {
+		name = rev_usa_cw.49.a
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.49.a"
+		set_country_flag = rev_usa_debt_second_unpaid_troops_fired
+		delete_units = {
+			division_template = "Guard Brigade"
+			disband = no
+		}
+		delete_units = {
+			division_template = "Drone Light Infantry Division"
+			disband = no
+		}
+		delete_units = {
+			division_template = "Infantry Brigade"
+			disband = no
+		}
+		add_stability = -0.10
+		add_war_support = -0.10
 	}
 }
 

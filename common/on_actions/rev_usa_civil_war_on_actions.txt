@@ -122,6 +122,71 @@ on_actions = {
 			}
 			if = {
 				limit = {
+					tag = USA
+					has_country_leader = { name = "Donald Trump" ruling_only = yes }
+					OR = {
+						has_war_with = CAN
+						has_war_with = GER
+					}
+					NOT = { has_variable = USA_borrowed_at_start_of_war }
+				}
+				set_variable = { var = USA_borrowed_at_start_of_war value = debt }
+				set_variable = { var = USA_debt_warning_threshold value = debt }
+				add_to_variable = { var = USA_debt_warning_threshold value = 500 }
+				set_variable = { var = USA_debt_first_loss_threshold value = debt }
+				add_to_variable = { var = USA_debt_first_loss_threshold value = 800 }
+				set_variable = { var = USA_debt_second_loss_threshold value = debt }
+				add_to_variable = { var = USA_debt_second_loss_threshold value = 1000 }
+			}
+			if = {
+				limit = {
+					tag = USA
+					has_war = yes
+					has_country_leader = { name = "Donald Trump" ruling_only = yes }
+					OR = {
+						has_war_with = CAN
+						has_war_with = GER
+					}
+					has_variable = USA_debt_warning_threshold
+					NOT = { has_country_flag = rev_usa_debt_warning_fired }
+					check_variable = { var = debt value > USA_debt_warning_threshold }
+				}
+				country_event = { id = rev_usa_cw.47 }
+			}
+			if = {
+				limit = {
+					tag = USA
+					has_war = yes
+					has_country_leader = { name = "Donald Trump" ruling_only = yes }
+					OR = {
+						has_war_with = CAN
+						has_war_with = GER
+					}
+					has_variable = USA_debt_first_loss_threshold
+					has_country_flag = rev_usa_debt_warning_fired
+					NOT = { has_country_flag = rev_usa_debt_unpaid_troops_fired }
+					check_variable = { var = debt value > USA_debt_first_loss_threshold }
+				}
+				country_event = { id = rev_usa_cw.48 }
+			}
+			if = {
+				limit = {
+					tag = USA
+					has_war = yes
+					has_country_leader = { name = "Donald Trump" ruling_only = yes }
+					OR = {
+						has_war_with = CAN
+						has_war_with = GER
+					}
+					has_variable = USA_debt_second_loss_threshold
+					has_country_flag = rev_usa_debt_unpaid_troops_fired
+					NOT = { has_country_flag = rev_usa_debt_second_unpaid_troops_fired }
+					check_variable = { var = debt value > USA_debt_second_loss_threshold }
+				}
+				country_event = { id = rev_usa_cw.49 }
+			}
+			if = {
+				limit = {
 					tag = CHI
 					has_idea = USA_trade_embargo
 					has_war = no
