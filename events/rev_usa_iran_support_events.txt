@@ -17,7 +17,7 @@ country_event = {
 			limit = {
 				OR = {
 					NOT = { country_exists = PER }
-					NOT = { country_exists = IRI }
+					NOT = { country_exists = D01 }
 				}
 			}
 			clr_country_flag = rev_usa_iran_support_pending
@@ -26,8 +26,8 @@ country_event = {
 		else_if = {
 			limit = {
 				country_exists = PER
-				country_exists = IRI
-				PER = { has_war_with = IRI }
+				country_exists = D01
+				PER = { has_war_with = D01 }
 			}
 
 			PER = {
@@ -43,85 +43,22 @@ country_event = {
 			}
 
 			# Identify regime side and apply asymmetrical readiness/support.
-			if = {
-				limit = { PER = { has_country_flag = PER_IRGC_GENERALS } }
-				PER = { set_equipment_fraction = 0.5 }
-				IRI = {
-					set_equipment_fraction = 1
-					air_experience = 25
-					add_equipment_to_stockpile = { type = infantry_weapons3 amount = 30000 }
-					add_equipment_to_stockpile = { type = command_control_equipment3 amount = 5000 }
-					add_equipment_to_stockpile = { type = Anti_tank_2 amount = 1200 }
-					add_equipment_to_stockpile = { type = Anti_Air_2 amount = 900 }
-					add_equipment_to_stockpile = { type = artillery_1 amount = 800 }
-					add_equipment_to_stockpile = { type = MR_Fighter2 amount = 120 }
-					add_equipment_to_stockpile = { type = Strike_fighter2 amount = 48 }
-					add_equipment_to_stockpile = { type = cas1 amount = 72 }
-				}
+			PER = {
+				set_equipment_fraction = 0.5
+				set_cosmetic_tag = PER_mullahs_government
+				set_country_flag = PER_mullahs_government
 			}
-			else_if = {
-				limit = { IRI = { has_country_flag = PER_IRGC_GENERALS } }
-				IRI = { set_equipment_fraction = 0.5 }
-				PER = {
-					set_equipment_fraction = 1
-					air_experience = 25
-					add_equipment_to_stockpile = { type = infantry_weapons3 amount = 30000 }
-					add_equipment_to_stockpile = { type = command_control_equipment3 amount = 5000 }
-					add_equipment_to_stockpile = { type = Anti_tank_2 amount = 1200 }
-					add_equipment_to_stockpile = { type = Anti_Air_2 amount = 900 }
-					add_equipment_to_stockpile = { type = artillery_1 amount = 800 }
-					add_equipment_to_stockpile = { type = MR_Fighter2 amount = 120 }
-					add_equipment_to_stockpile = { type = Strike_fighter2 amount = 48 }
-					add_equipment_to_stockpile = { type = cas1 amount = 72 }
-				}
-			}
-			else_if = {
-				limit = { PER = { has_cosmetic_tag = PER_mullahs_government } }
-				PER = { set_equipment_fraction = 0.5 }
-				IRI = {
-					set_equipment_fraction = 1
-					air_experience = 25
-					add_equipment_to_stockpile = { type = infantry_weapons3 amount = 30000 }
-					add_equipment_to_stockpile = { type = command_control_equipment3 amount = 5000 }
-					add_equipment_to_stockpile = { type = Anti_tank_2 amount = 1200 }
-					add_equipment_to_stockpile = { type = Anti_Air_2 amount = 900 }
-					add_equipment_to_stockpile = { type = artillery_1 amount = 800 }
-					add_equipment_to_stockpile = { type = MR_Fighter2 amount = 120 }
-					add_equipment_to_stockpile = { type = Strike_fighter2 amount = 48 }
-					add_equipment_to_stockpile = { type = cas1 amount = 72 }
-				}
-			}
-			else_if = {
-				limit = { IRI = { has_cosmetic_tag = PER_mullahs_government } }
-				IRI = { set_equipment_fraction = 0.5 }
-				PER = {
-					set_equipment_fraction = 1
-					air_experience = 25
-					add_equipment_to_stockpile = { type = infantry_weapons3 amount = 30000 }
-					add_equipment_to_stockpile = { type = command_control_equipment3 amount = 5000 }
-					add_equipment_to_stockpile = { type = Anti_tank_2 amount = 1200 }
-					add_equipment_to_stockpile = { type = Anti_Air_2 amount = 900 }
-					add_equipment_to_stockpile = { type = artillery_1 amount = 800 }
-					add_equipment_to_stockpile = { type = MR_Fighter2 amount = 120 }
-					add_equipment_to_stockpile = { type = Strike_fighter2 amount = 48 }
-					add_equipment_to_stockpile = { type = cas1 amount = 72 }
-				}
-			}
-			else = {
-				# Fallback if Iran side tags differ in this run.
-				PER = { set_equipment_fraction = 0.5 }
-				IRI = {
-					set_equipment_fraction = 1
-					air_experience = 25
-					add_equipment_to_stockpile = { type = infantry_weapons3 amount = 30000 }
-					add_equipment_to_stockpile = { type = command_control_equipment3 amount = 5000 }
-					add_equipment_to_stockpile = { type = Anti_tank_2 amount = 1200 }
-					add_equipment_to_stockpile = { type = Anti_Air_2 amount = 900 }
-					add_equipment_to_stockpile = { type = artillery_1 amount = 800 }
-					add_equipment_to_stockpile = { type = MR_Fighter2 amount = 120 }
-					add_equipment_to_stockpile = { type = Strike_fighter2 amount = 48 }
-					add_equipment_to_stockpile = { type = cas1 amount = 72 }
-				}
+			D01 = {
+				set_equipment_fraction = 1
+				air_experience = 25
+				add_equipment_to_stockpile = { type = infantry_weapons3 amount = 30000 }
+				add_equipment_to_stockpile = { type = command_control_equipment3 amount = 5000 }
+				add_equipment_to_stockpile = { type = Anti_tank_2 amount = 1200 }
+				add_equipment_to_stockpile = { type = Anti_Air_2 amount = 900 }
+				add_equipment_to_stockpile = { type = artillery_1 amount = 800 }
+				add_equipment_to_stockpile = { type = MR_Fighter2 amount = 120 }
+				add_equipment_to_stockpile = { type = Strike_fighter2 amount = 48 }
+				add_equipment_to_stockpile = { type = cas1 amount = 72 }
 			}
 
 			clr_country_flag = rev_usa_iran_support_pending
@@ -146,7 +83,7 @@ country_event = {
 	immediate = {
 		# Keep this one-shot and fail silently if Iran is no longer in a state to receive aid.
 		if = {
-			limit = { country_exists = PER }
+			limit = { country_exists = D01 }
 			# Spend the requested US resources.
 			add_equipment_to_stockpile = {
 				type = infantry_weapons
@@ -157,18 +94,18 @@ country_event = {
 				amount = -400
 			}
 
-			PER = {
+			D01 = {
 				add_equipment_to_stockpile = { type = infantry_weapons amount = 1000 }
 				add_equipment_to_stockpile = { type = util_vehicle_3 amount = 400 }
 
 				405 = {
 					create_unit = {
 						division = "name = \"Atesh Motorized Regiment I\" division_template = \"Lashkar-e Motorizeh\" start_experience_factor = 0.10"
-						owner = PER
+						owner = D01
 					}
 					create_unit = {
 						division = "name = \"Atesh Mobile Infantry\" division_template = \"Lashkar-e Motorizeh\" start_experience_factor = 0.10"
-						owner = PER
+						owner = D01
 					}
 				}
 			}
@@ -184,9 +121,9 @@ country_event = {
 	trigger = {
 		tag = USA
 		NOT = { has_country_flag = rev_usa_iran_ai_resolution_done }
-		PER = {
+		NOT = { has_country_flag = rev_usa_iran_restoration_complete }
+		D01 = {
 			exists = yes
-			NOT = { has_cosmetic_tag = PER_democratic }
 			OR = {
 				has_capitulated = yes
 				NOT = {
@@ -197,29 +134,32 @@ country_event = {
 			}
 		}
 		OR = {
-			has_war_with = PER
+			has_war_with = D01
 			any_owned_state = {
-				is_core_of = PER
+				is_core_of = D01
 			}
 		}
-		405 = { NOT = { is_controlled_by = PER } } # Tehran
+		405 = { NOT = { is_controlled_by = D01 } } # Tehran
 		OR = {
-			399 = { NOT = { is_controlled_by = PER } } # Khuzestan
-			978 = { NOT = { is_controlled_by = PER } } # Hormuzgan
+			399 = { NOT = { is_controlled_by = D01 } } # Khuzestan
+			978 = { NOT = { is_controlled_by = D01 } } # Hormuzgan
 		}
 		OR = {
-			400 = { NOT = { is_controlled_by = PER } } # Fars
-			976 = { NOT = { is_controlled_by = PER } } # Isfahan
-			977 = { NOT = { is_controlled_by = PER } } # Kerman
+			400 = { NOT = { is_controlled_by = D01 } } # Fars
+			976 = { NOT = { is_controlled_by = D01 } } # Isfahan
+			977 = { NOT = { is_controlled_by = D01 } } # Kerman
 		}
 	}
 
 	immediate = {
 		log = "[GetDateText]: [Root.GetName]: AI Iran war resolution fired after decisive occupation and surrender progress."
 		set_country_flag = rev_usa_iran_ai_resolution_done
-		annex_country = {
-			target = PER
-			transfer_troops = yes
+		if = {
+			limit = { country_exists = D01 }
+			annex_country = {
+				target = D01
+				transfer_troops = yes
+			}
 		}
 		if = {
 			limit = {
@@ -293,6 +233,7 @@ country_event = {
 
 	trigger = {
 		tag = USA
+		NOT = { has_country_flag = rev_usa_iran_restoration_complete }
 		D01 = { exists = yes }
 		399 = { OR = { is_owned_by = USA is_controlled_by = USA is_owned_by = D01 is_controlled_by = D01 } }
 		400 = { OR = { is_owned_by = USA is_controlled_by = USA is_owned_by = D01 is_controlled_by = D01 } }
@@ -308,45 +249,19 @@ country_event = {
 
 	immediate = {
 		log = "[GetDateText]: [Root.GetName]: transferring occupied Atesh states from USA to D01."
-		if = {
-			limit = { 399 = { OR = { is_owned_by = USA is_controlled_by = USA } } }
-			399 = { transfer_state_to = D01 cancel_resistance = yes set_resistance = 0 set_compliance = 100 }
-		}
-		if = {
-			limit = { 400 = { OR = { is_owned_by = USA is_controlled_by = USA } } }
-			400 = { transfer_state_to = D01 cancel_resistance = yes set_resistance = 0 set_compliance = 100 }
-		}
-		if = {
-			limit = { 402 = { OR = { is_owned_by = USA is_controlled_by = USA } } }
-			402 = { transfer_state_to = D01 cancel_resistance = yes set_resistance = 0 set_compliance = 100 }
-		}
-		if = {
-			limit = { 405 = { OR = { is_owned_by = USA is_controlled_by = USA } } }
-			405 = { transfer_state_to = D01 cancel_resistance = yes set_resistance = 0 set_compliance = 100 }
-		}
-		if = {
-			limit = { 976 = { OR = { is_owned_by = USA is_controlled_by = USA } } }
-			976 = { transfer_state_to = D01 cancel_resistance = yes set_resistance = 0 set_compliance = 100 }
-		}
-		if = {
-			limit = { 978 = { OR = { is_owned_by = USA is_controlled_by = USA } } }
-			978 = { transfer_state_to = D01 cancel_resistance = yes set_resistance = 0 set_compliance = 100 }
-		}
-		if = {
-			limit = { 977 = { OR = { is_owned_by = USA is_controlled_by = USA } } }
-			977 = { transfer_state_to = D01 cancel_resistance = yes set_resistance = 0 set_compliance = 100 }
-		}
-		if = {
-			limit = { 1147 = { OR = { is_owned_by = USA is_controlled_by = USA } } }
-			1147 = { transfer_state_to = D01 cancel_resistance = yes set_resistance = 0 set_compliance = 100 }
-		}
-		if = {
-			limit = { 1151 = { OR = { is_owned_by = USA is_controlled_by = USA } } }
-			1151 = { transfer_state_to = D01 cancel_resistance = yes set_resistance = 0 set_compliance = 100 }
-		}
-		if = {
-			limit = { 1150 = { OR = { is_owned_by = USA is_controlled_by = USA } } }
-			1150 = { transfer_state_to = D01 cancel_resistance = yes set_resistance = 0 set_compliance = 100 }
+		every_state = {
+			limit = {
+				is_core_of = PER
+				NOT = { state = 1149 }
+				OR = {
+					is_owned_by = USA
+					is_controlled_by = USA
+				}
+			}
+			transfer_state_to = D01
+			cancel_resistance = yes
+			set_resistance = 0
+			set_compliance = 100
 		}
 		if = {
 			limit = {
@@ -375,6 +290,7 @@ country_event = {
 
 	trigger = {
 		tag = D01
+		NOT = { has_country_flag = rev_usa_iran_restoration_complete }
 		399 = { is_owned_by = D01 }
 		400 = { is_owned_by = D01 }
 		402 = { is_owned_by = D01 }
@@ -389,60 +305,52 @@ country_event = {
 	}
 
 	immediate = {
-		log = "[GetDateText]: [Root.GetName]: restoring Persia from D01 successor state."
-		release = PER
+		log = "[GetDateText]: [Root.GetName]: restoring democratic Persia after PER collapse."
+		set_country_flag = rev_usa_iran_restoration_complete
 		if = {
-			limit = { country_exists = PER }
-			PER = {
-				if = {
-					limit = { D01 = { is_ai = no } }
-					change_tag_from = D01
-				}
-				if = {
-					limit = {
-						D01 = { exists = yes }
-						D01 = { is_ai = yes }
-					}
-					annex_country = {
-						target = D01
-						transfer_troops = yes
-					}
-				}
-				set_cosmetic_tag = PER_democratic
-				set_politics = {
-					ruling_party = democratic
-					last_election = "2024.1.1"
-					election_frequency = 48
-					elections_allowed = yes
-				}
-				set_popularities = {
-					democratic = 68.0
-					communism = 2.0
-					fascism = 3.0
-					neutrality = 22.0
-					nationalist = 5.0
-				}
-				retire_country_leader = yes
-				create_country_leader = {
-					name = "Reza Pahlavi"
-					picture = "Reza_Pahlavi.dds"
-					expire = "2028.1.1"
-					ideology = conservatism
-					traits = {
-						career_politician
-					}
-				}
-				clr_country_flag = PER_mullahs_government
-				clr_country_flag = party0_banned
-				clr_country_flag = party1_banned
-				clr_country_flag = party2_banned
-				clr_country_flag = party3_banned
-				clr_country_flag = party4_banned
-				clr_country_flag = party5_banned
-				clr_country_flag = party6_banned
-				clr_country_flag = party7_banned
-				clr_country_flag = party8_banned
+			limit = {
+				PER = { exists = yes }
+				PER = { is_ai = yes }
+			}
+			annex_country = {
+				target = PER
+				transfer_troops = yes
 			}
 		}
+		change_tag_from = D01
+		set_cosmetic_tag = PER_democratic
+		set_politics = {
+			ruling_party = democratic
+			last_election = "2024.1.1"
+			election_frequency = 48
+			elections_allowed = yes
+		}
+		set_popularities = {
+			democratic = 68.0
+			communism = 2.0
+			fascism = 3.0
+			neutrality = 22.0
+			nationalist = 5.0
+		}
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Reza Pahlavi"
+			picture = "Reza_Pahlavi.dds"
+			expire = "2028.1.1"
+			ideology = conservatism
+			traits = {
+				career_politician
+			}
+		}
+		clr_country_flag = PER_mullahs_government
+		clr_country_flag = party0_banned
+		clr_country_flag = party1_banned
+		clr_country_flag = party2_banned
+		clr_country_flag = party3_banned
+		clr_country_flag = party4_banned
+		clr_country_flag = party5_banned
+		clr_country_flag = party6_banned
+		clr_country_flag = party7_banned
+		clr_country_flag = party8_banned
 	}
 }

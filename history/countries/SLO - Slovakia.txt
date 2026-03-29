@@ -318,8 +318,8 @@ capital = 119
 	startup_politics = yes
 
 	create_country_leader = {
-		name = "Rudolf Schuster"
-		picture = "rudolf_schuster.dds"
+		name = "Robert Fico"
+		picture = "Robert_Fico.dds"
 		ideology = liberalism
 		traits = {
 			western_liberalism

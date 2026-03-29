@@ -1641,8 +1641,8 @@ capital = 615
 	startup_politics = yes
 
 	create_country_leader = {
-		name = "Yoshiro Mori"
-		picture = "yoshiro_mori.dds"
+		name = "Ishiba Shigeru"
+		picture = "Ishiba_Shigeru.dds"
 		ideology = conservatism
 		traits = {
 			western_conservatism

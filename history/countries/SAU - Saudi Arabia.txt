@@ -465,15 +465,12 @@ capital = 176
 	add_political_power = 300
 
 	create_country_leader = {
-		name = "Abdullah bin Abdulaziz Al-Saud"
-		picture = "Abdullah_bin_Abdulaziz_Al-Saud.dds"
+		name = "Mohammed bin Salman"
+		picture = "Mohammed_bin_Salman.dds"
 		ideology = Kingdom
 		traits = {
 			king
-			salafist_Kingdom
 			pro_american
-			anti_zionist
-			capable
 		}
 	}
 	every_controlled_state = {

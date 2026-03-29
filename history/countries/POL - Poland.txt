@@ -686,9 +686,8 @@ capital = 114
 	startup_politics = yes
 
 	create_country_leader = {
-		name = "Aleksander Kwaśniewski"
-		picture = "POL_Aleksander_Kwasniewski.dds"
-		expire = "2055.1.1"
+		name = "Donald Tusk"
+		picture = "Donald_Tusk.dds"
 		ideology = socialism
 		traits = {
 			western_socialism

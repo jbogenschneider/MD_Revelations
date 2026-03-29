@@ -976,19 +976,15 @@ capital = 150
 	startup_politics = yes
 
 	create_country_leader = {
-		name = "Emil Constantinescu"
-		picture = "emil_constantinescu.dds"
-		desc = "emil_constantinescu_desc"
+		name = "Marcel Ciolacu"
+		picture = "Marcel_Ciolacu.dds"
 		ideology = conservatism
 		traits = {
 			western_conservatism
 			career_politician
-			democratic_champion
-			emotional
 		}
 	}
 	set_country_flag = generic_election_killswitch
-	set_country_flag = ROM_2000_elections
 
 	recruit_character = ROM_adrian_soci
 	recruit_character = ROM_ioan_manci

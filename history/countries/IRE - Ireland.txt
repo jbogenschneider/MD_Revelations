@@ -300,8 +300,8 @@ capital = 27
 	startup_politics = yes
 
 	create_country_leader = {
-		name = "Bertie Ahern"
-		picture = "bertie_ahern.dds"
+		name = "Micheal Martin"
+		picture = "Micheal_Martin.dds"
 		ideology = conservatism
 		traits = {
 			western_conservatism

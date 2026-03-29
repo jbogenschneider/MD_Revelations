@@ -492,8 +492,8 @@ capital = 76
 	set_variable = { election_threshold = 0.04 }
 
 	create_country_leader = {
-		name = "Viktor Klima"
-		picture = "Viktor_Klima.dds"
+		name = "Christian Stocker"
+		picture = "christian_stocker.dds"
 		ideology = socialism
 		traits = {
 			western_socialism

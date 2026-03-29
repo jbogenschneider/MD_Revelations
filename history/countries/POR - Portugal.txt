@@ -539,8 +539,8 @@ capital = 96
 	startup_politics = yes
 
 	create_country_leader = {
-		name = "António Guterres"
-		picture = "POR_Antonio_Guterres.dds"
+		name = "Luís Montenegro"
+		picture = "Luís_Montenegro.dds"
 		ideology = socialism
 		traits = {
 			western_socialism

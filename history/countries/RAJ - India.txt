@@ -994,8 +994,8 @@ capital = 431
 	startup_politics = yes
 
 	create_country_leader = {
-		name = "Atal Bihari Vajpayee"
-		picture = "Atal_Bihari_Vajpayee.dds"
+		name = "Narendra Modi"
+		picture = "Narendra_Modi.dds"
 		ideology = Neutral_conservatism
 		traits = {
 			neutrality_Neutral_conservatism

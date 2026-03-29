@@ -1,16 +1,22 @@
 NATO_force_per_breakthrough_for_d01 = {
 	allowed = {
-		has_idea = NATO_member
+		OR = {
+			has_idea = NATO_member
+			tag = USA
+		}
 	}
 
 	enable = {
-		has_idea = NATO_member
+		OR = {
+			has_idea = NATO_member
+			tag = USA
+		}
 		has_war_with = PER
 		D01 = {
 			exists = yes
 			NOT = { is_subject = yes }
 		}
-		402 = {
+		405 = {
 			NOT = { is_owned_by = D01 }
 		}
 	}
@@ -25,5 +31,14 @@ NATO_force_per_breakthrough_for_d01 = {
 		execution_type = rush
 		execute_order = yes
 		manual_attack = yes
+	}
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.35
+		order_id = 1405
+		states = { 405 }
+		subtract_invasions_from_need = no
+		subtract_fronts_from_need = no
 	}
 }

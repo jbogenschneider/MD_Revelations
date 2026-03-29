@@ -1493,9 +1493,8 @@ capital = 34
 	startup_politics = yes
 
 	create_country_leader = {
-		name = "Göran Persson"
-		picture = "Goran_Persson.dds"
-		expire = "2010.1.1"
+		name = "Ulf Kristersson"
+		picture = "Ulf_Kristersson.dds"
 		ideology = socialism
 		traits = {
 			western_socialism

@@ -1319,7 +1319,7 @@ capital = 763
 	create_country_leader = {
 		name = "Mark Carney"
 		picture = "mark_carney.dds"
-		expire = "2030.1.2"
+		expire = "2032.1.2"
 		ideology = liberalism
 		traits = {
 			western_liberalism

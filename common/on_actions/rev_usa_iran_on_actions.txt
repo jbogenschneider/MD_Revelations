@@ -4,7 +4,7 @@ on_actions = {
 			if = {
 				limit = {
 					tag = D01
-					#NOT = { country_exists = PER }
+					NOT = { has_country_flag = rev_usa_iran_restoration_complete }
 					OR = {
 						399 = { is_owned_by = D01 }
 						400 = { is_owned_by = D01 }
@@ -23,6 +23,7 @@ on_actions = {
 			if = {
 				limit = {
 					tag = USA
+					NOT = { has_country_flag = rev_usa_iran_restoration_complete }
 					D01 = { exists = yes }
 				}
 				country_event = { id = rev_usa_iran.11 }
@@ -30,30 +31,9 @@ on_actions = {
 			if = {
 				limit = {
 					tag = USA
-					D01 = { exists = yes }
-					NOT = { country_exists = PER }
-					OR = {
-						399 = { is_owned_by = D01 }
-						400 = { is_owned_by = D01 }
-						402 = { is_owned_by = D01 }
-						405 = { is_owned_by = D01 }
-						976 = { is_owned_by = D01 }
-						977 = { is_owned_by = D01 }
-						978 = { is_owned_by = D01 }
-						1147 = { is_owned_by = D01 }
-						1150 = { is_owned_by = D01 }
-						1151 = { is_owned_by = D01 }
-					}
-				}
-				D01 = {
-					country_event = { id = rev_usa_iran.12 }
-				}
-			}
-			if = {
-				limit = {
-					tag = USA
 					NOT = { has_country_flag = rev_usa_iran_ai_resolution_done }
-					PER = { exists = yes }
+					NOT = { has_country_flag = rev_usa_iran_restoration_complete }
+					D01 = { exists = yes }
 				}
 				country_event = { id = rev_usa_iran.10 }
 			}

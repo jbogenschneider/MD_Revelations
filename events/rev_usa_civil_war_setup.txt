@@ -1211,7 +1211,6 @@ country_event = {
 		set_country_flag = rev_usa_cw_matter_of_succession_fired
 		set_country_flag = rev_usa_post_kelly_tree_active
 		add_political_power = 500
-		load_focus_tree = REV_usa_post_kelly_focus
 		USB = {
 			set_country_flag = rev_usb_post_kelly_tree_active
 			add_political_power = 500
@@ -1254,9 +1253,6 @@ country_event = {
 			set_country_flag = rev_usb_post_kelly_tree_active
 		}
 		load_focus_tree = REV_usb_post_kelly_focus
-		USA = {
-			load_focus_tree = REV_usa_post_kelly_focus
-		}
 		rev_begin_usa_usb_war = yes
 	}
 	option = {
@@ -1277,9 +1273,6 @@ country_event = {
 			set_country_flag = rev_usb_post_kelly_tree_active
 		}
 		load_focus_tree = REV_usb_post_kelly_focus
-		USA = {
-			load_focus_tree = REV_usa_post_kelly_focus
-		}
 		if = {
 			limit = { check_variable = { var = debt value > 0 } }
 			set_temp_variable = { debt_transfer = USA.debt }

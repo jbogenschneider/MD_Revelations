@@ -437,8 +437,8 @@ capital = 51
 	startup_politics = yes
 
 	create_country_leader = {
-		name = "Guy Verhofstadt"
-		picture = "Guy_Verhofstadt.dds"
+		name = "Bart De Wever"
+		picture = "Bart_De_Wever.dds"
 		ideology = liberalism
 		traits = {
 			western_liberalism

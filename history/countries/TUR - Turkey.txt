@@ -714,12 +714,21 @@ capital = 159
 		neutrality = 30.1
 		nationalist = 19.2
 	}
-
+#
 	set_politics = {
 		ruling_party = democratic
 		last_election = "2024.4.18"
 		election_frequency = 60
 		elections_allowed = yes
+	}
+
+	create_country_leader = {
+		name = "Recep Tayyip Erdoğan"
+		picture = "Recep_Tayyip_Erdogan.dds"
+		ideology = Conservative
+		traits = {
+			emerging_Conservative
+		}
 	}
 
 	### Threshold
