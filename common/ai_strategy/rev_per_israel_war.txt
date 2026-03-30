@@ -1,0 +1,34 @@
+PER_take_tel_aviv = {
+	allowed = {
+		tag = PER
+	}
+
+	enable = {
+		tag = PER
+		has_war_with = ISR
+		204 = {
+			NOT = { is_controlled_by = PER }
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		tag = ISR
+		priority = 320
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+		manual_attack = yes
+	}
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.55
+		order_id = 2204
+		states = { 204 }
+		subtract_invasions_from_need = no
+		subtract_fronts_from_need = no
+	}
+}

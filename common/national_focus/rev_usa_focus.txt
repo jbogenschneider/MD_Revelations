@@ -244,6 +244,28 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = USA_restore_business_confidence
+		icon = economic_another_money
+		x = 5
+		y = 7
+		cost = 15
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+		available = {
+			has_country_flag = USA_2026_recession
+			has_idea = stagnation
+		}
+		ai_will_do = {
+			base = 1
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: focus USA_restore_business_confidence completion_reward"
+			remove_ideas = stagnation
+			add_ideas = stable_growth
+		}
+	}
+
     focus = {
         id = USA_attack_iran
         icon = iran_take_down_the_nation
@@ -258,6 +280,7 @@ focus_tree = {
         }
         completion_reward = {
             log = "[GetDateText]: [Root.GetName]: focus USA_attack_iran completion_reward"
+            set_country_flag = USA_attack_iran_flag
             custom_effect_tooltip = USA_treasury_minus_100_tt
             add_to_variable = { treasury = -100 }
         }
@@ -289,6 +312,7 @@ focus_tree = {
 			custom_effect_tooltip = USA_treasury_minus_100_tt
 			add_to_variable = { treasury = -100 }
 			set_country_flag = rev_usa_iran_support_pending
+            set_country_flag = USA_attack_iran_flag
 			if = {
                 limit = {
                 country_exists = PER
@@ -360,6 +384,53 @@ focus_tree = {
 	}
 
 	focus = {
+		id = USA_offer_per_white_peace_with_hormuz_concessions
+		icon = white_peace
+		x = 1
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+		prerequisite = { focus = USA_democracy_for_iran }
+		available = {
+			has_war_with = PER
+		}
+		ai_will_do = {
+			base = 0
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: focus USA_offer_per_white_peace_with_hormuz_concessions completion_reward"
+			set_country_flag = rev_usa_iran_regime_preserved_settlement
+			if = {
+				limit = {
+					country_exists = PER
+					has_war_with = PER
+				}
+				white_peace = PER
+			}
+			if = {
+				limit = {
+					country_exists = PER
+					978 = { is_owned_by = PER }
+				}
+				978 = { transfer_state_to = USA }
+			}
+			if = {
+				limit = {
+					country_exists = D01
+					country_exists = PER
+				}
+				PER = {
+					annex_country = {
+						target = D01
+						transfer_troops = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
 		id = USA_negotiated_peace_with_iran
 		icon = white_peace
 		x = 3
@@ -391,6 +462,75 @@ focus_tree = {
 							emerging_Vilayat_e_Faqih
 							cleric
 						}
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = USA_rush_to_israels_aid
+		icon = attack_israel
+		x = 1
+		y = 10
+		cost = 2
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+		available = {
+			ISR = {
+				exists = yes
+				has_war_with = PER
+			}
+			NOT = { has_war_with = PER }
+		}
+		ai_will_do = {
+			base = 1
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: focus USA_rush_to_israels_aid completion_reward"
+			if = {
+				limit = {
+					country_exists = PER
+					NOT = { has_war_with = PER }
+				}
+				declare_war_on = {
+					target = PER
+					type = topple_government
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = USA_pressure_saudi_arabia_to_join_the_war_against_iran
+		icon = attack_saudi_arabia
+		x = 1
+		y = 11
+		cost = 2
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+		prerequisite = { focus = USA_rush_to_israels_aid }
+		available = {
+			has_war_with = PER
+			SAU = {
+				exists = yes
+				NOT = { has_war_with = PER }
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: focus USA_pressure_saudi_arabia_to_join_the_war_against_iran completion_reward"
+			SAU = {
+				if = {
+					limit = {
+						exists = yes
+						NOT = { has_war_with = PER }
+					}
+					declare_war_on = {
+						target = PER
+						type = topple_government
 					}
 				}
 			}
@@ -720,6 +860,9 @@ focus_tree = {
         available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
         prerequisite = { focus = USA_prepare_to_invade_canada }
+        available = {
+            has_country_flag = rev_usa_cw_coup_successful
+        }
         ai_will_do = {
             base = 1
         }

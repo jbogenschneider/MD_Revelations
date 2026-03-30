@@ -1779,6 +1779,40 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = rev_usa_cw.51
+	title = rev_usa_cw.51.t
+	desc = rev_usa_cw.51.d
+	picture = GFX_report_event_generic_economic
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		has_country_flag = USA_attack_iran_flag
+		NOT = { has_country_flag = USA_2026_recession }
+		date > 2026.5.1
+	}
+
+	option = {
+		name = rev_usa_cw.51.a
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.51.a"
+		set_country_flag = USA_2026_recession
+		if = {
+			limit = { has_idea = stable_growth }
+			remove_ideas = stable_growth
+		}
+		if = {
+			limit = { NOT = { has_idea = stagnation } }
+			add_ideas = stagnation
+		}
+		add_stability = -0.1
+		add_to_variable = { var = party_pop_array^2 value = 0.15 } # democrat
+		add_to_variable = { var = party_pop_array^1 value = -0.09 } # republican
+		add_to_variable = { var = party_pop_array^14 value = -0.04 } # republican
+		add_to_variable = { var = party_pop_array^16 value = -0.02 } # liber
+	}
+}
+
 # 2026 Midterms: Democrats retake Congress.
 country_event = {
 	id = rev_usa_cw.20

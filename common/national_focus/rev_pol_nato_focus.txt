@@ -446,5 +446,41 @@ focus_tree = {
 			add_war_support = 0.03
 		}
 	}
+
+	focus = {
+		id = REV_POL_NATO_confidence_vote
+		icon = democratic_drift
+		x = 22
+		y = 8
+		cost = 5
+		available = { has_stability < 0.50 }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_NATO }
+		ai_will_do = { base = 1 }
+		completion_reward = { set_stability = 0.60 }
+	}
+
+	focus = {
+		id = REV_POL_NATO_build_national_unity
+		icon = national_unity
+		x = 22
+		y = 9
+		cost = 5
+		prerequisite = { focus = REV_POL_NATO_confidence_vote }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_NATO }
+		ai_will_do = { base = 1 }
+		completion_reward = { add_stability = 0.10 }
+	}
+
+	focus = {
+		id = REV_POL_NATO_patriotic_unity
+		icon = war_support_mod
+		x = 22
+		y = 10
+		cost = 5
+		available = { has_war = yes }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_NATO }
+		ai_will_do = { base = 1 }
+		completion_reward = { set_stability = 0.60 }
+	}
 }
 

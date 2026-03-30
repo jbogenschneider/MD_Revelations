@@ -442,6 +442,15 @@ on_actions = {
 			if = {
 				limit = {
 					tag = USA
+					has_country_flag = USA_attack_iran_flag
+					NOT = { has_country_flag = USA_2026_recession }
+					date > 2026.5.1
+				}
+				country_event = { id = rev_usa_cw.51 }
+			}
+			if = {
+				limit = {
+					tag = USA
 					has_idea = USA_Idea_Bad_Debt
 				}
 				add_to_variable = { var = treasury value = -7 }

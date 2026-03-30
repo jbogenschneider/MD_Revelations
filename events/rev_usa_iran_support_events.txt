@@ -122,6 +122,8 @@ country_event = {
 		tag = USA
 		NOT = { has_country_flag = rev_usa_iran_ai_resolution_done }
 		NOT = { has_country_flag = rev_usa_iran_restoration_complete }
+		NOT = { has_country_flag = rev_usa_iran_regime_preserved_settlement }
+		has_completed_focus = USA_democracy_for_iran
 		D01 = {
 			exists = yes
 			OR = {
@@ -234,6 +236,7 @@ country_event = {
 	trigger = {
 		tag = USA
 		NOT = { has_country_flag = rev_usa_iran_restoration_complete }
+		NOT = { has_country_flag = rev_usa_iran_regime_preserved_settlement }
 		D01 = { exists = yes }
 		399 = { OR = { is_owned_by = USA is_controlled_by = USA is_owned_by = D01 is_controlled_by = D01 } }
 		400 = { OR = { is_owned_by = USA is_controlled_by = USA is_owned_by = D01 is_controlled_by = D01 } }
@@ -291,6 +294,8 @@ country_event = {
 	trigger = {
 		tag = D01
 		NOT = { has_country_flag = rev_usa_iran_restoration_complete }
+		USA = { NOT = { has_country_flag = rev_usa_iran_regime_preserved_settlement } }
+		USA = { has_completed_focus = USA_democracy_for_iran }
 		399 = { is_owned_by = D01 }
 		400 = { is_owned_by = D01 }
 		402 = { is_owned_by = D01 }
@@ -352,5 +357,101 @@ country_event = {
 		clr_country_flag = party6_banned
 		clr_country_flag = party7_banned
 		clr_country_flag = party8_banned
+	}
+}
+
+country_event = {
+	id = rev_usa_iran.20
+	title = rev_usa_iran.20.t
+	desc = rev_usa_iran.20.d
+	picture = GFX_report_event_iranian_revolution
+	is_triggered_only = yes
+
+	trigger = {
+		tag = PER
+		NOT = { has_country_flag = rev_usa_iran_regional_escalation_offered }
+		NOT = { has_country_flag = rev_usa_iran_restoration_complete }
+		NOT = { has_cosmetic_tag = PER_democratic }
+		NOT = { has_government = democratic }
+		USA = {
+			exists = yes
+			has_country_leader = { name = "Donald Trump" ruling_only = yes }
+			OR = {
+				has_war_with = CHI
+				has_war_with = GER
+			}
+		}
+	}
+
+	immediate = {
+		set_country_flag = rev_usa_iran_regional_escalation_offered
+	}
+
+	option = {
+		name = rev_usa_iran.20.a
+		ai_chance = {
+			base = 100
+		}
+		if = {
+			limit = {
+				KUR = {
+					exists = yes
+					is_ai = yes
+				}
+				IRQ = { exists = yes }
+			}
+			IRQ = {
+				annex_country = {
+					target = KUR
+					transfer_troops = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				IRQ = {
+					exists = yes
+					NOT = { is_subject_of = PER }
+				}
+			}
+			set_autonomy = {
+				target = IRQ
+				autonomy_state = autonomy_puppet_state
+			}
+		}
+		if = {
+			limit = {
+				JOR = {
+					exists = yes
+					NOT = { has_war_with = PER }
+				}
+			}
+			declare_war_on = {
+				target = JOR
+				type = annex_everything
+			}
+		}
+		if = {
+			limit = {
+				ISR = {
+					exists = yes
+					NOT = { has_war_with = PER }
+				}
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = ISR
+			}
+			ISR = {
+				create_wargoal = {
+					type = topple_government
+					target = PER
+				}
+			}
+			declare_war_on = {
+				target = ISR
+				type = annex_everything
+			}
+		}
 	}
 }

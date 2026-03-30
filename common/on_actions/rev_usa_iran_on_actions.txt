@@ -5,6 +5,8 @@ on_actions = {
 				limit = {
 					tag = D01
 					NOT = { has_country_flag = rev_usa_iran_restoration_complete }
+					USA = { NOT = { has_country_flag = rev_usa_iran_regime_preserved_settlement } }
+					USA = { has_completed_focus = USA_democracy_for_iran }
 					OR = {
 						399 = { is_owned_by = D01 }
 						400 = { is_owned_by = D01 }
@@ -24,6 +26,7 @@ on_actions = {
 				limit = {
 					tag = USA
 					NOT = { has_country_flag = rev_usa_iran_restoration_complete }
+					NOT = { has_country_flag = rev_usa_iran_regime_preserved_settlement }
 					D01 = { exists = yes }
 				}
 				country_event = { id = rev_usa_iran.11 }
@@ -33,9 +36,29 @@ on_actions = {
 					tag = USA
 					NOT = { has_country_flag = rev_usa_iran_ai_resolution_done }
 					NOT = { has_country_flag = rev_usa_iran_restoration_complete }
+					NOT = { has_country_flag = rev_usa_iran_regime_preserved_settlement }
+					has_completed_focus = USA_democracy_for_iran
 					D01 = { exists = yes }
 				}
 				country_event = { id = rev_usa_iran.10 }
+			}
+			if = {
+				limit = {
+					tag = PER
+					NOT = { has_country_flag = rev_usa_iran_regional_escalation_offered }
+					NOT = { has_country_flag = rev_usa_iran_restoration_complete }
+					NOT = { has_cosmetic_tag = PER_democratic }
+					NOT = { has_government = democratic }
+					USA = {
+						exists = yes
+						has_country_leader = { name = "Donald Trump" ruling_only = yes }
+						OR = {
+							has_war_with = CHI
+							has_war_with = GER
+						}
+					}
+				}
+				country_event = { id = rev_usa_iran.20 }
 			}
 		}
 	}
