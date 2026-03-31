@@ -421,13 +421,13 @@ country_event = {
 		}
 		if = {
 			limit = {
-				JOR = {
+				FSA = {
 					exists = yes
 					NOT = { has_war_with = PER }
 				}
 			}
 			declare_war_on = {
-				target = JOR
+				target = FSA
 				type = annex_everything
 			}
 		}
@@ -451,6 +451,60 @@ country_event = {
 			declare_war_on = {
 				target = ISR
 				type = annex_everything
+			}
+		}
+	}
+}
+
+country_event = {
+	id = rev_usa_iran.21
+	title = rev_usa_iran.21.t
+	desc = rev_usa_iran.21.d
+	picture = GFX_report_event_iranian_revolution
+	is_triggered_only = yes
+
+	trigger = {
+		tag = PER
+		FSA = {
+			exists = yes
+			has_capitulated = yes
+			NOT = { has_country_flag = rev_fsa_preserved_under_per }
+		}
+		OR = {
+			has_war_with = FSA
+			IRQ = { exists = yes has_war_with = FSA }
+		}
+	}
+
+	option = {
+		name = rev_usa_iran.21.a
+		log = "[GetDateText]: [Root.GetName]: rev_usa_iran.21.a"
+		FSA = {
+			set_country_flag = rev_fsa_preserved_under_per
+		}
+		if = {
+			limit = { has_war_with = FSA }
+			white_peace = FSA
+		}
+		if = {
+			limit = {
+				IRQ = {
+					exists = yes
+					has_war_with = FSA
+				}
+			}
+			IRQ = { white_peace = FSA }
+		}
+		if = {
+			limit = {
+				FSA = {
+					exists = yes
+					NOT = { is_subject_of = PER }
+				}
+			}
+			set_autonomy = {
+				target = FSA
+				autonomy_state = autonomy_puppet_state
 			}
 		}
 	}

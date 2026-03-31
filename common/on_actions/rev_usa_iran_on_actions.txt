@@ -60,6 +60,19 @@ on_actions = {
 				}
 				country_event = { id = rev_usa_iran.20 }
 			}
+			if = {
+				limit = {
+					tag = FSA
+					has_capitulated = yes
+					NOT = { has_country_flag = rev_fsa_preserved_under_per }
+					PER = { exists = yes }
+					OR = {
+						has_war_with = PER
+						has_war_with = IRQ
+					}
+				}
+				PER = { country_event = { id = rev_usa_iran.21 } }
+			}
 		}
 	}
 }

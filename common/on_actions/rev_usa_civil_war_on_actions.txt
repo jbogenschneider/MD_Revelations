@@ -129,14 +129,15 @@ on_actions = {
 						has_war_with = GER
 					}
 					NOT = { has_variable = USA_borrowed_at_start_of_war }
+					date > 2029.3.2
 				}
 				set_variable = { var = USA_borrowed_at_start_of_war value = debt }
 				set_variable = { var = USA_debt_warning_threshold value = debt }
-				add_to_variable = { var = USA_debt_warning_threshold value = 500 }
+				add_to_variable = { var = USA_debt_warning_threshold value = 200 }
 				set_variable = { var = USA_debt_first_loss_threshold value = debt }
-				add_to_variable = { var = USA_debt_first_loss_threshold value = 800 }
+				add_to_variable = { var = USA_debt_first_loss_threshold value = 700 }
 				set_variable = { var = USA_debt_second_loss_threshold value = debt }
-				add_to_variable = { var = USA_debt_second_loss_threshold value = 1000 }
+				add_to_variable = { var = USA_debt_second_loss_threshold value = 1200 }
 			}
 			if = {
 				limit = {

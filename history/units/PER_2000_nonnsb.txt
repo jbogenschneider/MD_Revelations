@@ -843,7 +843,7 @@ instant_effect = {
 		producer = USA
 	}
 	add_equipment_to_stockpile = {
-		type = SP_Anti_Air_1 #rapier
+		type = SP_Anti_Air_2 #rapier
 		amount = 30
 		producer = ENG
 	}
@@ -861,7 +861,7 @@ instant_effect = {
 	#MANPADS
 
 	add_equipment_to_stockpile = {
-		type = Anti_Air_1 #RS-70
+		type = Anti_Air_2 #RS-70
 		amount = 50
 		producer = SWE
 	}
@@ -885,7 +885,7 @@ instant_effect = {
 		producer = SOV
 	}
 	add_equipment_to_stockpile = {
-		type = artillery_0 #Type-59
+		type = artillery_1 #Type-59
 		amount = 1200
 		producer = CHI
 	}
@@ -907,12 +907,12 @@ instant_effect = {
 		amount = 60
 	}
 	add_equipment_to_stockpile = {
-		type = SP_arty_1 #M109
+		type = SP_arty_2 #M109
 		amount = 220
 		producer = USA
 	}
 	add_equipment_to_stockpile = {
-		type = SP_arty_0 #M-1978
+		type = SP_arty_1 #M-1978
 		amount = 30
 		producer = NKO
 	}
@@ -925,11 +925,11 @@ instant_effect = {
 		producer = SOV
 	}
 	add_equipment_to_stockpile = {
-		type = SP_R_arty_0 #var Iranian MLRS
+		type = SP_R_arty_1 #var Iranian MLRS
 		amount = 857
 	}
 	add_equipment_to_stockpile = {
-		type = SP_R_arty_1 #Fajr-3
+		type = SP_R_arty_2 #Fajr-3
 		amount = 20
 	}
 
@@ -944,7 +944,7 @@ instant_effect = {
 	#MBT
 	add_equipment_to_stockpile = {
 		type = MBT_3 #Zulfiqar
-		amount = 40
+		amount = 240
 	}
 	add_equipment_to_stockpile = {
 		type = MBT_1 #M60
@@ -989,12 +989,12 @@ instant_effect = {
 
 	#Light Tanks
 	add_equipment_to_stockpile = {
-		type = Rec_tank_0 #Cascavel
+		type = Rec_tank_1 #Cascavel
 		amount = 35
 		producer = BRA
 	}
 	add_equipment_to_stockpile = {
-		type = Rec_tank_1 #Scorpion
+		type = Rec_tank_2 #Scorpion
 		amount = 80
 		producer = ENG
 	}
@@ -1017,12 +1017,12 @@ instant_effect = {
 
 	#APC's
 	add_equipment_to_stockpile = {
-		type = APC_2 #M113
+		type = APC_3 #M113
 		amount = 250
 		producer = USA
 	}
 	add_equipment_to_stockpile = {
-		type = APC_1 #BTR-50/60
+		type = APC_2 #BTR-50/60
 		amount = 300
 		producer = SOV
 	}
@@ -1053,5 +1053,17 @@ instant_effect = {
 		type = transport_helicopter3 #CH-47C
 		amount = 45
 		producer = USA
+	}
+	add_equipment_to_stockpile = {
+		type = kamikaze_drone_1
+		amount = 2000
+	}
+	add_equipment_to_stockpile = {
+		type = ballistic_missile_equipment_1
+		amount = 60
+	}
+	add_equipment_to_stockpile = {
+		type = ballistic_missile_equipment_2
+		amount = 80
 	}
 }

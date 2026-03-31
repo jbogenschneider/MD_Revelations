@@ -1375,6 +1375,5 @@ instant_effect = {
 	add_equipment_to_stockpile = {
 		type = sam_missile_equipment_2
 		amount = 900
-	}
-            
+	}       
 }

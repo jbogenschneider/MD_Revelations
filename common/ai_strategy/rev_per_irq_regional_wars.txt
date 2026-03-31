@@ -1,0 +1,119 @@
+rev_per_push_jordan = {
+	allowed = { tag = PER }
+
+	enable = {
+		tag = PER
+		has_war_with = JOR
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		tag = JOR
+		priority = 260
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+		manual_attack = yes
+	}
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.40
+		order_id = 2401
+		states = { 399 406 408 978 }
+		subtract_invasions_from_need = no
+		subtract_fronts_from_need = no
+	}
+}
+
+rev_per_push_saudi = {
+	allowed = { tag = PER }
+
+	enable = {
+		tag = PER
+		has_war_with = SAU
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		tag = SAU
+		priority = 260
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+		manual_attack = yes
+	}
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.45
+		order_id = 2402
+		states = { 399 406 408 978 }
+		subtract_invasions_from_need = no
+		subtract_fronts_from_need = no
+	}
+}
+
+rev_irq_push_jordan = {
+	allowed = { tag = IRQ }
+
+	enable = {
+		tag = IRQ
+		has_war_with = JOR
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		tag = JOR
+		priority = 240
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+		manual_attack = yes
+	}
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.40
+		order_id = 2411
+		states = { 168 169 }
+		subtract_invasions_from_need = no
+		subtract_fronts_from_need = no
+	}
+}
+
+rev_irq_push_persia = {
+	allowed = { tag = IRQ }
+
+	enable = {
+		tag = IRQ
+		has_war_with = PER
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		tag = PER
+		priority = 240
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+		manual_attack = yes
+	}
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.45
+		order_id = 2412
+		states = { 170 1141 1124 171 }
+		subtract_invasions_from_need = no
+		subtract_fronts_from_need = no
+	}
+}
