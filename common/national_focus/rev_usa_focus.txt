@@ -275,6 +275,7 @@ focus_tree = {
         available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
         prerequisite = { focus = USA_american_only_oil }
+        mutually_exclusive = { focus = USA_civil_war_in_iran }
         ai_will_do = {
             base = 1
         }
@@ -1214,6 +1215,7 @@ focus_tree = {
                 }
                 NATO_leave = yes
             }
+            news_event = { id = rev_usa_cw.53 hours = 3 }
             1 = {
                 transfer_state_to = USA
                 cancel_resistance = yes

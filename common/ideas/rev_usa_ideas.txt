@@ -35,7 +35,7 @@ ideas = {
 
 		USA_Nobody_to_Borrow_From = {
 			allowed = { original_tag = USA }
-			picture = idea_political_campaign
+			picture = ser_debt_idea
 		}
 	}
 }

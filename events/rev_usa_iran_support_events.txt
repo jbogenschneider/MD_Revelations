@@ -509,3 +509,54 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = rev_usa_iran.22
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = PER
+		NOT = { has_country_flag = rev_usa_iran_civil_war_timeout_done }
+		NOT = { has_country_flag = rev_usa_iran_restoration_complete }
+		NOT = { has_country_flag = rev_usa_iran_regime_preserved_settlement }
+		date > 2026.10.5
+		D01 = {
+			exists = yes
+		}
+		has_war_with = D01
+		NOT = { has_war_with = USA }
+	}
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: rev_usa_iran.22 timed Iranian civil war surrender fired."
+		set_country_flag = rev_usa_iran_civil_war_timeout_done
+		add_stability = 0.03
+		if = {
+			limit = {
+				D01 = { exists = yes }
+			}
+			annex_country = {
+				target = D01
+				transfer_troops = yes
+			}
+		}
+		news_event = { id = rev_usa_iran.23 hours = 3 }
+	}
+
+	option = {
+		name = OK
+	}
+}
+
+news_event = {
+	id = rev_usa_iran.23
+	title = rev_usa_iran.23.t
+	desc = rev_usa_iran.23.d
+	picture = GFX_report_event_iranian_revolution
+	is_triggered_only = yes
+
+	option = {
+		name = rev_usa_iran.23.a
+	}
+}

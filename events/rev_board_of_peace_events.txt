@@ -17,11 +17,12 @@ country_event = {
 		name = rev_bph.1.a
 		log = "[GetDateText]: [Root.GetName]: rev_bph.1.a"
 		set_country_flag = rev_bph_gaza_setup_done
-		209 = {
-			if = {
-				limit = { owner = HAM }
-				transfer_state = ISR
+		if = {
+			limit = {
+				country_exists = HAM
+				HAM = { owns_state = 209 }
 			}
+			ISR = { transfer_state = 209 }
 		}
 		if = {
 			limit = { country_exists = HAM }

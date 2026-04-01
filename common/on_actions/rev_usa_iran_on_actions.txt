@@ -45,6 +45,19 @@ on_actions = {
 			if = {
 				limit = {
 					tag = PER
+					NOT = { has_country_flag = rev_usa_iran_civil_war_timeout_done }
+					NOT = { has_country_flag = rev_usa_iran_restoration_complete }
+					NOT = { has_country_flag = rev_usa_iran_regime_preserved_settlement }
+					date > 2026.10.5
+					D01 = { exists = yes }
+					has_war_with = D01
+					NOT = { has_war_with = USA }
+				}
+				country_event = { id = rev_usa_iran.22 }
+			}
+			if = {
+				limit = {
+					tag = PER
 					NOT = { has_country_flag = rev_usa_iran_regional_escalation_offered }
 					NOT = { has_country_flag = rev_usa_iran_restoration_complete }
 					NOT = { has_cosmetic_tag = PER_democratic }

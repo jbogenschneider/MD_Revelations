@@ -970,14 +970,14 @@ country_event = {
 		787 = { transfer_state_to = CAL add_core_of = CAL add_core_of = USA } # North Dakota
 
 		# New England + New York align with Canada and carry dual cores.
-		764 = { transfer_state_to = CAN add_core_of = CAN add_core_of = USA cancel_resistance = yes set_resistance = 0 set_compliance = 100 } # Maine
-		765 = { transfer_state_to = CAN add_core_of = CAN add_core_of = USA cancel_resistance = yes set_resistance = 0 set_compliance = 100 } # New Hampshire
-		766 = { transfer_state_to = CAN add_core_of = CAN add_core_of = USA cancel_resistance = yes set_resistance = 0 set_compliance = 100 } # Vermont
-		767 = { transfer_state_to = CAN add_core_of = CAN add_core_of = USA cancel_resistance = yes set_resistance = 0 set_compliance = 100 } # Massachusetts
-		769 = { transfer_state_to = CAN add_core_of = CAN add_core_of = USA cancel_resistance = yes set_resistance = 0 set_compliance = 100 } # New York
-		780 = { transfer_state_to = CAN add_core_of = CAN add_core_of = USA cancel_resistance = yes set_resistance = 0 set_compliance = 100 } # Minnesota
-		768 = { transfer_state_to = CAN add_core_of = CAN add_core_of = USA cancel_resistance = yes set_resistance = 0 set_compliance = 100 } # conn
-		1084 = { transfer_state_to = CAN add_core_of = CAN add_core_of = USA cancel_resistance = yes set_resistance = 0 set_compliance = 100 } # rhode
+		764 = { transfer_state_to = CAN add_core_of = CAN add_core_of = USA set_resistance = 0 set_compliance = 100 } # Maine
+		765 = { transfer_state_to = CAN add_core_of = CAN add_core_of = USA set_resistance = 0 set_compliance = 100 } # New Hampshire
+		766 = { transfer_state_to = CAN add_core_of = CAN add_core_of = USA set_resistance = 0 set_compliance = 100 } # Vermont
+		767 = { transfer_state_to = CAN add_core_of = CAN add_core_of = USA set_resistance = 0 set_compliance = 100 } # Massachusetts
+		769 = { transfer_state_to = CAN add_core_of = CAN add_core_of = USA set_resistance = 0 set_compliance = 100 } # New York
+		780 = { transfer_state_to = CAN add_core_of = CAN add_core_of = USA set_resistance = 0 set_compliance = 100 } # Minnesota
+		768 = { transfer_state_to = CAN add_core_of = CAN add_core_of = USA set_resistance = 0 set_compliance = 100 } # conn
+		1084 = { transfer_state_to = CAN add_core_of = CAN add_core_of = USA set_resistance = 0 set_compliance = 100 } # rhode
 
 
 		CAL = {
@@ -1214,7 +1214,6 @@ country_event = {
 		USB = {
 			set_country_flag = rev_usb_post_kelly_tree_active
 			add_political_power = 500
-			load_focus_tree = REV_usb_post_kelly_focus
 		}
 		# Informative only; the actual go/peace decision is now made by USB.
 	}
@@ -1252,7 +1251,6 @@ country_event = {
 		USB = {
 			set_country_flag = rev_usb_post_kelly_tree_active
 		}
-		load_focus_tree = REV_usb_post_kelly_focus
 		rev_begin_usa_usb_war = yes
 	}
 	option = {
@@ -1272,7 +1270,6 @@ country_event = {
 			add_political_power = 500
 			set_country_flag = rev_usb_post_kelly_tree_active
 		}
-		load_focus_tree = REV_usb_post_kelly_focus
 		if = {
 			limit = { check_variable = { var = debt value > 0 } }
 			set_temp_variable = { debt_transfer = USA.debt }
@@ -1495,7 +1492,6 @@ country_event = {
 				is_core_of = USA
 			}
 			transfer_state_to = USA
-			cancel_resistance = yes
 			set_resistance = 0
 			set_compliance = 100
 		}
@@ -1508,7 +1504,6 @@ country_event = {
 			limit = { DEN = { exists = yes } }
 			1 = {
 				transfer_state_to = DEN
-				cancel_resistance = yes
 				set_resistance = 0
 				set_compliance = 100
 			}
@@ -1669,6 +1664,18 @@ news_event = {
 
 	option = {
 		name = rev_usa_cw.52.a
+	}
+}
+
+news_event = {
+	id = rev_usa_cw.53
+	title = rev_usa_cw.53.t
+	desc = rev_usa_cw.53.d
+	picture = GFX_report_event_usa_politics
+	is_triggered_only = yes
+
+	option = {
+		name = rev_usa_cw.53.a
 	}
 }
 
@@ -2002,7 +2009,6 @@ country_event = {
 				limit = { DEN = { exists = yes } }
 				1 = {
 					transfer_state_to = DEN
-					cancel_resistance = yes
 					set_resistance = 0
 					set_compliance = 100
 				}
