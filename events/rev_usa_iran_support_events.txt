@@ -364,7 +364,7 @@ country_event = {
 	id = rev_usa_iran.20
 	title = rev_usa_iran.20.t
 	desc = rev_usa_iran.20.d
-	picture = GFX_report_event_iranian_revolution
+	picture = GFX_report_event_generic_civil_unrest
 	is_triggered_only = yes
 
 	trigger = {
@@ -460,7 +460,7 @@ country_event = {
 	id = rev_usa_iran.21
 	title = rev_usa_iran.21.t
 	desc = rev_usa_iran.21.d
-	picture = GFX_report_event_iranian_revolution
+	picture = GFX_report_event_generic_civil_unrest
 	is_triggered_only = yes
 
 	trigger = {
@@ -520,7 +520,7 @@ country_event = {
 		NOT = { has_country_flag = rev_usa_iran_civil_war_timeout_done }
 		NOT = { has_country_flag = rev_usa_iran_restoration_complete }
 		NOT = { has_country_flag = rev_usa_iran_regime_preserved_settlement }
-		date > 2026.10.5
+		date > 2026.10.4
 		D01 = {
 			exists = yes
 		}
@@ -542,6 +542,12 @@ country_event = {
 			}
 		}
 		news_event = { id = rev_usa_iran.23 hours = 3 }
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			country_event = { id = rev_usa_iran.24 hours = 3 }
+		}
 	}
 
 	option = {
@@ -553,7 +559,19 @@ news_event = {
 	id = rev_usa_iran.23
 	title = rev_usa_iran.23.t
 	desc = rev_usa_iran.23.d
-	picture = GFX_report_event_iranian_revolution
+	picture = GFX_report_event_generic_civil_unrest
+	is_triggered_only = yes
+
+	option = {
+		name = rev_usa_iran.23.a
+	}
+}
+
+country_event = {
+	id = rev_usa_iran.24
+	title = rev_usa_iran.23.t
+	desc = rev_usa_iran.23.d
+	picture = GFX_report_event_generic_civil_unrest
 	is_triggered_only = yes
 
 	option = {

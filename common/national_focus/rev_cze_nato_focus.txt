@@ -369,7 +369,7 @@ focus_tree = {
 
 	focus = {
 		id = REV_CZE_NATO_confidence_vote
-		icon = democratic_drift
+		icon = dutch_teflon_rutte
 		x = 22
 		y = 8
 		cost = 5
@@ -393,7 +393,7 @@ focus_tree = {
 
 	focus = {
 		id = REV_CZE_NATO_patriotic_unity
-		icon = war_support_mod
+		icon = dutch_european_flag
 		x = 22
 		y = 10
 		cost = 5

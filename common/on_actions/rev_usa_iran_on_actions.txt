@@ -48,7 +48,7 @@ on_actions = {
 					NOT = { has_country_flag = rev_usa_iran_civil_war_timeout_done }
 					NOT = { has_country_flag = rev_usa_iran_restoration_complete }
 					NOT = { has_country_flag = rev_usa_iran_regime_preserved_settlement }
-					date > 2026.10.5
+					date > 2026.10.4
 					D01 = { exists = yes }
 					has_war_with = D01
 					NOT = { has_war_with = USA }

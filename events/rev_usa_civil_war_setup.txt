@@ -506,8 +506,8 @@ country_event = {
 		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.315.a"
 		set_country_flag = rev_usa_cw_canada_invasion_launched
 		if = {
-			limit = { NOT = { has_idea = USA_Idea_Bad_Debt } }
-			add_ideas = USA_Idea_Bad_Debt
+			limit = { NOT = { has_idea = USA_Idea_Bad_Debt2 } }
+			add_ideas = USA_Idea_Bad_Debt2
 		}
 		if = {
 			limit = {
@@ -785,8 +785,8 @@ country_event = {
 		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.319.a"
 		set_country_flag = rev_usa_cw_china_war_launched
 		if = {
-			limit = { NOT = { has_idea = USA_Idea_Bad_Debt } }
-			add_ideas = USA_Idea_Bad_Debt
+			limit = { NOT = { has_idea = USA_Idea_Bad_Debt2 } }
+			add_ideas = USA_Idea_Bad_Debt2
 		}
 		if = {
 			limit = { NOT = { has_idea = USA_China_War_Idea } }
@@ -1527,8 +1527,8 @@ country_event = {
 			remove_ideas = USA_Nobody_to_Borrow_From
 		}
 		if = {
-			limit = { has_idea = USA_Idea_Bad_Debt }
-			remove_ideas = USA_Idea_Bad_Debt
+			limit = { has_idea = USA_Idea_Bad_Debt2 }
+			remove_ideas = USA_Idea_Bad_Debt2
 		}
 		if = {
 			limit = { has_idea = USA_rule_by_decree_idea }

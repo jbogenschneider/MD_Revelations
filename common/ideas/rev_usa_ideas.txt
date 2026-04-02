@@ -18,7 +18,7 @@ ideas = {
 			}
 		}
 
-		USA_Idea_Bad_Debt = {
+		USA_Idea_Bad_Debt2 = {
 			allowed = { original_tag = USA }
 			picture = idea_political_campaign
 		}

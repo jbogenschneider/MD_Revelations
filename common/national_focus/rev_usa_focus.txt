@@ -884,7 +884,7 @@ focus_tree = {
         available_if_capitulated = yes
         available = {
             has_war = no
-            has_idea = USA_Idea_Bad_Debt
+            has_idea = USA_Idea_Bad_Debt2
         }
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY }
         ai_will_do = {
@@ -892,7 +892,7 @@ focus_tree = {
         }
         completion_reward = {
             log = "[GetDateText]: [Root.GetName]: focus USA_restore_bond_market_access completion_reward"
-            remove_ideas = USA_Idea_Bad_Debt
+            remove_ideas = USA_Idea_Bad_Debt2
         }
     }
 

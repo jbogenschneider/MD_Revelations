@@ -449,8 +449,8 @@ focus_tree = {
 
 	focus = {
 		id = REV_GER_NATO_confidence_vote
-		icon = democratic_drift
-		x = 22
+		icon = dutch_teflon_rutte
+		x = 20
 		y = 8
 		cost = 5
 		available = { has_stability < 0.50 }
@@ -462,7 +462,7 @@ focus_tree = {
 	focus = {
 		id = REV_GER_NATO_build_national_unity
 		icon = national_unity
-		x = 22
+		x = 20
 		y = 9
 		cost = 5
 		prerequisite = { focus = REV_GER_NATO_confidence_vote }
@@ -473,8 +473,8 @@ focus_tree = {
 
 	focus = {
 		id = REV_GER_NATO_patriotic_unity
-		icon = war_support_mod
-		x = 22
+		icon = dutch_european_flag
+		x = 20
 		y = 10
 		cost = 5
 		available = { has_war = yes }
