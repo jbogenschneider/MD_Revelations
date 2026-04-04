@@ -2,7 +2,7 @@ name="MD Revelations 2026"
 dependencies={
 	"Millennium Dawn: A Modern Day Mod"
 }
-version="1.12.6"
+version="1.12.7"
 tags={
 	"Alternative History"
 	"Events"
