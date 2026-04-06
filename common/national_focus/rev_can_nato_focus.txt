@@ -634,5 +634,50 @@ focus_tree = {
 		ai_will_do = { base = 1 }
 		completion_reward = { set_stability = 0.60 }
 	}
+
+	focus = {
+		id = REV_CAN_NATO_reinvigorate_the_economy
+		icon = economic_prosperity2
+		x = 18
+		y = 7
+		cost = 5
+		prerequisite = { focus = REV_CAN_NATO_restore_business_confidence }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NATO }
+		ai_will_do = { base = 1 }
+		completion_reward = { add_stability = 0.025 }
+	}
+
+	focus = {
+		id = REV_CAN_NATO_restore_business_confidence
+		icon = economic_another_money
+		x = 20
+		y = 6
+		cost = 8
+		available = {
+			has_country_flag = REV_NATO_2026_recession
+			has_idea = stagnation
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NATO }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			if = { limit = { has_idea = stagnation } remove_ideas = stagnation }
+			if = { limit = { NOT = { has_idea = stable_growth } } add_ideas = stable_growth }
+		}
+	}
+
+	focus = {
+		id = REV_CAN_NATO_regulate_ai
+		icon = Focus_secret_rearmament
+		x = 20
+		y = 7
+		cost = 7
+		prerequisite = { focus = REV_CAN_NATO_restore_business_confidence }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NATO }
+		ai_will_do = { base = 0.1 }
+		completion_reward = {
+			custom_effect_tooltip = USA_regulate_ai_tt
+			add_ideas = REV_nato_regulate_ai_idea
+		}
+	}
 }
 

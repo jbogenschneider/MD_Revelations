@@ -1533,9 +1533,7 @@ country_event = {
 		if = {
 			limit = { has_idea = USA_rule_by_decree_idea }
 			remove_ideas = USA_rule_by_decree_idea
-		}
-		add_to_variable = { var = party_pop_array^2 value = 0.15 } # democrat
-		add_to_variable = { var = party_pop_array^1 value = -0.15 } # republican
+		}	
 		create_country_leader = {
 			name = "Hakeem Jeffries"
 			picture = "Hakeem-Jeffries.dds"
@@ -1837,9 +1835,9 @@ country_event = {
 		name = rev_usa_cw.20.a
 		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.20.a"
 		set_country_flag = rev_usa_cw_midterms_2026_fired
-		add_to_variable = { var = party_pop_array^2 value = 0.15 } # democrat
-		add_to_variable = { var = party_pop_array^1 value = -0.09 } # republican
-		add_to_variable = { var = party_pop_array^14 value = -0.04 } # republican
+		add_to_variable = { var = party_pop_array^2 value = 0.10 } # democrat
+		add_to_variable = { var = party_pop_array^1 value = -0.06 } # republican
+		add_to_variable = { var = party_pop_array^14 value = -0.02 } # republican
 		add_to_variable = { var = party_pop_array^16 value = -0.02 } # liber
 	}
 }

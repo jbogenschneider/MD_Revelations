@@ -32,6 +32,15 @@ bookmarks = {
 				SOV_putinism
 			}
 		}
+		"ISR" = {
+		 	minor = yes
+		 	history = "ISR_MODERN_DAY_DESC"
+		 	ideology = democratic
+		 	ideas = {
+		 		judaism
+		 		palestinian_resistance
+		 	}
+		 }
 		"BRA" = {
 			minor=yes
 			history = "BRA_MODERN_DAY_DESC"
@@ -301,21 +310,6 @@ bookmarks = {
 				NIG_rise_of_boko_haram
 			}
 		}
-		# "ISR" = {
-		# 	minor = yes
-		# 	history = "ISR_MODERN_DAY_DESC"
-		# 	ideology = democratic
-		# 	ideas = {
-		# 		judaism
-		# 		palestinian_resistance
-		# 		Major_Non_NATO_Ally
-		# 	}
-		# 	focuses = {
-		# 		ISR_the_two_state_solution
-		# 		ISR_targeted_assassinations
-		# 		ISR_the_jewish_state
-		# 	}
-		# }
 		"SYR" = {
 			minor = yes
 			history = "SYR_MODERN_DAY_DESC"
@@ -1443,6 +1437,7 @@ bookmarks = {
 				set_technology = { land_Drone_equipment4 = 1 }
 				set_technology = { land_Drone_equipment4 = 1 }
 				set_technology = { Air_Kamikaze1 = 1 }
+				set_technology = { Air_Kamikaze2 = 1 }
 				set_technology = { util_vehicle_5 = 1 }
 				set_technology = { mbt_tech_3 = 1 }	
 				set_technology = { MBT_5 = 1 }

@@ -246,7 +246,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_restore_business_confidence
-		icon = economic_another_money
+		icon = goal_JAP_budget_check
 		x = 5
 		y = 7
 		cost = 15
@@ -263,6 +263,86 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: focus USA_restore_business_confidence completion_reward"
 			remove_ideas = stagnation
 			add_ideas = stable_growth
+		}
+	}
+
+	focus = {
+		id = USA_regulate_ai
+		icon = Focus_secret_rearmament
+		x = 5
+		y = 8
+		cost = 8
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+		prerequisite = { focus = USA_restore_business_confidence }
+		ai_will_do = {
+			base = 0.1
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: focus USA_regulate_ai completion_reward"
+			custom_effect_tooltip = USA_regulate_ai_tt
+			add_ideas = USA_regulate_ai_idea
+		}
+	}
+
+	focus = {
+		id = USA_fire_the_fed_chair
+		icon = economic_another_money
+		x = 11
+		y = 1
+		cost = 3
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+		available = {
+			date > 2026.11.5
+		}
+		ai_will_do = {
+			base = 1
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: focus USA_fire_the_fed_chair completion_reward"
+			custom_effect_tooltip = USA_fire_the_fed_chair_tt
+			add_stability = -0.05
+			add_to_variable = { treasury = 100 }
+			add_to_variable = { debt = 80 }
+		}
+	}
+
+	focus = {
+		id = USA_rock_bottom_interest_rates
+		icon = goal_JAP_valuedown
+		x = 11
+		y = 2
+		cost = 3
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+		prerequisite = { focus = USA_fire_the_fed_chair }
+		ai_will_do = {
+			base = 1
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: focus USA_rock_bottom_interest_rates completion_reward"
+			custom_effect_tooltip = USA_rock_bottom_interest_rates_tt
+			if = {
+				limit = { has_idea = recession }
+				remove_ideas = recession
+				add_ideas = stagnation
+			}
+			else_if = {
+				limit = { has_idea = stagnation }
+				remove_ideas = stagnation
+				add_ideas = stable_growth
+			}
+			else_if = {
+				limit = { has_idea = stable_growth }
+				remove_ideas = stable_growth
+				add_ideas = fast_growth
+			}
+			else_if = {
+				limit = { has_idea = fast_growth }
+				remove_ideas = fast_growth
+				add_ideas = economic_boom
+			}
 		}
 	}
 
@@ -1293,6 +1373,102 @@ focus_tree = {
     }
 
     focus = {
+        id = USA_punish_dollar_avoidance
+        icon = gen_coins_n
+        x = 11
+        y = 3
+        cost = 3
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+        prerequisite = { focus = USA_rock_bottom_interest_rates }
+        ai_will_do = {
+            base = 1
+        }
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: focus USA_punish_dollar_avoidance completion_reward"
+            custom_effect_tooltip = USA_punish_dollar_avoidance_tt
+            add_ideas = USA_punish_dollar_avoidance_idea
+        }
+    }
+
+    focus = {
+        id = USA_tax_non_dollar_us_assets
+        icon = Generic_Loadsamoney
+        x = 11
+        y = 4
+        cost = 3
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+        prerequisite = { focus = USA_punish_dollar_avoidance }
+        ai_will_do = {
+            base = 1
+        }
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: focus USA_tax_non_dollar_us_assets completion_reward"
+            custom_effect_tooltip = USA_tax_non_dollar_us_assets_tt
+            add_to_variable = { debt = -1000 }
+        }
+    }
+
+    focus = {
+        id = USA_soloman
+        icon = gold_standard
+        x = 11
+        y = 5
+        cost = 5
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+        prerequisite = { focus = USA_tax_non_dollar_us_assets }
+        ai_will_do = {
+            base = 1
+        }
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: focus USA_soloman completion_reward"
+            custom_effect_tooltip = USA_soloman_tt
+            remove_ideas = USA_punish_dollar_avoidance_idea
+            add_ideas = USA_soloman_idea
+        }
+    }
+
+    focus = {
+        id = USA_solomoney
+        icon = focus_generic_american_investments
+        x = 11
+        y = 6
+        cost = 5
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+        prerequisite = { focus = USA_soloman }
+        ai_will_do = {
+            base = 1
+        }
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: focus USA_solomoney completion_reward"
+            custom_effect_tooltip = USA_solomoney_tt
+            add_ideas = USA_solomoney_idea
+        }
+    }
+
+    focus = {
+        id = USA_solomoney_cashless
+        icon =  GFX_goal_the_mark
+        x = 11
+        y = 7
+        cost = 5
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+        prerequisite = { focus = USA_solomoney }
+        ai_will_do = {
+            base = 1
+        }
+        completion_reward = {
+            log = "[GetDateText]: [Root.GetName]: focus USA_solomoney_cashless completion_reward"
+            custom_effect_tooltip = USA_solomoney_cashless_tt
+            add_ideas = USA_solomoney_cashless_idea
+        }
+    }
+
+    focus = {
         id = USA_rally_southerners
         icon = USA_south_carolina
         x = 8
@@ -1450,7 +1626,7 @@ focus_tree = {
     focus = {
         id = USA_raise_corporate_taxes
         icon = money
-        x = 11
+        x = 7
         y = 7
         cost = 3
         available_if_capitulated = yes
@@ -1627,7 +1803,7 @@ focus_tree = {
     focus = {
 		id = REV_USA_post_kelly_rebuild_command
 		icon = build_airport
-		x = 10
+		x = 14
 		y = 0
 		cost = 5
 		available_if_capitulated = yes
@@ -1647,8 +1823,8 @@ focus_tree = {
 	focus = {
 		id = REV_USA_post_kelly_unity_campaign
 		icon = national_unity
-		x = 10
-		y = 3
+		x = 14
+		y = 2
 		cost = 5
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1666,8 +1842,8 @@ focus_tree = {
     focus = {
 		id = REV_USA_post_kelly_prosecute_war_criminals
 		icon = NKO_jail
-		x = 10
-		y = 4
+		x = 14
+		y = 3
 		cost = 5
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1703,8 +1879,8 @@ focus_tree = {
     focus = {
 		id = REV_USA_post_kelly_put_things_right
 		icon = peace
-		x = 10
-		y = 5
+		x = 14
+		y = 4
 		cost = 5
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }

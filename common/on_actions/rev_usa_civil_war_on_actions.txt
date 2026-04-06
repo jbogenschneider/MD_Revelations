@@ -98,6 +98,17 @@ on_actions = {
 			}
 			if = {
 				limit = {
+					tag = CAL
+					1182 = {
+						is_owned_by = CAL
+					}
+				}
+				USA = {
+					country_event = { id = rev_usa_cw.42 }
+				}
+			}
+			if = {
+				limit = {
 					tag = USA
 					NOT = { has_country_flag = rev_usa_cw_end_of_content_2031_fired }
 					date > 2031.12.5
@@ -448,6 +459,23 @@ on_actions = {
 					date > 2026.5.1
 				}
 				country_event = { id = rev_usa_cw.51 }
+			}
+			if = {
+				limit = {
+					OR = {
+						tag = BEL
+						tag = CAN
+						tag = ENG
+						tag = FRA
+						tag = GER
+						tag = HOL
+						tag = ITA
+						tag = SPR
+					}
+					NOT = { has_country_flag = REV_NATO_2026_recession }
+					date > 2026.5.1
+				}
+				country_event = { id = rev_nato.1 }
 			}
 			if = {
 				limit = {

@@ -576,6 +576,82 @@ calculate_additional_income_rate = {
 		add_to_variable = { additional_income_rate = additional_income_USA_usaid }
 	}
 	if = {
+		limit = {
+			tag = USA
+			has_idea = USA_punish_dollar_avoidance_idea
+		}
+		if = {
+			limit = {
+				OR = {
+					has_war_with = GER
+					has_war_with = CAN
+				}
+			}
+			set_variable = { additional_income_USA_punish_dollar_avoidance = 5 }
+		}
+		else = {
+			set_variable = { additional_income_USA_punish_dollar_avoidance = 10 }
+		}
+		add_to_variable = { additional_income_rate = additional_income_USA_punish_dollar_avoidance }
+	}
+	if = {
+		limit = {
+			tag = USA
+			has_idea = USA_soloman_idea
+		}
+		if = {
+			limit = {
+				OR = {
+					has_war_with = GER
+					has_war_with = CAN
+				}
+			}
+			set_variable = { additional_income_USA_soloman = 10 }
+		}
+		else = {
+			set_variable = { additional_income_USA_soloman = 15 }
+		}
+		add_to_variable = { additional_income_rate = additional_income_USA_soloman }
+	}
+	if = {
+		limit = {
+			tag = USA
+			has_idea = USA_solomoney_idea
+		}
+		if = {
+			limit = {
+				OR = {
+					has_war_with = GER
+					has_war_with = CAN
+				}
+			}
+			set_variable = { additional_income_USA_solomoney = 3 }
+		}
+		else = {
+			set_variable = { additional_income_USA_solomoney = 5 }
+		}
+		add_to_variable = { additional_income_rate = additional_income_USA_solomoney }
+	}
+	if = {
+		limit = {
+			tag = USA
+			has_idea = USA_solomoney_cashless_idea
+		}
+		if = {
+			limit = {
+				OR = {
+					has_war_with = GER
+					has_war_with = CAN
+				}
+			}
+			set_variable = { additional_income_USA_solomoney_cashless = 3 }
+		}
+		else = {
+			set_variable = { additional_income_USA_solomoney_cashless = 5 }
+		}
+		add_to_variable = { additional_income_rate = additional_income_USA_solomoney_cashless }
+	}
+	if = {
 		limit = { has_idea = HOL_dutchaid }
 		set_variable = { additional_income_HOL_dutchaid = population_total }
 		multiply_variable = { additional_income_HOL_dutchaid = 0.1 }	#Millions of people

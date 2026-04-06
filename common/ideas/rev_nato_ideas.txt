@@ -1,0 +1,11 @@
+ideas = {
+	country = {
+		REV_nato_regulate_ai_idea = {
+			picture = ser_stab_idea
+			modifier = {
+				offices_worker_requirement_modifier = -0.05
+				corporate_tax_income_multiplier_modifier = 0.02
+			}
+		}
+	}
+}

@@ -20,7 +20,7 @@ ideas = {
 
 		USA_Idea_Bad_Debt2 = {
 			allowed = { original_tag = USA }
-			picture = idea_political_campaign
+			picture = ser_debt_idea
 		}
 
 		USA_China_War_Idea = {
@@ -30,12 +30,44 @@ ideas = {
 
 		USA_trade_embargo = {
 			allowed = { original_tag = CHI }
-			picture = idea_political_campaign
+			picture = trade
 		}
 
 		USA_Nobody_to_Borrow_From = {
 			allowed = { original_tag = USA }
 			picture = ser_debt_idea
+		}
+
+		USA_regulate_ai_idea = {
+			allowed = { original_tag = USA }
+			picture = ser_stab_idea
+			modifier = {
+				offices_worker_requirement_modifier = -0.05
+				corporate_tax_income_multiplier_modifier = 0.02
+			}
+		}
+
+		USA_punish_dollar_avoidance_idea = {
+			allowed = { original_tag = USA }
+			picture = globalized_trade_economy
+		}
+
+		USA_soloman_idea = {
+			allowed = { original_tag = USA }
+			picture = globalized_trade_economy
+		}
+
+		USA_solomoney_idea = {
+			allowed = { original_tag = USA }
+			picture = globalized_trade_economy
+		}
+
+		USA_solomoney_cashless_idea = {
+			allowed = { original_tag = USA }
+			picture = globalized_trade_economy
+			modifier = {
+				stability_factor = -0.05
+			}
 		}
 	}
 }
