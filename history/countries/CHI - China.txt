@@ -1042,7 +1042,7 @@ capital = 547
 
 		create_equipment_variant = {
 			name = "Type 56 Carbine"
-			type = infantry_weapons
+			type = infantry_weapons_1
 			upgrades = {
 				Inf_eq_heavy_weapons = 1
 			}
@@ -1051,7 +1051,7 @@ capital = 547
 		}
 		create_equipment_variant = {
 			name = "Type 56"
-			type = infantry_weapons
+			type = infantry_weapons_1
 			upgrades = {
 				Inf_eq_heavy_weapons = 2
 			}
@@ -1059,13 +1059,13 @@ capital = 547
 		}
 		create_equipment_variant = {
 			name = "Type 56-2"
-			type = infantry_weapons1
+			type = infantry_weapons_2
 			icon = "gfx/interface/technologies/CHI/INF/INF1.dds"
 			obsolete = yes
 		}
 		create_equipment_variant = {
 			name = "Type 81"
-			type = infantry_weapons1
+			type = infantry_weapons_2
 			icon = "gfx/interface/technologies/CHI/INF/INF2.dds"
 			upgrades = {
 				Inf_eq_heavy_weapons = 1
@@ -1074,7 +1074,7 @@ capital = 547
 		}
 		create_equipment_variant = {
 			name = "Type 81-1"
-			type = infantry_weapons1
+			type = infantry_weapons_2
 			icon = "gfx/interface/technologies/CHI/INF/TY81.dds"
 			upgrades = {
 				Inf_eq_heavy_weapons = 2
@@ -1083,7 +1083,7 @@ capital = 547
 		}
 		create_equipment_variant = {
 			name = "Z-4"
-			type = transport_helicopter1
+			type = transport_helicopter_1
 			upgrades = {
 			}
 			icon = "gfx/interface/technologies/CHI/AIR/UH1_alt1.dds"
@@ -1091,7 +1091,7 @@ capital = 547
 		}
 		create_equipment_variant = {
 			name = "Z-8"
-			type = transport_helicopter1
+			type = transport_helicopter_1
 			upgrades = {
 			}
 			icon = "gfx/interface/technologies/CHI/AIR/UH1.dds"
@@ -1822,10 +1822,10 @@ capital = 547
 
 		infantry_mass_assault = 1
 
-		infantry_weapons = 1
-		infantry_weapons1 = 1
-		infantry_weapons2 = 1
-		infantry_weapons3 = 1 #1995
+		infantry_weapons_1 = 1
+		infantry_weapons_2 = 1
+		infantry_weapons_3 = 1
+		infantry_weapons_4 = 1 #1995
 
 		support_weapons = 1
 		tandem_charge_warheads = 1
@@ -1839,8 +1839,8 @@ capital = 547
 		night_vision_1 = 1
 		night_vision_2 = 1
 
-		command_control_equipment = 1
-		command_control_equipment1 = 1
+		cnc_equipment_1 = 1
+		cnc_equipment_2 = 1
 
 		util_vehicle_0 = 1
 		util_vehicle_1 = 1
@@ -1852,10 +1852,10 @@ capital = 547
 		Heavy_Anti_tank_1 = 1
 
 
-		transport_helicopter1 = 1
-		nsb_transport_helicopter1 = 1
-		transport_helicopter2 = 1
-		nsb_transport_helicopter2 = 1
+		transport_helicopter_1 = 1
+		nsb_transport_helicopter_1 = 1
+		transport_helicopter_2 = 1
+		nsb_transport_helicopter_2 = 1
 
 		body_armor_1980 = 1
 		camouflage = 1
@@ -2915,7 +2915,7 @@ capital = 547
 
 		create_equipment_variant = {
 			name = "Type 56 Carbine"
-			type = infantry_weapons
+			type = infantry_weapons_1
 			upgrades = {
 				Inf_eq_heavy_weapons = 1
 			}
@@ -2924,7 +2924,7 @@ capital = 547
 		}
 		create_equipment_variant = {
 			name = "Type 56"
-			type = infantry_weapons
+			type = infantry_weapons_1
 			upgrades = {
 				Inf_eq_heavy_weapons = 2
 			}
@@ -2932,13 +2932,13 @@ capital = 547
 		}
 		create_equipment_variant = {
 			name = "Type 56-2"
-			type = infantry_weapons1
+			type = infantry_weapons_2
 			icon = "gfx/interface/technologies/CHI/INF/INF1.dds"
 			obsolete = yes
 		}
 		create_equipment_variant = {
 			name = "Type 81"
-			type = infantry_weapons1
+			type = infantry_weapons_2
 			icon = "gfx/interface/technologies/CHI/INF/INF2.dds"
 			upgrades = {
 				Inf_eq_heavy_weapons = 1
@@ -2947,7 +2947,7 @@ capital = 547
 		}
 		create_equipment_variant = {
 			name = "Type 81-1"
-			type = infantry_weapons1
+			type = infantry_weapons_2
 			icon = "gfx/interface/technologies/CHI/INF/TY81.dds"
 			upgrades = {
 				Inf_eq_heavy_weapons = 2
@@ -2956,7 +2956,7 @@ capital = 547
 		}
 		create_equipment_variant = {
 			name = "Z-4"
-			type = transport_helicopter1
+			type = transport_helicopter_1
 			upgrades = {
 			}
 			icon = "gfx/interface/technologies/CHI/AIR/UH1_alt1.dds"
@@ -2964,7 +2964,7 @@ capital = 547
 		}
 		create_equipment_variant = {
 			name = "Z-8"
-			type = transport_helicopter1
+			type = transport_helicopter_1
 			upgrades = {
 			}
 			icon = "gfx/interface/technologies/CHI/AIR/UH1.dds"
@@ -4512,12 +4512,12 @@ capital = 547
 		early_maglev_rail = 1
 		freight_locomotive = 1
 
-		infantry_weapons4 = 1
+		infantry_weapons_5 = 1
 
 		night_vision_3 = 1 #1985
 
-		command_control_equipment2 = 1
-		command_control_equipment3 = 1 #2005
+		cnc_equipment_3 = 1
+		cnc_equipment_4 = 1 #2005
 
 		land_Drone_equipment1 = 1
 		land_Drone_equipment2 = 1 #2005
@@ -4559,7 +4559,7 @@ capital = 547
 
 		attack_helicopter2 = 1 #WZ-10
 
-		transport_helicopter2 = 1
+		transport_helicopter_2 = 1
 
 		transport_plane2 = 1
 		transport_plane3 = 1 #Y9
@@ -5396,3 +5396,5 @@ capital = 547
 		obsolete = yes
 	}
 }
+
+

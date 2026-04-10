@@ -85,15 +85,15 @@ capital = 124
 
 		armoured_mass_assault = 1
 
-		infantry_weapons = 1
-		infantry_weapons1 = 1
-		infantry_weapons2 = 1
+		infantry_weapons_1 = 1
+		infantry_weapons_2 = 1
+		infantry_weapons_3 = 1
 		support_weapons = 1
 		support_weapons2 = 1
 		tandem_charge_warheads = 1
 		squad_automatic_weapon = 1
 
-		command_control_equipment = 1
+		cnc_equipment_1 = 1
 
 		Anti_tank_0 = 1
 
@@ -357,3 +357,4 @@ capital = 124
 	recruit_character = SLV_albin_gutman
 	recruit_character = SLV_janez_gaube
 }
+

@@ -53,8 +53,8 @@ capital = 130
 
 		combined_arms = 1
 		#For templates
-		infantry_weapons = 1
-		command_control_equipment = 1
+		infantry_weapons_1 = 1
+		cnc_equipment_1 = 1
 		Anti_tank_0 = 1
 		util_vehicle_0 = 1
 		Heavy_Anti_tank_0 = 1
@@ -143,3 +143,4 @@ capital = 130
 	set_variable = { term_limit = 2 }
 	set_variable = { current_term = 1 }
 }
+

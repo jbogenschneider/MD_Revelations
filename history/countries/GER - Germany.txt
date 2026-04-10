@@ -444,23 +444,23 @@ capital = 45
 
 		combined_arms = 1
 
-		infantry_weapons = 1
-		infantry_weapons1 = 1
-		infantry_weapons2 = 1
-		infantry_weapons3 = 1
+		infantry_weapons_1 = 1
+		infantry_weapons_2 = 1
+		infantry_weapons_3 = 1
+		infantry_weapons_4 = 1
 		support_weapons = 1
 		support_weapons2 = 1
 		tandem_charge_warheads = 1
 		squad_automatic_weapon = 1
-		special_forces = 1
-		special_forces2 = 1
-		command_control_equipment = 1
-		command_control_equipment1 = 1
-		command_control_equipment2 = 1
-		command_control_equipment3 = 1
+		special_forces_tech_1 = 1
+		special_forces_tech_2 = 1
+		cnc_equipment_1 = 1
+		cnc_equipment_2 = 1
+		cnc_equipment_3 = 1
+		cnc_equipment_4 = 1
 
-		land_Drone_equipment = 1
-		land_Drone_equipment1 = 1
+		land_drone_equipment_type = 1
+		land_drone_equipment_1 = 1
 
 		Anti_tank_0 = 1
 		Anti_tank_1 = 1
@@ -471,7 +471,7 @@ capital = 45
 
 		combat_eng_equipment = 1
 
-		util_vehicle_0 = 1
+		util_vehicle_1 = 1
 		util_vehicle_1 = 1
 		util_vehicle_2 = 1
 		util_vehicle_3 = 1
@@ -483,9 +483,9 @@ capital = 45
 		night_vision_2 = 1
 		night_vision_3 = 1
 
-		body_armor_1980 = 1
-		camouflage = 1
-		camouflage2 = 1
+		body_armor_1 = 1
+		camouflage_1 = 1
+		camouflage_2 = 1
 
 		basic_computing = 1
 		integrated_circuit = 1
@@ -502,14 +502,14 @@ capital = 45
 		gprs = 1
 		fuel_silos = 1
 
-		industrial_electrospun_polymeric_nanofibers = 1
-		multiwalled_carbon_nanotubes = 1
-		modern_electrospinning = 1
-		stereolitography = 1
-		early_3D_printers = 1
-		t3D_wax_printer = 1
-		DNA_fingerprinting = 1
-		modern_gmo = 1
+		nanofibers_1 = 1
+		nanofibers_2 = 1
+		nanofibers_3 = 1
+		printing_1 = 1
+		printing_2 = 1
+		printing_3 = 1
+		genetics_1 = 1
+		genetics_2 = 1
 		fuel_refining = 1
 		fuel_refining2 = 1
 		energy_efficiency = 1
@@ -525,10 +525,10 @@ capital = 45
 		excavation1 = 1
 		excavation2 = 1
 
-		transport_helicopter1 = 1
-		nsb_transport_helicopter1 = 1
-		transport_helicopter2 = 1
-		nsb_transport_helicopter2 = 1
+		transport_helicopter_1 = 1
+		nsb_transport_helicopter_1 = 1
+		transport_helicopter_2 = 1
+		nsb_transport_helicopter_2 = 1
 
 		COMSAT1 = 1
 		COMSAT2 = 1
@@ -613,7 +613,7 @@ capital = 45
 	#############################################
 	create_equipment_variant = {
 		name = "MPi-KM"
-		type = infantry_weapons
+		type = infantry_weapons_1
 		icon = "gfx/interface/technologies/GER/INF/MPIKM.dds"
 		upgrades = {
 			Inf_eq_heavy_weapons = 2
@@ -621,31 +621,31 @@ capital = 45
 	}
 	create_equipment_variant = {
 		name = "MPi-AK-74N"
-		type = infantry_weapons1
+		type = infantry_weapons_2
 		icon = "gfx/interface/technologies/SOV/INF/INF2.dds"
 	}
 	create_equipment_variant = {
 		name = "IFA W 50"
-		type = util_vehicle_0
+		type = util_vehicle_1
 		icon = "gfx/interface/technologies/GER/LAND/IFA_W50.dds"
 		mark_older_equipment_obsolete = yes
 	}
 	create_equipment_variant = {
 		name = "Mercedes-Benz Unimog"
-		type = util_vehicle_0
+		type = util_vehicle_1
 		icon = "gfx/interface/technologies/GER/LAND/Unimog.dds"
 		mark_older_equipment_obsolete = yes
 		design_team = mio:GER_Mercedes
 	}
 	create_equipment_variant = {
 		name = "Magirus-Deutz Jupiter"
-		type = util_vehicle_0
+		type = util_vehicle_1
 		icon = "gfx/interface/technologies/GER/LAND/U1.dds"
 		mark_older_equipment_obsolete = yes
 	}
 	create_equipment_variant = {
 		name = "G3A2"
-		type = infantry_weapons
+		type = infantry_weapons_1
 		icon = "gfx/interface/technologies/GER/INF/INF1.dds"
 		upgrades = {
 			Inf_eq_heavy_weapons = 2
@@ -655,13 +655,13 @@ capital = 45
 	}
 	create_equipment_variant = {
 		name = "G3A3"
-		type = infantry_weapons1
+		type = infantry_weapons_2
 		mark_older_equipment_obsolete = yes
 		design_team = mio:GER_heckler_koch_materiel_manufacturer
 	}
 	create_equipment_variant = {
 		name = "G3A3A1"
-		type = infantry_weapons1
+		type = infantry_weapons_2
 		icon = "gfx/interface/technologies/GER/INF/G3A3A1.dds"
 		upgrades = {
 			Inf_eq_heavy_weapons = 1
@@ -671,14 +671,14 @@ capital = 45
 	}
 	create_equipment_variant = {
 		name = "G3A4"
-		type = infantry_weapons2
+		type = infantry_weapons_3
 		icon = "gfx/interface/technologies/GER/INF/G3A4.dds"
 		mark_older_equipment_obsolete = yes
 		design_team = mio:GER_heckler_koch_materiel_manufacturer
 	}
 	create_equipment_variant = {
 		name = "G3KA4"
-		type = infantry_weapons2
+		type = infantry_weapons_3
 		icon = "gfx/interface/technologies/GER/INF/G3KA4.dds"
 		upgrades = {
 			Inf_eq_heavy_weapons = 1
@@ -688,7 +688,7 @@ capital = 45
 	}
 	create_equipment_variant = {
 		name = "G36"
-		type = infantry_weapons3
+		type = infantry_weapons_4
 		upgrades = {
 			Inf_eq_gadjets = 1
 			Inf_eq_heavy_weapons = 1
@@ -735,14 +735,14 @@ capital = 45
 	}
 	create_equipment_variant = {
 		name = "Sea King Mk.41"
-		type = transport_helicopter1
+		type = transport_helicopter_1
 		upgrades = { }
 		icon = "gfx/interface/technologies/GER/AIR/UH1_alt2.dds"
 		obsolete = yes
 	}
 	create_equipment_variant = {
 		name = "UH-1D"
-		type = transport_helicopter1
+		type = transport_helicopter_1
 		upgrades = { }
 		design_team = mio:GER_MBB_helicopters_tank_manufacturer
 		icon = "gfx/interface/technologies/GER/AIR/UH1.dds"
@@ -750,7 +750,7 @@ capital = 45
 	}
 	create_equipment_variant = {
 		name = "Bo 105"
-		type = transport_helicopter1
+		type = transport_helicopter_1
 		upgrades = { }
 		design_team = mio:GER_MBB_helicopters_tank_manufacturer
 		icon = "gfx/interface/technologies/GER/AIR/UH1_alt1.dds"
@@ -814,7 +814,7 @@ capital = 45
 	}
 	create_equipment_variant = {
 		name = "HF/UHF/VHF-Funk"
-		type = command_control_equipment1
+		type = cnc_equipment_2
 		upgrades = {
 		Cnc_eq_better_ergonomics = 1
 		cnc_eq_cutting_corners = 1
@@ -824,7 +824,7 @@ capital = 45
 	}
 	create_equipment_variant = {
 		name = "ADLER"
-		type = command_control_equipment2
+		type = cnc_equipment_3
 		upgrades = {
 		Cnc_eq_better_ergonomics = 1
 		Cnc_eq_better_radios = 1
@@ -834,7 +834,7 @@ capital = 45
 	}
 	create_equipment_variant = {
 		name = "ADLER II"
-		type = command_control_equipment3
+		type = cnc_equipment_4
 		upgrades = {
 		Cnc_eq_better_radios = 1
 		}
@@ -846,7 +846,7 @@ capital = 45
 	create_production_license = {
 		target = SPR
 		equipment = {
-			type = infantry_weapons3
+			type = infantry_weapons_4
 			version_name = "G36"
 		}
 		cost_factor = 1
@@ -1902,9 +1902,9 @@ capital = 45
 				Rec_tank_0 = 1
 				Rec_tank_1 = 1
 				Rec_tank_2 = 1
-				attack_helicopter1 = 1
-				attack_helicopter2 = 1
-				attack_helicopter3 = 1
+				attack_helicopter_1 = 1
+				attack_helicopter_2 = 1
+				attack_helicopter_3 = 1
 			}
 
 			create_equipment_variant = {
@@ -2979,16 +2979,16 @@ capital = 45
 		modern_high_speed_rail = 1
 		freight_locomotive = 1
 
-		infantry_weapons4 = 1
+		infantry_weapons_5 = 1
 		support_weapons3 = 1
-		command_control_equipment4 = 1
+		cnc_equipment_5 = 1
 
 		util_vehicle_5 = 1
 
 		Rec_tank_2 = 1
 
-		body_armor_2010 = 1
-		camouflage3 = 1
+		body_armor_3 = 1
+		camouflage_3 = 1
 
 		computing3 = 1
 		decryption3 = 1
@@ -3003,20 +3003,20 @@ capital = 45
 		data_mining = 1
 		machine_learning = 1
 		sociable_machines = 1
-		industrial_electrospun_polymeric_nanofibers = 1
-		multiwalled_carbon_nanotubes = 1
-		modern_electrospinning = 1
-		stereolitography = 1
-		early_3D_printers = 1
-		t3D_wax_printer = 1
-		DNA_fingerprinting = 1
-		modern_gmo = 1
-		gene_therapy = 1
-		genetically_modified_crops = 1
-		gene_targeting_pesticides = 1
-		human_genome_project = 1
-		crispr = 1
-		cas9_gene_editing = 1
+		nanofibers_1 = 1
+		nanofibers_2 = 1
+		nanofibers_3 = 1
+		printing_1 = 1
+		printing_2 = 1
+		printing_3 = 1
+		genetics_1 = 1
+		genetics_2 = 1
+		genetics_2 = 1
+		genetics_2 = 1
+		genetics_2 = 1
+		genetics_1 = 1
+		genetics_2 = 1
+		genetics_2 = 1
 		wifi = 1
 		internet3 = 1	#3G
 		edge = 1
@@ -3431,3 +3431,5 @@ capital = 45
 		}
 	}
 }
+
+

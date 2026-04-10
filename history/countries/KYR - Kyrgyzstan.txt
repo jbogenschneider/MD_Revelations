@@ -130,9 +130,9 @@ capital = 720
 		night_vision_1 = 1
 
 		#Basic Rifles
-		infantry_weapons = 1
+		infantry_weapons_1 = 1
 		#Old Radios
-		command_control_equipment = 1
+		cnc_equipment_1 = 1
 
 		#Needed for SPAA template
 
@@ -277,3 +277,4 @@ capital = 720
 	recruit_character = KYR_kubanychbek_orozmatov
 	recruit_character = KYR_asanbek_alymkozhoev
 }
+

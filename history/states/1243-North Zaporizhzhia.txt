@@ -1,6 +1,6 @@
 state = {
-	id = 1223
-	name = "STATE_1223"
+	id = 1243
+	name = "STATE_1243"
 	history = {
 		owner = UKR
 		controller = UKR

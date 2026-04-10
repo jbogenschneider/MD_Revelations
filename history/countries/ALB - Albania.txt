@@ -67,11 +67,11 @@ capital = 137
 
 		superior_firepower = 1
 
-		infantry_weapons = 1
-		infantry_weapons1 = 1
+		infantry_weapons_1 = 1
+		infantry_weapons_2 = 1
 		combat_eng_equipment = 1
 		night_vision_1 = 1
-		command_control_equipment = 1
+		cnc_equipment_1 = 1
 		Anti_tank_0 = 1
 		util_vehicle_0 = 1
 		Heavy_Anti_tank_0 = 1
@@ -101,8 +101,8 @@ capital = 137
 		electrification_1 = 1
 		construction1 = 1
 
-		transport_helicopter1 = 1
-		nsb_transport_helicopter1 = 1
+		transport_helicopter_1 = 1
+		nsb_transport_helicopter_1 = 1
 	}
 
 	add_ideas = {
@@ -242,3 +242,4 @@ capital = 137
 	recruit_character = ALB_bardhyl_kollcaku
 	recruit_character = ALB_manushaqe_shehu
 }
+

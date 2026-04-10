@@ -123,8 +123,8 @@ capital = 911
 
 
 		infantry_mass_assault = 1
-		infantry_weapons = 1
-		infantry_weapons1 = 1
+		infantry_weapons_1 = 1
+		infantry_weapons_2 = 1
 		support_weapons = 1
 		special_forces = 1
 		combat_eng_equipment = 1
@@ -138,11 +138,11 @@ capital = 911
 
 		Anti_tank_0 = 1
 		Heavy_Anti_tank_0 = 1
-		command_control_equipment = 1
+		cnc_equipment_1 = 1
 
 
-		transport_helicopter1 = 1
-		nsb_transport_helicopter1 = 1
+		transport_helicopter_1 = 1
+		nsb_transport_helicopter_1 = 1
 		body_armor_1980 = 1
 
 		basic_computing = 1
@@ -307,3 +307,4 @@ capital = 911
 	recruit_character = COL_luis_gomez_vasquez
 	recruit_character = COL_juan_carlos_oti_paituvi
 }
+

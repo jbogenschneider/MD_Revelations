@@ -2683,13 +2683,13 @@ initialize_state_provincial_images = {
 			province = { id = 3479 }
 		}
 	}
-	1222 = {
+	1242 = {
 		add_province_modifier = {
 			static_modifiers = { terrain_UKR_kramatorsk }
 			province = { id = 502 }
 		}
 	}
-	1223 = {
+	1243 = {
 		add_province_modifier = {
 			static_modifiers = { terrain_UKR_zaporizhzhia }
 			province = { id = 11405 }

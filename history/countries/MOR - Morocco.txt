@@ -126,9 +126,9 @@ capital = 1177
 		night_vision_2 = 1
 
 		#For templates
-		infantry_weapons = 1
+		infantry_weapons_1 = 1
 		combat_eng_equipment = 1
-		command_control_equipment = 1
+		cnc_equipment_1 = 1
 		Anti_tank_0 = 1
 		Heavy_Anti_tank_0 = 1
 		util_vehicle_0 = 1
@@ -157,8 +157,8 @@ capital = 1177
 		construction1 = 1
 
 
-		transport_helicopter1 = 1
-		nsb_transport_helicopter1 = 1
+		transport_helicopter_1 = 1
+		nsb_transport_helicopter_1 = 1
 	}
 
 		complete_special_project = sp:sp_helicopter_project
@@ -316,3 +316,4 @@ capital = 1177
 	}
 	set_variable = { overall_productivity = 598 }
 }
+

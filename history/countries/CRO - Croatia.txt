@@ -106,9 +106,9 @@ capital = 126
 		night_vision_2 = 1
 
 		#HS Produkt VHS/VHS-2
-		infantry_weapons = 1
-		infantry_weapons1 = 1
-		infantry_weapons2 = 1
+		infantry_weapons_1 = 1
+		infantry_weapons_2 = 1
+		infantry_weapons_3 = 1
 		support_weapons = 1
 		tandem_charge_warheads = 1
 		squad_automatic_weapon = 1
@@ -121,7 +121,7 @@ capital = 126
 
 		#For templates
 		combat_eng_equipment = 1
-		command_control_equipment = 1
+		cnc_equipment_1 = 1
 		Anti_tank_0 = 1
 		Heavy_Anti_tank_0 = 1
 
@@ -155,8 +155,8 @@ capital = 126
 		land_fort_building_1 = 1
 		construction2 = 1
 
-		transport_helicopter1 = 1
-		nsb_transport_helicopter1 = 1
+		transport_helicopter_1 = 1
+		nsb_transport_helicopter_1 = 1
 
 
 	}
@@ -501,3 +501,4 @@ capital = 126
 	}
 	set_variable = { overall_productivity = 683 }
 }
+

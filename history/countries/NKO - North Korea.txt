@@ -540,14 +540,14 @@ capital = 602
 		}
 		create_equipment_variant = {
 			name = "Type 58"
-			type = infantry_weapons
+			type = infantry_weapons_1
 			upgrades = {
 				Inf_eq_heavy_weapons = 1
 			}
 		}
 		create_equipment_variant = {
 			name = "Type 68"
-			type = infantry_weapons
+			type = infantry_weapons_1
 			upgrades = {
 				Inf_eq_heavy_weapons = 2
 			}
@@ -684,13 +684,13 @@ capital = 602
 
 		infantry_mass_assault = 1
 
-		infantry_weapons = 1
-		infantry_weapons1 = 1
-		infantry_weapons2 = 1
+		infantry_weapons_1 = 1
+		infantry_weapons_2 = 1
+		infantry_weapons_3 = 1
 
 		combat_eng_equipment = 1
 		night_vision_1 = 1
-		command_control_equipment = 1
+		cnc_equipment_1 = 1
 
 		util_vehicle_0 = 1
 		util_vehicle_1 = 1
@@ -702,8 +702,8 @@ capital = 602
 		Heavy_Anti_tank_1 = 1 #AT-5 Konkurs
 
 
-		transport_helicopter1 = 1
-		nsb_transport_helicopter1 = 1
+		transport_helicopter_1 = 1
+		nsb_transport_helicopter_1 = 1
 
 		basic_computing = 1
 		integrated_circuit = 1

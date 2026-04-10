@@ -107,15 +107,15 @@ capital = 885
 		AT_upgrade_1 = 1
 		AA_upgrade_1 = 1
 
-		infantry_weapons = 1
-		infantry_weapons1 = 1
-		infantry_weapons2 = 1
-		infantry_weapons3 = 1
+		infantry_weapons_1 = 1
+		infantry_weapons_2 = 1
+		infantry_weapons_3 = 1
+		infantry_weapons_4 = 1
 		support_weapons = 1
 		squad_automatic_weapon = 1
 
 		special_forces = 1
-		command_control_equipment = 1
+		cnc_equipment_1 = 1
 		combat_eng_equipment = 1
 		Heavy_Anti_tank_0 = 1
 
@@ -126,8 +126,8 @@ capital = 885
 
 
 
-		transport_helicopter1 = 1
-		nsb_transport_helicopter1 = 1
+		transport_helicopter_1 = 1
+		nsb_transport_helicopter_1 = 1
 
 		body_armor_1980 = 1
 		camouflage = 1
@@ -1052,18 +1052,18 @@ capital = 885
 		SP_Anti_Air_1 = 1
 		Anti_Air_0 = 1
 
-		infantry_weapons = 1
-		infantry_weapons1 = 1
-		infantry_weapons2 = 1
-		infantry_weapons3 = 1
-		infantry_weapons4 = 1
-		infantry_weapons5 = 1
+		infantry_weapons_1 = 1
+		infantry_weapons_2 = 1
+		infantry_weapons_3 = 1
+		infantry_weapons_4 = 1
+		infantry_weapons_5 = 1
+		infantry_weapons_6 = 1
 
-		command_control_equipment = 1
-		command_control_equipment1 = 1
-		command_control_equipment2 = 1
-		command_control_equipment3 = 1
-		command_control_equipment4 = 1
+		cnc_equipment_1 = 1
+		cnc_equipment_2 = 1
+		cnc_equipment_3 = 1
+		cnc_equipment_4 = 1
+		cnc_equipment_5 = 1
 
 		combat_eng_equipment = 1
 
@@ -1360,3 +1360,4 @@ capital = 885
 	recruit_character = BRA_antonio_carlos_moretti_bermudezo
 	recruit_character = BRA_carlos_de_almeida_baptista_junior
 }
+

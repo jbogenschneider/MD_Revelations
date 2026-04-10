@@ -373,25 +373,25 @@ capital = 13
 
 		superior_firepower = 1
 
-		infantry_weapons = 1
-		infantry_weapons1 = 1
-		infantry_weapons2 = 1
+		infantry_weapons_1 = 1
+		infantry_weapons_2 = 1
+		infantry_weapons_3 = 1
 		support_weapons = 1
 		support_weapons2 = 1
 		squad_automatic_weapon = 1
 		tandem_charge_warheads = 1
 		support_weapons3 = 1
-		special_forces = 1
-		special_forces2 = 1
+		special_forces_tech_1 = 1
+		special_forces_tech_2 = 1
 
-		camouflage = 1
-		camouflage2 = 1
+		camouflage_1 = 1
+		camouflage_2 = 1
 
-		command_control_equipment = 1
-		command_control_equipment1 = 1
-		command_control_equipment2 = 1
+		cnc_equipment_1 = 1
+		cnc_equipment_2 = 1
+		cnc_equipment_3 = 1
 
-		land_Drone_equipment = 1
+		land_drone_equipment_type = 1
 
 		Anti_tank_0 = 1
 		AT_upgrade_1 = 1
@@ -402,17 +402,17 @@ capital = 13
 
 		combat_eng_equipment = 1
 
-		util_vehicle_0 = 1
+		util_vehicle_1 = 1
 		util_vehicle_1 = 1
 		util_vehicle_2 = 1
 
 
-		transport_helicopter1 = 1
-		nsb_transport_helicopter1 = 1
-		transport_helicopter2 = 1
-		nsb_transport_helicopter2 = 1 #Westland WG-13 Lynx
-		transport_helicopter3 = 1 #Merlin early prod
-		nsb_transport_helicopter3 = 1 #Merlin early prod
+		transport_helicopter_1 = 1
+		nsb_transport_helicopter_1 = 1
+		transport_helicopter_2 = 1
+		nsb_transport_helicopter_2 = 1 #Westland WG-13 Lynx
+		transport_helicopter_3 = 1 #Merlin early prod
+		nsb_transport_helicopter_3 = 1 #Merlin early prod
 
 		night_vision_1 = 1
 		night_vision_2 = 1
@@ -420,7 +420,7 @@ capital = 13
 
 
 
-		body_armor_1980 = 1
+		body_armor_1 = 1
 
 		basic_computing = 1
 		integrated_circuit = 1
@@ -437,14 +437,14 @@ capital = 13
 		gprs = 1
 		fuel_silos = 1
 
-		industrial_electrospun_polymeric_nanofibers = 1
-		multiwalled_carbon_nanotubes = 1
-		modern_electrospinning = 1
-		stereolitography = 1
-		early_3D_printers = 1
-		t3D_wax_printer = 1
-		DNA_fingerprinting = 1
-		modern_gmo = 1
+		nanofibers_1 = 1
+		nanofibers_2 = 1
+		nanofibers_3 = 1
+		printing_1 = 1
+		printing_2 = 1
+		printing_3 = 1
+		genetics_1 = 1
+		genetics_2 = 1
 		fuel_refining = 1
 		fuel_refining2 = 1
 		energy_efficiency = 1
@@ -1179,7 +1179,7 @@ capital = 13
 		}
 		create_equipment_variant = {
 			name = "Sea King HC"
-			type = transport_helicopter1
+			type = transport_helicopter_1
 			upgrades = {
 			}
 			obsolete = yes
@@ -1187,7 +1187,7 @@ capital = 13
 		}
 		create_equipment_variant = {
 			name = "Lynx AH.1"
-			type = transport_helicopter2
+			type = transport_helicopter_2
 			upgrades = {
 			}
 			obsolete = yes
@@ -1195,7 +1195,7 @@ capital = 13
 		}
 		create_equipment_variant = {
 			name = "Lynx HAS.3"
-			type = transport_helicopter2
+			type = transport_helicopter_2
 			upgrades = {
 			}
 			obsolete = yes
@@ -1203,7 +1203,7 @@ capital = 13
 		}
 		create_equipment_variant = {
 			name = "Chinook HC2"
-			type = transport_helicopter2
+			type = transport_helicopter_2
 			upgrades = {
 			}
 			obsolete = yes
@@ -1285,8 +1285,8 @@ capital = 13
 				SP_Anti_Air_0 = 1
 				SP_Anti_Air_0 = 1
 				SP_Anti_Air_1 = 1
-				attack_helicopter1 = 1
-				attack_helicopter2 = 1
+				attack_helicopter_1 = 1
+				attack_helicopter_2 = 1
 			}
 
 			create_equipment_variant = {
@@ -2550,7 +2550,7 @@ capital = 13
 		modern_high_speed_rail = 1
 		freight_locomotive = 1
 
-		command_control_equipment4 = 1
+		cnc_equipment_5 = 1
 
 		combat_eng_equipment = 1
 
@@ -2558,16 +2558,16 @@ capital = 13
 
 		Rec_tank_3 = 1
 
-		transport_helicopter3 = 1
+		transport_helicopter_3 = 1
 
-		attack_helicopter3 = 1 #AW159 Wildcat
+		attack_helicopter_3 = 1 #AW159 Wildcat
 
 		MR_Fighter4 = 1 #F-35A Lightning II
 
 		CV_L_strike_fighter3 = 1  #F-35B Lightning II
 
-		body_armor_2010 = 1
-		camouflage3 = 1
+		body_armor_3 = 1
+		camouflage_3 = 1
 
 		computing3 = 1
 		decryption3 = 1
@@ -2582,20 +2582,20 @@ capital = 13
 		data_mining = 1
 		machine_learning = 1
 		sociable_machines = 1
-		industrial_electrospun_polymeric_nanofibers = 1
-		multiwalled_carbon_nanotubes = 1
-		modern_electrospinning = 1
-		stereolitography = 1
-		early_3D_printers = 1
-		t3D_wax_printer = 1
-		DNA_fingerprinting = 1
-		modern_gmo = 1
-		gene_therapy = 1
-		genetically_modified_crops = 1
-		gene_targeting_pesticides = 1
-		human_genome_project = 1
-		crispr = 1
-		cas9_gene_editing = 1
+		nanofibers_1 = 1
+		nanofibers_2 = 1
+		nanofibers_3 = 1
+		printing_1 = 1
+		printing_2 = 1
+		printing_3 = 1
+		genetics_1 = 1
+		genetics_2 = 1
+		genetics_2 = 1
+		genetics_2 = 1
+		genetics_2 = 1
+		genetics_1 = 1
+		genetics_2 = 1
+		genetics_2 = 1
 		wifi = 1
 		internet3 = 1	#3G
 		edge = 1
@@ -2920,3 +2920,5 @@ capital = 13
 	recruit_character = ENG_john_weale
 	recruit_character = ENG_simon_williams
 }
+
+

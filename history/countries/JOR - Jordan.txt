@@ -113,9 +113,9 @@ capital = 210
 		util_vehicle_3 = 1
 
 		#For templates
-		infantry_weapons = 1
+		infantry_weapons_1 = 1
 		combat_eng_equipment = 1
-		command_control_equipment = 1
+		cnc_equipment_1 = 1
 		Anti_tank_0 = 1
 		Heavy_Anti_tank_0 = 1
 
@@ -148,8 +148,8 @@ capital = 210
 			SP_arty_0 = 1
 			nsb_Anti_Air_0 = 1
 
-			transport_helicopter1 = 1
-			nsb_transport_helicopter1 = 1
+			transport_helicopter_1 = 1
+			nsb_transport_helicopter_1 = 1
 			helo_ops_tech = 1
 			nsb_attack_helicopter_tech_1 = 1
 			nsb_engine_tech_1 = 1
@@ -173,8 +173,8 @@ capital = 210
 				SP_Anti_Air_0 = 1
 				Rec_tank_0 = 1
 
-				transport_helicopter1 = 1
-		nsb_transport_helicopter1 = 1
+				transport_helicopter_1 = 1
+		nsb_transport_helicopter_1 = 1
 				attack_helicopter1 = 1
 			}
 		}

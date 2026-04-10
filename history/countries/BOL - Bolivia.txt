@@ -95,12 +95,12 @@ capital = 897
 		night_vision_2 = 1
 
 		#For Templates
-		infantry_weapons = 1
+		infantry_weapons_1 = 1
 		support_weapons = 1
 		special_forces = 1
 
 		combat_eng_equipment = 1
-		command_control_equipment = 1
+		cnc_equipment_1 = 1
 		Anti_tank_0 = 1
 		Heavy_Anti_tank_0 = 1
 		util_vehicle_0 = 1
@@ -246,3 +246,4 @@ capital = 897
 	recruit_character = BOL_abel_galo_de_la_barra_caceres
 	recruit_character = BOL_gina_reque_teran
 }
+

@@ -30,8 +30,8 @@ capital = 391
 		infantry_mass_assault = 1
 		night_vision_1 = 1
 
-		infantry_weapons = 1
-		command_control_equipment = 1
+		infantry_weapons_1 = 1
+		cnc_equipment_1 = 1
 		Anti_tank_0 = 1
 		Heavy_Anti_tank_0 = 1
 		util_vehicle_0 = 1
@@ -136,8 +136,8 @@ capital = 391
 		legacy_doctrines = 1
 		infantry_mass_assault = 1
 		#For templates
-		infantry_weapons = 1
-		command_control_equipment = 1
+		infantry_weapons_1 = 1
+		cnc_equipment_1 = 1
 		Anti_tank_0 = 1
 		Heavy_Anti_tank_0 = 1
 		Anti_Air_0 = 1
@@ -251,3 +251,4 @@ capital = 391
 	recruit_character = GNA_abdul_hakim_abu_hawliyeh
 	recruit_character = GNA_rida_issa
 }
+

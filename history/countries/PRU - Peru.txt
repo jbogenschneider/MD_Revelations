@@ -137,11 +137,11 @@ capital = 904
 
 		infantry_mass_assault = 1
 
-		infantry_weapons = 1
+		infantry_weapons_1 = 1
 
 		###FOR TEMPLATES###
 
-		command_control_equipment = 1
+		cnc_equipment_1 = 1
 		Anti_tank_0 = 1
 		Heavy_Anti_tank_0 = 1
 		combat_eng_equipment = 1
@@ -276,3 +276,4 @@ capital = 904
 	recruit_character = PRU_carlos_tijeda
 	recruit_character = PRU_luis_paredes_lora
 }
+

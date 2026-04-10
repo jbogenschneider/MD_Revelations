@@ -73,11 +73,11 @@ capital = 27
 
 		combined_arms = 1
 
-		infantry_weapons = 1
+		infantry_weapons_1 = 1
 
 		combat_eng_equipment = 1
 
-		command_control_equipment = 1
+		cnc_equipment_1 = 1
 
 		util_vehicle_0 = 1
 
@@ -318,3 +318,4 @@ capital = 27
 	recruit_character = IRE_peter_o_hallogan
 	recruit_character = IRE_mark_mellett
 }
+

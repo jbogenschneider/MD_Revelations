@@ -46,8 +46,8 @@ capital = 416
 
 		land_Drone_equipment2 = 1 #2005
 
-		infantry_weapons2 = 1
-		infantry_weapons3 = 1
+		infantry_weapons_3 = 1
+		infantry_weapons_4 = 1
 		support_weapons2 = 1
 		tandem_charge_warheads = 1
 		squad_automatic_weapon = 1
@@ -55,7 +55,7 @@ capital = 416
 
 		night_vision_3 = 1
 
-		command_control_equipment3 = 1
+		cnc_equipment_4 = 1
 
 		Rec_tank_1 = 1
 
@@ -210,3 +210,4 @@ capital = 416
 	recruit_character = BLC_khair_bakhsh_marri
 	recruit_character = BLC_balach_marri
 }
+

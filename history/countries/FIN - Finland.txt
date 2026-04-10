@@ -154,10 +154,10 @@ capital = 102
 		superior_firepower = 1
 
 		#RK-95
-		infantry_weapons = 1
-		infantry_weapons1 = 1
-		infantry_weapons2 = 1
-		infantry_weapons3 = 1
+		infantry_weapons_1 = 1
+		infantry_weapons_2 = 1
+		infantry_weapons_3 = 1
+		infantry_weapons_4 = 1
 		support_weapons = 1
 		tandem_charge_warheads = 1
 		squad_automatic_weapon = 1
@@ -169,9 +169,9 @@ capital = 102
 		night_vision_1 = 1
 		night_vision_2 = 1
 
-		command_control_equipment = 1
-		command_control_equipment1 = 1
-		command_control_equipment2 = 1
+		cnc_equipment_1 = 1
+		cnc_equipment_2 = 1
+		cnc_equipment_3 = 1
 
 		#95S 58-61 Musti Recoilles Rifle
 		Anti_tank_0 = 1
@@ -183,8 +183,8 @@ capital = 102
 
 		Heavy_Anti_tank_0 = 1
 
-		transport_helicopter1 = 1
-		nsb_transport_helicopter1 = 1
+		transport_helicopter_1 = 1
+		nsb_transport_helicopter_1 = 1
 
 		body_armor_1980 = 1
 		camouflage = 1
@@ -329,7 +329,7 @@ capital = 102
 
 		create_equipment_variant = {
 			name = "RK 62"
-			type = infantry_weapons
+			type = infantry_weapons_1
 			icon = "gfx/interface/technologies/FIN/INF/INF1.dds"
 			upgrades = {
 				Inf_eq_heavy_weapons = 2
@@ -673,3 +673,4 @@ capital = 102
 	recruit_character = FIN_timo_kivinen
 	recruit_character = FIN_eero_pyotsia
 }
+

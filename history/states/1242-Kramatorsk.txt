@@ -1,6 +1,6 @@
 state = {
-	id = 1222
-	name = "STATE_1222"
+	id = 1242
+	name = "STATE_1242"
 	manpower = 573779
 	state_category = state_03
 	history = {
@@ -14,7 +14,6 @@ state = {
 			infrastructure = 2
 			stronghold_network = 1
 		}
-		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
 		set_variable = { state_renewable_capacity_factor_modifier_var = 0.25 }
 	}
 	provinces = {

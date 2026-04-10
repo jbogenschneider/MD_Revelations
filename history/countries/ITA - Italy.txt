@@ -364,10 +364,10 @@ capital = 81
 
 		combined_arms = 1
 
-		infantry_weapons = 1
-		infantry_weapons1 = 1
-		infantry_weapons2 = 1
-		infantry_weapons3 = 1
+		infantry_weapons_1 = 1
+		infantry_weapons_2 = 1
+		infantry_weapons_3 = 1
+		infantry_weapons_4 = 1
 		support_weapons = 1
 		tandem_charge_warheads = 1
 		squad_automatic_weapon = 1
@@ -379,9 +379,9 @@ capital = 81
 		special_forces4 = 1
 		camouflage = 1
 
-		command_control_equipment = 1
-		command_control_equipment1 = 1
-		command_control_equipment2 = 1
+		cnc_equipment_1 = 1
+		cnc_equipment_2 = 1
+		cnc_equipment_3 = 1
 
 		land_Drone_equipment = 1
 
@@ -555,12 +555,12 @@ capital = 81
 
 			nsb_AA_upgrade_2 = 1
 
-			transport_helicopter1 = 1
-			nsb_transport_helicopter1 = 1
-			transport_helicopter2 = 1
-			nsb_transport_helicopter2 = 1
-			transport_helicopter3 = 1
-			nsb_transport_helicopter3 = 1 #Merlin early prod
+			transport_helicopter_1 = 1
+			nsb_transport_helicopter_1 = 1
+			transport_helicopter_2 = 1
+			nsb_transport_helicopter_2 = 1
+			transport_helicopter_3 = 1
+			nsb_transport_helicopter_3 = 1 #Merlin early prod
 			helo_ops_tech = 1
 			nsb_attack_helicopter_tech_1 = 1
 			nsb_engine_tech_1 = 1
@@ -1093,10 +1093,10 @@ capital = 81
 
 				#Agusta A129 Mangusta
 
-				transport_helicopter1 = 1
-		nsb_transport_helicopter1 = 1
-				transport_helicopter2 = 1
-		nsb_transport_helicopter2 = 1
+				transport_helicopter_1 = 1
+		nsb_transport_helicopter_1 = 1
+				transport_helicopter_2 = 1
+		nsb_transport_helicopter_2 = 1
 				attack_helicopter1 = 1
 				attack_helicopter2 = 1
 			}
@@ -1593,10 +1593,10 @@ capital = 81
 			special_mad_1 = 1
 			special_mad_2 = 1
 			tgp_recon_1 = 1
-			transport_helicopter1 = 1
-		nsb_transport_helicopter1 = 1
-			transport_helicopter2 = 1
-		nsb_transport_helicopter2 = 1
+			transport_helicopter_1 = 1
+		nsb_transport_helicopter_1 = 1
+			transport_helicopter_2 = 1
+		nsb_transport_helicopter_2 = 1
 		}
 
 		create_equipment_variant = {
@@ -1860,10 +1860,10 @@ capital = 81
 				naval_plane3 = 1
 
 				#HH-139
-				transport_helicopter1 = 1
-		nsb_transport_helicopter1 = 1
-				transport_helicopter2 = 1
-		nsb_transport_helicopter2 = 1
+				transport_helicopter_1 = 1
+		nsb_transport_helicopter_1 = 1
+				transport_helicopter_2 = 1
+		nsb_transport_helicopter_2 = 1
 			}
 		}
 	}
@@ -2012,12 +2012,12 @@ capital = 81
 	set_country_flag = ITA_five_star_movement_founded
 
 	set_technology = {
-		infantry_weapons4 = 1
+		infantry_weapons_5 = 1
 
 		land_Drone_equipment2 = 1
 
-		command_control_equipment3 = 1
-		command_control_equipment4 = 1
+		cnc_equipment_4 = 1
+		cnc_equipment_5 = 1
 		special_forces5 = 1
 
 		#Pzh2000
@@ -2057,8 +2057,8 @@ capital = 81
 		attack_helicopter4 = 1
 
 		#NH90
-		transport_helicopter3 = 1
-		transport_helicopter4 = 1
+		transport_helicopter_3 = 1
+		transport_helicopter_4 = 1
 
 		#C27J
 		transport_plane4 = 1
@@ -2457,3 +2457,4 @@ capital = 81
 		}
 	}
 }
+

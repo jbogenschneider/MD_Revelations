@@ -90,9 +90,9 @@ capital = 849
 	set_technology = {
 
 		infantry_mass_assault = 1
-		infantry_weapons = 1
+		infantry_weapons_1 = 1
 
-		command_control_equipment = 1
+		cnc_equipment_1 = 1
 
 		Anti_tank_0 = 1
 
@@ -193,3 +193,4 @@ capital = 849
 	recruit_character = NIC_alberto_giovanni_perez_contreras
 	recruit_character = NIC_angel_eugenio_fonseca_donaire
 }
+

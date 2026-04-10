@@ -125,15 +125,15 @@ capital = 386
 
 		superior_firepower = 1
 		night_vision_1 = 1
-		command_control_equipment = 1
+		cnc_equipment_1 = 1
 		combat_eng_equipment = 1
 		special_forces = 1
 		support_weapons = 1
 		Anti_tank_0 = 1
 		Heavy_Anti_tank_0 = 1
-		infantry_weapons = 1
+		infantry_weapons_1 = 1
 		util_vehicle_0 = 1
-		infantry_weapons1 = 1
+		infantry_weapons_2 = 1
 		support_weapons = 1
 		special_forces = 1
 		fuel_silos = 1
@@ -302,3 +302,4 @@ capital = 386
 
 	set_variable = { literacy_rate = 0.699 }
 }
+

@@ -73,17 +73,17 @@ capital = 736
 
 
 		infantry_mass_assault = 1
-		infantry_weapons = 1
+		infantry_weapons_1 = 1
 
-		command_control_equipment = 1
+		cnc_equipment_1 = 1
 		land_Drone_equipment = 1
 		Anti_tank_0 = 1
 		Heavy_Anti_tank_0 = 1
 		combat_eng_equipment = 1
 
 
-		transport_helicopter1 = 1
-		nsb_transport_helicopter1 = 1
+		transport_helicopter_1 = 1
+		nsb_transport_helicopter_1 = 1
 
 		night_vision_1 = 1
 
@@ -371,3 +371,4 @@ capital = 736
 	}
 	set_variable = { overall_productivity = 464 }
 }
+

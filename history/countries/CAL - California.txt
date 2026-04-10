@@ -103,8 +103,8 @@ capital = 811
 		set_technology = { encryption2 = 1 }
 		set_technology = { encryption3 = 1 }
 		set_technology = { night_vision_3 = 1 }
-		set_technology = { command_control_equipment3 = 1 }
-		set_technology = { command_control_equipment4 = 1 }
+		set_technology = { cnc_equipment_4 = 1 }
+		set_technology = { cnc_equipment_5 = 1 }
 		set_technology = { land_Drone_equipment3 = 1 }
 		set_technology = { util_vehicle_5 = 1 }
 		set_technology = { mbt_tech_3 = 1 }	
@@ -116,7 +116,7 @@ capital = 811
 		set_technology = { APC_6 = 1 }
 		set_technology = { artillery_3 = 1 }
 		set_technology = { Arty_upgrade_4 = 1 }
-		set_technology = { transport_helicopter4 = 1 }
+		set_technology = { transport_helicopter_4 = 1 }
 		set_technology = { SP_Anti_Air_3 = 1 }
 		set_technology = { L_Strike_fighter3 = 1 }
 		set_technology = { Strike_fighter4 = 1 }
@@ -161,7 +161,7 @@ capital = 811
 		set_technology = { special_forces5 = 1 }
 
 		set_technology = { AS_Fighter4 = 1 }
-		set_technology = { infantry_weapons5 = 1 }
+		set_technology = { infantry_weapons_6 = 1 }
 		set_technology = { night_vision_3 = 1 }
 		set_technology = { night_vision_4 = 1 }
 		set_technology = { util_vehicle_5 = 1 }
@@ -770,3 +770,4 @@ capital = 811
 
 	recruit_character = CAL_air_chief
 }
+

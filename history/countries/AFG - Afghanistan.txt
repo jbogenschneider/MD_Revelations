@@ -75,9 +75,9 @@ capital = 411
 
 		early_guerilla_warfare = 1
 
-		infantry_weapons = 1
+		infantry_weapons_1 = 1
 		combat_eng_equipment = 1
-		command_control_equipment = 1
+		cnc_equipment_1 = 1
 		support_weapons = 1
 		Anti_tank_0 = 1
 		Heavy_Anti_tank_0 = 1
@@ -370,3 +370,4 @@ capital = 411
 	recruit_character = AFG_murad_ali_murad
 	recruit_character = AFG_khatol_mohammadzai
 }
+

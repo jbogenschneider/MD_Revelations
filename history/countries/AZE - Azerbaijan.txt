@@ -85,7 +85,7 @@ capital = 713
 		armoured_mass_assault = 1
 
 		#AK-74M Licensed
-		infantry_weapons = 1
+		infantry_weapons_1 = 1
 
 		#Guyrza and licensed Marauder
 		util_vehicle_0 = 1
@@ -95,8 +95,8 @@ capital = 713
 		support_weapons = 1
 		special_forces = 1
 
-		command_control_equipment = 1
-		command_control_equipment1 = 1
+		cnc_equipment_1 = 1
+		cnc_equipment_2 = 1
 
 		#For templates
 		Anti_tank_0 = 1
@@ -128,8 +128,8 @@ capital = 713
 
 
 
-		transport_helicopter1 = 1
-		nsb_transport_helicopter1 = 1
+		transport_helicopter_1 = 1
+		nsb_transport_helicopter_1 = 1
 	}
 
 	complete_special_project = sp:sp_helicopter_project
@@ -277,3 +277,4 @@ capital = 713
 	recruit_character = AZE_ramiz_tahirov
 	recruit_character = AZE_rovshan_akbaron
 }
+

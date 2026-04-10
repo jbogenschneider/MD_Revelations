@@ -3093,24 +3093,24 @@ capital = 652
 		}
 		create_equipment_variant = {
 			name = "Mil Mi-4"
-			type = transport_helicopter1
+			type = transport_helicopter_1
 			obsolete = yes
 			icon = "gfx/interface/technologies/CHI/AIR/UH1_alt1.dds"
 		}
 		create_equipment_variant = {
 			name = "Mil Mi-6"
-			type = transport_helicopter1
+			type = transport_helicopter_1
 			obsolete = yes
 			#need GFX
 		}
 		create_equipment_variant = {
 			name = "Mil Mi-8"
-			type = transport_helicopter1
+			type = transport_helicopter_1
 			obsolete = yes
 		}
 		create_equipment_variant = {
 			name = "Mil Mi-17"
-			type = transport_helicopter1
+			type = transport_helicopter_1
 			obsolete = yes
 			#need GFX
 		}
@@ -3133,7 +3133,7 @@ capital = 652
 				helicopter_nsb_upgrade = 0
 			}
 			obsolete = yes
-			icon = "GFX_SOV_attack_helicopter1_medium"
+			icon = "GFX_SOV_attack_helicopter_1_medium"
 		}
 
 		create_equipment_variant = {
@@ -3270,7 +3270,7 @@ capital = 652
 			upgrades = {
 				helicopter_nsb_upgrade = 4
 			}
-			icon = "GFX_SOV_attack_helicopter2_medium"
+			icon = "GFX_SOV_attack_helicopter_2_medium"
 		}
 		create_equipment_variant = {
 			name = "Ka-50N"
@@ -3607,17 +3607,17 @@ capital = 652
 		}
 		create_equipment_variant = {
 			name = "PPSH"
-			type = infantry_weapons
+			type = infantry_weapons_1
 			icon = "gfx/interface/technologies/SOV/INF/PPSH.dds"
 		}
 		create_equipment_variant = {
 			name = "Mosin"
-			type = infantry_weapons
+			type = infantry_weapons_1
 			icon = "gfx/interface/technologies/SOV/INF/mosin.dds"
 		}
 		create_equipment_variant = {
 			name = "SKS"
-			type = infantry_weapons
+			type = infantry_weapons_1
 			upgrades = {
 				Inf_eq_heavy_weapons = 1
 			}
@@ -3625,7 +3625,7 @@ capital = 652
 		}
 		create_equipment_variant = {
 			name = "AKM"
-			type = infantry_weapons
+			type = infantry_weapons_1
 			upgrades = {
 				Inf_eq_heavy_weapons = 2
 				Inf_eq_mortars = 1
@@ -3634,7 +3634,7 @@ capital = 652
 		}
 		#create_equipment_variant = {
 			#name = "AS VAL" #commented out for now because it replaced AK-74M
-			#type = infantry_weapons3
+			#type = infantry_weapons_4
 			#upgrades = {
 			#	Inf_eq_gadjets = 4
 			#	Inf_eq_heavy_weapons = 2
@@ -3644,7 +3644,7 @@ capital = 652
 		#}
 		#create_equipment_variant = {
 			#name = "AN-94" #commented out for now because it replaced AK-74M
-			#type = infantry_weapons3
+			#type = infantry_weapons_4
 			#upgrades = {
 			#	Inf_eq_gadjets = 2
 			#	Inf_eq_heavy_weapons = 2
@@ -3654,7 +3654,7 @@ capital = 652
 		#}
 		create_equipment_variant = {
 			name = "AK-74M"
-			type = infantry_weapons3
+			type = infantry_weapons_4
 			upgrades = {
 				Inf_eq_mortars = 1
 			}
@@ -3662,13 +3662,13 @@ capital = 652
 		}
 		create_equipment_variant = {
 			name = "UAZ-452"
-			type = util_vehicle_0
+			type = util_vehicle_1
 			mark_older_equipment_obsolete = yes
 			icon = "gfx/interface/technologies/SOV/LAND/U1_alt1.dds"
 		}
 		create_equipment_variant = {
 			name = "GAZ-66"
-			type = util_vehicle_0
+			type = util_vehicle_1
 			upgrades = {
 				Util_Mobility = 1
 			}
@@ -3677,7 +3677,7 @@ capital = 652
 		}
 		create_equipment_variant = {
 			name = "ZIL-131"
-			type = util_vehicle_0
+			type = util_vehicle_1
 			upgrades = {
 				Util_Mobility = 1
 			}
@@ -3686,7 +3686,7 @@ capital = 652
 		}
 		create_equipment_variant = {
 			name = "Ural-375D"
-			type = util_vehicle_0
+			type = util_vehicle_1
 			upgrades = {
 				Util_Mobility = 2
 			}
@@ -3749,9 +3749,9 @@ capital = 652
 				AA_upgrade_3 = 1
 				Anti_Air_2 = 1
 				SP_Anti_Air_2 = 1
-				attack_helicopter1 = 1
-				attack_helicopter2 = 1
-				attack_helicopter3 = 1
+				attack_helicopter_1 = 1
+				attack_helicopter_2 = 1
+				attack_helicopter_3 = 1
 			}
 
 			create_equipment_variant = {
@@ -4077,19 +4077,19 @@ capital = 652
 
 		armoured_mass_assault = 1
 
-		infantry_weapons = 1
-		infantry_weapons1 = 1
-		infantry_weapons2 = 1
-		infantry_weapons3 = 1
+		infantry_weapons_1 = 1
+		infantry_weapons_2 = 1
+		infantry_weapons_3 = 1
+		infantry_weapons_4 = 1
 		support_weapons = 1
 		support_weapons2 = 1
 		support_weapons3 = 1
 		tandem_charge_warheads = 1
 		squad_automatic_weapon = 1
-		special_forces = 1
-		special_forces2 = 1
-		special_forces3 = 1
-		special_forces4 = 1
+		special_forces_tech_1 = 1
+		special_forces_tech_2 = 1
+		special_forces_tech_3 = 1
+		special_forces_tech_4 = 1
 
 		#2005
 
@@ -4098,12 +4098,12 @@ capital = 652
 		night_vision_1 = 1
 		night_vision_2 = 1
 
-		command_control_equipment = 1
-		command_control_equipment1 = 1
+		cnc_equipment_1 = 1
+		cnc_equipment_2 = 1
 
-		land_Drone_equipment = 1
+		land_drone_equipment_type = 1
 
-		util_vehicle_0 = 1
+		util_vehicle_1 = 1
 		util_vehicle_1 = 1
 		util_vehicle_2 = 1
 		util_vehicle_3 = 1
@@ -4115,16 +4115,16 @@ capital = 652
 		Heavy_Anti_tank_1 = 1
 
 
-		transport_helicopter1 = 1
-		nsb_transport_helicopter1 = 1
-		transport_helicopter2 = 1
-		nsb_transport_helicopter2 = 1
+		transport_helicopter_1 = 1
+		nsb_transport_helicopter_1 = 1
+		transport_helicopter_2 = 1
+		nsb_transport_helicopter_2 = 1
 
 
 
-		body_armor_1980 = 1
-		camouflage = 1
-		camouflage2 = 1
+		body_armor_1 = 1
+		camouflage_1 = 1
+		camouflage_2 = 1
 
 		basic_computing = 1
 		integrated_circuit = 1
@@ -4138,18 +4138,18 @@ capital = 652
 		computing3 = 1
 		decryption3 = 1
 		encryption3 = 1
-		DNA_fingerprinting = 1
+		genetics_1 = 1
 
 		radar = 1
 		internet1 = 1
 		internet2 = 1
 		fuel_silos = 1
 
-		industrial_electrospun_polymeric_nanofibers = 1
-		multiwalled_carbon_nanotubes = 1
-		stereolitography = 1
-		early_3D_printers = 1
-		DNA_fingerprinting = 1
+		nanofibers_1 = 1
+		nanofibers_2 = 1
+		printing_1 = 1
+		printing_2 = 1
+		genetics_1 = 1
 		fuel_refining = 1
 		early_renewables = 1
 		renewables = 1
@@ -8708,24 +8708,24 @@ capital = 652
 		}
 		create_equipment_variant = {
 			name = "Mil Mi-4"
-			type = transport_helicopter1
+			type = transport_helicopter_1
 			obsolete = yes
 			icon = "gfx/interface/technologies/CHI/AIR/UH1_alt1.dds"
 		}
 		create_equipment_variant = {
 			name = "Mil Mi-6"
-			type = transport_helicopter1
+			type = transport_helicopter_1
 			obsolete = yes
 			#need GFX
 		}
 		create_equipment_variant = {
 			name = "Mil Mi-8"
-			type = transport_helicopter1
+			type = transport_helicopter_1
 			obsolete = yes
 		}
 		create_equipment_variant = {
 			name = "Mil Mi-17"
-			type = transport_helicopter1
+			type = transport_helicopter_1
 			obsolete = yes
 			#need GFX
 		}
@@ -8748,7 +8748,7 @@ capital = 652
 				helicopter_nsb_upgrade = 0
 			}
 			obsolete = yes
-			icon = "GFX_SOV_attack_helicopter1_medium"
+			icon = "GFX_SOV_attack_helicopter_1_medium"
 		}
 
 		create_equipment_variant = {
@@ -8885,7 +8885,7 @@ capital = 652
 			upgrades = {
 				helicopter_nsb_upgrade = 4
 			}
-			icon = "GFX_SOV_attack_helicopter2_medium"
+			icon = "GFX_SOV_attack_helicopter_2_medium"
 		}
 		create_equipment_variant = {
 			name = "Ka-50N"
@@ -9222,17 +9222,17 @@ capital = 652
 		}
 		create_equipment_variant = {
 			name = "PPSH"
-			type = infantry_weapons
+			type = infantry_weapons_1
 			icon = "gfx/interface/technologies/SOV/INF/PPSH.dds"
 		}
 		create_equipment_variant = {
 			name = "Mosin"
-			type = infantry_weapons
+			type = infantry_weapons_1
 			icon = "gfx/interface/technologies/SOV/INF/mosin.dds"
 		}
 		create_equipment_variant = {
 			name = "SKS"
-			type = infantry_weapons
+			type = infantry_weapons_1
 			upgrades = {
 				Inf_eq_heavy_weapons = 1
 			}
@@ -9240,7 +9240,7 @@ capital = 652
 		}
 		create_equipment_variant = {
 			name = "AKM"
-			type = infantry_weapons
+			type = infantry_weapons_1
 			upgrades = {
 				Inf_eq_heavy_weapons = 2
 				Inf_eq_mortars = 1
@@ -9249,7 +9249,7 @@ capital = 652
 		}
 		#create_equipment_variant = {
 			#name = "AS VAL" #commented out for now because it replaced AK-74M
-			#type = infantry_weapons3
+			#type = infantry_weapons_4
 			#upgrades = {
 			#	Inf_eq_gadjets = 4
 			#	Inf_eq_heavy_weapons = 2
@@ -9259,7 +9259,7 @@ capital = 652
 		#}
 		#create_equipment_variant = {
 			#name = "AN-94" #commented out for now because it replaced AK-74M
-			#type = infantry_weapons3
+			#type = infantry_weapons_4
 			#upgrades = {
 			#	Inf_eq_gadjets = 2
 			#	Inf_eq_heavy_weapons = 2
@@ -9269,7 +9269,7 @@ capital = 652
 		#}
 		create_equipment_variant = {
 			name = "AK-74M"
-			type = infantry_weapons3
+			type = infantry_weapons_4
 			upgrades = {
 				Inf_eq_mortars = 1
 			}
@@ -9277,13 +9277,13 @@ capital = 652
 		}
 		create_equipment_variant = {
 			name = "UAZ-452"
-			type = util_vehicle_0
+			type = util_vehicle_1
 			mark_older_equipment_obsolete = yes
 			icon = "gfx/interface/technologies/SOV/LAND/U1_alt1.dds"
 		}
 		create_equipment_variant = {
 			name = "GAZ-66"
-			type = util_vehicle_0
+			type = util_vehicle_1
 			upgrades = {
 				Util_Mobility = 1
 			}
@@ -9292,7 +9292,7 @@ capital = 652
 		}
 		create_equipment_variant = {
 			name = "ZIL-131"
-			type = util_vehicle_0
+			type = util_vehicle_1
 			upgrades = {
 				Util_Mobility = 1
 			}
@@ -9301,7 +9301,7 @@ capital = 652
 		}
 		create_equipment_variant = {
 			name = "Ural-375D"
-			type = util_vehicle_0
+			type = util_vehicle_1
 			upgrades = {
 				Util_Mobility = 2
 			}
@@ -9364,9 +9364,9 @@ capital = 652
 				AA_upgrade_3 = 1
 				Anti_Air_2 = 1
 				SP_Anti_Air_2 = 1
-				attack_helicopter1 = 1
-				attack_helicopter2 = 1
-				attack_helicopter3 = 1
+				attack_helicopter_1 = 1
+				attack_helicopter_2 = 1
+				attack_helicopter_3 = 1
 			}
 
 			create_equipment_variant = {
@@ -9692,19 +9692,19 @@ capital = 652
 
 		armoured_mass_assault = 1
 
-		infantry_weapons = 1
-		infantry_weapons1 = 1
-		infantry_weapons2 = 1
-		infantry_weapons3 = 1
+		infantry_weapons_1 = 1
+		infantry_weapons_2 = 1
+		infantry_weapons_3 = 1
+		infantry_weapons_4 = 1
 		support_weapons = 1
 		support_weapons2 = 1
 		support_weapons3 = 1
 		tandem_charge_warheads = 1
 		squad_automatic_weapon = 1
-		special_forces = 1
-		special_forces2 = 1
-		special_forces3 = 1
-		special_forces4 = 1
+		special_forces_tech_1 = 1
+		special_forces_tech_2 = 1
+		special_forces_tech_3 = 1
+		special_forces_tech_4 = 1
 
 		#2005
 
@@ -9713,12 +9713,12 @@ capital = 652
 		night_vision_1 = 1
 		night_vision_2 = 1
 
-		command_control_equipment = 1
-		command_control_equipment1 = 1
+		cnc_equipment_1 = 1
+		cnc_equipment_2 = 1
 
-		land_Drone_equipment = 1
+		land_drone_equipment_type = 1
 
-		util_vehicle_0 = 1
+		util_vehicle_1 = 1
 		util_vehicle_1 = 1
 		util_vehicle_2 = 1
 		util_vehicle_3 = 1
@@ -9730,16 +9730,16 @@ capital = 652
 		Heavy_Anti_tank_1 = 1
 
 
-		transport_helicopter1 = 1
-		nsb_transport_helicopter1 = 1
-		transport_helicopter2 = 1
-		nsb_transport_helicopter2 = 1
+		transport_helicopter_1 = 1
+		nsb_transport_helicopter_1 = 1
+		transport_helicopter_2 = 1
+		nsb_transport_helicopter_2 = 1
 
 
 
-		body_armor_1980 = 1
-		camouflage = 1
-		camouflage2 = 1
+		body_armor_1 = 1
+		camouflage_1 = 1
+		camouflage_2 = 1
 
 		basic_computing = 1
 		integrated_circuit = 1
@@ -9753,18 +9753,18 @@ capital = 652
 		computing3 = 1
 		decryption3 = 1
 		encryption3 = 1
-		DNA_fingerprinting = 1
+		genetics_1 = 1
 
 		radar = 1
 		internet1 = 1
 		internet2 = 1
 		fuel_silos = 1
 
-		industrial_electrospun_polymeric_nanofibers = 1
-		multiwalled_carbon_nanotubes = 1
-		stereolitography = 1
-		early_3D_printers = 1
-		DNA_fingerprinting = 1
+		nanofibers_1 = 1
+		nanofibers_2 = 1
+		printing_1 = 1
+		printing_2 = 1
+		genetics_1 = 1
 		fuel_refining = 1
 		early_renewables = 1
 		renewables = 1
@@ -11192,3 +11192,5 @@ capital = 652
 		}
 	}
 }
+
+

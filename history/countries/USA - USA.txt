@@ -285,10 +285,10 @@ capital = 1182
 
 		combined_arms = 1
 
-		infantry_weapons = 1
-		infantry_weapons1 = 1
-		infantry_weapons2 = 1
-		infantry_weapons3 = 1
+		infantry_weapons_1 = 1
+		infantry_weapons_2 = 1
+		infantry_weapons_3 = 1
+		infantry_weapons_4 = 1
 		support_weapons = 1
 		squad_automatic_weapon = 1
 		tandem_charge_warheads = 1
@@ -305,10 +305,10 @@ capital = 1182
 		night_vision_2 = 1
 		night_vision_3 = 1 #1985
 
-		command_control_equipment = 1
-		command_control_equipment1 = 1
-		command_control_equipment2 = 1
-		command_control_equipment3 = 1
+		cnc_equipment_1 = 1
+		cnc_equipment_2 = 1
+		cnc_equipment_3 = 1
+		cnc_equipment_4 = 1
 
 		land_Drone_equipment = 1
 		land_Drone_equipment1 = 1
@@ -333,10 +333,10 @@ capital = 1182
 		Anti_tank_2 = 1
 
 
-		transport_helicopter1 = 1
-		nsb_transport_helicopter1 = 1
-		transport_helicopter2 = 1
-		nsb_transport_helicopter2 = 1
+		transport_helicopter_1 = 1
+		nsb_transport_helicopter_1 = 1
+		transport_helicopter_2 = 1
+		nsb_transport_helicopter_2 = 1
 
 
 
@@ -1785,7 +1785,7 @@ capital = 1182
 		}
 		create_equipment_variant = {
 			name = "Colt Commando"
-			type = infantry_weapons2
+			type = infantry_weapons_3
 			upgrades = {
 				Inf_eq_gadjets = 1
 				Inf_eq_heavy_weapons = 1
@@ -1796,7 +1796,7 @@ capital = 1182
 		}
 		create_equipment_variant = {
 			name = "M16A2"
-			type = infantry_weapons2
+			type = infantry_weapons_3
 			upgrades = {
 				Inf_eq_gadjets = 1
 				Inf_eq_heavy_weapons = 1
@@ -1807,7 +1807,7 @@ capital = 1182
 		}
 		create_equipment_variant = {
 			name = "M4 SOPMOD Block I"
-			type = infantry_weapons3
+			type = infantry_weapons_4
 			upgrades = {
 				Inf_eq_gadjets = 2
 				Inf_eq_heavy_weapons = 2
@@ -1818,7 +1818,7 @@ capital = 1182
 		}
 		create_equipment_variant = {
 			name = "Colt M16A4"
-			type = infantry_weapons3
+			type = infantry_weapons_4
 			upgrades = {
 				Inf_eq_gadjets = 2
 				Inf_eq_heavy_weapons = 2
@@ -1933,7 +1933,7 @@ capital = 1182
 		}
 		create_equipment_variant = {
 			name = "Textron C4I"
-			type = command_control_equipment3
+			type = cnc_equipment_4
 			upgrades = {
 			Cnc_eq_better_ergonomics = 1
 			}
@@ -1942,7 +1942,7 @@ capital = 1182
 		}
 		create_equipment_variant = {
 			name = "UH-1H Huey"
-			type = transport_helicopter1
+			type = transport_helicopter_1
 			parent_version = 0
 			upgrades = {
 			}
@@ -1951,7 +1951,7 @@ capital = 1182
 		}
 		create_equipment_variant = {
 			name = "CH-46D Sea Knight"
-			type = transport_helicopter1
+			type = transport_helicopter_1
 			parent_version = 0
 			upgrades = {
 			}
@@ -1960,7 +1960,7 @@ capital = 1182
 		}
 		create_equipment_variant = {
 			name = "UH-1N Twin Huey"
-			type = transport_helicopter1
+			type = transport_helicopter_1
 			parent_version = 1
 			upgrades = {
 			}
@@ -1969,7 +1969,7 @@ capital = 1182
 		}
 		create_equipment_variant = {
 			name = "MH-6 Little Bird"
-			type = transport_helicopter2
+			type = transport_helicopter_2
 			parent_version = 2
 			upgrades = {
 			}
@@ -1978,7 +1978,7 @@ capital = 1182
 		}
 		create_equipment_variant = {
 			name = "MH-60L Black Hawk"
-			type = transport_helicopter2
+			type = transport_helicopter_2
 			parent_version = 2
 			upgrades = {
 			}
@@ -1987,7 +1987,7 @@ capital = 1182
 		}
 		create_equipment_variant = {
 			name = "HH-60L"
-			type = transport_helicopter2
+			type = transport_helicopter_2
 			parent_version = 2
 			upgrades = {
 			}
@@ -1996,7 +1996,7 @@ capital = 1182
 		}
 		create_equipment_variant = {
 			name = "MH-53J Pave Low"
-			type = transport_helicopter2
+			type = transport_helicopter_2
 			parent_version = 2
 			upgrades = {
 			}
@@ -2005,7 +2005,7 @@ capital = 1182
 		}
 		create_equipment_variant = {
 			name = "CH-53 Sea Stallion"
-			type = transport_helicopter2
+			type = transport_helicopter_2
 			parent_version = 1
 			upgrades = {
 			}
@@ -2014,7 +2014,7 @@ capital = 1182
 		}
 		create_equipment_variant = {
 			name = "CH-47 Chinook"
-			type = transport_helicopter2
+			type = transport_helicopter_2
 			parent_version = 1
 			upgrades = {
 			}
@@ -2023,7 +2023,7 @@ capital = 1182
 		}
 		create_equipment_variant = {
 			name = "MH-47 Chinook"
-			type = transport_helicopter2
+			type = transport_helicopter_2
 			parent_version = 1
 			upgrades = {
 			}
@@ -2032,7 +2032,7 @@ capital = 1182
 		}
 		create_equipment_variant = {
 			name = "UH-60L Black Hawk"
-			type = transport_helicopter2
+			type = transport_helicopter_2
 			parent_version = 3
 			upgrades = {
 			}
@@ -4977,16 +4977,16 @@ capital = 1182
 
 	# Starting tech
 	set_technology = {
-		infantry_weapons4 = 1 #2005
-		infantry_weapons5 = 1 #2015 MARS-L
+		infantry_weapons_5 = 1 #2005
+		infantry_weapons_6 = 1 #2015 MARS-L
 		support_weapons5 = 1
 
 		special_forces4 = 1 #Imitate American Special Force Dominace
 		special_forces5 = 1
 		transport_plane4 = 1
 
-		command_control_equipment3 = 1
-		command_control_equipment4 = 1 #2015
+		cnc_equipment_4 = 1
+		cnc_equipment_5 = 1 #2015
 
 		land_Drone_equipment2 = 1 #2005 Scaneagle
 		land_Drone_equipment3 = 1 #2015
@@ -5311,7 +5311,7 @@ capital = 1182
 		# Non-MTG Else
 		else = {
 			set_technology = {
-				transport_helicopter3 = 1
+				transport_helicopter_3 = 1
 
 				corvette_hull_4 = 1
 				corvette_hull_5 = 1
@@ -5513,55 +5513,55 @@ capital = 1182
 	}
 	create_equipment_variant = {
 		name = "Sea King HU5"
-		type = transport_helicopter1
+		type = transport_helicopter_1
 		upgrades = { }
 		obsolete = yes
 	}
 		create_equipment_variant = {
 		name = "Bell UH-1 Iroquois"
-		type = transport_helicopter1
+		type = transport_helicopter_1
 		upgrades = { }
 		obsolete = yes
 	}
 	create_equipment_variant = {
 		name = "Bell 214"
-		type = transport_helicopter1
+		type = transport_helicopter_1
 		upgrades = { }
 		obsolete = yes
 	}
 	create_equipment_variant = {
 		name = "Bell 214ST"
-		type = transport_helicopter1
+		type = transport_helicopter_1
 		upgrades = { }
 		obsolete = yes
 	}
 	create_equipment_variant = {
 		name = "Bell 206"
-		type = transport_helicopter1
+		type = transport_helicopter_1
 		upgrades = { }
 		obsolete = yes
 	}
 	create_equipment_variant = {
 		name = "Sikorsky CH-53 Sea Stallion"
-		type = transport_helicopter1
+		type = transport_helicopter_1
 		upgrades = { }
 		obsolete = yes
 	}
 	create_equipment_variant = {
 		name = "Boeing CH-47C Chinook"
-		type = transport_helicopter1
+		type = transport_helicopter_1
 		upgrades = { }
 		obsolete = yes
 	}
 	create_equipment_variant = {
 		name = "CH-47D Chinook"
-		type = transport_helicopter2
+		type = transport_helicopter_2
 		upgrades = { }
 		obsolete = yes
 	}
 	create_equipment_variant = {
 		name = "Bell UH-1Y Venom"
-		type = transport_helicopter1
+		type = transport_helicopter_1
 		upgrades = { }
 		obsolete = yes
 	}
@@ -5573,7 +5573,7 @@ capital = 1182
 	}
 	create_equipment_variant = {
 		name = "Eurocopter UH-72 Lakota"
-		type = transport_helicopter3 #Eurocopter UH-72 Lakota
+		type = transport_helicopter_3 #Eurocopter UH-72 Lakota
 		upgrades = { }
 	}
 	create_equipment_variant = {
@@ -5634,3 +5634,4 @@ capital = 1182
 		}
 	}
 }
+

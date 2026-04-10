@@ -90,12 +90,12 @@ capital = 49
 	set_technology = {
 
 		infantry_mass_assault = 1
-		infantry_weapons = 1
+		infantry_weapons_1 = 1
 		#Give some night vision
 		night_vision_1 = 1
 		night_vision_2 = 1
 		#Old Radios
-		command_control_equipment = 1
+		cnc_equipment_1 = 1
 		combat_eng_equipment = 1
 		Anti_tank_0 = 1
 
@@ -541,3 +541,4 @@ capital = 49
 
 	startup_politics = yes
 }
+

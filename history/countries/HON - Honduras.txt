@@ -91,9 +91,9 @@ capital = 846
 		infantry_mass_assault = 1
 
 		#Basic Rifles
-		infantry_weapons = 1
+		infantry_weapons_1 = 1
 		#Old Radios
-		command_control_equipment = 1
+		cnc_equipment_1 = 1
 
 		#Needed for SPAA template
 
@@ -210,3 +210,4 @@ capital = 846
 	recruit_character = HON_javier_barrientos_alvarado
 	recruit_character = HON_rene_orlando_ponce_fonseca
 }
+

@@ -1,4 +1,4 @@
-﻿capital = 875
+capital = 875
 2000.1.1 = {
 	set_cosmetic_tag = VEN
 	set_country_flag = dynamic_flag
@@ -142,16 +142,16 @@
 
 		infantry_mass_assault = 1
 
-		infantry_weapons = 1
-		command_control_equipment = 1
-		command_control_equipment1 = 1
+		infantry_weapons_1 = 1
+		cnc_equipment_1 = 1
+		cnc_equipment_2 = 1
 		combat_eng_equipment = 1
 		Anti_tank_0 = 1
 		Heavy_Anti_tank_0 = 1
 
 
-		transport_helicopter1 = 1
-		nsb_transport_helicopter1 = 1
+		transport_helicopter_1 = 1
+		nsb_transport_helicopter_1 = 1
 
 		util_vehicle_0 = 1
 		util_vehicle_1 = 1
@@ -372,3 +372,4 @@
 	recruit_character = VEN_orlando_miguel_maneiro_gaspar
 	recruit_character = VEN_carlos_jose_vieira_acevedo
 }
+

@@ -66,10 +66,10 @@ capital = 762
 		combined_arms = 1
 
 		#Colt C8
-		infantry_weapons = 1
-		infantry_weapons1 = 1
-		infantry_weapons2 = 1
-		infantry_weapons3 = 1
+		infantry_weapons_1 = 1
+		infantry_weapons_2 = 1
+		infantry_weapons_3 = 1
+		infantry_weapons_4 = 1
 
 		support_weapons = 1
 		support_weapons2 = 1
@@ -86,10 +86,10 @@ capital = 762
 		night_vision_2 = 1
 		night_vision_3 = 1
 
-		command_control_equipment = 1
-		command_control_equipment1 = 1
-		command_control_equipment2 = 1
-		command_control_equipment3 = 1
+		cnc_equipment_1 = 1
+		cnc_equipment_2 = 1
+		cnc_equipment_3 = 1
+		cnc_equipment_4 = 1
 
 		land_Drone_equipment = 1
 		land_Drone_equipment1 = 1
@@ -271,3 +271,4 @@ capital = 762
 
 	recruit_character = QUE_air_chief
 }
+

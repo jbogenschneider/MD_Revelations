@@ -372,10 +372,10 @@ capital = 742
 
 				L_Strike_fighter1 = 1
 
-				transport_helicopter1 = 1
-		nsb_transport_helicopter1 = 1
-				transport_helicopter2 = 1
-		nsb_transport_helicopter2 = 1
+				transport_helicopter_1 = 1
+		nsb_transport_helicopter_1 = 1
+				transport_helicopter_2 = 1
+		nsb_transport_helicopter_2 = 1
 			}
 		}
 	}
@@ -422,10 +422,10 @@ capital = 742
 
 		combined_arms = 1
 
-		infantry_weapons = 1
-		infantry_weapons1 = 1
-		infantry_weapons2 = 1
-		infantry_weapons3 = 1
+		infantry_weapons_1 = 1
+		infantry_weapons_2 = 1
+		infantry_weapons_3 = 1
+		infantry_weapons_4 = 1
 
 		combat_eng_equipment = 1
 
@@ -433,9 +433,9 @@ capital = 742
 		night_vision_2 = 1
 		night_vision_3 = 1 #1985
 
-		command_control_equipment = 1
-		command_control_equipment1 = 1
-		command_control_equipment2 = 1
+		cnc_equipment_1 = 1
+		cnc_equipment_2 = 1
+		cnc_equipment_3 = 1
 
 		support_weapons = 1
 		tandem_charge_warheads = 1
@@ -458,8 +458,8 @@ capital = 742
 		Heavy_Anti_tank_0 = 1
 
 
-		transport_helicopter1 = 1
-		nsb_transport_helicopter1 = 1
+		transport_helicopter_1 = 1
+		nsb_transport_helicopter_1 = 1
 
 		body_armor_1980 = 1
 		camouflage = 1
@@ -676,3 +676,4 @@ capital = 742
 	recruit_character = AST_john_harvey
 	recruit_character = AST_warren_mcdonald
 }
+

@@ -62,10 +62,10 @@ capital = 795
 
 		combined_arms = 1
 
-		infantry_weapons = 1
-		infantry_weapons1 = 1
-		infantry_weapons2 = 1
-		infantry_weapons3 = 1
+		infantry_weapons_1 = 1
+		infantry_weapons_2 = 1
+		infantry_weapons_3 = 1
+		infantry_weapons_4 = 1
 		support_weapons = 1
 		squad_automatic_weapon = 1
 		tandem_charge_warheads = 1
@@ -82,10 +82,10 @@ capital = 795
 		night_vision_2 = 1
 		night_vision_3 = 1 #1985
 
-		command_control_equipment = 1
-		command_control_equipment1 = 1
-		command_control_equipment2 = 1
-		command_control_equipment3 = 1
+		cnc_equipment_1 = 1
+		cnc_equipment_2 = 1
+		cnc_equipment_3 = 1
+		cnc_equipment_4 = 1
 
 		land_Drone_equipment = 1
 		land_Drone_equipment1 = 1
@@ -111,10 +111,10 @@ capital = 795
 		Heavy_Anti_tank_2 = 1
 
 
-		transport_helicopter1 = 1
-		nsb_transport_helicopter1 = 1
-		transport_helicopter2 = 1
-		nsb_transport_helicopter2 = 1
+		transport_helicopter_1 = 1
+		nsb_transport_helicopter_1 = 1
+		transport_helicopter_2 = 1
+		nsb_transport_helicopter_2 = 1
 
 
 
@@ -465,7 +465,7 @@ capital = 795
 
 		create_equipment_variant = {
 			name = "Colt M16A4"
-			type = infantry_weapons3
+			type = infantry_weapons_4
 			upgrades = {
 				Inf_eq_gadjets = 2
 				Inf_eq_heavy_weapons = 2
@@ -488,14 +488,14 @@ capital = 795
 		}
 		create_equipment_variant = {
 			name = "Textron C4I"
-			type = command_control_equipment3
+			type = cnc_equipment_4
 			upgrades = {
 			Cnc_eq_better_ergonomics = 1
 			}
 		}
 			create_equipment_variant = {
 			name = "UH-60A"
-			type = transport_helicopter2
+			type = transport_helicopter_2
 			upgrades = {
 			}
 		}
@@ -813,3 +813,4 @@ capital = 795
 		}
 	}
 }
+
