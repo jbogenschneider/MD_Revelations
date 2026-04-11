@@ -52,6 +52,7 @@ state = {
 			arms_factory = 3
 			offices = 2
 			industrial_complex = 3
+			renewable_energy_infra = 2
 			air_base = 4
 			4520 = {
 				naval_base = 2
@@ -63,7 +64,6 @@ state = {
 			}
 
 		}
-		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
 		set_variable = { state_renewable_capacity_factor_modifier_var = 0.40 }		
 		add_core_of = AST
 		2025.1.1 = {

@@ -23,6 +23,7 @@ state = {
 			add_manpower = 611631
 			buildings = {
 				internet_station = 4
+				renewable_energy_infra = 2
 			}
 		}
 	}

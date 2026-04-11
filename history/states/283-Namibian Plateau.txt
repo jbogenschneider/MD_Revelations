@@ -18,13 +18,13 @@ state = {
 			infrastructure = 2
 			internet_station = 1
 			air_base = 4
+			renewable_energy_infra = 1
 			10978 = {
 				naval_base = 2
 
 			}
 			industrial_complex = 1
 		}
-		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
 		set_variable = { state_renewable_capacity_factor_modifier_var = 0.53 }
 		add_core_of = NAM
 	}

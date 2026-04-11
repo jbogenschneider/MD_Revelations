@@ -18,6 +18,7 @@ state = {
 		buildings = {
 			infrastructure = 3
 			internet_station = 2
+			renewable_energy_infra = 2
 			offices = 2
 			arms_factory = 2
 		}

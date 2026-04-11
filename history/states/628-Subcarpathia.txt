@@ -15,7 +15,7 @@ state = {
 			internet_station = 1
 			arms_factory = 2
 			air_base = 2
-			synthetic_refinery = 2
+			renewable_energy_infra = 2
 			industrial_complex = 2
 		}
 		add_core_of = POL

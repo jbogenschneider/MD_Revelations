@@ -1966,12 +1966,6 @@ technologies = {
 			hard_attack = 0.08
 			defense = 0.03
 			breakthrough = -0.10
-			need = {
-				Inf_equipment = 42
-				L_AT_Equipment = 2
-				AA_Equipment = 1
-				command_control_equipment = 5
-			}
 			plains = {
 				attack = 0.05
 			}
@@ -1985,12 +1979,6 @@ technologies = {
 			hard_attack = 0.08
 			defense = 0.03
 			breakthrough = -0.10
-			need = {
-				Inf_equipment = 42
-				L_AT_Equipment = 2
-				AA_Equipment = 1
-				command_control_equipment = 5
-			}
 			plains = {
 				attack = 0.05
 			}
@@ -2004,14 +1992,6 @@ technologies = {
 			hard_attack = 0.08
 			defense = 0.03
 			breakthrough = -0.10
-			need = {
-				Inf_equipment = 46
-				L_AT_Equipment = 2
-				H_AT_Equipment = 1
-				AA_Equipment = 2
-				command_control_equipment = 5
-				util_vehicle_equipment = 10
-			}
 			plains = {
 				attack = 0.05
 			}
@@ -2025,14 +2005,6 @@ technologies = {
 			hard_attack = 0.08
 			defense = 0.03
 			breakthrough = -0.10
-			need = {
-				Inf_equipment = 46
-				L_AT_Equipment = 2
-				H_AT_Equipment = 1
-				AA_Equipment = 2
-				command_control_equipment = 7
-				medium_tank_amphibious_chassis = 10
-			}
 			plains = {
 				attack = 0.05
 			}
@@ -2046,14 +2018,6 @@ technologies = {
 			hard_attack = 0.08
 			defense = 0.03
 			breakthrough = -0.10
-			need = {
-				Inf_equipment = 46
-				L_AT_Equipment = 2
-				H_AT_Equipment = 1
-				AA_Equipment = 2
-				command_control_equipment = 7
-				medium_tank_flame_chassis = 10
-			}
 			plains = {
 				attack = 0.05
 			}
@@ -2067,10 +2031,6 @@ technologies = {
 			hard_attack = 0.08
 			defense = 0.03
 			breakthrough = -0.10
-			need = {
-				command_control_equipment = 7
-				medium_tank_destroyer_chassis = 7
-			}
 			plains = {
 				attack = 0.05
 			}
@@ -2085,20 +2045,12 @@ technologies = {
 			breakthrough = -0.08
 			entrenchment = 0.08
 			initiative = 0.02
-			need = {
-				command_control_equipment = 15
-				util_vehicle_equipment = 10
-			}
 		}
 		combat_service_support_company = {
 			defense = 0.15
 			entrenchment = 0.10
 			initiative = 0.05
 			breakthrough = -0.02
-			need = {
-				command_control_equipment = 15
-				util_vehicle_equipment = 10
-			}
 		}
 		attack_helo_comp = {
 			recon = 0.6
@@ -2240,9 +2192,6 @@ technologies = {
 			entrenchment = 0.12
 			initiative = 0.03
 			need = {
-				command_control_equipment = 2
-			}
-			need = {
 				land_drone_equipment_type = 2
 			}
 		}
@@ -2259,9 +2208,6 @@ technologies = {
 			soft_attack = 0.08
 			breakthrough = 0.10
 			initiative = 0.03
-			need = {
-				command_control_equipment = 2
-			}
 		}
 		attack_helo_comp = {
 			recon = 0.6

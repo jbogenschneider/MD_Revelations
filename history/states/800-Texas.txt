@@ -51,7 +51,6 @@ state = {
 		victory_points = { 1954 1 } #Marfa
 		victory_points = { 15361 1 } #Marathon
 
-		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
 		set_variable = { state_renewable_capacity_factor_modifier_var = 0.33 }	
 
 		buildings = {
@@ -75,7 +74,7 @@ state = {
 			add_manpower = 1002022
 			buildings = {
 				internet_station = 5
-				synthetic_refinery = 6
+				renewable_energy_infra = 6
 				infrastructure = 5
 				arms_factory = 6
 				industrial_complex = 12

@@ -6,7 +6,7 @@
 # The following variable is used to adjust the balance of the Population Energy Consumption
 @population_energy_use_balance_value = 28
 # Startup-only scalar for fossil plant seeding during bookmark setup.
-@startup_fossil_powerplant_multiplier = 1.60
+@startup_fossil_powerplant_multiplier = 0.80
 
 # Effect: calculate_energy_use
 # Purpose: Calculates the Energy Use of a nation for the Energy System
