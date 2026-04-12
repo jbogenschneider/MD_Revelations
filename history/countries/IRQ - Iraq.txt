@@ -125,7 +125,7 @@ capital = 557
 
 		cnc_equipment_1 = 1
 
-		util_vehicle_0 = 1
+		util_vehicle_1 = 1
 
 		Anti_tank_0 = 1
 		Heavy_Anti_tank_0 = 1
@@ -142,8 +142,8 @@ capital = 557
 		internet1 = 1 	#1G
 		fuel_silos = 1
 
-		industrial_electrospun_polymeric_nanofibers = 1
-		stereolitography = 1
+		nanofibers_1 = 1
+		printing_1 = 1
 		fuel_refining = 1
 		construction1 = 1
 
@@ -389,7 +389,7 @@ capital = 557
 			Early_APC = 1 #Vehicle Design
 			APC_1 = 1
 			IFV_1 = 1
-			artillery_0 = 1
+			tech_arty_0 = 1
 			SP_arty_0 = 1
 			SP_arty_1 = 1
 			SP_R_arty_0 = 1
@@ -555,13 +555,13 @@ capital = 557
 
 		cnc_equipment_1 = 1
 
-		land_Drone_equipment = 1
+		land_drone_equipment_type = 1
 
 		Rec_tank_0 = 1
 
-		util_vehicle_0 = 1
+		util_vehicle_1 = 1
 
-		artillery_0 = 1
+		tech_arty_0 = 1
 		SP_arty_0 = 1
 		SP_R_arty_0 = 1
 
@@ -586,9 +586,9 @@ capital = 557
 
 
 
-		tech_landing_craft = 1
+		tech_landing_craft_1 = 1
 
-		body_armor_1980 = 1
+		body_armor_1 = 1
 
 		microprocessors = 1
 		computing2 = 1
@@ -597,7 +597,7 @@ capital = 557
 		computing3 = 1
 		decryption3 = 1
 		encryption3 = 1
-		DNA_fingerprinting = 1
+		genetics_1 = 1
 
 		internet2 = 1 	#2G
 	}
@@ -611,7 +611,7 @@ capital = 557
 
 		else = {
 			set_technology = {
-				attack_helicopter1 = 1
+				attack_helicopter_1 = 1
 			}
 		}
 	}

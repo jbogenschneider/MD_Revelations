@@ -197,7 +197,7 @@ capital = 121
 
 		#For templates
 
-		util_vehicle_0 = 1
+		util_vehicle_1 = 1
 		combat_eng_equipment = 1
 		cnc_equipment_1 = 1
 		Anti_tank_0 = 1
@@ -206,7 +206,7 @@ capital = 121
 		transport_helicopter_1 = 1
 		nsb_transport_helicopter_1 = 1
 
-		body_armor_1980 = 1
+		body_armor_1 = 1
 
 		basic_computing = 1
 		integrated_circuit = 1
@@ -223,13 +223,13 @@ capital = 121
 		support_weapons2 = 1
 		tandem_charge_warheads = 1
 		squad_automatic_weapon = 1
-		special_forces = 1
+		special_forces_tech_1 = 1
 
-		industrial_electrospun_polymeric_nanofibers = 1
-		multiwalled_carbon_nanotubes = 1
-		stereolitography = 1
-		early_3D_printers = 1
-		DNA_fingerprinting = 1
+		nanofibers_1 = 1
+		nanofibers_2 = 1
+		printing_1 = 1
+		printing_2 = 1
+		genetics_1 = 1
 		fuel_refining = 1
 		fuel_refining2 = 1
 		energy_efficiency = 1
@@ -360,7 +360,7 @@ capital = 121
 				Early_APC = 1
 				APC_1 = 1
 				IFV_1 = 1
-				artillery_0 = 1
+				tech_arty_0 = 1
 				SP_arty_0 = 1
 				SP_R_arty_0 = 1
 				Anti_Air_0 = 1

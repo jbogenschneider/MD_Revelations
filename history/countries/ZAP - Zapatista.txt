@@ -60,9 +60,9 @@ capital = 839
 		combat_eng_equipment = 1
 		Anti_tank_0 = 1
 		Heavy_Anti_tank_0 = 1
-		util_vehicle_0 = 1
+		util_vehicle_1 = 1
 
-		body_armor_1980 = 1
+		body_armor_1 = 1
 
 		basic_computing = 1
 		integrated_circuit = 1
@@ -90,7 +90,7 @@ capital = 839
 				APC_1 = 1
 				MBT_1 = 1
 				IFV_1 = 1
-				artillery_0 = 1
+				tech_arty_0 = 1
 				Anti_Air_0 = 1
 				Rec_tank_0 = 1
 				Rec_tank_1 = 1
@@ -112,30 +112,30 @@ capital = 839
 			attack_submarine_hull_1 = 1
 			attack_submarine_hull_2 = 1
 
-			tech_submarine_engineering = 1
+			tech_submarine_engineering_1 = 1
 
 			tech_naval_systems_engineering = 1
-			tech_power_systems = 1
+			tech_power_systems_1 = 1
 
 			tech_combat_support_systems = 1
-			tech_fire_control = 1
-			tech_combat_radar = 1
+			tech_fire_control_1 = 1
 			tech_combat_radar_1 = 1
-			tech_combat_sonar = 1
+			tech_combat_radar_1 = 1
+			tech_combat_sonar_1 = 1
 
 			tech_naval_weapon_systems = 1
-			tech_light_guns = 1
+			tech_light_guns_1 = 1
 
-			tech_point_defense_system = 1
+			tech_point_defense_system_1 = 1
 
-			tech_turret_missiles_surface = 1
-			tech_turret_missiles_aa = 1
-			tech_vls_surface = 1
-			tech_vls_aa = 1
+			tech_turret_missiles_surface_1 = 1
+			tech_turret_missiles_aa_1 = 1
+			tech_vls_surface_1 = 1
+			tech_vls_aa_1 = 1
 
-			tech_torpedoes = 1
+			tech_torpedoes_1 = 1
 
-			tech_landing_craft = 1
+			tech_landing_craft_1 = 1
 		}
 
 	#Politics

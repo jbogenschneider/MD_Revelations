@@ -221,7 +221,7 @@ focus_tree = {
 		prerequisite = { focus = REV_LUX_NATO_land_drone_program }
 		ai_will_do = { base = 1 }
 		completion_reward = {
-			set_technology = { land_Drone_equipment3 = 1 }
+			set_technology = { land_drone_equipment_3 = 1 }
 			air_experience = 5
 		}
 	}
@@ -257,7 +257,7 @@ focus_tree = {
 		prerequisite = { focus = REV_LUX_NATO_networked_drone_fires }
 		ai_will_do = { base = 1 }
 		completion_reward = {
-			set_technology = { land_Drone_equipment4 = 1 }
+			set_technology = { land_drone_equipment_4 = 1 }
 			army_experience = 15
 		}
 	}
@@ -358,4 +358,5 @@ focus_tree = {
 		completion_reward = { set_stability = 0.60 }
 	}
 }
+
 

@@ -73,7 +73,7 @@ capital = 368
 		cnc_equipment_1 = 1
 		Anti_tank_0 = 1
 		Heavy_Anti_tank_0 = 1
-		util_vehicle_0 = 1
+		util_vehicle_1 = 1
 
 		basic_computing = 1
 		integrated_circuit = 1
@@ -99,7 +99,7 @@ capital = 368
 				MBT_1 = 1
 				Early_APC = 1
 				APC_1 = 1
-				artillery_0 = 1
+				tech_arty_0 = 1
 				SP_arty_0 = 1
 				Anti_Air_0 = 1
 				Rec_tank_0 = 1
@@ -204,7 +204,7 @@ capital = 368
 	startup_politics = yes
 
 	create_country_leader = {
-		name = "Alpha Oumar Konaré"
+		name = "Alpha Oumar KonarÃ©"
 		picture = "alpha_oumar_konare.dds"
 		ideology = neutral_Social
 		traits = {

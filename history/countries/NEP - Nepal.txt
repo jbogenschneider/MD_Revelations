@@ -89,7 +89,7 @@ capital = 485
 
 		combat_eng_equipment = 1
 
-		body_armor_1980 = 1
+		body_armor_1 = 1
 
 		basic_computing = 1
 		integrated_circuit = 1
@@ -113,7 +113,7 @@ capital = 485
 		else = {
 			set_technology = {
 				Early_APC = 1
-				artillery_0 = 1
+				tech_arty_0 = 1
 				Anti_Air_0 = 1
 				Rec_tank_0 = 1
 			}

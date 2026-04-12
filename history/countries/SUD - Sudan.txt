@@ -87,7 +87,7 @@ capital = 220
 		nsb_transport_helicopter_1 = 1
 
 		#Amir IFV
-		util_vehicle_0 = 1
+		util_vehicle_1 = 1
 
 
 		basic_computing = 1
@@ -98,8 +98,8 @@ capital = 220
 		radar = 1
 		fuel_silos = 1
 
-		industrial_electrospun_polymeric_nanofibers = 1
-		stereolitography = 1
+		nanofibers_1 = 1
+		printing_1 = 1
 		fuel_refining = 1
 		construction1 = 1
 	}
@@ -171,7 +171,7 @@ capital = 220
 				APC_2 = 1
 				APC_3 = 1
 				APC_4 = 1
-				artillery_0 = 1
+				tech_arty_0 = 1
 				#Abu Fatma SPG
 				SP_arty_0 = 1
 				SP_R_arty_0 = 1

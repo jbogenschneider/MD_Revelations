@@ -61,13 +61,13 @@ capital = 199
 		infantry_weapons_1 = 1
 		combat_eng_equipment = 1
 		cnc_equipment_1 = 1
-		util_vehicle_0 = 1
+		util_vehicle_1 = 1
 		Anti_tank_0 = 1
 		AT_upgrade_1 = 1
 		Heavy_Anti_tank_0 = 1
 
-		camouflage = 1
-		camouflage2 = 1
+		camouflage_1 = 1
+		camouflage_2 = 1
 
 		basic_computing = 1
 		integrated_circuit = 1
@@ -78,8 +78,8 @@ capital = 199
 		radar = 1
 		fuel_silos = 1
 
-		industrial_electrospun_polymeric_nanofibers = 1
-		stereolitography = 1
+		nanofibers_1 = 1
+		printing_1 = 1
 		fuel_refining = 1
 		construction1 = 1
 	}
@@ -143,7 +143,7 @@ capital = 199
 		cnc_equipment_1 = 1
 		Anti_tank_0 = 1
 		Anti_Air_0 = 1
-		util_vehicle_0 = 1
+		util_vehicle_1 = 1
 		Heavy_Anti_tank_0 = 1
 
 		basic_computing = 1

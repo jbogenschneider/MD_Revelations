@@ -60,8 +60,8 @@ capital = 630
 		internet1 = 1 	#1G
 		fuel_silos = 1
 
-		industrial_electrospun_polymeric_nanofibers = 1
-		stereolitography = 1
+		nanofibers_1 = 1
+		printing_1 = 1
 		fuel_refining = 1
 		construction1 = 1
 	}
@@ -76,7 +76,7 @@ capital = 630
 		else = {
 			set_technology = {
 				SP_R_arty_0 = 1
-				artillery_0 = 1
+				tech_arty_0 = 1
 				SP_arty_0 = 1
 				Anti_Air_0 = 1
 			}

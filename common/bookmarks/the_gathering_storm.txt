@@ -135,9 +135,6 @@ bookmarks = {
 				g7_member
 			}
 			focuses = {
-				ENG_the_future_of_britain
-				ENG_brexit_referendum
-				ENG_vitalize_westminster
 			}
 		}
 		"JAP" = {
@@ -145,14 +142,9 @@ bookmarks = {
 			history = "JAP_MODERN_DAY_DESC"
 			ideology = democratic
 			ideas = {
-				article_nine_jap
 				idea_JAP_emperor_akihito
-				JAP_deflation
 			}
 			focuses = {
-				JAP_new_imperial_society
-				JAP_popular_state
-				JAP_democratic_state
 			}
 		}
 		"CAN" = {
@@ -1289,9 +1281,13 @@ bookmarks = {
 				#set_technology = { tech_landing_craft_6 = 1 }
 			}
 			SOV = {
+				complete_special_project = sp:sp_composite_production
+				complete_special_project = sp:sp_microchip_production
 				complete_special_project = sp:sp_space_program_gdm
 				complete_special_project = sp:sp_missile_project
 				complete_special_project = sp:sp_missile_project_non_got
+				set_technology = { microchip_production_1 = 1 }
+				set_technology = { composite_production_1 = 1 }
 				set_technology = { AS_Fighter4 = 1 }
 				set_technology = { Strike_fighter3 = 1 }
 				set_technology = { night_vision_3 = 1 }
@@ -1348,8 +1344,10 @@ bookmarks = {
 				set_technology = { GLCM5_non_got = 1 }
 			}
 			UKR = {
+				complete_special_project = sp:sp_composite_production
 				complete_special_project = sp:sp_missile_project
 				complete_special_project = sp:sp_missile_project_non_got
+				set_technology = { composite_production_1 = 1 }
 				set_technology = { night_vision_3 = 1 }
 				set_technology = { cnc_equipment_4 = 1 }
 				set_technology = { cnc_equipment_5 = 1 }
@@ -1425,11 +1423,34 @@ bookmarks = {
 				set_technology = { TEL_4_non_got = 1 }
 				set_technology = { TEL_4 = 1 }
 			}
+			HOL = {
+				#complete_special_project = sp:sp_space_program_gdm
+				complete_special_project = sp:sp_composite_production
+				complete_special_project = sp:sp_microchip_production
+				set_technology = { microchip_production_1 = 1 }
+				set_technology = { microchip_production_2 = 1 }
+				set_technology = { microchip_production_3 = 1 }
+				set_technology = { microchip_production_4 = 1 }
+				set_technology = { composite_production_1 = 1 }
+				set_technology = { composite_production_2 = 1 }
+				set_technology = { composite_production_3 = 1 }
+				set_technology = { composite_production_4 = 1 }
+			}
 		    GER = {
 				#complete_special_project = sp:sp_space_program_gdm
+				complete_special_project = sp:sp_composite_production
+				complete_special_project = sp:sp_microchip_production
 				complete_special_project = sp:sp_space_program_gdm
 				complete_special_project = sp:sp_missile_project
 				complete_special_project = sp:sp_missile_project_non_got
+				set_technology = { microchip_production_1 = 1 }
+				set_technology = { microchip_production_2 = 1 }
+				set_technology = { microchip_production_3 = 1 }
+				set_technology = { microchip_production_4 = 1 }
+				set_technology = { composite_production_1 = 1 }
+				set_technology = { composite_production_2 = 1 }
+				set_technology = { composite_production_3 = 1 }
+				set_technology = { composite_production_4 = 1 }
 				set_technology = { night_vision_3 = 1 }
 				set_technology = { cnc_equipment_4 = 1 }
 				set_technology = { cnc_equipment_5 = 1 }
@@ -1545,9 +1566,17 @@ bookmarks = {
 			ENG = {
 				#complete_special_project = sp:sp_space_program_gdm
 				complete_special_project = sp:sp_nuclear_warhead_program
+				complete_special_project = sp:sp_composite_production
+				complete_special_project = sp:sp_microchip_production
 				complete_special_project = sp:sp_space_program_gdm
 				complete_special_project = sp:sp_missile_project
 				complete_special_project = sp:sp_missile_project_non_got
+				set_technology = { microchip_production_1 = 1 }
+				set_technology = { microchip_production_2 = 1 }
+				set_technology = { microchip_production_3 = 1 }
+				set_technology = { composite_production_1 = 1 }
+				set_technology = { composite_production_2 = 1 }
+				set_technology = { composite_production_3 = 1 }
 				set_technology = { night_vision_3 = 1 }
 				set_technology = { cnc_equipment_4 = 1 }
 				set_technology = { land_drone_equipment_3 = 1 }
@@ -1657,9 +1686,17 @@ bookmarks = {
 			
 			}
 			FRA = {
+				complete_special_project = sp:sp_composite_production
+				complete_special_project = sp:sp_microchip_production
 				complete_special_project = sp:sp_space_program_gdm
 				complete_special_project = sp:sp_missile_project
 				complete_special_project = sp:sp_missile_project_non_got
+				set_technology = { microchip_production_1 = 1 }
+				set_technology = { microchip_production_2 = 1 }
+				set_technology = { microchip_production_3 = 1 }
+				set_technology = { composite_production_1 = 1 }
+				set_technology = { composite_production_2 = 1 }
+				set_technology = { composite_production_3 = 1 }
 				set_technology = { night_vision_3 = 1 }
 				set_technology = { cnc_equipment_4 = 1 }
 				set_technology = { land_drone_equipment_3 = 1 }
@@ -1768,8 +1805,15 @@ bookmarks = {
 			
 			}
 			CAN = {
+				complete_special_project = sp:sp_microchip_production
+				complete_special_project = sp:sp_composite_production
 				complete_special_project = sp:sp_missile_project
 				complete_special_project = sp:sp_missile_project_non_got
+				set_technology = { microchip_production_1 = 1 }
+				set_technology = { microchip_production_2 = 1 }
+				set_technology = { composite_production_1 = 1 }
+				set_technology = { composite_production_2 = 1 }
+				set_technology = { composite_production_3 = 1 }
 				set_technology = { night_vision_3 = 1 }
 				set_technology = { cnc_equipment_4 = 1 }
 				set_technology = { land_drone_equipment_3 = 1 }
@@ -1861,9 +1905,20 @@ bookmarks = {
 			USA = {
 				#complete_special_project = sp:sp_nuclear_warhead_program
 				#complete_special_project = sp:sp_nuclear_warhead_program
+				complete_special_project = sp:sp_microchip_production
+				complete_special_project = sp:sp_composite_production
 				complete_special_project = sp:sp_space_program_gdm
 				complete_special_project = sp:sp_missile_project
 				complete_special_project = sp:sp_missile_project_non_got
+				set_technology = { microchip_production_1 = 1 }
+				set_technology = { microchip_production_2 = 1 }
+				set_technology = { microchip_production_3 = 1 }
+				set_technology = { microchip_production_4 = 1 }
+				set_technology = { microchip_production_5 = 1 }
+				set_technology = { composite_production_1 = 1 }
+				set_technology = { composite_production_2 = 1 }
+				set_technology = { composite_production_3 = 1 }
+				set_technology = { composite_production_4 = 1 }
 				set_technology = { night_vision_3 = 1 }
 				set_technology = { cnc_equipment_4 = 1 }
 				set_technology = { cnc_equipment_5 = 1 }
@@ -2023,9 +2078,16 @@ bookmarks = {
 			}
 			KOR = {
 				#complete_special_project = sp:sp_space_program_gdm
-				complete_special_project = sp:sp_space_program_gdm
+				complete_special_project = sp:sp_composite_production
+				complete_special_project = sp:sp_microchip_production
 				complete_special_project = sp:sp_missile_project
 				complete_special_project = sp:sp_missile_project_non_got
+				set_technology = { microchip_production_1 = 1 }
+				set_technology = { microchip_production_2 = 1 }
+				set_technology = { microchip_production_3 = 1 }
+				set_technology = { composite_production_1 = 1 }
+				set_technology = { composite_production_2 = 1 }
+				set_technology = { composite_production_3 = 1 }
 				set_technology = { night_vision_3 = 1 }
 				set_technology = { cnc_equipment_4 = 1 }
 				set_technology = { land_drone_equipment_3 = 1 }
@@ -2356,6 +2418,12 @@ bookmarks = {
 			
 			}
 			SWE = {
+				complete_special_project = sp:sp_composite_production
+				complete_special_project = sp:sp_microchip_production
+				set_technology = { microchip_production_1 = 1 }
+				set_technology = { microchip_production_2 = 1 }
+				set_technology = { composite_production_1 = 1 }
+				set_technology = { composite_production_2 = 1 }
 				set_technology = { night_vision_3 = 1 }
 				set_technology = { land_drone_equipment_3 = 1 }
 				set_technology = { land_drone_equipment_4 = 1 }
@@ -2514,6 +2582,14 @@ bookmarks = {
 			
 			}
 			ITA = {
+				complete_special_project = sp:sp_composite_production
+				complete_special_project = sp:sp_microchip_production
+				complete_special_project = sp:sp_missile_project
+				complete_special_project = sp:sp_missile_project_non_got
+				set_technology = { microchip_production_1 = 1 }
+				set_technology = { microchip_production_2 = 1 }
+				set_technology = { composite_production_1 = 1 }
+				set_technology = { composite_production_2 = 1 }
 				set_technology = { night_vision_3 = 1 }
 				set_technology = { land_drone_equipment_3 = 1 }
 				set_technology = { land_drone_equipment_4 = 1 }
@@ -2593,9 +2669,19 @@ bookmarks = {
 			}
 			JAP = {
 				#complete_special_project = sp:sp_space_program_gdm
+				complete_special_project = sp:sp_composite_production
+				complete_special_project = sp:sp_microchip_production
 				complete_special_project = sp:sp_space_program_gdm
 				complete_special_project = sp:sp_missile_project
 				complete_special_project = sp:sp_missile_project_non_got
+				set_technology = { microchip_production_1 = 1 }
+				set_technology = { microchip_production_2 = 1 }
+				set_technology = { microchip_production_3 = 1 }
+				set_technology = { microchip_production_4 = 1 }
+				set_technology = { composite_production_1 = 1 }
+				set_technology = { composite_production_2 = 1 }
+				set_technology = { composite_production_3 = 1 }
+				set_technology = { composite_production_4 = 1 }
 				set_technology = { night_vision_3 = 1 }
 				set_technology = { cnc_equipment_4 = 1 }
 				set_technology = { land_drone_equipment_3 = 1 }
@@ -2690,6 +2776,23 @@ bookmarks = {
 
 			
 			}
+			TAI = {
+				complete_special_project = sp:sp_composite_production
+				complete_special_project = sp:sp_microchip_production
+				complete_special_project = sp:sp_space_program_gdm
+				complete_special_project = sp:sp_missile_project
+				complete_special_project = sp:sp_missile_project_non_got
+				set_technology = { microchip_production_1 = 1 }
+				set_technology = { microchip_production_2 = 1 }
+				set_technology = { microchip_production_3 = 1 }
+				set_technology = { microchip_production_4 = 1 }
+				set_technology = { microchip_production_5 = 1 }
+				set_technology = { composite_production_1 = 1 }
+				set_technology = { ICBM = 1 }
+				set_technology = { IRBM1 = 1 }
+				set_technology = { IRBM2 = 1 }
+				set_technology = { Air_UAV1 = 1 }
+			}
 			PER = {
 				complete_special_project = sp:sp_missile_project
 				complete_special_project = sp:sp_missile_project_non_got
@@ -2699,9 +2802,19 @@ bookmarks = {
 				set_technology = { Air_UAV1 = 1 }
 			}
 			CHI = {
+				complete_special_project = sp:sp_composite_production
+				complete_special_project = sp:sp_microchip_production
 				complete_special_project = sp:sp_space_program_gdm
 				complete_special_project = sp:sp_missile_project
 				complete_special_project = sp:sp_missile_project_non_got
+				set_technology = { microchip_production_1 = 1 }
+				set_technology = { microchip_production_2 = 1 }
+				set_technology = { microchip_production_3 = 1 }
+				set_technology = { microchip_production_4 = 1 }
+				set_technology = { composite_production_1 = 1 }
+				set_technology = { composite_production_2 = 1 }
+				set_technology = { composite_production_3 = 1 }
+				set_technology = { composite_production_4 = 1 }
 				set_technology = { night_vision_3 = 1 }
 				set_technology = { cnc_equipment_4 = 1 }
 				set_technology = { cnc_equipment_5 = 1 }

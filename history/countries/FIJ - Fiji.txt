@@ -161,7 +161,7 @@ capital = 535
 		infantry_mass_assault = 1
 		night_vision_1 = 1
 		support_weapons = 1
-		special_forces = 1
+		special_forces_tech_1 = 1
 
 		#Basic Rifles
 		infantry_weapons_1 = 1
@@ -194,7 +194,7 @@ capital = 535
 
 		else = {
 			set_technology = {
-				artillery_0 = 1
+				tech_arty_0 = 1
 				Anti_Air_0 = 1
 			}
 		}

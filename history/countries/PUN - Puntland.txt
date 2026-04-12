@@ -43,7 +43,7 @@ capital = 239
 
 		combat_eng_equipment = 1
 
-		util_vehicle_0 = 1
+		util_vehicle_1 = 1
 
 		infantry_mass_assault = 1
 

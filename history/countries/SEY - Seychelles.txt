@@ -83,7 +83,7 @@ capital = 565
 		cnc_equipment_1 = 1
 		Anti_tank_0 = 1
 		Heavy_Anti_tank_0 = 1
-		util_vehicle_0 = 1
+		util_vehicle_1 = 1
 
 		basic_computing = 1
 		integrated_circuit = 1
@@ -165,7 +165,7 @@ capital = 565
 	startup_politics = yes
 
 	create_country_leader = {
-		name = "France-Albert René"
+		name = "France-Albert RenÃ©"
 		picture = "France_Albert_Rene.dds"
 		ideology = anarchist_communism
 		traits = {

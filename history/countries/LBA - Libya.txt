@@ -122,13 +122,13 @@ capital = 391
 		cnc_equipment_1 = 1
 		Anti_tank_0 = 1
 		Heavy_Anti_tank_0 = 1
-		util_vehicle_0 = 1
+		util_vehicle_1 = 1
 
 		night_vision_1 = 1
 
-		body_armor_1980 = 1
-		camouflage = 1
-		camouflage2 = 1
+		body_armor_1 = 1
+		camouflage_1 = 1
+		camouflage_2 = 1
 
 		basic_computing = 1
 		integrated_circuit = 1
@@ -141,8 +141,8 @@ capital = 391
 
 		internet1 = 1
 
-		industrial_electrospun_polymeric_nanofibers = 1
-		stereolitography = 1
+		nanofibers_1 = 1
+		printing_1 = 1
 		fuel_refining = 1
 		construction1 = 1
 	}
@@ -193,20 +193,20 @@ capital = 391
 			early_APC = 1
 			APC_1 = 1
 			IFV_1 = 1
-			artillery_0 = 1
+			tech_arty_0 = 1
 			SP_arty_0 = 1
 			SP_Anti_Air_0 = 1
 			Anti_Air_0 = 1
 			Rec_tank_0 = 1
-			attack_helicopter1 = 1
+			attack_helicopter_1 = 1
 		}
 	}
 
 		set_technology = {
 			tech_early_naval_weapon_systems = 1
 			corvette_hull_1 = 1
-			tech_landing_craft = 1
-			tech_submarine_engineering = 1
+			tech_landing_craft_1 = 1
+			tech_submarine_engineering_1 = 1
 			attack_submarine_hull_1 = 1
 		}
 

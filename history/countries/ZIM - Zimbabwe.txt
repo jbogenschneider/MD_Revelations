@@ -70,7 +70,7 @@ capital = 290
 		Heavy_Anti_tank_0 = 1
 		combat_eng_equipment = 1
 
-		camouflage = 1
+		camouflage_1 = 1
 		basic_computing = 1
 		integrated_circuit = 1
 		computing1 = 1
@@ -79,8 +79,8 @@ capital = 290
 		radar = 1
 		fuel_silos = 1
 
-		industrial_electrospun_polymeric_nanofibers = 1
-		stereolitography = 1
+		nanofibers_1 = 1
+		printing_1 = 1
 		fuel_refining = 1
 		construction1 = 1
 	}
@@ -98,7 +98,7 @@ capital = 290
 				APC_1 = 1
 				MBT_1 = 1
 				IFV_1 = 1
-				artillery_0 = 1
+				tech_arty_0 = 1
 				SP_arty_0 = 1
 				SP_R_arty_0 = 1
 				Anti_Air_0 = 1

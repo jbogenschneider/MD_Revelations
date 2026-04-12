@@ -21,11 +21,11 @@ capital = 850
 		infantry_weapons_1 = 1
 		cnc_equipment_1 = 1
 		Anti_tank_0 = 1
-		util_vehicle_0 = 1
+		util_vehicle_1 = 1
 
 		night_vision_1 = 1
 
-		body_armor_1980 = 1
+		body_armor_1 = 1
 
 		basic_computing = 1
 		integrated_circuit = 1
@@ -183,7 +183,7 @@ capital = 850
 	startup_politics = yes
 
 	create_country_leader = {
-		name = "Miguel Ángel Rodríguez"
+		name = "Miguel Ãngel RodrÃ­guez"
 		picture = "miguel_rodriguez.dds"
 		ideology = conservatism
 		traits = {

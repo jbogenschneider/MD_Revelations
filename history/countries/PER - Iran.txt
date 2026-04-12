@@ -224,7 +224,7 @@ capital = 405
 		infantry_weapons_2 = 1
 		infantry_weapons_3 = 1
 		support_weapons = 1
-		special_forces = 1
+		special_forces_tech_1 = 1
 		combat_eng_equipment = 1
 		suicide_drone_1 = 1
 
@@ -234,7 +234,7 @@ capital = 405
 		#Tosan
 
 		#Aras
-		util_vehicle_0 = 1
+		util_vehicle_1 = 1
 
 		#Dehlavie AT (and Nafez)
 		Anti_tank_0 = 1
@@ -250,7 +250,7 @@ capital = 405
 		transport_helicopter_1 = 1
 		nsb_transport_helicopter_1 = 1
 
-		camouflage = 1
+		camouflage_1 = 1
 
 		basic_computing = 1
 		integrated_circuit = 1
@@ -263,9 +263,9 @@ capital = 405
 		internet2 = 1
 		fuel_silos = 1
 
-		industrial_electrospun_polymeric_nanofibers = 1
-		stereolitography = 1
-		DNA_fingerprinting = 1
+		nanofibers_1 = 1
+		printing_1 = 1
+		genetics_1 = 1
 		fuel_refining = 1
 		early_renewables = 1
 		renewables = 1
@@ -714,7 +714,7 @@ capital = 405
 				Early_APC = 1
 				APC_1 = 1
 				IFV_1 = 1
-				artillery_0 = 1
+				tech_arty_0 = 1
 				Arty_upgrade_1 = 1
 				SP_arty_0 = 1
 				SP_R_arty_0 = 1
@@ -725,7 +725,7 @@ capital = 405
 				Anti_Air_0 = 1
 				SP_Anti_Air_0 = 1
 				Rec_tank_0 = 1
-				attack_helicopter1 = 1
+				attack_helicopter_1 = 1
 			}
 		}
 	}
@@ -747,31 +747,31 @@ capital = 405
 			aircraft_carrier_engineering = 1
 			aircraft_heli_engineering_1 = 1
 
-			tech_submarine_engineering = 1
+			tech_submarine_engineering_1 = 1
 
 			tech_naval_systems_engineering = 1
-			tech_power_systems = 1
+			tech_power_systems_1 = 1
 
 			tech_combat_support_systems = 1
-			tech_fire_control = 1
-			tech_combat_radar = 1
+			tech_fire_control_1 = 1
 			tech_combat_radar_1 = 1
-			tech_combat_sonar = 1
+			tech_combat_radar_1 = 1
+			tech_combat_sonar_1 = 1
 
 			tech_early_naval_weapon_systems = 1
 			tech_naval_weapon_systems = 1
-			tech_light_guns = 1
+			tech_light_guns_1 = 1
 
-			tech_point_defense_system = 1
+			tech_point_defense_system_1 = 1
 
-			tech_turret_missiles_surface = 1
-			tech_turret_missiles_aa = 1
-			tech_vls_surface = 1
-			tech_vls_aa = 1
+			tech_turret_missiles_surface_1 = 1
+			tech_turret_missiles_aa_1 = 1
+			tech_vls_surface_1 = 1
+			tech_vls_aa_1 = 1
 
-			tech_torpedoes = 1
+			tech_torpedoes_1 = 1
 
-			tech_landing_craft = 1
+			tech_landing_craft_1 = 1
 		}
 
 		#Bayandor Class https://en.wikipedia.org/wiki/Bayandor-class_corvette
@@ -781,7 +781,7 @@ capital = 405
 			name_group = PER_DD_HISTORICAL
 			parent_version = 0
 			modules = {
-				fixed_ship_engine_slot = module_light_surface_diesel_power
+				fixed_ship_engine_slot = module_light_surface_diesel_power_1
 				fixed_ship_fire_control_system_slot = module_analog_fire_control
 				fixed_ship_radar_slot = module_radar_1
 				fixed_ship_auxillary_slot = module_asm_1
@@ -798,7 +798,7 @@ capital = 405
 			name_group = PER_DD_HISTORICAL
 			parent_version = 1
 			modules = {
-				fixed_ship_engine_slot = module_light_surface_diesel_power
+				fixed_ship_engine_slot = module_light_surface_diesel_power_1
 				fixed_ship_fire_control_system_slot = module_analog_fire_control
 				fixed_ship_radar_slot = module_radar_1
 				fixed_ship_auxillary_slot = module_chain_gun
@@ -814,7 +814,7 @@ capital = 405
 			name_group = PER_DD_HISTORICAL
 			parent_version = 1
 			modules = {
-				fixed_ship_engine_slot = module_light_surface_diesel_power
+				fixed_ship_engine_slot = module_light_surface_diesel_power_1
 				fixed_ship_fire_control_system_slot = module_analog_fire_control
 				fixed_ship_radar_slot = module_radar_1
 				fixed_ship_auxillary_slot = module_chain_gun
@@ -831,7 +831,7 @@ capital = 405
 			name_group = PER_DD_HISTORICAL
 			parent_version = 1
 			modules = {
-				fixed_ship_engine_slot = module_light_surface_diesel_power
+				fixed_ship_engine_slot = module_light_surface_diesel_power_1
 				fixed_ship_fire_control_system_slot = module_digital_integrated_fire_control
 				fixed_ship_radar_slot = module_radar_3
 				fixed_ship_auxillary_slot = module_asm_2
@@ -848,7 +848,7 @@ capital = 405
 			name_group = PER_DD_HISTORICAL
 			parent_version = 0
 			modules = {
-				fixed_ship_engine_slot = module_light_surface_diesel_power
+				fixed_ship_engine_slot = module_light_surface_diesel_power_1
 				fixed_ship_fire_control_system_slot = module_analog_fire_control
 				fixed_ship_radar_slot = module_radar_1
 				fixed_ship_auxillary_slot_2 = module_asm_1
@@ -867,7 +867,7 @@ capital = 405
 			name_group = PER_CV_HISTORICAL
 			parent_version = 0
 			modules = {
-				fixed_ship_engine_slot = module_surface_diesel_power
+				fixed_ship_engine_slot = module_surface_diesel_power_1
 				fixed_ship_fire_control_system_slot = module_digital_integrated_fire_control
 				fixed_ship_radar_slot = module_radar_1
 				fixed_ship_auxillary_slot_3 = empty
@@ -925,7 +925,7 @@ capital = 405
 				avionics_type_slot = avionics_manned_2
 				wingform_type_slot = wing_variable
 				special_slot_type_1 = spec_countermeasures_1
-				special_slot_type_2 = spec_refuel_3
+				special_slot_type_2 = empty
 				fixed_auxiliary_weapon_slot_1 = weap_mp_light_hardpoint_1
 			}
 			upgrades = {
@@ -1257,4 +1257,7 @@ capital = 405
 		}
 	}
 }
+
+
+
 

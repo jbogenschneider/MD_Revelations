@@ -105,7 +105,7 @@ capital = 107
 		night_vision_1 = 1
 		night_vision_2 = 1
 		support_weapons = 1
-		special_forces = 1
+		special_forces_tech_1 = 1
 
 		#For templates
 		infantry_weapons_1 = 1
@@ -113,11 +113,11 @@ capital = 107
 		cnc_equipment_1 = 1
 		Anti_tank_0 = 1
 		Heavy_Anti_tank_0 = 1
-		util_vehicle_0 = 1
+		util_vehicle_1 = 1
 
-		body_armor_1980 = 1
-		camouflage = 1
-		camouflage2 = 1
+		body_armor_1 = 1
+		camouflage_1 = 1
+		camouflage_2 = 1
 
 		basic_computing = 1
 		integrated_circuit = 1
@@ -131,11 +131,11 @@ capital = 107
 		gprs = 1
 		fuel_silos = 1
 
-		industrial_electrospun_polymeric_nanofibers = 1
-		multiwalled_carbon_nanotubes = 1
-		stereolitography = 1
-		early_3D_printers = 1
-		DNA_fingerprinting = 1
+		nanofibers_1 = 1
+		nanofibers_2 = 1
+		printing_1 = 1
+		printing_2 = 1
+		genetics_1 = 1
 		fuel_refining = 1
 		fuel_refining2 = 1
 		energy_efficiency = 1
@@ -158,7 +158,7 @@ capital = 107
 			set_technology = {
 				Early_APC = 1
 				APC_1 = 1
-				artillery_0 = 1
+				tech_arty_0 = 1
 				SP_arty_0 = 1
 				Anti_Air_0 = 1
 				Rec_tank_0 = 1

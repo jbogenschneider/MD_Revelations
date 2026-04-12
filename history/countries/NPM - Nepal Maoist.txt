@@ -33,7 +33,7 @@ capital = 706
 		cnc_equipment_1 = 1
 		Anti_tank_0 = 1
 		Heavy_Anti_tank_0 = 1
-		util_vehicle_0 = 1
+		util_vehicle_1 = 1
 
 		##Industrial/Engineering Techs
 		basic_computing = 1
@@ -61,7 +61,7 @@ capital = 706
 		else = {
 			set_technology = {
 				MBT_1 = 1
-				artillery_0 = 1
+				tech_arty_0 = 1
 				SP_R_arty_0 = 1
 				SP_arty_0 = 1
 				SP_Anti_Air_0 = 1

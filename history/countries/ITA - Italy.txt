@@ -373,17 +373,17 @@ capital = 81
 		squad_automatic_weapon = 1
 		support_weapons2 = 1
 		support_weapons3 = 1
-		special_forces = 1
-		special_forces2 = 1
-		special_forces3 = 1
-		special_forces4 = 1
-		camouflage = 1
+		special_forces_tech_1 = 1
+		special_forces_tech_2 = 1
+		special_forces_tech_3 = 1
+		special_forces_tech_4 = 1
+		camouflage_1 = 1
 
 		cnc_equipment_1 = 1
 		cnc_equipment_2 = 1
 		cnc_equipment_3 = 1
 
-		land_Drone_equipment = 1
+		land_drone_equipment_type = 1
 
 		Anti_tank_0 = 1
 		Heavy_Anti_tank_0 = 1
@@ -393,12 +393,12 @@ capital = 81
 
 		combat_eng_equipment = 1
 
-		util_vehicle_0 = 1
+		util_vehicle_1 = 1
 		util_vehicle_1 = 1
 		util_vehicle_2 = 1
 		util_vehicle_3 = 1
 
-		body_armor_1980 = 1
+		body_armor_1 = 1
 
 		night_vision_1 = 1
 		night_vision_2 = 1
@@ -423,15 +423,15 @@ capital = 81
 		gprs = 1
 		fuel_silos = 1
 
-		industrial_electrospun_polymeric_nanofibers = 1
-		multiwalled_carbon_nanotubes = 1
-		modern_electrospinning = 1
-		stereolitography = 1
-		early_3D_printers = 1
-		t3D_wax_printer = 1
-		DNA_fingerprinting = 1
-		modern_gmo = 1
-		gene_therapy = 1
+		nanofibers_1 = 1
+		nanofibers_2 = 1
+		nanofibers_3 = 1
+		printing_1 = 1
+		printing_2 = 1
+		printing_3 = 1
+		genetics_1 = 1
+		genetics_2 = 1
+		genetics_3 = 1
 		fuel_refining = 1
 		fuel_refining2 = 1
 		energy_efficiency = 1
@@ -603,7 +603,7 @@ capital = 81
 			upgrades = {
 				helicopter_nsb_upgrade = 3
 			}
-			icon = "GFX_ITA_attack_helicopter2_medium"
+			icon = "GFX_ITA_attack_helicopter_2_medium"
 		}
 
 		 create_equipment_variant = {
@@ -1070,8 +1070,8 @@ capital = 81
 				SP_arty_1 = 1
 
 				#FH-70
-				artillery_0 = 1
-				artillery_1 = 1
+				tech_arty_0 = 1
+				tech_arty_1 = 1
 				Arty_upgrade_1 = 1
 				Arty_upgrade_2 = 1
 				Arty_upgrade_3 = 1
@@ -1097,8 +1097,8 @@ capital = 81
 		nsb_transport_helicopter_1 = 1
 				transport_helicopter_2 = 1
 		nsb_transport_helicopter_2 = 1
-				attack_helicopter1 = 1
-				attack_helicopter2 = 1
+				attack_helicopter_1 = 1
+				attack_helicopter_2 = 1
 			}
 		}
 	}
@@ -1134,54 +1134,54 @@ capital = 81
 			aircraft_heli_engineering_1 = 1
 			aircraft_heli_engineering_2 = 1
 
-			tech_submarine_engineering = 1
+			tech_submarine_engineering_1 = 1
 			tech_submarine_engineering_1 = 1
 
 			tech_naval_systems_engineering = 1
-			tech_power_systems = 1
 			tech_power_systems_1 = 1
-			tech_nuclear_power_systems = 1
+			tech_power_systems_1 = 1
+			tech_nuclear_power_systems_1 = 1
 
 			tech_combat_support_systems = 1
-			tech_fire_control = 1
 			tech_fire_control_1 = 1
-			tech_combat_radar = 1
+			tech_fire_control_1 = 1
+			tech_combat_radar_1 = 1
 			tech_combat_radar_1 = 1
 			tech_combat_radar_2 = 1
-			tech_combat_sonar = 1
+			tech_combat_sonar_1 = 1
 			tech_combat_sonar_1 = 1
 			tech_combat_sonar_2 = 1
 
 			tech_early_naval_weapon_systems = 1
 			tech_naval_weapon_systems = 1
-			tech_light_guns = 1
+			tech_light_guns_1 = 1
 			tech_light_guns_1 = 1
 
-			tech_point_defense_system = 1
+			tech_point_defense_system_1 = 1
 			tech_point_defense_system_1 = 1
 			tech_point_defense_system_2 = 1
 			tech_point_defense_system_3 = 1
 
-			tech_turret_missiles_surface = 1
+			tech_turret_missiles_surface_1 = 1
 			tech_turret_missiles_surface_1 = 1
 			tech_turret_missiles_surface_2 = 1
-			tech_turret_missiles_aa = 1
+			tech_turret_missiles_aa_1 = 1
 			tech_turret_missiles_aa_1 = 1
 			tech_turret_missiles_aa_2 = 1
-			tech_vls_surface = 1
+			tech_vls_surface_1 = 1
 			tech_vls_surface_1 = 1
 			tech_vls_surface_2 = 1
-			tech_vls_aa = 1
+			tech_vls_aa_1 = 1
 			tech_vls_aa_1 = 1
 			tech_vls_aa_2 = 1
 
-			tech_torpedoes = 1
+			tech_torpedoes_1 = 1
 			tech_torpedoes_1 = 1
 
-			tech_landing_craft = 1
-			tech_amphibious_assault_ship = 1
-			tech_air_cushioned_landing_craft = 1
-			tech_modern_landing_craft = 1
+			tech_landing_craft_1 = 1
+			tech_landing_craft_2 = 1
+			tech_landing_craft_3 = 1
+			tech_landing_craft_4 = 1
 		}
 
 		#Todaro Class /type 212 german version
@@ -1301,7 +1301,7 @@ capital = 81
 			name_group = ITA_DD_HISTORICAL
 			parent_version = 0
 			modules = {
-				fixed_ship_engine_slot = module_light_surface_diesel_power
+				fixed_ship_engine_slot = module_light_surface_diesel_power_1
 				fixed_ship_fire_control_system_slot = module_digital_integrated_fire_control
 				fixed_ship_radar_slot = module_radar_3
 				fixed_ship_auxillary_slot_2 = module_asm_3
@@ -1320,7 +1320,7 @@ capital = 81
 			name_group = ITA_DD_HISTORICAL
 			parent_version = 0
 			modules = {
-				fixed_ship_engine_slot = module_light_surface_diesel_power
+				fixed_ship_engine_slot = module_light_surface_diesel_power_1
 				fixed_ship_fire_control_system_slot = module_digital_integrated_fire_control
 				fixed_ship_radar_slot = module_radar_3
 				fixed_ship_auxillary_slot_2 = module_ciws_2
@@ -1339,7 +1339,7 @@ capital = 81
 			name_group = ITA_DD_HISTORICAL
 			parent_version = 0
 			modules = {
-				fixed_ship_engine_slot = module_light_surface_diesel_power
+				fixed_ship_engine_slot = module_light_surface_diesel_power_1
 				fixed_ship_fire_control_system_slot = module_digital_integrated_fire_control
 				fixed_ship_radar_slot = module_radar_3
 				fixed_ship_auxillary_slot_2 = module_anti_submarine_mortar
@@ -1424,7 +1424,7 @@ capital = 81
 			name_group = ITA_DD_HISTORICAL
 			parent_version = 0
 			modules = {
-				fixed_ship_engine_slot = module_light_surface_diesel_power
+				fixed_ship_engine_slot = module_light_surface_diesel_power_1
 				fixed_ship_fire_control_system_slot = module_digital_integrated_fire_control
 				fixed_ship_radar_slot = module_sonar_3
 				fixed_ship_auxillary_slot = module_torpedoes_3
@@ -1440,7 +1440,7 @@ capital = 81
 			name_group = ITA_DD_HISTORICAL
 			parent_version = 1
 			modules = {
-				fixed_ship_engine_slot = module_light_surface_diesel_power
+				fixed_ship_engine_slot = module_light_surface_diesel_power_1
 				fixed_ship_fire_control_system_slot = module_analog_fire_control
 				fixed_ship_radar_slot = module_radar_2
 				fixed_ship_auxillary_slot = module_torpedoes_1
@@ -1456,7 +1456,7 @@ capital = 81
 			name_group = ITA_DD_HISTORICAL
 			parent_version = 2
 			modules = {
-				fixed_ship_engine_slot = module_light_surface_diesel_power
+				fixed_ship_engine_slot = module_light_surface_diesel_power_1
 				fixed_ship_fire_control_system_slot = module_analog_fire_control
 				fixed_ship_radar_slot = module_radar_3
 				fixed_ship_auxillary_slot = module_torpedoes_1
@@ -1473,7 +1473,7 @@ capital = 81
 			name_group = ITA_DD_HISTORICAL
 			parent_version = 0
 			modules = {
-				fixed_ship_engine_slot = module_light_surface_diesel_power
+				fixed_ship_engine_slot = module_light_surface_diesel_power_1
 				fixed_ship_fire_control_system_slot = module_analog_fire_control
 				fixed_ship_radar_slot = module_radar_2
 				fixed_ship_auxillary_slot = empty
@@ -1494,7 +1494,7 @@ capital = 81
 			name_group = ITA_DD_HISTORICAL
 			parent_version = 3
 			modules = {
-				fixed_ship_engine_slot = module_light_surface_diesel_power
+				fixed_ship_engine_slot = module_light_surface_diesel_power_1
 				fixed_ship_fire_control_system_slot = module_digital_integrated_fire_control
 				fixed_ship_radar_slot = module_sonar_3
 				fixed_ship_auxillary_slot = module_chain_gun
@@ -1513,7 +1513,7 @@ capital = 81
 			parent_version = 4
 			obsolete = yes
 			modules = {
-				fixed_ship_engine_slot = module_light_surface_diesel_power
+				fixed_ship_engine_slot = module_light_surface_diesel_power_1
 				fixed_ship_fire_control_system_slot = module_digital_integrated_fire_control
 				fixed_ship_radar_slot = module_radar_3
 				fixed_ship_auxillary_slot = module_chain_gun
@@ -1658,7 +1658,7 @@ capital = 81
 				avionics_type_slot = avionics_manned_2
 				wingform_type_slot = wing_variable
 				special_slot_type_1 = spec_countermeasures_1
-				special_slot_type_2 = spec_refuel_3
+				special_slot_type_2 = empty
 				fixed_auxiliary_weapon_slot_1 = weap_mp_light_hardpoint_2
 			}
 			obsolete = no
@@ -1710,7 +1710,7 @@ capital = 81
 				avionics_type_slot = avionics_manned_2
 				wingform_type_slot = wing_variable
 				special_slot_type_1 = spec_countermeasures_2
-				special_slot_type_2 = spec_refuel_3
+				special_slot_type_2 = empty
 				fixed_auxiliary_weapon_slot_1 = weap_mp_light_hardpoint_2
 			}
 			icon = "gfx/interface/technologies/ITA/AIR/STR2.dds"
@@ -1730,7 +1730,7 @@ capital = 81
 				wingform_type_slot = wing_swept
 				special_slot_type_1 = spec_countermeasures_2
 				special_slot_type_2 = spec_tgp_2
-				special_slot_type_3 = spec_refuel_3
+				special_slot_type_3 = empty
 			}
 			upgrades = {
 				plane_bba_engine_upgrade = 1
@@ -1800,7 +1800,7 @@ capital = 81
 				avionics_type_slot = avionics_manned_3
 				wingform_type_slot = wing_delta_canard
 				special_slot_type_1 = spec_countermeasures_2
-				special_slot_type_2 = spec_refuel_3
+				special_slot_type_2 = empty
 				special_slot_type_3 = spec_tgp_1
 				fixed_auxiliary_weapon_slot_1 = weap_a2a_hardpoint_2
 				fixed_auxiliary_weapon_slot_2 = weap_mp_light_hardpoint_2
@@ -1971,7 +1971,7 @@ capital = 81
 	recruit_character = ITA_donato_marzano
 
 #Comandanti
-	recruit_character = ITA_giovanni_ridinò
+	recruit_character = ITA_giovanni_ridinÃƒÆ’Ã‚Â²
 	recruit_character = ITA_cosimo_darrigo
 	recruit_character = ITA_luigi_colaneri
 	recruit_character = ITA_ivan_felice_resce
@@ -2014,11 +2014,11 @@ capital = 81
 	set_technology = {
 		infantry_weapons_5 = 1
 
-		land_Drone_equipment2 = 1
+		land_drone_equipment_2 = 1
 
 		cnc_equipment_4 = 1
 		cnc_equipment_5 = 1
-		special_forces5 = 1
+		special_forces_tech_5 = 1
 
 		#Pzh2000
 		SP_arty_2 = 1
@@ -2053,8 +2053,8 @@ capital = 81
 		L_Strike_fighter3 = 1
 
 		#A129
-		attack_helicopter3 = 1
-		attack_helicopter4 = 1
+		attack_helicopter_3 = 1
+		attack_helicopter_4 = 1
 
 		#NH90
 		transport_helicopter_3 = 1
@@ -2071,7 +2071,7 @@ capital = 81
 
 		night_vision_4 = 1
 
-		body_armor_2010 = 1
+		body_armor_3 = 1
 
 		computing3 = 1
 		decryption3 = 1
@@ -2079,13 +2079,11 @@ capital = 81
 		computing4 = 1
 		decryption4 = 1
 		encryption4 = 1
-		neural_networks_revival = 1
-		data_mining = 1
-		industrial_electrospun_polymeric_nanofibers = 1
-		stereolitography = 1
-		DNA_fingerprinting = 1
-		modern_gmo = 1
-		gene_therapy = 1
+nanofibers_1 = 1
+		printing_1 = 1
+		genetics_1 = 1
+		genetics_2 = 1
+		genetics_3 = 1
 
 		wifi = 1
 		internet3 = 1	#3G
@@ -2168,64 +2166,64 @@ capital = 81
 			aircraft_heli_engineering_2 = 1
 			aircraft_heli_engineering_3 = 1
 
-			tech_submarine_engineering = 1
+			tech_submarine_engineering_1 = 1
 			tech_submarine_engineering_1 = 1
 
 			tech_naval_systems_engineering = 1
-			tech_power_systems = 1
+			tech_power_systems_1 = 1
 			tech_power_systems_1 = 1
 			tech_power_systems_2 = 1
-			tech_nuclear_power_systems = 1
+			tech_nuclear_power_systems_1 = 1
 
 			tech_combat_support_systems = 1
-			tech_fire_control = 1
+			tech_fire_control_1 = 1
 			tech_fire_control_1 = 1
 			tech_fire_control_2 = 1
-			tech_combat_radar = 1
+			tech_combat_radar_1 = 1
 			tech_combat_radar_1 = 1
 			tech_combat_radar_2 = 1
 			tech_combat_radar_3 = 1
-			tech_combat_sonar = 1
+			tech_combat_sonar_1 = 1
 			tech_combat_sonar_1 = 1
 			tech_combat_sonar_2 = 1
 			tech_combat_sonar_3 = 1
 
 			tech_naval_weapon_systems = 1
-			tech_light_guns = 1
+			tech_light_guns_1 = 1
 			tech_light_guns_1 = 1
 			tech_light_guns_2 = 1
 
-			tech_point_defense_system = 1
+			tech_point_defense_system_1 = 1
 			tech_point_defense_system_1 = 1
 			tech_point_defense_system_2 = 1
 			tech_point_defense_system_3 = 1
 			tech_point_defense_system_4 = 1
 
-			tech_turret_missiles_surface = 1
+			tech_turret_missiles_surface_1 = 1
 			tech_turret_missiles_surface_1 = 1
 			tech_turret_missiles_surface_2 = 1
 			tech_turret_missiles_surface_3 = 1
 
-			tech_turret_missiles_aa = 1
+			tech_turret_missiles_aa_1 = 1
 			tech_turret_missiles_aa_1 = 1
 			tech_turret_missiles_aa_2 = 1
 			tech_turret_missiles_aa_3 = 1
 
-			tech_vls_surface = 1
+			tech_vls_surface_1 = 1
 			tech_vls_surface_1 = 1
 			tech_vls_surface_2 = 1
 			tech_vls_surface_3 = 1
 
-			tech_vls_aa = 1
+			tech_vls_aa_1 = 1
 			tech_vls_aa_1 = 1
 			tech_vls_aa_2 = 1
 			tech_vls_aa_3 = 1
 
-			tech_torpedoes = 1
+			tech_torpedoes_1 = 1
 			tech_torpedoes_1 = 1
 			tech_torpedoes_2 = 1
 
-			tech_landing_craft = 1
+			tech_landing_craft_1 = 1
 		}
 	}
 	add_ideas = {
@@ -2441,7 +2439,7 @@ capital = 81
 		}
 		#U212
 		create_equipment_variant = {
-			name = "Todaro 2ª Serie Class"
+			name = "Todaro 2Ãƒâ€šÃ‚Âª Serie Class"
 			type = attack_submarine_hull_4
 			name_group = ITA_SS_HISTORICAL
 			parent_version = 0
@@ -2457,4 +2455,7 @@ capital = 81
 		}
 	}
 }
+
+
+
 

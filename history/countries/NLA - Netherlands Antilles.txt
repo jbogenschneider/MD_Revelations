@@ -112,11 +112,11 @@ capital = 49
 		fuel_silos = 1
 		support_weapons = 1
 
-		industrial_electrospun_polymeric_nanofibers = 1
-		multiwalled_carbon_nanotubes = 1
-		stereolitography = 1
-		early_3D_printers = 1
-		DNA_fingerprinting = 1
+		nanofibers_1 = 1
+		nanofibers_2 = 1
+		printing_1 = 1
+		printing_2 = 1
+		genetics_1 = 1
 		fuel_refining = 1
 		early_renewables = 1
 		renewables = 1
@@ -150,15 +150,15 @@ capital = 49
 				IFV_1 = 1
 				IFV_2 = 1
 				APC_1 = 1
-				artillery_0 = 1
+				tech_arty_0 = 1
 				SP_arty_0 = 1
 				SP_arty_1 = 1
 				SP_arty_2 = 1 #M109L52
 				Arty_upgrade_1 = 1
 				Arty_upgrade_3 = 1
 				Anti_Air_0 = 1
-				attack_helicopter1 = 1
-				attack_helicopter2 = 1
+				attack_helicopter_1 = 1
+				attack_helicopter_2 = 1
 			}
 		}
 	}
@@ -187,49 +187,49 @@ capital = 49
 			aircraft_heli_engineering_1 = 1
 			aircraft_heli_engineering_2 = 1
 
-			tech_submarine_engineering = 1
+			tech_submarine_engineering_1 = 1
 
 			tech_naval_systems_engineering = 1
-			tech_power_systems = 1
+			tech_power_systems_1 = 1
 			tech_power_systems_1 = 1
 			tech_power_systems_2 = 1
 
 			tech_combat_support_systems = 1
-			tech_fire_control = 1
 			tech_fire_control_1 = 1
-			tech_combat_radar = 1
+			tech_fire_control_1 = 1
+			tech_combat_radar_1 = 1
 			tech_combat_radar_1 = 1
 			tech_combat_radar_2 = 1
-			tech_combat_sonar = 1
+			tech_combat_sonar_1 = 1
 			tech_combat_sonar_1 = 1
 			tech_combat_sonar_2 = 1
 
 			tech_early_naval_weapon_systems = 1
 			tech_naval_weapon_systems = 1
-			tech_light_guns = 1
+			tech_light_guns_1 = 1
 			tech_light_guns_1 = 1
 
-			tech_point_defense_system = 1
+			tech_point_defense_system_1 = 1
 			tech_point_defense_system_1 = 1
 			tech_point_defense_system_2 = 1
 			tech_point_defense_system_3 = 1
 
-			tech_turret_missiles_surface = 1
+			tech_turret_missiles_surface_1 = 1
 			tech_turret_missiles_surface_1 = 1
 
-			tech_turret_missiles_aa = 1
+			tech_turret_missiles_aa_1 = 1
 			tech_turret_missiles_aa_1 = 1
 
-			tech_vls_surface = 1
+			tech_vls_surface_1 = 1
 			tech_vls_surface_1 = 1
 
-			tech_vls_aa = 1
+			tech_vls_aa_1 = 1
 			tech_vls_aa_1 = 1
 
-			tech_torpedoes = 1
+			tech_torpedoes_1 = 1
 			tech_torpedoes_1 = 1
 
-			tech_landing_craft = 1
+			tech_landing_craft_1 = 1
 		}
 
 		#Rotterdam Class
@@ -280,7 +280,7 @@ capital = 49
 			#name_group = HOL_DD_HISTORICAL
 			parent_version = 0
 			modules = {
-				fixed_ship_engine_slot = module_light_surface_diesel_power
+				fixed_ship_engine_slot = module_light_surface_diesel_power_1
 				fixed_ship_fire_control_system_slot = module_analog_fire_control
 				fixed_ship_radar_slot = module_radar_3
 				fixed_ship_auxillary_slot_2 = module_anti_submarine_mortar
@@ -300,7 +300,7 @@ capital = 49
 			#name_group = HOL_DD_HISTORICAL
 			parent_version = 0
 			modules = {
-				fixed_ship_engine_slot = module_light_surface_diesel_power
+				fixed_ship_engine_slot = module_light_surface_diesel_power_1
 				fixed_ship_fire_control_system_slot = module_analog_fire_control
 				fixed_ship_radar_slot = module_radar_2
 				fixed_ship_auxillary_slot_2 = module_chain_gun
@@ -319,7 +319,7 @@ capital = 49
 			#name_group = HOL_DD_HISTORICAL
 			parent_version = 1
 			modules = {
-				fixed_ship_engine_slot = module_light_surface_diesel_power
+				fixed_ship_engine_slot = module_light_surface_diesel_power_1
 				fixed_ship_fire_control_system_slot = module_analog_fire_control
 				fixed_ship_radar_slot = module_radar_2
 				fixed_ship_auxillary_slot_2 = module_76mm_gun_1
@@ -376,7 +376,7 @@ capital = 49
 			#name_group = HOL_DD_HISTORICAL
 			parent_version = 0
 			modules = {
-				fixed_ship_engine_slot = module_light_surface_diesel_power
+				fixed_ship_engine_slot = module_light_surface_diesel_power_1
 				fixed_ship_fire_control_system_slot = module_analog_fire_control
 				fixed_ship_radar_slot = module_radar_2
 				fixed_ship_auxillary_slot = module_torpedoes_1
@@ -541,4 +541,5 @@ capital = 49
 
 	startup_politics = yes
 }
+
 
