@@ -1,0 +1,10 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			every_country = {
+				limit = { original_tag = TUR }
+				country_event = { id = rev_tur_startup.1 days = 1 }
+			}
+		}
+	}
+}

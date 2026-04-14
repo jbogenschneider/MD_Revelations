@@ -1,0 +1,28 @@
+add_namespace = rev_tur_startup
+
+country_event = {
+	id = rev_tur_startup.1
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		original_tag = TUR
+	}
+
+	immediate = {
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = yes
+		}
+
+		set_variable = { party_pop_array^6 = 0.02 }
+		set_variable = { party_pop_array^12 = 0.20 }
+		set_variable = { party_pop_elect_array^12 = 0.222 }
+
+		set_temp_variable = { rul_party_temp = 12 }
+		set_temp_variable = { disable_elections = 0 }
+		set_temp_variable = { col_one = 16 }
+		set_temp_variable = { col_two = 20 }
+		change_ruling_party_effect = yes
+	}
+}

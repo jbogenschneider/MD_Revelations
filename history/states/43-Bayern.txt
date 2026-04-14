@@ -49,6 +49,8 @@ state = {
 				offices = 7
 				radar_station = 3
 				infrastructure = 5
+				microchip_plant = 1
+				composite_plant = 1
 			}
 		}
 	}

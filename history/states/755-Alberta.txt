@@ -41,7 +41,7 @@ state = {
 			air_base = 4
 			offices = 1
 			renewable_energy_infra = 1
-
+			industrial_complex = 1
 		}
 		set_variable = { state_renewable_capacity_factor_modifier_var = 0.25 }
 		set_variable = { geothermal_energy_production_var = 0.005 }

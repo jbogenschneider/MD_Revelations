@@ -34,9 +34,10 @@ state = {
 			arms_factory = 2
 			air_base = 4
 			anti_air_building = 1
-			industrial_complex = 4
+			industrial_complex = 5
 			offices = 4
 			agriculture_district = 2
+			microchip_plant = 3
 		}
 		set_variable = { state_renewable_capacity_factor_modifier_var = 0.25 }		
 		add_core_of = USA

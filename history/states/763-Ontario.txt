@@ -81,10 +81,10 @@ state = {
 			offices = 6
 			renewable_energy_infra = 1
 			arms_factory = 4
-			industrial_complex = 5
+			industrial_complex = 9
 			air_base = 8
 			nuclear_reactor = 2
-			agriculture_district = 1
+			agriculture_district = 2
 			10621 = {
 				naval_base = 2
 			}

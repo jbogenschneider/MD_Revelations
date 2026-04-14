@@ -64,6 +64,7 @@ state = {
 			fuel_silo = 2
 			nuclear_reactor = 1
 			agriculture_district = 3
+			microchip_plant = 4
 			10337 = { naval_base = 4 }
 			2042 = { naval_base = 2 }
 			4884 = { naval_base = 1 }
@@ -77,8 +78,8 @@ state = {
 				renewable_energy_infra = 6
 				infrastructure = 5
 				arms_factory = 6
-				industrial_complex = 12
-				offices = 6
+				industrial_complex = 13
+				offices = 9
 				fuel_silo = 4
 				agriculture_district = 4
 			}

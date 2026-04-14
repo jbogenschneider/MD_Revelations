@@ -27,6 +27,7 @@ state = {
 			industrial_complex = 2
 			air_base = 5
 			agriculture_district = 1
+			microchip_plant = 4
 			14945 = {
 				naval_base = 10
 				naval_facility = 1

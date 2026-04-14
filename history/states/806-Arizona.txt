@@ -28,13 +28,14 @@ state = {
 		victory_points = { 853 7 } #Buckeye
 
 		buildings = {
-			infrastructure = 2
+			infrastructure = 4
 			internet_station = 2
 			arms_factory = 3
 			air_base = 5
-			industrial_complex = 2
-			offices = 3
+			industrial_complex = 3
+			offices = 4
 			nuclear_reactor = 1
+			microchip_plant = 4
 		}
 		set_variable = { state_renewable_capacity_factor_modifier_var = 0.065 }		
 		add_core_of = USA

@@ -44,7 +44,7 @@ state = {
 				internet_station = 5
 				offices = 8
 				dockyard = 1
-				industrial_complex = 4
+				industrial_complex = 6
 			}
 		}
 	}

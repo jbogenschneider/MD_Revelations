@@ -17,6 +17,7 @@ state = {
 			air_base = 5
 			anti_air_building = 1
 			radar_station = 2
+			microchip_plant = 4
 			6521 = {
 				landmark_berlin_reichstag = {
 					allowed = {
@@ -35,6 +36,8 @@ state = {
 				internet_station = 4
 				infrastructure = 5
 				radar_station = 2
+				microchip_plant = 1
+				composite_plant = 1
 			}
 		}
 	}

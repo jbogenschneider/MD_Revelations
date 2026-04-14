@@ -4935,11 +4935,11 @@ capital = 1182
 	set_variable = { intelligence_community_opinion = 60 }
 	set_country_flag = empty_scotus_seat
 
-	set_variable = { var = debt value = 17273 }
+	set_variable = { var = debt value = 22273 }
 	set_variable = { var = int_investments value = 6511 }
 	set_variable = { var = treasury value = 117 }
-	set_variable = { var = corporate_tax_rate value = 25 }
-	set_variable = { var = population_tax_rate value = 21 }
+	set_variable = { var = corporate_tax_rate value = 21 }
+	set_variable = { var = population_tax_rate value = 22 }
 
 	# Counter Terrorist System
 	set_country_flag = military_advisors_IRQ

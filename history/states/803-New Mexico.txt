@@ -30,11 +30,12 @@ state = {
 		victory_points = { 15128 2 } #Socorro
 
 		buildings = {
-			infrastructure = 2
+			infrastructure = 3
 			internet_station = 2
 			arms_factory = 1
 			air_base = 10
 			offices = 2
+			industrial_complex = 2
 		}
 		add_core_of = USA
 		add_core_of = UDT

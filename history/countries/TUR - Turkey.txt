@@ -716,19 +716,10 @@ capital = 159
 	}
 #
 	set_politics = {
-		ruling_party = democratic
+		ruling_party = neutrality
 		last_election = "2024.4.18"
 		election_frequency = 60
 		elections_allowed = yes
-	}
-
-	create_country_leader = {
-		name = "Recep Tayyip ErdoÃƒâ€žÃ…Â¸an"
-		picture = "Recep_Tayyip_Erdogan.dds"
-		ideology = Conservative
-		traits = {
-			emerging_Conservative
-		}
 	}
 
 	### Threshold
@@ -743,13 +734,13 @@ capital = 159
 	set_variable = { party_pop_array^3 = 0.183 } #socialism
 	set_variable = { party_pop_array^4 = 0.002 } #Communist-State
 	set_variable = { party_pop_array^5 = 0.007 } #anarchist_communism
-	set_variable = { party_pop_array^6 = 0.20 } #Conservative
+	set_variable = { party_pop_array^6 = 0.02 } #Conservative
 	set_variable = { party_pop_array^7 = 0.001 } #Autocracy
 	set_variable = { party_pop_array^8 = 0 } #Mod_Vilayat_e_Faqih
 	set_variable = { party_pop_array^9 = 0 } #Vilayat_e_Faqih
 	set_variable = { party_pop_array^10 = 0 } #Kingdom
 	set_variable = { party_pop_array^11 = 0.001 } #Caliphate
-	set_variable = { party_pop_array^12 = 0 } #Neutral_Muslim_Brotherhood
+	set_variable = { party_pop_array^12 = 0.20 } #Neutral_Muslim_Brotherhood (AKP)
 	set_variable = { party_pop_array^13 = 0.015 } #Neutral_Autocracy
 	set_variable = { party_pop_array^14 = 0 } #Neutral_conservatism
 	set_variable = { party_pop_array^15 = 0.117 } #oligarchism
@@ -763,12 +754,12 @@ capital = 159
 	set_variable = { party_pop_array^23 = 0 } #Monarchist
 
 	### Ruling Party
-	add_to_array = { ruling_party = 3 }
+	add_to_array = { ruling_party = 12 }
 	add_to_array = { gov_coalition_array = 16 }
 	add_to_array = { gov_coalition_array = 20 }
 
 	#Previous elections (1999) - put all other politics info above
-	set_variable = { party_pop_elect_array^3 = 0.222 } #conservatism
+	set_variable = { party_pop_elect_array^12 = 0.222 } #Neutral_Muslim_Brotherhood (AKP)
 	set_variable = { party_pop_elect_array^16 = 0.132 } #Neutral_Libertarian
 	set_variable = { party_pop_elect_array^20 = 0.18 } #Nat_Populism
 

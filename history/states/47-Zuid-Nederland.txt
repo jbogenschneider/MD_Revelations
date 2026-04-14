@@ -25,6 +25,7 @@ state = {
 			industrial_complex = 3
 			nuclear_reactor = 1
 			air_base = 2
+			microchip_plant = 4
 			6496 = {
 				land_facility = 1
 			}

@@ -36,6 +36,8 @@ state = {
 			offices = 1
 			air_base = 2
 			renewable_energy_infra = 1
+			agriculture_district = 1
+			industrial_complex = 1
 			5239 = {
 				naval_base = 2
 

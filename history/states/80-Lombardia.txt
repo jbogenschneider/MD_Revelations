@@ -27,6 +27,10 @@ state = {
 		2025.1.1 = {
 			buildings = {
 				internet_station = 4
+				infrastructure = 5
+				arms_factory = 5
+				industrial_complex = 5
+				offices = 9
 			}
 			add_manpower = 507346
 		}

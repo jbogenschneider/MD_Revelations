@@ -1,0 +1,90 @@
+add_namespace = rev_hun_election
+
+country_event = {
+	id = rev_hun_election.1
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		original_tag = HUN
+		NOT = { has_country_flag = REV_HUN_2026_election_resolved }
+		date > 2026.4.11
+	}
+
+	immediate = {
+		set_country_flag = REV_HUN_2026_election_resolved
+
+		if = {
+			limit = { has_country_flag = REV_HUN_2026_fidesz_election_path }
+			set_country_flag = REV_HUN_2026_fidesz_election_win
+
+			set_politics = {
+				ruling_party = neutrality
+				last_election = "2026.4.12"
+				election_frequency = 48
+				elections_allowed = yes
+			}
+
+			hidden_effect = { kill_country_leader = yes }
+			create_country_leader = {
+				name = "Viktor Orban"
+				picture = "Viktor_Orban.dds"
+				ideology = Neutral_conservatism
+				traits = {
+					neutrality_Neutral_conservatism
+				}
+			}
+
+			country_event = { id = rev_hun_election.3 hours = 1 }
+		}
+		else = {
+			set_country_flag = REV_HUN_2026_tisza_election_win
+			set_country_flag = REV_HUN_2026_tisza_two_thirds_majority
+
+			set_politics = {
+				ruling_party = democratic
+				last_election = "2026.4.12"
+				election_frequency = 48
+				elections_allowed = yes
+			}
+
+			hidden_effect = { kill_country_leader = yes }
+			create_country_leader = {
+				name = "Peter Magyar"
+				picture = "Peter_Magyar.dds"
+				ideology = liberalism
+				traits = {
+					western_liberalism
+				}
+			}
+
+			country_event = { id = rev_hun_election.2 hours = 1 }
+		}
+	}
+}
+
+country_event = {
+	id = rev_hun_election.2
+	title = rev_hun_election.2.t
+	desc = rev_hun_election.2.desc
+	is_triggered_only = yes
+
+	option = {
+		name = rev_hun_election.2.a
+		add_stability = 0.05
+		add_political_power = 50
+	}
+}
+
+country_event = {
+	id = rev_hun_election.3
+	title = rev_hun_election.3.t
+	desc = rev_hun_election.3.desc
+	is_triggered_only = yes
+
+	option = {
+		name = rev_hun_election.3.a
+		add_stability = 0.02
+		add_political_power = 25
+	}
+}

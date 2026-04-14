@@ -20,11 +20,12 @@ state = {
 			arms_factory = 3
 			dockyard = 0
 			air_base = 5
-			industrial_complex = 1
+			industrial_complex = 3
 			offices = 2
 			anti_air_building = 1
 			radar_station = 2
 			nuclear_reactor = 1
+			microchip_plant = 4
 			16087 = {
 				naval_base = 1
 			}

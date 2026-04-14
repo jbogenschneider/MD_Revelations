@@ -10,12 +10,74 @@ focus_tree = {
 	continuous_focus_position = { x = 50 y = 120 }
 
 	focus = {
+		id = REV_HUN_orbans_reign
+		icon = voj_patriotism_hun
+		x = 10
+		y = 0
+		cost = 1
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = REV_HUN_eu_sceptic_fidesz
+		icon = EU_no_deal_exit
+		x = 10
+		y = 1
+		cost = 5
+		prerequisite = { focus = REV_HUN_orbans_reign }
+		mutually_exclusive = { focus = REV_HUN_pro_eu_tisza }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.05
+			set_country_flag = REV_HUN_2026_fidesz_election_path
+		}
+	}
+
+	focus = {
+		id = REV_HUN_pro_eu_tisza
+		icon = EU_2007
+		x = 16
+		y = 1
+		cost = 5
+		prerequisite = { focus = REV_HUN_orbans_reign }
+		mutually_exclusive = { focus = REV_HUN_eu_sceptic_fidesz }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.05
+			set_country_flag = REV_HUN_2026_tisza_election_path
+		}
+	}
+
+	focus = {
 		id = REV_HUN_NATO_2026_security_compact
 		icon = military_deal
-		x = 14
-		y = 0
+		relative_position_id = REV_HUN_pro_eu_tisza
+		x = 0
+		y = 1
 		cost = 5
 		available_if_capitulated = yes
+		prerequisite = { focus = REV_HUN_pro_eu_tisza }
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_NATO }
 		ai_will_do = { base = 1 }
 		completion_reward = {
@@ -25,9 +87,169 @@ focus_tree = {
 	}
 
 	focus = {
+		id = REV_HUN_run_fear_campaign_against_ukraine
+		icon = UKR_Lemko
+		x = 10
+		y = 2
+		cost = 5
+		prerequisite = { focus = REV_HUN_eu_sceptic_fidesz }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			add_opinion_modifier = { target = SOV modifier = improve_trade }
+			reverse_add_opinion_modifier = { target = SOV modifier = improve_trade }
+			add_opinion_modifier = { target = UKR modifier = medium_decrease }
+			reverse_add_opinion_modifier = { target = UKR modifier = medium_decrease }
+		}
+	}
+
+	focus = {
+		id = REV_HUN_provide_eu_secrets_to_russia
+		icon = russian_cooperation
+		x = 10
+		y = 3
+		cost = 5
+		prerequisite = { focus = REV_HUN_run_fear_campaign_against_ukraine }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			set_temp_variable = { treasury_change = 5 }
+			modify_treasury_effect = yes
+			add_opinion_modifier = { target = SOV modifier = diplomatic_support }
+			reverse_add_opinion_modifier = { target = SOV modifier = diplomatic_support }
+		}
+	}
+
+	focus = {
+		id = REV_HUN_russian_investments
+		icon = russian_investments
+		x = 8
+		y = 4
+		cost = 5
+		prerequisite = { focus = REV_HUN_provide_eu_secrets_to_russia }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			set_temp_variable = { treasury_change = 5 }
+			modify_treasury_effect = yes
+			add_opinion_modifier = { target = SOV modifier = diplomatic_support }
+			reverse_add_opinion_modifier = { target = SOV modifier = diplomatic_support }
+		}
+	}
+
+	focus = {
+		id = REV_HUN_secret_usa_investment
+		icon = ukr_firtash
+		x = 10
+		y = 4
+		cost = 5
+		prerequisite = { focus = REV_HUN_provide_eu_secrets_to_russia }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			set_temp_variable = { treasury_change = 10 }
+			modify_treasury_effect = yes
+			add_opinion_modifier = { target = USA modifier = improve_trade }
+			reverse_add_opinion_modifier = { target = USA modifier = improve_trade }
+		}
+	}
+
+	focus = {
+		id = REV_HUN_rig_election
+		icon = Duma_election
+		x = 10
+		y = 5
+		cost = 5
+		prerequisite = { focus = REV_HUN_secret_usa_investment }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			add_stability = -0.25
+		}
+	}
+
+	focus = {
+		id = REV_HUN_leave_the_eu
+		icon = EU_no_deal_exit
+		x = 10
+		y = 6
+		cost = 5
+		prerequisite = { focus = REV_HUN_rig_election }
+		available = {
+			has_idea = EU_member
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			leaving_EU = yes
+			remove_from_array = { global.EU_member = THIS }
+			update_eu_dirty_variable = yes
+			add_stability = -0.10
+		}
+	}
+
+	focus = {
+		id = REV_HUN_end_democracy_in_hungary
+		icon = anti_democracy
+		x = 10
+		y = 7
+		cost = 5
+		prerequisite = { focus = REV_HUN_leave_the_eu }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.10
+			set_politics = {
+				elections_allowed = no
+			}
+			set_country_flag = REV_HUN_2026_end_democracy_path
+		}
+	}
+
+	focus = {
+		id = REV_HUN_leave_nato
+		icon = arm_nato_defence
+		x = 8
+		y = 8
+		cost = 5
+		prerequisite = { focus = REV_HUN_end_democracy_in_hungary }
+		available = {
+			has_idea = NATO_member
+			SOV = { has_war_with = UKR }
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_NATO }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			NATO_leave = yes
+		}
+	}
+
+	focus = {
+		id = REV_HUN_prepare_to_attack_ukraine
+		icon = sov_attack_ukraine
+		x = 12
+		y = 8
+		cost = 5
+		prerequisite = { focus = REV_HUN_leave_nato }
+		available = {
+			SOV = { has_war_with = UKR }
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_DEFENSE }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			if = {
+				limit = { NOT = { 701 = { is_core_of = HUN } } }
+				add_state_core = 701
+			}
+		}
+	}
+
+	focus = {
 		id = REV_HUN_NATO_rapid_procurement_authority
 		icon = defense
-		x = 12
+		relative_position_id = REV_HUN_NATO_2026_security_compact
+		x = -2
 		y = 1
 		cost = 5
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NATO }
@@ -42,8 +264,9 @@ focus_tree = {
 	focus = {
 		id = REV_HUN_NATO_munitions_surge
 		icon = production
-		x = 12
-		y = 2
+		relative_position_id = REV_HUN_NATO_rapid_procurement_authority
+		x = 0
+		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NATO }
 		prerequisite = { focus = REV_HUN_NATO_rapid_procurement_authority }
@@ -65,8 +288,9 @@ focus_tree = {
 	focus = {
 		id = REV_HUN_NATO_expand_military_factories_i
 		icon = industry_military
-		x = 11
-		y = 3
+		relative_position_id = REV_HUN_NATO_munitions_surge
+		x = -1
+		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NATO }
 		prerequisite = { focus = REV_HUN_NATO_munitions_surge }
@@ -86,8 +310,9 @@ focus_tree = {
 	focus = {
 		id = REV_HUN_NATO_expand_military_factories_ii
 		icon = factory_planning
-		x = 11
-		y = 4
+		relative_position_id = REV_HUN_NATO_expand_military_factories_i
+		x = 0
+		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NATO }
 		prerequisite = { focus = REV_HUN_NATO_expand_military_factories_i }
@@ -111,8 +336,9 @@ focus_tree = {
 	focus = {
 		id = REV_HUN_NATO_forward_stockpiles
 		icon = army_mobilisation
-		x = 12
-		y = 5
+		relative_position_id = REV_HUN_NATO_expand_military_factories_ii
+		x = 1
+		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_NATO }
 		prerequisite = { focus = REV_HUN_NATO_expand_military_factories_ii }
@@ -143,8 +369,9 @@ focus_tree = {
 	focus = {
 		id = REV_HUN_NATO_integrated_training_cycle
 		icon = brothers_in_arms
-		x = 12
-		y = 6
+		relative_position_id = REV_HUN_NATO_forward_stockpiles
+		x = 0
+		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_NATO }
 		prerequisite = { focus = REV_HUN_NATO_forward_stockpiles }
@@ -159,8 +386,9 @@ focus_tree = {
 	focus = {
 		id = REV_HUN_NATO_long_war_posture
 		icon = air_defense
-		x = 12
-		y = 7
+		relative_position_id = REV_HUN_NATO_integrated_training_cycle
+		x = 0
+		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_NATO }
 		prerequisite = { focus = REV_HUN_NATO_integrated_training_cycle }
@@ -182,7 +410,8 @@ focus_tree = {
 	focus = {
 		id = REV_HUN_NATO_land_drone_program
 		icon = recon
-		x = 14
+		relative_position_id = REV_HUN_NATO_2026_security_compact
+		x = 0
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NATO }
@@ -214,8 +443,9 @@ focus_tree = {
 	focus = {
 		id = REV_HUN_NATO_field_test_drone_wings
 		icon = scientific_exchange
-		x = 14
-		y = 2
+		relative_position_id = REV_HUN_NATO_land_drone_program
+		x = 0
+		y = 1
 		cost = 5
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NATO }
 		prerequisite = { focus = REV_HUN_NATO_land_drone_program }
@@ -229,8 +459,9 @@ focus_tree = {
 	focus = {
 		id = REV_HUN_NATO_networked_drone_fires
 		icon = Jet_Fighters
-		x = 14
-		y = 3
+		relative_position_id = REV_HUN_NATO_field_test_drone_wings
+		x = 0
+		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NATO }
 		prerequisite = { focus = REV_HUN_NATO_field_test_drone_wings }
@@ -250,8 +481,9 @@ focus_tree = {
 	focus = {
 		id = REV_HUN_NATO_autonomous_targeting_cells
 		icon = research4
-		x = 14
-		y = 4
+		relative_position_id = REV_HUN_NATO_networked_drone_fires
+		x = 0
+		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NATO }
 		prerequisite = { focus = REV_HUN_NATO_networked_drone_fires }
@@ -265,8 +497,9 @@ focus_tree = {
 	focus = {
 		id = REV_HUN_NATO_joint_ew_cells
 		icon = Generic_Intelligence_Gathering
-		x = 14
-		y = 5
+		relative_position_id = REV_HUN_NATO_autonomous_targeting_cells
+		x = 0
+		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NATO }
 		prerequisite = { focus = REV_HUN_NATO_autonomous_targeting_cells }
@@ -280,8 +513,9 @@ focus_tree = {
 	focus = {
 		id = REV_HUN_NATO_18_month_readiness
 		icon = military_deal
-		x = 14
-		y = 8
+		relative_position_id = REV_HUN_NATO_long_war_posture
+		x = 2
+		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_NATO }
 		prerequisite = { focus = REV_HUN_NATO_long_war_posture }
@@ -297,8 +531,9 @@ focus_tree = {
 	focus = {
 		id = REV_HUN_NATO_rally_for_democracy
 		icon = democracy6
-		x = 18
-		y = 8
+		relative_position_id = REV_HUN_NATO_18_month_readiness
+		x = 4
+		y = 0
 		cost = 5
 		available = { has_war = yes }
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_NATO }
@@ -311,8 +546,9 @@ focus_tree = {
 	focus = {
 		id = REV_HUN_NATO_rally_for_a_return_to_peace
 		icon = white_peace
-		x = 18
-		y = 9
+		relative_position_id = REV_HUN_NATO_rally_for_democracy
+		x = 0
+		y = 1
 		cost = 5
 		available = { has_war = yes }
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_NATO }
@@ -325,8 +561,9 @@ focus_tree = {
 	focus = {
 		id = REV_HUN_NATO_confidence_vote
 		icon = dutch_teflon_rutte
-		x = 22
-		y = 8
+		relative_position_id = REV_HUN_NATO_rally_for_democracy
+		x = 4
+		y = 0
 		cost = 5
 		available = { has_stability < 0.50 }
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_NATO }
@@ -337,8 +574,9 @@ focus_tree = {
 	focus = {
 		id = REV_HUN_NATO_build_national_unity
 		icon = national_unity
-		x = 22
-		y = 9
+		relative_position_id = REV_HUN_NATO_confidence_vote
+		x = 0
+		y = 1
 		cost = 5
 		prerequisite = { focus = REV_HUN_NATO_confidence_vote }
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_NATO }
@@ -349,8 +587,9 @@ focus_tree = {
 	focus = {
 		id = REV_HUN_NATO_patriotic_unity
 		icon = dutch_european_flag
-		x = 22
-		y = 10
+		relative_position_id = REV_HUN_NATO_build_national_unity
+		x = 0
+		y = 1
 		cost = 5
 		available = { has_war = yes }
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_NATO }
