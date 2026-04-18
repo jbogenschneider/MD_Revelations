@@ -8,7 +8,7 @@ country_event = {
 	trigger = {
 		original_tag = HUN
 		NOT = { has_country_flag = REV_HUN_2026_election_resolved }
-		date > 2026.4.11
+		date > 2026.4.19
 	}
 
 	immediate = {
@@ -20,7 +20,7 @@ country_event = {
 
 			set_politics = {
 				ruling_party = neutrality
-				last_election = "2026.4.12"
+				last_election = "2026.4.20"
 				election_frequency = 48
 				elections_allowed = yes
 			}
@@ -43,9 +43,116 @@ country_event = {
 
 			set_politics = {
 				ruling_party = democratic
-				last_election = "2026.4.12"
+				last_election = "2026.4.20"
 				election_frequency = 48
 				elections_allowed = yes
+			}
+
+			start_politics_input = yes
+			set_popularities = {
+				democratic = 55.0
+				communism = 5.0
+				fascism = 0.0
+				neutrality = 25.0
+				nationalist = 15.0
+			}
+			set_variable = { party_pop_array^2 = 0.55 } # Alliance of Free Democrats
+			set_variable = { party_pop_array^3 = 0.20 }
+			set_variable = { party_pop_array^14 = 0.15 }
+			set_variable = { party_pop_array^20 = 0.10 }
+			set_variable = { party_pop_array^1 = 0 }
+			set_variable = { party_pop_array^4 = 0 }
+			set_variable = { party_pop_array^5 = 0 }
+			set_variable = { party_pop_array^6 = 0 }
+			set_variable = { party_pop_array^7 = 0 }
+			set_variable = { party_pop_array^8 = 0 }
+			set_variable = { party_pop_array^9 = 0 }
+			set_variable = { party_pop_array^10 = 0 }
+			set_variable = { party_pop_array^11 = 0 }
+			set_variable = { party_pop_array^12 = 0 }
+			set_variable = { party_pop_array^13 = 0 }
+			set_variable = { party_pop_array^15 = 0 }
+			set_variable = { party_pop_array^16 = 0 }
+			set_variable = { party_pop_array^17 = 0 }
+			set_variable = { party_pop_array^18 = 0 }
+			set_variable = { party_pop_array^19 = 0 }
+			set_variable = { party_pop_array^21 = 0 }
+			set_variable = { party_pop_array^22 = 0 }
+			set_variable = { party_pop_array^23 = 0 }
+			set_variable = { party_pop_elect_array^2 = 0.55 } # Alliance of Free Democrats
+			set_variable = { party_pop_elect_array^3 = 0.20 }
+			set_variable = { party_pop_elect_array^14 = 0.15 }
+			set_variable = { party_pop_elect_array^20 = 0.10 }
+			set_variable = { party_pop_elect_array^1 = 0 }
+			set_variable = { party_pop_elect_array^4 = 0 }
+			set_variable = { party_pop_elect_array^5 = 0 }
+			set_variable = { party_pop_elect_array^6 = 0 }
+			set_variable = { party_pop_elect_array^7 = 0 }
+			set_variable = { party_pop_elect_array^8 = 0 }
+			set_variable = { party_pop_elect_array^9 = 0 }
+			set_variable = { party_pop_elect_array^10 = 0 }
+			set_variable = { party_pop_elect_array^11 = 0 }
+			set_variable = { party_pop_elect_array^12 = 0 }
+			set_variable = { party_pop_elect_array^13 = 0 }
+			set_variable = { party_pop_elect_array^15 = 0 }
+			set_variable = { party_pop_elect_array^16 = 0 }
+			set_variable = { party_pop_elect_array^17 = 0 }
+			set_variable = { party_pop_elect_array^18 = 0 }
+			set_variable = { party_pop_elect_array^19 = 0 }
+			set_variable = { party_pop_elect_array^21 = 0 }
+			set_variable = { party_pop_elect_array^22 = 0 }
+			set_variable = { party_pop_elect_array^23 = 0 }
+			add_to_array = { ruling_party = 2 }
+			startup_politics = yes
+
+			if = {
+				limit = { has_idea = unrestrained_corruption }
+				swap_ideas = {
+					remove_idea = unrestrained_corruption
+					add_idea = paralyzing_corruption
+				}
+			}
+			else_if = {
+				limit = { has_idea = paralyzing_corruption }
+				swap_ideas = {
+					remove_idea = paralyzing_corruption
+					add_idea = crippling_corruption
+				}
+			}
+			else_if = {
+				limit = { has_idea = crippling_corruption }
+				swap_ideas = {
+					remove_idea = crippling_corruption
+					add_idea = rampant_corruption
+				}
+			}
+			else_if = {
+				limit = { has_idea = rampant_corruption }
+				swap_ideas = {
+					remove_idea = rampant_corruption
+					add_idea = systematic_corruption
+				}
+			}
+			else_if = {
+				limit = { has_idea = systematic_corruption }
+				swap_ideas = {
+					remove_idea = systematic_corruption
+					add_idea = widespread_corruption
+				}
+			}
+			else_if = {
+				limit = { has_idea = widespread_corruption }
+				swap_ideas = {
+					remove_idea = widespread_corruption
+					add_idea = medium_corruption
+				}
+			}
+			else_if = {
+				limit = { has_idea = medium_corruption }
+				swap_ideas = {
+					remove_idea = medium_corruption
+					add_idea = modest_corruption
+				}
 			}
 
 			hidden_effect = { kill_country_leader = yes }

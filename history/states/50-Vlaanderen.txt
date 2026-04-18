@@ -26,7 +26,7 @@ state = {
 			arms_factory = 1
 			offices = 2
 			dockyard = 1
-			synthetic_refinery = 3
+			renewable_energy_infra = 2
 			industrial_complex = 2
 			air_base = 3
 			nuclear_reactor = 1
@@ -56,3 +56,4 @@ state = {
 	buildings_max_level_factor = 1.000
 	state_category = state_06
 }
+

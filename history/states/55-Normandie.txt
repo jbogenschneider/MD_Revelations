@@ -23,6 +23,7 @@ state = {
 			industrial_complex = 1
 			air_base = 10
 			nuclear_reactor = 3
+			agriculture_district = 2
 			6449 = {
 				naval_base = 5
 				# naval group

@@ -5,7 +5,7 @@ on_actions = {
 				limit = {
 					original_tag = HUN
 					NOT = { has_country_flag = REV_HUN_2026_election_resolved }
-					date > 2026.4.11
+					date > 2026.4.21
 				}
 				country_event = { id = rev_hun_election.1 hours = 1 }
 			}

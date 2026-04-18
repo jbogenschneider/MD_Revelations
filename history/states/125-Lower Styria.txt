@@ -17,14 +17,15 @@ state = {
 		buildings = {
 			infrastructure = 2
 			internet_station = 1
-			industrial_complex = 1
+			industrial_complex = 2
+			offices = 1
 			nuclear_reactor = 1
 		}
 		add_core_of = SLV
 		2025.1.1 = {
 			add_manpower = 34575
 			buildings = {
-				infrastructure = 2
+				infrastructure = 3
 				internet_station = 4
 			}
 		}

@@ -4,32 +4,40 @@ state = {
 
 	history = {
 		owner = UKR
+		controller = UKR
 		victory_points = {
 			9556 11
 		}
+		victory_points = { 502 1 }
 		buildings = {
 			infrastructure = 2
 			internet_station = 1
+			industrial_complex = 2
+			arms_factory = 2
 			air_base = 4
-			stronghold_network = 1
 			9556 = {
 				# KMDB
 				land_facility = 1
 			}
 		}
 		add_core_of = UKR
+		set_variable = { hydroelectric_energy_production_var = 0.335 }
+		set_variable = { hydroelectric_energy_storage_var = 0 }
+		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
+		set_variable = { productivity_state_var = 510 }
 
-		2025.1.1 = {
-			add_core_of = NOV
-			buildings = {
-				internet_station = 4
-			}
-			#add_manpower = -377086
+		add_province_modifier = {
+			static_modifiers = { terrain_UKR_kharkiv }
+			province = { id = 9556 }
+		}
+		add_province_modifier = {
+			static_modifiers = { terrain_UKR_kramatorsk }
+			province = { id = 502 }
 		}
 	}
 
 	provinces = {
-		418 3409 3508 3531 6530 6554 9556 11397 11541 14444 14445
+		418 502 3409 3491 3508 3531 6530 6554 9556 11397 11541 14444 14445
 	}
 	manpower = 2951603
 	buildings_max_level_factor = 1.000

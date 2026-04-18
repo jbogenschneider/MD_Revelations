@@ -56,7 +56,7 @@
  CHINA_RETURNS_ASSETS_DESC:0 "To avoid uncontrolled escalation with Moscow, Beijing arranges a ceremonial handover of selected Russian strategic assets and legacy holdings."
  CHINA_RETURNS_ASSETS_OK:0 "Proceed with the Handover"
  RUSSIA_2026_6_ACCEPT_EFFECT_TT:0 "White peace with Ukraine. Sanctions debt block is removed. Stability §R-3.00%§!, War Support §R-5.00%§!."
- RUSSIA_2026_14_EFFECT_TT:0 "Russia takes Kramatorsk (State 1242), then signs white peace with Ukraine. Stability §R-3.00%§!, War Support §R-5.00%§!."
+ RUSSIA_2026_14_EFFECT_TT:0 "Russia takes the Kramatorsk front (State 696), then signs white peace with Ukraine. Stability §R-3.00%§!, War Support §R-5.00%§!."
  RUSSIA_2026_3_EFFECT_TT:0 "All SOV divisions using template 'Moblics' are deleted without manpower refund. Manpower §R-10,000§!, Stability §R-20.00%§!, War Support §R-20.00%§!."
  RUSSIA_2026_4_EFFECT_TT:0 "Putin is removed. Government changes to non-electoral neutrality under Viktor Sokolov. Political Power §G+120§!, Stability §R-5.00%§!, War Support §R-10.00%§!."
  RUSSIA_2026_5_EFFECT_TT:0 "White peace with Ukraine. Occupied states in this branch are returned to UKR. Sanctions flag and sanctions debt idea are cleared. Stability §G+10.00%§!, War Support §R-20.00%§!."

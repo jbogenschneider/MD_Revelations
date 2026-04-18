@@ -253,8 +253,8 @@ focus_tree = {
 			add_to_variable = { var = treasury value = 20 }
 			clr_country_flag = rev_sov_2026_sanctions_active
 			if = {
-				limit = { owns_state = 1242 }
-				UKR = { transfer_state = 1242 }
+				limit = { owns_state = 696 }
+				UKR = { transfer_state = 696 }
 			}
 		}
 		ai_will_do = { base = 80 }

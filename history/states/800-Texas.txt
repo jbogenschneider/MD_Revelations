@@ -78,8 +78,8 @@ state = {
 				renewable_energy_infra = 6
 				infrastructure = 5
 				arms_factory = 6
-				industrial_complex = 13
-				offices = 9
+				industrial_complex = 11
+				offices = 11
 				fuel_silo = 4
 				agriculture_district = 4
 			}

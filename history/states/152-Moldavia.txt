@@ -41,7 +41,7 @@ state = {
 			#add_manpower = -567796
 			buildings = {
 				internet_station = 4
-				industrial_complex = 1
+				industrial_complex = 2
 			}
 		}
 	}

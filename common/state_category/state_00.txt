@@ -1,0 +1,6 @@
+# Local override for MD beta slot pressure in 2026 setup
+state_categories = {
+	state_00 = {
+		local_building_slots = 4
+	}
+}

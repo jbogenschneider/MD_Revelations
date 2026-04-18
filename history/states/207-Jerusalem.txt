@@ -22,13 +22,11 @@ state = {
 		}
 		add_core_of = ISR
 		add_core_of = PAL
-		2025.1.1 = {
-			add_manpower = 334987
-			add_core_of = HAM
-			buildings = {
-				internet_station = 4
-				anti_air_building = 6
-			}
+		set_variable = { productivity_state_var = 935 }
+
+		add_province_modifier = {
+			static_modifiers = { terrain_jerusalem }
+			province = { id = 1086 }
 		}
 	}
 

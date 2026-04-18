@@ -1,0 +1,75 @@
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: Brazil: Focus BRA_2002_elections
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: Brazil: Focus BRA_amazonian_development_project
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: Brazil: Focus BRA_americas_unity
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: Brazil: Focus BRA_angry_natives
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: Brazil: Focus BRA_cardosos_last_years
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: Brazil: Focus BRA_crippled_currency
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: Brazil: Focus BRA_foreign_companies
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: Brazil: Focus BRA_global_diplomacy
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: Brazil: Focus BRA_growth_through_freedom
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: Brazil: Focus BRA_lula
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: Brazil: Focus BRA_march_of_the_excluded
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: Brazil: Focus BRA_neighborly_development
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: Brazil: Focus BRA_nossa_economia
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: Brazil: Focus BRA_pay_back_the_imf
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: Brazil: Focus BRA_project_devastate_the_amazon
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: Brazil: Focus BRA_reinstating_imf_debts
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: Brazil: Focus BRA_social_programs_agenda_lula
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: China: focus CHI_2_Child_Policy executed
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: China: focus CHI_8_Honours_8_Shames executed
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: China: focus CHI_Chairman_Jiang_Reign executed
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: China: focus CHI_China_Dream executed
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: China: focus CHI_Consider_Electoral_Reform_in_Hong_Kong executed
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: China: focus CHI_Cross_Strait_Service_Trade_Agreement executed
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: China: focus CHI_Cut_Ground_Troop_Numbers executed
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: China: focus CHI_Dialogue_with_the_Taiwan_Self_Government executed
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: China: focus CHI_End_PLA_Business_Ventures executed
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: China: focus CHI_Establish_the_Central_Group_for_Military_Reform executed
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: China: focus CHI_Establish_the_National_Security_Commission executed
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: China: focus CHI_Extend_Interpretation_of_the_Systems executed
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: China: focus CHI_Form_the_SCO executed
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: China: focus CHI_Four_Pronged_Comprehensive_Strategy executed
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: China: focus CHI_Future_of_the_CPC executed
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: China: focus CHI_Global_Influence executed
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: China: focus CHI_Golden_Shield_Project executed
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: China: focus CHI_Green_GDP executed
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: China: focus CHI_Harmonious_Society executed
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: China: focus CHI_Hu_Jintao_Agenda executed
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: China: focus CHI_Netizen_Nation executed
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: China: focus CHI_One_China_Policy executed
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: China: focus CHI_Peaceful_Rise executed
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: China: focus CHI_Permit_Entrepreneurs_to_Join_the_CPC executed
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: China: focus CHI_PLA_Cyber_Army executed
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: China: focus CHI_Preserve_CPC_Unity executed
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: China: focus CHI_Preserve_the_Revolution executed
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: China: focus CHI_Promote_Youth_League_Members executed
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: China: focus CHI_Ratification_of_WTO executed
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: China: focus CHI_Regional_Influence executed
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: China: focus CHI_Restructure_the_Penal_System executed
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: China: focus CHI_Scientific_Outlook_on_Development executed
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: China: focus CHI_Scrap_Military_Commands executed
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: China: focus CHI_Succession_Question executed
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: China: focus CHI_Take_Down_the_Big_Tigers executed
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: China: focus CHI_The_Great_Firewall_of_China executed
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: China: focus CHI_The_NPCSC_Decision_on_Hong_Kong executed
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: China: focus CHI_The_Untapped_Market executed
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: China: focus CHI_Third_Plenum executed
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: China: focus CHI_Three_Links executed
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: China: focus CHI_Three_Represents_Thought executed
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: China: focus CHI_Two_Systems executed
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: China: focus CHI_Wang_Lijun_Incident executed
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: China: focus CHI_Weaken_the_Youth_League executed
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: China: focus CHI_Xi_Jinping_Agenda executed
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: China: focus CHI_Xi_Jinping_Thought executed
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: China: focus CHI_Xiaokang_Society executed
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: Myanmar: Focus BRM_address_the_democracy_question
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: Myanmar: Focus BRM_allow_labour_strikes_and_unions
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: Myanmar: Focus BRM_cede_power_to_the_nld
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: Myanmar: Focus BRM_focus_on_the_tatmadaw
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: Myanmar: Focus BRM_pave_the_way_for_civilian_rule
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: Myanmar: Focus BRM_propose_the_2008_constitution
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: Myanmar: Focus BRM_relax_media_censorship
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: Myanmar: Focus BRM_release_opposition_figures
+[effectbase.cpp:1782]:  12:00, 1 January, 2026: Russia: remove idea CSTO_member
+[frontend.cpp:682]: 
+[history.cpp:163]: Executing History from 2.1.1.1 to  2026.1.1.12

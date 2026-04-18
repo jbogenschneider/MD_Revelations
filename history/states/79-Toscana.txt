@@ -16,9 +16,6 @@ state = {
 			industrial_complex = 3
 			offices = 2
 			air_base = 2
-			6973 = {
-				naval_base = 10
-			}
 			11833 = {
 				naval_base = 4
 			}

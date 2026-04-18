@@ -34,7 +34,7 @@ state = {
 			dockyard = 0
 			air_base = 4
 			industrial_complex = 7
-			offices = 5
+			offices = 10
 			nuclear_reactor = 3
 			3878 = {
 				naval_base = 4
@@ -51,7 +51,7 @@ state = {
 			add_manpower = 1144948
 			buildings = {
 				internet_station = 4
-				offices = 9
+				offices = 12
 			}
 		}
 	}
