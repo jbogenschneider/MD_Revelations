@@ -30,7 +30,7 @@ state = {
 		victory_points = { 15128 2 } #Socorro
 
 		buildings = {
-			infrastructure = 3
+			infrastructure = 2
 			internet_station = 2
 			arms_factory = 1
 			air_base = 10

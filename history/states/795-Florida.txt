@@ -56,7 +56,7 @@ state = {
 			
 			buildings = {
 				internet_station = 5
-				renewable_energy_infra = 6
+				synthetic_refinery = 6
 				industrial_complex = 7
 				infrastructure = 5
 				radar_station = 4

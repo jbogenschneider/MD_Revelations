@@ -11,7 +11,6 @@ state = {
 			infrastructure = 2
 			internet_station = 2
 			industrial_complex = 1
-			renewable_energy_infra = 2
 			offices = 1
 			air_base = 1
 			4170 = {
@@ -21,6 +20,7 @@ state = {
 				naval_base = 10
 			}
 		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
 		set_variable = { state_renewable_capacity_factor_modifier_var = 0.45 }		
 		add_core_of = GRE
 		add_core_of = CRE

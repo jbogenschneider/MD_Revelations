@@ -75,10 +75,10 @@ capital = 133
 
 		combined_arms = 1
 		#For templates
-		infantry_weapons_1 = 1
-		cnc_equipment_1 = 1
+		infantry_weapons = 1
+		command_control_equipment = 1
 		Anti_tank_0 = 1
-		util_vehicle_1 = 1
+		util_vehicle_0 = 1
 		Heavy_Anti_tank_0 = 1
 
 		basic_computing = 1
@@ -91,11 +91,11 @@ capital = 133
 		internet1 = 1
 		fuel_silos = 1
 
-		nanofibers_1 = 1
-		nanofibers_2 = 1
-		printing_1 = 1
-		printing_2 = 1
-		genetics_1 = 1
+		industrial_electrospun_polymeric_nanofibers = 1
+		multiwalled_carbon_nanotubes = 1
+		stereolitography = 1
+		early_3D_printers = 1
+		DNA_fingerprinting = 1
 		fuel_refining = 1
 		early_renewables = 1
 		renewables = 1
@@ -212,20 +212,24 @@ capital = 133
 		computing5 = 1
 		decryption5 = 1
 		encryption5 = 1
-nanofibers_1 = 1
-		nanofibers_2 = 1
-		nanofibers_3 = 1
-		printing_1 = 1
-		printing_2 = 1
-		printing_3 = 1
-		genetics_1 = 1
-		genetics_2 = 1
-		genetics_3 = 1
-		genetics_4 = 1
-		genetics_6 = 1
-		genetics_5 = 1
-		crispr_1 = 1
-		crispr_2 = 1
+		neural_networks_revival = 1
+		data_mining = 1
+		machine_learning = 1
+		sociable_machines = 1
+		industrial_electrospun_polymeric_nanofibers = 1
+		multiwalled_carbon_nanotubes = 1
+		modern_electrospinning = 1
+		stereolitography = 1
+		early_3D_printers = 1
+		t3D_wax_printer = 1
+		DNA_fingerprinting = 1
+		modern_gmo = 1
+		gene_therapy = 1
+		genetically_modified_crops = 1
+		gene_targeting_pesticides = 1
+		human_genome_project = 1
+		crispr = 1
+		cas9_gene_editing = 1
 
 		internet2 = 1
 		construction1 = 1
@@ -383,7 +387,7 @@ nanofibers_1 = 1
 	startup_politics = yes
 
 	create_country_leader = {
-		name = "Hashim ThaÃ§i"
+		name = "Hashim Thaçi"
 		picture = "hashim_tahci.dds"
 		ideology = Neutral_conservatism
 		traits = {
@@ -394,4 +398,3 @@ nanofibers_1 = 1
 	retire_character = KOS_sylejman_selimi
 	recruit_character = KOS_rrahmna_rama
 }
-

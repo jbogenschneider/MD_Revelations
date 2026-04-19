@@ -43,10 +43,10 @@ capital = 595
 		infantry_mass_assault = 1
 
 		#No army, but let's give them some basic tech in case they change their mind
-		infantry_weapons_1 = 1
-		cnc_equipment_1 = 1
+		infantry_weapons = 1
+		command_control_equipment = 1
 		Anti_tank_0 = 1
-		util_vehicle_1 = 1
+		util_vehicle_0 = 1
 
 		night_vision_1 = 1
 
@@ -66,8 +66,8 @@ capital = 595
 		gprs = 1
 		fuel_silos = 1
 
-		nanofibers_1 = 1
-		printing_1 = 1
+		industrial_electrospun_polymeric_nanofibers = 1
+		stereolitography = 1
 		fuel_refining = 1
 		fuel_refining2 = 1
 		energy_efficiency = 1
@@ -177,4 +177,3 @@ capital = 595
 	}
 	set_variable = { overall_productivity = 789 }
 }
-

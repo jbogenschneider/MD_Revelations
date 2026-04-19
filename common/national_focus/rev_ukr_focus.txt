@@ -188,7 +188,7 @@ focus_tree = {
 		ai_will_do = { base = 1 }
 		completion_reward = {
 			add_equipment_to_stockpile = { type = kamikaze_drone_1 amount = 2000 }
-			add_equipment_to_stockpile = { type = cnc_equipment_1 amount = 1000 }
+			add_equipment_to_stockpile = { type = command_control_equipment1 amount = 1000 }
 		}
 	}
 

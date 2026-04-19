@@ -84,12 +84,12 @@ capital = 229
 
 
 		infantry_mass_assault = 1
-		infantry_weapons_1 = 1
-		cnc_equipment_1 = 1
+		infantry_weapons = 1
+		command_control_equipment = 1
 		Anti_tank_0 = 1
 		Heavy_Anti_tank_0 = 1
-		camouflage_1 = 1
-		camouflage_2 = 1
+		camouflage = 1
+		camouflage2 = 1
 		support_weapons = 1
 
 		basic_computing = 1
@@ -100,8 +100,8 @@ capital = 229
 		radar = 1
 		fuel_silos = 1
 
-		nanofibers_1 = 1
-		printing_1 = 1
+		industrial_electrospun_polymeric_nanofibers = 1
+		stereolitography = 1
 		fuel_refining = 1
 		construction1 = 1
 	}
@@ -122,7 +122,7 @@ capital = 229
 				Early_APC = 1
 				APC_1 = 1
 				IFV_1 = 1
-				tech_arty_0 = 1
+				artillery_0 = 1
 				Anti_Air_0 = 1
 			}
 		}

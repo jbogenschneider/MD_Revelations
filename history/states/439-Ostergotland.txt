@@ -26,7 +26,7 @@ state = {
 
 		}
 		add_dynamic_modifier = {
-			modifier = hydroelectric_infrastructure_in_state
+			modifier = renewable_capacity_factor_dyn_mod
 
 		}
 		set_variable = {

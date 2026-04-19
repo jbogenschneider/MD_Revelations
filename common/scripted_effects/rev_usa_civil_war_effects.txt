@@ -262,8 +262,8 @@ rev_setup_usa_civil_war_sides_impeachment = {
 			}
 		}
 		add_equipment_to_stockpile = { type = AS_Fighter2 amount = -687 }
-		add_equipment_to_stockpile = { type = attack_helicopter_1 amount = -511 }
-		add_equipment_to_stockpile = { type = attack_helicopter_2 amount = -1979 }
+		add_equipment_to_stockpile = { type = attack_helicopter1 amount = -511 }
+		add_equipment_to_stockpile = { type = attack_helicopter2 amount = -1979 }
 		add_equipment_to_stockpile = { type = awacs_equipment_1 amount = -31 }
 		add_equipment_to_stockpile = { type = cas1 amount = -330 }
 		add_equipment_to_stockpile = { type = cv_awacs_equipment_1 amount = -64 }
@@ -282,8 +282,8 @@ rev_setup_usa_civil_war_sides_impeachment = {
 		add_equipment_to_stockpile = { type = Strike_fighter1 amount = -6 }
 		add_equipment_to_stockpile = { type = Strike_fighter2 amount = -52 }
 		add_equipment_to_stockpile = { type = Strike_fighter3 amount = -210 }
-		add_equipment_to_stockpile = { type = transport_helicopter_1 amount = -2575 }
-		add_equipment_to_stockpile = { type = transport_helicopter_2 amount = -3208 }
+		add_equipment_to_stockpile = { type = transport_helicopter1 amount = -2575 }
+		add_equipment_to_stockpile = { type = transport_helicopter2 amount = -3208 }
 		add_equipment_to_stockpile = { type = transport_plane1 amount = -1190 }
 		add_equipment_to_stockpile = { type = transport_plane3 amount = -261 }
 		set_equipment_fraction = 1
@@ -802,9 +802,9 @@ rev_grant_california_split_technology = {
 
 	set_technology = {
 		night_vision_3 = 1
-		cnc_equipment_3 = 1
-		cnc_equipment_4 = 1
-		land_drone_equipment_3 = 1
+		command_control_equipment3 = 1
+		command_control_equipment4 = 1
+		land_Drone_equipment3 = 1
 		util_vehicle_4 = 1
 		util_vehicle_5 = 1
 		mbt_tech_3 = 1
@@ -814,9 +814,9 @@ rev_grant_california_split_technology = {
 		IFV_6 = 1
 		APC_5 = 1
 		APC_6 = 1
-		tech_arty_3 = 1
+		artillery_3 = 1
 		Arty_upgrade_4 = 1
-		transport_helicopter_4 = 1
+		transport_helicopter4 = 1
 		SP_Anti_Air_3 = 1
 		L_Strike_fighter3 = 1
 		Strike_fighter4 = 1
@@ -827,10 +827,10 @@ rev_grant_california_split_technology = {
 		Air_UAV2 = 1
 		awacs_plane2 = 1
 		naval_plane4 = 1
-		printing_4 = 1
-		nanofibers_4 = 1
-		printing_5 = 1
-		genetics_3 = 1
+		self-replicated_3D_printer = 1
+		commercial_nanomanufacturing = 1
+		modern_3D_printing = 1
+		synthetic_life = 1
 		electrification_4 = 1
 		electrification_5 = 1
 		utility_scale_battery_storage2 = 1
@@ -849,15 +849,15 @@ rev_grant_california_split_technology = {
 		Anti_tank_3 = 1
 		Anti_Air_3 = 1
 		internet5 = 1
-		computing4 = 1
-		land_drone_equipment_4 = 1
-		genetics_4 = 1
-		special_forces_tech_5 = 1
+		modern_deep_learning = 1
+		fully_automated_drones = 1
+		crispr_treatment = 1
+		special_forces5 = 1
 		AS_Fighter4 = 1
-		infantry_weapons_5 = 1
+		infantry_weapons5 = 1
 		night_vision_4 = 1
 		support_weapons5 = 1
-		land_drone_equipment_5 = 1
+		smart_drones = 1
 		decryption3 = 1
 		encryption3 = 1
 		decryption4 = 1
@@ -868,7 +868,7 @@ rev_grant_california_split_technology = {
 		computing4 = 1
 		computing5 = 1
 		nsb_attack_helicopter_tech_4 = 1
-		attack_helicopter_4 = 1
+		attack_helicopter4 = 1
 		Air_Kamikaze1 = 1
 		air_defense = 1
 		SAM0 = 1
@@ -927,7 +927,7 @@ rev_grant_california_split_technology = {
 		tech_fire_control_2 = 1
 		tech_combat_radar_3 = 1
 		tech_combat_sonar_3 = 1
-		tech_rail_guns_1 = 1
+		tech_rail_guns = 1
 		tech_point_defense_system_2 = 1
 		tech_point_defense_system_3 = 1
 		tech_turret_missiles_surface_2 = 1
@@ -935,8 +935,8 @@ rev_grant_california_split_technology = {
 		tech_vls_surface_2 = 1
 		tech_vls_aa_3 = 1
 		tech_torpedoes_3 = 1
-		tech_landing_craft_5 = 1
-		tech_landing_craft_2 = 1
+		tech_specialized_protective_equipment = 1
+		tech_advanced_landing_craft = 1
 		corvette_hull_1 = 1
 		corvette_hull_2 = 1
 		corvette_hull_3 = 1
@@ -958,43 +958,43 @@ rev_grant_california_split_technology = {
 		aircraft_carrier_engineering = 1
 		aircraft_heli_engineering_1 = 1
 		aircraft_heli_engineering_2 = 1
-		tech_submarine_engineering_1 = 1
+		tech_submarine_engineering = 1
 		tech_submarine_engineering_1 = 1
 		tech_submarine_engineering_2 = 1
 		tech_naval_systems_engineering = 1
+		tech_power_systems = 1
 		tech_power_systems_1 = 1
-		tech_power_systems_1 = 1
-		tech_nuclear_power_systems_1 = 1
+		tech_nuclear_power_systems = 1
 		tech_combat_support_systems = 1
-		tech_fire_control_1 = 1
-		tech_combat_radar_1 = 1
+		tech_fire_control = 1
+		tech_combat_radar = 1
 		tech_combat_radar_1 = 1
 		tech_combat_radar_2 = 1
-		tech_combat_sonar_1 = 1
+		tech_combat_sonar = 1
 		tech_combat_sonar_1 = 1
 		tech_combat_sonar_2 = 1
 		tech_early_naval_weapon_systems = 1
 		tech_naval_weapon_systems = 1
+		tech_light_guns = 1
 		tech_light_guns_1 = 1
-		tech_light_guns_1 = 1
+		tech_point_defense_system = 1
 		tech_point_defense_system_1 = 1
-		tech_point_defense_system_1 = 1
+		tech_turret_missiles_surface = 1
 		tech_turret_missiles_surface_1 = 1
-		tech_turret_missiles_surface_1 = 1
+		tech_turret_missiles_aa = 1
 		tech_turret_missiles_aa_1 = 1
-		tech_turret_missiles_aa_1 = 1
+		tech_vls_surface = 1
 		tech_vls_surface_1 = 1
-		tech_vls_surface_1 = 1
-		tech_vls_aa_1 = 1
+		tech_vls_aa = 1
 		tech_vls_aa_1 = 1
 		tech_vls_aa_2 = 1
-		tech_torpedoes_1 = 1
+		tech_torpedoes = 1
 		tech_torpedoes_1 = 1
 		tech_torpedoes_2 = 1
-		tech_landing_craft_1 = 1
-		tech_landing_craft_2 = 1
-		tech_landing_craft_3 = 1
-		tech_landing_craft_4 = 1
+		tech_landing_craft = 1
+		tech_amphibious_assault_ship = 1
+		tech_air_cushioned_landing_craft = 1
+		tech_modern_landing_craft = 1
 		radar = 1 
 		internet1 = 1 
 		internet2 = 1 
@@ -1117,14 +1117,14 @@ rev_grant_california_split_technology = {
 				IFV_2 = 1
 				IFV_3 = 1
 				IFV_4 = 1
-				tech_arty_0 = 1
+				artillery_0 = 1
 				Arty_upgrade_1 = 1
 				Arty_upgrade_2 = 1
 				Arty_upgrade_3 = 1
 				SP_arty_1 = 1
 				SP_arty_0 = 1
 				SP_R_arty_0 = 1
-				tech_arty_1 = 1
+				artillery_1 = 1
 				SP_R_arty_1 = 1
 				Rec_tank_0 = 1
 				Rec_tank_1 = 1
@@ -1136,8 +1136,8 @@ rev_grant_california_split_technology = {
 				AA_upgrade_2 = 1
 				Anti_Air_2 = 1
 				AA_upgrade_3 = 1
-				attack_helicopter_1 = 1
-				attack_helicopter_2 = 1
+				attack_helicopter1 = 1
+				attack_helicopter2 = 1
 			}
 		}
 	}
@@ -1231,4 +1231,3 @@ rev_grant_california_split_technology = {
 		}
 	}
 }
-

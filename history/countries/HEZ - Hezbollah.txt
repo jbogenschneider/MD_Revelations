@@ -26,16 +26,16 @@ capital = 201
 		infantry_mass_assault = 1
 		early_guerilla_warfare = 1
 
-		infantry_weapons_1 = 1
+		infantry_weapons = 1
 
 		combat_eng_equipment = 1
 
 		night_vision_1 = 1
 		night_vision_2 = 1
 
-		cnc_equipment_1 = 1
+		command_control_equipment = 1
 
-		util_vehicle_1 = 1
+		util_vehicle_0 = 1
 
 		Anti_tank_0 = 1
 		Heavy_Anti_tank_0 = 1
@@ -52,8 +52,8 @@ capital = 201
 		gprs = 1
 		fuel_silos = 1
 
-		nanofibers_1 = 1
-		printing_1 = 1
+		industrial_electrospun_polymeric_nanofibers = 1
+		stereolitography = 1
 		fuel_refining = 1
 		construction1 = 1
 		stronghold_building_1 = 1
@@ -76,7 +76,7 @@ capital = 201
 				Early_APC = 1 #Vehicle Design
 				APC_1 = 1
 				IFV_1 = 1
-				tech_arty_0 = 1
+				artillery_0 = 1
 				SP_arty_0 = 1
 				SP_R_arty_0 = 1
 				Anti_Air_0 = 1
@@ -344,9 +344,9 @@ capital = 201
 		Air_UAV1 = 1
 		SP_Anti_Air_0 = 1
 		util_vehicle_1 = 1
-		cnc_equipment_2 = 1
+		command_control_equipment1 = 1
 		night_vision_3 = 1
-		infantry_weapons_2 = 1
+		infantry_weapons1 = 1
 
 		basic_computing = 1
 		integrated_circuit = 1
@@ -363,11 +363,13 @@ capital = 201
 		computing4 = 1
 		decryption4 = 1
 		encryption4 = 1
-nanofibers_1 = 1
-		printing_1 = 1
-		genetics_1 = 1
-		genetics_2 = 1
-		genetics_3 = 1
+		neural_networks_revival = 1
+		data_mining = 1
+		industrial_electrospun_polymeric_nanofibers = 1
+		stereolitography = 1
+		DNA_fingerprinting = 1
+		modern_gmo = 1
+		gene_therapy = 1
 		construction1 = 1
 		excavation1 = 1
 		wifi = 1

@@ -12,8 +12,8 @@ state = {
 			air_base = 3
 			offices = 1
 			industrial_complex = 2
-			renewable_energy_infra = 4
 		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
 		set_variable = { state_renewable_capacity_factor_modifier_var = 0.525 }
 		add_core_of = SAU
 		add_core_of = HEJ

@@ -51,8 +51,8 @@ country_event = {
 			D01 = {
 				set_equipment_fraction = 1
 				air_experience = 25
-				add_equipment_to_stockpile = { type = infantry_weapons_3 amount = 30000 }
-				add_equipment_to_stockpile = { type = cnc_equipment_3 amount = 5000 }
+				add_equipment_to_stockpile = { type = infantry_weapons3 amount = 30000 }
+				add_equipment_to_stockpile = { type = command_control_equipment3 amount = 5000 }
 				add_equipment_to_stockpile = { type = Anti_tank_2 amount = 1200 }
 				add_equipment_to_stockpile = { type = Anti_Air_2 amount = 900 }
 				add_equipment_to_stockpile = { type = artillery_1 amount = 800 }
@@ -86,7 +86,7 @@ country_event = {
 			limit = { country_exists = D01 }
 			# Spend the requested US resources.
 			add_equipment_to_stockpile = {
-				type = infantry_weapons_type
+				type = infantry_weapons
 				amount = -1000
 			}
 			add_equipment_to_stockpile = {
@@ -95,7 +95,7 @@ country_event = {
 			}
 
 			D01 = {
-				add_equipment_to_stockpile = { type = infantry_weapons_type amount = 1000 }
+				add_equipment_to_stockpile = { type = infantry_weapons amount = 1000 }
 				add_equipment_to_stockpile = { type = util_vehicle_3 amount = 400 }
 
 				405 = {

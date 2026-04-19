@@ -77,17 +77,17 @@ capital = 220
 		infantry_mass_assault = 1
 
 		#For Templates
-		infantry_weapons_1 = 1
-		cnc_equipment_1 = 1
+		infantry_weapons = 1
+		command_control_equipment = 1
 		Anti_tank_0 = 1
 		Heavy_Anti_tank_0 = 1
 		combat_eng_equipment = 1
 
-		transport_helicopter_1 = 1
-		nsb_transport_helicopter_1 = 1
+		transport_helicopter1 = 1
+		nsb_transport_helicopter1 = 1
 
 		#Amir IFV
-		util_vehicle_1 = 1
+		util_vehicle_0 = 1
 
 
 		basic_computing = 1
@@ -98,8 +98,8 @@ capital = 220
 		radar = 1
 		fuel_silos = 1
 
-		nanofibers_1 = 1
-		printing_1 = 1
+		industrial_electrospun_polymeric_nanofibers = 1
+		stereolitography = 1
 		fuel_refining = 1
 		construction1 = 1
 	}
@@ -171,7 +171,7 @@ capital = 220
 				APC_2 = 1
 				APC_3 = 1
 				APC_4 = 1
-				tech_arty_0 = 1
+				artillery_0 = 1
 				#Abu Fatma SPG
 				SP_arty_0 = 1
 				SP_R_arty_0 = 1

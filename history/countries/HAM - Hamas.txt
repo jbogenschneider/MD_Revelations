@@ -44,8 +44,8 @@ capital = 209
 
 		infantry_mass_assault = 1
 		#For templates
-		infantry_weapons_1 = 1
-		cnc_equipment_1 = 1
+		infantry_weapons = 1
+		command_control_equipment = 1
 		Anti_tank_0 = 1
 
 		basic_computing = 1
@@ -200,11 +200,13 @@ capital = 209
 		computing4 = 1
 		decryption4 = 1
 		encryption4 = 1
-nanofibers_1 = 1
-		printing_1 = 1
-		genetics_1 = 1
-		genetics_2 = 1
-		genetics_3 = 1
+		neural_networks_revival = 1
+		data_mining = 1
+		industrial_electrospun_polymeric_nanofibers = 1
+		stereolitography = 1
+		DNA_fingerprinting = 1
+		modern_gmo = 1
+		gene_therapy = 1
 		internet2 = 1 #2G
 		construction1 = 1
 		excavation1 = 1
@@ -234,6 +236,8 @@ nanofibers_1 = 1
 		the_military
 		iranian_quds_force
 	}
+
+	add_opinion_modifier = { target = ISR modifier = HAM_ISR_Occupation }
 
 	set_popularities = {
 		democratic = 0.0

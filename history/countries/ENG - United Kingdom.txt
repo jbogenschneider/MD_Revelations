@@ -373,25 +373,25 @@ capital = 13
 
 		superior_firepower = 1
 
-		infantry_weapons_1 = 1
-		infantry_weapons_2 = 1
-		infantry_weapons_3 = 1
+		infantry_weapons = 1
+		infantry_weapons1 = 1
+		infantry_weapons2 = 1
 		support_weapons = 1
 		support_weapons2 = 1
 		squad_automatic_weapon = 1
 		tandem_charge_warheads = 1
 		support_weapons3 = 1
-		special_forces_tech_1 = 1
-		special_forces_tech_2 = 1
+		special_forces = 1
+		special_forces2 = 1
 
-		camouflage_1 = 1
-		camouflage_2 = 1
+		camouflage = 1
+		camouflage2 = 1
 
-		cnc_equipment_1 = 1
-		cnc_equipment_2 = 1
-		cnc_equipment_3 = 1
+		command_control_equipment = 1
+		command_control_equipment1 = 1
+		command_control_equipment2 = 1
 
-		land_drone_equipment_type = 1
+		land_Drone_equipment = 1
 
 		Anti_tank_0 = 1
 		AT_upgrade_1 = 1
@@ -402,17 +402,17 @@ capital = 13
 
 		combat_eng_equipment = 1
 
-		util_vehicle_1 = 1
+		util_vehicle_0 = 1
 		util_vehicle_1 = 1
 		util_vehicle_2 = 1
 
 
-		transport_helicopter_1 = 1
-		nsb_transport_helicopter_1 = 1
-		transport_helicopter_2 = 1
-		nsb_transport_helicopter_2 = 1 #Westland WG-13 Lynx
-		transport_helicopter_3 = 1 #Merlin early prod
-		nsb_transport_helicopter_3 = 1 #Merlin early prod
+		transport_helicopter1 = 1
+		nsb_transport_helicopter1 = 1
+		transport_helicopter2 = 1
+		nsb_transport_helicopter2 = 1 #Westland WG-13 Lynx
+		transport_helicopter3 = 1 #Merlin early prod
+		nsb_transport_helicopter3 = 1 #Merlin early prod
 
 		night_vision_1 = 1
 		night_vision_2 = 1
@@ -420,7 +420,7 @@ capital = 13
 
 
 
-		body_armor_1 = 1
+		body_armor_1980 = 1
 
 		basic_computing = 1
 		integrated_circuit = 1
@@ -437,14 +437,14 @@ capital = 13
 		gprs = 1
 		fuel_silos = 1
 
-		nanofibers_1 = 1
-		nanofibers_2 = 1
-		nanofibers_3 = 1
-		printing_1 = 1
-		printing_2 = 1
-		printing_3 = 1
-		genetics_1 = 1
-		genetics_2 = 1
+		industrial_electrospun_polymeric_nanofibers = 1
+		multiwalled_carbon_nanotubes = 1
+		modern_electrospinning = 1
+		stereolitography = 1
+		early_3D_printers = 1
+		t3D_wax_printer = 1
+		DNA_fingerprinting = 1
+		modern_gmo = 1
 		fuel_refining = 1
 		fuel_refining2 = 1
 		energy_efficiency = 1
@@ -1179,7 +1179,7 @@ capital = 13
 		}
 		create_equipment_variant = {
 			name = "Sea King HC"
-			type = transport_helicopter_1
+			type = transport_helicopter1
 			upgrades = {
 			}
 			obsolete = yes
@@ -1187,7 +1187,7 @@ capital = 13
 		}
 		create_equipment_variant = {
 			name = "Lynx AH.1"
-			type = transport_helicopter_2
+			type = transport_helicopter2
 			upgrades = {
 			}
 			obsolete = yes
@@ -1195,7 +1195,7 @@ capital = 13
 		}
 		create_equipment_variant = {
 			name = "Lynx HAS.3"
-			type = transport_helicopter_2
+			type = transport_helicopter2
 			upgrades = {
 			}
 			obsolete = yes
@@ -1203,7 +1203,7 @@ capital = 13
 		}
 		create_equipment_variant = {
 			name = "Chinook HC2"
-			type = transport_helicopter_2
+			type = transport_helicopter2
 			upgrades = {
 			}
 			obsolete = yes
@@ -1263,8 +1263,8 @@ capital = 13
 				APC_1 = 1
 				APC_2 = 1
 				APC_3 = 1 #FV103 Spartan
-				tech_arty_0 = 1
-				tech_arty_1 = 1 #L118 Light Gun
+				artillery_0 = 1
+				artillery_1 = 1 #L118 Light Gun
 				Arty_upgrade_1 = 1
 				Arty_upgrade_3 = 1
 				SP_arty_0 = 1
@@ -1285,8 +1285,8 @@ capital = 13
 				SP_Anti_Air_0 = 1
 				SP_Anti_Air_0 = 1
 				SP_Anti_Air_1 = 1
-				attack_helicopter_1 = 1
-				attack_helicopter_2 = 1
+				attack_helicopter1 = 1
+				attack_helicopter2 = 1
 			}
 
 			create_equipment_variant = {
@@ -1381,54 +1381,54 @@ capital = 13
 			aircraft_heli_engineering_1 = 1
 			aircraft_heli_engineering_2 = 1
 
-			tech_submarine_engineering_1 = 1
+			tech_submarine_engineering = 1
 			tech_submarine_engineering_1 = 1
 			tech_submarine_engineering_2 = 1
 
 			tech_naval_systems_engineering = 1
+			tech_power_systems = 1
 			tech_power_systems_1 = 1
-			tech_power_systems_1 = 1
-			tech_nuclear_power_systems_1 = 1
+			tech_nuclear_power_systems = 1
 			tech_nuclear_power_systems_1 = 1
 
 			tech_combat_support_systems = 1
+			tech_fire_control = 1
 			tech_fire_control_1 = 1
-			tech_fire_control_1 = 1
-			tech_combat_radar_1 = 1
+			tech_combat_radar = 1
 			tech_combat_radar_1 = 1
 			tech_combat_radar_2 = 1
-			tech_combat_sonar_1 = 1
+			tech_combat_sonar = 1
 			tech_combat_sonar_1 = 1
 			tech_combat_sonar_2 = 1
 
 			tech_early_naval_weapon_systems = 1
 			tech_naval_weapon_systems = 1
 			tech_naval_weapon_systems = 1
-			tech_light_guns_1 = 1
+			tech_light_guns = 1
 			tech_light_guns_1 = 1
 
-			tech_point_defense_system_1 = 1
+			tech_point_defense_system = 1
 			tech_point_defense_system_1 = 1
 			tech_point_defense_system_2 = 1
 			tech_point_defense_system_3 = 1
 
+			tech_turret_missiles_surface = 1
 			tech_turret_missiles_surface_1 = 1
-			tech_turret_missiles_surface_1 = 1
-			tech_turret_missiles_aa_1 = 1
+			tech_turret_missiles_aa = 1
 			tech_turret_missiles_aa_1 = 1
 			tech_turret_missiles_aa_2 = 1
-			tech_vls_surface_1 = 1
+			tech_vls_surface = 1
 			tech_vls_surface_1 = 1
 			tech_vls_surface_2 = 1
-			tech_vls_aa_1 = 1
+			tech_vls_aa = 1
 			tech_vls_aa_1 = 1
 			tech_vls_aa_2 = 1
 
-			tech_torpedoes_1 = 1
+			tech_torpedoes = 1
 			tech_torpedoes_1 = 1
 
-			tech_landing_craft_1 = 1
-			tech_landing_craft_2 = 1
+			tech_landing_craft = 1
+			tech_amphibious_assault_ship = 1
 		}
 
 		#Centaur Class
@@ -1580,7 +1580,7 @@ capital = 13
 			name_group = ENG_DD_HISTORICAL
 			parent_version = 0
 			modules = {
-				fixed_ship_engine_slot = module_light_surface_diesel_power_1
+				fixed_ship_engine_slot = module_light_surface_diesel_power
 				fixed_ship_fire_control_system_slot = module_analog_fire_control
 				fixed_ship_radar_slot = module_radar_2
 				fixed_ship_auxillary_slot_2 = module_anti_submarine_mortar
@@ -1600,7 +1600,7 @@ capital = 13
 			name_group = ENG_DD_HISTORICAL
 			parent_version = 1
 			modules = {
-				fixed_ship_engine_slot = module_light_surface_diesel_power_1
+				fixed_ship_engine_slot = module_light_surface_diesel_power
 				fixed_ship_fire_control_system_slot = module_analog_fire_control
 				fixed_ship_radar_slot = module_radar_2
 				fixed_ship_auxillary_slot_2 = module_anti_submarine_mortar
@@ -1679,7 +1679,7 @@ capital = 13
 			name_group = ENG_DD_HISTORICAL
 			parent_version = 2
 			modules = {
-				fixed_ship_engine_slot = module_light_surface_diesel_power_1
+				fixed_ship_engine_slot = module_light_surface_diesel_power
 				fixed_ship_fire_control_system_slot = module_analog_fire_control
 				fixed_ship_radar_slot = module_radar_2
 				fixed_ship_auxillary_slot_2 = module_anti_submarine_mortar
@@ -1698,7 +1698,7 @@ capital = 13
 			name_group = ENG_DD_HISTORICAL
 			parent_version = 0
 			modules = {
-				fixed_ship_engine_slot = module_light_surface_diesel_power_1
+				fixed_ship_engine_slot = module_light_surface_diesel_power
 				fixed_ship_fire_control_system_slot = module_analog_fire_control
 				fixed_ship_radar_slot = module_radar_2
 				fixed_ship_auxillary_slot = module_chain_gun
@@ -1715,7 +1715,7 @@ capital = 13
 			name_group = ENG_DD_HISTORICAL
 			parent_version = 0
 			modules = {
-				fixed_ship_engine_slot = module_light_surface_diesel_power_1
+				fixed_ship_engine_slot = module_light_surface_diesel_power
 				fixed_ship_fire_control_system_slot = module_analog_fire_control
 				fixed_ship_radar_slot = module_radar_3
 				fixed_ship_auxillary_slot = module_anti_submarine_missile_1
@@ -1732,7 +1732,7 @@ capital = 13
 			name_group = ENG_DD_HISTORICAL
 			parent_version = 1
 			modules = {
-				fixed_ship_engine_slot = module_light_surface_diesel_power_1
+				fixed_ship_engine_slot = module_light_surface_diesel_power
 				fixed_ship_fire_control_system_slot = module_analog_fire_control
 				fixed_ship_radar_slot = module_radar_3
 				fixed_ship_auxillary_slot = module_vls_sam_2
@@ -1749,7 +1749,7 @@ capital = 13
 			name_group = ENG_DD_HISTORICAL
 			parent_version = 2
 			modules = {
-				fixed_ship_engine_slot = module_light_surface_diesel_power_1
+				fixed_ship_engine_slot = module_light_surface_diesel_power
 				fixed_ship_fire_control_system_slot = module_digital_integrated_fire_control
 				fixed_ship_radar_slot = module_radar_4
 				fixed_ship_auxillary_slot = module_vls_sam_2
@@ -1766,7 +1766,7 @@ capital = 13
 			name_group = ENG_DD_HISTORICAL
 			parent_version = 0
 			modules = {
-				fixed_ship_engine_slot = module_light_surface_diesel_power_1
+				fixed_ship_engine_slot = module_light_surface_diesel_power
 				fixed_ship_fire_control_system_slot = module_analog_fire_control
 				fixed_ship_radar_slot = module_radar_1
 				fixed_ship_auxillary_slot = module_torpedoes_1
@@ -1783,7 +1783,7 @@ capital = 13
 			#name_group = ENG_CORVETTE_HISTORICAL
 			parent_version = 0
 			modules = {
-				fixed_ship_engine_slot = module_light_surface_diesel_power_1
+				fixed_ship_engine_slot = module_light_surface_diesel_power
 				fixed_ship_fire_control_system_slot = module_analog_fire_control
 				fixed_ship_radar_slot = module_radar_2
 				fixed_ship_auxillary_slot = module_mineclearing
@@ -1799,7 +1799,7 @@ capital = 13
 			type = corvette_hull_2
 			parent_version = 0
 			modules = {
-				fixed_ship_engine_slot = module_light_surface_diesel_power_1
+				fixed_ship_engine_slot = module_light_surface_diesel_power
 				fixed_ship_fire_control_system_slot = module_digital_integrated_fire_control
 				fixed_ship_radar_slot = module_radar_2
 				fixed_ship_auxillary_slot = empty
@@ -1816,7 +1816,7 @@ capital = 13
 			type = corvette_hull_3
 			parent_version = 0
 			modules = {
-				fixed_ship_engine_slot = module_light_surface_diesel_power_1
+				fixed_ship_engine_slot = module_light_surface_diesel_power
 				fixed_ship_fire_control_system_slot = module_digital_integrated_fire_control
 				fixed_ship_radar_slot = module_radar_2
 				fixed_ship_auxillary_slot = module_fuel_tank
@@ -1834,7 +1834,7 @@ capital = 13
 			#name_group = ENG_CORVETTE_HISTORICAL
 			parent_version = 0
 			modules = {
-				fixed_ship_engine_slot = module_light_surface_diesel_power_1
+				fixed_ship_engine_slot = module_light_surface_diesel_power
 				fixed_ship_fire_control_system_slot = module_digital_integrated_fire_control
 				fixed_ship_radar_slot = module_radar_2
 				fixed_ship_auxillary_slot = module_mineclearing
@@ -1851,7 +1851,7 @@ capital = 13
 			#name_group = ENG_CORVETTE_HISTORICAL
 			parent_version = 0
 			modules = {
-				fixed_ship_engine_slot = module_light_surface_diesel_power_1
+				fixed_ship_engine_slot = module_light_surface_diesel_power
 				fixed_ship_fire_control_system_slot = module_digital_integrated_fire_control
 				fixed_ship_radar_slot = module_radar_2
 				fixed_ship_auxillary_slot = empty
@@ -2087,7 +2087,7 @@ capital = 13
 				avionics_type_slot = avionics_manned_2
 				wingform_type_slot = wing_variable
 				special_slot_type_1 = spec_countermeasures_1
-				special_slot_type_2 = empty
+				special_slot_type_2 = spec_refuel_3
 				fixed_auxiliary_weapon_slot_1 = weap_mp_light_hardpoint_2
 			}
 			upgrades = {
@@ -2108,7 +2108,7 @@ capital = 13
 				avionics_type_slot = avionics_manned_2
 				wingform_type_slot = wing_variable
 				special_slot_type_1 = spec_countermeasures_1
-				special_slot_type_2 = empty
+				special_slot_type_2 = spec_refuel_3
 				fixed_auxiliary_weapon_slot_1 = weap_mp_light_hardpoint_2
 			}
 			upgrades = {
@@ -2127,7 +2127,7 @@ capital = 13
 				avionics_type_slot = avionics_manned_2
 				wingform_type_slot = wing_variable
 				special_slot_type_1 = spec_countermeasures_2
-				special_slot_type_2 = empty
+				special_slot_type_2 = spec_refuel_3
 				fixed_auxiliary_weapon_slot_1 = weap_mp_light_hardpoint_2
 			}
 			obsolete = yes
@@ -2145,7 +2145,7 @@ capital = 13
 				avionics_type_slot = avionics_manned_3
 				wingform_type_slot = wing_variable
 				special_slot_type_1 = spec_countermeasures_2
-				special_slot_type_2 = empty
+				special_slot_type_2 = spec_refuel_3
 				special_slot_type_3 = spec_tgp_2
 				fixed_auxiliary_weapon_slot_1 = weap_mp_light_hardpoint_2
 			}
@@ -2164,7 +2164,7 @@ capital = 13
 				avionics_type_slot = avionics_manned_3
 				wingform_type_slot = wing_delta_canard
 				special_slot_type_1 = spec_countermeasures_2
-				special_slot_type_2 = empty
+				special_slot_type_2 = spec_refuel_3
 				special_slot_type_3 = spec_tgp_2
 				fixed_auxiliary_weapon_slot_1 = weap_a2a_hardpoint_2
 				fixed_auxiliary_weapon_slot_2 = weap_mp_light_hardpoint_2
@@ -2256,7 +2256,7 @@ capital = 13
 				avionics_type_slot = avionics_manned_2
 				wingform_type_slot = wing_swept
 				special_slot_type_1 = spec_countermeasures_2
-				special_slot_type_2 = empty
+				special_slot_type_2 = spec_refuel_3
 				special_slot_type_3 = spec_redundant_2
 				fixed_auxiliary_weapon_slot_1 = empty
 				fixed_auxiliary_weapon_slot_2 = empty
@@ -2550,7 +2550,7 @@ capital = 13
 		modern_high_speed_rail = 1
 		freight_locomotive = 1
 
-		cnc_equipment_5 = 1
+		command_control_equipment4 = 1
 
 		combat_eng_equipment = 1
 
@@ -2558,16 +2558,16 @@ capital = 13
 
 		Rec_tank_3 = 1
 
-		transport_helicopter_3 = 1
+		transport_helicopter3 = 1
 
-		attack_helicopter_3 = 1 #AW159 Wildcat
+		attack_helicopter3 = 1 #AW159 Wildcat
 
 		MR_Fighter4 = 1 #F-35A Lightning II
 
 		CV_L_strike_fighter3 = 1  #F-35B Lightning II
 
-		body_armor_3 = 1
-		camouflage_3 = 1
+		body_armor_2010 = 1
+		camouflage3 = 1
 
 		computing3 = 1
 		decryption3 = 1
@@ -2578,20 +2578,24 @@ capital = 13
 		computing5 = 1
 		decryption5 = 1
 		encryption5 = 1
-nanofibers_1 = 1
-		nanofibers_2 = 1
-		nanofibers_3 = 1
-		printing_1 = 1
-		printing_2 = 1
-		printing_3 = 1
-		genetics_1 = 1
-		genetics_2 = 1
-		genetics_2 = 1
-		genetics_2 = 1
-		genetics_2 = 1
-		genetics_1 = 1
-		genetics_2 = 1
-		genetics_2 = 1
+		neural_networks_revival = 1
+		data_mining = 1
+		machine_learning = 1
+		sociable_machines = 1
+		industrial_electrospun_polymeric_nanofibers = 1
+		multiwalled_carbon_nanotubes = 1
+		modern_electrospinning = 1
+		stereolitography = 1
+		early_3D_printers = 1
+		t3D_wax_printer = 1
+		DNA_fingerprinting = 1
+		modern_gmo = 1
+		gene_therapy = 1
+		genetically_modified_crops = 1
+		gene_targeting_pesticides = 1
+		human_genome_project = 1
+		crispr = 1
+		cas9_gene_editing = 1
 		wifi = 1
 		internet3 = 1	#3G
 		edge = 1
@@ -2612,7 +2616,7 @@ nanofibers_1 = 1
 		set_technology = {
 			APC_4 = 1
 			APC_5 = 1
-			tech_arty_2 = 1
+			artillery_2 = 1
 		}
 	}
 
@@ -2661,72 +2665,72 @@ nanofibers_1 = 1
 			aircraft_heli_engineering_2 = 1
 			aircraft_heli_engineering_3 = 1
 
-			tech_submarine_engineering_1 = 1
+			tech_submarine_engineering = 1
 			tech_submarine_engineering_1 = 1
 			tech_submarine_engineering_2 = 1
 			tech_submarine_engineering_3 = 1
 			tech_submarine_engineering_4 = 1
 
 			tech_naval_systems_engineering = 1
-			tech_power_systems_1 = 1
+			tech_power_systems = 1
 			tech_power_systems_1 = 1
 			tech_power_systems_2 = 1
-			tech_nuclear_power_systems_1 = 1
+			tech_nuclear_power_systems = 1
 			tech_nuclear_power_systems_1 = 1
 			tech_nuclear_power_systems_2 = 1
 
 			tech_combat_support_systems = 1
-			tech_fire_control_1 = 1
+			tech_fire_control = 1
 			tech_fire_control_1 = 1
 			tech_fire_control_2 = 1
-			tech_combat_radar_1 = 1
+			tech_combat_radar = 1
 			tech_combat_radar_1 = 1
 			tech_combat_radar_2 = 1
 			tech_combat_radar_3 = 1
 			tech_combat_radar_4 = 1
-			tech_combat_sonar_1 = 1
+			tech_combat_sonar = 1
 			tech_combat_sonar_1 = 1
 			tech_combat_sonar_2 = 1
 			tech_combat_sonar_3 = 1
 			tech_combat_sonar_4 = 1
 
 			tech_naval_weapon_systems = 1
-			tech_light_guns_1 = 1
+			tech_light_guns = 1
 			tech_light_guns_1 = 1
 			tech_light_guns_2 = 1
 
-			tech_point_defense_system_1 = 1
+			tech_point_defense_system = 1
 			tech_point_defense_system_1 = 1
 			tech_point_defense_system_2 = 1
 			tech_point_defense_system_3 = 1
 			tech_point_defense_system_4 = 1
 			tech_point_defense_system_5 = 1
 
-			tech_turret_missiles_surface_1 = 1
+			tech_turret_missiles_surface = 1
 			tech_turret_missiles_surface_1 = 1
 			tech_turret_missiles_surface_2 = 1
 			tech_turret_missiles_surface_3 = 1
 
-			tech_turret_missiles_aa_1 = 1
+			tech_turret_missiles_aa = 1
 			tech_turret_missiles_aa_1 = 1
 			tech_turret_missiles_aa_2 = 1
 			tech_turret_missiles_aa_3 = 1
 
-			tech_vls_surface_1 = 1
+			tech_vls_surface = 1
 			tech_vls_surface_1 = 1
 			tech_vls_surface_2 = 1
 			tech_vls_surface_3 = 1
 
-			tech_vls_aa_1 = 1
+			tech_vls_aa = 1
 			tech_vls_aa_1 = 1
 			tech_vls_aa_2 = 1
 			tech_vls_aa_3 = 1
 
-			tech_torpedoes_1 = 1
+			tech_torpedoes = 1
 			tech_torpedoes_1 = 1
 			tech_torpedoes_2 = 1
 
-			tech_landing_craft_1 = 1
+			tech_landing_craft = 1
 		}
 
 		#Queen Elizabeth Class
@@ -2916,6 +2920,3 @@ nanofibers_1 = 1
 	recruit_character = ENG_john_weale
 	recruit_character = ENG_simon_williams
 }
-
-
-

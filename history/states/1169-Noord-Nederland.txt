@@ -11,6 +11,7 @@ state = {
 
 	history = {
 		owner = HOL
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
 		set_variable = { state_renewable_capacity_factor_modifier_var = 0.40 }
 		add_core_of = HOL
 		victory_points = { 9335 1 } #Groningen
@@ -20,7 +21,7 @@ state = {
 			infrastructure = 1
 			internet_station = 1
 			air_base = 2
-			renewable_energy_infra = 6
+			synthetic_refinery = 6
 			14631 = {
 				naval_base = 2
 			}

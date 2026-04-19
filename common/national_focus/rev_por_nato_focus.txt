@@ -52,11 +52,11 @@ focus_tree = {
 			add_war_support = 0.03
 			army_experience = 10
 			add_equipment_to_stockpile = {
-				type = infantry_weapons_5 #C7
+				type = infantry_weapons5 #C7
 				amount = 10000
 			}
 			add_equipment_to_stockpile = {
-				type = cnc_equipment_4 #C2 Equipment
+				type = command_control_equipment4 #C2 Equipment
 				amount = 3000
 			}
 		}
@@ -221,7 +221,7 @@ focus_tree = {
 		prerequisite = { focus = REV_POR_NATO_land_drone_program }
 		ai_will_do = { base = 1 }
 		completion_reward = {
-			set_technology = { land_drone_equipment_3 = 1 }
+			set_technology = { land_Drone_equipment3 = 1 }
 			air_experience = 5
 		}
 	}
@@ -257,7 +257,7 @@ focus_tree = {
 		prerequisite = { focus = REV_POR_NATO_networked_drone_fires }
 		ai_will_do = { base = 1 }
 		completion_reward = {
-			set_technology = { land_drone_equipment_4 = 1 }
+			set_technology = { land_Drone_equipment4 = 1 }
 			army_experience = 15
 		}
 	}
@@ -403,5 +403,4 @@ focus_tree = {
 		completion_reward = { set_stability = 0.60 }
 	}
 }
-
 

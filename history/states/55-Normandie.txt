@@ -23,7 +23,6 @@ state = {
 			industrial_complex = 1
 			air_base = 10
 			nuclear_reactor = 3
-			agriculture_district = 2
 			6449 = {
 				naval_base = 5
 				# naval group
@@ -32,8 +31,10 @@ state = {
 			485 = {
 				naval_base = 1
 			}
+			agriculture_district = 2
 		}
 
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
 		set_variable = { state_renewable_capacity_factor_modifier_var = 0.35 }
 		add_core_of = FRA
 		2025.1.1 = {

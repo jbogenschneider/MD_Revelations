@@ -86,11 +86,11 @@ focus_tree = {
 			set_temp_variable = { treasury_change = 10 }
 			modify_treasury_effect = yes
 			random_owned_controlled_state = {
-				limit = { free_building_slots = { building = industrial_complex size > 0 } }
+				limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
 				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
 			}
 			random_owned_controlled_state = {
-				limit = { free_building_slots = { building = synthetic_refinery size > 0 } }
+				limit = { free_building_slots = { building = synthetic_refinery size > 0 include_locked = yes } }
 				add_building_construction = { type = synthetic_refinery level = 1 instant_build = yes }
 			}
 		}

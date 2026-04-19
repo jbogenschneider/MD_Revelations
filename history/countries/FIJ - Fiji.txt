@@ -161,12 +161,12 @@ capital = 535
 		infantry_mass_assault = 1
 		night_vision_1 = 1
 		support_weapons = 1
-		special_forces_tech_1 = 1
+		special_forces = 1
 
 		#Basic Rifles
-		infantry_weapons_1 = 1
+		infantry_weapons = 1
 		#Old Radios
-		cnc_equipment_1 = 1
+		command_control_equipment = 1
 
 		#Needed for SPAA template
 
@@ -194,7 +194,7 @@ capital = 535
 
 		else = {
 			set_technology = {
-				tech_arty_0 = 1
+				artillery_0 = 1
 				Anti_Air_0 = 1
 			}
 		}
@@ -263,4 +263,3 @@ capital = 535
 	recruit_character = FIJ_mohammed_aziz
 	recruit_character = FIJ_pita_driti
 }
-

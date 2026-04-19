@@ -35,10 +35,10 @@ capital = 695
 
 		armoured_mass_assault = 1
 
-		infantry_weapons_1 = 1
-		infantry_weapons_2 = 1
-		infantry_weapons_3 = 1
-		infantry_weapons_4 = 1
+		infantry_weapons = 1
+		infantry_weapons1 = 1
+		infantry_weapons2 = 1
+		infantry_weapons3 = 1
 		support_weapons = 1
 		tandem_charge_warheads = 1
 		squad_automatic_weapon = 1
@@ -50,16 +50,16 @@ capital = 695
 		night_vision_1 = 1
 		night_vision_2 = 1
 
-		cnc_equipment_1 = 1
-		cnc_equipment_2 = 1
-		cnc_equipment_3 = 1
+		command_control_equipment = 1
+		command_control_equipment1 = 1
+		command_control_equipment2 = 1
 
-		land_drone_equipment_type = 1
+		land_Drone_equipment = 1
 
 		Rec_tank_0 = 1 #1965
 		Rec_tank_1 = 1 #1985
 
-		util_vehicle_1 = 1
+		util_vehicle_0 = 1
 		util_vehicle_1 = 1
 		util_vehicle_2 = 1
 
@@ -88,8 +88,8 @@ capital = 695
 		internet1 = 1 	#1G
 		fuel_silos = 1
 
-		nanofibers_1 = 1
-		printing_1 = 1
+		industrial_electrospun_polymeric_nanofibers = 1
+		stereolitography = 1
 		fuel_refining = 1
 		construction1 = 1
 	}
@@ -114,11 +114,11 @@ capital = 695
 				MBT_2 = 1
 				IFV_1 = 1
 				IFV_2 = 1
-				tech_arty_0 = 1
+				artillery_0 = 1
 				Arty_upgrade_1 = 1
 				SP_arty_0 = 1
 				SP_R_arty_0 = 1
-				tech_arty_1 = 1
+				artillery_1 = 1
 				SP_arty_1 = 1
 				SP_R_arty_1 = 1
 				SP_R_arty_2 = 1
@@ -190,5 +190,4 @@ capital = 695
 
 
 }
-
 

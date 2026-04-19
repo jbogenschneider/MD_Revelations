@@ -91,9 +91,9 @@ capital = 846
 		infantry_mass_assault = 1
 
 		#Basic Rifles
-		infantry_weapons_1 = 1
+		infantry_weapons = 1
 		#Old Radios
-		cnc_equipment_1 = 1
+		command_control_equipment = 1
 
 		#Needed for SPAA template
 
@@ -103,9 +103,9 @@ capital = 846
 		Anti_tank_0 = 1
 		Heavy_Anti_tank_0 = 1
 
-		util_vehicle_1 = 1
+		util_vehicle_0 = 1
 
-		body_armor_1 = 1
+		body_armor_1980 = 1
 
 		basic_computing = 1
 		integrated_circuit = 1
@@ -117,8 +117,8 @@ capital = 846
 		internet1 = 1 	#1G
 		fuel_silos = 1
 
-		nanofibers_1 = 1
-		printing_1 = 1
+		industrial_electrospun_polymeric_nanofibers = 1
+		stereolitography = 1
 		fuel_refining = 1
 		construction1 = 1
 	}
@@ -140,7 +140,7 @@ capital = 846
 				Early_APC = 1
 				APC_1 = 1
 				IFV_1 = 1
-				tech_arty_0 = 1
+				artillery_0 = 1
 				SP_arty_0 = 1
 				Rec_tank_0 = 1
 				Anti_Air_0 = 1
@@ -210,4 +210,3 @@ capital = 846
 	recruit_character = HON_javier_barrientos_alvarado
 	recruit_character = HON_rene_orlando_ponce_fonseca
 }
-

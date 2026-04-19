@@ -22,7 +22,7 @@ state = {
 			arms_factory = 1
 			industrial_complex = 2
 			offices = 2
-			renewable_energy_infra = 4
+			synthetic_refinery = 4
 			air_base = 10
 			radar_station = 2
 			540 = {
@@ -30,6 +30,7 @@ state = {
 			}
 		}
 
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
 		set_variable = { state_renewable_capacity_factor_modifier_var = 0.40 }			
 		add_core_of = ENG
 		2025.1.1 = {

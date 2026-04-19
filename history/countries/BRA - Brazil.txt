@@ -107,31 +107,31 @@ capital = 885
 		AT_upgrade_1 = 1
 		AA_upgrade_1 = 1
 
-		infantry_weapons_1 = 1
-		infantry_weapons_2 = 1
-		infantry_weapons_3 = 1
-		infantry_weapons_4 = 1
+		infantry_weapons = 1
+		infantry_weapons1 = 1
+		infantry_weapons2 = 1
+		infantry_weapons3 = 1
 		support_weapons = 1
 		squad_automatic_weapon = 1
 
-		special_forces_tech_1 = 1
-		cnc_equipment_1 = 1
+		special_forces = 1
+		command_control_equipment = 1
 		combat_eng_equipment = 1
 		Heavy_Anti_tank_0 = 1
 
-		util_vehicle_1 = 1
+		util_vehicle_0 = 1
 		util_vehicle_1 = 1
 		util_vehicle_2 = 1 #
 
 
 
 
-		transport_helicopter_1 = 1
-		nsb_transport_helicopter_1 = 1
+		transport_helicopter1 = 1
+		nsb_transport_helicopter1 = 1
 
-		body_armor_1 = 1
-		camouflage_1 = 1
-		camouflage_2 = 1
+		body_armor_1980 = 1
+		camouflage = 1
+		camouflage2 = 1
 
 		basic_computing = 1
 		integrated_circuit = 1
@@ -144,11 +144,11 @@ capital = 885
 		internet1 = 1
 		internet2 = 1
 
-		nanofibers_1 = 1
-		nanofibers_2 = 1
-		printing_1 = 1
-		printing_2 = 1
-		genetics_1 = 1
+		industrial_electrospun_polymeric_nanofibers = 1
+		multiwalled_carbon_nanotubes = 1
+		stereolitography = 1
+		early_3D_printers = 1
+		DNA_fingerprinting = 1
 		fuel_refining = 1
 		early_renewables = 1
 		renewables = 1
@@ -425,7 +425,7 @@ capital = 885
 				APC_3 = 1
 				APC_4 = 1
 				IFV_1 = 1
-				tech_arty_0 = 1
+				artillery_0 = 1
 				SP_arty_0 = 1
 				Arty_upgrade_1 = 1
 				SP_R_arty_0 = 1
@@ -433,8 +433,8 @@ capital = 885
 				SP_Anti_Air_1 = 1
 				Anti_Air_0 = 1
 				Rec_tank_0 = 1
-				attack_helicopter_1 = 1
-				attack_helicopter_2 = 1
+				attack_helicopter1 = 1
+				attack_helicopter2 = 1
 			}
 		}
 	}
@@ -463,45 +463,45 @@ capital = 885
 			aircraft_carrier_engineering = 1
 			aircraft_heli_engineering_1 = 1
 
-			tech_submarine_engineering_1 = 1
+			tech_submarine_engineering = 1
 
 			tech_naval_systems_engineering = 1
-			tech_power_systems_1 = 1
+			tech_power_systems = 1
 			tech_power_systems_1 = 1
 
 			tech_combat_support_systems = 1
+			tech_fire_control = 1
 			tech_fire_control_1 = 1
-			tech_fire_control_1 = 1
+			tech_combat_radar = 1
 			tech_combat_radar_1 = 1
-			tech_combat_radar_1 = 1
-			tech_combat_sonar_1 = 1
+			tech_combat_sonar = 1
 			tech_combat_sonar_1 = 1
 
 			tech_early_naval_weapon_systems = 1
 			tech_naval_weapon_systems = 1
-			tech_light_guns_1 = 1
+			tech_light_guns = 1
 			tech_light_guns_1 = 1
 
-			tech_point_defense_system_1 = 1
+			tech_point_defense_system = 1
 			tech_point_defense_system_1 = 1
 			tech_point_defense_system_2 = 1
 
+			tech_turret_missiles_surface = 1
 			tech_turret_missiles_surface_1 = 1
-			tech_turret_missiles_surface_1 = 1
 
+			tech_turret_missiles_aa = 1
 			tech_turret_missiles_aa_1 = 1
-			tech_turret_missiles_aa_1 = 1
 
+			tech_vls_surface = 1
 			tech_vls_surface_1 = 1
-			tech_vls_surface_1 = 1
 
+			tech_vls_aa = 1
 			tech_vls_aa_1 = 1
-			tech_vls_aa_1 = 1
 
-			tech_torpedoes_1 = 1
+			tech_torpedoes = 1
 			tech_torpedoes_1 = 1
 
-			tech_landing_craft_1 = 1
+			tech_landing_craft = 1
 		}
 
 		#Colossus Class https://en.wikipedia.org/wiki/Brazilian_aircraft_carrier_Minas_Gerais
@@ -526,9 +526,9 @@ capital = 885
 				rear_2_custom_slot = module_fuel_tank
 			}
 		}
-		#NiterÃƒÆ’Ã‚Â³i Class https://sv.wikipedia.org/wiki/Niteroi-klass
+		#Niterói Class https://sv.wikipedia.org/wiki/Niteroi-klass
 		create_equipment_variant = {
-			name = "NiterÃƒÆ’Ã‚Â³i Class"
+			name = "Niterói Class"
 			type = frigate_hull_2
 			name_group = BRA_DD_HISTORICAL
 			parent_version = 0
@@ -551,7 +551,7 @@ capital = 885
 			name_group = BRA_DD_HISTORICAL
 			parent_version = 0
 			modules = {
-				fixed_ship_engine_slot = module_light_surface_diesel_power_1
+				fixed_ship_engine_slot = module_light_surface_diesel_power
 				fixed_ship_fire_control_system_slot = module_analog_fire_control
 				fixed_ship_radar_slot = module_radar_1
 				fixed_ship_auxillary_slot = module_chain_gun
@@ -559,9 +559,9 @@ capital = 885
 				front_1_custom_slot = module_chain_gun
 			}
 		}
-		#InhaÃƒÆ’Ã‚Âºma Class https://en.wikipedia.org/wiki/Inha%C3%BAma-class_corvette
+		#Inhaúma Class https://en.wikipedia.org/wiki/Inha%C3%BAma-class_corvette
 		create_equipment_variant = {
-			name = "InhaÃƒÆ’Ã‚Âºma Class"
+			name = "Inhaúma Class"
 			type = corvette_hull_2
 			name_group = BRA_DD_HISTORICAL
 			parent_version = 0
@@ -574,9 +574,9 @@ capital = 885
 				front_1_custom_slot = module_asm_2
 			}
 		}
-		#InhaÃƒÆ’Ã‚Âºma Class https://en.wikipedia.org/wiki/Inha%C3%BAma-class_corvette
+		#Inhaúma Class https://en.wikipedia.org/wiki/Inha%C3%BAma-class_corvette
 		create_equipment_variant = {
-			name = "InhaÃƒÆ’Ã‚Âºma Class - Barroso Subclass"
+			name = "Inhaúma Class - Barroso Subclass"
 			type = corvette_hull_2
 			name_group = BRA_DD_HISTORICAL
 			parent_version = 1
@@ -596,7 +596,7 @@ capital = 885
 			name_group = BRA_DD_HISTORICAL
 			parent_version = 2
 			modules = {
-				fixed_ship_engine_slot = module_light_surface_diesel_power_1
+				fixed_ship_engine_slot = module_light_surface_diesel_power
 				fixed_ship_fire_control_system_slot = module_analog_fire_control
 				fixed_ship_radar_slot = module_radar_2
 				fixed_ship_auxillary_slot = module_mineclearing
@@ -1016,14 +1016,15 @@ capital = 885
 		support_weapons3 = 1
 		support_weapons4 = 1
 
-		special_forces_tech_2 = 1
-		special_forces_tech_3 = 1
+		special_forces2 = 1
+		special_forces3 = 1
 
 		#EE-9 Cascavel & X1A2
 		Rec_tank_0 = 1
 		Rec_tank_1 = 1
 
-		tech_arty_0 = 1
+		artillery_0 = 1
+
 		SP_arty_0 = 1
 		SP_arty_1 = 1
 		SP_arty_2 = 1
@@ -1051,29 +1052,29 @@ capital = 885
 		SP_Anti_Air_1 = 1
 		Anti_Air_0 = 1
 
-		infantry_weapons_1 = 1
-		infantry_weapons_2 = 1
-		infantry_weapons_3 = 1
-		infantry_weapons_4 = 1
-		infantry_weapons_5 = 1
-		infantry_weapons_6 = 1
+		infantry_weapons = 1
+		infantry_weapons1 = 1
+		infantry_weapons2 = 1
+		infantry_weapons3 = 1
+		infantry_weapons4 = 1
+		infantry_weapons5 = 1
 
-		cnc_equipment_1 = 1
-		cnc_equipment_2 = 1
-		cnc_equipment_3 = 1
-		cnc_equipment_4 = 1
-		cnc_equipment_5 = 1
+		command_control_equipment = 1
+		command_control_equipment1 = 1
+		command_control_equipment2 = 1
+		command_control_equipment3 = 1
+		command_control_equipment4 = 1
 
 		combat_eng_equipment = 1
 
-		land_drone_equipment_type = 1
-		land_drone_equipment_1 = 1
-		land_drone_equipment_2 = 1
+		land_Drone_equipment = 1
+		land_Drone_equipment1 = 1
+		land_Drone_equipment2 = 1
 
 		Heavy_Anti_tank_0 = 1
 		Heavy_Anti_tank_1 = 1
 
-		util_vehicle_1 = 1
+		util_vehicle_0 = 1
 		util_vehicle_1 = 1
 		util_vehicle_2 = 1
 		util_vehicle_3 = 1
@@ -1094,9 +1095,9 @@ capital = 885
 		transport_plane2 = 1
 		transport_plane3 = 1
 
-		tech_landing_craft_1 = 1
+		tech_landing_craft = 1
 
-		body_armor_2 = 1
+		body_armor_2000 = 1
 
 		microprocessors = 1
 		computing2 = 1
@@ -1108,11 +1109,13 @@ capital = 885
 		computing4 = 1
 		decryption4 = 1
 		encryption4 = 1
-nanofibers_1 = 1
-		printing_1 = 1
-		genetics_1 = 1
-		genetics_2 = 1
-		genetics_3 = 1
+		neural_networks_revival = 1
+		data_mining = 1
+		industrial_electrospun_polymeric_nanofibers = 1
+		stereolitography = 1
+		DNA_fingerprinting = 1
+		modern_gmo = 1
+		gene_therapy = 1
 
 		construction1 = 1
 		excavation1 = 1
@@ -1172,53 +1175,53 @@ nanofibers_1 = 1
 			aircraft_heli_engineering_1 = 1
 			aircraft_heli_engineering_2 = 1
 
-			tech_submarine_engineering_1 = 1
+			tech_submarine_engineering = 1
 
 			tech_naval_systems_engineering = 1
-			tech_power_systems_1 = 1
+			tech_power_systems = 1
 			tech_power_systems_1 = 1
 
 			tech_combat_support_systems = 1
-			tech_fire_control_1 = 1
+			tech_fire_control = 1
 			tech_fire_control_1 = 1
 			tech_fire_control_2 = 1
-			tech_combat_radar_1 = 1
+			tech_combat_radar = 1
 			tech_combat_radar_1 = 1
 			tech_combat_radar_2 = 1
-			tech_combat_sonar_1 = 1
+			tech_combat_sonar = 1
 			tech_combat_sonar_1 = 1
 			tech_combat_sonar_2 = 1
 
 			tech_naval_weapon_systems = 1
-			tech_light_guns_1 = 1
+			tech_light_guns = 1
 			tech_light_guns_1 = 1
 			tech_light_guns_2 = 1
 
-			tech_point_defense_system_1 = 1
+			tech_point_defense_system = 1
 			tech_point_defense_system_1 = 1
 			tech_point_defense_system_2 = 1
 			tech_point_defense_system_3 = 1
 
-			tech_turret_missiles_surface_1 = 1
+			tech_turret_missiles_surface = 1
 			tech_turret_missiles_surface_1 = 1
 			tech_turret_missiles_surface_2 = 1
 
-			tech_turret_missiles_aa_1 = 1
+			tech_turret_missiles_aa = 1
 			tech_turret_missiles_aa_1 = 1
 			tech_turret_missiles_aa_2 = 1
 
-			tech_vls_surface_1 = 1
+			tech_vls_surface = 1
 			tech_vls_surface_1 = 1
 
-			tech_vls_aa_1 = 1
+			tech_vls_aa = 1
 			tech_vls_aa_1 = 1
 			tech_vls_aa_2 = 1
 
-			tech_torpedoes_1 = 1
+			tech_torpedoes = 1
 			tech_torpedoes_1 = 1
 			tech_torpedoes_2 = 1
 
-			tech_landing_craft_1 = 1
+			tech_landing_craft = 1
 		}
 
 		################
@@ -1231,7 +1234,7 @@ nanofibers_1 = 1
 			name_group = BRA_CV_HISTORICAL
 			parent_version = 0
 			modules = {
-				fixed_ship_engine_slot = module_surface_diesel_power_1
+				fixed_ship_engine_slot = module_surface_diesel_power
 				fixed_ship_fire_control_system_slot = module_digital_integrated_fire_control
 				fixed_ship_radar_slot = module_radar_3
 				fixed_ship_auxillary_slot_3 = module_fuel_tank
@@ -1254,7 +1257,7 @@ nanofibers_1 = 1
 				attack_submarine_hull_2 = 1
 				attack_submarine_hull_3 = 1
 
-				#NiterÃƒÆ’Ã‚Â³i Class
+				#Niterói Class
 				frigate_hull_1 = 1
 				frigate_hull_2 = 1
 
@@ -1332,7 +1335,7 @@ nanofibers_1 = 1
 	startup_politics = yes
 
 	create_country_leader = {
-		name = "Luiz InÃƒÆ’Ã‚Â¡cio Lula da Silva"
+		name = "Luiz Inácio Lula da Silva"
 		picture = "luiz_inacio_lula_da_silva.dds"
 		ideology = neutral_Social
 	}
@@ -1357,6 +1360,3 @@ nanofibers_1 = 1
 	recruit_character = BRA_antonio_carlos_moretti_bermudezo
 	recruit_character = BRA_carlos_de_almeida_baptista_junior
 }
-
-
-

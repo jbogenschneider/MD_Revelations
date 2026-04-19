@@ -28,7 +28,7 @@ state = {
 		2025.1.1 = {
 			#add_manpower = -137125
 			buildings = {
-				infrastructure = 2
+				infrastructure = 3
 				internet_station = 4
 			}
 		}

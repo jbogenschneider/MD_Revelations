@@ -25,7 +25,7 @@ country_event = {
 
         # Ceasefire on adjusted current lines:
         # SOV keeps Donetsk + Luhansk regions and south corridor,
-        # UKR keeps merged northern line positions in parent states.
+        # UKR keeps Kramatorsk (1222), North Zaporizhzhia (1223), North Kherson (1224).
         white_peace = UKR
         #clr_country_flag = rev_sov_2026_sanctions_active
         remove_ideas = RUSSIA_SANCTIONS_BAN_DEBT
@@ -57,8 +57,8 @@ country_event = {
         ai_chance = { factor = 100 }
         custom_effect_tooltip = RUSSIA_2026_14_EFFECT_TT
 
-        # SOV secures merged Kramatorsk area before ceasefire.
-        transfer_state = 696
+        # SOV secures Kramatorsk before ceasefire.
+        transfer_state = 1222
 
         white_peace = UKR
         #clr_country_flag = rev_sov_2026_sanctions_active
@@ -122,7 +122,7 @@ country_event = {
 			add_to_variable = { var = debt value = 200 }
 		}
 
-        set_country_flag = russia_mobilization_2026_done
+        set_country_flag =  
 	}
     option = {
 		name = No
@@ -341,7 +341,7 @@ country_event = {
 					elections_allowed = no
 				}
 				add_manpower = 85000
-				add_equipment_to_stockpile = { type = infantry_weapons_3 amount = 18000 }
+				add_equipment_to_stockpile = { type = infantry_weapons3 amount = 18000 }
 				add_equipment_to_stockpile = { type = artillery_1 amount = 300 }
 				add_equipment_to_stockpile = { type = Anti_Air_2 amount = 120 }
 				division_template = {
