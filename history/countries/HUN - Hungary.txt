@@ -60,6 +60,7 @@ capital = 121
 		western_country
 		large_far_right_movement
 		heavily_regulated_immigration
+		EU_member
 	}
 
 	### HUN ###

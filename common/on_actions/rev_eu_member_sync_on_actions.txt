@@ -1,0 +1,8 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			rev_rebuild_eu_member_array = yes
+			EUU = { country_event = { id = rev_eu_sync.1 days = 1 } }
+		}
+	}
+}

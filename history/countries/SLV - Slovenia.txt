@@ -71,6 +71,7 @@ capital = 124
 		pluralist
 		western_country
 		large_far_right_movement
+		EU_member
 	}
 
 	set_variable = { industrial_conglomerates_opinion = 60 }

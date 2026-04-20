@@ -73,6 +73,7 @@
 		CZE_ctyrkoalice_idea
 		CZE_debt_problem_idea
 		CZE_volkswagen_group_skoda_idea
+		EU_member
 	}
 
 	set_cosmetic_tag = CZE

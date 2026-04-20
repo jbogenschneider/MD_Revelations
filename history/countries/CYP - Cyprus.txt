@@ -34,6 +34,7 @@ capital = 145
 
 		commonwealth_of_nations_member
 		officer_military_school
+		EU_member
 	}
 
 	give_military_access = ENG

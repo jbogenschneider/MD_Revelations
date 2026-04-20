@@ -83,7 +83,6 @@ capital = 13
 		#Other
 		p5_member
 		pluralist
-		EU_member
 		ENG_queen_elizabeth_2
 		g7_member
 		NATO_member
@@ -2500,7 +2499,6 @@ capital = 13
 		modest_corruption
 		p5_member
 		pluralist
-		EU_member
 		g7_member
 		stable_growth
 		defence_02

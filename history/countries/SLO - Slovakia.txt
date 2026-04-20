@@ -67,6 +67,7 @@ capital = 119
 		christian
 		western_country
 		large_far_right_movement
+		EU_member
 	}
 
 	set_technology = {

@@ -63,6 +63,7 @@ capital = 126
 		christian
 		western_country
 		medium_far_right_movement
+		EU_member
 	}
 
 

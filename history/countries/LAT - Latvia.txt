@@ -58,6 +58,7 @@ capital = 107
 		medium_far_right_movement
 		multi_ethnic_state_idea
 		POL_intolerance_of_communism_idea
+		EU_member
 	}
 
 	#Cyber

@@ -39,6 +39,7 @@ capital = 110
 		unrestrained_corruption
 		nuclear_energy
 		POL_intolerance_of_communism_idea
+		EU_member
 	}
 
 	#Cyber

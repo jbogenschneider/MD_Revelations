@@ -77,6 +77,7 @@ capital = 153
 		BUL_unfinished_reforms_idea
 		BUL_bulgarian_army_idea
 		BUL_army_bad
+		EU_member
 	}
 
 	add_opinion_modifier = {
