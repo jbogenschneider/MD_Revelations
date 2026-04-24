@@ -652,6 +652,14 @@ calculate_additional_income_rate = {
 		add_to_variable = { additional_income_rate = additional_income_USA_solomoney_cashless }
 	}
 	if = {
+		limit = {
+			tag = UKR
+			has_idea = UKR_major_drone_exporter_idea
+		}
+		set_variable = { additional_income_UKR_major_drone_exporter = 1 }
+		add_to_variable = { additional_income_rate = additional_income_UKR_major_drone_exporter }
+	}
+	if = {
 		limit = { has_idea = HOL_dutchaid }
 		set_variable = { additional_income_HOL_dutchaid = population_total }
 		multiply_variable = { additional_income_HOL_dutchaid = 0.1 }	#Millions of people

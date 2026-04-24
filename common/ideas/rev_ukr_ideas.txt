@@ -1,0 +1,8 @@
+ideas = {
+	country = {
+		UKR_major_drone_exporter_idea = {
+			allowed = { original_tag = UKR }
+			picture = globalized_trade_economy
+		}
+	}
+}

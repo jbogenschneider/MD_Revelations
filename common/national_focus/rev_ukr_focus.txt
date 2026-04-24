@@ -181,7 +181,7 @@ focus_tree = {
 		id = REV_UKR_offshore_suicide_drone_contracts
 		icon = drone
 		x = 14
-		y = 2
+		y = 6
 		cost = 10
 		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_RESEARCH }
 		prerequisite = { focus = REV_UKR_wartime_defense_directorate }
@@ -189,6 +189,54 @@ focus_tree = {
 		completion_reward = {
 			add_equipment_to_stockpile = { type = kamikaze_drone_1 amount = 2000 }
 			add_equipment_to_stockpile = { type = command_control_equipment1 amount = 1000 }
+		}
+	}
+
+	focus = {
+		id = REV_UKR_homade_fpv_drones
+		icon = drone
+		x = 11
+		y = 5
+		cost = 5
+		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_RESEARCH }
+		prerequisite = { focus = REV_UKR_emergency_defense_logistics }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			add_equipment_to_stockpile = { type = kamikaze_drone_2 amount = 1000 }
+		}
+	}
+
+	focus = {
+		id = REV_UKR_homade_fiber_optic_drones
+		icon = drone
+		x = 11
+		y = 6
+		cost = 5
+		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_RESEARCH }
+		prerequisite = { focus = REV_UKR_homade_fpv_drones }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			add_equipment_to_stockpile = { type = kamikaze_drone_2 amount = 1000 }
+		}
+	}
+
+	focus = {
+		id = REV_UKR_cheap_interceptor_drones
+		icon = air_defense
+		x = 11
+		y = 7
+		cost = 5
+		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_AIR_FOCUS }
+		prerequisite = { focus = REV_UKR_homade_fiber_optic_drones }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			every_owned_state = {
+				add_building_construction = {
+					type = shorad
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -253,6 +301,90 @@ focus_tree = {
 				amount = 100
 			}
 			army_experience = 15
+		}
+	}
+
+	focus = {
+		id = REV_UKR_saudi_drone_inceptor_deal
+		icon = drone
+		x = 16
+		y = 4
+		cost = 1
+		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_AIR_FOCUS }
+		prerequisite = { focus = REV_UKR_offshore_air_defense_contracts }
+		available = {
+			date > 2026.4.15
+		}
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			add_to_variable = { treasury = 5 }
+			698 = {
+				add_resource = {
+					type = oil
+					amount = 1
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = REV_UKR_uae_drone_inceptor_deal
+		icon = drone
+		x = 16
+		y = 5
+		cost = 1
+		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_AIR_FOCUS }
+		prerequisite = { focus = REV_UKR_offshore_air_defense_contracts }
+		available = {
+			date > 2026.4.15
+		}
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			add_to_variable = { treasury = 5 }
+			698 = {
+				add_resource = {
+					type = oil
+					amount = 1
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = REV_UKR_qatar_drone_inceptor_deal
+		icon = drone
+		x = 16
+		y = 6
+		cost = 1
+		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_AIR_FOCUS }
+		prerequisite = { focus = REV_UKR_offshore_air_defense_contracts }
+		available = {
+			date > 2026.4.15
+		}
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			add_to_variable = { treasury = 5 }
+			698 = {
+				add_resource = {
+					type = oil
+					amount = 1
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = REV_UKR_major_drone_exporter
+		icon = drone2
+		x = 16
+		y = 7
+		cost = 5
+		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_INDUSTRY }
+		prerequisite = { focus = REV_UKR_qatar_drone_inceptor_deal }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			custom_effect_tooltip = REV_UKR_major_drone_exporter_tt
+			add_ideas = UKR_major_drone_exporter_idea
 		}
 	}
 
@@ -410,6 +542,25 @@ focus_tree = {
 		}
 
 	focus = {
+		id = REV_UKR_postwar_modular_nuclear
+		icon = glowing_vault_boy
+		x = 9
+		y = 8
+		cost = 7
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_DEFENSE }
+		prerequisite = { focus = REV_UKR_postwar_power_grid_rebuild }
+		available = {
+			NOT = { has_war = yes }
+		}
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			695 = {
+				add_building_construction = { type = nuclear_reactor level = 1 instant_build = yes }
+			}
+		}
+	}
+
+	focus = {
 		id = REV_UKR_postwar_infrastructure_rebuild
 		icon = construction3
 		x = 7
@@ -444,6 +595,29 @@ focus_tree = {
 				}
 			}
 		}
+
+	focus = {
+		id = REV_UKR_rebuild_churches
+		icon = Church_icon
+		x = 5
+		y = 6
+		cost = 5
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_DEFENSE }
+		prerequisite = { focus = REV_UKR_postwar_infrastructure_rebuild }
+		available = {
+			NOT = { has_war = yes }
+		}
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			add_stability = 0.10
+			every_owned_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_manpower = 50000
+			}
+		}
+	}
 
 	focus = {
 		id = REV_UKR_postwar_internet_rebuild
@@ -483,10 +657,46 @@ focus_tree = {
 		}
 
 	focus = {
+		id = REV_UKR_rebuild_old_frontline
+		icon = construction3
+		x = 7
+		y = 7
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_DEFENSE }
+		prerequisite = { focus = REV_UKR_postwar_internet_rebuild }
+		available = {
+			NOT = { has_war = yes }
+		}
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			1087 = {
+				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+				add_building_construction = { type = internet_station level = 1 instant_build = yes }
+			}
+			1224 = {
+				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+				add_building_construction = { type = internet_station level = 1 instant_build = yes }
+			}
+			1223 = {
+				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+				add_building_construction = { type = internet_station level = 1 instant_build = yes }
+			}
+			1222 = {
+				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+				add_building_construction = { type = internet_station level = 1 instant_build = yes }
+			}
+			696 = {
+				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+				add_building_construction = { type = internet_station level = 1 instant_build = yes }
+			}
+		}
+	}
+
+	focus = {
 		id = REV_UKR_emergency_nato_accession
 		icon = nato
-		x = 12
-		y = 5
+		x = 9
+		y = 4
 		cost = 5
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_DEFENSE }
 		
