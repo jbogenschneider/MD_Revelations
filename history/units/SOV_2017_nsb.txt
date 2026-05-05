@@ -25,7 +25,7 @@ division_template = {
 		L_Inf_Bat = { x = 1 y = 0 }
 	}
 	support = {
-		armor_Bat = { x = 2 y = 0 }
+		Arty_Battery = { x = 0 y = 0 }
 	}
 }
 
@@ -118,10 +118,12 @@ division_template = {
 		Mot_Inf_Bat = { x = 0 y = 3 }
 		SP_Arty_Bat = { x = 1 y = 0 }
 		SP_Arty_Bat = { x = 1 y = 1 }
-		SP_Arty_Bat = { x = 1 y = 2 }
-		SP_AA_Bat = { x = 1 y = 3 }
+		SP_AA_Bat = { x = 1 y = 2 }
 		Mot_Inf_Bat = { x = 2 y = 0 }
 		L_Inf_Bat = { x = 2 y = 1 }
+	}
+	support = {
+		drone_tactical_company = { x = 0 y = 0 }
 	}
 }
 
@@ -398,7 +400,7 @@ units = {
 	}
 
 	division = {
-		name = "Conscripts"
+		name = "Jail Conscripts"
 		location = 14448
 		division_template = "Moblics"
 		start_experience_factor = 0.5
@@ -422,7 +424,7 @@ units = {
 	}
 
 	division = {
-		name = "Conscripts"
+		name = "Luhansk Conscripts"
 		location = 4719
 		division_template = "Moblics"
 		start_experience_factor = 0.5
@@ -567,7 +569,7 @@ units = {
 	division = {
 		name = "35th Motor Rifle Brigade"
 		location = 6519
-		division_template = "Motor Rifle Brigade"
+		division_template = "Light Motor Rifle Brigade"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.30
 	}
@@ -631,7 +633,7 @@ units = {
 	division = {
 		name = "17th Motor Rifle Brigade"
 		location = 15422
-		division_template = "Motor Rifle Brigade"
+		division_template = "Light Motor Rifle Brigade"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.30
 	}
@@ -655,7 +657,7 @@ units = {
 	division = {
 		name = "136th Motor Rifle Brigade"
 		location = 9542
-		division_template = "Motor Rifle Brigade"
+		division_template = "Light Motor Rifle Brigade"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.30
 	}
@@ -907,7 +909,7 @@ instant_effect = {
 	}
 	add_equipment_to_stockpile = {
 	type = AS_Fighter2 #MIG-31
-	amount = 54
+	amount = 34
 	}
 
 	add_equipment_to_stockpile = {
@@ -922,12 +924,12 @@ instant_effect = {
 
 	add_equipment_to_stockpile = {
 	type = AS_Fighter2 #SU-27
-	amount = 52
+	amount = 42
 	}
 
 	add_equipment_to_stockpile = {
 	type = AS_Fighter2 #SU-35
-	amount = 51
+	amount = 41
 	}
 
 	add_equipment_to_stockpile = {
@@ -937,17 +939,12 @@ instant_effect = {
 
 	add_equipment_to_stockpile = {
 	type = Strike_fighter2 #Su-24
-	amount = 38
+	amount = 28
 	}
 
 	add_equipment_to_stockpile = {
 	type = Strike_fighter3 #Su-34
-	amount = 37
-	}
-
-	add_equipment_to_stockpile = {
-	type = cas1 #SU-25
-	amount = 25
+	amount = 27
 	}
 
 	add_equipment_to_stockpile = {
@@ -1003,29 +1000,9 @@ instant_effect = {
 	}
 
 	add_equipment_to_stockpile = {
-		type = transport_helicopter1 		#Mi-8
-		amount = 201
-		producer = SOV
-	}
-
-	add_equipment_to_stockpile = {
-		type = transport_helicopter1 		#Mi-14
-		#version_name = "Mil Mi-14"
-		amount = 40
-		producer = SOV
-	}
-
-	add_equipment_to_stockpile = {
 		type = transport_helicopter2 		#Mi-26
 		amount = 21
 		producer = SOV
-	}
-
-	add_equipment_to_stockpile = {
-		type = transport_helicopter1 		#AS350
-		#version_name = "AS350B Ecureuil"
-		amount = 2
-		producer = FRA
 	}
 
 	add_equipment_to_stockpile = {
@@ -1301,19 +1278,12 @@ instant_effect = {
 
 	add_equipment_to_stockpile = {
 		type = artillery_0 #D-30
-		amount = 350
+		amount = 300
 	}
 
 	add_equipment_to_stockpile = {
 		type = artillery_1 #2S9 Nona
-		amount = 456
-	}
-
-	#SP
-
-	add_equipment_to_stockpile = {
-		type = SP_arty_0 #2S3 Akatsiya
-		amount = 250
+		amount = 406
 	}
 
 	add_equipment_to_stockpile = {
@@ -1351,7 +1321,7 @@ instant_effect = {
 	#C&C
 
 	add_equipment_to_stockpile = {
-		type = command_control_equipment1 #C3
+		type = command_control_equipment2 #C3
 		amount = 1300
 	}
 

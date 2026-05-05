@@ -2632,7 +2632,7 @@
  ukraine_tech.1.a: ""
  UKR_donbass_rise: "The uprising in the Southeast has occurred"
  REV_UKR_sea_drone_attacks_tt: "§RSOV loses 20 treasury and 5,000 fuel.§!"
- REV_UKR_refinery_attacks_tt: "§RSOV loses 40 treasury and 10,000 fuel.§!"
+ REV_UKR_refinery_attacks_tt: "§RSOV loses 20 treasury and 10,000 fuel.§!"
  REV_UKR_postwar_industry_rebuild: "Postwar Industrial Rebuild"
  REV_UKR_postwar_industry_rebuild_desc: "With frontline pressure reduced, we can shift resources into rebuilding civilian industry."
  REV_UKR_postwar_military_rebuild: "Postwar Military Rebuild"

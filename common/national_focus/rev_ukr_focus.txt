@@ -14,7 +14,7 @@ focus_tree = {
 		icon = military_planning
 		x = 14
 		y = 0
-		cost = 5
+		cost = 3
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_DEFENSE }
 		ai_will_do = { base = 1 }
@@ -29,7 +29,7 @@ focus_tree = {
 		icon = construction3
 		x = 11
 		y = 1
-		cost = 5
+		cost = 4
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_DEFENSE }
 		prerequisite = { focus = REV_UKR_wartime_defense_directorate }
 		ai_will_do = { base = 1 }
@@ -57,7 +57,7 @@ focus_tree = {
 		icon = SAM
 		x = 14
 		y = 1
-		cost = 5
+		cost = 4
 		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_AIR_FOCUS }
 		prerequisite = { focus = REV_UKR_wartime_defense_directorate }
 		ai_will_do = { base = 1 }
@@ -88,7 +88,7 @@ focus_tree = {
 		icon = powerplant
 		x = 17
 		y = 1
-		cost = 5
+		cost = 4
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_DEFENSE }
 		prerequisite = { focus = REV_UKR_wartime_defense_directorate }
 		ai_will_do = { base = 1 }
@@ -109,9 +109,9 @@ focus_tree = {
 		icon = powerplant
 		x = 17
 		y = 2
-		cost = 5
+		cost = 4
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_DEFENSE }
-		prerequisite = { focus = REV_UKR_wartime_defense_directorate }
+		prerequisite = { focus = REV_UKR_hardened_power_units_alpha }
 		ai_will_do = { base = 1 }
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -130,9 +130,9 @@ focus_tree = {
 		icon = powerplant
 		x = 17
 		y = 3
-		cost = 5
+		cost = 4
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_DEFENSE }
-		prerequisite = { focus = REV_UKR_wartime_defense_directorate }
+		prerequisite = { focus = REV_UKR_hardened_power_units_bravo }
 		ai_will_do = { base = 1 }
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -182,7 +182,7 @@ focus_tree = {
 		icon = drone
 		x = 14
 		y = 6
-		cost = 10
+		cost = 8
 		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_RESEARCH }
 		prerequisite = { focus = REV_UKR_wartime_defense_directorate }
 		ai_will_do = { base = 1 }
@@ -197,7 +197,7 @@ focus_tree = {
 		icon = drone
 		x = 11
 		y = 5
-		cost = 5
+		cost = 3
 		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_RESEARCH }
 		prerequisite = { focus = REV_UKR_emergency_defense_logistics }
 		ai_will_do = { base = 1 }
@@ -211,7 +211,7 @@ focus_tree = {
 		icon = drone
 		x = 11
 		y = 6
-		cost = 5
+		cost = 3
 		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_RESEARCH }
 		prerequisite = { focus = REV_UKR_homade_fpv_drones }
 		ai_will_do = { base = 1 }
@@ -245,7 +245,7 @@ focus_tree = {
 		icon = Generic_Submarine_Drone
 		x = 14
 		y = 5
-		cost = 5
+		cost = 4
 		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_RESEARCH }
 		prerequisite = { focus = REV_UKR_wartime_defense_directorate }
 		ai_will_do = { base = 1 }
@@ -267,7 +267,7 @@ focus_tree = {
 		icon = modern_refinery_industry
 		x = 14
 		y = 6
-		cost = 5
+		cost = 3
 		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_RESEARCH }
 		prerequisite = { focus = REV_UKR_wartime_defense_directorate }
 		ai_will_do = { base = 1 }
@@ -278,7 +278,73 @@ focus_tree = {
 			add_stability = 0.05
 			custom_effect_tooltip = REV_UKR_refinery_attacks_tt
 			SOV = {
-				add_to_variable = { treasury = -40 }
+				add_to_variable = { treasury = -20 }
+				add_fuel = -10000
+			}
+		}
+	}
+
+	focus = {
+		id = REV_UKR_refinery_attacks2
+		icon = modern_refinery_industry
+		x = 14
+		y = 7
+		cost = 3
+		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_RESEARCH }
+		prerequisite = { focus = REV_UKR_refinery_attacks }
+		ai_will_do = { base = 1 }
+		available = {
+			has_war = yes
+		}
+		completion_reward = {
+			add_stability = 0.05
+			custom_effect_tooltip = REV_UKR_refinery_attacks_tt
+			SOV = {
+				add_to_variable = { treasury = -20 }
+				add_fuel = -10000
+			}
+		}
+	}
+
+	focus = {
+		id = REV_UKR_refinery_attacks3
+		icon = gioia_tauro_port
+		x = 14
+		y = 8
+		cost = 3
+		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_RESEARCH }
+		prerequisite = { focus = REV_UKR_refinery_attacks2 }
+		ai_will_do = { base = 1 }
+		available = {
+			has_war = yes
+		}
+		completion_reward = {
+			add_stability = 0.05
+			custom_effect_tooltip = REV_UKR_refinery_attacks_tt
+			SOV = {
+				add_to_variable = { treasury = -20 }
+				add_fuel = -10000
+			}
+		}
+	}
+
+	focus = {
+		id = REV_UKR_refinery_attacks4
+		icon = gioia_tauro_port
+		x = 14
+		y = 9
+		cost = 3
+		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_RESEARCH }
+		prerequisite = { focus = REV_UKR_refinery_attacks3 }
+		ai_will_do = { base = 1 }
+		available = {
+			has_war = yes
+		}
+		completion_reward = {
+			add_stability = 0.05
+			custom_effect_tooltip = REV_UKR_refinery_attacks_tt
+			SOV = {
+				add_to_variable = { treasury = -20 }
 				add_fuel = -10000
 			}
 		}
@@ -446,7 +512,7 @@ focus_tree = {
 		icon = army_logistics
 		x = 11
 		y = 4
-		cost = 5
+		cost = 4
 		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_INDUSTRY }
 		prerequisite = { focus = REV_UKR_wartime_defense_directorate }
 		ai_will_do = { base = 1 }

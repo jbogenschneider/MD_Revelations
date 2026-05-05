@@ -55,35 +55,35 @@ country_event = {
 		}
 		644 = {
 			add_building_construction = {
-				type = shorad
+				type = anti_air_building
 				level = 3
 				instant_build = yes
 			}
 		}
 		9663 = {
 			add_building_construction = {
-				type = shorad
+				type = anti_air_building
 				level = 2
 				instant_build = yes
 			}
 		}
 		653 = {
 			add_building_construction = {
-				type = shorad
+				type = anti_air_building
 				level = 2
 				instant_build = yes
 			}
 		}
 		1172 = {
 			add_building_construction = {
-				type = shorad
+				type = anti_air_building
 				level = 2
 				instant_build = yes
 			}
 		}
 		1174 = {
 			add_building_construction = {
-				type = shorad
+				type = anti_air_building
 				level = 2
 				instant_build = yes
 			}
@@ -116,7 +116,7 @@ country_event = {
 				instant_build = yes
 			}
 			add_building_construction = {
-				type = shorad
+				type = anti_air_building
 				level = 2
 				instant_build = yes
 			}
@@ -129,7 +129,7 @@ country_event = {
 				instant_build = yes
 			}
 			add_building_construction = {
-				type = shorad
+				type = anti_air_building
 				level = 2
 				instant_build = yes
 			}
@@ -148,7 +148,7 @@ country_event = {
 				instant_build = yes
 			}
 			add_building_construction = {
-				type = shorad
+				type = anti_air_building
 				level = 2
 				instant_build = yes
 			}
@@ -191,7 +191,7 @@ country_event = {
 				instant_build = yes
 			}
 			add_building_construction = {
-				type = shorad
+				type = anti_air_building
 				level = 2
 				instant_build = yes
 			}
@@ -228,7 +228,7 @@ country_event = {
 				instant_build = yes
 			}
 			add_building_construction = {
-				type = shorad
+				type = anti_air_building
 				level = 2
 				instant_build = yes
 			}
@@ -247,35 +247,35 @@ country_event = {
 				instant_build = yes
 			}
 			add_building_construction = {
-				type = shorad
+				type = anti_air_building
 				level = 2
 				instant_build = yes
 			}
 		}
 		698 = {
 			add_building_construction = {
-				type = shorad
+				type = anti_air_building
 				level = 3
 				instant_build = yes
 			}
 		}
 		700 = {
 			add_building_construction = {
-				type = shorad
+				type = anti_air_building
 				level = 2
 				instant_build = yes
 			}
 		}
 		1086 = {
 			add_building_construction = {
-				type = shorad
+				type = anti_air_building
 				level = 2
 				instant_build = yes
 			}
 		}
 		695 = {
 			add_building_construction = {
-				type = shorad
+				type = anti_air_building
 				level = 2
 				instant_build = yes
 			}

@@ -909,7 +909,7 @@ instant_effect = {
 	}
 	add_equipment_to_stockpile = {
 	type = AS_Fighter2 #MIG-31
-	amount = 54
+	amount = 34
 	}
 
 	add_equipment_to_stockpile = {
@@ -924,12 +924,12 @@ instant_effect = {
 
 	add_equipment_to_stockpile = {
 	type = AS_Fighter2 #SU-27
-	amount = 52
+	amount = 42
 	}
 
 	add_equipment_to_stockpile = {
 	type = AS_Fighter2 #SU-35
-	amount = 51
+	amount = 41
 	}
 
 	add_equipment_to_stockpile = {
@@ -939,17 +939,12 @@ instant_effect = {
 
 	add_equipment_to_stockpile = {
 	type = Strike_fighter2 #Su-24
-	amount = 38
+	amount = 28
 	}
 
 	add_equipment_to_stockpile = {
 	type = Strike_fighter3 #Su-34
-	amount = 37
-	}
-
-	add_equipment_to_stockpile = {
-	type = cas1 #SU-25
-	amount = 25
+	amount = 27
 	}
 
 	add_equipment_to_stockpile = {
@@ -1005,29 +1000,9 @@ instant_effect = {
 	}
 
 	add_equipment_to_stockpile = {
-		type = transport_helicopter1 		#Mi-8
-		amount = 201
-		producer = SOV
-	}
-
-	add_equipment_to_stockpile = {
-		type = transport_helicopter1 		#Mi-14
-		#version_name = "Mil Mi-14"
-		amount = 40
-		producer = SOV
-	}
-
-	add_equipment_to_stockpile = {
 		type = transport_helicopter2 		#Mi-26
 		amount = 21
 		producer = SOV
-	}
-
-	add_equipment_to_stockpile = {
-		type = transport_helicopter1 		#AS350
-		#version_name = "AS350B Ecureuil"
-		amount = 2
-		producer = FRA
 	}
 
 	add_equipment_to_stockpile = {
@@ -1062,27 +1037,27 @@ instant_effect = {
 
 	add_equipment_to_stockpile = {
 		type = MBT_2
-		amount = 150
+		amount = 50
 	}
 
 	add_equipment_to_stockpile = {
 		type = util_vehicle_2 #GAZ-3132
-		amount = 800
+		amount = 100
 	}
 
 	add_equipment_to_stockpile = {
 		type = util_vehicle_1 #UAZ-469
-		amount = 1400
+		amount = 100
 	}
 
 	add_equipment_to_stockpile = {
 		type = util_vehicle_3 #Tigr
-		amount = 330
+		amount = 30
 	}
 
 	add_equipment_to_stockpile = {
 		type = IFV_1 #BMP-1
-		amount = 300
+		amount = 100
 	}
 
 	add_equipment_to_stockpile = {
@@ -1123,7 +1098,7 @@ instant_effect = {
 
 	add_equipment_to_stockpile = {
 		type = APC_3 #BTR-70
-		amount = 350
+		amount = 50
 	}
 
 	### Airborne Vehicles
@@ -1236,7 +1211,7 @@ instant_effect = {
 
 	add_equipment_to_stockpile = {
 		type = Anti_Air_2 #SA-24 Igla-S
-		amount = 350
+		amount = 250
 	}
 
 	#ATGM
@@ -1254,7 +1229,7 @@ instant_effect = {
 
 	add_equipment_to_stockpile = {
 		type = Anti_tank_2 #AT-13 Metis-M
-		amount = 600
+		amount = 200
 	}
 
 	add_equipment_to_stockpile = {
@@ -1301,19 +1276,12 @@ instant_effect = {
 
 	add_equipment_to_stockpile = {
 		type = artillery_0 #D-30
-		amount = 350
+		amount = 300
 	}
 
 	add_equipment_to_stockpile = {
 		type = artillery_1 #2S9 Nona
-		amount = 456
-	}
-
-	#SP
-
-	add_equipment_to_stockpile = {
-		type = SP_arty_0 #2S3 Akatsiya
-		amount = 250
+		amount = 406
 	}
 
 	add_equipment_to_stockpile = {
@@ -1341,18 +1309,18 @@ instant_effect = {
 
 	add_equipment_to_stockpile = {
 		type = infantry_weapons3 #1995
-		amount = 15500
+		amount = 500
 	}
 
 	add_equipment_to_stockpile = {
 		type = infantry_weapons4 #2005
-		amount = 10500
+		amount = 500
 	}
 	#C&C
 
 	add_equipment_to_stockpile = {
 		type = command_control_equipment2 #C3
-		amount = 4300
+		amount = 1300
 	}
 
 	add_equipment_to_stockpile = {
@@ -1375,6 +1343,5 @@ instant_effect = {
 	add_equipment_to_stockpile = {
 		type = sam_missile_equipment_2
 		amount = 900
-	}
-            
+	}     
 }
