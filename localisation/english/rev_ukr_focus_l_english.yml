@@ -56,5 +56,8 @@
  REV_UKR_rebuild_old_frontline_desc:0 "Restore logistics and network infrastructure across the old frontline belt to reconnect industry, command links, and civilian recovery."
  REV_UKR_rebuild_churches:0 "Rebuild Churches"
  REV_UKR_rebuild_churches_desc:0 "Over 600 churches were destroyed by bombing and shelling during the war, the Churches have mostly moved to people's homes but are ready to come back together. Donations from around the world are pouring in to rebuild and many Ukrainians are returning home from abroad."
+ REV_UKR_limited_conscription_surge:0 "Limited Conscription Surge"
+ REV_UKR_limited_conscription_surge_desc:0 "Accelerate selective mobilization to expand available personnel while preserving broad social and economic stability."
+ REV_UKR_limited_conscription_surge_treasury_tt:0 "Spend §R-5§! treasury balance."
  UKR_major_drone_exporter_idea:0 "Major Drone Exporter"
  UKR_major_drone_exporter_idea_desc:0 "Ukraine's drone industry has become a global supplier.\n\n§GWeekly Treasury: +1§!"

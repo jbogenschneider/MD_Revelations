@@ -567,5 +567,20 @@ focus_tree = {
 			add_ideas = REV_nato_regulate_ai_idea
 		}
 	}
+
+	focus = {
+		id = REV_FRA_NATO_limited_conscription_surge
+		icon = focus_generic_full_social_mobilization
+		x = 10
+		y = 5
+		cost = 5
+		prerequisite = { focus = REV_FRA_NATO_expand_military_factories_ii }
+		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_NATO }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			add_manpower = 100000
+			add_stability = -0.03
+		}
+	}
 }
 

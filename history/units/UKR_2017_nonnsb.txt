@@ -1098,17 +1098,12 @@ instant_effect = {
 	}
 	add_equipment_to_stockpile = {
 		type = MR_Fighter2 #Mig-29
-		amount = 37
+		amount = 27
 		producer = SOV
 	}
 	add_equipment_to_stockpile = {
 		type = 	AS_Fighter2 #Su-27
-		amount = 37
-		producer = SOV
-	}
-	add_equipment_to_stockpile = {
-		type = L_Strike_fighter1 #Aero L-39 Albatros
-		amount = 32
+		amount = 27
 		producer = SOV
 	}
 	add_equipment_to_stockpile = {

@@ -6,42 +6,27 @@ instant_effect = {
 
 	add_equipment_to_stockpile = {
 		type = AS_Fighter2 #MIG-31
-		amount = 156
-	}
-
-	add_equipment_to_stockpile = {
-		type = CV_MR_Fighter2 #MiG-29K
-		amount = 4
-	}
-
-	add_equipment_to_stockpile = {
-		type = CV_MR_Fighter3 #SU-33
-		amount = 24
+		amount = 56
 	}
 
 	add_equipment_to_stockpile = {
 		type = AS_Fighter2 #SU-27
-		amount = 113
+		amount = 63
 	}
 
 	add_equipment_to_stockpile = {
 		type = MR_Fighter2 #MiG-29
-		amount = 91
+		amount = 31
 	}
 
 	add_equipment_to_stockpile = {
 		type = Strike_fighter2 #Su-24
-		amount = 66
-	}
-
-	add_equipment_to_stockpile = {
-		type = cas1 #SU-25
-		amount = 45
+		amount = 36
 	}
 
 	add_equipment_to_stockpile = {
 		type = strategic_bomber1 #tu95
-		amount = 60
+		amount = 20
 	}
 
 	add_equipment_to_stockpile = {
@@ -61,7 +46,7 @@ instant_effect = {
 
 	add_equipment_to_stockpile = {
 		type = transport_plane2 #Il-78
-		amount = 120
+		amount = 100
 	}
 	add_equipment_to_stockpile = {
 		type = sam_missile_equipment_3

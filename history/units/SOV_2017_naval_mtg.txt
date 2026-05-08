@@ -208,7 +208,6 @@
 			name = "11th brigade of anti-submarine ships"
 			location = 3468 #Sevastopol Bay
 			ship = { name = "Ochakov" definition = cruiser start_experience_factor = 0.50 equipment = { cruiser_hull_1 = { amount = 1 owner = SOV version_name = "Kara Class" } } }
-			ship = { name = "Smetlivyy" definition = destroyer start_experience_factor = 0.50 equipment = { destroyer_hull_1 = { amount = 1 owner = SOV version_name = "Kashin Mod Class" } } }
 			ship = { name = "Pytlivyy" definition = frigate start_experience_factor = 0.50 equipment = { frigate_hull_1 = { amount = 1 owner = SOV version_name = "Krivak II Class" } } }
 		}
 	}
@@ -219,7 +218,6 @@
 		task_force = {
 			name = "400th division of anti-submarine ships"
 			location = 3468 #Sevastopol Bay
-			ship = { name = "Muromets" definition = corvette start_experience_factor = 0.50 equipment = { corvette_hull_2 = { amount = 1 owner = SOV version_name = "Grisha I/III Class" } } }
 			ship = { name = "Suzdalets" definition = corvette start_experience_factor = 0.50 equipment = { corvette_hull_2 = { amount = 1 owner = SOV version_name = "Grisha I/III Class" } } }
 			ship = { name = "MPK-127" definition = corvette start_experience_factor = 0.50 equipment = { corvette_hull_2 = { amount = 1 owner = SOV version_name = "Grisha I/III Class" } } }
 		}
@@ -232,7 +230,6 @@
 			name = "184th Novorossiysk Coastal Defense Brigade"
 			location = 11668 #Novorossiysk
 			ship = { name = "MPK-199" definition = corvette start_experience_factor = 0.50 equipment = { corvette_hull_2 = { amount = 1 owner = SOV version_name = "Grisha I/III Class" } } }
-			ship = { name = "BT-241" definition = corvette start_experience_factor = 0.50 equipment = { corvette_hull_2 = { amount = 1 owner = SOV version_name = "Sonya Class" } } }
 			ship = { name = "Krasnodar" definition = attack_submarine start_experience_factor = 0.50 equipment = { attack_submarine_hull_2 = { amount = 1 owner = SOV creator = SOV version_name = "Improved Kilo Class" } } }
 			ship = { name = "Veliky Novgorod" definition = attack_submarine start_experience_factor = 0.50 equipment = { attack_submarine_hull_2 = { amount = 1 owner = SOV creator = SOV version_name = "Improved Kilo Class" } } }
 			ship = { name = "Kolpino" definition = attack_submarine start_experience_factor = 0.50 equipment = { attack_submarine_hull_2 = { amount = 1 owner = SOV creator = SOV version_name = "Improved Kilo Class" } } }
@@ -249,9 +246,7 @@
 			location = 6332 #Kaliningrad
 			ship = { name = "Nastoychivyy" definition = destroyer start_experience_factor = 0.50 equipment = { destroyer_hull_2 = { amount = 1 owner = SOV version_name = "Sovremennyy Class" } } }
 			ship = { name = "Bespokoynyy" definition = destroyer start_experience_factor = 0.50 equipment = { destroyer_hull_2 = { amount = 1 owner = SOV version_name = "Sovremennyy Class" } } }
-			ship = { name = "Pylkiv" definition = frigate start_experience_factor = 0.50 equipment = { frigate_hull_1 = { amount = 1 owner = SOV version_name = "Krivak IV Class" } } }
 			ship = { name = "Neustrashimyy" definition = frigate start_experience_factor = 0.50 equipment = { frigate_hull_3 = { amount = 1 owner = SOV version_name = "Neustrashimyy Class" } } }
-			ship = { name = "Neukrotimyy" definition = frigate start_experience_factor = 0.50 equipment = { frigate_hull_1 = { amount = 1 owner = SOV version_name = "Krivak II Class" } } }
 		}
 	}
 	fleet = {
@@ -310,13 +305,6 @@
 			name = "36th Red Banner Order of Nakhimov Missile Ship Brigade"
 			location = 6332 #Kaliningrad
 #106th division of small missile ships#
-			ship = { name = "Zyb" definition = corvette start_experience_factor = 0.50 equipment = { corvette_hull_1 = { amount = 1 owner = SOV version_name = "Nanuchka III Class" } } }
-			ship = { name = "Geyzer" definition = corvette start_experience_factor = 0.50 equipment = { corvette_hull_1 = { amount = 1 owner = SOV version_name = "Nanuchka III Class" } } }
-			ship = { name = "Passat" definition = corvette start_experience_factor = 0.50 equipment = { corvette_hull_1 = { amount = 1 owner = SOV version_name = "Nanuchka III Class" } } }
-			ship = { name = "Liven" definition = corvette start_experience_factor = 0.50 equipment = { corvette_hull_1 = { amount = 1 owner = SOV version_name = "Nanuchka III Class" } } }
-			ship = { name = "Molniya" definition = corvette start_experience_factor = 0.50 equipment = { corvette_hull_1 = { amount = 1 owner = SOV version_name = "Nanuchka I Class" } } }
-			ship = { name = "Meteor" definition = corvette start_experience_factor = 0.50 equipment = { corvette_hull_1 = { amount = 1 owner = SOV version_name = "Nanuchka III Class" } } }
-			ship = { name = "Priliv" definition = corvette start_experience_factor = 0.50 equipment = { corvette_hull_1 = { amount = 1 owner = SOV version_name = "Nanuchka III Class" } } }
 #1st guard division of missile boats#
 			ship = { name = "R-129" definition = corvette start_experience_factor = 0.50 equipment = { corvette_hull_2 = { amount = 1 owner = SOV version_name = "Tarantul Class" } } }
 			ship = { name = "R-257" definition = corvette start_experience_factor = 0.50 equipment = { corvette_hull_2 = { amount = 1 owner = SOV version_name = "Tarantul Class" } } }

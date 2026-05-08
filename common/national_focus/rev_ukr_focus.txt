@@ -761,7 +761,7 @@ focus_tree = {
 	focus = {
 		id = REV_UKR_emergency_nato_accession
 		icon = nato
-		x = 9
+		x = 7
 		y = 4
 		cost = 5
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_DEFENSE }
@@ -778,6 +778,23 @@ focus_tree = {
 		ai_will_do = { base = 10 }
 		completion_reward = {
 			NATO_join = yes
+		}
+	}
+
+	focus = {
+		id = REV_UKR_limited_conscription_surge
+		icon = focus_generic_full_social_mobilization
+		x = 9
+		y = 4
+		cost = 5
+		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_INDUSTRY }
+		prerequisite = { focus = REV_UKR_counter_bombing_network }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			custom_effect_tooltip = REV_UKR_limited_conscription_surge_treasury_tt
+			add_manpower = 100000
+			add_stability = -0.03
+			add_to_variable = { treasury = -5 }
 		}
 	}
 }

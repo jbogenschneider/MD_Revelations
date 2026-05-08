@@ -17,7 +17,7 @@ focus_tree = {
 		cost = 5
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_NATO }
-		ai_will_do = { base = 1 }
+		ai_will_do = { base = 5 }
 		completion_reward = {
 			add_war_support = 0.02
 			add_political_power = 75
@@ -32,7 +32,7 @@ focus_tree = {
 		cost = 5
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NATO }
 		prerequisite = { focus = REV_GER_NATO_2026_security_compact }
-		ai_will_do = { base = 1 }
+		ai_will_do = { base = 5 }
 		completion_reward = {
 			add_political_power = 50
 			army_experience = 10
@@ -70,7 +70,7 @@ focus_tree = {
 		cost = 10
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NATO }
 		prerequisite = { focus = REV_GER_NATO_munitions_surge }
-		ai_will_do = { base = 1 }
+		ai_will_do = { base = 3 }
 		completion_reward = {
 			random_owned_controlled_state = {
 				limit = { free_building_slots = { building = arms_factory size > 0 include_locked = yes } }
@@ -91,6 +91,56 @@ focus_tree = {
 		cost = 10
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NATO }
 		prerequisite = { focus = REV_GER_NATO_expand_military_factories_i }
+		ai_will_do = { base = 3 }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = { free_building_slots = { building = arms_factory size > 0 include_locked = yes } }
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+			random_owned_controlled_state = {
+				limit = { free_building_slots = { building = arms_factory size > 0 include_locked = yes } }
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+			random_owned_controlled_state = {
+				limit = { free_building_slots = { building = arms_factory size > 0 include_locked = yes } }
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+		}
+	}
+
+	focus = {
+		id = REV_GER_NATO_expand_military_factories_iii
+		icon = factory_planning
+		x = 9
+		y = 5
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NATO }
+		prerequisite = { focus = REV_GER_NATO_expand_military_factories_ii }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = { free_building_slots = { building = arms_factory size > 0 include_locked = yes } }
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+			random_owned_controlled_state = {
+				limit = { free_building_slots = { building = arms_factory size > 0 include_locked = yes } }
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+			random_owned_controlled_state = {
+				limit = { free_building_slots = { building = arms_factory size > 0 include_locked = yes } }
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+		}
+	}
+
+	focus = {
+		id = REV_GER_NATO_expand_military_factories_iiii
+		icon = factory_planning
+		x = 9
+		y = 6
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NATO }
+		prerequisite = { focus = REV_GER_NATO_expand_military_factories_iii }
 		ai_will_do = { base = 1 }
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -285,7 +335,7 @@ focus_tree = {
 		cost = 5
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_NATO }
 		prerequisite = { focus = REV_GER_NATO_2026_security_compact }
-		ai_will_do = { base = 1 }
+		ai_will_do = { base = 10 }
 		completion_reward = {
 			army_experience = 15
 			if = {
@@ -308,7 +358,7 @@ focus_tree = {
 		cost = 5
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_NATO }
 		prerequisite = { focus = REV_GER_NATO_ukraine_intel_sharing }
-		ai_will_do = { base = 1 }
+		ai_will_do = { base = 10 }
 		completion_reward = {
 			add_political_power = -50
 			if = {
@@ -330,7 +380,7 @@ focus_tree = {
 		cost = 10
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NATO }
 		prerequisite = { focus = REV_GER_NATO_security_assistance_package }
-		ai_will_do = { base = 1 }
+		ai_will_do = { base = 10 }
 		completion_reward = {
 			add_political_power = -50
 			if = {
@@ -357,7 +407,7 @@ focus_tree = {
 		cost = 10
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NATO }
 		prerequisite = { focus = REV_GER_NATO_security_assistance_package }
-		ai_will_do = { base = 1 }
+		ai_will_do = { base = 10 }
 		completion_reward = {
 			add_political_power = -50
 			if = {
@@ -568,6 +618,105 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = USA_regulate_ai_tt
 			add_ideas = REV_nato_regulate_ai_idea
+		}
+	}
+
+	focus = {
+		id = REV_GER_NATO_hamburg_efuel_from_newfoundland
+		icon = modern_refinery_industry
+		x = 16
+		y = 7
+		cost = 4
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NATO }
+		ai_will_do = { base = 6 }
+		completion_reward = {
+			1080 = {
+				add_resource = {
+					type = oil
+					amount = 2
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = REV_GER_NATO_niedersachsen_efuel_from_namibia
+		icon = modern_refinery_industry
+		x = 16
+		y = 8
+		cost = 4
+		prerequisite = { focus = REV_GER_NATO_hamburg_efuel_from_newfoundland }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NATO }
+		ai_will_do = { base = 6 }
+		completion_reward = {
+			38 = {
+				add_resource = {
+					type = oil
+					amount = 2
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = REV_GER_NATO_schleswig_hydrogen_from_wind
+		icon = generic_drill
+		x = 16
+		y = 9
+		cost = 4
+		prerequisite = { focus = REV_GER_NATO_niedersachsen_efuel_from_namibia }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NATO }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			37 = {
+				add_resource = {
+					type = oil
+					amount = 2
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = REV_GER_NATO_automate_logistics
+		icon = contraband_truck
+		x = 9
+		y = 7
+		cost = 5
+		prerequisite = { focus = REV_GER_NATO_expand_military_factories_iiii }
+		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_NATO }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			add_manpower = 50000
+		}
+	}
+
+	focus = {
+		id = REV_GER_NATO_ground_drones
+		icon = economic_tech
+		x = 9
+		y = 8
+		cost = 5
+		prerequisite = { focus = REV_GER_NATO_automate_logistics }
+		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_NATO }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			add_manpower = 50000
+		}
+	}
+
+	focus = {
+		id = REV_GER_NATO_limited_conscription_surge
+		icon = focus_generic_full_social_mobilization
+		x = 10
+		y = 5
+		cost = 5
+		prerequisite = { focus = REV_GER_NATO_expand_military_factories_ii }
+		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_NATO }
+		ai_will_do = { base = 1 }
+		completion_reward = {
+			add_manpower = 100000
+			add_stability = -0.03
 		}
 	}
 }

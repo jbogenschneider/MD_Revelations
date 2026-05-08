@@ -114,8 +114,6 @@
 			location = 3686
 			ship = { name = "Aleksandrovets" definition = corvette start_experience_factor = 0.50 equipment = { corvette_2 = { amount = 1 owner = SOV version_name = "Grisha-Class" } } }
 			ship = { name = "Muromets" definition = corvette start_experience_factor = 0.50 equipment = { corvette_2 = { amount = 1 owner = SOV version_name = "Grisha-Class" } } }
-			ship = { name = "Suzdalets" definition = corvette start_experience_factor = 0.50 equipment = { corvette_2 = { amount = 1 owner = SOV version_name = "Grisha-Class" } } }
-			ship = { name = "Bora" definition = corvette start_experience_factor = 0.50 equipment = { missile_corvette_2 = { amount = 1 owner = SOV version_name = "Bora-Class" } } }
 			ship = { name = "Provornyy" definition = corvette start_experience_factor = 0.50 equipment = { missile_corvette_3 = { amount = 1 owner = SOV version_name = "Gremyashchiy-Class" } } }
 		}
 	}
@@ -127,7 +125,6 @@
 			location = 3686
 			ship = { name = "Alrosa" definition = attack_submarine start_experience_factor = 0.50 equipment = { diesel_attack_submarine_3 = { amount = 1 owner = SOV } } }
 			ship = { name = "Krasnodar" definition = attack_submarine start_experience_factor = 0.50 equipment = { diesel_attack_submarine_3 = { amount = 1 owner = SOV Version_name = "Improved-Kilo-Class" } } }
-			ship = { name = "Veliky Novgorod" definition = attack_submarine start_experience_factor = 0.50 equipment = { diesel_attack_submarine_3 = { amount = 1 owner = SOV Version_name = "Improved-Kilo-Class" } } }
 			ship = { name = "Kolpino" definition = attack_submarine start_experience_factor = 0.50 equipment = { diesel_attack_submarine_3 = { amount = 1 owner = SOV Version_name = "Improved-Kilo-Class" } } }
 		}
 	}
