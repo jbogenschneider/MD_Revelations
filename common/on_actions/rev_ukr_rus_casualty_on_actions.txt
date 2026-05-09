@@ -61,7 +61,6 @@ on_actions = {
 					NOT = { has_country_flag = rev_russia_weekly_peace_check_done }
 					NOT = { has_country_flag = russia_peace_decision_done_2026 }
 					NOT = { has_country_flag = russia_oligarch_council_active }
-					NOT = { has_country_flag = russia_economic_crisis_2026 }
 					UKR = { controls_province = 15423 }
 					UKR = { controls_province = 3306 }
 					UKR = { controls_province = 3580 }
@@ -76,7 +75,6 @@ on_actions = {
 						NOT = { has_country_flag = rev_russia_weekly_peace_check_done }
 						NOT = { has_country_flag = russia_peace_decision_done_2026 }
 						NOT = { has_country_flag = russia_oligarch_council_active }
-						NOT = { has_country_flag = russia_economic_crisis_2026 }
 					}
 					UKR = { controls_province = 15423 }
 					UKR = { controls_province = 3306 }
@@ -87,7 +85,6 @@ on_actions = {
 			if = { # good peace
 				limit = {
 					tag = SOV
-					has_country_flag = russia_oligarch_council_active
 					has_country_flag = russia_economic_crisis_2026
 					has_war_with = UKR
 					UKR = { controls_province = 6420 }
@@ -102,7 +99,6 @@ on_actions = {
 						tag = UKR
 						has_war_with = SOV
 						SOV = {
-							has_country_flag = russia_oligarch_council_active
 							has_country_flag = russia_economic_crisis_2026
 							NOT = { has_country_flag = rev_russia_weekly_peace_check_done }
 						}

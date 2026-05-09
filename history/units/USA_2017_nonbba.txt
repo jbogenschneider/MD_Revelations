@@ -1,0 +1,118 @@
+﻿instant_effect = {
+
+	############################################
+	################STOCKPILE###################
+	############################################
+
+	################################
+	### Land Based Fighters ########
+	################################
+
+	add_equipment_to_stockpile = {
+		type = MR_Fighter2
+		amount = 948
+	}
+
+	add_equipment_to_stockpile = {
+		type = AS_Fighter3
+		amount = 481
+	}
+
+	add_equipment_to_stockpile = {
+		type = Strike_fighter3
+		amount = 210
+	}
+
+	add_equipment_to_stockpile = {
+		type = cas2
+		amount = 212
+	}
+
+	####################
+	###Naval Aviation###
+	####################
+	add_equipment_to_stockpile = {
+		type = CV_MR_Fighter2 #Boeing F/A-18 Hornet = Removed 200
+		amount = 571
+	}
+	add_equipment_to_stockpile = {
+		type = naval_plane2 #P-3C Orion
+		amount = 260
+	}
+
+	##########
+	###USMC###
+	##########
+	add_equipment_to_stockpile = {
+		type = CV_MR_Fighter2 #Boeing F/A-18 Hornet
+		amount = 245
+	}
+
+	##########################
+	###US Strategic Command###
+	##########################
+
+	add_equipment_to_stockpile = {
+		type = strategic_bomber3 #B1-B
+		amount = 7
+	}
+	add_equipment_to_stockpile = {
+		type = strategic_bomber4 #B2
+		amount = 2
+	}
+	add_equipment_to_stockpile = {
+		type = strategic_bomber3 #B1-B
+		amount = 91
+	}
+	add_equipment_to_stockpile = {
+		type = strategic_bomber1 #b52
+		amount = 92
+	}
+
+	# Missile OOB
+	if = {
+		limit = {
+			has_dlc = "Gotterdammerung"
+		}
+		add_equipment_to_stockpile = {
+			type = sam_missile_equipment_1
+			amount = 1350
+		}
+		add_equipment_to_stockpile = {
+			type = sam_missile_equipment_2
+			amount = 800
+		}
+		add_equipment_to_stockpile = {
+			type = sam_missile_equipment_3
+			amount = 600
+		}
+		add_equipment_to_stockpile = {
+			type = sam_missile_equipment_4
+			amount = 450
+		}
+		add_equipment_to_stockpile = {
+			type = nuclear_missile_equipment_1
+			amount = 700
+		}
+		add_equipment_to_stockpile = {
+			type = nuclear_missile_equipment_3
+			amount = 480
+		}
+		add_equipment_to_stockpile = {
+			type = nuclear_missile_equipment_4
+			amount = 900
+		}
+		add_equipment_to_stockpile = {
+			type = guided_missile_equipment_1
+			amount = 1050
+		}
+		add_equipment_to_stockpile = {
+			type = guided_missile_equipment_2
+			amount = 3575
+		}
+		add_equipment_to_stockpile = {
+			type = guided_missile_equipment_3
+			amount = 2025
+		}
+	}
+}

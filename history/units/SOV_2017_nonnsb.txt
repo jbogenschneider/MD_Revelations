@@ -913,16 +913,6 @@ instant_effect = {
 	}
 
 	add_equipment_to_stockpile = {
-	type = CV_MR_Fighter2 #MiG-29K
-	amount = 4
-	}
-
-	add_equipment_to_stockpile = {
-	type = CV_MR_Fighter3 #SU-33
-	amount = 18
-	}
-
-	add_equipment_to_stockpile = {
 	type = AS_Fighter2 #SU-27
 	amount = 42
 	}

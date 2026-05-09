@@ -1,0 +1,18 @@
+﻿instant_effect = {
+	add_equipment_to_stockpile = {
+		type = Strike_fighter2 #Tornado
+		amount = 311
+	}
+	add_equipment_to_stockpile = {
+		type = naval_plane2 #Atlantique 2
+		amount = 26
+	}
+	add_equipment_to_stockpile = {
+		type = AS_Fighter3 #EF-2000 Typhoon
+		amount = 208
+	}
+	add_equipment_to_stockpile = {
+		type = transport_plane2 #C-160R Transall
+		amount = 83
+	}
+}

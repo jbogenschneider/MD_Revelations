@@ -9614,9 +9614,8 @@ capital = 652
 			}
 		}
 	}
-	if = { limit = { has_dlc = "By Blood Alone" }
-		set_air_oob = "SOV_2017_nonbba"
-	}
+	set_air_oob = "SOV_2017_nonbba"
+	
 	if = { limit = { has_dlc = "Gotterdammerung" }
 		set_technology = {
 			ballistic_missile = 1

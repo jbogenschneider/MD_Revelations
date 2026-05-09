@@ -22,9 +22,9 @@ capital = 1182
 	set_naval_oob = "USA_2000_naval_mtg"
 	if = {
 		limit = { has_dlc = "By Blood Alone" }
-		set_air_oob = "USA_2000_bba"
+		set_air_oob = "USA_2017_bba"
 		else = {
-			set_air_oob = "USA_2000_nonbba"
+			set_air_oob = "USA_2017_nonbba"
 		}
 	}
 

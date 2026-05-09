@@ -1,0 +1,50 @@
+﻿###Canada Is intentionally low on equipment due to having reserves deployed###
+#Author: Kanthier/Hiddengearz
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = CV_MR_Fighter2 #Boeing F/A-18 Hornet
+		amount = 122
+		producer = USA
+	}
+	add_equipment_to_stockpile = {
+		type = naval_plane3 #CP-140 Aurora
+		amount = 41
+	}
+	add_equipment_to_stockpile = {
+		type = transport_plane3 #A310 MRTT
+		amount = 25
+	}
+	add_equipment_to_stockpile = {
+		type = transport_helicopter2 #CH-46D
+		amount = 45
+		#version_name = "CH-46D"
+		producer = USA
+	}
+	add_equipment_to_stockpile = {
+		type = transport_helicopter2 #Bell UH-1 Iroquois
+		amount = 107
+		producer = USA
+	}
+	add_equipment_to_stockpile = {
+		type = L_Strike_fighter2 #Canadair CT-114 Tutor
+		amount = 130
+	}
+	add_equipment_to_stockpile = {
+		type = awacs_equipment_1 #E-3 Sentry
+		amount = 2
+		producer = USA
+	}
+	if = {
+		limit = {
+			has_dlc = "Gotterdammerung"
+		}
+		add_equipment_to_stockpile = {
+			type = sam_missile_equipment_2
+			amount = 300
+		}
+		add_equipment_to_stockpile = {
+			type = sam_missile_equipment_3
+			amount = 175
+		}
+	}
+}

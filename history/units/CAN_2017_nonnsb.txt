@@ -205,7 +205,11 @@ instant_effect = {
 	#Carl Gustav
 	#96 Anti_Air_1:0 "Javelin LML
 
-
+	add_equipment_to_stockpile = {
+		type = Strike_fighter3 #F-15E Strike Eagle
+		amount = 70
+		producer = USA
+	}
 	add_equipment_to_stockpile = {
 		type = MBT_3 #Leopard 1
 		amount = 114

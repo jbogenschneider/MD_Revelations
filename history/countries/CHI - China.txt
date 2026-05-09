@@ -1166,9 +1166,9 @@ capital = 547
 	if = {
 		limit = { has_dlc = "By Blood Alone" }
 
-		set_air_oob = "CHI_2000_bba"
+		set_air_oob = "CHI_2017_bba"
 		else = {
-			set_air_oob = "CHI_2000_nonbba"
+			set_air_oob = "CHI_2017_nonbba"
 		}
 	}
 	if = {

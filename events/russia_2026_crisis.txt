@@ -256,7 +256,6 @@ country_event = {
 
     trigger = {
         tag = SOV
-        has_country_flag = russia_oligarch_council_active
         has_war_with = UKR
     }
 
@@ -266,6 +265,36 @@ country_event = {
         name = OK
         ai_chance = { factor = 100 }
         custom_effect_tooltip = RUSSIA_2026_5_EFFECT_TT
+
+        # If Putin is still ruling at peace, force the same oligarch coup transition.
+        if = {
+            limit = {
+                has_country_leader = { name = "Vladimir Putin" ruling_only = yes }
+            }
+
+            set_politics = {
+                ruling_party = neutrality
+                elections_allowed = no
+            }
+
+            retire_country_leader = yes
+
+            create_country_leader = {
+                name = "Viktor Mikhailovich Sokolov"
+                desc = "RUS_OLIGARCH_COUNCIL_DESC"
+                picture = "Viktor_Mikhailovich_Sokolov.dds"
+                expire = "2035.1.1"
+                ideology = conservatism
+                traits = { }
+            }
+
+            set_country_flag = russia_oligarch_council_active
+            set_country_flag = rev_russia_volodin_cabinet_minister
+            set_country_flag = rev_russia_orlov_cabinet_minister
+            add_political_power = 120
+            add_stability = -0.05
+            add_war_support = -0.10
+        }
 
         # Full withdrawal settlement.
         white_peace = UKR

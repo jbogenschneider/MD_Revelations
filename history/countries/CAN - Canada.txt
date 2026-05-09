@@ -508,7 +508,7 @@ capital = 763
 	complete_special_project = sp:sp_naval_vessel_project
 	if = {
 		limit = { has_dlc = "By Blood Alone" }
-		set_air_oob = "CAN_2000_bba"
+		set_air_oob = "CAN_2017_bba"
 
 		set_technology = {
 			early_airframe_designs = 1
@@ -630,7 +630,7 @@ capital = 763
 		}
 
 		else = {
-			set_air_oob = "CAN_2000_nonbba"
+			set_air_oob = "CAN_2017_nonbba"
 
 			set_technology = {
 

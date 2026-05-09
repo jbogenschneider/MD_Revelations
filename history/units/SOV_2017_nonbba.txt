@@ -6,7 +6,7 @@ instant_effect = {
 
 	add_equipment_to_stockpile = {
 		type = AS_Fighter2 #MIG-31
-		amount = 56
+		amount = 116
 	}
 
 	add_equipment_to_stockpile = {
@@ -16,12 +16,12 @@ instant_effect = {
 
 	add_equipment_to_stockpile = {
 		type = MR_Fighter2 #MiG-29
-		amount = 31
+		amount = 111
 	}
 
 	add_equipment_to_stockpile = {
 		type = Strike_fighter2 #Su-24
-		amount = 36
+		amount = 116
 	}
 
 	add_equipment_to_stockpile = {
@@ -36,7 +36,7 @@ instant_effect = {
 
 	add_equipment_to_stockpile = {
 		type = strategic_bomber3 #tu160
-		amount = 6
+		amount = 9
 	}
 
 	add_equipment_to_stockpile = {
