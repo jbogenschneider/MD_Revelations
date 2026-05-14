@@ -565,7 +565,7 @@ focus_tree = {
 			NOT = { has_war_with = PER }
 		}
 		ai_will_do = {
-			base = 1
+			base = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: focus USA_rush_to_israels_aid completion_reward"
@@ -599,7 +599,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			base = 1
+			base = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: focus USA_pressure_saudi_arabia_to_join_the_war_against_iran completion_reward"

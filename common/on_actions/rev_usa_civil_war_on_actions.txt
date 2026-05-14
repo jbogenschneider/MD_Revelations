@@ -37,6 +37,56 @@ on_actions = {
 			}
 			if = {
 				limit = {
+					tag = HUN
+					has_idea = NATO_member
+					has_war_with = USA
+					NOT = { has_country_flag = rev_nato_anti_usa_opt_out_resolved_hun }
+				}
+				if = {
+					limit = { is_ai = yes }
+					rev_nato_anti_usa_opt_out = yes
+					set_country_flag = rev_nato_anti_usa_opt_out_resolved_hun
+				}
+				else = {
+					log = "[GetDateText]: [Root.GetName]: on_action firing rev_usa_cw.55 (Hungary anti-USA NATO opt-out)"
+					country_event = { id = rev_usa_cw.55 }
+				}
+			}
+			if = {
+				limit = {
+					tag = TUR
+					has_idea = NATO_member
+					has_war_with = USA
+					NOT = { has_country_flag = rev_nato_anti_usa_opt_out_resolved_tur }
+				}
+				if = {
+					limit = { is_ai = yes }
+					rev_nato_anti_usa_opt_out = yes
+					set_country_flag = rev_nato_anti_usa_opt_out_resolved_tur
+				}
+				else = {
+					log = "[GetDateText]: [Root.GetName]: on_action firing rev_usa_cw.56 (Turkey anti-USA NATO opt-out)"
+					country_event = { id = rev_usa_cw.56 }
+				}
+			}
+			if = {
+				limit = {
+					original_tag = TUR
+					NOT = { has_idea = NATO_member }
+					PER = {
+						exists = yes
+						has_war_with = ISR
+					}
+					USA = {
+						exists = yes
+						has_war_with = GER
+					}
+					NOT = { has_country_flag = rev_tur_levant_war_decided }
+				}
+				country_event = { id = rev_tur_startup.2 }
+			}
+			if = {
+				limit = {
 					tag = CAN
 					USA = { has_country_flag = rev_usa_cw_blame_canada }
 					NOT = { has_country_flag = rev_can_warned_of_usa_plot }

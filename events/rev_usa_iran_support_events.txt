@@ -423,13 +423,22 @@ country_event = {
 			limit = {
 				FSA = {
 					exists = yes
-					NOT = { has_war_with = PER }
+					NOT = { is_subject_of = PER }
 				}
 			}
-			declare_war_on = {
+			set_autonomy = {
 				target = FSA
-				type = annex_everything
+				autonomy_state = autonomy_puppet_state
 			}
+		}
+		if = {
+			limit = {
+				FSA = {
+					exists = yes
+					has_war_with = PER
+				}
+			}
+			white_peace = FSA
 		}
 		if = {
 			limit = {

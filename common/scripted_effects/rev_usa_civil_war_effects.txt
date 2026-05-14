@@ -409,6 +409,17 @@ rev_begin_usa_usb_war = {
 	}
 }
 
+rev_nato_anti_usa_opt_out = {
+	if = {
+		limit = { has_idea = NATO_member }
+		NATO_leave = yes
+	}
+	if = {
+		limit = { has_war_with = USA }
+		white_peace = USA
+	}
+}
+
 rev_resolve_usa_civil_war_neutral_states = {
 	if = {
 		limit = {

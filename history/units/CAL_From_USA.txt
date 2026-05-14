@@ -48,6 +48,108 @@ division_template = {
 	}
 }
 
+division_template = {
+	name = "Drone Defense Brigade"
+
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 1 y = 0 }
+	}
+
+	support = {
+		drone_tactical_company = { x = 0 y = 0 }
+		SP_Arty_Battery = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Infantry Division"
+
+	regiments = {
+		Arm_Inf_Bat = { x = 0 y = 0 }
+		Arm_Inf_Bat = { x = 0 y = 1 }
+		armor_Bat = { x = 0 y = 2 }
+		armor_Bat = { x = 0 y = 3 }
+
+		armor_Bat = { x = 1 y = 0 }
+		armor_Bat = { x = 1 y = 1 }
+		Arm_Inf_Bat = { x = 1 y = 2 }
+
+		armor_Bat = { x = 2 y = 0 }
+		Arm_Inf_Bat = { x = 2 y = 1 }
+		Arm_Inf_Bat = { x = 2 y = 2 }
+
+		SP_Arty_Bat = { x = 3 y = 0 }
+		SP_Arty_Bat = { x = 3 y = 1 }
+		SP_Arty_Bat = { x = 3 y = 2 }
+		SP_AA_Bat = { x = 3 y = 3 }
+	}
+	support = {
+		Mech_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		helicopter_combat_service_support = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Infantry Division B"
+
+	regiments = {
+		armor_Bat = { x = 0 y = 0 }
+		Mech_Inf_Bat = { x = 0 y = 1 }
+		Mech_Inf_Bat = { x = 0 y = 2 }
+		SP_Arty_Bat = { x = 0 y = 3 }
+
+		armor_Bat = { x = 1 y = 0 }
+		armor_Bat = { x = 1 y = 1 }
+		Mech_Inf_Bat = { x = 1 y = 2 }
+		SP_Arty_Bat = { x = 1 y = 3 }
+
+		armor_Bat = { x = 2 y = 0 }
+		Mech_Inf_Bat = { x = 2 y = 1 }
+		Mech_Inf_Bat = { x = 2 y = 2 }
+		SP_Arty_Bat = { x = 2 y = 3 }
+		SP_AA_Bat = { x = 2 y = 4 }
+	}
+	support = {
+		Mech_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Marine Division"
+
+	regiments = {
+		Mot_Marine_Bat = { x = 0 y = 0 }
+		Mot_Marine_Bat = { x = 0 y = 1 }
+		Mot_Marine_Bat = { x = 0 y = 2 }
+		Mot_Marine_Bat = { x = 0 y = 3 }
+
+		Mot_Marine_Bat = { x = 1 y = 0 }
+		Mot_Marine_Bat = { x = 1 y = 1 }
+		Mot_Marine_Bat = { x = 1 y = 2 }
+		Mot_Marine_Bat = { x = 1 y = 3 }
+		Mot_Marine_Bat = { x = 1 y = 4 }
+
+		armor_Bat = { x = 2 y = 0 }
+		Mech_Marine_Bat = { x = 2 y = 1 }
+
+		Arty_Bat = { x = 3 y = 0 }
+		Arty_Bat = { x = 3 y = 1 }
+		Arty_Bat = { x = 3 y = 2 }
+		Arty_Bat = { x = 3 y = 3 }
+	}
+	support = {
+		Mech_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+		SP_AA_Battery = { x = 0 y = 2 }
+	}
+}
+
 units = {
 	division = {
 		name = "LA Resistance Militia"

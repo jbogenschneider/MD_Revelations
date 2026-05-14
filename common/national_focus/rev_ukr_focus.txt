@@ -14,7 +14,7 @@ focus_tree = {
 		icon = military_planning
 		x = 14
 		y = 0
-		cost = 3
+		cost = 1
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_DEFENSE }
 		ai_will_do = { base = 1 }
@@ -29,10 +29,10 @@ focus_tree = {
 		icon = construction3
 		x = 11
 		y = 1
-		cost = 4
+		cost = 2
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_DEFENSE }
 		prerequisite = { focus = REV_UKR_wartime_defense_directorate }
-		ai_will_do = { base = 1 }
+		ai_will_do = { base = 10 }
 		completion_reward = {
 			add_tech_bonus = {
 				name = REV_UKR_emergency_construction
@@ -57,10 +57,10 @@ focus_tree = {
 		icon = SAM
 		x = 14
 		y = 1
-		cost = 4
+		cost = 3
 		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_AIR_FOCUS }
 		prerequisite = { focus = REV_UKR_wartime_defense_directorate }
-		ai_will_do = { base = 1 }
+		ai_will_do = { base = 12 }
 		completion_reward = {
 			random_owned_controlled_state = {
 				limit = {
@@ -88,10 +88,10 @@ focus_tree = {
 		icon = powerplant
 		x = 17
 		y = 1
-		cost = 4
+		cost = 3
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_DEFENSE }
 		prerequisite = { focus = REV_UKR_wartime_defense_directorate }
-		ai_will_do = { base = 1 }
+		ai_will_do = { base = 8 }
 		completion_reward = {
 			random_owned_controlled_state = {
 				limit = {
@@ -109,7 +109,7 @@ focus_tree = {
 		icon = powerplant
 		x = 17
 		y = 2
-		cost = 4
+		cost = 3
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_DEFENSE }
 		prerequisite = { focus = REV_UKR_hardened_power_units_alpha }
 		ai_will_do = { base = 1 }
@@ -130,7 +130,7 @@ focus_tree = {
 		icon = powerplant
 		x = 17
 		y = 3
-		cost = 4
+		cost = 3
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_DEFENSE }
 		prerequisite = { focus = REV_UKR_hardened_power_units_bravo }
 		ai_will_do = { base = 1 }
@@ -149,9 +149,9 @@ focus_tree = {
 	focus = {
 		id = REV_UKR_distributed_defense_plants
 		icon = industry_military
-		x = 11
+		x = 9
 		y = 2
-		cost = 10
+		cost = 5
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_DEFENSE }
 		prerequisite = { focus = REV_UKR_wartime_defense_directorate }
 		ai_will_do = { base = 1 }
@@ -182,10 +182,10 @@ focus_tree = {
 		icon = drone
 		x = 14
 		y = 6
-		cost = 8
+		cost = 3
 		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_RESEARCH }
 		prerequisite = { focus = REV_UKR_wartime_defense_directorate }
-		ai_will_do = { base = 1 }
+		ai_will_do = { base = 7 }
 		completion_reward = {
 			add_equipment_to_stockpile = { type = kamikaze_drone_1 amount = 2000 }
 			add_equipment_to_stockpile = { type = command_control_equipment1 amount = 1000 }
@@ -195,12 +195,12 @@ focus_tree = {
 	focus = {
 		id = REV_UKR_homade_fpv_drones
 		icon = drone
-		x = 11
+		x = 12
 		y = 5
-		cost = 3
+		cost = 2
 		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_RESEARCH }
-		prerequisite = { focus = REV_UKR_emergency_defense_logistics }
-		ai_will_do = { base = 1 }
+		prerequisite = { focus = REV_UKR_offshore_air_defense_contracts }
+		ai_will_do = { base = 11 }
 		completion_reward = {
 			add_equipment_to_stockpile = { type = kamikaze_drone_2 amount = 1000 }
 		}
@@ -211,10 +211,10 @@ focus_tree = {
 		icon = drone
 		x = 11
 		y = 6
-		cost = 3
+		cost = 2
 		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_RESEARCH }
 		prerequisite = { focus = REV_UKR_homade_fpv_drones }
-		ai_will_do = { base = 1 }
+		ai_will_do = { base = 5 }
 		completion_reward = {
 			add_equipment_to_stockpile = { type = kamikaze_drone_2 amount = 1000 }
 		}
@@ -225,10 +225,10 @@ focus_tree = {
 		icon = air_defense
 		x = 11
 		y = 7
-		cost = 5
+		cost = 2
 		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_AIR_FOCUS }
 		prerequisite = { focus = REV_UKR_homade_fiber_optic_drones }
-		ai_will_do = { base = 1 }
+		ai_will_do = { base = 5 }
 		completion_reward = {
 			every_owned_state = {
 				add_building_construction = {
@@ -245,10 +245,10 @@ focus_tree = {
 		icon = Generic_Submarine_Drone
 		x = 14
 		y = 5
-		cost = 4
+		cost = 2
 		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_RESEARCH }
 		prerequisite = { focus = REV_UKR_wartime_defense_directorate }
-		ai_will_do = { base = 1 }
+		ai_will_do = { base = 7 }
 		available = {
 			has_war = yes
 		}
@@ -267,10 +267,10 @@ focus_tree = {
 		icon = modern_refinery_industry
 		x = 14
 		y = 6
-		cost = 3
+		cost = 2
 		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_RESEARCH }
 		prerequisite = { focus = REV_UKR_wartime_defense_directorate }
-		ai_will_do = { base = 1 }
+		ai_will_do = { base = 4 }
 		available = {
 			has_war = yes
 		}
@@ -289,10 +289,10 @@ focus_tree = {
 		icon = modern_refinery_industry
 		x = 14
 		y = 7
-		cost = 3
+		cost = 2
 		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_RESEARCH }
 		prerequisite = { focus = REV_UKR_refinery_attacks }
-		ai_will_do = { base = 1 }
+		ai_will_do = { base = 3 }
 		available = {
 			has_war = yes
 		}
@@ -311,10 +311,10 @@ focus_tree = {
 		icon = gioia_tauro_port
 		x = 14
 		y = 8
-		cost = 3
+		cost = 2
 		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_RESEARCH }
 		prerequisite = { focus = REV_UKR_refinery_attacks2 }
-		ai_will_do = { base = 1 }
+		ai_will_do = { base = 3 }
 		available = {
 			has_war = yes
 		}
@@ -333,10 +333,10 @@ focus_tree = {
 		icon = gioia_tauro_port
 		x = 14
 		y = 9
-		cost = 3
+		cost = 2
 		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_RESEARCH }
 		prerequisite = { focus = REV_UKR_refinery_attacks3 }
-		ai_will_do = { base = 1 }
+		ai_will_do = { base = 3 }
 		available = {
 			has_war = yes
 		}
@@ -355,10 +355,10 @@ focus_tree = {
 		icon = air_defense
 		x = 14
 		y = 3
-		cost = 5
+		cost = 2
 		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_AIR_FOCUS }
 		prerequisite = { focus = REV_UKR_wartime_defense_directorate }
-		ai_will_do = { base = 1 }
+		ai_will_do = { base = 10 }
 		completion_reward = {
 			add_equipment_to_stockpile = { type = Anti_Air_2 amount = 500 }
 			add_equipment_to_stockpile = { type = SP_Anti_Air_2 amount = 120 }
@@ -444,7 +444,7 @@ focus_tree = {
 		icon = drone2
 		x = 16
 		y = 7
-		cost = 5
+		cost = 3
 		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_INDUSTRY }
 		prerequisite = { focus = REV_UKR_qatar_drone_inceptor_deal }
 		ai_will_do = { base = 1 }
@@ -459,7 +459,7 @@ focus_tree = {
 		icon = fighters2
 		x = 14
 		y = 4
-		cost = 10
+		cost = 3
 		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_AIR_FOCUS }
 		prerequisite = { focus = REV_UKR_wartime_defense_directorate }
 		ai_will_do = { base = 1 }
@@ -475,10 +475,10 @@ focus_tree = {
 		icon = airforce_base_1
 		x = 11
 		y = 3
-		cost = 5
+		cost = 2
 		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_AIR_FOCUS }
-		prerequisite = { focus = REV_UKR_wartime_defense_directorate }
-		ai_will_do = { base = 1 }
+		prerequisite = { focus = REV_UKR_rapid_repair_corps }
+		ai_will_do = { base = 5 }
 		completion_reward = {
 			random_owned_controlled_state = {
 				limit = {
@@ -512,7 +512,7 @@ focus_tree = {
 		icon = army_logistics
 		x = 11
 		y = 4
-		cost = 4
+		cost = 2
 		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_INDUSTRY }
 		prerequisite = { focus = REV_UKR_wartime_defense_directorate }
 		ai_will_do = { base = 1 }
@@ -763,7 +763,7 @@ focus_tree = {
 		icon = nato
 		x = 7
 		y = 4
-		cost = 5
+		cost = 4
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_DEFENSE }
 		
 		available = {
