@@ -597,6 +597,10 @@ focus_tree = {
 				exists = yes
 				NOT = { has_war_with = PER }
 			}
+			JOR = {
+				exists = yes
+				NOT = { has_war_with = PER }
+			}
 		}
 		ai_will_do = {
 			base = 100
@@ -604,6 +608,18 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: focus USA_pressure_saudi_arabia_to_join_the_war_against_iran completion_reward"
 			SAU = {
+				if = {
+					limit = {
+						exists = yes
+						NOT = { has_war_with = PER }
+					}
+					declare_war_on = {
+						target = PER
+						type = topple_government
+					}
+				}
+			}
+			JOR = {
 				if = {
 					limit = {
 						exists = yes

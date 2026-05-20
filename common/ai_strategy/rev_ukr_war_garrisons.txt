@@ -13,4 +13,87 @@ rev_ukr_keep_important_provinces = {
 		subtract_invasions_from_need = no
 		subtract_fronts_from_need = no
 	}
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.22
+		order_id = 993
+		states = { 698 696 1088 1091 }
+		subtract_invasions_from_need = no
+		subtract_fronts_from_need = no
+	}
+}
+
+rev_ukr_retake_key_eastern_targets = {
+	allowed = { tag = UKR }
+
+	enable = {
+		tag = UKR
+		has_war_with = SOV
+		date < 2026.10.1
+		OR = {
+			693 = { is_owned_by = SOV }   # Donetsk
+			1075 = { is_owned_by = SOV }  # Luhansk
+			669 = { is_owned_by = SOV }   # Crimea / Sevastopol
+			1112 = { is_owned_by = SOV }  # Sevastopol Bay
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		tag = SOV
+		priority = 260
+		ordertype = front
+		execution_type = careful
+		execute_order = yes
+		manual_attack = yes
+	}
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.20
+		order_id = 991
+		states = { 693 1075 669 1112 }
+		subtract_invasions_from_need = no
+		subtract_fronts_from_need = no
+	}
+}
+
+rev_ukr_retake_key_eastern_targets_rush = {
+	allowed = { tag = UKR }
+
+	enable = {
+		tag = UKR
+		has_war_with = SOV
+		date > 2026.10.1
+		OR = {
+			693 = { is_owned_by = SOV }   # Donetsk
+			1075 = { is_owned_by = SOV }  # Luhansk
+			669 = { is_owned_by = SOV }   # Crimea / Sevastopol
+			1112 = { is_owned_by = SOV }  # Sevastopol Bay
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		tag = SOV
+		priority = 260
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+		manual_attack = yes
+	}
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.20
+		order_id = 992
+		states = { 693 1075 669 1112 }
+		subtract_invasions_from_need = no
+		subtract_fronts_from_need = no
+	}
 }

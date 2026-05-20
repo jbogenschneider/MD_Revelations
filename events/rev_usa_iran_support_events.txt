@@ -433,6 +433,18 @@ country_event = {
 		}
 		if = {
 			limit = {
+				HEZ = {
+					exists = yes
+					NOT = { is_subject_of = PER }
+				}
+			}
+			set_autonomy = {
+				target = HEZ
+				autonomy_state = autonomy_puppet_state
+			}
+		}
+		if = {
+			limit = {
 				FSA = {
 					exists = yes
 					has_war_with = PER

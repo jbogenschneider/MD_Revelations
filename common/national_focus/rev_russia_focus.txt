@@ -59,10 +59,15 @@ focus_tree = {
 
 		x = 0
 		y = 2
-		cost = 3
+		cost = 2
 		relative_position_id = rev_SOV_coup_putin
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		prerequisite = { focus = rev_SOV_coup_putin }
+		available = {
+			OR = {
+				has_completed_focus = rev_SOV_coup_putin
+				NOT = { has_country_leader = { name = "Vladimir Putin" ruling_only = yes } }
+			}
+		}
 
 		completion_reward = {
 			add_stability = 0.1
