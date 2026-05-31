@@ -1,0 +1,921 @@
+shared_focus = {
+	id = REV_NATO_ease_of_business_reforms
+	icon = consumer_goods
+
+	x = 30
+	y = 0
+
+	allow_branch = {
+		OR = {
+			original_tag = BEL
+			original_tag = CAN
+			original_tag = CZE
+			original_tag = DEN
+			original_tag = ENG
+			original_tag = FRA
+			original_tag = GER
+			original_tag = GRE
+			original_tag = HOL
+			original_tag = HUN
+			original_tag = ICE
+			original_tag = ITA
+			original_tag = LUX
+			original_tag = NOR
+			original_tag = POL
+			original_tag = POR
+			original_tag = SPR
+			original_tag = TUR
+		}
+	}
+
+	cost = 7.2
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL FOCUS_FILTER_NATO }
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus REV_NATO_ease_of_business_reforms"
+		add_political_power = 150
+		set_temp_variable = { temp_productivity_change = 50 }
+		random_owned_controlled_state = {
+			state_flat_productivity_change_effect = yes
+		}
+	}
+
+	ai_will_do = {
+		base = 0.5
+		modifier = {
+			check_variable = { interest_rate > 5 }
+			factor = 10
+		}
+	}
+}
+
+shared_focus = {
+	id = REV_NATO_attract_foreign_investors
+	icon = union_representation_act
+	x = -1
+	y = 1
+	relative_position_id = REV_NATO_ease_of_business_reforms
+	cost = 7.86
+	prerequisite = { focus = REV_NATO_ease_of_business_reforms }
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NATO }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus REV_NATO_attract_foreign_investors"
+		add_ideas = idea_focus_generic_public_service_investment
+	}
+	ai_will_do = { base = 0.5 }
+}
+
+shared_focus = {
+	id = REV_NATO_debt_refactoring
+	icon = money
+	x = -3
+	y = 1
+	relative_position_id = REV_NATO_ease_of_business_reforms
+	cost = 7.86
+	prerequisite = { focus = REV_NATO_ease_of_business_reforms }
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NATO }
+	available = { gdp_debt_ratio_higher_50 = yes }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus REV_NATO_debt_refactoring"
+		set_temp_variable = { debt_change = debt }
+		multiply_temp_variable = { debt_change = 0.05 }
+		clamp_temp_variable = { var = debt_change min = 0 max = 100 }
+		modify_debt_effect = yes
+		add_timed_idea = {
+			idea = idea_generic_temporary_debt_refactoring
+			days = 730
+		}
+	}
+	ai_will_do = {
+		base = 0.5
+		modifier = {
+			factor = 10
+			check_variable = { interest_rate > 5 }
+		}
+		modifier = {
+			factor = 5
+			gdp_debt_ratio_higher_50 = yes
+		}
+	}
+}
+
+shared_focus = {
+	id = REV_NATO_agricultural_district_subsidization
+	icon = focus_generic_agricultural_subsidies
+	x = -5
+	y = 1
+	relative_position_id = REV_NATO_ease_of_business_reforms
+	cost = 7.86
+	prerequisite = { focus = REV_NATO_ease_of_business_reforms }
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NATO }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus REV_NATO_agricultural_district_subsidization"
+		one_random_agriculture_district = yes
+		add_ideas = agricultural_investments
+		set_temp_variable = { temp_opinion = 10 }
+		change_farmers_opinion = yes
+		set_temp_variable = { temp_opinion = 5 }
+		change_landowners_opinion = yes
+	}
+	ai_will_do = {
+		base = 0.5
+		modifier = {
+			factor = 0
+			check_variable = { total_unemployed_percentage_display < 0.01 }
+		}
+	}
+}
+
+shared_focus = {
+	id = REV_NATO_light_industry_investments
+	icon = construction_development
+	x = 39
+	y = 0
+	cost = 10
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NATO }
+	available = {
+		if = { limit = { is_ai = no } has_war = no }
+		else = { check_variable = { interest_rate < 14.999 } }
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus REV_NATO_light_industry_investments"
+		set_temp_variable = { treasury_change = -7.5 }
+		modify_treasury_effect = yes
+		capital_scope = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = fossil_powerplant
+				level = 1
+			}
+		}
+		if = {
+			limit = { num_of_factories > 25 }
+			one_random_industrial_complex = yes
+		}
+	}
+	ai_will_do = {
+		base = 0.5
+		modifier = {
+			factor = 0.5
+			check_variable = { interest_rate > 14.99 }
+		}
+		modifier = {
+			factor = 2
+			num_of_civilian_factories < 5
+		}
+		modifier = {
+			factor = 0
+			check_variable = { total_unemployed_percentage_display < 0.02 }
+		}
+	}
+}
+
+shared_focus = {
+	id = REV_NATO_mobilize_the_working_class
+	icon = industry_communism
+	x = 1
+	y = 1
+	relative_position_id = REV_NATO_ease_of_business_reforms
+	cost = 6.8
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_NATO }
+	prerequisite = { focus = REV_NATO_ease_of_business_reforms }
+	prerequisite = { focus = REV_NATO_light_industry_investments }
+	available = {
+		if = {
+			limit = { is_ai = no }
+			custom_trigger_tooltip = {
+				tooltip = 50_total_gdp_tt
+				check_variable = { gdp_total > 50 }
+			}
+			has_war = no
+			has_offensive_war = no
+		}
+		else = {
+			check_variable = { interest_rate < 14.999 }
+		}
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus REV_NATO_mobilize_the_working_class"
+		add_war_support = 0.05
+		set_temp_variable = { treasury_change = -7.5 }
+		modify_treasury_effect = yes
+		capital_scope = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = {
+		base = 0.5
+		modifier = {
+			factor = 0
+			check_variable = { total_unemployed_percentage_display < 0.02 }
+		}
+	}
+}
+
+shared_focus = {
+	id = REV_NATO_heavy_industry_investments
+	icon = tank_production
+	x = 1
+	y = 1
+	relative_position_id = REV_NATO_light_industry_investments
+	cost = 10
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNAL_FACTION FOCUS_FILTER_NATO }
+	prerequisite = { focus = REV_NATO_light_industry_investments }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = 95_total_gdp_tt
+			check_variable = { gdp_total > 95 }
+		}
+		has_war = no
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus REV_NATO_heavy_industry_investments"
+		set_temp_variable = { treasury_change = -7.5 }
+		modify_treasury_effect = yes
+		capital_scope = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		if = {
+			limit = { num_of_factories > 20 num_of_factories < 45 }
+			one_random_arms_factory = yes
+		}
+		else_if = {
+			limit = { num_of_factories > 44 }
+			two_random_arms_factory = yes
+		}
+		set_temp_variable = { temp_opinion = 5 }
+		change_defense_industry_opinion = yes
+	}
+	ai_will_do = {
+		base = 0.5
+		modifier = { factor = 0 disabled_ai_unit_list = yes }
+		modifier = {
+			factor = 0
+			check_variable = { total_unemployed_percentage_display < 0.02 }
+		}
+	}
+}
+
+shared_focus = {
+	id = REV_NATO_refitting_the_military_industry
+	icon = tank_production
+	x = 2
+	y = 2
+	relative_position_id = REV_NATO_light_industry_investments
+	cost = 10
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNAL_FACTION FOCUS_FILTER_NATO }
+	prerequisite = { focus = REV_NATO_heavy_industry_investments }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = 95_total_gdp_tt
+			check_variable = { gdp_total > 95 }
+		}
+		has_war = no
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus REV_NATO_refitting_the_military_industry"
+		set_temp_variable = { treasury_change = -7.5 }
+		modify_treasury_effect = yes
+		capital_scope = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		if = {
+			limit = { num_of_factories > 20 num_of_factories < 45 }
+			one_random_arms_factory = yes
+		}
+		else_if = {
+			limit = { num_of_factories > 44 }
+			two_random_arms_factory = yes
+		}
+		set_temp_variable = { temp_opinion = 5 }
+		change_defense_industry_opinion = yes
+	}
+	ai_will_do = {
+		base = 0.5
+		modifier = { factor = 0 disabled_ai_unit_list = yes }
+		modifier = {
+			factor = 0
+			check_variable = { total_unemployed_percentage_display < 0.02 }
+		}
+	}
+}
+
+shared_focus = {
+	id = REV_NATO_energy_sector
+	icon = national_grid
+	x = -2
+	y = 2
+	relative_position_id = REV_NATO_ease_of_business_reforms
+	cost = 10
+	search_filters = { FOCUS_FILTER_INTERNAL_FACTION FOCUS_FILTER_STABILITY FOCUS_FILTER_NATO }
+	prerequisite = { focus = REV_NATO_mobilize_the_working_class }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus REV_NATO_energy_sector"
+		set_temp_variable = { treasury_change = -10.5 }
+		modify_treasury_effect = yes
+		capital_scope = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = fossil_powerplant level = 1 }
+			add_building_construction = { type = synthetic_refinery level = 1 }
+		}
+	}
+	ai_will_do = { base = 0.5 }
+}
+
+shared_focus = {
+	id = REV_NATO_fossil_powerplant
+	icon = oil_red
+	x = -1
+	y = 3
+	relative_position_id = REV_NATO_ease_of_business_reforms
+	cost = 10
+	search_filters = { FOCUS_FILTER_INTERNAL_FACTION FOCUS_FILTER_STABILITY FOCUS_FILTER_NATO }
+	prerequisite = { focus = REV_NATO_energy_sector }
+	mutually_exclusive = { focus = REV_NATO_renewable_retooling }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus REV_NATO_fossil_powerplant"
+		set_temp_variable = { treasury_change = -2.0 }
+		modify_treasury_effect = yes
+		capital_scope = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = fossil_powerplant level = 1 }
+		}
+		set_temp_variable = { temp_opinion = 5 }
+		change_fossil_fuel_industry_opinion = yes
+	}
+	ai_will_do = { base = 0.5 }
+}
+
+shared_focus = {
+	id = REV_NATO_improved_energy_cycling
+	icon = oil_companies
+	x = -1
+	y = 4
+	relative_position_id = REV_NATO_ease_of_business_reforms
+	cost = 10
+	search_filters = { FOCUS_FILTER_INTERNAL_FACTION FOCUS_FILTER_STABILITY FOCUS_FILTER_NATO }
+	prerequisite = { focus = REV_NATO_fossil_powerplant }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus REV_NATO_improved_energy_cycling"
+		add_ideas = idea_focus_energy_preferred_fossil
+		set_temp_variable = { temp_opinion = 5 }
+		change_fossil_fuel_industry_opinion = yes
+		change_oligarchs_opinion = yes
+	}
+	ai_will_do = { base = 0.5 }
+}
+
+shared_focus = {
+	id = REV_NATO_renewable_retooling
+	icon = generic_solar
+	x = -3
+	y = 3
+	relative_position_id = REV_NATO_ease_of_business_reforms
+	cost = 10
+	search_filters = { FOCUS_FILTER_INTERNAL_FACTION FOCUS_FILTER_STABILITY FOCUS_FILTER_NATO }
+	prerequisite = { focus = REV_NATO_energy_sector }
+	mutually_exclusive = { focus = REV_NATO_fossil_powerplant }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus REV_NATO_renewable_retooling"
+		add_ideas = idea_focus_energy_preferred_renewable
+	}
+	ai_will_do = { base = 0.5 }
+}
+
+shared_focus = {
+	id = REV_NATO_renewable_infrastructure
+	icon = BRA_renewable_energy_funds
+	x = -3
+	y = 4
+	relative_position_id = REV_NATO_ease_of_business_reforms
+	cost = 10
+	search_filters = { FOCUS_FILTER_INTERNAL_FACTION FOCUS_FILTER_STABILITY FOCUS_FILTER_NATO }
+	prerequisite = { focus = REV_NATO_renewable_retooling }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus REV_NATO_renewable_infrastructure"
+		set_temp_variable = { treasury_change = -8.0 }
+		modify_treasury_effect = yes
+		capital_scope = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = synthetic_refinery level = 1 }
+		}
+	}
+	ai_will_do = { base = 0.5 }
+}
+
+shared_focus = {
+	id = REV_NATO_nuclear_energy_expansions
+	icon = nuclear_energy
+	x = -2
+	y = 5
+	relative_position_id = REV_NATO_ease_of_business_reforms
+	cost = 10
+	search_filters = { FOCUS_FILTER_INTERNAL_FACTION FOCUS_FILTER_STABILITY FOCUS_FILTER_NATO }
+	prerequisite = {
+		focus = REV_NATO_renewable_infrastructure
+		focus = REV_NATO_improved_energy_cycling
+	}
+	available = { has_tech = reactor1 }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus REV_NATO_nuclear_energy_expansions"
+		if = {
+			limit = { NOT = { has_tech = reactor1 } }
+			effect_tooltip = {
+				random_owned_controlled_state = {
+					add_building_construction = {
+						type = nuclear_reactor
+						level = 1
+						instant_build = yes
+					}
+				}
+				set_temp_variable = { treasury_change = -9.00 }
+				modify_treasury_effect = yes
+			}
+		}
+		else = { one_random_nuclear_reactor = yes }
+		if = {
+			limit = { has_idea = non_nuclear_power }
+			swap_ideas = {
+				remove_idea = non_nuclear_power
+				add_idea = nuclear_energy
+			}
+		}
+	}
+	ai_will_do = { base = 0.5 }
+}
+
+shared_focus = {
+	id = REV_NATO_unemployment_program
+	icon = welfare
+	x = 0
+	y = 2
+	relative_position_id = REV_NATO_ease_of_business_reforms
+	cost = 10
+	search_filters = { FOCUS_FILTER_INTERNAL_FACTION FOCUS_FILTER_STABILITY FOCUS_FILTER_NATO }
+	prerequisite = { focus = REV_NATO_mobilize_the_working_class }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus REV_NATO_unemployment_program"
+		add_ideas = idea_focus_unemployment_program
+		set_temp_variable = { temp_opinion = 5 }
+		change_labour_unions_opinion = yes
+	}
+	ai_will_do = { base = 0.5 }
+}
+
+shared_focus = {
+	id = REV_NATO_satisfy_the_middle_class
+	icon = decentralized_economy
+	x = 2
+	y = 2
+	relative_position_id = REV_NATO_ease_of_business_reforms
+	cost = 10
+	search_filters = { FOCUS_FILTER_INTERNAL_FACTION FOCUS_FILTER_STABILITY FOCUS_FILTER_NATO }
+	prerequisite = { focus = REV_NATO_mobilize_the_working_class }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = 95_total_gdp_tt
+			check_variable = { gdp_total > 95 }
+		}
+		has_civil_war = no
+		has_offensive_war = no
+	}
+	cancel = {
+		OR = {
+			has_civil_war = yes
+			has_offensive_war = yes
+		}
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus REV_NATO_satisfy_the_middle_class"
+		add_stability = 0.05
+		one_office_construction = yes
+		set_temp_variable = { temp_opinion = 10 }
+		change_industrial_conglomerates_opinion = yes
+		change_small_medium_business_owners_opinion = yes
+		change_the_donju_opinion = yes
+		change_chaebols_opinion = yes
+		change_wall_street_opinion = yes
+		if = {
+			limit = { is_agrarian_economy = yes }
+			set_temp_variable = { crop_type = 0 }
+			set_temp_variable = { price_change = 2 }
+			AGRI_price_change_effect = yes
+			set_temp_variable = { crop_type = 1 }
+			set_temp_variable = { price_change = 2 }
+			AGRI_price_change_effect = yes
+			AGRI_update_math_variables = yes
+		}
+	}
+	ai_will_do = { base = 0.5 }
+}
+
+shared_focus = {
+	id = REV_NATO_build_churches
+	icon = religious_unity
+	x = -1
+	y = 1
+	relative_position_id = REV_NATO_satisfy_the_middle_class
+	cost = 7.86
+	search_filters = { FOCUS_FILTER_INTERNAL_FACTION FOCUS_FILTER_NATO }
+	prerequisite = { focus = REV_NATO_satisfy_the_middle_class }
+	available = {
+		OR = {
+			has_idea = the_priesthood
+			has_idea = the_ulema
+			has_idea = the_clergy
+		}
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus REV_NATO_build_churches"
+		add_stability = 0.05
+		set_temp_variable = { temp_opinion = 10 }
+		change_the_priesthood_opinion = yes
+		change_the_ulema_opinion = yes
+		change_the_wahabi_ulema_opinion = yes
+		change_the_clergy_opinion = yes
+	}
+	ai_will_do = { base = 0.5 }
+}
+
+shared_focus = {
+	id = REV_NATO_please_the_upper_class
+	icon = champagne_green
+	x = 2
+	y = 1
+	relative_position_id = REV_NATO_satisfy_the_middle_class
+	cost = 7.86
+	search_filters = { FOCUS_FILTER_INTERNAL_FACTION FOCUS_FILTER_STABILITY FOCUS_FILTER_NATO }
+	prerequisite = { focus = REV_NATO_satisfy_the_middle_class }
+	available = {
+		has_civil_war = no
+		has_offensive_war = no
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus REV_NATO_please_the_upper_class"
+		add_stability = 0.05
+		set_temp_variable = { temp_opinion = 10 }
+		change_oligarchs_opinion = yes
+		change_landowners_opinion = yes
+		change_international_bankers_opinion = yes
+		change_wall_street_opinion = yes
+	}
+	ai_will_do = { base = 0.5 }
+}
+
+shared_focus = {
+	id = REV_NATO_assure_intellectual_freedoms
+	icon = examine_foreign_science
+	x = 1
+	y = 2
+	relative_position_id = REV_NATO_satisfy_the_middle_class
+	cost = 10
+	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NATO }
+	prerequisite = { focus = REV_NATO_please_the_upper_class }
+	available = {
+		NOT = { has_idea = police_05 }
+		has_civil_war = no
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus REV_NATO_assure_intellectual_freedoms"
+		generic_research_buff = yes
+	}
+	ai_will_do = { base = 0.5 }
+}
+
+shared_focus = {
+	id = REV_NATO_invest_in_biofuels
+	icon = green_biomass_plant
+	x = 3
+	y = 2
+	relative_position_id = REV_NATO_satisfy_the_middle_class
+	cost = 10
+	search_filters = { FOCUS_FILTER_INTERNAL_FACTION FOCUS_FILTER_RESOURCE FOCUS_FILTER_NATO }
+	prerequisite = { focus = REV_NATO_please_the_upper_class }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus REV_NATO_invest_in_biofuels"
+		set_temp_variable = { treasury_change = -4.25 }
+		modify_treasury_effect = yes
+		capital_scope = {
+			add_building_construction = {
+				type = synthetic_refinery
+				instant_build = yes
+				level = 1
+			}
+		}
+		if = {
+			limit = { is_agrarian_economy = yes }
+			set_temp_variable = { treasury_change = gdp_total }
+			multiply_temp_variable = { treasury_change = -0.005 }
+			modify_treasury_effect = yes
+			set_temp_variable = { AGRI_protections_change = 1 }
+			AGRI_protection_update = yes
+			set_temp_variable = { allocation_change = 0.075 }
+			set_temp_variable = { crop_type = 0 }
+			AGRI_allocation_change_effect = yes
+			set_temp_variable = { allocation_change = -0.075 }
+			set_temp_variable = { crop_type = 1 }
+			AGRI_allocation_change_effect = yes
+			set_temp_variable = { temp_opinion = 7 }
+			change_farmers_opinion = yes
+			AGRI_update_math_variables = yes
+		}
+		else = {
+			set_temp_variable = { temp_opinion = 5 }
+			change_farmers_opinion = yes
+		}
+	}
+	ai_will_do = { base = 0.5 }
+}
+
+shared_focus = {
+	id = REV_NATO_import_foreign_automobiles
+	icon = bmw_car
+	x = 2
+	y = 3
+	relative_position_id = REV_NATO_satisfy_the_middle_class
+	cost = 7.86
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH FOCUS_FILTER_NATO }
+	prerequisite = { focus = REV_NATO_please_the_upper_class }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus REV_NATO_import_foreign_automobiles"
+		add_political_power = 100
+		add_tech_bonus = {
+			name = CAT_afv
+			category = CAT_util
+			category = CAT_afv
+			category = CAT_ifv
+			bonus = 0.25
+			uses = 2
+		}
+	}
+	ai_will_do = { base = 0.5 }
+}
+
+shared_focus = {
+	id = REV_NATO_create_an_automotive_industry
+	icon = industry
+	x = 2
+	y = 4
+	relative_position_id = REV_NATO_satisfy_the_middle_class
+	cost = 7.86
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = 135_total_gdp_tt
+			check_variable = { gdp_total > 135 }
+		}
+		has_war = no
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNAL_FACTION FOCUS_FILTER_NATO }
+	prerequisite = { focus = REV_NATO_import_foreign_automobiles }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus REV_NATO_create_an_automotive_industry"
+		one_random_industrial_complex = yes
+		if = {
+			limit = { num_of_factories > 29 num_of_factories < 60 }
+			one_random_industrial_complex = yes
+		}
+		if = {
+			limit = { num_of_factories > 59 }
+			two_random_industrial_complex = yes
+		}
+		set_temp_variable = { temp_opinion = 5 }
+		change_labour_unions_opinion = yes
+		change_industrial_conglomerates_opinion = yes
+		change_small_medium_business_owners_opinion = yes
+		change_the_donju_opinion = yes
+		change_chaebols_opinion = yes
+		change_wall_street_opinion = yes
+	}
+	ai_will_do = { base = 0.5 }
+}
+
+shared_focus = {
+	id = REV_NATO_build_primary_schools
+	icon = research
+	x = -1
+	y = 2
+	relative_position_id = REV_NATO_satisfy_the_middle_class
+	cost = 10
+	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NATO }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus REV_NATO_build_primary_schools"
+		generic_research_buff = yes
+		if = {
+			limit = { has_variable = literacy_rate }
+			set_temp_variable = { LR_change = 0.025 }
+			update_literacy_rate = yes
+		}
+	}
+	ai_will_do = { base = 0.5 }
+}
+
+shared_focus = {
+	id = REV_NATO_assure_access_to_education
+	icon = scientific_exchange
+	x = -1
+	y = 3
+	relative_position_id = REV_NATO_satisfy_the_middle_class
+	cost = 10
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = 135_total_gdp_tt
+			check_variable = { gdp_total > 135 }
+		}
+	}
+	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NATO }
+	prerequisite = { focus = REV_NATO_build_primary_schools }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus REV_NATO_assure_access_to_education"
+		generic_research_buff = yes
+		if = {
+			limit = { has_variable = literacy_rate }
+			set_temp_variable = { LR_change = 0.05 }
+			update_literacy_rate = yes
+		}
+	}
+	ai_will_do = { base = 0.5 }
+}
+
+shared_focus = {
+	id = REV_NATO_expand_the_universities
+	icon = research2
+	x = 0
+	y = 4
+	relative_position_id = REV_NATO_satisfy_the_middle_class
+	cost = 10
+	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NATO }
+	prerequisite = { focus = REV_NATO_assure_access_to_education }
+	prerequisite = { focus = REV_NATO_satisfy_the_middle_class }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = 160_total_gdp_tt
+			check_variable = { gdp_total > 160 }
+		}
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus REV_NATO_expand_the_universities"
+		generic_research_buff = yes
+		if = {
+			limit = { has_variable = literacy_rate }
+			set_temp_variable = { LR_change = 0.1 }
+			update_literacy_rate = yes
+		}
+	}
+	ai_will_do = { base = 0.5 }
+}
+
+shared_focus = {
+	id = REV_NATO_industrial_research_task_forces
+	icon = tech_sharing
+	x = 1
+	y = 5
+	relative_position_id = REV_NATO_satisfy_the_middle_class
+	cost = 10
+	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NATO }
+	prerequisite = { focus = REV_NATO_expand_the_universities }
+	prerequisite = { focus = REV_NATO_assure_intellectual_freedoms }
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = 200_total_gdp_tt
+			check_variable = { gdp_total > 200 }
+		}
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus REV_NATO_industrial_research_task_forces"
+		generic_research_buff = yes
+	}
+	ai_will_do = { base = 0.5 }
+}
+
+shared_focus = {
+	id = REV_NATO_domestic_vehicle_research
+	icon = Tank_sheep
+	x = -2
+	y = 6
+	relative_position_id = REV_NATO_satisfy_the_middle_class
+	cost = 10
+	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NATO }
+	prerequisite = { focus = REV_NATO_industrial_research_task_forces }
+	mutually_exclusive = {
+		focus = REV_NATO_domestic_naval_research
+		focus = REV_NATO_domestic_aircraft_research
+		focus = REV_NATO_secret_weapons_program
+	}
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = 200_total_gdp_tt
+			check_variable = { gdp_total > 200 }
+		}
+		NOT = { has_facility_specialization = specialization_land }
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus REV_NATO_domestic_vehicle_research"
+		one_random_land_facility = yes
+	}
+	ai_will_do = { base = 0.5 }
+}
+
+shared_focus = {
+	id = REV_NATO_domestic_naval_research
+	icon = navy3
+	x = 0
+	y = 6
+	relative_position_id = REV_NATO_satisfy_the_middle_class
+	cost = 10
+	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NATO }
+	prerequisite = { focus = REV_NATO_industrial_research_task_forces }
+	mutually_exclusive = {
+		focus = REV_NATO_domestic_vehicle_research
+		focus = REV_NATO_domestic_aircraft_research
+		focus = REV_NATO_secret_weapons_program
+	}
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = 200_total_gdp_tt
+			check_variable = { gdp_total > 200 }
+		}
+		any_owned_state = { is_coastal = yes }
+		NOT = { has_facility_specialization = specialization_naval }
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus REV_NATO_domestic_naval_research"
+		one_random_naval_facility = yes
+	}
+	ai_will_do = { base = 0.5 }
+}
+
+shared_focus = {
+	id = REV_NATO_domestic_aircraft_research
+	icon = jet_engine
+	x = 2
+	y = 6
+	relative_position_id = REV_NATO_satisfy_the_middle_class
+	cost = 10
+	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NATO }
+	prerequisite = { focus = REV_NATO_industrial_research_task_forces }
+	mutually_exclusive = {
+		focus = REV_NATO_domestic_vehicle_research
+		focus = REV_NATO_domestic_naval_research
+		focus = REV_NATO_secret_weapons_program
+	}
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = 200_total_gdp_tt
+			check_variable = { gdp_total > 200 }
+		}
+		NOT = { has_facility_specialization = specialization_air }
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus REV_NATO_domestic_aircraft_research"
+		one_random_air_facility = yes
+	}
+	ai_will_do = { base = 0.5 }
+}
+
+shared_focus = {
+	id = REV_NATO_secret_weapons_program
+	icon = nuclear_science
+	x = 4
+	y = 6
+	relative_position_id = REV_NATO_satisfy_the_middle_class
+	cost = 10
+	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NATO }
+	prerequisite = { focus = REV_NATO_industrial_research_task_forces }
+	mutually_exclusive = {
+		focus = REV_NATO_domestic_vehicle_research
+		focus = REV_NATO_domestic_naval_research
+		focus = REV_NATO_domestic_aircraft_research
+	}
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = 200_total_gdp_tt
+			check_variable = { gdp_total > 200 }
+		}
+		NOT = { has_facility_specialization = specialization_nuclear }
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus REV_NATO_secret_weapons_program"
+		one_random_nuclear_facility = yes
+	}
+	ai_will_do = { base = 0.5 }
+}

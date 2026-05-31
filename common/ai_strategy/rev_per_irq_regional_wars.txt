@@ -8,10 +8,14 @@ rev_per_push_jordan = {
 
 	abort_when_not_enabled = yes
 
+	ai_strategy = { type = conquer id = "JOR" value = 5000 }
+	ai_strategy = { type = invade id = "JOR" value = 5000 }
+	ai_strategy = { type = front_unit_request tag = "JOR" value = 180 }
+
 	ai_strategy = {
 		type = front_control
 		tag = JOR
-		priority = 260
+		priority = 320
 		ordertype = front
 		execution_type = rush
 		execute_order = yes
@@ -20,9 +24,9 @@ rev_per_push_jordan = {
 
 	ai_strategy = {
 		type = put_unit_buffers
-		ratio = 0.40
+		ratio = 0.55
 		order_id = 2401
-		states = { 399 406 408 978 }
+		states = { 210 }
 		subtract_invasions_from_need = no
 		subtract_fronts_from_need = no
 	}
@@ -68,10 +72,14 @@ rev_irq_push_jordan = {
 
 	abort_when_not_enabled = yes
 
+	ai_strategy = { type = conquer id = "JOR" value = 5000 }
+	ai_strategy = { type = invade id = "JOR" value = 5000 }
+	ai_strategy = { type = front_unit_request tag = "JOR" value = 180 }
+
 	ai_strategy = {
 		type = front_control
 		tag = JOR
-		priority = 240
+		priority = 320
 		ordertype = front
 		execution_type = rush
 		execute_order = yes
@@ -80,9 +88,9 @@ rev_irq_push_jordan = {
 
 	ai_strategy = {
 		type = put_unit_buffers
-		ratio = 0.40
+		ratio = 0.55
 		order_id = 2411
-		states = { 168 169 }
+		states = { 210 }
 		subtract_invasions_from_need = no
 		subtract_fronts_from_need = no
 	}

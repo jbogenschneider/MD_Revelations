@@ -1,4 +1,4 @@
-focus_tree = {
+﻿focus_tree = {
 	id = REV_CZE_nato_default_focus
 	country = {
 		factor = 0
@@ -8,13 +8,43 @@ focus_tree = {
 		}
 	}
 	continuous_focus_position = { x = 50 y = 120 }
+	shared_focus = REV_NATO_ease_of_business_reforms
+	shared_focus = REV_NATO_attract_foreign_investors
+	shared_focus = REV_NATO_debt_refactoring
+	shared_focus = REV_NATO_agricultural_district_subsidization
+	shared_focus = REV_NATO_light_industry_investments
+	shared_focus = REV_NATO_mobilize_the_working_class
+	shared_focus = REV_NATO_heavy_industry_investments
+	shared_focus = REV_NATO_refitting_the_military_industry
+	shared_focus = REV_NATO_energy_sector
+	shared_focus = REV_NATO_fossil_powerplant
+	shared_focus = REV_NATO_improved_energy_cycling
+	shared_focus = REV_NATO_renewable_retooling
+	shared_focus = REV_NATO_renewable_infrastructure
+	shared_focus = REV_NATO_nuclear_energy_expansions
+	shared_focus = REV_NATO_unemployment_program
+	shared_focus = REV_NATO_satisfy_the_middle_class
+	shared_focus = REV_NATO_build_churches
+	shared_focus = REV_NATO_please_the_upper_class
+	shared_focus = REV_NATO_assure_intellectual_freedoms
+	shared_focus = REV_NATO_invest_in_biofuels
+	shared_focus = REV_NATO_import_foreign_automobiles
+	shared_focus = REV_NATO_create_an_automotive_industry
+	shared_focus = REV_NATO_build_primary_schools
+	shared_focus = REV_NATO_assure_access_to_education
+	shared_focus = REV_NATO_expand_the_universities
+	shared_focus = REV_NATO_industrial_research_task_forces
+	shared_focus = REV_NATO_domestic_vehicle_research
+	shared_focus = REV_NATO_domestic_naval_research
+	shared_focus = REV_NATO_domestic_aircraft_research
+	shared_focus = REV_NATO_secret_weapons_program
 
 	focus = {
 		id = REV_CZE_NATO_2026_security_compact
 		icon = military_deal
 		x = 14
 		y = 0
-		cost = 5
+		cost = 4
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_NATO }
 		ai_will_do = { base = 1 }
@@ -29,7 +59,7 @@ focus_tree = {
 		icon = defense
 		x = 12
 		y = 1
-		cost = 5
+		cost = 4
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NATO }
 		prerequisite = { focus = REV_CZE_NATO_2026_security_compact }
 		ai_will_do = { base = 1 }
@@ -44,7 +74,7 @@ focus_tree = {
 		icon = production
 		x = 12
 		y = 2
-		cost = 10
+		cost = 4
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NATO }
 		prerequisite = { focus = REV_CZE_NATO_rapid_procurement_authority }
 		ai_will_do = { base = 1 }
@@ -67,7 +97,7 @@ focus_tree = {
 		icon = industry_military
 		x = 11
 		y = 3
-		cost = 10
+		cost = 4
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NATO }
 		prerequisite = { focus = REV_CZE_NATO_munitions_surge }
 		ai_will_do = { base = 1 }
@@ -88,7 +118,7 @@ focus_tree = {
 		icon = factory_planning
 		x = 11
 		y = 4
-		cost = 10
+		cost = 4
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NATO }
 		prerequisite = { focus = REV_CZE_NATO_expand_military_factories_i }
 		ai_will_do = { base = 1 }
@@ -113,7 +143,7 @@ focus_tree = {
 		icon = army_mobilisation
 		x = 12
 		y = 5
-		cost = 10
+		cost = 4
 		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_NATO }
 		prerequisite = { focus = REV_CZE_NATO_expand_military_factories_ii }
 		ai_will_do = { base = 1 }
@@ -145,7 +175,7 @@ focus_tree = {
 		icon = brothers_in_arms
 		x = 12
 		y = 6
-		cost = 10
+		cost = 4
 		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_NATO }
 		prerequisite = { focus = REV_CZE_NATO_forward_stockpiles }
 		ai_will_do = { base = 1 }
@@ -161,7 +191,7 @@ focus_tree = {
 		icon = air_defense
 		x = 12
 		y = 7
-		cost = 10
+		cost = 4
 		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_NATO }
 		prerequisite = { focus = REV_CZE_NATO_integrated_training_cycle }
 		ai_will_do = { base = 1 }
@@ -184,7 +214,7 @@ focus_tree = {
 		icon = recon
 		x = 14
 		y = 1
-		cost = 10
+		cost = 4
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NATO }
 		prerequisite = { focus = REV_CZE_NATO_2026_security_compact }
 		ai_will_do = { base = 1 }
@@ -216,7 +246,7 @@ focus_tree = {
 		icon = scientific_exchange
 		x = 14
 		y = 2
-		cost = 5
+		cost = 4
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NATO }
 		prerequisite = { focus = REV_CZE_NATO_land_drone_program }
 		ai_will_do = { base = 1 }
@@ -231,7 +261,7 @@ focus_tree = {
 		icon = Jet_Fighters
 		x = 14
 		y = 3
-		cost = 10
+		cost = 4
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NATO }
 		prerequisite = { focus = REV_CZE_NATO_field_test_drone_wings }
 		ai_will_do = { base = 1 }
@@ -252,7 +282,7 @@ focus_tree = {
 		icon = research4
 		x = 14
 		y = 4
-		cost = 10
+		cost = 4
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NATO }
 		prerequisite = { focus = REV_CZE_NATO_networked_drone_fires }
 		ai_will_do = { base = 1 }
@@ -267,7 +297,7 @@ focus_tree = {
 		icon = Generic_Intelligence_Gathering
 		x = 14
 		y = 5
-		cost = 10
+		cost = 4
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NATO }
 		prerequisite = { focus = REV_CZE_NATO_autonomous_targeting_cells }
 		ai_will_do = { base = 1 }
@@ -282,7 +312,7 @@ focus_tree = {
 		icon = Generic_Intelligence_Gathering
 		x = 16
 		y = 1
-		cost = 5
+		cost = 4
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_NATO }
 		prerequisite = { focus = REV_CZE_NATO_2026_security_compact }
 		ai_will_do = { base = 1 }
@@ -305,7 +335,7 @@ focus_tree = {
 		icon = volunteers
 		x = 16
 		y = 2
-		cost = 5
+		cost = 4
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_NATO }
 		prerequisite = { focus = REV_CZE_NATO_ukraine_intel_sharing }
 		ai_will_do = { base = 1 }
@@ -327,7 +357,7 @@ focus_tree = {
 		icon = military_deal
 		x = 14
 		y = 8
-		cost = 10
+		cost = 4
 		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_NATO }
 		prerequisite = { focus = REV_CZE_NATO_long_war_posture }
 		prerequisite = { focus = REV_CZE_NATO_joint_ew_cells }
@@ -344,7 +374,7 @@ focus_tree = {
 		icon = democracy6
 		x = 18
 		y = 8
-		cost = 5
+		cost = 4
 		available = { has_war = yes }
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_NATO }
 		ai_will_do = { base = 1 }
@@ -358,7 +388,7 @@ focus_tree = {
 		icon = white_peace
 		x = 18
 		y = 9
-		cost = 5
+		cost = 4
 		available = { has_war = yes }
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_NATO }
 		ai_will_do = { base = 1 }
@@ -372,11 +402,11 @@ focus_tree = {
 		icon = dutch_teflon_rutte
 		x = 22
 		y = 8
-		cost = 5
+		cost = 4
 		available = { has_stability < 0.50 }
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_NATO }
 		ai_will_do = { base = 1 }
-		completion_reward = { set_stability = 0.60 }
+		completion_reward = { hidden_effect = { set_stability = 0.60 } }
 	}
 
 	focus = {
@@ -384,7 +414,7 @@ focus_tree = {
 		icon = national_unity
 		x = 22
 		y = 9
-		cost = 5
+		cost = 4
 		prerequisite = { focus = REV_CZE_NATO_confidence_vote }
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_NATO }
 		ai_will_do = { base = 1 }
@@ -396,11 +426,11 @@ focus_tree = {
 		icon = dutch_european_flag
 		x = 22
 		y = 10
-		cost = 5
+		cost = 4
 		available = { has_war = yes }
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_NATO }
 		ai_will_do = { base = 1 }
-		completion_reward = { set_stability = 0.60 }
+		completion_reward = { hidden_effect = { set_stability = 0.60 } }
 	}
 }
 

@@ -1,0 +1,14 @@
+on_actions = {
+	on_daily = {
+		effect = {
+			every_country = {
+				limit = {
+					original_tag = TAI
+					NOT = { has_country_flag = REV_TAI_2026_leadership_handoff_done }
+					date > 2026.5.23
+				}
+				country_event = { id = rev_tai_leadership.1 hours = 1 }
+			}
+		}
+	}
+}

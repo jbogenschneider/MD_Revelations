@@ -783,7 +783,7 @@ capital = 598
 	}
 	set_politics = {
 		ruling_party = democratic
-		last_election = "2024.3.23"
+		last_election = "2028.3.23"
 		election_frequency = 48
 		elections_allowed = yes
 	}
@@ -845,8 +845,8 @@ capital = 598
 	startup_politics = yes
 
 	create_country_leader = {
-		name = "Lee Teng-hui"
-		picture = "Lee_Teng-hui.dds"
+		name = "Tsai Ing-wen"
+		picture = "Tsai_Ing-wen.dds"
 		ideology = conservatism
 		traits = {
 			western_conservatism

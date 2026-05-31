@@ -1,0 +1,29 @@
+add_namespace = rev_tai_leadership
+
+country_event = {
+	id = rev_tai_leadership.1
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		original_tag = TAI
+		NOT = { has_country_flag = REV_TAI_2026_leadership_handoff_done }
+		date > 2026.5.23
+	}
+
+	immediate = {
+		set_country_flag = REV_TAI_2026_leadership_handoff_done
+
+		hidden_effect = { kill_country_leader = yes }
+		create_country_leader = {
+			name = "Lai Ching-te"
+			picture = "Lai_Ching-te.dds"
+			ideology = conservatism
+			traits = {
+				western_conservatism
+				pro_american
+				pro_independence_taiwan
+			}
+		}
+	}
+}

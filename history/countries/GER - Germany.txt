@@ -115,7 +115,6 @@ capital = 45
 
 		#Other
 		christian
-		german_legacy
 		EU_member
 		g7_member
 		NATO_member
@@ -125,7 +124,6 @@ capital = 45
 		the_euro
 		GER_idea_okosteuer
 		GER_idea_aging_population
-		GER_idea_war_reparations
 		# GER_idea_germany_divided # East-West divide resolved for this scenario
 		GER_idea_bfv_islamist_low
 		GER_idea_bfv_rightwing_med
@@ -134,7 +132,6 @@ capital = 45
 		GER_idea_Peace_dividende
 		GER_neuer_markt_idea
 		GER_idea_BND
-		GER_idea_Sickman
 		GER_Ideas_Polish_labour
 	}
 

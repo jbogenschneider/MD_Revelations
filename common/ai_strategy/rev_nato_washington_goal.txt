@@ -23,3 +23,79 @@ NATO_take_washington_dc = {
 		manual_attack = yes
 	}
 }
+
+GER_take_washington_dc_after_2029 = {
+	allowed = {
+		original_tag = GER
+	}
+
+	enable = {
+		original_tag = GER
+		has_war_with = USA
+		date > 2029.5.5
+		1182 = { is_controlled_by = USA }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = conquer id = "USA" value = 7000 }
+	ai_strategy = { type = invade id = "USA" value = 7000 }
+	ai_strategy = { type = front_unit_request tag = "USA" value = 250 }
+
+	ai_strategy = {
+		type = front_control
+		tag = USA
+		priority = 320
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+		manual_attack = yes
+	}
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.6
+		order_id = 2601
+		states = { 1182 }
+		subtract_invasions_from_need = no
+		subtract_fronts_from_need = no
+	}
+}
+
+USA_crush_cuba = {
+	allowed = {
+		original_tag = USA
+	}
+
+	enable = {
+		original_tag = USA
+		has_war_with = CUB
+		854 = { is_controlled_by = CUB }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = conquer id = "CUB" value = 8000 }
+	ai_strategy = { type = invade id = "CUB" value = 8000 }
+	ai_strategy = { type = front_unit_request tag = "CUB" value = 220 }
+	ai_strategy = { type = area_priority id = caribbean value = 100000 }
+
+	ai_strategy = {
+		type = front_control
+		tag = CUB
+		priority = 320
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+		manual_attack = yes
+	}
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.6
+		order_id = 2602
+		states = { 854 }
+		subtract_invasions_from_need = no
+		subtract_fronts_from_need = no
+	}
+}

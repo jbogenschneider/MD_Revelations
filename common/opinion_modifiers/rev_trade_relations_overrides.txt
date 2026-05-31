@@ -1,0 +1,6 @@
+opinion_modifiers = {
+	harsh_sanctions = {
+		trade = yes
+		value = -150
+	}
+}
