@@ -98,4 +98,13 @@ USA_crush_cuba = {
 		subtract_invasions_from_need = no
 		subtract_fronts_from_need = no
 	}
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.4
+		order_id = 2603
+		states = { 862 }
+		subtract_invasions_from_need = no
+		subtract_fronts_from_need = no
+	}
 }

@@ -578,8 +578,8 @@
 		cost = 4
 		available = { has_stability < 0.50 }
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_NATO }
-		ai_will_do = { base = 1 }
-		completion_reward = { hidden_effect = { set_stability = 0.60 } }
+		ai_will_do = { base = 20 }
+		completion_reward = { add_stability = 0.25 }
 	}
 
 	focus = {
@@ -602,8 +602,8 @@
 		cost = 4
 		available = { has_war = yes }
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_NATO }
-		ai_will_do = { base = 1 }
-		completion_reward = { hidden_effect = { set_stability = 0.60 } }
+		ai_will_do = { base = 20 }
+		completion_reward = { add_stability = 0.25 }
 	}
 
 	focus = {
@@ -747,6 +747,93 @@
 		completion_reward = {
 			add_manpower = 100000
 			add_stability = -0.03
+		}
+	}
+
+	focus = {
+		id = REV_GER_NATO_stronger_federal_state
+		icon = german_confederation
+
+		x = 20
+		y = 0
+
+		cost = 5
+
+		available = {
+			has_stability > 0.60
+			has_idea = economic_boom
+			has_idea = negligible_corruption
+			has_idea = bureau_05
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus REV_GER_NATO_stronger_federal_state"
+			custom_effect_tooltip = GER_bavaria_isnt_going_anywhere
+			clear_variable = GER_bavarian_nationalism_var
+			set_country_flag = GER_bavaria_gone
+			964 = { remove_core_of = BAY }
+			43 = { remove_core_of = BAY }
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	focus = { #BRINGING GERMANY CLOSER TOGETHER
+		id = REV_GER_NATO_bringing_germany_closer_together
+		icon = GER_unified
+
+		x = 18
+		y = 0
+
+		cost = 5
+
+		available = {
+			539 = {
+				infrastructure > 4
+				custom_trigger_tooltip = { tooltip = STATE_productivity_higher_than_999_tt }
+				check_variable = { 539.productivity_state_var > 999 }
+			}
+			1079 = {
+				infrastructure > 4
+				custom_trigger_tooltip = { tooltip = STATE_productivity_higher_than_999_tt }
+				check_variable = { 1079.productivity_state_var > 999 }
+			}
+			44 = {
+				infrastructure > 4
+				custom_trigger_tooltip = { tooltip = STATE_productivity_higher_than_999_tt }
+				check_variable = { 44.productivity_state_var > 999 }
+			}
+			972 = {
+				infrastructure > 4
+				custom_trigger_tooltip = { tooltip = STATE_productivity_higher_than_999_tt }
+				check_variable = { 972.productivity_state_var > 999 }
+			}
+			545 = {
+				infrastructure > 4
+				custom_trigger_tooltip = { tooltip = STATE_productivity_higher_than_999_tt }
+				check_variable = { 545.productivity_state_var > 999 }
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ECONOMY }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus REV_GER_NATO_bringing_germany_closer_together"
+			custom_effect_tooltip = GER_united_truly_TT
+			newline = yes
+			remove_ideas = GER_idea_germany_divided
+			set_country_flag = GER_united
+			hidden_effect = {
+				remove_ideas = GER_idea_east_german_debuff2
+				remove_ideas = GER_idea_east_german_debuff4
+				remove_ideas = GER_idea_east_german_debuff3
+				remove_ideas = GER_idea_east_german_debuff1
+			}
+		}
+		ai_will_do = {
+			base = 1
 		}
 	}
 }

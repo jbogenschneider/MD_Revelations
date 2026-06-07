@@ -485,8 +485,8 @@
 		cost = 4
 		available = { has_stability < 0.50 }
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_NATO }
-		ai_will_do = { base = 1 }
-		completion_reward = { hidden_effect = { set_stability = 0.60 } }
+		ai_will_do = { base = 20 }
+		completion_reward = { add_stability = 0.25 }
 	}
 
 	focus = {
@@ -509,8 +509,8 @@
 		cost = 4
 		available = { has_war = yes }
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_NATO }
-		ai_will_do = { base = 1 }
-		completion_reward = { hidden_effect = { set_stability = 0.60 } }
+		ai_will_do = { base = 20 }
+		completion_reward = { add_stability = 0.25 }
 	}
 }
 
