@@ -310,8 +310,8 @@ capital = 182
 	add_political_power = 300
 
 	create_country_leader = {
-		name = "Qaboos bin Said al Said"
-		picture = "Qaboos_bin_Said_al_Said.dds"
+		name = "Haitham bin Tariq"
+		picture = "Haitham_bin_Tariq.dds"
 		ideology = Neutral_Autocracy
 		traits = {
 			king

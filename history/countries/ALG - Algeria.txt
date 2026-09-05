@@ -278,9 +278,8 @@ capital = 386
 	set_country_flag = party12_banned
 
 	create_country_leader = {
-		name = "Abdelaziz Bouteflika"
-		picture = "ALG_Abdelaziz_Bouteflika.dds"
-		expire = "2019.4.2"
+		name = "Abdelmadjid Tebboune"
+		picture = "Abdelmadjid_Tebboune.dds"
 		ideology = Autocracy
 		traits = {
 			emerging_Autocracy

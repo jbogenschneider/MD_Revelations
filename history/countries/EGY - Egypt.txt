@@ -606,8 +606,8 @@ capital = 215
 	set_country_flag = party14_banned
 
 	create_country_leader = {
-		name = "Hosni Mubarak"
-		picture = "hosni_mubarak.dds"
+		name = "Abdel Fattah el-Sisi"
+		picture = "AbdelFattah_Elsisi.dds"
 		ideology = Western_Autocracy
 		traits = {
 			western_Western_Autocracy
