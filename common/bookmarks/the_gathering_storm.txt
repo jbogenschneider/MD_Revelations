@@ -135,6 +135,9 @@ bookmarks = {
 				g7_member
 			}
 			focuses = {
+				ENG_the_future_of_britain
+				ENG_brexit_referendum
+				ENG_vitalize_westminster
 			}
 		}
 		"JAP" = {
@@ -142,9 +145,14 @@ bookmarks = {
 			history = "JAP_MODERN_DAY_DESC"
 			ideology = democratic
 			ideas = {
+				article_nine_jap
 				idea_JAP_emperor_akihito
+				JAP_deflation
 			}
 			focuses = {
+				JAP_new_imperial_society
+				JAP_popular_state
+				JAP_democratic_state
 			}
 		}
 		"CAN" = {
@@ -222,6 +230,30 @@ bookmarks = {
 				GRE_golden_dawn
 				GRE_kke
 				GRE_the_hellenic_republic
+			}
+		}
+		"HUN" = {
+			minor = yes
+			history = "HUN_MODERN_DAY_DESC"
+			ideology = democratic
+			ideas = {
+				EU_member
+				NATO_member
+			}
+			focuses = {
+				REV_HUN_orbans_reign
+				REV_HUN_eu_sceptic_fidesz
+				REV_HUN_pro_eu_tisza
+			}
+		}
+		"TUR" = {
+			minor = yes
+			history = "TUR_MODERN_DAY_DESC"
+			ideology = democratic
+			ideas = {
+				NATO_member
+			}
+			focuses = {
 			}
 		}
 		"POL" = {
@@ -533,14 +565,14 @@ bookmarks = {
 				# Add technologies here. You will need to find the specific tech IDs 
 				# from the mod's common/technologies folder.
 				# Infantry
-				set_technology = { infantry_weapons_1 = 1 }
-				set_technology = { infantry_weapons_2 = 1 }
-				set_technology = { infantry_weapons_3 = 1 }
-				set_technology = { infantry_weapons_4 = 1 }
-				set_technology = { infantry_weapons_5 = 1 }
-				##set_technology = { infantry_weapons_6 = 1 }
-				#set_technology = { infantry_weapons_7 = 1 }
-				set_technology = { util_vehicle_1 = 1 }
+				set_technology = { infantry_weapons = 1 }
+				set_technology = { infantry_weapons1 = 1 }
+				set_technology = { infantry_weapons2 = 1 }
+				set_technology = { infantry_weapons3 = 1 }
+				set_technology = { infantry_weapons4 = 1 }
+				##set_technology = { infantry_weapons5 = 1 }
+				#set_technology = { infantry_weapons6 = 1 }
+				set_technology = { util_vehicle_0 = 1 }
 				set_technology = { util_vehicle_1 = 1 }
 				set_technology = { util_vehicle_2 = 1 }
 				set_technology = { util_vehicle_3 = 1 }
@@ -551,24 +583,24 @@ bookmarks = {
 				#set_technology = { night_vision_2 = 1 }
 				#set_technology = { night_vision_3 = 1 }
 				#set_technology = { night_vision_4 = 1 }
-				set_technology = { cnc_equipment_1 = 1 }
-				set_technology = { cnc_equipment_2 = 1 }
-				set_technology = { cnc_equipment_3 = 1 }
-				#set_technology = { cnc_equipment_4 = 1 }
-				#set_technology = { cnc_equipment_5 = 1 }
-				#set_technology = { cnc_equipment_6 = 1 }
-				set_technology = { land_drone_equipment_type = 1 }
-				set_technology = { land_drone_equipment_1 = 1 }
-				set_technology = { land_drone_equipment_2 = 1 }
-				#set_technology = { land_drone_equipment_3 = 1 }
-				#set_technology = { land_drone_equipment_4 = 1 }
-				set_technology = { body_armor_1 = 1 }
-				set_technology = { body_armor_2 = 1 }
-				set_technology = { body_armor_3 = 1 }
-				set_technology = { camouflage_1 = 1 }
-				set_technology = { camouflage_2 = 1 }
-				set_technology = { camouflage_3 = 1 }
-				#set_technology = { camouflage_4 = 1 }
+				set_technology = { command_control_equipment = 1 }
+				set_technology = { command_control_equipment1 = 1 }
+				set_technology = { command_control_equipment2 = 1 }
+				#set_technology = { command_control_equipment3 = 1 }
+				#set_technology = { command_control_equipment4 = 1 }
+				#set_technology = { command_control_equipment5 = 1 }
+				set_technology = { land_Drone_equipment = 1 }
+				set_technology = { land_Drone_equipment1 = 1 }
+				set_technology = { land_Drone_equipment2 = 1 }
+				#set_technology = { land_Drone_equipment3 = 1 }
+				#set_technology = { land_Drone_equipment4 = 1 }
+				set_technology = { body_armor_1980 = 1 }
+				set_technology = { body_armor_2000 = 1 }
+				set_technology = { body_armor_2010 = 1 }
+				set_technology = { camouflage = 1 }
+				set_technology = { camouflage2 = 1 }
+				set_technology = { camouflage3 = 1 }
+				#set_technology = { camouflage4 = 1 }
 				set_technology = { support_weapons = 1 }
 				set_technology = { squad_automatic_weapon = 1 }
 				set_technology = { tandem_charge_warheads = 1 }
@@ -577,26 +609,26 @@ bookmarks = {
 				set_technology = { support_weapons4 = 1 }
 				#set_technology = { support_weapons5 = 1 }
 				#set_technology = { rc_fire_support_drone = 1 }
-				set_technology = { special_forces_tech_1 = 1 }
-				set_technology = { special_forces_tech_2 = 1 }
-				#set_technology = { special_forces_tech_3 = 1 }
-				#set_technology = { special_forces_tech_4 = 1 }
-				#set_technology = { special_forces_tech_5 = 1 }
+				set_technology = { special_forces = 1 }
+				set_technology = { special_forces2 = 1 }
+				#set_technology = { special_forces3 = 1 }
+				#set_technology = { special_forces4 = 1 }
+				#set_technology = { special_forces5 = 1 }
 				set_technology = { combat_eng_equipment = 1 }
 
 				# Engineering
-				set_technology = { artificial_intelligence_1 = 1 }
-				set_technology = { artificial_intelligence_2 = 1 }
-				set_technology = { artificial_intelligence_3 = 1 }
-				set_technology = { artificial_intelligence_4 = 1 }
-				set_technology = { artificial_intelligence_5 = 1 }
-				#set_technology = { robotics_1 = 1 }
-				#set_technology = { robotics_2 = 1 }
-				#set_technology = { robotics_3 = 1 }
-				#set_technology = { robotics_4 = 1 }
-				set_technology = { artificial_intelligence_6 = 1 }
-				#set_technology = { artificial_intelligence_8 = 1 }
-				#set_technology = { artificial_intelligence_10 = 1 }
+				set_technology = { neural_networks_revival = 1 }
+				set_technology = { data_mining = 1 }
+				set_technology = { machine_learning = 1 }
+				set_technology = { sociable_machines = 1 }
+				set_technology = { early_ai_robotics = 1 }
+				#set_technology = { humanoid_robot = 1 }
+				#set_technology = { advanced_industrial_robotics = 1 }
+				#set_technology = { smart_drones = 1 }
+				#set_technology = { fully_automated_drones = 1 }
+				set_technology = { advanced_ai = 1 }
+				#set_technology = { modern_deep_learning = 1 }
+				#set_technology = { human_imitation_ai = 1 }
 				set_technology = { basic_computing = 1 }
 				set_technology = { integrated_circuit = 1 }
 				set_technology = { computing1 = 1 }
@@ -636,19 +668,19 @@ bookmarks = {
 				set_technology = { nsb_attack_helicopter_tech_2 = 1 }
 				set_technology = { nsb_attack_helicopter_tech_3 = 1 }
 				#set_technology = { nsb_attack_helicopter_tech_4 = 1 }
-				set_technology = { attack_helicopter_1 = 1 }
-				set_technology = { attack_helicopter_2 = 1 }
-				set_technology = { attack_helicopter_3 = 1 }
-				#set_technology = { attack_helicopter_4 = 1 }
+				set_technology = { attack_helicopter1 = 1 }
+				set_technology = { attack_helicopter2 = 1 }
+				set_technology = { attack_helicopter3 = 1 }
+				#set_technology = { attack_helicopter4 = 1 }
 				set_technology = { helo_ops_tech = 1 }
-				set_technology = { nsb_transport_helicopter_1 = 1 }
-				set_technology = { nsb_transport_helicopter_2 = 1 }
-				set_technology = { nsb_transport_helicopter_3 = 1 }
-				#set_technology = { nsb_transport_helicopter_4 = 1 }
-				set_technology = { transport_helicopter_1 = 1 }
-				set_technology = { transport_helicopter_2 = 1 }
-				set_technology = { transport_helicopter_3 = 1 }
-				#set_technology = { transport_helicopter_4 = 1 }
+				set_technology = { nsb_transport_helicopter1 = 1 }
+				set_technology = { nsb_transport_helicopter2 = 1 }
+				set_technology = { nsb_transport_helicopter3 = 1 }
+				#set_technology = { nsb_transport_helicopter4 = 1 }
+				set_technology = { transport_helicopter1 = 1 }
+				set_technology = { transport_helicopter2 = 1 }
+				set_technology = { transport_helicopter3 = 1 }
+				#set_technology = { transport_helicopter4 = 1 }
 				set_technology = { nsb_engine_tech_1 = 1 }
 				set_technology = { nsb_engine_tech_2 = 1 }
 				set_technology = { nsb_engine_tech_3 = 1 }
@@ -732,28 +764,28 @@ bookmarks = {
 				#set_technology = { Air_Kamikaze3 = 1 }
 
 				# Industry
-				set_technology = { nanofibers_4 = 1 }
-				set_technology = { nanofibers_5 = 1 }
-				set_technology = { nanofibers_6 = 1 }
-				set_technology = { nanofibers_7 = 1 }
-				set_technology = { nanofibers_7 = 1 }
-				set_technology = { nanofibers_7 = 1 }
+				set_technology = { industrial_electrospun_polymeric_nanofibers = 1 }
+				set_technology = { multiwalled_carbon_nanotubes = 1 }
+				set_technology = { modern_electrospinning = 1 }
+				set_technology = { inorganic_fibers_fabrication = 1 }
+				set_technology = { industrial_production_of_nanofibers = 1 }
+				set_technology = { nanofibers_in_medicine = 1 }
 				#set_technology = { centrifugal_spinning = 1 }
-				set_technology = { printing_4 = 1 }
-				set_technology = { printing_5 = 1 }
-				set_technology = { printing_6 = 1 }
-				set_technology = { printing_7 = 1 }
-				#set_technology = { printing_8 = 1 }
-				#set_technology = { printing_9 = 1 }
-				#set_technology = { printing_10 = 1 }
-				#set_technology = { genetics_1 = 1 }
-				set_technology = { genetics_4 = 1 }
-				set_technology = { genetics_5 = 1 }
-				set_technology = { genetics_6 = 1 }
-				set_technology = { crispr_1 = 1 }
-				#set_technology = { genetics_11 = 1 }
-				#set_technology = { genetics_12 = 1 }
-				#set_technology = { crispr_4 = 1 }
+				set_technology = { stereolitography = 1 }
+				set_technology = { early_3D_printers = 1 }
+				set_technology = { t3D_wax_printer = 1 }
+				set_technology = { large_scale_3D_printing = 1 }
+				#set_technology = { self-replicated_3D_printer = 1 }
+				#set_technology = { commercial_nanomanufacturing = 1 }
+				#set_technology = { modern_3D_printing = 1 }
+				#set_technology = { DNA_fingerprinting = 1 }
+				set_technology = { modern_gmo = 1 }
+				set_technology = { gene_therapy = 1 }
+				set_technology = { genetically_modified_crops = 1 }
+				set_technology = { gene_targeting_pesticides = 1 }
+				#set_technology = { synthetic_life = 1 }
+				#set_technology = { safe_cloning = 1 }
+				#set_technology = { crispr_treatment = 1 }
 				set_technology = { fuel_silos = 1 }
 				set_technology = { electrification_1 = 1 }
 				set_technology = { electrification_2 = 1 }
@@ -825,12 +857,12 @@ bookmarks = {
 				#set_technology = { improved_harvesting_automation = 1 }
 
 				# Artillery
-				set_technology = { tech_arty_0 = 1 }
+				set_technology = { artillery_0 = 1 }
 				set_technology = { SP_arty_0 = 1 }
 				set_technology = { SP_R_arty_0 = 1 }
-				set_technology = { tech_arty_1 = 1 }
-				set_technology = { tech_arty_2 = 1 }
-				#set_technology = { tech_arty_3 = 1 }
+				set_technology = { artillery_1 = 1 }
+				set_technology = { artillery_2 = 1 }
+				#set_technology = { artillery_3 = 1 }
 				set_technology = { Arty_upgrade_1 = 1 }
 				set_technology = { Arty_upgrade_2 = 1 }
 				set_technology = { Arty_upgrade_3 = 1 }
@@ -1208,7 +1240,7 @@ bookmarks = {
 				#set_technology = { carrier_hull_2 = 1 }
 				#set_technology = { carrier_hull_3 = 1 }
 				#set_technology = { carrier_hull_4 = 1 }
-				set_technology = { tech_submarine_engineering_1 = 1 }
+				set_technology = { tech_submarine_engineering = 1 }
 				set_technology = { tech_submarine_engineering_1 = 1 }
 				set_technology = { tech_submarine_engineering_2 = 1 }
 				#set_technology = { tech_submarine_engineering_3 = 1 }
@@ -1223,80 +1255,76 @@ bookmarks = {
 				#set_technology = { missile_submarine_hull_4 = 1 }
 				#set_technology = { missile_submarine_hull_5 = 1 }
 				set_technology = { tech_naval_systems_engineering = 1 }
-				set_technology = { tech_power_systems_1 = 1 }
+				set_technology = { tech_power_systems = 1 }
 				set_technology = { tech_power_systems_1 = 1 }
 				#set_technology = { tech_power_systems_2 = 1 }
-				set_technology = { tech_nuclear_power_systems_1 = 1 }
+				set_technology = { tech_nuclear_power_systems = 1 }
 				#set_technology = { tech_nuclear_power_systems_1 = 1 }
 				#set_technology = { tech_nuclear_power_systems_2 = 1 }
 				set_technology = { tech_combat_support_systems = 1 }
-				set_technology = { tech_fire_control_1 = 1 }
+				set_technology = { tech_fire_control = 1 }
 				#set_technology = { tech_fire_control_1 = 1 }
 				#set_technology = { tech_fire_control_2 = 1 }
-				set_technology = { tech_combat_radar_1 = 1 }
+				set_technology = { tech_combat_radar = 1 }
 				set_technology = { tech_combat_radar_1 = 1 }
 				set_technology = { tech_combat_radar_2 = 1 }
 				#set_technology = { tech_combat_radar_3 = 1 }
-				set_technology = { tech_combat_sonar_1 = 1 }
+				set_technology = { tech_combat_sonar = 1 }
 				set_technology = { tech_combat_sonar_1 = 1 }
 				set_technology = { tech_combat_sonar_2 = 1 }
 				#set_technology = { tech_combat_sonar_3 = 1 }
 				set_technology = { tech_early_naval_weapon_systems = 1 }
 				set_technology = { tech_naval_weapon_systems = 1 }
-				set_technology = { tech_light_guns_1 = 1 }
+				set_technology = { tech_light_guns = 1 }
 				set_technology = { tech_light_guns_1 = 1 }
 				set_technology = { tech_light_guns_2 = 1 }
+				#set_technology = { tech_rail_guns = 1 }
 				#set_technology = { tech_rail_guns_1 = 1 }
-				#set_technology = { tech_rail_guns_1 = 1 }
-				set_technology = { tech_point_defense_system_1 = 1 }
+				set_technology = { tech_point_defense_system = 1 }
 				set_technology = { tech_point_defense_system_1 = 1 }
 				#set_technology = { tech_point_defense_system_2 = 1 }
 				#set_technology = { tech_point_defense_system_3 = 1 }
 				#set_technology = { tech_point_defense_system_4 = 1 }
-				set_technology = { tech_turret_missiles_surface_1 = 1 }
+				set_technology = { tech_turret_missiles_surface = 1 }
 				set_technology = { tech_turret_missiles_surface_1 = 1 }
 				#set_technology = { tech_turret_missiles_surface_2 = 1 }
 				#set_technology = { tech_turret_missiles_surface_3 = 1 }
-				set_technology = { tech_turret_missiles_aa_1 = 1 }
+				set_technology = { tech_turret_missiles_aa = 1 }
 				set_technology = { tech_turret_missiles_aa_1 = 1 }
 				#set_technology = { tech_turret_missiles_aa_2 = 1 }
 				#set_technology = { tech_turret_missiles_aa_3 = 1 }
-				set_technology = { tech_vls_surface_1 = 1 }
+				set_technology = { tech_vls_surface = 1 }
 				set_technology = { tech_vls_surface_1 = 1 }
 				#set_technology = { tech_vls_surface_2 = 1 }
 				#set_technology = { tech_vls_surface_3 = 1 }
-				set_technology = { tech_vls_aa_1 = 1 }
+				set_technology = { tech_vls_aa = 1 }
 				set_technology = { tech_vls_aa_1 = 1 }
 				set_technology = { tech_vls_aa_2 = 1 }
 				#set_technology = { tech_vls_aa_3 = 1 }
-				set_technology = { tech_torpedoes_1 = 1 }
+				set_technology = { tech_torpedoes = 1 }
 				set_technology = { tech_torpedoes_1 = 1 }
 				set_technology = { tech_torpedoes_2 = 1 }
 				#set_technology = { tech_torpedoes_3 = 1 }
-				set_technology = { tech_landing_craft_1 = 1 }
-				set_technology = { tech_landing_craft_2 = 1 }
-				set_technology = { tech_landing_craft_3 = 1 }
-				set_technology = { tech_landing_craft_4 = 1 }
-				#set_technology = { tech_landing_craft_5 = 1 }
-				#set_technology = { tech_landing_craft_6 = 1 }
+				set_technology = { tech_landing_craft = 1 }
+				set_technology = { tech_amphibious_assault_ship = 1 }
+				set_technology = { tech_air_cushioned_landing_craft = 1 }
+				set_technology = { tech_modern_landing_craft = 1 }
+				#set_technology = { tech_specialized_protective_equipment = 1 }
+				#set_technology = { tech_advanced_landing_craft = 1 }
 			}
 			SOV = {
-				complete_special_project = sp:sp_composite_production
-				complete_special_project = sp:sp_microchip_production
 				complete_special_project = sp:sp_space_program_gdm
 				complete_special_project = sp:sp_missile_project
 				complete_special_project = sp:sp_missile_project_non_got
-				set_technology = { microchip_production_1 = 1 }
-				set_technology = { composite_production_1 = 1 }
 				set_technology = { AS_Fighter4 = 1 }
 				set_technology = { Strike_fighter3 = 1 }
 				set_technology = { night_vision_3 = 1 }
 				set_technology = { reactor3 = 1 }
-				set_technology = { land_drone_equipment_3 = 1 }
-				set_technology = { robotics_3 = 1 }
+				set_technology = { land_Drone_equipment3 = 1 }
+				set_technology = { smart_drones = 1 }
 				set_technology = { decryption4 = 1 }
 				set_technology = { encryption4 = 1 }
-				set_technology = { attack_helicopter_4 = 1 }
+				set_technology = { attack_helicopter4 = 1 }
 				set_technology = { Air_Kamikaze1 = 1 }
 				set_technology = { Air_Kamikaze2 = 1 }
 				set_technology = { air_defense = 1 }
@@ -1344,15 +1372,13 @@ bookmarks = {
 				set_technology = { GLCM5_non_got = 1 }
 			}
 			UKR = {
-				complete_special_project = sp:sp_composite_production
 				complete_special_project = sp:sp_missile_project
 				complete_special_project = sp:sp_missile_project_non_got
-				set_technology = { composite_production_1 = 1 }
 				set_technology = { night_vision_3 = 1 }
-				set_technology = { cnc_equipment_4 = 1 }
-				set_technology = { cnc_equipment_5 = 1 }
-				set_technology = { land_drone_equipment_3 = 1 }
-				set_technology = { land_drone_equipment_4 = 1 }
+				set_technology = { command_control_equipment3 = 1 }
+				set_technology = { command_control_equipment4 = 1 }
+				set_technology = { land_Drone_equipment3 = 1 }
+				set_technology = { land_Drone_equipment4 = 1 }
 				set_technology = { util_vehicle_4 = 1 }
 				set_technology = { Air_Kamikaze1 = 1 }
 				set_technology = { Air_Kamikaze2 = 1 }
@@ -1360,11 +1386,11 @@ bookmarks = {
 				set_technology = { Rec_tank_3 = 1 }
 				set_technology = { IFV_5 = 1 }
 				set_technology = { APC_5 = 1 }
-				set_technology = { tech_arty_3 = 1 }
+				set_technology = { artillery_3 = 1 }
 				set_technology = { Arty_upgrade_4 = 1 }
 				set_technology = { SP_Anti_Air_3 = 1 }
-				set_technology = { printing_8 = 1 }
-				set_technology = { printing_9 = 1 }
+				set_technology = { self-replicated_3D_printer = 1 }
+				set_technology = { commercial_nanomanufacturing = 1 }
 				set_technology = { electrification_4 = 1 }
 				set_technology = { electrification_5 = 1 }
 				set_technology = { energy_efficiency4 = 1 }
@@ -1382,18 +1408,18 @@ bookmarks = {
 				set_technology = { Anti_Air_3 = 1 }
 				set_technology = { lifi = 1 }
 				set_technology = { internet5 = 1 }
-				set_technology = { artificial_intelligence_8 = 1 }
-				set_technology = { robotics_4 = 1 }
-				set_technology = { special_forces_tech_3 = 1 }
+				set_technology = { modern_deep_learning = 1 }
+				set_technology = { fully_automated_drones = 1 }
+				set_technology = { special_forces3 = 1 }
 				set_technology = { AS_Fighter4 = 1 }
-				set_technology = { infantry_weapons_6 = 1 }
+				set_technology = { infantry_weapons5 = 1 }
 				set_technology = { night_vision_3 = 1 }
 				set_technology = { night_vision_4 = 1 }
 				set_technology = { util_vehicle_5 = 1 }
-				set_technology = { land_drone_equipment_3 = 1 }
+				set_technology = { land_Drone_equipment3 = 1 }
 				set_technology = { rc_fire_support_drone = 1 }
 				set_technology = { support_weapons5 = 1 }
-				set_technology = { robotics_3 = 1 }
+				set_technology = { smart_drones = 1 }
 				set_technology = { decryption4 = 1 }
 				set_technology = { encryption4 = 1 }
 				set_technology = { decryption5 = 1 }
@@ -1423,39 +1449,17 @@ bookmarks = {
 				set_technology = { TEL_4_non_got = 1 }
 				set_technology = { TEL_4 = 1 }
 			}
-			HOL = {
-				#complete_special_project = sp:sp_space_program_gdm
-				complete_special_project = sp:sp_composite_production
-				complete_special_project = sp:sp_microchip_production
-				set_technology = { microchip_production_1 = 1 }
-				set_technology = { microchip_production_2 = 1 }
-				set_technology = { microchip_production_3 = 1 }
-				set_technology = { microchip_production_4 = 1 }
-				set_technology = { composite_production_1 = 1 }
-				set_technology = { composite_production_2 = 1 }
-				set_technology = { composite_production_3 = 1 }
-				set_technology = { composite_production_4 = 1 }
-			}
 		    GER = {
 				#complete_special_project = sp:sp_space_program_gdm
-				complete_special_project = sp:sp_composite_production
-				complete_special_project = sp:sp_microchip_production
 				complete_special_project = sp:sp_space_program_gdm
 				complete_special_project = sp:sp_missile_project
 				complete_special_project = sp:sp_missile_project_non_got
-				set_technology = { microchip_production_1 = 1 }
-				set_technology = { microchip_production_2 = 1 }
-				set_technology = { microchip_production_3 = 1 }
-				set_technology = { microchip_production_4 = 1 }
-				set_technology = { composite_production_1 = 1 }
-				set_technology = { composite_production_2 = 1 }
-				set_technology = { composite_production_3 = 1 }
-				set_technology = { composite_production_4 = 1 }
 				set_technology = { night_vision_3 = 1 }
-				set_technology = { cnc_equipment_4 = 1 }
-				set_technology = { cnc_equipment_5 = 1 }
-				set_technology = { land_drone_equipment_3 = 1 }
-				set_technology = { land_drone_equipment_4 = 1 }
+				set_technology = { command_control_equipment3 = 1 }
+				set_technology = { command_control_equipment4 = 1 }
+				set_technology = { land_Drone_equipment3 = 1 }
+				set_technology = { land_Drone_equipment4 = 1 }
+				set_technology = { land_Drone_equipment4 = 1 }
 				set_technology = { Air_Kamikaze1 = 1 }
 				set_technology = { Air_Kamikaze2 = 1 }
 				set_technology = { util_vehicle_5 = 1 }
@@ -1466,19 +1470,19 @@ bookmarks = {
 				set_technology = { IFV_6 = 1 }
 				set_technology = { APC_5 = 1 }
 				set_technology = { APC_6 = 1 }
-				set_technology = { tech_arty_3 = 1 }
+				set_technology = { artillery_3 = 1 }
 				set_technology = { Arty_upgrade_4 = 1 }
-				set_technology = { transport_helicopter_4 = 1 }
+				set_technology = { transport_helicopter4 = 1 }
 				set_technology = { SP_Anti_Air_3 = 1 }
 				set_technology = { Strike_fighter3 = 1 }
 				set_technology = { Strike_fighter3 = 1 }
 				set_technology = { Air_UAV1 = 1 }
 				set_technology = { awacs_plane2 = 1 }
 				set_technology = { naval_plane4 = 1 }
-				set_technology = { printing_8 = 1 }
-				set_technology = { printing_9 = 1 }
-				set_technology = { printing_10 = 1 }
-				set_technology = { genetics_11 = 1 }
+				set_technology = { self-replicated_3D_printer = 1 }
+				set_technology = { commercial_nanomanufacturing = 1 }
+				set_technology = { modern_3D_printing = 1 }
+				set_technology = { synthetic_life = 1 }
 				set_technology = { electrification_4 = 1 }
 				set_technology = { electrification_5 = 1 }
 				set_technology = { utility_scale_battery_storage2 = 1 }
@@ -1501,27 +1505,27 @@ bookmarks = {
 				set_technology = { lifi = 1 }
 				set_technology = { internet5 = 1 }
 				set_technology = { internet5 = 1 }
-				set_technology = { artificial_intelligence_8 = 1 }
-				set_technology = { robotics_4 = 1 }
-				set_technology = { crispr_4 = 1 }
-				set_technology = { special_forces_tech_3 = 1 }
-				set_technology = { special_forces_tech_3 = 1 }
+				set_technology = { modern_deep_learning = 1 }
+				set_technology = { fully_automated_drones = 1 }
+				set_technology = { crispr_treatment = 1 }
+				set_technology = { special_forces3 = 1 }
+				set_technology = { special_forces3 = 1 }
 
 				set_technology = { AS_Fighter4 = 1 }
-				set_technology = { infantry_weapons_6 = 1 }
+				set_technology = { infantry_weapons5 = 1 }
 				set_technology = { night_vision_3 = 1 }
 				set_technology = { night_vision_4 = 1 }
 				set_technology = { util_vehicle_5 = 1 }
-				set_technology = { land_drone_equipment_3 = 1 }
+				set_technology = { land_Drone_equipment3 = 1 }
 				set_technology = { support_weapons5 = 1 }
-				set_technology = { robotics_3 = 1 }
+				set_technology = { smart_drones = 1 }
 				set_technology = { decryption4 = 1 }
 				set_technology = { encryption4 = 1 }
 				set_technology = { decryption5 = 1 }
 				set_technology = { encryption5 = 1 }
 				set_technology = { computing5 = 1 }
 				set_technology = { nsb_attack_helicopter_tech_4 = 1 }
-				set_technology = { attack_helicopter_4 = 1 }
+				set_technology = { attack_helicopter4 = 1 }
 				set_technology = { air_defense = 1 }
 				set_technology = { SAM0 = 1 }
 				set_technology = { SAM1 = 1 }
@@ -1566,21 +1570,14 @@ bookmarks = {
 			ENG = {
 				#complete_special_project = sp:sp_space_program_gdm
 				complete_special_project = sp:sp_nuclear_warhead_program
-				complete_special_project = sp:sp_composite_production
-				complete_special_project = sp:sp_microchip_production
 				complete_special_project = sp:sp_space_program_gdm
 				complete_special_project = sp:sp_missile_project
 				complete_special_project = sp:sp_missile_project_non_got
-				set_technology = { microchip_production_1 = 1 }
-				set_technology = { microchip_production_2 = 1 }
-				set_technology = { microchip_production_3 = 1 }
-				set_technology = { composite_production_1 = 1 }
-				set_technology = { composite_production_2 = 1 }
-				set_technology = { composite_production_3 = 1 }
 				set_technology = { night_vision_3 = 1 }
-				set_technology = { cnc_equipment_4 = 1 }
-				set_technology = { land_drone_equipment_3 = 1 }
-				set_technology = { land_drone_equipment_4 = 1 }
+				set_technology = { command_control_equipment3 = 1 }
+				set_technology = { land_Drone_equipment3 = 1 }
+				set_technology = { land_Drone_equipment4 = 1 }
+				set_technology = { land_Drone_equipment4 = 1 }
 				set_technology = { util_vehicle_5 = 1 }
 				set_technology = { mbt_tech_3 = 1 }	
 				set_technology = { MBT_5 = 1 }
@@ -1589,19 +1586,19 @@ bookmarks = {
 				set_technology = { IFV_6 = 1 }
 				set_technology = { APC_5 = 1 }
 				set_technology = { APC_6 = 1 }
-				set_technology = { tech_arty_3 = 1 }
+				set_technology = { artillery_3 = 1 }
 				set_technology = { Arty_upgrade_4 = 1 }
-				set_technology = { transport_helicopter_4 = 1 }
+				set_technology = { transport_helicopter4 = 1 }
 				set_technology = { SP_Anti_Air_3 = 1 }
 				set_technology = { Strike_fighter3 = 1 }
 				set_technology = { Strike_fighter3 = 1 }
 				set_technology = { Air_UAV1 = 1 }
 				set_technology = { awacs_plane2 = 1 }
 				set_technology = { naval_plane4 = 1 }
-				set_technology = { printing_8 = 1 }
-				set_technology = { printing_9 = 1 }
-				set_technology = { printing_10 = 1 }
-				set_technology = { genetics_11 = 1 }
+				set_technology = { self-replicated_3D_printer = 1 }
+				set_technology = { commercial_nanomanufacturing = 1 }
+				set_technology = { modern_3D_printing = 1 }
+				set_technology = { synthetic_life = 1 }
 				set_technology = { electrification_4 = 1 }
 				set_technology = { electrification_5 = 1 }
 				set_technology = { utility_scale_battery_storage2 = 1 }
@@ -1622,27 +1619,27 @@ bookmarks = {
 				set_technology = { Anti_tank_3 = 1 }
 				set_technology = { Anti_Air_3 = 1 }
 				set_technology = { internet5 = 1 }
-				set_technology = { artificial_intelligence_8 = 1 }
-				set_technology = { robotics_4 = 1 }
-				set_technology = { crispr_4 = 1 }
-				set_technology = { special_forces_tech_3 = 1 }
-				set_technology = { special_forces_tech_3 = 1 }
+				set_technology = { modern_deep_learning = 1 }
+				set_technology = { fully_automated_drones = 1 }
+				set_technology = { crispr_treatment = 1 }
+				set_technology = { special_forces3 = 1 }
+				set_technology = { special_forces3 = 1 }
 
 				set_technology = { AS_Fighter4 = 1 }
-				set_technology = { infantry_weapons_6 = 1 }
+				set_technology = { infantry_weapons5 = 1 }
 				set_technology = { night_vision_3 = 1 }
 				set_technology = { night_vision_4 = 1 }
 				set_technology = { util_vehicle_5 = 1 }
-				set_technology = { land_drone_equipment_3 = 1 }
+				set_technology = { land_Drone_equipment3 = 1 }
 				set_technology = { support_weapons5 = 1 }
-				set_technology = { robotics_3 = 1 }
+				set_technology = { smart_drones = 1 }
 				set_technology = { decryption4 = 1 }
 				set_technology = { encryption4 = 1 }
 				set_technology = { decryption5 = 1 }
 				set_technology = { encryption5 = 1 }
 				set_technology = { computing5 = 1 }
 				set_technology = { nsb_attack_helicopter_tech_4 = 1 }
-				set_technology = { attack_helicopter_4 = 1 }
+				set_technology = { attack_helicopter4 = 1 }
 				set_technology = { Air_Kamikaze1 = 1 }
 				set_technology = { air_defense = 1 }
 				set_technology = { SAM0 = 1 }
@@ -1686,20 +1683,12 @@ bookmarks = {
 			
 			}
 			FRA = {
-				complete_special_project = sp:sp_composite_production
-				complete_special_project = sp:sp_microchip_production
 				complete_special_project = sp:sp_space_program_gdm
 				complete_special_project = sp:sp_missile_project
 				complete_special_project = sp:sp_missile_project_non_got
-				set_technology = { microchip_production_1 = 1 }
-				set_technology = { microchip_production_2 = 1 }
-				set_technology = { microchip_production_3 = 1 }
-				set_technology = { composite_production_1 = 1 }
-				set_technology = { composite_production_2 = 1 }
-				set_technology = { composite_production_3 = 1 }
 				set_technology = { night_vision_3 = 1 }
-				set_technology = { cnc_equipment_4 = 1 }
-				set_technology = { land_drone_equipment_3 = 1 }
+				set_technology = { command_control_equipment3 = 1 }
+				set_technology = { land_Drone_equipment3 = 1 }
 				set_technology = { util_vehicle_5 = 1 }
 				set_technology = { mbt_tech_3 = 1 }	
 				set_technology = { MBT_5 = 1 }
@@ -1708,19 +1697,19 @@ bookmarks = {
 				set_technology = { IFV_6 = 1 }
 				set_technology = { APC_5 = 1 }
 				set_technology = { APC_6 = 1 }
-				set_technology = { tech_arty_3 = 1 }
+				set_technology = { artillery_3 = 1 }
 				set_technology = { Arty_upgrade_4 = 1 }
-				set_technology = { transport_helicopter_4 = 1 }
+				set_technology = { transport_helicopter4 = 1 }
 				set_technology = { SP_Anti_Air_3 = 1 }
 				set_technology = { Strike_fighter3 = 1 }
 				set_technology = { Strike_fighter3 = 1 }
 				set_technology = { Air_UAV1 = 1 }
 				set_technology = { awacs_plane2 = 1 }
 				set_technology = { naval_plane4 = 1 }
-				set_technology = { printing_8 = 1 }
-				set_technology = { printing_9 = 1 }
-				set_technology = { printing_10 = 1 }
-				set_technology = { genetics_11 = 1 }
+				set_technology = { self-replicated_3D_printer = 1 }
+				set_technology = { commercial_nanomanufacturing = 1 }
+				set_technology = { modern_3D_printing = 1 }
+				set_technology = { synthetic_life = 1 }
 				set_technology = { electrification_4 = 1 }
 				set_technology = { electrification_5 = 1 }
 				set_technology = { utility_scale_battery_storage2 = 1 }
@@ -1741,27 +1730,27 @@ bookmarks = {
 				set_technology = { Anti_tank_3 = 1 }
 				set_technology = { Anti_Air_3 = 1 }
 				set_technology = { internet5 = 1 }
-				set_technology = { artificial_intelligence_8 = 1 }
-				set_technology = { robotics_4 = 1 }
-				set_technology = { crispr_4 = 1 }
-				set_technology = { special_forces_tech_3 = 1 }
-				set_technology = { special_forces_tech_3 = 1 }
+				set_technology = { modern_deep_learning = 1 }
+				set_technology = { fully_automated_drones = 1 }
+				set_technology = { crispr_treatment = 1 }
+				set_technology = { special_forces3 = 1 }
+				set_technology = { special_forces3 = 1 }
 
 				set_technology = { AS_Fighter4 = 1 }
-				set_technology = { infantry_weapons_6 = 1 }
+				set_technology = { infantry_weapons5 = 1 }
 				set_technology = { night_vision_3 = 1 }
 				set_technology = { night_vision_4 = 1 }
 				set_technology = { util_vehicle_5 = 1 }
-				set_technology = { land_drone_equipment_3 = 1 }
+				set_technology = { land_Drone_equipment3 = 1 }
 				set_technology = { support_weapons5 = 1 }
-				set_technology = { robotics_3 = 1 }
+				set_technology = { smart_drones = 1 }
 				set_technology = { decryption4 = 1 }
 				set_technology = { encryption4 = 1 }
 				set_technology = { decryption5 = 1 }
 				set_technology = { encryption5 = 1 }
 				set_technology = { computing5 = 1 }
 				set_technology = { nsb_attack_helicopter_tech_4 = 1 }
-				set_technology = { attack_helicopter_4 = 1 }
+				set_technology = { attack_helicopter4 = 1 }
 				set_technology = { Air_Kamikaze1 = 1 }
 				set_technology = { air_defense = 1 }
 				set_technology = { SAM0 = 1 }
@@ -1805,18 +1794,11 @@ bookmarks = {
 			
 			}
 			CAN = {
-				complete_special_project = sp:sp_microchip_production
-				complete_special_project = sp:sp_composite_production
 				complete_special_project = sp:sp_missile_project
 				complete_special_project = sp:sp_missile_project_non_got
-				set_technology = { microchip_production_1 = 1 }
-				set_technology = { microchip_production_2 = 1 }
-				set_technology = { composite_production_1 = 1 }
-				set_technology = { composite_production_2 = 1 }
-				set_technology = { composite_production_3 = 1 }
 				set_technology = { night_vision_3 = 1 }
-				set_technology = { cnc_equipment_4 = 1 }
-				set_technology = { land_drone_equipment_3 = 1 }
+				set_technology = { command_control_equipment3 = 1 }
+				set_technology = { land_Drone_equipment3 = 1 }
 				set_technology = { util_vehicle_5 = 1 }
 				set_technology = { mbt_tech_3 = 1 }	
 				set_technology = { MBT_5 = 1 }
@@ -1825,18 +1807,18 @@ bookmarks = {
 				set_technology = { IFV_6 = 1 }
 				set_technology = { APC_5 = 1 }
 				#set_technology = { APC_6 = 1 }
-				set_technology = { tech_arty_3 = 1 }
+				set_technology = { artillery_3 = 1 }
 				set_technology = { Arty_upgrade_4 = 1 }
-				set_technology = { transport_helicopter_4 = 1 }
+				set_technology = { transport_helicopter4 = 1 }
 				set_technology = { SP_Anti_Air_3 = 1 }
 				set_technology = { Strike_fighter3 = 1 }
 				set_technology = { Air_UAV1 = 1 }
 				set_technology = { awacs_plane2 = 1 }
 				set_technology = { naval_plane4 = 1 }
-				set_technology = { printing_8 = 1 }
-				set_technology = { printing_9 = 1 }
-				set_technology = { printing_10 = 1 }
-				set_technology = { genetics_11 = 1 }
+				set_technology = { self-replicated_3D_printer = 1 }
+				set_technology = { commercial_nanomanufacturing = 1 }
+				set_technology = { modern_3D_printing = 1 }
+				set_technology = { synthetic_life = 1 }
 				set_technology = { electrification_4 = 1 }
 				set_technology = { electrification_5 = 1 }
 				set_technology = { utility_scale_battery_storage2 = 1 }
@@ -1857,19 +1839,19 @@ bookmarks = {
 				set_technology = { Anti_tank_3 = 1 }
 				set_technology = { Anti_Air_3 = 1 }
 				set_technology = { internet5 = 1 }
-				set_technology = { artificial_intelligence_8 = 1 }
-				set_technology = { robotics_4 = 1 }
-				set_technology = { crispr_4 = 1 }
-				set_technology = { special_forces_tech_3 = 1 }
+				set_technology = { modern_deep_learning = 1 }
+				set_technology = { fully_automated_drones = 1 }
+				set_technology = { crispr_treatment = 1 }
+				set_technology = { special_forces3 = 1 }
 
 				set_technology = { AS_Fighter4 = 1 }
-				set_technology = { infantry_weapons_6 = 1 }
+				set_technology = { infantry_weapons5 = 1 }
 				set_technology = { night_vision_3 = 1 }
 				set_technology = { night_vision_4 = 1 }
 				set_technology = { util_vehicle_5 = 1 }
-				set_technology = { land_drone_equipment_3 = 1 }
+				set_technology = { land_Drone_equipment3 = 1 }
 				set_technology = { support_weapons5 = 1 }
-				set_technology = { robotics_3 = 1 }
+				set_technology = { smart_drones = 1 }
 				set_technology = { decryption4 = 1 }
 				set_technology = { encryption4 = 1 }
 				set_technology = { decryption5 = 1 }
@@ -1905,24 +1887,13 @@ bookmarks = {
 			USA = {
 				#complete_special_project = sp:sp_nuclear_warhead_program
 				#complete_special_project = sp:sp_nuclear_warhead_program
-				complete_special_project = sp:sp_microchip_production
-				complete_special_project = sp:sp_composite_production
 				complete_special_project = sp:sp_space_program_gdm
 				complete_special_project = sp:sp_missile_project
 				complete_special_project = sp:sp_missile_project_non_got
-				set_technology = { microchip_production_1 = 1 }
-				set_technology = { microchip_production_2 = 1 }
-				set_technology = { microchip_production_3 = 1 }
-				set_technology = { microchip_production_4 = 1 }
-				set_technology = { microchip_production_5 = 1 }
-				set_technology = { composite_production_1 = 1 }
-				set_technology = { composite_production_2 = 1 }
-				set_technology = { composite_production_3 = 1 }
-				set_technology = { composite_production_4 = 1 }
 				set_technology = { night_vision_3 = 1 }
-				set_technology = { cnc_equipment_4 = 1 }
-				set_technology = { cnc_equipment_5 = 1 }
-				set_technology = { land_drone_equipment_3 = 1 }
+				set_technology = { command_control_equipment3 = 1 }
+				set_technology = { command_control_equipment4 = 1 }
+				set_technology = { land_Drone_equipment3 = 1 }
 				set_technology = { util_vehicle_5 = 1 }
 				set_technology = { mbt_tech_3 = 1 }	
 				set_technology = { MBT_5 = 1 }
@@ -1931,9 +1902,9 @@ bookmarks = {
 				set_technology = { IFV_6 = 1 }
 				set_technology = { APC_5 = 1 }
 				set_technology = { APC_6 = 1 }
-				set_technology = { tech_arty_3 = 1 }
+				set_technology = { artillery_3 = 1 }
 				set_technology = { Arty_upgrade_4 = 1 }
-				set_technology = { transport_helicopter_4 = 1 }
+				set_technology = { transport_helicopter4 = 1 }
 				set_technology = { SP_Anti_Air_3 = 1 }
 				set_technology = { L_Strike_fighter3 = 1 }
 				set_technology = { Strike_fighter4 = 1 }
@@ -1948,10 +1919,10 @@ bookmarks = {
 				set_technology = { Air_UAV2 = 1 }
 				set_technology = { awacs_plane2 = 1 }
 				set_technology = { naval_plane4 = 1 }
-				set_technology = { printing_8 = 1 }
-				set_technology = { printing_9 = 1 }
-				set_technology = { printing_10 = 1 }
-				set_technology = { genetics_11 = 1 }
+				set_technology = { self-replicated_3D_printer = 1 }
+				set_technology = { commercial_nanomanufacturing = 1 }
+				set_technology = { modern_3D_printing = 1 }
+				set_technology = { synthetic_life = 1 }
 				set_technology = { electrification_4 = 1 }
 				set_technology = { electrification_5 = 1 }
 				set_technology = { utility_scale_battery_storage2 = 1 }
@@ -1972,26 +1943,26 @@ bookmarks = {
 				set_technology = { Anti_tank_3 = 1 }
 				set_technology = { Anti_Air_3 = 1 }
 				set_technology = { internet5 = 1 }
-				set_technology = { artificial_intelligence_8 = 1 }
-				set_technology = { robotics_4 = 1 }
-				set_technology = { crispr_4 = 1 }
-				set_technology = { special_forces_tech_5 = 1 }
+				set_technology = { modern_deep_learning = 1 }
+				set_technology = { fully_automated_drones = 1 }
+				set_technology = { crispr_treatment = 1 }
+				set_technology = { special_forces5 = 1 }
 
 				set_technology = { AS_Fighter4 = 1 }
-				set_technology = { infantry_weapons_6 = 1 }
+				set_technology = { infantry_weapons5 = 1 }
 				set_technology = { night_vision_3 = 1 }
 				set_technology = { night_vision_4 = 1 }
 				set_technology = { util_vehicle_5 = 1 }
-				set_technology = { land_drone_equipment_3 = 1 }
+				set_technology = { land_Drone_equipment3 = 1 }
 				set_technology = { support_weapons5 = 1 }
-				set_technology = { robotics_3 = 1 }
+				set_technology = { smart_drones = 1 }
 				set_technology = { decryption4 = 1 }
 				set_technology = { encryption4 = 1 }
 				set_technology = { decryption5 = 1 }
 				set_technology = { encryption5 = 1 }
 				set_technology = { computing5 = 1 }
 				set_technology = { nsb_attack_helicopter_tech_4 = 1 }
-				set_technology = { attack_helicopter_4 = 1 }
+				set_technology = { attack_helicopter4 = 1 }
 				set_technology = { Air_Kamikaze1 = 1 }
 				set_technology = { air_defense = 1 }
 				set_technology = { SAM0 = 1 }
@@ -2060,7 +2031,7 @@ bookmarks = {
 				set_technology = { tech_fire_control_2 = 1 }
 				set_technology = { tech_combat_radar_3 = 1 }
 				set_technology = { tech_combat_sonar_3 = 1 }
-				set_technology = { tech_rail_guns_1 = 1 }
+				set_technology = { tech_rail_guns = 1 }
 				#set_technology = { tech_rail_guns_1 = 1 }
 				set_technology = { tech_point_defense_system_2 = 1 }
 				set_technology = { tech_point_defense_system_3 = 1 }
@@ -2073,25 +2044,18 @@ bookmarks = {
 				#set_technology = { tech_vls_surface_3 = 1 }
 				set_technology = { tech_vls_aa_3 = 1 }
 				set_technology = { tech_torpedoes_3 = 1 }
-				set_technology = { tech_landing_craft_5 = 1 }
-				set_technology = { tech_landing_craft_6 = 1 }
+				set_technology = { tech_specialized_protective_equipment = 1 }
+				set_technology = { tech_advanced_landing_craft = 1 }
 			}
 			KOR = {
 				#complete_special_project = sp:sp_space_program_gdm
-				complete_special_project = sp:sp_composite_production
-				complete_special_project = sp:sp_microchip_production
+				complete_special_project = sp:sp_space_program_gdm
 				complete_special_project = sp:sp_missile_project
 				complete_special_project = sp:sp_missile_project_non_got
-				set_technology = { microchip_production_1 = 1 }
-				set_technology = { microchip_production_2 = 1 }
-				set_technology = { microchip_production_3 = 1 }
-				set_technology = { composite_production_1 = 1 }
-				set_technology = { composite_production_2 = 1 }
-				set_technology = { composite_production_3 = 1 }
 				set_technology = { night_vision_3 = 1 }
-				set_technology = { cnc_equipment_4 = 1 }
-				set_technology = { land_drone_equipment_3 = 1 }
-				set_technology = { land_drone_equipment_4 = 1 }
+				set_technology = { command_control_equipment3 = 1 }
+				set_technology = { land_Drone_equipment3 = 1 }
+				set_technology = { land_Drone_equipment4 = 1 }
 				set_technology = { Air_Kamikaze1 = 1 }
 				set_technology = { util_vehicle_5 = 1 }
 				set_technology = { MBT_5 = 1 }
@@ -2100,18 +2064,18 @@ bookmarks = {
 				set_technology = { IFV_6 = 1 }
 				set_technology = { APC_5 = 1 }
 				set_technology = { APC_6 = 1 }
-				set_technology = { tech_arty_3 = 1 }
+				set_technology = { artillery_3 = 1 }
 				set_technology = { Arty_upgrade_4 = 1 }
-				set_technology = { transport_helicopter_4 = 1 }
+				set_technology = { transport_helicopter4 = 1 }
 				set_technology = { SP_Anti_Air_3 = 1 }
 				set_technology = { Strike_fighter3 = 1 }
 				set_technology = { Air_UAV1 = 1 }
 				set_technology = { awacs_plane2 = 1 }
 				set_technology = { naval_plane4 = 1 }
-				set_technology = { printing_8 = 1 }
-				set_technology = { printing_9 = 1 }
-				set_technology = { printing_10 = 1 }
-				set_technology = { genetics_11 = 1 }
+				set_technology = { self-replicated_3D_printer = 1 }
+				set_technology = { commercial_nanomanufacturing = 1 }
+				set_technology = { modern_3D_printing = 1 }
+				set_technology = { synthetic_life = 1 }
 				set_technology = { electrification_4 = 1 }
 				set_technology = { electrification_5 = 1 }
 				set_technology = { utility_scale_battery_storage2 = 1 }
@@ -2132,25 +2096,25 @@ bookmarks = {
 				set_technology = { Anti_tank_3 = 1 }
 				set_technology = { Anti_Air_3 = 1 }
 				set_technology = { internet5 = 1 }
-				set_technology = { artificial_intelligence_8 = 1 }
-				set_technology = { robotics_4 = 1 }
-				set_technology = { crispr_4 = 1 }
-				set_technology = { special_forces_tech_3 = 1 }
+				set_technology = { modern_deep_learning = 1 }
+				set_technology = { fully_automated_drones = 1 }
+				set_technology = { crispr_treatment = 1 }
+				set_technology = { special_forces3 = 1 }
 
 				set_technology = { AS_Fighter4 = 1 }
-				set_technology = { infantry_weapons_6 = 1 }
+				set_technology = { infantry_weapons5 = 1 }
 				set_technology = { night_vision_3 = 1 }
 				set_technology = { night_vision_4 = 1 }
-				set_technology = { land_drone_equipment_3 = 1 }
+				set_technology = { land_Drone_equipment3 = 1 }
 				set_technology = { support_weapons5 = 1 }
-				set_technology = { robotics_3 = 1 }
+				set_technology = { smart_drones = 1 }
 				set_technology = { decryption4 = 1 }
 				set_technology = { encryption4 = 1 }
 				set_technology = { decryption5 = 1 }
 				set_technology = { encryption5 = 1 }
 				set_technology = { computing5 = 1 }
 				set_technology = { nsb_attack_helicopter_tech_4 = 1 }
-				set_technology = { attack_helicopter_4 = 1 }
+				set_technology = { attack_helicopter4 = 1 }
 				set_technology = { air_defense = 1 }
 				set_technology = { SAM0 = 1 }
 				set_technology = { SAM1 = 1 }
@@ -2185,24 +2149,24 @@ bookmarks = {
 			}
 			POL = {
 				set_technology = { night_vision_3 = 1 }
-				set_technology = { land_drone_equipment_3 = 1 }
-				set_technology = { land_drone_equipment_4 = 1 }
+				set_technology = { land_Drone_equipment3 = 1 }
+				set_technology = { land_Drone_equipment4 = 1 }
 				set_technology = { Air_Kamikaze1 = 1 }
 				set_technology = { Rec_tank_3 = 1 }
 				set_technology = { IFV_5 = 1 }
 				set_technology = { IFV_6 = 1 }
 				set_technology = { APC_5 = 1 }
-				set_technology = { tech_arty_3 = 1 }
+				set_technology = { artillery_3 = 1 }
 				set_technology = { Arty_upgrade_4 = 1 }
-				set_technology = { transport_helicopter_4 = 1 }
+				set_technology = { transport_helicopter4 = 1 }
 				set_technology = { SP_Anti_Air_3 = 1 }
 				set_technology = { Strike_fighter3 = 1 }
 				set_technology = { awacs_plane2 = 1 }
 				set_technology = { naval_plane4 = 1 }
-				set_technology = { printing_8 = 1 }
-				set_technology = { printing_9 = 1 }
-				set_technology = { printing_10 = 1 }
-				set_technology = { genetics_11 = 1 }
+				set_technology = { self-replicated_3D_printer = 1 }
+				set_technology = { commercial_nanomanufacturing = 1 }
+				set_technology = { modern_3D_printing = 1 }
+				set_technology = { synthetic_life = 1 }
 				set_technology = { electrification_4 = 1 }
 				set_technology = { electrification_5 = 1 }
 				set_technology = { utility_scale_battery_storage2 = 1 }
@@ -2223,24 +2187,24 @@ bookmarks = {
 				set_technology = { Anti_tank_3 = 1 }
 				set_technology = { Anti_Air_3 = 1 }
 				set_technology = { internet5 = 1 }
-				set_technology = { artificial_intelligence_8 = 1 }
-				set_technology = { robotics_4 = 1 }
-				set_technology = { crispr_4 = 1 }
-				set_technology = { special_forces_tech_3 = 1 }
+				set_technology = { modern_deep_learning = 1 }
+				set_technology = { fully_automated_drones = 1 }
+				set_technology = { crispr_treatment = 1 }
+				set_technology = { special_forces3 = 1 }
 
 				set_technology = { AS_Fighter4 = 1 }
-				set_technology = { infantry_weapons_6 = 1 }
+				set_technology = { infantry_weapons5 = 1 }
 				set_technology = { night_vision_3 = 1 }
 				set_technology = { night_vision_4 = 1 }
-				set_technology = { land_drone_equipment_3 = 1 }
-				set_technology = { robotics_3 = 1 }
+				set_technology = { land_Drone_equipment3 = 1 }
+				set_technology = { smart_drones = 1 }
 				set_technology = { decryption4 = 1 }
 				set_technology = { encryption4 = 1 }
 				set_technology = { decryption5 = 1 }
 				set_technology = { encryption5 = 1 }
 				set_technology = { computing5 = 1 }
 				set_technology = { nsb_attack_helicopter_tech_4 = 1 }
-				set_technology = { attack_helicopter_4 = 1 }
+				set_technology = { attack_helicopter4 = 1 }
 				set_technology = { air_defense = 1 }
 				set_technology = { SAM0 = 1 }
 				set_technology = { SAM1 = 1 }
@@ -2263,24 +2227,24 @@ bookmarks = {
 			}
 			NOR = {
 				set_technology = { night_vision_3 = 1 }
-				set_technology = { land_drone_equipment_3 = 1 }
-				set_technology = { land_drone_equipment_4 = 1 }
+				set_technology = { land_Drone_equipment3 = 1 }
+				set_technology = { land_Drone_equipment4 = 1 }
 				set_technology = { Air_Kamikaze1 = 1 }
 				set_technology = { Rec_tank_3 = 1 }
 				set_technology = { IFV_5 = 1 }
 				set_technology = { IFV_6 = 1 }
 				set_technology = { APC_5 = 1 }
-				set_technology = { tech_arty_3 = 1 }
+				set_technology = { artillery_3 = 1 }
 				set_technology = { Arty_upgrade_4 = 1 }
-				set_technology = { transport_helicopter_4 = 1 }
+				set_technology = { transport_helicopter4 = 1 }
 				set_technology = { SP_Anti_Air_3 = 1 }
 				set_technology = { Strike_fighter3 = 1 }
 				set_technology = { awacs_plane2 = 1 }
 				set_technology = { naval_plane4 = 1 }
-				set_technology = { printing_8 = 1 }
-				set_technology = { printing_9 = 1 }
-				set_technology = { printing_10 = 1 }
-				set_technology = { genetics_11 = 1 }
+				set_technology = { self-replicated_3D_printer = 1 }
+				set_technology = { commercial_nanomanufacturing = 1 }
+				set_technology = { modern_3D_printing = 1 }
+				set_technology = { synthetic_life = 1 }
 				set_technology = { electrification_4 = 1 }
 				set_technology = { electrification_5 = 1 }
 				set_technology = { utility_scale_battery_storage2 = 1 }
@@ -2301,24 +2265,24 @@ bookmarks = {
 				set_technology = { Anti_tank_3 = 1 }
 				set_technology = { Anti_Air_3 = 1 }
 				set_technology = { internet5 = 1 }
-				set_technology = { artificial_intelligence_8 = 1 }
-				set_technology = { robotics_4 = 1 }
-				set_technology = { crispr_4 = 1 }
-				set_technology = { special_forces_tech_3 = 1 }
+				set_technology = { modern_deep_learning = 1 }
+				set_technology = { fully_automated_drones = 1 }
+				set_technology = { crispr_treatment = 1 }
+				set_technology = { special_forces3 = 1 }
 
 				set_technology = { AS_Fighter4 = 1 }
-				set_technology = { infantry_weapons_6 = 1 }
+				set_technology = { infantry_weapons5 = 1 }
 				set_technology = { night_vision_3 = 1 }
 				set_technology = { night_vision_4 = 1 }
-				set_technology = { land_drone_equipment_3 = 1 }
-				set_technology = { robotics_3 = 1 }
+				set_technology = { land_Drone_equipment3 = 1 }
+				set_technology = { smart_drones = 1 }
 				set_technology = { decryption4 = 1 }
 				set_technology = { encryption4 = 1 }
 				set_technology = { decryption5 = 1 }
 				set_technology = { encryption5 = 1 }
 				set_technology = { computing5 = 1 }
 				set_technology = { nsb_attack_helicopter_tech_4 = 1 }
-				set_technology = { attack_helicopter_4 = 1 }
+				set_technology = { attack_helicopter4 = 1 }
 				set_technology = { air_defense = 1 }
 				set_technology = { SAM0 = 1 }
 				set_technology = { SAM1 = 1 }
@@ -2341,24 +2305,24 @@ bookmarks = {
 			}
 			DEN = {
 				set_technology = { night_vision_3 = 1 }
-				set_technology = { land_drone_equipment_3 = 1 }
-				set_technology = { land_drone_equipment_4 = 1 }
+				set_technology = { land_Drone_equipment3 = 1 }
+				set_technology = { land_Drone_equipment4 = 1 }
 				set_technology = { Air_Kamikaze1 = 1 }
 				set_technology = { Rec_tank_3 = 1 }
 				set_technology = { IFV_5 = 1 }
 				set_technology = { IFV_6 = 1 }
 				set_technology = { APC_5 = 1 }
-				set_technology = { tech_arty_3 = 1 }
+				set_technology = { artillery_3 = 1 }
 				set_technology = { Arty_upgrade_4 = 1 }
-				set_technology = { transport_helicopter_4 = 1 }
+				set_technology = { transport_helicopter4 = 1 }
 				set_technology = { SP_Anti_Air_3 = 1 }
 				set_technology = { Strike_fighter3 = 1 }
 				set_technology = { awacs_plane2 = 1 }
 				set_technology = { naval_plane4 = 1 }
-				set_technology = { printing_8 = 1 }
-				set_technology = { printing_9 = 1 }
-				set_technology = { printing_10 = 1 }
-				set_technology = { genetics_11 = 1 }
+				set_technology = { self-replicated_3D_printer = 1 }
+				set_technology = { commercial_nanomanufacturing = 1 }
+				set_technology = { modern_3D_printing = 1 }
+				set_technology = { synthetic_life = 1 }
 				set_technology = { electrification_4 = 1 }
 				set_technology = { electrification_5 = 1 }
 				set_technology = { utility_scale_battery_storage2 = 1 }
@@ -2379,24 +2343,24 @@ bookmarks = {
 				set_technology = { Anti_tank_3 = 1 }
 				set_technology = { Anti_Air_3 = 1 }
 				set_technology = { internet5 = 1 }
-				set_technology = { artificial_intelligence_8 = 1 }
-				set_technology = { robotics_4 = 1 }
-				set_technology = { crispr_4 = 1 }
-				set_technology = { special_forces_tech_3 = 1 }
+				set_technology = { modern_deep_learning = 1 }
+				set_technology = { fully_automated_drones = 1 }
+				set_technology = { crispr_treatment = 1 }
+				set_technology = { special_forces3 = 1 }
 
 				set_technology = { AS_Fighter4 = 1 }
-				set_technology = { infantry_weapons_6 = 1 }
+				set_technology = { infantry_weapons5 = 1 }
 				set_technology = { night_vision_3 = 1 }
 				set_technology = { night_vision_4 = 1 }
-				set_technology = { land_drone_equipment_3 = 1 }
-				set_technology = { robotics_3 = 1 }
+				set_technology = { land_Drone_equipment3 = 1 }
+				set_technology = { smart_drones = 1 }
 				set_technology = { decryption4 = 1 }
 				set_technology = { encryption4 = 1 }
 				set_technology = { decryption5 = 1 }
 				set_technology = { encryption5 = 1 }
 				set_technology = { computing5 = 1 }
 				set_technology = { nsb_attack_helicopter_tech_4 = 1 }
-				set_technology = { attack_helicopter_4 = 1 }
+				set_technology = { attack_helicopter4 = 1 }
 				set_technology = { air_defense = 1 }
 				set_technology = { SAM0 = 1 }
 				set_technology = { SAM1 = 1 }
@@ -2418,31 +2382,25 @@ bookmarks = {
 			
 			}
 			SWE = {
-				complete_special_project = sp:sp_composite_production
-				complete_special_project = sp:sp_microchip_production
-				set_technology = { microchip_production_1 = 1 }
-				set_technology = { microchip_production_2 = 1 }
-				set_technology = { composite_production_1 = 1 }
-				set_technology = { composite_production_2 = 1 }
 				set_technology = { night_vision_3 = 1 }
-				set_technology = { land_drone_equipment_3 = 1 }
-				set_technology = { land_drone_equipment_4 = 1 }
+				set_technology = { land_Drone_equipment3 = 1 }
+				set_technology = { land_Drone_equipment4 = 1 }
 				set_technology = { Air_Kamikaze1 = 1 }
 				set_technology = { Rec_tank_3 = 1 }
 				set_technology = { IFV_5 = 1 }
 				set_technology = { IFV_6 = 1 }
 				set_technology = { APC_5 = 1 }
-				set_technology = { tech_arty_3 = 1 }
+				set_technology = { artillery_3 = 1 }
 				set_technology = { Arty_upgrade_4 = 1 }
-				set_technology = { transport_helicopter_4 = 1 }
+				set_technology = { transport_helicopter4 = 1 }
 				set_technology = { SP_Anti_Air_3 = 1 }
 				set_technology = { Strike_fighter3 = 1 }
 				set_technology = { awacs_plane2 = 1 }
 				set_technology = { naval_plane4 = 1 }
-				set_technology = { printing_8 = 1 }
-				set_technology = { printing_9 = 1 }
-				set_technology = { printing_10 = 1 }
-				set_technology = { genetics_11 = 1 }
+				set_technology = { self-replicated_3D_printer = 1 }
+				set_technology = { commercial_nanomanufacturing = 1 }
+				set_technology = { modern_3D_printing = 1 }
+				set_technology = { synthetic_life = 1 }
 				set_technology = { electrification_4 = 1 }
 				set_technology = { electrification_5 = 1 }
 				set_technology = { utility_scale_battery_storage2 = 1 }
@@ -2463,25 +2421,25 @@ bookmarks = {
 				set_technology = { Anti_tank_3 = 1 }
 				set_technology = { Anti_Air_3 = 1 }
 				set_technology = { internet5 = 1 }
-				set_technology = { artificial_intelligence_8 = 1 }
-				set_technology = { robotics_4 = 1 }
-				set_technology = { crispr_4 = 1 }
-				set_technology = { special_forces_tech_3 = 1 }
+				set_technology = { modern_deep_learning = 1 }
+				set_technology = { fully_automated_drones = 1 }
+				set_technology = { crispr_treatment = 1 }
+				set_technology = { special_forces3 = 1 }
 
 				set_technology = { AS_Fighter4 = 1 }
-				set_technology = { infantry_weapons_6 = 1 }
+				set_technology = { infantry_weapons5 = 1 }
 				set_technology = { night_vision_3 = 1 }
 				set_technology = { night_vision_4 = 1 }
-				set_technology = { land_drone_equipment_3 = 1 }
+				set_technology = { land_Drone_equipment3 = 1 }
 				set_technology = { support_weapons5 = 1 }
-				set_technology = { robotics_3 = 1 }
+				set_technology = { smart_drones = 1 }
 				set_technology = { decryption4 = 1 }
 				set_technology = { encryption4 = 1 }
 				set_technology = { decryption5 = 1 }
 				set_technology = { encryption5 = 1 }
 				set_technology = { computing5 = 1 }
 				set_technology = { nsb_attack_helicopter_tech_4 = 1 }
-				set_technology = { attack_helicopter_4 = 1 }
+				set_technology = { attack_helicopter4 = 1 }
 				set_technology = { air_defense = 1 }
 				set_technology = { SAM0 = 1 }
 				set_technology = { SAM1 = 1 }
@@ -2504,24 +2462,24 @@ bookmarks = {
 			}
 			FIN = {
 				set_technology = { night_vision_3 = 1 }
-				set_technology = { land_drone_equipment_3 = 1 }
-				set_technology = { land_drone_equipment_4 = 1 }
+				set_technology = { land_Drone_equipment3 = 1 }
+				set_technology = { land_Drone_equipment4 = 1 }
 				set_technology = { Air_Kamikaze1 = 1 }
 				set_technology = { Rec_tank_3 = 1 }
 				set_technology = { IFV_5 = 1 }
 				set_technology = { IFV_6 = 1 }
 				set_technology = { APC_5 = 1 }
-				set_technology = { tech_arty_3 = 1 }
+				set_technology = { artillery_3 = 1 }
 				set_technology = { Arty_upgrade_4 = 1 }
-				set_technology = { transport_helicopter_4 = 1 }
+				set_technology = { transport_helicopter4 = 1 }
 				set_technology = { SP_Anti_Air_3 = 1 }
 				set_technology = { Strike_fighter3 = 1 }
 				set_technology = { awacs_plane2 = 1 }
 				set_technology = { naval_plane4 = 1 }
-				set_technology = { printing_8 = 1 }
-				set_technology = { printing_9 = 1 }
-				set_technology = { printing_10 = 1 }
-				set_technology = { genetics_11 = 1 }
+				set_technology = { self-replicated_3D_printer = 1 }
+				set_technology = { commercial_nanomanufacturing = 1 }
+				set_technology = { modern_3D_printing = 1 }
+				set_technology = { synthetic_life = 1 }
 				set_technology = { electrification_4 = 1 }
 				set_technology = { electrification_5 = 1 }
 				set_technology = { utility_scale_battery_storage2 = 1 }
@@ -2542,25 +2500,25 @@ bookmarks = {
 				set_technology = { Anti_tank_3 = 1 }
 				set_technology = { Anti_Air_3 = 1 }
 				set_technology = { internet5 = 1 }
-				set_technology = { artificial_intelligence_8 = 1 }
-				set_technology = { robotics_4 = 1 }
-				set_technology = { crispr_4 = 1 }
-				set_technology = { special_forces_tech_3 = 1 }
+				set_technology = { modern_deep_learning = 1 }
+				set_technology = { fully_automated_drones = 1 }
+				set_technology = { crispr_treatment = 1 }
+				set_technology = { special_forces3 = 1 }
 
 				set_technology = { AS_Fighter4 = 1 }
-				set_technology = { infantry_weapons_6 = 1 }
+				set_technology = { infantry_weapons5 = 1 }
 				set_technology = { night_vision_3 = 1 }
 				set_technology = { night_vision_4 = 1 }
-				set_technology = { land_drone_equipment_3 = 1 }
+				set_technology = { land_Drone_equipment3 = 1 }
 				set_technology = { support_weapons5 = 1 }
-				set_technology = { robotics_3 = 1 }
+				set_technology = { smart_drones = 1 }
 				set_technology = { decryption4 = 1 }
 				set_technology = { encryption4 = 1 }
 				set_technology = { decryption5 = 1 }
 				set_technology = { encryption5 = 1 }
 				set_technology = { computing5 = 1 }
 				set_technology = { nsb_attack_helicopter_tech_4 = 1 }
-				set_technology = { attack_helicopter_4 = 1 }
+				set_technology = { attack_helicopter4 = 1 }
 				set_technology = { air_defense = 1 }
 				set_technology = { SAM0 = 1 }
 				set_technology = { SAM1 = 1 }
@@ -2582,33 +2540,25 @@ bookmarks = {
 			
 			}
 			ITA = {
-				complete_special_project = sp:sp_composite_production
-				complete_special_project = sp:sp_microchip_production
-				complete_special_project = sp:sp_missile_project
-				complete_special_project = sp:sp_missile_project_non_got
-				set_technology = { microchip_production_1 = 1 }
-				set_technology = { microchip_production_2 = 1 }
-				set_technology = { composite_production_1 = 1 }
-				set_technology = { composite_production_2 = 1 }
 				set_technology = { night_vision_3 = 1 }
-				set_technology = { land_drone_equipment_3 = 1 }
-				set_technology = { land_drone_equipment_4 = 1 }
+				set_technology = { land_Drone_equipment3 = 1 }
+				set_technology = { land_Drone_equipment4 = 1 }
 				set_technology = { Air_Kamikaze1 = 1 }
 				set_technology = { Rec_tank_3 = 1 }
 				set_technology = { IFV_5 = 1 }
 				set_technology = { IFV_6 = 1 }
 				set_technology = { APC_5 = 1 }
-				set_technology = { tech_arty_3 = 1 }
+				set_technology = { artillery_3 = 1 }
 				set_technology = { Arty_upgrade_4 = 1 }
-				set_technology = { transport_helicopter_4 = 1 }
+				set_technology = { transport_helicopter4 = 1 }
 				set_technology = { SP_Anti_Air_3 = 1 }
 				set_technology = { Strike_fighter3 = 1 }
 				set_technology = { awacs_plane2 = 1 }
 				set_technology = { naval_plane4 = 1 }
-				set_technology = { printing_8 = 1 }
-				set_technology = { printing_9 = 1 }
-				set_technology = { printing_10 = 1 }
-				set_technology = { genetics_11 = 1 }
+				set_technology = { self-replicated_3D_printer = 1 }
+				set_technology = { commercial_nanomanufacturing = 1 }
+				set_technology = { modern_3D_printing = 1 }
+				set_technology = { synthetic_life = 1 }
 				set_technology = { electrification_4 = 1 }
 				set_technology = { electrification_5 = 1 }
 				set_technology = { utility_scale_battery_storage2 = 1 }
@@ -2629,24 +2579,24 @@ bookmarks = {
 				set_technology = { Anti_tank_3 = 1 }
 				set_technology = { Anti_Air_3 = 1 }
 				set_technology = { internet5 = 1 }
-				set_technology = { artificial_intelligence_8 = 1 }
-				set_technology = { robotics_4 = 1 }
-				set_technology = { crispr_4 = 1 }
-				set_technology = { special_forces_tech_3 = 1 }
+				set_technology = { modern_deep_learning = 1 }
+				set_technology = { fully_automated_drones = 1 }
+				set_technology = { crispr_treatment = 1 }
+				set_technology = { special_forces3 = 1 }
 
 				set_technology = { AS_Fighter4 = 1 }
-				set_technology = { infantry_weapons_6 = 1 }
+				set_technology = { infantry_weapons5 = 1 }
 				set_technology = { night_vision_3 = 1 }
 				set_technology = { night_vision_4 = 1 }
-				set_technology = { land_drone_equipment_3 = 1 }
-				set_technology = { robotics_3 = 1 }
+				set_technology = { land_Drone_equipment3 = 1 }
+				set_technology = { smart_drones = 1 }
 				set_technology = { decryption4 = 1 }
 				set_technology = { encryption4 = 1 }
 				set_technology = { decryption5 = 1 }
 				set_technology = { encryption5 = 1 }
 				set_technology = { computing5 = 1 }
 				set_technology = { nsb_attack_helicopter_tech_4 = 1 }
-				set_technology = { attack_helicopter_4 = 1 }
+				set_technology = { attack_helicopter4 = 1 }
 				set_technology = { air_defense = 1 }
 				set_technology = { SAM0 = 1 }
 				set_technology = { SAM1 = 1 }
@@ -2669,41 +2619,31 @@ bookmarks = {
 			}
 			JAP = {
 				#complete_special_project = sp:sp_space_program_gdm
-				complete_special_project = sp:sp_composite_production
-				complete_special_project = sp:sp_microchip_production
 				complete_special_project = sp:sp_space_program_gdm
 				complete_special_project = sp:sp_missile_project
 				complete_special_project = sp:sp_missile_project_non_got
-				set_technology = { microchip_production_1 = 1 }
-				set_technology = { microchip_production_2 = 1 }
-				set_technology = { microchip_production_3 = 1 }
-				set_technology = { microchip_production_4 = 1 }
-				set_technology = { composite_production_1 = 1 }
-				set_technology = { composite_production_2 = 1 }
-				set_technology = { composite_production_3 = 1 }
-				set_technology = { composite_production_4 = 1 }
 				set_technology = { night_vision_3 = 1 }
-				set_technology = { cnc_equipment_4 = 1 }
-				set_technology = { land_drone_equipment_3 = 1 }
-				set_technology = { land_drone_equipment_4 = 1 }
+				set_technology = { command_control_equipment3 = 1 }
+				set_technology = { land_Drone_equipment3 = 1 }
+				set_technology = { land_Drone_equipment4 = 1 }
 				set_technology = { Air_Kamikaze1 = 1 }
 				set_technology = { mbt_tech_3 = 1 }	
 				set_technology = { Rec_tank_3 = 1 }
 				set_technology = { IFV_5 = 1 }
 				set_technology = { IFV_6 = 1 }
 				set_technology = { APC_5 = 1 }
-				set_technology = { tech_arty_3 = 1 }
+				set_technology = { artillery_3 = 1 }
 				set_technology = { Arty_upgrade_4 = 1 }
-				set_technology = { transport_helicopter_4 = 1 }
+				set_technology = { transport_helicopter4 = 1 }
 				set_technology = { SP_Anti_Air_3 = 1 }
 				set_technology = { Strike_fighter3 = 1 }
 				set_technology = { Air_UAV1 = 1 }
 				set_technology = { awacs_plane2 = 1 }
 				set_technology = { naval_plane4 = 1 }
-				set_technology = { printing_8 = 1 }
-				set_technology = { printing_9 = 1 }
-				set_technology = { printing_10 = 1 }
-				set_technology = { genetics_11 = 1 }
+				set_technology = { self-replicated_3D_printer = 1 }
+				set_technology = { commercial_nanomanufacturing = 1 }
+				set_technology = { modern_3D_printing = 1 }
+				set_technology = { synthetic_life = 1 }
 				set_technology = { electrification_4 = 1 }
 				set_technology = { electrification_5 = 1 }
 				set_technology = { utility_scale_battery_storage2 = 1 }
@@ -2725,25 +2665,25 @@ bookmarks = {
 				set_technology = { Anti_Air_3 = 1 }
 				set_technology = { lifi = 1 }
 				set_technology = { internet5 = 1 }
-				set_technology = { artificial_intelligence_8 = 1 }
-				set_technology = { robotics_4 = 1 }
-				set_technology = { crispr_4 = 1 }
-				set_technology = { special_forces_tech_3 = 1 }
+				set_technology = { modern_deep_learning = 1 }
+				set_technology = { fully_automated_drones = 1 }
+				set_technology = { crispr_treatment = 1 }
+				set_technology = { special_forces3 = 1 }
 
 				set_technology = { AS_Fighter4 = 1 }
-				set_technology = { infantry_weapons_6 = 1 }
+				set_technology = { infantry_weapons5 = 1 }
 				set_technology = { night_vision_3 = 1 }
 				set_technology = { night_vision_4 = 1 }
 				set_technology = { util_vehicle_5 = 1 }
-				set_technology = { land_drone_equipment_3 = 1 }
-				set_technology = { robotics_3 = 1 }
+				set_technology = { land_Drone_equipment3 = 1 }
+				set_technology = { smart_drones = 1 }
 				set_technology = { decryption4 = 1 }
 				set_technology = { encryption4 = 1 }
 				set_technology = { decryption5 = 1 }
 				set_technology = { encryption5 = 1 }
 				set_technology = { computing5 = 1 }
 				set_technology = { nsb_attack_helicopter_tech_4 = 1 }
-				set_technology = { attack_helicopter_4 = 1 }
+				set_technology = { attack_helicopter4 = 1 }
 				set_technology = { air_defense = 1 }
 				set_technology = { SAM0 = 1 }
 				set_technology = { SAM1 = 1 }
@@ -2776,23 +2716,6 @@ bookmarks = {
 
 			
 			}
-			TAI = {
-				complete_special_project = sp:sp_composite_production
-				complete_special_project = sp:sp_microchip_production
-				complete_special_project = sp:sp_space_program_gdm
-				complete_special_project = sp:sp_missile_project
-				complete_special_project = sp:sp_missile_project_non_got
-				set_technology = { microchip_production_1 = 1 }
-				set_technology = { microchip_production_2 = 1 }
-				set_technology = { microchip_production_3 = 1 }
-				set_technology = { microchip_production_4 = 1 }
-				set_technology = { microchip_production_5 = 1 }
-				set_technology = { composite_production_1 = 1 }
-				set_technology = { ICBM = 1 }
-				set_technology = { IRBM1 = 1 }
-				set_technology = { IRBM2 = 1 }
-				set_technology = { Air_UAV1 = 1 }
-			}
 			PER = {
 				complete_special_project = sp:sp_missile_project
 				complete_special_project = sp:sp_missile_project_non_got
@@ -2802,23 +2725,13 @@ bookmarks = {
 				set_technology = { Air_UAV1 = 1 }
 			}
 			CHI = {
-				complete_special_project = sp:sp_composite_production
-				complete_special_project = sp:sp_microchip_production
 				complete_special_project = sp:sp_space_program_gdm
 				complete_special_project = sp:sp_missile_project
 				complete_special_project = sp:sp_missile_project_non_got
-				set_technology = { microchip_production_1 = 1 }
-				set_technology = { microchip_production_2 = 1 }
-				set_technology = { microchip_production_3 = 1 }
-				set_technology = { microchip_production_4 = 1 }
-				set_technology = { composite_production_1 = 1 }
-				set_technology = { composite_production_2 = 1 }
-				set_technology = { composite_production_3 = 1 }
-				set_technology = { composite_production_4 = 1 }
 				set_technology = { night_vision_3 = 1 }
-				set_technology = { cnc_equipment_4 = 1 }
-				set_technology = { cnc_equipment_5 = 1 }
-				set_technology = { land_drone_equipment_3 = 1 }
+				set_technology = { command_control_equipment3 = 1 }
+				set_technology = { command_control_equipment4 = 1 }
+				set_technology = { land_Drone_equipment3 = 1 }
 				set_technology = { util_vehicle_5 = 1 }
 				set_technology = { mbt_tech_3 = 1 }	
 				set_technology = { MBT_5 = 1 }
@@ -2827,9 +2740,9 @@ bookmarks = {
 				set_technology = { IFV_6 = 1 }
 				set_technology = { APC_5 = 1 }
 				set_technology = { APC_6 = 1 }
-				set_technology = { tech_arty_3 = 1 }
+				set_technology = { artillery_3 = 1 }
 				set_technology = { Arty_upgrade_4 = 1 }
-				set_technology = { transport_helicopter_4 = 1 }
+				set_technology = { transport_helicopter4 = 1 }
 				set_technology = { SP_Anti_Air_3 = 1 }
 				set_technology = { L_Strike_fighter3 = 1 }
 				set_technology = { Strike_fighter3 = 1 }
@@ -2838,10 +2751,10 @@ bookmarks = {
 				set_technology = { Air_UAV2 = 1 }
 				set_technology = { awacs_plane2 = 1 }
 				set_technology = { naval_plane4 = 1 }
-				set_technology = { printing_8 = 1 }
-				set_technology = { printing_9 = 1 }
-				set_technology = { printing_10 = 1 }
-				set_technology = { genetics_11 = 1 }
+				set_technology = { self-replicated_3D_printer = 1 }
+				set_technology = { commercial_nanomanufacturing = 1 }
+				set_technology = { modern_3D_printing = 1 }
+				set_technology = { synthetic_life = 1 }
 				set_technology = { electrification_4 = 1 }
 				set_technology = { electrification_5 = 1 }
 				set_technology = { utility_scale_battery_storage2 = 1 }
@@ -2862,30 +2775,30 @@ bookmarks = {
 				set_technology = { Anti_tank_3 = 1 }
 				set_technology = { Anti_Air_3 = 1 }
 				set_technology = { lifi = 1 }
-				set_technology = { artificial_intelligence_8 = 1 }
-				set_technology = { robotics_4 = 1 }
-				set_technology = { crispr_4 = 1 }
-				set_technology = { special_forces_tech_3 = 1 }
-				set_technology = { special_forces_tech_4 = 1 }
+				set_technology = { modern_deep_learning = 1 }
+				set_technology = { fully_automated_drones = 1 }
+				set_technology = { crispr_treatment = 1 }
+				set_technology = { special_forces3 = 1 }
+				set_technology = { special_forces4 = 1 }
 				set_technology = { internet5 = 1 }
-				set_technology = { special_forces_tech_3 = 1 }
-				set_technology = { special_forces_tech_4 = 1 }
+				set_technology = { special_forces3 = 1 }
+				set_technology = { special_forces4 = 1 }
 				set_technology = { internet5 = 1 }
 
 				set_technology = { AS_Fighter4 = 1 }
-				set_technology = { infantry_weapons_6 = 1 }
+				set_technology = { infantry_weapons5 = 1 }
 				set_technology = { night_vision_3 = 1 }
 				set_technology = { night_vision_4 = 1 }
-				set_technology = { land_drone_equipment_3 = 1 }
+				set_technology = { land_Drone_equipment3 = 1 }
 				set_technology = { support_weapons5 = 1 }
-				set_technology = { robotics_3 = 1 }
+				set_technology = { smart_drones = 1 }
 				set_technology = { decryption4 = 1 }
 				set_technology = { encryption4 = 1 }
 				set_technology = { decryption5 = 1 }
 				set_technology = { encryption5 = 1 }
 				set_technology = { computing5 = 1 }
 				set_technology = { nsb_attack_helicopter_tech_4 = 1 }
-				set_technology = { attack_helicopter_4 = 1 }
+				set_technology = { attack_helicopter4 = 1 }
 				set_technology = { Air_Kamikaze1 = 1 }
 				set_technology = { air_defense = 1 }
 				set_technology = { SAM0 = 1 }
@@ -2954,7 +2867,7 @@ bookmarks = {
 				set_technology = { tech_fire_control_2 = 1 }
 				set_technology = { tech_combat_radar_3 = 1 }
 				set_technology = { tech_combat_sonar_3 = 1 }
-				set_technology = { tech_rail_guns_1 = 1 }
+				set_technology = { tech_rail_guns = 1 }
 				#set_technology = { tech_rail_guns_1 = 1 }
 				set_technology = { tech_point_defense_system_2 = 1 }
 				set_technology = { tech_point_defense_system_3 = 1 }
@@ -2967,8 +2880,8 @@ bookmarks = {
 				#set_technology = { tech_vls_surface_3 = 1 }
 				set_technology = { tech_vls_aa_3 = 1 }
 				set_technology = { tech_torpedoes_3 = 1 }
-				set_technology = { tech_landing_craft_5 = 1 }
-				set_technology = { tech_landing_craft_6 = 1 }
+				set_technology = { tech_specialized_protective_equipment = 1 }
+				set_technology = { tech_advanced_landing_craft = 1 }
 			}
 		}
 	}

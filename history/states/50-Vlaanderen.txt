@@ -26,8 +26,8 @@ state = {
 			arms_factory = 1
 			offices = 2
 			dockyard = 1
-			renewable_energy_infra = 2
-			industrial_complex = 2
+			synthetic_refinery = 3
+			industrial_complex = 3
 			air_base = 3
 			nuclear_reactor = 1
 			6560 = {
@@ -38,6 +38,7 @@ state = {
 				naval_facility = 1
 			}
 		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
 		set_variable = { state_renewable_capacity_factor_modifier_var = 0.35 }		
 		add_core_of = BEL
 		2025.1.1 = {
@@ -56,4 +57,3 @@ state = {
 	buildings_max_level_factor = 1.000
 	state_category = state_06
 }
-

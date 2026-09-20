@@ -3,7 +3,7 @@ state = {
 	name = "STATE_121"
 
 	resources = {
-		steel = 5
+		steel = 6
 	}
 
 	history = {
@@ -15,7 +15,7 @@ state = {
 			3713 1
 		}
 		buildings = {
-			infrastructure = 3
+			infrastructure = 2
 			internet_station = 1
 			fuel_silo = 1
 			air_base = 4

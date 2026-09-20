@@ -16,7 +16,7 @@ capital = 337
 			destroyer_hull_1 = 1
 			destroyer_hull_2 = 1
 			tech_naval_systems_engineering = 1
-			tech_landing_craft_1 = 1
+			tech_landing_craft = 1
 		}
 
 	if = { limit = { has_dlc = "No Step Back" }
@@ -25,7 +25,7 @@ capital = 337
 
 		set_technology = {
 			helo_ops_tech = 1
-			nsb_transport_helicopter_1 = 1
+			nsb_transport_helicopter1 = 1
 			mbt_tech_ops = 1
 
 			nsb_artillery_0 = 1
@@ -41,7 +41,7 @@ capital = 337
 				APC_1 = 1
 				MBT_1 = 1
 				IFV_1 = 1
-				tech_arty_0 = 1
+				artillery_0 = 1
 				SP_arty_0 = 1
 				Anti_Air_0 = 1
 				SP_Anti_Air_0 = 1
@@ -154,18 +154,18 @@ capital = 337
 		night_vision_1 = 1
 
 		# Igrigi
-		util_vehicle_1 = 1
+		util_vehicle_0 = 1
 
 		#For templates
-		infantry_weapons_1 = 1
-		infantry_weapons_2 = 1
+		infantry_weapons = 1
+		infantry_weapons1 = 1
 		combat_eng_equipment = 1
-		cnc_equipment_1 = 1
+		command_control_equipment = 1
 		Anti_tank_0 = 1
 		Heavy_Anti_tank_0 = 1
 
-		camouflage_1 = 1
-		camouflage_2 = 1
+		camouflage = 1
+		camouflage2 = 1
 
 		basic_computing = 1
 		integrated_circuit = 1
@@ -177,8 +177,8 @@ capital = 337
 		internet1 = 1 	#1G
 		fuel_silos = 1
 
-		nanofibers_1 = 1
-		printing_1 = 1
+		industrial_electrospun_polymeric_nanofibers = 1
+		stereolitography = 1
 		fuel_refining = 1
 		construction1 = 1
 	}
@@ -261,4 +261,3 @@ capital = 337
 	}
 	set_variable = { overall_productivity = 640 }
 }
-

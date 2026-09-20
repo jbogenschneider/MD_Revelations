@@ -3,35 +3,24 @@ state = {
 	name = "STATE_1085"
 
 	history = {
-		owner = SOV
-		controller = SOV
-		add_core_of = UKR
-		UKR = {
-			set_province_controller = 3755
+		owner = UKR
+		victory_points = {
+			3755 2
 		}
-
-		victory_points = { 3755 2 }
-
 		buildings = {
 			infrastructure = 2
-			internet_station = 1
-			agriculture_district = 2
 		}
-
-		set_variable = { hydroelectric_energy_production_var = 0.088 }
-		set_variable = { hydroelectric_energy_storage_var = 0 }
-		add_dynamic_modifier = { modifier = hydroelectric_infrastructure_in_state }
-		set_variable = { productivity_state_var = 510 }
-
-		add_province_modifier = {
-			static_modifiers = { terrain_UKR_kherson }
-			province = { id = 3755 }
+		2025.1.1 = {
+			owner = SOV
+			add_core_of = NOV
+			add_manpower = -204471
 		}
+		add_core_of = SOV
 	}
 
 	provinces = {
-		568 588 721 737 3755 6704 9712 14435
+		568 588 721 737 3755 9712 14435
 	}
-	manpower = 1139371
+	manpower = 797560
 	state_category = state_02
 }

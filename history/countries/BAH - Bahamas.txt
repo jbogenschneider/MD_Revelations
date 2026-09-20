@@ -51,12 +51,12 @@ capital = 856
 		infantry_mass_assault = 1
 		night_vision_1 = 1
 		night_vision_2 = 1
-		special_forces_tech_1 = 1
+		special_forces = 1
 		support_weapons = 1
 		#For templates
-		infantry_weapons_1 = 1
+		infantry_weapons = 1
 
-		cnc_equipment_1 = 1
+		command_control_equipment = 1
 		Anti_tank_0 = 1
 
 		basic_computing = 1
@@ -68,8 +68,8 @@ capital = 856
 		internet1 = 1 	#1G
 		fuel_silos = 1
 
-		nanofibers_1 = 1
-		printing_1 = 1
+		industrial_electrospun_polymeric_nanofibers = 1
+		stereolitography = 1
 		fuel_refining = 1
 		construction1 = 1
 	}
@@ -187,4 +187,3 @@ capital = 856
 	recruit_character = BAH_tellis_bethel
 	recruit_character = BAH_raymond_king
 }
-

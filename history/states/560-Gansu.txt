@@ -52,10 +52,10 @@ state = {
 			offices = 1
 			arms_factory = 2
 			industrial_complex = 2
-			renewable_energy_infra = 4
 			fuel_silo = 1
 			air_base = 4
 		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
 		set_variable = { state_renewable_capacity_factor_modifier_var = 0.30 }
 		add_core_of = CHI
 		add_core_of = TAI

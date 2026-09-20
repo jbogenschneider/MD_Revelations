@@ -1,0 +1,14 @@
+add_namespace = rev_eu_sync
+
+country_event = {
+	id = rev_eu_sync.1
+	title = rev_eu_sync.1.t
+	desc = rev_eu_sync.1.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		rev_rebuild_eu_member_array = yes
+	}
+}

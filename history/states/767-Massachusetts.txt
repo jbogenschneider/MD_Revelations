@@ -32,8 +32,6 @@ state = {
 				internet_station = 5
 				dockyard = 2
 				industrial_complex = 3
-				microchip_plant = 1
-				composite_plant = 1
 			}
 		}
 	}

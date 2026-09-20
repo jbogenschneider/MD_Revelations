@@ -24,6 +24,7 @@ state = {
 				naval_base = 5
 			}
 		}
+		add_dynamic_modifier = { modifier = renewable_capacity_factor_dyn_mod }
 		set_variable = { state_renewable_capacity_factor_modifier_var = 0.35 }
 		add_core_of = GER
 		2025.1.1 = {
@@ -32,7 +33,7 @@ state = {
 				internet_station = 4
 				infrastructure = 5
 				offices = 4
-				renewable_energy_infra = 5
+				synthetic_refinery = 5
 			}
 		}
 	}

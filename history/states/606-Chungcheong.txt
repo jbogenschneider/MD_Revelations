@@ -34,7 +34,6 @@ state = {
 			offices = 4
 			fuel_silo = 2
 			agriculture_district = 1
-			microchip_plant = 5
 			7204 = {
 				nuclear_facility = 1
 			}

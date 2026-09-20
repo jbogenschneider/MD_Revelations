@@ -1,0 +1,33 @@
+# Block new volunteer deployments for the USA, Germany, UK, France, and Italy.
+# Applies to both AI and player countries. Existing volunteers are not recalled.
+on_actions = {
+	on_startup = {
+		effect = {
+			USA = { set_rule = { can_send_volunteers = no } }
+			GER = { set_rule = { can_send_volunteers = no } }
+			ENG = { set_rule = { can_send_volunteers = no } }
+			FRA = { set_rule = { can_send_volunteers = no } }
+			ITA = { set_rule = { can_send_volunteers = no } }
+		}
+	}
+
+	# Also apply to existing saves and restore the ban if another effect lifts it.
+	# on_daily runs in each country's scope.
+	on_daily = {
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						tag = USA
+						tag = GER
+						tag = ENG
+						tag = FRA
+						tag = ITA
+					}
+					has_rule = can_send_volunteers
+				}
+				set_rule = { can_send_volunteers = no }
+			}
+		}
+	}
+}

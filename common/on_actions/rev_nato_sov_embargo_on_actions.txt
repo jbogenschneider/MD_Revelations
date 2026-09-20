@@ -1,0 +1,37 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			if = {
+				limit = {
+					SOV = {
+						exists = yes
+						has_war = yes
+					}
+				}
+				rev_apply_nato_sov_embargo = yes
+			}
+			else = {
+				rev_remove_nato_sov_embargo = yes
+			}
+		}
+	}
+
+	on_weekly = {
+		effect = {
+			if = {
+				limit = {
+					tag = SOV
+					has_war = yes
+				}
+				rev_apply_nato_sov_embargo = yes
+			}
+			if = {
+				limit = {
+					tag = SOV
+					has_war = no
+				}
+				rev_remove_nato_sov_embargo = yes
+			}
+		}
+	}
+}

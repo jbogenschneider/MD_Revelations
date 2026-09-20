@@ -1678,6 +1678,146 @@ news_event = {
 }
 
 country_event = {
+	id = rev_usa_cw.54
+	title = rev_usa_cw.54.t
+	desc = rev_usa_cw.54.d
+	picture = GFX_report_event_usa_politics
+	is_triggered_only = yes
+
+	trigger = {
+		tag = SLO
+		has_idea = NATO_member
+		has_war_with = USA
+	}
+
+	option = {
+		name = rev_usa_cw.54.a
+		ai_chance = { factor = 100 }
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.54.a (Slovakia leaves NATO war)"
+		set_country_flag = rev_nato_anti_usa_opt_out_resolved_slo
+		rev_nato_anti_usa_opt_out = yes
+	}
+	option = {
+		name = rev_usa_cw.54.b
+		ai_chance = { factor = 0 }
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.54.b (Slovakia remains in NATO war)"
+		set_country_flag = rev_nato_anti_usa_opt_out_resolved_slo
+	}
+}
+
+country_event = {
+	id = rev_usa_cw.55
+	title = rev_usa_cw.54.t
+	desc = rev_usa_cw.54.d
+	picture = GFX_report_event_usa_politics
+	is_triggered_only = yes
+
+	trigger = {
+		tag = HUN
+		has_idea = NATO_member
+		has_war_with = USA
+	}
+
+	immediate = {
+		set_country_flag = rev_nato_anti_usa_opt_out_resolved_hun
+	}
+
+	option = {
+		name = rev_usa_cw.54.a
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.55.a (Hungary leaves NATO war)"
+		rev_nato_anti_usa_opt_out = yes
+	}
+	option = {
+		name = rev_usa_cw.54.b
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.55.b (Hungary remains in NATO war)"
+	}
+}
+
+country_event = {
+	id = rev_usa_cw.56
+	title = rev_usa_cw.54.t
+	desc = rev_usa_cw.54.d
+	picture = GFX_report_event_usa_politics
+	is_triggered_only = yes
+
+	trigger = {
+		tag = TUR
+		has_idea = NATO_member
+		has_war_with = USA
+	}
+
+	immediate = {
+		set_country_flag = rev_nato_anti_usa_opt_out_resolved_tur
+	}
+
+	option = {
+		name = rev_usa_cw.54.a
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.56.a (Turkey leaves NATO war)"
+		rev_nato_anti_usa_opt_out = yes
+	}
+	option = {
+		name = rev_usa_cw.54.b
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.56.b (Turkey remains in NATO war)"
+	}
+}
+
+country_event = {
+	id = rev_usa_cw.57
+	title = rev_usa_cw.54.t
+	desc = rev_usa_cw.54.d
+	picture = GFX_report_event_usa_politics
+	is_triggered_only = yes
+
+	trigger = {
+		tag = BUL
+		has_idea = NATO_member
+		has_war_with = USA
+	}
+
+	option = {
+		name = rev_usa_cw.54.a
+		ai_chance = { factor = 100 }
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.57.a (Bulgaria leaves NATO war)"
+		set_country_flag = rev_nato_anti_usa_opt_out_resolved_bul
+		rev_nato_anti_usa_opt_out = yes
+	}
+	option = {
+		name = rev_usa_cw.54.b
+		ai_chance = { factor = 0 }
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.57.b (Bulgaria remains in NATO war)"
+		set_country_flag = rev_nato_anti_usa_opt_out_resolved_bul
+	}
+}
+
+country_event = {
+	id = rev_usa_cw.58
+	title = rev_usa_cw.54.t
+	desc = rev_usa_cw.54.d
+	picture = GFX_report_event_usa_politics
+	is_triggered_only = yes
+
+	trigger = {
+		tag = ROM
+		has_idea = NATO_member
+		has_war_with = USA
+	}
+
+	option = {
+		name = rev_usa_cw.54.a
+		ai_chance = { factor = 100 }
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.58.a (Romania leaves NATO war)"
+		set_country_flag = rev_nato_anti_usa_opt_out_resolved_rom
+		rev_nato_anti_usa_opt_out = yes
+	}
+	option = {
+		name = rev_usa_cw.54.b
+		ai_chance = { factor = 0 }
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.58.b (Romania remains in NATO war)"
+		set_country_flag = rev_nato_anti_usa_opt_out_resolved_rom
+	}
+}
+
+country_event = {
 	id = rev_usa_cw.44
 	title = rev_usa_cw.44.t
 	desc = rev_usa_cw.44.d

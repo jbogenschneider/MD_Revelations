@@ -21,7 +21,7 @@ state = {
 		victory_points = { 4627 1 } #Welch
 
 		buildings = {
-			infrastructure = 3
+			infrastructure = 2
 			internet_station = 2
 			industrial_complex = 2
 			air_base = 1

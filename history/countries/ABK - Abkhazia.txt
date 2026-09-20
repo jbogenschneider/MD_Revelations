@@ -30,7 +30,7 @@ capital = 706
 				Early_APC = 1
 				APC_1 = 1
 				IFV_1 = 1
-				tech_arty_0 = 1
+				artillery_0 = 1
 				SP_R_arty_0 = 1
 				SP_arty_0 = 1
 				SP_Anti_Air_0 = 1
@@ -59,11 +59,11 @@ capital = 706
 		support_weapons = 1
 
 		#For templates
-		infantry_weapons_1 = 1
-		cnc_equipment_1 = 1
+		infantry_weapons = 1
+		command_control_equipment = 1
 		Anti_tank_0 = 1
 		Heavy_Anti_tank_0 = 1
-		util_vehicle_1 = 1
+		util_vehicle_0 = 1
 
 		##Industrial/Engineering Techs
 		basic_computing = 1
@@ -75,8 +75,8 @@ capital = 706
 		radar = 1
 		internet1 = 1 	#1G
 
-		nanofibers_1 = 1
-		printing_1 = 1
+		industrial_electrospun_polymeric_nanofibers = 1
+		stereolitography = 1
 		fuel_refining = 1
 		construction1 = 1
 	}
@@ -200,4 +200,3 @@ capital = 706
 	recruit_character = ABK_aleksander_voinsky
 	recruit_character = ABK_adgur_gumba
 }
-

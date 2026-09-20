@@ -1,0 +1,353 @@
+# Author(s): LordBogdanoff
+on_actions = {
+	on_weekly = {
+		effect = {
+			#ADDED SUBJECT IDEA
+			if = {
+				limit = {
+					OR = {
+						has_autonomy_state = autonomy_state_rf
+						has_autonomy_state = autonomy_republic_rf
+						has_autonomy_state = autonomy_kray_rf
+						has_autonomy_state = autonomy_oblast_rf
+						has_autonomy_state = autonomy_okrug_rf
+					}
+					NOT = { has_idea = CHE_republic_rf }
+				}
+				add_ideas = CHE_republic_rf
+			}
+			#ADDED COUNTRY FLAG FOR PARTIES
+			if = {
+				limit = {
+					OR = {
+						has_autonomy_state = autonomy_state_rf
+						has_autonomy_state = autonomy_republic_rf
+						has_autonomy_state = autonomy_kray_rf
+						has_autonomy_state = autonomy_oblast_rf
+						has_autonomy_state = autonomy_okrug_rf
+					}
+					SOV = { has_country_flag = SOV_united_russia }
+					NOT = { has_country_flag = SUB_united_russia }
+				}
+				set_country_flag = SUB_united_russia
+			}
+			#SUBJECTS AUTORITY
+			if = {
+				limit = {
+					OR = {
+						has_autonomy_state = autonomy_state_rf
+						has_autonomy_state = autonomy_republic_rf
+						has_autonomy_state = autonomy_kray_rf
+						has_autonomy_state = autonomy_oblast_rf
+						has_autonomy_state = autonomy_okrug_rf
+					}
+				}
+				set_temp_variable = { modify_subjectavtoritet = 2 }
+				modify_subjectavtoritet_support = yes
+			}
+		}
+	}
+	on_weekly_CHE = {
+		effect = {
+			#DELETED ICHKERIA TEMPLATES AND GENERALS FROM CHE
+			if = {
+				limit = {
+					original_tag = CHE
+					NOT = { CHE = { has_country_flag = delete_ichkeria } }
+					CHE = {
+						OR = {
+							has_autonomy_state = autonomy_state_rf
+							has_autonomy_state = autonomy_republic_rf
+							has_autonomy_state = autonomy_kray_rf
+							has_autonomy_state = autonomy_oblast_rf
+							has_autonomy_state = autonomy_okrug_rf
+						}
+					}
+				}
+				set_country_flag = delete_ichkeria
+				delete_unit_template_and_units = {
+					division_template = "Brigada Natsionalnoi Gvardiy"
+					disband = yes
+				}
+				delete_unit_template_and_units = {
+					division_template = "Checheneskie Modzhakhedi"
+					disband = yes
+				}
+				retire_character = CHE_aslan_maskhadov
+				retire_character = CHE_abdul_halim_sadulayev
+				retire_character = CHE_ruslan_gelayev
+				retire_character = CHE_dokka_umarov
+				retire_character = CHE_shamil_basayev
+				retire_character = CHE_ibn_al_khattab
+				retire_character = CHE_akhmed_zakayev
+				retire_character = CHE_air_chief
+			}
+		}
+	}
+	#TAX CHECHNYA
+	on_monthly_CHE = {
+		effect = {
+			SOV_gay_is_kal = yes
+		}
+	}
+	#TAX KABARDINO
+	on_monthly_KBK = {
+		effect = {
+			SOV_gay_is_kal = yes
+		}
+	}
+	#TAX KARACHAEVO
+	on_monthly_KCC = {
+		effect = {
+			SOV_gay_is_kal = yes
+		}
+	}
+	#TAX ADYGEA
+	on_monthly_ADY = {
+		effect = {
+			SOV_gay_is_kal = yes
+		}
+	}
+	#TAX INGUSHETIA
+	on_monthly_ING = {
+		effect = {
+			SOV_gay_is_kal = yes
+		}
+	}
+	#TAX DAGESTAN
+	on_monthly_DAG = {
+		effect = {
+		SOV_gay_is_kal = yes
+		}
+	}
+	#TAX TUVA
+	on_monthly_TUV = {
+		effect = {
+		SOV_gay_is_kal = yes
+		}
+	}
+	#TAX yakutia
+	on_monthly_YAK = {
+		effect = {
+		SOV_gay_is_kal = yes
+		}
+	}
+	#TAX BURYATIA
+	on_monthly_BRY = {
+		effect = {
+		SOV_gay_is_kal = yes
+		}
+	}
+	#TAX KOMI
+	on_monthly_KOM = {
+		effect = {
+		SOV_gay_is_kal = yes
+		}
+	}
+	#TAX ALTAI
+	on_monthly_ALT = {
+		effect = {
+		SOV_gay_is_kal = yes
+		}
+	}
+	#TAX KHAKASSIA
+	on_monthly_KHS = {
+		effect = {
+		SOV_gay_is_kal = yes
+		}
+	}
+	#TAX YUGRA
+	on_monthly_KHM = {
+		effect = {
+		SOV_gay_is_kal = yes
+		}
+	}
+	#TAX YAMAL
+	on_monthly_YAM = {
+		effect = {
+		SOV_gay_is_kal = yes
+		}
+	}
+	#TAX NENETS
+	on_monthly_NEE = {
+		effect = {
+		SOV_gay_is_kal = yes
+		}
+	}
+	#TAX CHUKOTKA
+	on_monthly_CKK = {
+		effect = {
+		SOV_gay_is_kal = yes
+		}
+	}
+	#TAX URAL
+	on_monthly_URA = {
+		effect = {
+		SOV_gay_is_kal = yes
+		}
+	}
+	#TAX KUBAN
+	on_monthly_KUB = {
+		effect = {
+		SOV_gay_is_kal = yes
+		}
+	}
+	#TAX TATARSTAN
+	on_monthly_TAT = {
+		effect = {
+		SOV_gay_is_kal = yes
+		}
+	}
+	#TAX BASHKORTOSTAN
+	on_monthly_BSH = {
+		effect = {
+		SOV_gay_is_kal = yes
+		}
+	}
+	#TAX CHUVASHIA
+	on_monthly_CHU = {
+		effect = {
+		SOV_gay_is_kal = yes
+		}
+	}
+	#TAX MARI EL
+	on_monthly_MEL = {
+		effect = {
+		SOV_gay_is_kal = yes
+		}
+	}
+	#TAX MORDOVIA
+	on_monthly_MOV = {
+		effect = {
+		SOV_gay_is_kal = yes
+		}
+	}
+	#TAX UDMURTIA
+	on_monthly_UDM = {
+		effect = {
+		SOV_gay_is_kal = yes
+	}
+	}
+	#TAX KARELIA
+	on_monthly_KAE = {
+		effect = {
+		SOV_gay_is_kal = yes
+		}
+	}
+	#TAX KALMIKYA
+	on_monthly_KLM = {
+		effect = {
+		SOV_gay_is_kal = yes
+		}
+	}
+	#TAX TRANSNISTRIA
+	on_monthly_PMR = {
+		effect = {
+		SOV_gay_is_kal = yes
+		}
+	}
+	#TAX GEORGIA
+	on_monthly_GEO = {
+		effect = {
+			SOV_gay_is_kal = yes
+		}
+	}
+	#TAX BELARUS
+	on_monthly_BLR = {
+		effect = {
+			SOV_gay_is_kal = yes
+		}
+	}
+	#TAX UKRAINE
+	on_monthly_UKR = {
+		effect = {
+			SOV_gay_is_kal = yes
+		}
+	}
+	#TAX AZERBAIJAN
+	on_monthly_AZE = {
+		effect = {
+			SOV_gay_is_kal = yes
+		}
+	}
+	#TAX ARMENIA
+	on_monthly_ARM = {
+		effect = {
+			SOV_gay_is_kal = yes
+		}
+	}
+	#TAX MOLDOVA
+	on_monthly_MLV = {
+		effect = {
+			SOV_gay_is_kal = yes
+		}
+	}
+	#TAX KAZAKHSTAN
+	on_monthly_KAZ = {
+		effect = {
+			SOV_gay_is_kal = yes
+		}
+	}
+	#TAX UZBEK
+	on_monthly_UZB = {
+		effect = {
+			SOV_gay_is_kal = yes
+		}
+	}
+	#TAX TAJIKISTAN
+	on_monthly_TAJ = {
+		effect = {
+			SOV_gay_is_kal = yes
+		}
+	}
+	#TAX KYRGYSTAN
+	on_monthly_KYR = {
+		effect = {
+			SOV_gay_is_kal = yes
+		}
+	}
+	#TAX TURKMENISTAN
+	on_monthly_TRK = {
+		effect = {
+			SOV_gay_is_kal = yes
+		}
+	}
+	#TAX ESTONIA
+	on_monthly_EST = {
+		effect = {
+			SOV_gay_is_kal = yes
+		}
+	}
+	#TAX LATVIA
+	on_monthly_LAT = {
+		effect = {
+			SOV_gay_is_kal = yes
+		}
+	}
+	#TAX LITHINIA
+	on_monthly_LIT = {
+		effect = {
+			SOV_gay_is_kal = yes
+		}
+	}
+	#TAX POLAND
+	on_monthly_POL = {
+		effect = {
+			SOV_gay_is_kal = yes
+		}
+	}
+	on_monthly = {
+		effect = {
+		#SEPARATIST UPDATE
+		if = {
+			limit = {
+				NOT = {
+					SOV = { is_ai = yes }
+				}
+			}
+			SUB_update_separatism_stability = yes
+			SUB_update_separatism_rebellion = yes
+		}
+		}
+	}
+}

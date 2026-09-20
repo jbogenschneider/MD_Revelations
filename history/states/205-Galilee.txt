@@ -26,15 +26,14 @@ state = {
 				air_facility = 1
 			}
 		}
-		set_variable = { productivity_state_var = 935 }
-
-		add_province_modifier = {
-			static_modifiers = { terrain_haifa }
-			province = { id = 1065 }
-		}
-		add_province_modifier = {
-			static_modifiers = { terrain_afula }
-			province = { id = 12839 }
+		2025.1.1 = {
+			add_claim_by = HAM
+			add_manpower = 691248
+			buildings = {
+				internet_station = 4
+				radar_station = 3
+				anti_air_building = 7
+			}
 		}
 	}
 

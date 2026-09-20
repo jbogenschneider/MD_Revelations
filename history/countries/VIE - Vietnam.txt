@@ -122,16 +122,16 @@ capital = 522
 
 		infantry_mass_assault = 1
 
-		infantry_weapons_1 = 1
-		infantry_weapons_2 = 1
-		infantry_weapons_3 = 1
+		infantry_weapons = 1
+		infantry_weapons1 = 1
+		infantry_weapons2 = 1
 
 		combat_eng_equipment = 1
-		cnc_equipment_1 = 1
-		land_drone_equipment_type = 1
-		util_vehicle_1 = 1
+		command_control_equipment = 1
+		land_Drone_equipment = 1
+		util_vehicle_0 = 1
 
-		camouflage_1 = 1
+		camouflage = 1
 
 		night_vision_1 = 1
 
@@ -142,11 +142,11 @@ capital = 522
 		SP_Anti_Air_0 = 1
 
 
-		transport_helicopter_1 = 1
-		nsb_transport_helicopter_1 = 1
+		transport_helicopter1 = 1
+		nsb_transport_helicopter1 = 1
 
 
-		body_armor_1 = 1
+		body_armor_1980 = 1
 
 		basic_computing = 1
 		integrated_circuit = 1
@@ -160,8 +160,8 @@ capital = 522
 		gprs = 1
 		fuel_silos = 1
 
-		nanofibers_1 = 1
-		printing_1 = 1
+		industrial_electrospun_polymeric_nanofibers = 1
+		stereolitography = 1
 		fuel_refining = 1
 		construction1 = 1
 	}
@@ -190,14 +190,14 @@ capital = 522
 				APC_1 = 1
 				MBT_1 = 1
 				IFV_1 = 1
-				tech_arty_0 = 1
+				artillery_0 = 1
 				Arty_upgrade_1 = 1
 				SP_arty_0 = 1
 				SP_R_arty_0 = 1
 				Anti_Air_0 = 1
 				SP_Anti_Air_0 = 1
 				Rec_tank_0 = 1
-				attack_helicopter_1 = 1
+				attack_helicopter1 = 1
 			}
 		}
 	}
@@ -206,7 +206,7 @@ capital = 522
 
 			tech_early_naval_weapon_systems = 1
 
-			tech_landing_craft_1 = 1
+			tech_landing_craft = 1
 		}
 
 		#Air variants
@@ -287,7 +287,7 @@ capital = 522
 	add_political_power = 300
 
 	create_country_leader = {
-		name = "TrÃƒÆ’Ã‚Â¢n Ãƒâ€žÃ‚ÂÃƒÆ’Ã‚Âºc Luong"
+		name = "Trân Đúc Luong"
 		picture = "Tran_Duc_Luong.dds"
 		expire = "2012.1.1"
 		ideology = Neutral_Communism

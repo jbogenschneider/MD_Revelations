@@ -35,8 +35,6 @@ state = {
 				internet_station = 4
 				infrastructure = 5
 				radar_station = 2
-				microchip_plant = 3
-				composite_plant = 1
 			}
 		}
 	}

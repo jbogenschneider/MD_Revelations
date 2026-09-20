@@ -28,8 +28,8 @@ capital = 869
 
 		infantry_mass_assault = 1
 
-		infantry_weapons_1 = 1
-		cnc_equipment_1 = 1
+		infantry_weapons = 1
+		command_control_equipment = 1
 
 		Anti_tank_0 = 1
 
@@ -174,4 +174,3 @@ capital = 869
 	recruit_character = TRI_rodney_smart
 	recruit_character = TRI_stephen_williams
 }
-

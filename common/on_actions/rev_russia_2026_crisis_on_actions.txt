@@ -21,14 +21,14 @@ on_actions = {
 					date < 2026.2.4
 				}
 				set_country_flag = rev_russia_2026_evt_22_fired2
-				country_event = { id = russia_2026.222 }
+				country_event = { id = russia_2026.22 }
 			}
 			if = {
 				limit = {  # mobilize
 					tag = SOV
 					NOT = { has_country_flag = rev_russia_2026_evt_1_fired }
-					date > 2026.3.2
-					date < 2026.3.10
+					date > 2026.9.21
+					date < 2026.9.27
 				}
 				set_country_flag = rev_russia_2026_evt_1_fired
 				country_event = { id = russia_2026.1 }

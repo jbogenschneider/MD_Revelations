@@ -18,14 +18,14 @@ capital = 850
 
 		infantry_mass_assault = 1
 		#No army, but let's give them some basic tech in case they change their mind
-		infantry_weapons_1 = 1
-		cnc_equipment_1 = 1
+		infantry_weapons = 1
+		command_control_equipment = 1
 		Anti_tank_0 = 1
-		util_vehicle_1 = 1
+		util_vehicle_0 = 1
 
 		night_vision_1 = 1
 
-		body_armor_1 = 1
+		body_armor_1980 = 1
 
 		basic_computing = 1
 		integrated_circuit = 1
@@ -183,7 +183,7 @@ capital = 850
 	startup_politics = yes
 
 	create_country_leader = {
-		name = "Miguel Ãngel RodrÃ­guez"
+		name = "Miguel Ángel Rodríguez"
 		picture = "miguel_rodriguez.dds"
 		ideology = conservatism
 		traits = {
@@ -193,4 +193,3 @@ capital = 850
 
 	recruit_character = COS_air_chief
 }
-

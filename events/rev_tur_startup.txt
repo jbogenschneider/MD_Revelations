@@ -26,3 +26,54 @@ country_event = {
 		change_ruling_party_effect = yes
 	}
 }
+
+country_event = {
+	id = rev_tur_startup.2
+	title = rev_tur_startup.2.t
+	desc = rev_tur_startup.2.d
+	picture = GFX_report_event_generic_military
+	is_triggered_only = yes
+
+	trigger = {
+		original_tag = TUR
+		NOT = { has_idea = NATO_member }
+		PER = {
+			exists = yes
+			has_war_with = ISR
+		}
+		USA = {
+			exists = yes
+			has_war_with = GER
+		}
+		NOT = { has_country_flag = rev_tur_levant_war_decided }
+	}
+
+	immediate = {
+		set_country_flag = rev_tur_levant_war_decided
+	}
+
+	option = {
+		name = rev_tur_startup.2.a
+		ai_chance = {
+			base = 100
+		}
+		if = {
+			limit = {
+				ISR = {
+					exists = yes
+					NOT = { has_war_with = TUR }
+				}
+			}
+			declare_war_on = {
+				target = ISR
+				type = puppet_wargoal_focus
+			}
+		}
+	}
+	option = {
+		name = rev_tur_startup.2.b
+		ai_chance = {
+			base = 0
+		}
+	}
+}

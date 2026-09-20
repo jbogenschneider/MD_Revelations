@@ -17,6 +17,9 @@ state = {
 			12046 = {
 				land_facility = 1
 			}
+			11191 = {
+				supply_node = 1
+			}
 		}
 		add_core_of = IRQ
 		add_to_array = {
