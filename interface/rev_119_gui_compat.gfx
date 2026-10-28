@@ -1,0 +1,88 @@
+# Missing sprites used by restored MD menus and retained 1.19 windows.
+spriteTypes = {
+spriteType = {
+		name = "GFX_div_unit_item_bg_wide"
+		textureFile = "gfx//interface//div_unit_item_bg_1.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+		noOfFrames = 2
+	}
+
+spriteType = {
+		name = "GFX_army_hq_designer_header_bg"
+		textureFile = "gfx//interface//army_hq_header_bg.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+spriteType = {
+		name = "GFX_army_hq_designer_composition_bg"
+		textureFile = "gfx//interface//army_hq_composition_bg.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+spriteType = {
+		name = "GFX_army_hq_modifiers_bg"
+		textureFile = "gfx//interface//army_hq_modifiers_bg.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+spriteType = {
+		name = "GFX_equipment_header"
+		textureFile = "gfx/interface/division_equipment/equipment_header.dds"
+	}
+
+spriteType = {
+		name = "GFX_country_filter_entry"
+		textureFile = "gfx/interface/country_filter_entry.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+		noOfFrames = 2
+	}
+
+spriteType = {
+		name = "GFX_repair_order_entry_bg"
+		textureFile = "gfx//interface//repair_order_entry_bg.dds"
+	}
+
+spriteType = {
+		name = "gitlab"
+		texturefile = "gfx/interface/icon_gitlab.dds"
+		noOfFrames = 1
+	}
+
+corneredTileSpriteType = {
+		name = "GFX_MD_tiled_window1"
+		size= { x=380 y=380 }
+		textureFile = "gfx//interface/tiles/md_tiled_window1.dds"
+		borderSize = { x=32 y=32 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+corneredTileSpriteType = {
+		name = "GFX_MD_tiled_window1_scrollbar"
+		size= { x=380 y=380 }
+		textureFile = "gfx//interface/tiles/md_tiled_window1_scrollbar.dds"
+		borderSize = { x=48 y=48 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+corneredTileSpriteType = {
+		name = "GFX_MD_tiled_window1_close"
+		size= { x=380 y=380 }
+		textureFile = "gfx//interface/tiles/md_tiled_window1_close.dds"
+		borderSize = { x=48 y=48 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+    # MD does not define the vanilla railway-gun building sprite.
+    spriteType = {
+        name = "GFX_buildings_railway_gun"
+        texturefile = "gfx/interface/buildings/building_railway_gun.dds"
+    }
+
+    # Indicator required by the 1.19 scenario country entries.
+    spriteType = {
+		name = "GFX_unplayed_content_notification"
+		texturefile = "gfx/interface/unplayed_content_notification.dds"	
+	}
+}

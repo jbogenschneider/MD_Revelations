@@ -150,11 +150,11 @@ guiTypes = {
 			clicksound = click_checkbox
 		}
 
-		buttonType = {
+		iconType = {
 			name = "country_shine"
 			quadTextureSprite = "GFX_country_selection_entry_shine"
 			position = { x=0 y =0 }
-			clicksound = click_checkbox
+			alwaystransparent = yes
 		}
 
 		instantTextBoxType = {
@@ -167,6 +167,13 @@ guiTypes = {
 			fixedsize = yes
 			format = center
 			Orientation = "UPPER_LEFT"
+		}
+
+		iconType = {
+			name = "new_content"
+			position = { x = 110 y = 180 }
+			spriteType = "GFX_unplayed_content_notification"
+			alwaystransparent = yes
 		}
 	}
 
@@ -190,11 +197,18 @@ guiTypes = {
 			clicksound = click_checkbox
 		}
 
-		buttonType = {
+		iconType = {
 			name = "country_shine"
 			quadTextureSprite = "GFX_minor_country_selector_shine"
 			position = { x=0 y =0 }
-			clicksound = click_checkbox
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "new_content"
+			position = { x = 100 y = 15 }
+			spriteType = "GFX_unplayed_content_notification"
+			alwaystransparent = yes
 		}
 	}
 
@@ -217,11 +231,18 @@ guiTypes = {
 			clicksound = click_checkbox
 		}
 
-		buttonType = {
+		iconType = {
 			name = "country_shine"
 			quadTextureSprite = "GFX_mini_country_selector_shine"
 			position = { x=0 y =0 }
-			clicksound = click_checkbox
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "new_content"
+			position = { x = 42 y = 0 }
+			spriteType = "GFX_unplayed_content_notification"
+			alwaystransparent = yes
 		}
 	}
 
@@ -687,7 +708,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name ="countries_medium"
-			position = { x = 15 y = 330 }
+			position = { x = 15 y = 352 }
 			size = { width = -15 height = 120}
 
 			gridboxType = {
@@ -703,7 +724,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name ="countries_mini"
-			position = { x = 15 y = 320 }
+			position = { x = 15 y = 360 }
 			size = { width = -15 height = 120}
 			gridboxType = {
 				name ="countries_grid"
@@ -922,6 +943,57 @@ guiTypes = {
 			maxHeight = 200
 			format = left
 			scrollbarType = standardtext_slider
+		}
+
+
+		OverlappingElementsBoxType = {
+			name = "filters"
+			position = { x = 22 y = 321 }
+			size = { x = 1181 y = 32 }
+			format = center
+			spacing = 14.0
+		}
+
+
+		dropDownBoxType = {
+			name = "more_countries"
+			position = { x = 10 y = 412 }
+
+			expandButton = {
+				name = "expand_button"
+				position = { x = 1168 y = -4 }
+				quadTextureSprite = "GFX_peace_drop_down_button"
+				clicksound = click_default
+			}
+
+			expandedWindow = {
+				name = "expanded_window"
+				position = { x=0 y= -300 }
+				show_position = { x = 0 y = 25 }
+				show_animation_type = decelerated
+				hide_animation_type = accelerated
+				animation_time = 300
+				size = { width=1205 height=58 }	# dynamically resized in code using countries_mini_expanded's slot size
+				verticalScrollbar = "right_vertical_slider"
+				scroll_wheel_factor = 50
+				smooth_scrolling = yes
+				margin = { top = 7 bottom = 7 right = 6 }
+
+				background = {
+					name = "Background"
+					quadTextureSprite ="GFX_tiled_window_1b_thin_border"
+				}
+
+				gridBoxType = {
+					name = "countries_mini_expanded"
+					position = { x = 8 y = 0 }
+					size = { width = 199 height = 100%% }
+					slotsize = { width = 52 height = 38 }
+					add_horizontal = yes
+					max_slots_horizontal = 22
+					format = "UPPER_LEFT"
+				}
+			}
 		}
 	}
 

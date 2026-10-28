@@ -1,0 +1,1246 @@
+# Missing files from Millennium-Dawn-1.12.3b
+
+Compared source paths against MD_Revelations in one direction only. Existing file contents were not compared. Hidden and ignored files were included; Git internal files were excluded.
+
+Missing files under gfx/: 0. No graphics copied.
+Missing files outside gfx/: 1204. None copied.
+Graphics stored outside gfx/ (such as resources/ development assets) appear in the list below.
+
+| Directory | Missing files |
+| --- | ---: |
+| (root) | 3 |
+| .github | 5 |
+| .vscode | 1 |
+| common | 5 |
+| docs | 89 |
+| history | 1 |
+| resources | 1054 |
+| tools | 46 |
+
+## (root)
+
+- `CONTRIBUTING.md`
+- `LICENSE`
+- `Millennium_Dawn.mod`
+
+## .github
+
+- `.github/ISSUE_TEMPLATE/bug-report.md`
+- `.github/ISSUE_TEMPLATE/crash_report.md`
+- `.github/ISSUE_TEMPLATE/suggestions.md`
+- `.github/workflows/coding-pipeline.yml`
+- `.github/workflows/github-pages.yml`
+
+## .vscode
+
+- `.vscode/hoi4_millennium_dawn.code-workspace`
+
+## common
+
+- `common/dynamic_modifiers/README.md`
+- `common/resources/00_resources.txt`
+- `common/scripted_guis/MD_topbar_missiles_scripted_gui.txt`
+- `common/scripted_guis/missiles_scripted_gui.txt`
+- `common/scripted_localisation/README.md`
+
+## docs
+
+- `docs/_config.yml`
+- `docs/_layouts/default.html`
+- `docs/assets/css/main.css`
+- `docs/changelogs.md`
+- `docs/countries-list.md`
+- `docs/dev-diaries-list.md`
+- `docs/dev-resources/add-missile-icons.md`
+- `docs/dev-resources/art-standards.md`
+- `docs/dev-resources/authentication-failed-cloning-repo.md`
+- `docs/dev-resources/code-resource.md`
+- `docs/dev-resources/code-stylization-guide.md`
+- `docs/dev-resources/error-debug-codes.md`
+- `docs/dev-resources/focus-tree-lifecycle-checklist.md`
+- `docs/dev-resources/focus-tree-tool.md`
+- `docs/dev-resources/gfx-entry-generator.md`
+- `docs/dev-resources/knowledge-based-resources.md`
+- `docs/dev-resources/localization-tool.md`
+- `docs/dev-resources/logging-tool.md`
+- `docs/dev-resources/new-general-guidelines.md`
+- `docs/dev-resources/unit-name-lists.md`
+- `docs/faq.md`
+- `docs/Gemfile`
+- `docs/Gemfile.lock`
+- `docs/getting-started.md`
+- `docs/guides.md`
+- `docs/index.md`
+- `docs/misc/authors.md`
+- `docs/misc/known-submods.md`
+- `docs/misc/unique-cheats.md`
+- `docs/national-content/Afghan-Northern-Alliance.md`
+- `docs/national-content/Armenia.md`
+- `docs/national-content/Azerbaijan.md`
+- `docs/national-content/Botswana.md`
+- `docs/national-content/Brazil.md`
+- `docs/national-content/Canada.md`
+- `docs/national-content/China.md`
+- `docs/national-content/Denmark.md`
+- `docs/national-content/Ethiopia.md`
+- `docs/national-content/Finland.md`
+- `docs/national-content/France.md`
+- `docs/national-content/Georgia.md`
+- `docs/national-content/Germany.md`
+- `docs/national-content/Greece.md`
+- `docs/national-content/Iran.md`
+- `docs/national-content/Italy.md`
+- `docs/national-content/Japan.md`
+- `docs/national-content/Liechtenstein.md`
+- `docs/national-content/Myanmar.md`
+- `docs/national-content/Nigeria.md`
+- `docs/national-content/North-Korea.md`
+- `docs/national-content/Norway.md`
+- `docs/national-content/Poland.md`
+- `docs/national-content/Russia.md`
+- `docs/national-content/South-Korea.md`
+- `docs/national-content/Spain.md`
+- `docs/national-content/Sweden.md`
+- `docs/national-content/Switzerland.md`
+- `docs/national-content/Syria.md`
+- `docs/national-content/Ukraine.md`
+- `docs/national-content/United-Kingdom.md`
+- `docs/national-content/United-States.md`
+- `docs/player-tutorials/economy-tutorial.md`
+- `docs/player-tutorials/eu-law-flowchart.md`
+- `docs/player-tutorials/eu-tutorial.md`
+- `docs/player-tutorials/internal-factions.md`
+- `docs/player-tutorials/military-tutorial.md`
+- `docs/player-tutorials/troubleshooting-guide.md`
+- `docs/team-resources.md`
+- `docs/technical-support.md`
+- `docs/tutorials.md`
+- `docs/uploads/CrocsFocusTreeTool.zip`
+- `docs/uploads/CrocsLoggerTool.zip`
+- `docs/uploads/European_Union_Diagram.drawio_6_-temp.png`
+- `docs/uploads/example1.jpg`
+- `docs/uploads/flags/armenia.png`
+- `docs/uploads/flags/canada.png`
+- `docs/uploads/flags/denmark.png`
+- `docs/uploads/flags/georgia.svg.png`
+- `docs/uploads/flags/greece.png`
+- `docs/uploads/flags/myanmar.png`
+- `docs/uploads/flags/syria.png`
+- `docs/uploads/flags/united_kingdom.png`
+- `docs/uploads/image-2-temp.png`
+- `docs/uploads/image-temp.png`
+- `docs/uploads/Introduction.png`
+- `docs/uploads/logo.png`
+- `docs/uploads/main-menu.png`
+- `docs/uploads/main-menu-2.png`
+- `docs/uploads/New3-temp.png`
+
+## history
+
+- `history/states/README.md`
+
+## resources
+
+- `resources/00_defines - Copy.lua`
+- `resources/2000px-world.png`
+- `resources/AirCombatSimulator/AirCombatSimulator.sln`
+- `resources/AirCombatSimulator/AirCombatSimulator/AirCombatSimulator.csproj`
+- `resources/AirCombatSimulator/AirCombatSimulator/Configuration/Defines.cs`
+- `resources/AirCombatSimulator/AirCombatSimulator/Data/DataService.cs`
+- `resources/AirCombatSimulator/AirCombatSimulator/Data/JsonConverter.cs`
+- `resources/AirCombatSimulator/AirCombatSimulator/Data/ReaderWriter.cs`
+- `resources/AirCombatSimulator/AirCombatSimulator/Models/AirWing.cs`
+- `resources/AirCombatSimulator/AirCombatSimulator/Models/CombatConfiguration.cs`
+- `resources/AirCombatSimulator/AirCombatSimulator/Models/CombatResult.cs`
+- `resources/AirCombatSimulator/AirCombatSimulator/Models/Plane.cs`
+- `resources/AirCombatSimulator/AirCombatSimulator/Services/CombatService.cs`
+- `resources/AirCombatSimulator/AirCombatUI/AirCombatUI.csproj`
+- `resources/AirCombatSimulator/AirCombatUI/AirCombatUI.csproj.user`
+- `resources/AirCombatSimulator/AirCombatUI/Form1.cs`
+- `resources/AirCombatSimulator/AirCombatUI/Form1.Designer.cs`
+- `resources/AirCombatSimulator/AirCombatUI/Form1.resx`
+- `resources/AirCombatSimulator/AirCombatUI/Program.cs`
+- `resources/AirCombatSimulator/AirCombatUI/Validator.cs`
+- `resources/bird tools/gitlab-ci.yml`
+- `resources/Bird's AI Shit/ai_templates - OLD/MD_CHI.txt`
+- `resources/Bird's AI Shit/ai_templates - OLD/MD_SOV.txt`
+- `resources/Bird's AI Shit/ai_templates - OLD/MD_USA.txt`
+- `resources/BRA_gui_scripted_localisation.txt`
+- `resources/Brazil/BRA - Brazil (history file).txt`
+- `resources/Brazil/brazil_decision_categories.txt`
+- `resources/Brazil/Brazil_decisions.txt`
+- `resources/Brazil/brazil_tree.txt`
+- `resources/Brazil/Brazilian_events.txt`
+- `resources/Brazil/Brazilian_ideas.txt`
+- `resources/Brazil/MD_focus_BRA_l_english.yml`
+- `resources/cats/thisisdog (christmas).dds`
+- `resources/cats/thisisdog (legacy).dds`
+- `resources/cats/thisisdog.dds`
+- `resources/consolidated-graphics-branch/BEL/INF/FNFAL.dds`
+- `resources/consolidated-graphics-branch/BEL/INF/INF1.dds`
+- `resources/consolidated-graphics-branch/GER/AIR/E2000.dds`
+- `resources/consolidated-graphics-branch/GER/AIR/E2000M.dds`
+- `resources/consolidated-graphics-branch/GER/AIR/F4GER1.dds`
+- `resources/consolidated-graphics-branch/GER/AIR/F4GER2.dds`
+- `resources/consolidated-graphics-branch/GER/AIR/TORNADOGER.dds`
+- `resources/consolidated-graphics-branch/GER/AIR/TORNADOGER2.dds`
+- `resources/consolidated-graphics-branch/GER/AIR/UH01GER.dds`
+- `resources/consolidated-graphics-branch/GER/LAND/APC2.dds`
+- `resources/consolidated-graphics-branch/POL/INF/CARL.dds`
+- `resources/consolidated-graphics-branch/POL/LAND/APC4.dds`
+- `resources/consolidated-graphics-branch/POL/LAND/BWPandersALT.dds`
+- `resources/consolidated-graphics-branch/POL/LAND/HAT2.dds`
+- `resources/consolidated-graphics-branch/POL/LAND/IFV1.dds`
+- `resources/consolidated-graphics-branch/POL/LAND/IFV2.dds`
+- `resources/consolidated-graphics-branch/POL/LAND/IFV3.dds`
+- `resources/consolidated-graphics-branch/POL/LAND/IFV6.dds`
+- `resources/consolidated-graphics-branch/POL/LAND/REC2.dds`
+- `resources/consolidated-graphics-branch/POL/LAND/REC3.dds`
+- `resources/consolidated-graphics-branch/POL/LAND/REC4.dds`
+- `resources/consolidated-graphics-branch/POL/LAND/REC5.dds`
+- `resources/consolidated-graphics-branch/POL/LAND/TOPAS_2AP.dds`
+- `resources/consolidated-graphics-branch/POL/LAND/TOPAS2.dds`
+- `resources/consolidated-graphics-branch/POL/LAND/ZSSW30.dds`
+- `resources/consolidated-graphics-branch/SOV/INF/AKMS.dds`
+- `resources/consolidated-graphics-branch/SOV/INF/INF1.dds`
+- `resources/consolidated-graphics-branch/SOV/INF/INF2.dds`
+- `resources/consolidated-graphics-branch/SOV/INF/INF3.dds`
+- `resources/consolidated-graphics-branch/SOV/INF/SKS.dds`
+- `resources/consolidated-graphics-branch/SOV/LAND/BMP1.dds`
+- `resources/consolidated-graphics-branch/SOV/LAND/IFV1.dds`
+- `resources/consolidated-graphics-branch/UKR/INF/INF5.dds`
+- `resources/consolidated-graphics-branch/USA/INF/INF1.dds`
+- `resources/consolidated-graphics-branch/USA/INF/INF2.dds`
+- `resources/consolidated-graphics-branch/USA/INF/INF5.dds`
+- `resources/discarded events and desicions/European Railway System.txt`
+- `resources/discarded events and desicions/european_railways_system_decision_categories.txt`
+- `resources/discarded events and desicions/MD4_help_decisions.txt`
+- `resources/discarded events and desicions/outlook cheats.txt`
+- `resources/discarded events and desicions/Random_Diplo.txt`
+- `resources/discarded events and desicions/random_diplo_l_english.yml`
+- `resources/discarded events and desicions/Russia Border War/Russia.txt`
+- `resources/discarded events and desicions/Russia Border War/russia_decision_categories.txt`
+- `resources/Dread UAR/00_0UAR_decisions.txt`
+- `resources/Dread UAR/00_middle_east_scripted_effects.txt`
+- `resources/Dread UAR/00_on_actions.txt`
+- `resources/Dread UAR/00_UAR_scripted.gfx`
+- `resources/Dread UAR/00_UAR_scripted.gui`
+- `resources/Dread UAR/00_UAR_scripted_effects.txt`
+- `resources/Dread UAR/00_UAR_scripted_gui.txt`
+- `resources/Dread UAR/00_UAR_scripted_GUI_l_english.yml`
+- `resources/Dread UAR/00_UAR_scripted_localisation.txt`
+- `resources/Dread UAR/Arab Spirits.txt`
+- `resources/Dread UAR/arab_states_stats.txt`
+- `resources/Dread UAR/UAR.txt`
+- `resources/Dread UAR/UAR_BoP_modifiers.txt`
+- `resources/Dread UAR/UAR_map_mode.txt`
+- `resources/Dread UAR/UAR_menu_background.dds`
+- `resources/Dread UAR/UAR_traits.txt`
+- `resources/Dread's Puppet Interaction Shit/file structure/.common/.decisions/!puppet_decisions.txt`
+- `resources/Dread's Puppet Interaction Shit/file structure/.common/.decisions/.categories/!puppet_decisions_category.txt`
+- `resources/Dread's Puppet Interaction Shit/file structure/.common/.scripted_guis/!puppet_stuff_gui.txt`
+- `resources/Dread's Puppet Interaction Shit/file structure/.common/.scripted_localisation/!puppet_scripted_localisation.txt`
+- `resources/Dread's Puppet Interaction Shit/file structure/.interface/0puppet_stuff.gui`
+- `resources/Dread's Religion Shit/religion_scripted_gui.txt`
+- `resources/East Africa Shit/01_kenya_decisions_categories.txt`
+- `resources/East Africa Shit/99_EAC_votes.txt`
+- `resources/East Africa Shit/autonomous states/MD_east_african_autonomies.txt`
+- `resources/East Africa Shit/Burundi.txt`
+- `resources/East Africa Shit/Congo War.txt`
+- `resources/East Africa Shit/congo_war_decision_categories.txt`
+- `resources/East Africa Shit/Congoevent.txt`
+- `resources/East Africa Shit/countries/cosmetic.txt`
+- `resources/East Africa Shit/countries/Zanzibar.txt`
+- `resources/East Africa Shit/country leader/00_traits.txt`
+- `resources/East Africa Shit/country leader/01_east_africa.txt`
+- `resources/East Africa Shit/EAC.txt`
+- `resources/East Africa Shit/EAF.txt`
+- `resources/East Africa Shit/east_africa_decisions_categories.txt`
+- `resources/East Africa Shit/east_africa_scripted_gui.gui`
+- `resources/East Africa Shit/East_Africaevent.txt`
+- `resources/East Africa Shit/gui/DRC_great_african_war_gui.txt`
+- `resources/East Africa Shit/gui/MD_east_african_scripted_gui.txt`
+- `resources/East Africa Shit/hist/MLC - Movement for the Liberation of Congo.txt`
+- `resources/East Africa Shit/hist/TNZ - Tanzania.txt`
+- `resources/East Africa Shit/hist/ZAN - Zanzibar.txt`
+- `resources/East Africa Shit/ideas/AA_law_budget.txt`
+- `resources/East Africa Shit/ideas/AA_law_economics.txt`
+- `resources/East Africa Shit/ideas/AA_law_internal_factions.txt`
+- `resources/East Africa Shit/ideas/AA_law_military_ideas.txt`
+- `resources/East Africa Shit/ideas/Burundian.txt`
+- `resources/East Africa Shit/ideas/Congo.txt`
+- `resources/East Africa Shit/ideas/East Africa.txt`
+- `resources/East Africa Shit/ideas/Generic Ideas.txt`
+- `resources/East Africa Shit/ideas/Kenyan.txt`
+- `resources/East Africa Shit/ideas/Rwanda.txt`
+- `resources/East Africa Shit/ideas/South Sudanese.txt`
+- `resources/East Africa Shit/ideas/Ugandan.txt`
+- `resources/East Africa Shit/ideas/zz_EAC_Defence_Companies.txt`
+- `resources/East Africa Shit/Kenyaevent.txt`
+- `resources/East Africa Shit/MD_decisions.gfx`
+- `resources/East Africa Shit/MD_great_african_war.gfx`
+- `resources/East Africa Shit/MD_great_african_war.gui`
+- `resources/East Africa Shit/nat focus/burundi.txt`
+- `resources/East Africa Shit/nat focus/DPR.txt`
+- `resources/East Africa Shit/nat focus/east_african_community.txt`
+- `resources/East Africa Shit/nat focus/east_african_federation.txt`
+- `resources/East Africa Shit/nat focus/kenya.txt`
+- `resources/East Africa Shit/nat focus/rwanda.txt`
+- `resources/East Africa Shit/nat focus/uganda.txt`
+- `resources/East Africa Shit/Political Desicions.txt`
+- `resources/East Africa Shit/Rwanda_event.txt`
+- `resources/East Africa Shit/scripted effects/01_nation_influence.txt`
+- `resources/East Africa Shit/scripted effects/01_purchase_weapons.txt`
+- `resources/East Africa Shit/scripted effects/99_congo_war_effects.txt`
+- `resources/East Africa Shit/scripted effects/99_EAC_scripted_effects.txt`
+- `resources/East Africa Shit/scripted effects/99_KEN_scripted_effects.txt`
+- `resources/East Africa Shit/scripted effects/99_scriptlanguage.txt`
+- `resources/East Africa Shit/scripted effects/BUR_political_leaders.txt`
+- `resources/East Africa Shit/scripted effects/DRC_political_leaders.txt`
+- `resources/East Africa Shit/scripted effects/KEN_political_leaders.txt`
+- `resources/East Africa Shit/scripted effects/RWA_political_leaders.txt`
+- `resources/East Africa Shit/scriptedloc/eac_scripted_localisation.txt`
+- `resources/East Africa Shit/scriptedloc/KEN_scripted_localisation.txt`
+- `resources/East Africa Shit/scriptedloc/TNZ_scripted_localisation.txt`
+- `resources/East Africa Shit/tags/00_countries.txt`
+- `resources/East Africa Shit/Tanzaniaevent.txt`
+- `resources/East Africa Shit/Ugandaevent.txt`
+- `resources/East Africa Shit/USAevent.txt`
+- `resources/economy spreadsheets/.~lock.defence_companies_research.xls#`
+- `resources/economy spreadsheets/.~lock.size_modifier.xlsx#`
+- `resources/economy spreadsheets/brackets for pp.txt`
+- `resources/economy spreadsheets/combined_resources.xlsx`
+- `resources/economy spreadsheets/Data for Economic Rework.xls`
+- `resources/economy spreadsheets/Data for Economic Rework.xlsx`
+- `resources/economy spreadsheets/Data_for_bureaucratic_spending.xlsx`
+- `resources/economy spreadsheets/defence_companies_research.xls`
+- `resources/economy spreadsheets/doneMapinfo_Steel.xlsx`
+- `resources/economy spreadsheets/Econ Rework 2023 - Full Tag List.xls`
+- `resources/economy spreadsheets/Econ Rework 2023.xlsx`
+- `resources/economy spreadsheets/Equipment_Cost_Balancing.xlsx`
+- `resources/economy spreadsheets/expected spending.xlsx`
+- `resources/economy spreadsheets/GlobalProductivityAggregateDatabase.xlsx`
+- `resources/economy spreadsheets/historical-statistical-resource-reserves.xlsx`
+- `resources/economy spreadsheets/military_spending.xlsx`
+- `resources/economy spreadsheets/Monetary_System_Ho_Chi_Minh_2000.xlsx`
+- `resources/economy spreadsheets/resource_distribution.ods`
+- `resources/economy spreadsheets/size_modifier.xlsx`
+- `resources/economy spreadsheets/testvalue_gdp_c.ods`
+- `resources/endorsed_companies_proof_of_concept/00_idea (idea_tags).txt`
+- `resources/endorsed_companies_proof_of_concept/endorsed_company_traits.txt`
+- `resources/endorsed_companies_proof_of_concept/gfx stuff/MD_endorsed_companies.gfx`
+- `resources/endorsed_companies_proof_of_concept/gfx stuff/Neste.dds`
+- `resources/endorsed_companies_proof_of_concept/gfx stuff/Nokia.dds`
+- `resources/endorsed_companies_proof_of_concept/gfx stuff/Stora_Enso.dds`
+- `resources/endorsed_companies_proof_of_concept/gfx stuff/template.pdn`
+- `resources/endorsed_companies_proof_of_concept/gfx stuff/UPM_Kymmene.dds`
+- `resources/endorsed_companies_proof_of_concept/MD_endorsed_companies_l_english.yml`
+- `resources/endorsed_companies_proof_of_concept/zz_FIN_endorsed_companies.txt`
+- `resources/Flag code generators/decision_generic.py`
+- `resources/Flag code generators/decision_generic_exclusion.py`
+- `resources/Flag code generators/decision_localisation.py`
+- `resources/Flag code generators/decision_no_rebels.py`
+- `resources/Flag code generators/decision_self_contained.py`
+- `resources/Focus Trees/Libya/Libya_focus_tree.xh4prj`
+- `resources/Generals rework/.~lock.Generals_worksheet.xlsx#`
+- `resources/Generals rework/general_skils.xlsx`
+- `resources/Generals rework/Generals_worksheet.xlsx`
+- `resources/GFX Counter Icons/custom_template_000.dds`
+- `resources/GFX Counter Icons/custom_template_001.dds`
+- `resources/GFX Counter Icons/custom_template_002.dds`
+- `resources/GFX Counter Icons/custom_template_003.dds`
+- `resources/GFX Counter Icons/custom_template_004.dds`
+- `resources/GFX Counter Icons/custom_template_005.dds`
+- `resources/GFX Counter Icons/custom_template_006.dds`
+- `resources/GFX Counter Icons/custom_template_007.dds`
+- `resources/GFX Counter Icons/custom_template_008.dds`
+- `resources/GFX Counter Icons/custom_template_009.dds`
+- `resources/GFX Counter Icons/custom_template_010.dds`
+- `resources/GFX Counter Icons/custom_template_011.dds`
+- `resources/GFX Counter Icons/custom_template_012.dds`
+- `resources/GFX Counter Icons/custom_template_013.dds`
+- `resources/GFX Counter Icons/custom_template_014.dds`
+- `resources/GFX Counter Icons/custom_template_015.dds`
+- `resources/GFX Counter Icons/custom_template_016.dds`
+- `resources/GFX Counter Icons/custom_template_017.dds`
+- `resources/GFX Counter Icons/custom_template_018.dds`
+- `resources/GFX Counter Icons/custom_template_019.dds`
+- `resources/GFX Counter Icons/custom_template_020.dds`
+- `resources/GFX Counter Icons/custom_template_021.dds`
+- `resources/GFX Counter Icons/custom_template_022.dds`
+- `resources/GFX Counter Icons/custom_template_023.dds`
+- `resources/GFX Counter Icons/custom_template_024.dds`
+- `resources/GFX Counter Icons/custom_template_025.dds`
+- `resources/GFX Counter Icons/custom_template_026.dds`
+- `resources/GFX Counter Icons/custom_template_027.dds`
+- `resources/GFX Counter Icons/custom_template_028.dds`
+- `resources/GFX Counter Icons/custom_template_029.dds`
+- `resources/GFX Counter Icons/custom_template_030.dds`
+- `resources/GFX Counter Icons/custom_template_031.dds`
+- `resources/GFX Counter Icons/custom_template_032.dds`
+- `resources/GFX Counter Icons/custom_template_033.dds`
+- `resources/GFX Counter Icons/custom_template_034.dds`
+- `resources/GFX Counter Icons/custom_template_035.dds`
+- `resources/GFX Counter Icons/custom_template_036.dds`
+- `resources/GFX Counter Icons/custom_template_037.dds`
+- `resources/GFX Counter Icons/custom_template_038.dds`
+- `resources/GFX Counter Icons/custom_template_039.dds`
+- `resources/GFX Counter Icons/custom_template_040.dds`
+- `resources/GFX Counter Icons/custom_template_041.dds`
+- `resources/GFX Counter Icons/custom_template_042.dds`
+- `resources/GFX Counter Icons/custom_template_043.dds`
+- `resources/GFX Counter Icons/custom_template_044.dds`
+- `resources/GFX Counter Icons/custom_template_045.dds`
+- `resources/GFX Counter Icons/custom_template_046.dds`
+- `resources/GFX Counter Icons/custom_template_047.dds`
+- `resources/GFX Counter Icons/custom_template_048.dds`
+- `resources/GFX Counter Icons/custom_template_049.dds`
+- `resources/GFX Counter Icons/custom_template_050.dds`
+- `resources/GFX Counter Icons/custom_template_051.dds`
+- `resources/GFX Counter Icons/custom_template_052.dds`
+- `resources/GFX Counter Icons/custom_template_053.dds`
+- `resources/GFX Counter Icons/custom_template_054.dds`
+- `resources/GFX Counter Icons/custom_template_055.dds`
+- `resources/GFX Counter Icons/custom_template_056.dds`
+- `resources/GFX Counter Icons/custom_template_057.dds`
+- `resources/GFX Counter Icons/custom_template_058.dds`
+- `resources/GFX Counter Icons/custom_template_059.dds`
+- `resources/GFX Counter Icons/custom_template_060.dds`
+- `resources/GFX Counter Icons/custom_template_061.dds`
+- `resources/GFX Counter Icons/custom_template_062.dds`
+- `resources/GFX Counter Icons/custom_template_063.dds`
+- `resources/GFX Counter Icons/custom_template_064.dds`
+- `resources/GFX templates/e2e2qe.png`
+- `resources/GFX templates/Focus Icons/Align-Attack icons/Align_Icons.rar`
+- `resources/GFX templates/Focus Icons/Align-Attack icons/Attack_Icons_v3.rar`
+- `resources/GFX templates/Focus Icons/barankevitch.png`
+- `resources/GFX templates/Focus Icons/crapy_turkey1.dds`
+- `resources/GFX templates/Focus Icons/deal_with_serbia_map.dds`
+- `resources/GFX templates/Focus Icons/focus_YUG_autonomous_transylvania.dds`
+- `resources/GFX templates/Focus Icons/focus_YUG_devolved_croatia.dds`
+- `resources/GFX templates/Focus Icons/GER_rights_for_service.png`
+- `resources/GFX templates/Focus Icons/GFX_SER_March_Conspiracy.png`
+- `resources/GFX templates/Focus Icons/hoi4icnrediblethingsarehappeninginyugoslavia.dds`
+- `resources/GFX templates/Focus Icons/IRE_tram_service.png`
+- `resources/GFX templates/Focus Icons/otto_schilly.dds`
+- `resources/GFX templates/Focus Icons/SER_Immortal_Yugoslavism.png`
+- `resources/GFX templates/Focus Icons/SER_Milan_Stojadinovic.png`
+- `resources/GFX templates/Focus Icons/SER_NRS.png`
+- `resources/GFX templates/Focus Icons/SER_Pasic_Cult.png`
+- `resources/GFX templates/Focus Icons/SER_SRZ.png`
+- `resources/GFX templates/Focus Icons/SER_Vidovdan_Speech.png`
+- `resources/GFX templates/Focus Icons/SER_yugoslavia.png`
+- `resources/GFX templates/Focus Icons/SER_zbor.png`
+- `resources/GFX templates/Focus Icons/serbia_map_with_guns.dds`
+- `resources/GFX templates/Focus Icons/wide_tur.dds`
+- `resources/GFX templates/GFX Layers/attack.png`
+- `resources/GFX templates/GFX Layers/decision_category_generic.dds`
+- `resources/GFX templates/GFX Layers/demand.png`
+- `resources/GFX templates/GFX Layers/fetch.png`
+- `resources/GFX templates/GFX Layers/fist.png`
+- `resources/GFX templates/GFX Layers/focus_generic_home_defense.png`
+- `resources/GFX templates/GFX Layers/GFX_1.png`
+- `resources/GFX templates/GFX Layers/GFX_10.png`
+- `resources/GFX templates/GFX Layers/GFX_11.png`
+- `resources/GFX templates/GFX Layers/GFX_12.png`
+- `resources/GFX templates/GFX Layers/GFX_2.png`
+- `resources/GFX templates/GFX Layers/GFX_3.png`
+- `resources/GFX templates/GFX Layers/GFX_4.png`
+- `resources/GFX templates/GFX Layers/GFX_5.png`
+- `resources/GFX templates/GFX Layers/GFX_6.png`
+- `resources/GFX templates/GFX Layers/GFX_7.png`
+- `resources/GFX templates/GFX Layers/GFX_8.png`
+- `resources/GFX templates/GFX Layers/GFX_9.png`
+- `resources/GFX templates/GFX Layers/goal_generic_small_arms.png`
+- `resources/GFX templates/GFX Layers/hand shake.png`
+- `resources/GFX templates/GFX Layers/hand shake_1.png`
+- `resources/GFX templates/GFX Layers/IDEA_GFX_TEMPLATE.png`
+- `resources/GFX templates/GFX Layers/IDEA_GFX_TEMPLATE2.png`
+- `resources/GFX templates/GFX Layers/shield2.png`
+- `resources/GFX templates/GFX Layers/tempalte.png`
+- `resources/GFX templates/GFX Layers/trade icon.png`
+- `resources/GFX templates/gude-2025-12-16.log`
+- `resources/GFX templates/MD4_planes.gfx`
+- `resources/GFX templates/MD4_units_planes.asset`
+- `resources/GFX templates/Technology/Special Projects description.txt`
+- `resources/GFX templates/UI/EventCountry.ai`
+- `resources/GFX templates/UI/EventOption.ai`
+- `resources/GFX templates/UI/EventPopup.ai`
+- `resources/GFX templates/UI/EventPopup_2.ai`
+- `resources/GFX templates/zUnorganized/blue_backgroun.jpg`
+- `resources/GFX templates/zUnorganized/event_template.dds`
+- `resources/GFX templates/zUnorganized/ger_leader1.dds`
+- `resources/GFX templates/zUnorganized/ger_leader2.dds`
+- `resources/GFX templates/zUnorganized/ger_leader3.dds`
+- `resources/GFX templates/zUnorganized/leader_unknown.dds`
+- `resources/GFX templates/zUnorganized/Portrait_Template.png`
+- `resources/GFX templates/zUnorganized/red_background.jpg`
+- `resources/GFX templates/zUnorganized/TEMPALTE_WHITE.jpg`
+- `resources/Heastels NATO stuff/Factions.txt`
+- `resources/Heastels NATO stuff/MD_NATO_events_l_english.yml`
+- `resources/Heastels NATO stuff/NATO.txt`
+- `resources/Heastels NATO stuff/NATO_decision_categories.txt`
+- `resources/Heastels NATO stuff/NATO_system.txt`
+- `resources/hoi_mapfont4.dds`
+- `resources/hoi_mapfont4.fnt`
+- `resources/HOI2 - Modern Day Scenario Events/2nd_american_civil_war.txt`
+- `resources/HOI2 - Modern Day Scenario Events/2nd_russian_civil_war.txt`
+- `resources/HOI2 - Modern Day Scenario Events/abkhazia.txt`
+- `resources/HOI2 - Modern Day Scenario Events/albania.txt`
+- `resources/HOI2 - Modern Day Scenario Events/algeria.txt`
+- `resources/HOI2 - Modern Day Scenario Events/angola.txt`
+- `resources/HOI2 - Modern Day Scenario Events/armenia.txt`
+- `resources/HOI2 - Modern Day Scenario Events/australia.txt`
+- `resources/HOI2 - Modern Day Scenario Events/austria.txt`
+- `resources/HOI2 - Modern Day Scenario Events/belarus.txt`
+- `resources/HOI2 - Modern Day Scenario Events/belgium.txt`
+- `resources/HOI2 - Modern Day Scenario Events/brazil.txt`
+- `resources/HOI2 - Modern Day Scenario Events/bulgaria.txt`
+- `resources/HOI2 - Modern Day Scenario Events/canada.txt`
+- `resources/HOI2 - Modern Day Scenario Events/chains_eco.txt`
+- `resources/HOI2 - Modern Day Scenario Events/china.txt`
+- `resources/HOI2 - Modern Day Scenario Events/colombia.txt`
+- `resources/HOI2 - Modern Day Scenario Events/comsur.txt`
+- `resources/HOI2 - Modern Day Scenario Events/congo_dr.txt`
+- `resources/HOI2 - Modern Day Scenario Events/croatia.txt`
+- `resources/HOI2 - Modern Day Scenario Events/cuba.txt`
+- `resources/HOI2 - Modern Day Scenario Events/demobilization_events.txt`
+- `resources/HOI2 - Modern Day Scenario Events/denmark.txt`
+- `resources/HOI2 - Modern Day Scenario Events/draft_event.txt`
+- `resources/HOI2 - Modern Day Scenario Events/easttimor.txt`
+- `resources/HOI2 - Modern Day Scenario Events/egypt.txt`
+- `resources/HOI2 - Modern Day Scenario Events/election_events.txt`
+- `resources/HOI2 - Modern Day Scenario Events/estonia.txt`
+- `resources/HOI2 - Modern Day Scenario Events/european_union.txt`
+- `resources/HOI2 - Modern Day Scenario Events/event commands.txt`
+- `resources/HOI2 - Modern Day Scenario Events/event ID list.txt`
+- `resources/HOI2 - Modern Day Scenario Events/falkland.txt`
+- `resources/HOI2 - Modern Day Scenario Events/france.txt`
+- `resources/HOI2 - Modern Day Scenario Events/georgia.txt`
+- `resources/HOI2 - Modern Day Scenario Events/germany.txt`
+- `resources/HOI2 - Modern Day Scenario Events/hungary.txt`
+- `resources/HOI2 - Modern Day Scenario Events/india.txt`
+- `resources/HOI2 - Modern Day Scenario Events/indonesia.txt`
+- `resources/HOI2 - Modern Day Scenario Events/iran.txt`
+- `resources/HOI2 - Modern Day Scenario Events/iraq.txt`
+- `resources/HOI2 - Modern Day Scenario Events/israel.txt`
+- `resources/HOI2 - Modern Day Scenario Events/italy.txt`
+- `resources/HOI2 - Modern Day Scenario Events/ivorycoast.txt`
+- `resources/HOI2 - Modern Day Scenario Events/japan.txt`
+- `resources/HOI2 - Modern Day Scenario Events/jordan.txt`
+- `resources/HOI2 - Modern Day Scenario Events/kazakhstan.txt`
+- `resources/HOI2 - Modern Day Scenario Events/kosovo.txt`
+- `resources/HOI2 - Modern Day Scenario Events/kurdistan.txt`
+- `resources/HOI2 - Modern Day Scenario Events/laos.txt`
+- `resources/HOI2 - Modern Day Scenario Events/libya.txt`
+- `resources/HOI2 - Modern Day Scenario Events/lithuania.txt`
+- `resources/HOI2 - Modern Day Scenario Events/mobilization_events.txt`
+- `resources/HOI2 - Modern Day Scenario Events/montenegro.txt`
+- `resources/HOI2 - Modern Day Scenario Events/nato.txt`
+- `resources/HOI2 - Modern Day Scenario Events/newzealand.txt`
+- `resources/HOI2 - Modern Day Scenario Events/nicaragua.txt`
+- `resources/HOI2 - Modern Day Scenario Events/northkorea.txt`
+- `resources/HOI2 - Modern Day Scenario Events/norway.txt`
+- `resources/HOI2 - Modern Day Scenario Events/novorossiya.txt`
+- `resources/HOI2 - Modern Day Scenario Events/nuclear_event.txt`
+- `resources/HOI2 - Modern Day Scenario Events/oil.txt`
+- `resources/HOI2 - Modern Day Scenario Events/pakistan.txt`
+- `resources/HOI2 - Modern Day Scenario Events/philippines.txt`
+- `resources/HOI2 - Modern Day Scenario Events/poland.txt`
+- `resources/HOI2 - Modern Day Scenario Events/rand_eco.txt`
+- `resources/HOI2 - Modern Day Scenario Events/randomevents.txt`
+- `resources/HOI2 - Modern Day Scenario Events/retooling.jpg`
+- `resources/HOI2 - Modern Day Scenario Events/romania.txt`
+- `resources/HOI2 - Modern Day Scenario Events/russia.txt`
+- `resources/HOI2 - Modern Day Scenario Events/saudiarabia.txt`
+- `resources/HOI2 - Modern Day Scenario Events/secret_weapon_events.txt`
+- `resources/HOI2 - Modern Day Scenario Events/serbia.txt`
+- `resources/HOI2 - Modern Day Scenario Events/shanghaipact.txt`
+- `resources/HOI2 - Modern Day Scenario Events/singapore.txt`
+- `resources/HOI2 - Modern Day Scenario Events/slider_free_market.txt`
+- `resources/HOI2 - Modern Day Scenario Events/slider_hawk_lobby.txt`
+- `resources/HOI2 - Modern Day Scenario Events/slovenia.txt`
+- `resources/HOI2 - Modern Day Scenario Events/southern_sudan.txt`
+- `resources/HOI2 - Modern Day Scenario Events/southossetia.txt`
+- `resources/HOI2 - Modern Day Scenario Events/spain.txt`
+- `resources/HOI2 - Modern Day Scenario Events/srilanka.txt`
+- `resources/HOI2 - Modern Day Scenario Events/startup_eco.txt`
+- `resources/HOI2 - Modern Day Scenario Events/startup_flag_commands.txt`
+- `resources/HOI2 - Modern Day Scenario Events/sudan.txt`
+- `resources/HOI2 - Modern Day Scenario Events/surrenderevents.txt`
+- `resources/HOI2 - Modern Day Scenario Events/sweden.txt`
+- `resources/HOI2 - Modern Day Scenario Events/syria.txt`
+- `resources/HOI2 - Modern Day Scenario Events/taiwan.txt`
+- `resources/HOI2 - Modern Day Scenario Events/transamur.txt`
+- `resources/HOI2 - Modern Day Scenario Events/turkey.txt`
+- `resources/HOI2 - Modern Day Scenario Events/uk.txt`
+- `resources/HOI2 - Modern Day Scenario Events/ukraine.txt`
+- `resources/HOI2 - Modern Day Scenario Events/usa.txt`
+- `resources/HOI2 - Modern Day Scenario Events/venezuela.txt`
+- `resources/HOI2 - Modern Day Scenario Events/vietnam.txt`
+- `resources/How_to_get_git_log.txt`
+- `resources/Influence/Coup_math.xlsx`
+- `resources/Internal Factions/Content/Internal Faction Events_old.txt`
+- `resources/Internal Factions/Content/Internal Factions (Manchu).txt`
+- `resources/Internal Factions/Content/Internal factions interaction.txt`
+- `resources/Internal Factions/Content/Internal factions.txt`
+- `resources/Internal Factions/Content/internal_factions_decision_catagories.txt`
+- `resources/Internal Factions/Documentation/Internal Faction Codes.docx`
+- `resources/Internal Factions/Documentation/Internal Faction Definitions.docx`
+- `resources/Internal Factions/Documentation/Internal Factions Completed.xlsx`
+- `resources/Internal Factions/faction_opinion_guide.txt`
+- `resources/Internal Factions/Old Effects-Code-Work/Electoral Effects Internal Factionss.txt`
+- `resources/InternetParty.txt`
+- `resources/Land combat/batallion_costs.xlsx`
+- `resources/Land combat/Eq_stats_md.xlsx`
+- `resources/Land combat/tactics.xlsx`
+- `resources/Land combat/terrain.xlsx`
+- `resources/Laven-PRC-Rework/09_chinese_dynamic_modifiers.txt`
+- `resources/Laven-PRC-Rework/CHI - China (history file).txt`
+- `resources/Laven-PRC-Rework/china_category.txt`
+- `resources/Laven-PRC-Rework/China_decisions.txt`
+- `resources/Laven-PRC-Rework/China_events.txt`
+- `resources/Laven-PRC-Rework/china_tree.txt`
+- `resources/Laven-PRC-Rework/Chinese_ideas.txt`
+- `resources/Laven-PRC-Rework/MD_focus_CHI_l_english.yml`
+- `resources/Laven-PRC-Rework/MD_ideas_l_english.yml`
+- `resources/List of batallion types.txt`
+- `resources/List of triggers and effects 1_9_1.txt`
+- `resources/md4_00_graphics.lua`
+- `resources/National Content/ASEAN Shared Tree/01_asean_decision_categories.txt`
+- `resources/National Content/ASEAN Shared Tree/01_ASEAN_scripted_localization.txt`
+- `resources/National Content/ASEAN Shared Tree/asean.txt`
+- `resources/National Content/ASEAN Shared Tree/asean_shared.txt`
+- `resources/National Content/ASEAN Shared Tree/Asean-events.txt`
+- `resources/National Content/ASEAN Shared Tree/MD_focus_ASEAN_l_english.yml`
+- `resources/National Content/bosnia.txt`
+- `resources/National Content/czech_republic.txt`
+- `resources/National Content/Ethiopian-Eritrean Stuff/localisation.txt`
+- `resources/National Content/Ethiopian-Eritrean Stuff/redundant_decisions_ethiopia.txt`
+- `resources/National Content/EU_generic.txt`
+- `resources/National Content/Focus_probability.xlsx`
+- `resources/National Content/iran.txt`
+- `resources/National Content/Iran/shia_rebellion_decision.txt`
+- `resources/National Content/iraq-2022-summer/common/ideas/Iraq.txt`
+- `resources/National Content/iraq-2022-summer/common/national_focus/Iraq.txt`
+- `resources/National Content/iraq-2022-summer/events/Iraq_events.txt`
+- `resources/National Content/iraq-2022-summer/localisation/english/MD_focus_IRQ_l_english.yml`
+- `resources/National Content/ISR_ISR.txt`
+- `resources/National Content/israel.txt`
+- `resources/National Content/israel_palestine_shared.txt`
+- `resources/National Content/israel_scripted_loc.txt`
+- `resources/National Content/Italy/Cut officers.txt`
+- `resources/National Content/Italy/ITA to do list.txt`
+- `resources/National Content/Italy/on_civil_war_end.txt`
+- `resources/National Content/Italy/SCL - Sicily.txt`
+- `resources/National Content/Italy/SCL.txt`
+- `resources/National Content/Italy/SCL/rosario_crocetta.dds`
+- `resources/National Content/Italy/SCL/salvatore_cuffaro.dds`
+- `resources/National Content/Italy/SCL/SCL_air_chief.dds`
+- `resources/National Content/Italy/SCL/small/SCL_air_chief_small.dds`
+- `resources/National Content/Italy/simone-traiano branch/ITA_population_ideals_gui.gfx`
+- `resources/National Content/Italy/simone-traiano branch/ITA_population_ideals_gui.gui`
+- `resources/National Content/Italy/simone-traiano branch/MD_focus_ITA_l_english.yml`
+- `resources/National Content/Italy/Unused Flags/Sicily/Medium/SCL_communism.tga`
+- `resources/National Content/Italy/Unused Flags/Sicily/Medium/SCL_democratic.tga`
+- `resources/National Content/Italy/Unused Flags/Sicily/Medium/SCL_fascism.tga`
+- `resources/National Content/Italy/Unused Flags/Sicily/Medium/SCL_nationalist.tga`
+- `resources/National Content/Italy/Unused Flags/Sicily/Medium/SCL_neutrality.tga`
+- `resources/National Content/Italy/Unused Flags/Sicily/SCL_communism.tga`
+- `resources/National Content/Italy/Unused Flags/Sicily/SCL_democratic.tga`
+- `resources/National Content/Italy/Unused Flags/Sicily/SCL_fascism.tga`
+- `resources/National Content/Italy/Unused Flags/Sicily/SCL_nationalist.tga`
+- `resources/National Content/Italy/Unused Flags/Sicily/SCL_neutrality.tga`
+- `resources/National Content/Italy/Unused Flags/Sicily/Small/SCL_communism.tga`
+- `resources/National Content/Italy/Unused Flags/Sicily/Small/SCL_democratic.tga`
+- `resources/National Content/Italy/Unused Flags/Sicily/Small/SCL_fascism.tga`
+- `resources/National Content/Italy/Unused Flags/Sicily/Small/SCL_nationalist.tga`
+- `resources/National Content/Italy/Unused Flags/Sicily/Small/SCL_neutrality.tga`
+- `resources/National Content/Italy/unused focuses.txt`
+- `resources/National Content/MD_csa.txt`
+- `resources/National Content/MD_focus_ISR_l_english.yml`
+- `resources/National Content/MD4 Gearz.xh4prj`
+- `resources/National Content/Old Indian Parliament/00_indian_decision_categories.txt`
+- `resources/National Content/Old Indian Parliament/99_indian_decisions.txt`
+- `resources/National Content/Old Indian Parliament/99_indian_scripted_effects.txt`
+- `resources/National Content/Old Indian Parliament/99_indian_scripted_loc.txt`
+- `resources/National Content/Old Indian Parliament/MD_focus_RAJ_l_english.yml`
+- `resources/National Content/Old Indian Parliament/MD_indian_parliament.gfx`
+- `resources/National Content/Old Indian Parliament/MD_indian_parliament.gui`
+- `resources/National Content/palestine.txt`
+- `resources/National Content/Phillippines/01_philippines_decision_categories.txt`
+- `resources/National Content/Phillippines/02_philippines_modifiers.txt`
+- `resources/National Content/Phillippines/99_PHI_scripted_effects.txt`
+- `resources/National Content/Phillippines/events-Philippines.txt`
+- `resources/National Content/Phillippines/idea-Philippines.txt`
+- `resources/National Content/Phillippines/MD_focus_PHI_l_english.yml`
+- `resources/National Content/Phillippines/national_focuses-philippines.txt`
+- `resources/National Content/Phillippines/Phillippines.txt`
+- `resources/National Content/Rojava/99_ROJ_scripted_effects.txt`
+- `resources/National Content/Rojava/MD_focus_ROJ_l_english.yml`
+- `resources/National Content/Rojava/ROJ - Rojava.txt`
+- `resources/National Content/Rojava/Rojava.txt`
+- `resources/National Content/Rojava/rojava_2017.txt`
+- `resources/National Content/Rojava/Rojavan.txt`
+- `resources/National Content/serbia.txt`
+- `resources/National Content/Thailand/MD_focus_SIA_l_english.yml`
+- `resources/National Content/Thailand/thailand.txt`
+- `resources/National Content/Thailand/Thailand_events.txt`
+- `resources/National Content/Thailand/Thailand_ideas.txt`
+- `resources/National Content/Turkey/decisions/Turkey.txt`
+- `resources/National Content/Turkey/ideas/Turkish.txt`
+- `resources/National Content/Turkey/Turkey.txt`
+- `resources/National Content/USA (Gearz)/common/national_focus/United_states-gearz.txt`
+- `resources/National Content/USA (Gearz)/common/national_focus/usa_gearz.txt`
+- `resources/National Content/USA (Gearz)/localisation/MD_USA_focus_l_english.yml`
+- `resources/National Content/USA (Gearz)/localisation/MD_USA_focus_l_french.yml`
+- `resources/National Content/USA (Gearz)/localisation/MD4_USA_Focus_MD4_USA_Focus.yml`
+- `resources/National Content/USA DJT/decisions/USA_DJT.txt`
+- `resources/National Content/USA DJT/focus/usa_djt.txt`
+- `resources/National Content/USA DJT/focus_USA_donald_trump_l_english.yml`
+- `resources/National Content/USA DJT/USA_Trump.txt`
+- `resources/new-mobilization-law/AA_law_military_ideas.txt`
+- `resources/Notepad++ Syntax/PDXScript-HOI-1.4.1.xml`
+- `resources/Officer Corps/AA_law_military_ideas.txt`
+- `resources/Officer Corps/MD_officer_corps_l_english.yml`
+- `resources/Officer Corps/Officer_corps.txt`
+- `resources/Officer Corps/officer_corps_categories.txt`
+- `resources/Old Desired Laws/00_desired_law_calculations.txt`
+- `resources/Old MD Tech Icons - Bird Save/assembly_line.dds`
+- `resources/Old MD Tech Icons - Bird Save/construction1.dds`
+- `resources/Old MD Tech Icons - Bird Save/construction2.dds`
+- `resources/Old MD Tech Icons - Bird Save/construction3.dds`
+- `resources/Old MD Tech Icons - Bird Save/construction4.dds`
+- `resources/Old MD Tech Icons - Bird Save/construction5.dds`
+- `resources/Old MD Tech Icons - Bird Save/enginnering/cold_war_engineering.dds`
+- `resources/Old MD Tech Icons - Bird Save/enginnering/decryption1.tga`
+- `resources/Old MD Tech Icons - Bird Save/enginnering/decryption2.tga`
+- `resources/Old MD Tech Icons - Bird Save/enginnering/decryption3.tga`
+- `resources/Old MD Tech Icons - Bird Save/enginnering/detector.tga`
+- `resources/Old MD Tech Icons - Bird Save/enginnering/encryption1.tga`
+- `resources/Old MD Tech Icons - Bird Save/enginnering/encryption2.tga`
+- `resources/Old MD Tech Icons - Bird Save/enginnering/encryption3.tga`
+- `resources/Old MD Tech Icons - Bird Save/enginnering/internet1.tga`
+- `resources/Old MD Tech Icons - Bird Save/enginnering/internet2.tga`
+- `resources/Old MD Tech Icons - Bird Save/enginnering/modern_communication_systems.dds`
+- `resources/Old MD Tech Icons - Bird Save/enginnering/modern_hardware1.tga`
+- `resources/Old MD Tech Icons - Bird Save/enginnering/modern_hardware2.tga`
+- `resources/Old MD Tech Icons - Bird Save/enginnering/modern_university_systems.dds`
+- `resources/Old MD Tech Icons - Bird Save/enginnering/software.tga`
+- `resources/Old MD Tech Icons - Bird Save/excavation1.dds`
+- `resources/Old MD Tech Icons - Bird Save/excavation2.dds`
+- `resources/Old MD Tech Icons - Bird Save/excavation3.dds`
+- `resources/Old MD Tech Icons - Bird Save/excavation4.dds`
+- `resources/Old MD Tech Icons - Bird Save/excavation5.dds`
+- `resources/Old MD Tech Icons - Bird Save/Machine-Manufacturing/machine_tools1.dds`
+- `resources/Old MD Tech Icons - Bird Save/Machine-Manufacturing/machine_tools2.dds`
+- `resources/Old MD Tech Icons - Bird Save/Machine-Manufacturing/machine_tools3.dds`
+- `resources/Old MD Tech Icons - Bird Save/Machine-Manufacturing/machine_tools4.dds`
+- `resources/Old MD Tech Icons - Bird Save/Machine-Manufacturing/machine_tools5.dds`
+- `resources/Old MD Tech Icons - Bird Save/Machine-Manufacturing/manufacturing1.dds`
+- `resources/Old MD Tech Icons - Bird Save/Machine-Manufacturing/manufacturing2.dds`
+- `resources/Old MD Tech Icons - Bird Save/Machine-Manufacturing/manufacturing3.dds`
+- `resources/Old MD Tech Icons - Bird Save/Machine-Manufacturing/manufacturing4.dds`
+- `resources/Old MD Tech Icons - Bird Save/Machine-Manufacturing/manufacturing5.dds`
+- `resources/Old MD Tech Icons - Bird Save/Machine-Manufacturing/manufacturing6.dds`
+- `resources/Old MD Tech Icons - Bird Save/Oil/oil1.dds`
+- `resources/Old MD Tech Icons - Bird Save/Oil/oil2.dds`
+- `resources/Old MD Tech Icons - Bird Save/Oil/oil3.dds`
+- `resources/Old MD Tech Icons - Bird Save/Oil/oil4.dds`
+- `resources/Old MD Tech Icons - Bird Save/Robotics/robotics1.dds`
+- `resources/Old MD Tech Icons - Bird Save/Robotics/robotics2.dds`
+- `resources/Old MD Tech Icons - Bird Save/Robotics/robotics3.dds`
+- `resources/Old MD Tech Icons - Bird Save/Robotics/robotics4.dds`
+- `resources/Old MD Tech Icons - Bird Save/Robotics/robotics5.dds`
+- `resources/Old MD Tech Icons - Bird Save/Software/software1.dds`
+- `resources/Old MD Tech Icons - Bird Save/Software/software2.dds`
+- `resources/Old MD Tech Icons - Bird Save/Software/software3.dds`
+- `resources/Old MD Tech Icons - Bird Save/Software/software4.dds`
+- `resources/Old MD Tech Icons - Bird Save/Software/software5.dds`
+- `resources/Old MD Tech Icons - Bird Save/Software/software6.dds`
+- `resources/Old MD Tech Icons - Bird Save/Software/software7.dds`
+- `resources/Old Tank Builder Icons/armament/EQ_MOD_CAT_tank_large_main_armament.dds`
+- `resources/Old Tank Builder Icons/armament/EQ_MOD_CAT_tank_medium_main_armament.dds`
+- `resources/Old Tank Builder Icons/armament/EQ_MOD_CAT_tank_small_medium_main_armament.dds`
+- `resources/Old Tank Builder Icons/armament/tank_large_cannon.dds`
+- `resources/Old Tank Builder Icons/armament/tank_large_cannon_2.dds`
+- `resources/Old Tank Builder Icons/armament/tank_large_cannon_3.dds`
+- `resources/Old Tank Builder Icons/armament/tank_medium_cannon.dds`
+- `resources/Old Tank Builder Icons/armament/tank_medium_cannon_2.dds`
+- `resources/Old Tank Builder Icons/armament/tank_medium_cannon_3.dds`
+- `resources/Old Tank Builder Icons/armament/tank_medium_cannon_4.dds`
+- `resources/Old Tank Builder Icons/armament/tank_small_medium_cannon.dds`
+- `resources/Old Tank Builder Icons/armament/tank_small_medium_cannon_2.dds`
+- `resources/Old Tank Builder Icons/armament/tank_small_medium_cannon_3.dds`
+- `resources/Old Tank Builder Icons/armament/tank_small_medium_cannon_4.dds`
+- `resources/Old Tank Builder Icons/armament/tank_very_large_cannon.dds`
+- `resources/Old Tank Builder Icons/armament/tank_very_large_cannon_2.dds`
+- `resources/Old Tank Builder Icons/armament/tank_very_large_cannon_3.dds`
+- `resources/Old Tank Builder Icons/armament/tech_tank_large_cannon.dds`
+- `resources/Old Tank Builder Icons/armament/tech_tank_large_cannon_2.dds`
+- `resources/Old Tank Builder Icons/armament/tech_tank_large_cannon_3.dds`
+- `resources/Old Tank Builder Icons/armament/tech_tank_medium_cannon.dds`
+- `resources/Old Tank Builder Icons/armament/tech_tank_medium_cannon_2.dds`
+- `resources/Old Tank Builder Icons/armament/tech_tank_medium_cannon_3.dds`
+- `resources/Old Tank Builder Icons/armament/tech_tank_medium_cannon_4.dds`
+- `resources/Old Tank Builder Icons/armament/tech_tank_small_medium_cannon.dds`
+- `resources/Old Tank Builder Icons/armament/tech_tank_small_medium_cannon_2.dds`
+- `resources/Old Tank Builder Icons/armament/tech_tank_small_medium_cannon_3.dds`
+- `resources/Old Tank Builder Icons/armament/tech_tank_small_medium_cannon_4.dds`
+- `resources/Old Tank Builder Icons/armament/tech_tank_very_large_cannon.dds`
+- `resources/Old Tank Builder Icons/armament/tech_tank_very_large_cannon_2.dds`
+- `resources/Old Tank Builder Icons/armament/tech_tank_very_large_cannon_3.dds`
+- `resources/Old Tank Builder Icons/armour/EQ_MOD_CAT_tank_additional_armor_era.dds`
+- `resources/Old Tank Builder Icons/armour/EQ_MOD_CAT_tank_additional_armor_spaced.dds`
+- `resources/Old Tank Builder Icons/armour/EQ_MOD_CAT_tank_armor_type.dds`
+- `resources/Old Tank Builder Icons/armour/EQ_MOD_CAT_tank_heavy_armor_type.dds`
+- `resources/Old Tank Builder Icons/armour/reactive_armor_gen1.dds`
+- `resources/Old Tank Builder Icons/armour/reactive_armor_gen2.dds`
+- `resources/Old Tank Builder Icons/armour/reactive_armor_gen3.dds`
+- `resources/Old Tank Builder Icons/armour/reactive_armor_gen4.dds`
+- `resources/Old Tank Builder Icons/armour/spaced_armor_gen1.dds`
+- `resources/Old Tank Builder Icons/armour/spaced_armor_gen2.dds`
+- `resources/Old Tank Builder Icons/armour/spaced_armor_gen3.dds`
+- `resources/Old Tank Builder Icons/armour/tank_composite_armor_gen1.dds`
+- `resources/Old Tank Builder Icons/armour/tank_composite_armor_gen2.dds`
+- `resources/Old Tank Builder Icons/armour/tank_composite_armor_gen3.dds`
+- `resources/Old Tank Builder Icons/armour/tank_composite_armor_gen4.dds`
+- `resources/Old Tank Builder Icons/armour/tank_steel_armor_gen1.dds`
+- `resources/Old Tank Builder Icons/armour/tank_steel_armor_gen2.dds`
+- `resources/Old Tank Builder Icons/armour/tank_steel_armor_gen3.dds`
+- `resources/Old Tank Builder Icons/armour/tech_reactive_armor_gen1.dds`
+- `resources/Old Tank Builder Icons/armour/tech_reactive_armor_gen2.dds`
+- `resources/Old Tank Builder Icons/armour/tech_reactive_armor_gen3.dds`
+- `resources/Old Tank Builder Icons/armour/tech_reactive_armor_gen4.dds`
+- `resources/Old Tank Builder Icons/armour/tech_tank_composite_armor_gen1.dds`
+- `resources/Old Tank Builder Icons/armour/tech_tank_composite_armor_gen2.dds`
+- `resources/Old Tank Builder Icons/armour/tech_tank_composite_armor_gen3.dds`
+- `resources/Old Tank Builder Icons/armour/tech_tank_composite_armor_gen4.dds`
+- `resources/Old Tank Builder Icons/battlestation/EQ_MOD_CAT_tank_battlestation_module.dds`
+- `resources/Old Tank Builder Icons/battlestation/tank_battlestation_1.dds`
+- `resources/Old Tank Builder Icons/battlestation/tank_battlestation_2.dds`
+- `resources/Old Tank Builder Icons/battlestation/tank_battlestation_3.dds`
+- `resources/Old Tank Builder Icons/battlestation/tank_battlestation_4.dds`
+- `resources/Old Tank Builder Icons/battlestation/tank_battlestation_5.dds`
+- `resources/Old Tank Builder Icons/battlestation/tech_tank_battlestation_1.dds`
+- `resources/Old Tank Builder Icons/battlestation/tech_tank_battlestation_2.dds`
+- `resources/Old Tank Builder Icons/battlestation/tech_tank_battlestation_3.dds`
+- `resources/Old Tank Builder Icons/battlestation/tech_tank_battlestation_4.dds`
+- `resources/Old Tank Builder Icons/battlestation/tech_tank_battlestation_5.dds`
+- `resources/Old Tank Builder Icons/engines/afv_gasoline_engine_gen1.dds`
+- `resources/Old Tank Builder Icons/engines/afv_gasoline_engine_gen2.dds`
+- `resources/Old Tank Builder Icons/engines/afv_gasoline_engine_gen3.dds`
+- `resources/Old Tank Builder Icons/engines/EQ_MOD_CAT_afv_diesel_engines.dds`
+- `resources/Old Tank Builder Icons/engines/EQ_MOD_CAT_tank_auxiliary_electric_engine_module.dds`
+- `resources/Old Tank Builder Icons/engines/EQ_MOD_CAT_tank_diesel_engine.dds`
+- `resources/Old Tank Builder Icons/engines/EQ_MOD_CAT_tank_electric_engine_type.dds`
+- `resources/Old Tank Builder Icons/engines/EQ_MOD_CAT_tank_turbine_engine_type.dds`
+- `resources/Old Tank Builder Icons/engines/tank_aux_engine.dds`
+- `resources/Old Tank Builder Icons/engines/tank_aux_engine_2.dds`
+- `resources/Old Tank Builder Icons/engines/tank_diesel_engine_gen1.dds`
+- `resources/Old Tank Builder Icons/engines/tank_diesel_engine_gen2.dds`
+- `resources/Old Tank Builder Icons/engines/tank_diesel_engine_gen3.dds`
+- `resources/Old Tank Builder Icons/engines/tank_diesel_engine_gen4.dds`
+- `resources/Old Tank Builder Icons/engines/tank_diesel_engine_gen5.dds`
+- `resources/Old Tank Builder Icons/engines/tank_diesel_engine_gen6.dds`
+- `resources/Old Tank Builder Icons/engines/tank_diesel_engine_gen7.dds`
+- `resources/Old Tank Builder Icons/engines/tank_electric_engine_gen1.dds`
+- `resources/Old Tank Builder Icons/engines/tank_electric_engine_gen2.dds`
+- `resources/Old Tank Builder Icons/engines/tank_gas_turbine_engine_gen1.dds`
+- `resources/Old Tank Builder Icons/engines/tank_gas_turbine_engine_gen2.dds`
+- `resources/Old Tank Builder Icons/engines/tank_gas_turbine_engine_gen3.dds`
+- `resources/Old Tank Builder Icons/engines/tank_gas_turbine_engine_gen4.dds`
+- `resources/Old Tank Builder Icons/engines/tank_gas_turbine_engine_gen5.dds`
+- `resources/Old Tank Builder Icons/engines/tank_gas_turbine_engine_gen6.dds`
+- `resources/Old Tank Builder Icons/engines/tech_tank_diesel_engine_gen1.dds`
+- `resources/Old Tank Builder Icons/engines/tech_tank_diesel_engine_gen2.dds`
+- `resources/Old Tank Builder Icons/engines/tech_tank_diesel_engine_gen3.dds`
+- `resources/Old Tank Builder Icons/engines/tech_tank_diesel_engine_gen4.dds`
+- `resources/Old Tank Builder Icons/engines/tech_tank_diesel_engine_gen5.dds`
+- `resources/Old Tank Builder Icons/engines/tech_tank_diesel_engine_gen6.dds`
+- `resources/Old Tank Builder Icons/engines/tech_tank_diesel_engine_gen7.dds`
+- `resources/Old Tank Builder Icons/engines/tech_tank_electric_engine_gen1.dds`
+- `resources/Old Tank Builder Icons/engines/tech_tank_electric_engine_gen2.dds`
+- `resources/Old Tank Builder Icons/engines/tech_tank_electric_engine_gen3.dds`
+- `resources/Old Tank Builder Icons/engines/tech_tank_electric_engine_gen4.dds`
+- `resources/Old Tank Builder Icons/engines/tech_tank_gas_turbine_engine_gen1.dds`
+- `resources/Old Tank Builder Icons/engines/tech_tank_gas_turbine_engine_gen2.dds`
+- `resources/Old Tank Builder Icons/engines/tech_tank_gas_turbine_engine_gen3.dds`
+- `resources/Old Tank Builder Icons/engines/tech_tank_gas_turbine_engine_gen4.dds`
+- `resources/Old Tank Builder Icons/engines/tech_tank_gas_turbine_engine_gen5.dds`
+- `resources/Old Tank Builder Icons/engines/tech_tank_gas_turbine_engine_gen6.dds`
+- `resources/Old Tank Builder Icons/loading_system/automatic_loading.dds`
+- `resources/Old Tank Builder Icons/loading_system/EQ_MOD_CAT_tank_reload_module.dds`
+- `resources/Old Tank Builder Icons/loading_system/manual_loading.dds`
+- `resources/Old Tank Builder Icons/loading_system/revolver_magazine.dds`
+- `resources/Old Tank Builder Icons/special_modules/aa_launchers_gen1.dds`
+- `resources/Old Tank Builder Icons/special_modules/aa_launchers_gen2.dds`
+- `resources/Old Tank Builder Icons/special_modules/aa_launchers_gen3.dds`
+- `resources/Old Tank Builder Icons/special_modules/aa_launchers_gen4.dds`
+- `resources/Old Tank Builder Icons/special_modules/aa_launchers_gen5.dds`
+- `resources/Old Tank Builder Icons/special_modules/additional_machine_guns.dds`
+- `resources/Old Tank Builder Icons/special_modules/EQ_MOD_CAT_tank_aa_module.dds`
+- `resources/Old Tank Builder Icons/special_modules/EQ_MOD_CAT_tank_atgm_module.dds`
+- `resources/Old Tank Builder Icons/special_modules/EQ_MOD_CAT_tank_defense_module.dds`
+- `resources/Old Tank Builder Icons/special_modules/EQ_MOD_CAT_tank_smoke_module.dds`
+- `resources/Old Tank Builder Icons/special_modules/EQ_MOD_CAT_tank_special_module.dds`
+- `resources/Old Tank Builder Icons/special_modules/EQ_MOD_CAT_tank_support_drone_module.dds`
+- `resources/Old Tank Builder Icons/special_modules/hardkill_system_gen1.dds`
+- `resources/Old Tank Builder Icons/special_modules/hardkill_system_gen2.dds`
+- `resources/Old Tank Builder Icons/special_modules/smoke_launchers.dds`
+- `resources/Old Tank Builder Icons/special_modules/smoke_launchers_2.dds`
+- `resources/Old Tank Builder Icons/special_modules/smoothbore_atgm_gen1.dds`
+- `resources/Old Tank Builder Icons/special_modules/smoothbore_atgm_gen2.dds`
+- `resources/Old Tank Builder Icons/special_modules/smoothbore_atgm_gen3.dds`
+- `resources/Old Tank Builder Icons/special_modules/smoothbore_atgm_gen4.dds`
+- `resources/Old Tank Builder Icons/special_modules/smoothbore_atgm_gen5.dds`
+- `resources/Old Tank Builder Icons/special_modules/tank_drones.dds`
+- `resources/Old Tank Builder Icons/special_modules/tank_drones_2.dds`
+- `resources/Old Tank Builder Icons/special_modules/tank_longer_gun.dds`
+- `resources/Old Tank Builder Icons/special_modules/wet_ammo_storage.dds`
+- `resources/Old Tank Builder Icons/suspension/EQ_MOD_CAT_tank_suspension_type.dds`
+- `resources/Old Tank Builder Icons/suspension/tank_pneumatic_suspension.dds`
+- `resources/Old Tank Builder Icons/suspension/tank_torsion_bar_suspension.dds`
+- `resources/Old Tank Builder Icons/turrets/EQ_MOD_CAT_tank_turret_type.dds`
+- `resources/Old Tank Builder Icons/turrets/EQ_MOD_CAT_tank_unmanned_turret_type.dds`
+- `resources/Old Tank Builder Icons/turrets/tank_base_tank_turret.dds`
+- `resources/Old Tank Builder Icons/turrets/tank_no_turret.dds`
+- `resources/Old Tank Builder Icons/turrets/tank_oscillating_turret.dds`
+- `resources/Old Tank Builder Icons/turrets/tank_soviet_turret.dds`
+- `resources/Old Tank Builder Icons/turrets/tank_unmanned_turret.dds`
+- `resources/OOBs/.~lock.Equipment codes for OOBs.ods#`
+- `resources/OOBs/ai_tech.txt`
+- `resources/OOBs/air test.txt`
+- `resources/OOBs/Battalion codes for OOBs.txt`
+- `resources/OOBs/Equipment codes for OOBs.ods`
+- `resources/OOBs/Equipment codes for OOBs.xlsx`
+- `resources/OOBs/Equipment_Cost_Balancing.xlsx`
+- `resources/OOBs/killerrabbit_std_templates.txt`
+- `resources/OOBs/land balance notes.txt`
+- `resources/OOBs/land_doctrine_modifers.txt`
+- `resources/OOBs/MD4_Land_Doctrine_Summary.txt`
+- `resources/OOBs/oob errors.txt`
+- `resources/OOBs/PDF and Data/ship_classes_reference.xlsx`
+- `resources/OOBs/PDF and Data/The Military Balance 2004-2005.pdf`
+- `resources/OOBs/PDF and Data/The Military Balance 2016 - 2016.pdf`
+- `resources/OOBs/PDF and Data/The Military Balance-2018.pdf`
+- `resources/OOBs/PDF and Data/the_military_balance_2000.pdf`
+- `resources/OOBs/PDF and Data/the_military_balance_2001.pdf`
+- `resources/OOBs/PDF and Data/the_military_balance_200506.pdf`
+- `resources/OOBs/PDF and Data/the_military_balance_2006.pdf`
+- `resources/OOBs/PDF and Data/the_military_balance_2008.pdf`
+- `resources/OOBs/PDF and Data/the_military_balance_2011.pdf`
+- `resources/OOBs/PDF and Data/Trends-in-international-arms-transfers-2016.pdf`
+- `resources/OOBs/PDF and Data/WorldAirForces2015.pdf`
+- `resources/Operations/Operations and phases.xlsx`
+- `resources/Opinion_modifiers.xlsx`
+- `resources/parliament_generator/example.svg`
+- `resources/parliament_generator/locations.txt`
+- `resources/parliament_generator/locations2.txt`
+- `resources/parliament_generator/program.py`
+- `resources/parliament_generator/readme.txt`
+- `resources/Politics/Parties.xlsx`
+- `resources/Politics/protests.xlsx`
+- `resources/population_estimator.py`
+- `resources/Power projection/on_action.txt`
+- `resources/Power projection/Power Projection - events.txt`
+- `resources/Power projection/Power Projection - ideas.txt`
+- `resources/Railroad stuff/Railway cost calculator.xlsx`
+- `resources/ROC_Taiwan_Pack/common/decisions/categories/taiwan_decision_categories.txt`
+- `resources/ROC_Taiwan_Pack/common/decisions/taiwan.txt`
+- `resources/ROC_Taiwan_Pack/common/game_rules/00_game_rules.txt`
+- `resources/ROC_Taiwan_Pack/common/ideas/Chinese.txt`
+- `resources/ROC_Taiwan_Pack/common/national_focus/taiwan.txt`
+- `resources/ROC_Taiwan_Pack/common/opinion_modifiers/TAI_opinion_modifiers.txt`
+- `resources/ROC_Taiwan_Pack/descriptor.mod`
+- `resources/ROC_Taiwan_Pack/events/Taiwan.txt`
+- `resources/ROC_Taiwan_Pack/history/countries/TAI - Taiwan.txt`
+- `resources/ROC_Taiwan_Pack/localisation/english/MD_focus_TAI_l_english.yml`
+- `resources/ROC_Taiwan_Pack/localisation/simp_chinese/MD_focus_TAI_l_simp_chinese.yml`
+- `resources/ROC_Taiwan_Pack/Thumbnail.png`
+- `resources/Ship_builder.xlsx`
+- `resources/Ships/Aircraft_Carrier/Admiral_Kuznetsov_Class_1985.dds`
+- `resources/Ships/Aircraft_Carrier/Centaur_Class_1965.dds`
+- `resources/Ships/Aircraft_Carrier/Future_Carrier_2015.dds`
+- `resources/Ships/Aircraft_Carrier/Future_Carrier_2025.dds`
+- `resources/Ships/Aircraft_Carrier/Future_Carrier_2035.dds`
+- `resources/Ships/Aircraft_Carrier/Invincible_Class_1975.dds`
+- `resources/Ships/Aircraft_Carrier/Kiev_Class_1975.dds`
+- `resources/Ships/Aircraft_Carrier/KittyHawk_class.dds`
+- `resources/Ships/Aircraft_Carrier/Nanuchka_Class.dds`
+- `resources/Ships/Aircraft_Carrier/Queen_Elizabeth_Class_2005.dds`
+- `resources/Ships/Convoy/convoy.dds`
+- `resources/Ships/Corvettes/Buyan_class_2005.dds`
+- `resources/Ships/Corvettes/Corvettes_Nanuchka_class_1965.dds`
+- `resources/Ships/Corvettes/Future_Corvette_2025.dds`
+- `resources/Ships/Corvettes/Future_Corvette_2035.dds`
+- `resources/Ships/Corvettes/Gepard_Class_1995.dds`
+- `resources/Ships/Corvettes/Grisha_class_corvette_1975.dds`
+- `resources/Ships/Corvettes/Nanuchka_class_1965.dds`
+- `resources/Ships/Corvettes/Petya_Class_1965.dds`
+- `resources/Ships/Corvettes/SIGMAR_Class_Corvette_2005.dds`
+- `resources/Ships/Corvettes/Steregushchiy_class.dds`
+- `resources/Ships/Corvettes/Tarantul_Class_1985.dds`
+- `resources/Ships/Corvettes/Type056_Class.dds`
+- `resources/Ships/Corvettes/Visby_Corvette_2015.dds`
+- `resources/Ships/Diesel_Attack_Subs/A26_Viking_class_2015.dds`
+- `resources/Ships/Diesel_Attack_Subs/Dis_Attack_Sub_2025.dds`
+- `resources/Ships/Diesel_Attack_Subs/Dis_Attack_Sub_2035.dds`
+- `resources/Ships/Diesel_Attack_Subs/Gotland_Class_2005.dds`
+- `resources/Ships/Diesel_Attack_Subs/Kilo_class_1985.dds`
+- `resources/Ships/Diesel_Attack_Subs/Lada_class_2005.dds`
+- `resources/Ships/Diesel_Attack_Subs/Nacken_Class_1975.dds`
+- `resources/Ships/Diesel_Attack_Subs/Romeo_class_1965.dds`
+- `resources/Ships/Diesel_Attack_Subs/Sjoormen_Class_1965.dds`
+- `resources/Ships/Diesel_Attack_Subs/Tango_class_1975.dds`
+- `resources/Ships/Diesel_Attack_Subs/Type035_class.dds`
+- `resources/Ships/Diesel_Attack_Subs/Type039_class.dds`
+- `resources/Ships/Diesel_Attack_Subs/Type039A_class.dds`
+- `resources/Ships/Diesel_Attack_Subs/Victoria_Class_1985.dds`
+- `resources/Ships/Frigates/Admiral_Gorskhov_class_2005.dds`
+- `resources/Ships/Frigates/Admiral_Grigorovich_class_1995.dds`
+- `resources/Ships/Frigates/Brooke_class_1965.dds`
+- `resources/Ships/Frigates/Freedom_class_2005.dds`
+- `resources/Ships/Frigates/Future_Frigate_2025.dds`
+- `resources/Ships/Frigates/Future_Frigate_2035.dds`
+- `resources/Ships/Frigates/Independence_Class_2005.dds`
+- `resources/Ships/Frigates/Independence_Class_2015.dds`
+- `resources/Ships/Frigates/Knox_class_frigate_1965.dds`
+- `resources/Ships/Frigates/Krivak_class_1975.dds`
+- `resources/Ships/Frigates/La_Fayette_class_Frigate_1995.dds`
+- `resources/Ships/Frigates/Neustrashimy_class_1985.dds`
+- `resources/Ships/Frigates/Oliver_Hazard_Perry_class_frigate_1975.dds`
+- `resources/Ships/Frigates/Oliver-_Hazard_Perry_class_frigate_1975.dds`
+- `resources/Ships/Frigates/Oliver_Hazard_Perry_long_class_frigate_1985.dds`
+- `resources/Ships/Frigates/Riga_class_1965.dds`
+- `resources/Ships/Frigates/Type_23_DukeClass_1985.dds`
+- `resources/Ships/Frigates/Type_26_Frigate_2015.dds`
+- `resources/Ships/Frigates/Type053_Jianghu_Class.dds`
+- `resources/Ships/Frigates/Type053H1G_Jianghu_Class.dds`
+- `resources/Ships/Frigates/Type054_Jiangkai_Class.dds`
+- `resources/Ships/Frigates/Valour_Class.dds`
+- `resources/Ships/Guid_Missile_Cruis/Belknap_class_1965.dds`
+- `resources/Ships/Guid_Missile_Cruis/Future_Cruiser_2025.dds`
+- `resources/Ships/Guid_Missile_Cruis/Future_Cruiser_2035.dds`
+- `resources/Ships/Guid_Missile_Cruis/Kara_class_1965.dds`
+- `resources/Ships/Guid_Missile_Cruis/Shkval_Class_2015.dds`
+- `resources/Ships/Guid_Missile_Cruis/Slava_class_1985.dds`
+- `resources/Ships/Guid_Missile_Cruis/Ticonderoga_class_1985.dds`
+- `resources/Ships/Guid_Missile_Cruis/Virginia_class.dds`
+- `resources/Ships/Guid_Missile_Cruis/Virginia_class_1975.dds`
+- `resources/Ships/Guid_Missile_Cruis/Zumwalt_class_2015.dds`
+- `resources/Ships/Guid_Missile_Destroy/Arleigh_Burke_Class_1985.dds`
+- `resources/Ships/Guid_Missile_Destroy/Charles_Adams_class_1965.dds`
+- `resources/Ships/Guid_Missile_Destroy/Futrue_Destroyer_2025.dds`
+- `resources/Ships/Guid_Missile_Destroy/Future_Destroyer_2035.dds`
+- `resources/Ships/Guid_Missile_Destroy/Kashin_class_1965.dds`
+- `resources/Ships/Guid_Missile_Destroy/Kongo_Class_1995.dds`
+- `resources/Ships/Guid_Missile_Destroy/Sovremennyy_class_1975.dds`
+- `resources/Ships/Guid_Missile_Destroy/Spruance_Class_1975.dds`
+- `resources/Ships/Guid_Missile_Destroy/Type051B_Luhai_Class.dds`
+- `resources/Ships/Guid_Missile_Destroy/Type051C_Luyang_Class.dds`
+- `resources/Ships/Guid_Missile_Destroy/Type052_Luhu_Class.dds`
+- `resources/Ships/Guid_Missile_Destroy/Type052D.dds`
+- `resources/Ships/Guid_Missile_Destroy/Type055_Longyan_Class.dds`
+- `resources/Ships/Guid_Missile_Destroy/Type42_Sheffield_II_Class_1975.dds`
+- `resources/Ships/Guid_Missile_Destroy/Type45_Daring_Class_2005.dds`
+- `resources/Ships/Guid_Missile_Destroy/Zumwalt_class_2015.dds`
+- `resources/Ships/Guid_Missile_Destroy/Zumwalt_Destroyer_2015.dds`
+- `resources/Ships/LHA/LHA_1985.dds`
+- `resources/Ships/LHA/LHA_2025.dds`
+- `resources/Ships/LHA/LHA_2035.dds`
+- `resources/Ships/LHA/Mistral_class_2015.dds`
+- `resources/Ships/LHA/Tarawa_class_1975.dds`
+- `resources/Ships/LPH/Dokdo_class_2015.dds`
+- `resources/Ships/LPH/Iwo_Jima_class_1975.dds`
+- `resources/Ships/LPH/LPH_2025.dds`
+- `resources/Ships/LPH/LPH_2035.dds`
+- `resources/Ships/LPH/Ocean_Class_1985.dds`
+- `resources/Ships/Missile_Subs/Benjamin_Franklin_Class_1975.dds`
+- `resources/Ships/Missile_Subs/Charlie_class_1975.dds`
+- `resources/Ships/Missile_Subs/Columbia_class_2015.dds`
+- `resources/Ships/Missile_Subs/Echo_class_1965.dds`
+- `resources/Ships/Missile_Subs/Lafayette_class_1965.dds`
+- `resources/Ships/Missile_Subs/Mis_Sub_2025.dds`
+- `resources/Ships/Missile_Subs/Mis_Sub_2035.dds`
+- `resources/Ships/Missile_Subs/Ohio_class_1995.dds`
+- `resources/Ships/Missile_Subs/Oscar_class_1985.dds`
+- `resources/Ships/Missile_Subs/Resolution_Class_1965.dds`
+- `resources/Ships/Missile_Subs/Type092_class.dds`
+- `resources/Ships/Missile_Subs/Vanguard_class_1985.dds`
+- `resources/Ships/Nuclear_Aircraft_Carrier/Enterprise_Class_1975.dds`
+- `resources/Ships/Nuclear_Aircraft_Carrier/Ford_Class_2005.dds`
+- `resources/Ships/Nuclear_Aircraft_Carrier/Future_Carrier_2015.dds`
+- `resources/Ships/Nuclear_Aircraft_Carrier/Future_Carrier_2025.dds`
+- `resources/Ships/Nuclear_Aircraft_Carrier/Future_Carrier_2035.dds`
+- `resources/Ships/Nuclear_Aircraft_Carrier/Nimitz_Class_1985.dds`
+- `resources/Ships/Nuclear_Aircraft_Carrier/Ulyanovsk_class_1985.dds`
+- `resources/Ships/Nuclear_Battle_Cruisers/Battlecrusier_2015.dds`
+- `resources/Ships/Nuclear_Battle_Cruisers/Battlecrusier_2025_2035.dds`
+- `resources/Ships/Nuclear_Battle_Cruisers/Kirov_1975.dds`
+- `resources/Ships/Nuke_Attack_Subs/Agamemnon_Class_2025.dds`
+- `resources/Ships/Nuke_Attack_Subs/Akula_class_1985.dds`
+- `resources/Ships/Nuke_Attack_Subs/Churchill_Class_1965.dds`
+- `resources/Ships/Nuke_Attack_Subs/Echo_class.dds`
+- `resources/Ships/Nuke_Attack_Subs/Graney_class_1995.dds`
+- `resources/Ships/Nuke_Attack_Subs/Los_Angeles_class_1985.dds`
+- `resources/Ships/Nuke_Attack_Subs/November_class_1965.dds`
+- `resources/Ships/Nuke_Attack_Subs/Nuke_Attack_Sub_2035.dds`
+- `resources/Ships/Nuke_Attack_Subs/Permit_class_1965.dds`
+- `resources/Ships/Nuke_Attack_Subs/Seawolf_Class_2005.dds`
+- `resources/Ships/Nuke_Attack_Subs/Sturgeon_Class_1975.dds`
+- `resources/Ships/Nuke_Attack_Subs/Trafalgar_class_1985.dds`
+- `resources/Ships/Nuke_Attack_Subs/Type091_class.dds`
+- `resources/Ships/Nuke_Attack_Subs/Type093_class.dds`
+- `resources/Ships/Nuke_Attack_Subs/Type098_Qin_Class_2015.dds`
+- `resources/Ships/Nuke_Attack_Subs/Victor_class_1975.dds`
+- `resources/Ships/Nuke_Attack_Subs/Virginia_class_1995.dds`
+- `resources/somalia-development/common-decisions/Jubaland.txt`
+- `resources/somalia-development/common-decisions/jubaland_decision_categories.txt`
+- `resources/somalia-development/common-decisions/Political Desicions.txt`
+- `resources/somalia-development/common-decisions/Puntland.txt`
+- `resources/somalia-development/common-decisions/puntland_decision_categories.txt`
+- `resources/somalia-development/common-decisions/Somalia.txt`
+- `resources/somalia-development/common-decisions/somalia_decision_categories.txt`
+- `resources/somalia-development/events/Puntland.txt`
+- `resources/somalia-development/events/Somalia.txt`
+- `resources/somalia-development/events/Somaliland.txt`
+- `resources/somalia-development/events/UAE.txt`
+- `resources/somalia-development/ideas/Jubaland.txt`
+- `resources/somalia-development/ideas/Puntland.txt`
+- `resources/somalia-development/MD_focus_JUB_l_english.yml`
+- `resources/somalia-development/MD_focus_PUN_l_english.yml`
+- `resources/somalia-development/national_focus/jubaland.txt`
+- `resources/somalia-development/national_focus/puntland.txt`
+- `resources/somalia-development/national_focus/somali_shared.txt`
+- `resources/somalia-development/PUN_2000_nonnsb.txt`
+- `resources/somalia-development/PUN_2000_nsb.txt`
+- `resources/somalia-development/PUN_2017.txt`
+- `resources/somalia-development/PUN_cheat_ships.txt`
+- `resources/somalia-development/PUN_government_units.txt`
+- `resources/somalia-development/PUN_mercenary_unit.txt`
+- `resources/somalia-development/PUN_pirate_units.txt`
+- `resources/somalia-development/PUN_uae_1.txt`
+- `resources/somalia-development/PUN_uae_2.txt`
+- `resources/somalia-development/scripted_effects/00_PUN_names.txt`
+- `resources/somalia-development/scripted_effects/99_somali_triggers.txt`
+- `resources/somalia-development/scripted_effects/99_somalia_scripted_effects.txt`
+- `resources/somalia-development/scripted_effects/PUN_political_leaders.txt`
+- `resources/somalia-development/scripted_effects/PUN_ship_name.txt`
+- `resources/Space Rework/00_missiles_models.txt`
+- `resources/Space Rework/00_missiles_scripted_effects.txt`
+- `resources/Space Rework/MD_missiles_on_actions.txt`
+- `resources/Space Rework/missiles_scripted_localisation.txt`
+- `resources/Space Rework/missiles_textures.txt`
+- `resources/Space System/mars_decision_categories.txt`
+- `resources/Space System/MD_space.yml`
+- `resources/Space System/md_space_icons.gfx`
+- `resources/Space System/space.txt`
+- `resources/Space System/space_decision_categories.txt`
+- `resources/Space System/space_scripted_gui.gui`
+- `resources/Space System/space_scripted_gui.txt`
+- `resources/sphere of influence stuff/00_SoI_effects.txt`
+- `resources/sphere of influence stuff/influence_spheres.gui`
+- `resources/sphere of influence stuff/MD_sphere_of_influence.txt`
+- `resources/sphere of influence stuff/MD_spheres_of_influence_triggers.txt`
+- `resources/sphere of influence stuff/Sphere of Influence.txt`
+- `resources/sphere of influence stuff/spheres_of_influence_l_english.yml`
+- `resources/start up gui/MD_startup_info_event_gui.gui`
+- `resources/start up gui/MD_startup_info_gui.txt`
+- `resources/state_category_cheat_sheet.jpg`
+- `resources/subideologies guide.docx`
+- `resources/Subideologies modding.txt`
+- `resources/tajikistan/TAJ - Tajikistan.txt`
+- `resources/tajikistan/tajikistan.txt`
+- `resources/Tech/doctrine_legacy.txt`
+- `resources/Tech/Percentage of people with internet.xlsx`
+- `resources/Tech/Research_Slot.xlsx`
+- `resources/test.csv`
+- `resources/Trade Rework/00_money_system.txt`
+- `resources/Trade Rework/00_on_actions.txt`
+- `resources/Trade Rework/00_resources.txt`
+- `resources/Trade Rework/AA_law_economics.txt`
+- `resources/Trade Rework/custom_trade_stuff_l_english.yml`
+- `resources/Trade Rework/CWIC_Trade.txt`
+- `resources/Trade Rework/IC_Trade_Scripted_Effects.txt`
+- `resources/Trade Rework/IC_Trade_Scripted_Effects_Cuts.txt`
+- `resources/Trade Rework/modifier_definitions.txt`
+- `resources/Trade Rework/trade_decisions.txt`
+- `resources/Trade Rework/trade_decisions_category.txt`
+- `resources/Trade Rework/trade_events.txt`
+- `resources/Trade Rework/Trade_Tab.txt`
+- `resources/turkmenistan/12_central_asia_dynamic_modifiers.txt`
+- `resources/turkmenistan/dec/Turkmen.txt`
+- `resources/turkmenistan/events/Turkmen.txt`
+- `resources/turkmenistan/TRK - Turkmenistan.txt`
+- `resources/turkmenistan/turkmen.txt`
+- `resources/turkmenistan/turkmen_ideas.txt`
+- `resources/turkmenistan/turkmen_l_english.yml`
+- `resources/User Interface/airoverview_button.dds`
+- `resources/User Interface/armyoverview_button.dds`
+- `resources/User Interface/navyoverview_button.dds`
+- `resources/User Interface/toolbar/construction_button.dds`
+- `resources/User Interface/toolbar/deployment_button.dds`
+- `resources/User Interface/toolbar/diplomacy_button.dds`
+- `resources/User Interface/toolbar/intelligence_button.dds`
+- `resources/User Interface/toolbar/ledger_button.dds`
+- `resources/User Interface/toolbar/production_button.dds`
+- `resources/User Interface/toolbar/science_button.dds`
+- `resources/User Interface/toolbar/topbar_decisionview_button.dds`
+- `resources/User Interface/toolbar/trade_button.dds`
+- `resources/War analysis.xlsx`
+- `resources/Warsaw/gdr_invasion_category_decision_categories.txt`
+- `resources/Warsaw/gdr_war_decisions.txt`
+- `resources/Warsaw/on_actions_Warsaw_Pact_Reactions_Uprising.txt`
+- `resources/Warsaw/Reactions_on_Uprisings_events_I_english.txt`
+- `resources/Warsaw/Russia.txt_15_.txt`
+- `resources/Warsaw/Warsaw_Pact_intervention__GDR_Event_reworked.txt`
+
+## tools
+
+- `tools/__pycache__/convert_to_dds.cpython-313.pyc`
+- `tools/__pycache__/language_check.cpython-311.pyc`
+- `tools/__pycache__/path_utils.cpython-312.pyc`
+- `tools/batchDDS.py`
+- `tools/calculate_days.py`
+- `tools/check_basic_style.py`
+- `tools/check_basic_style_2.py`
+- `tools/coding_standards.py`
+- `tools/convert to utf8.py`
+- `tools/count_of_focuses.py`
+- `tools/create_modifiers.py`
+- `tools/duplicate_icon.py`
+- `tools/find_duplicate_textures.py`
+- `tools/find_idea_references.sh`
+- `tools/find_scripted_loc_references.sh`
+- `tools/fix_indentation_and_spacing.py`
+- `tools/fix_line_endings.py`
+- `tools/fix_styling.py`
+- `tools/generate_tribute_ideas.py`
+- `tools/gfx_entry_generator.py`
+- `tools/gfx_entry_generator_gui.py`
+- `tools/gfxEntryGenerator.md`
+- `tools/loc.py`
+- `tools/logging_tool.py`
+- `tools/old/add in naval oobs.py`
+- `tools/old/check oob errors.py`
+- `tools/old/check_ids.py`
+- `tools/old/check_mock.py`
+- `tools/old/EDIT.py`
+- `tools/old/empty ship name files.py`
+- `tools/old/find_internal_faction_flag_replace.py`
+- `tools/old/focus_gfx_shine.py`
+- `tools/old/generate influence.py`
+- `tools/old/generate politics.py`
+- `tools/old/generate_leader_IDs.py`
+- `tools/old/generate-tt-for-law-block.py`
+- `tools/old/MDTOOL.py`
+- `tools/path_utils.py`
+- `tools/README.md`
+- `tools/requirements.txt`
+- `tools/standardize_focus_tree.py`
+- `tools/state_gfx.py`
+- `tools/text_to_focus_and_focus_to_loc.py`
+- `tools/to_focus_name.py`
+- `tools/validate_localization_encoding.py`
+- `tools/validate_mod_encoding.py`

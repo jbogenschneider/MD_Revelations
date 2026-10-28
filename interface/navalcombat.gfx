@@ -70,11 +70,6 @@ spriteTypes = {
 		noOfFrames = 2
 	}
 	spriteType = {
-		name = "GFX_navalcombat_ship_icon_diesel_attack_submarine"
-		texturefile = "gfx/interface/navalcombat/ships/diesel_attack_submarine.dds"
-		noOfFrames = 2
-	}
-	spriteType = {
 		name = "GFX_navalcombat_ship_icon_missile_submarine"
 		texturefile = "gfx/interface/navalcombat/ships/missile_submarine.dds"
 		noOfFrames = 2
@@ -111,6 +106,11 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_navalcombat_ship_icon_destroyer"
+		texturefile = "gfx/interface/navalcombat/ships/destroyer.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_navalcombat_ship_icon_screen_destroyer"
 		texturefile = "gfx/interface/navalcombat/ships/destroyer.dds"
 		noOfFrames = 2
 	}
@@ -212,11 +212,6 @@ spriteTypes = {
 		noOfFrames = 1
 	}
 	spriteType = {
-		name = "GFX_navalcombat_ship_small_icon_diesel_attack_submarine"
-		texturefile = "gfx/interface/counters/ships_small/onmap_diesel_attack_submarine.dds"
-		noOfFrames = 1
-	}
-	spriteType = {
 		name = "GFX_navalcombat_ship_small_icon_missile_submarine"
 		texturefile = "gfx/interface/counters/ships_small/onmap_missile_submarine.dds"
 		noOfFrames = 1
@@ -253,6 +248,11 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_navalcombat_ship_small_icon_destroyer"
+		texturefile = "gfx/interface/counters/ships_small/onmap_destroyer.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_navalcombat_ship_small_icon_screen_destroyer"
 		texturefile = "gfx/interface/counters/ships_small/onmap_destroyer.dds"
 		noOfFrames = 1
 	}

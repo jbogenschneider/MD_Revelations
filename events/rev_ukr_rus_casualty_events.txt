@@ -60,7 +60,7 @@ country_event = {
 				instant_build = yes
 			}
 		}
-		9663 = {
+		1140 = { # South Krasnodar (province 9663 belongs to state 1140)
 			add_building_construction = {
 				type = anti_air_building
 				level = 2
@@ -134,7 +134,7 @@ country_event = {
 				instant_build = yes
 			}
 		}	
-		11223 = { # zap
+		1223 = { # North Zaporizhzhia
 			add_building_construction = {
 				type = bunker
 				level = 4

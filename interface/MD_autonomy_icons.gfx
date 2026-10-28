@@ -69,16 +69,16 @@ spriteTypes = {
 		textureFile = "gfx/interface/autonomy/autonomy_iranic_confederation.dds"
 	}
 	spriteType = {
-		name = "GFX_autonomy_republic_ukr_icon"
-		textureFile = "gfx/interface/autonomy/autonomy_republic_ukr_icon.dds"
+		name = "GFX_autonomy_danish_crown_holding_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_danish_crown_holding.dds"
+	}
+	spriteType = {
+		name = "GFX_autonomy_constituent_country_very_low_devolution_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_constituent.dds"
 	}
 	spriteType = {
 		name = "GFX_autonomy_republic_ukr_icon"
 		textureFile = "gfx/interface/autonomy/autonomy_republic_ukr_icon.dds"
-	}
-	spriteType = {
-		name = "GFX_autonomy_republic_rf_mal_icon"
-		textureFile = "gfx/interface/autonomy/autonomy_republic_rf_mal_icon.dds"
 	}
     spriteType = {
 		name = "GFX_autonomy_proxy_state_icon"
@@ -218,10 +218,6 @@ spriteTypes = {
 		textureFile = "gfx/interface/autonomy/autonomy_governorate_rf_icon.dds"
 	}
 	spriteType = {
-		name = "GFX_autonomy_pmc_wagner_icon"
-		textureFile = "gfx/interface/autonomy/autonomy_pmc_wagner_icon.dds"
-	}
-	spriteType = {
 		name = "GFX_autonomy_marz_arm_icon"
 		textureFile = "gfx/interface/autonomy/autonomy_marz_arm_icon.dds"
 	}
@@ -234,7 +230,7 @@ spriteTypes = {
 		texturefile = "gfx/interface/autonomy/autonomy_personal_union_puppet.dds"
 	}
 	spriteType = {
-		name = "GFX_autonomy_france"
+		name = "GFX_autonomy_french_overseas_department_icon"
 		texturefile = "gfx/interface/autonomy/autonomy_france.dds"
 	}
 	spriteType = {
