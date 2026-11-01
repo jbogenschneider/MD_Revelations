@@ -1,0 +1,8 @@
+# Sprites required by the 1.19 Division Designer control structure.
+spriteTypes = {
+spriteType = {
+		name = "GFX_rev_division_designer_119_bg"
+		textureFile = "gfx//interface//division_designer_popup_bg_new.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+}

@@ -1,0 +1,45 @@
+add_namespace = rev_ita_election
+
+# The election result takes effect immediately, for AI and human Italy alike.
+country_event = {
+	id = rev_ita_election.1
+	title = rev_ita_election.1.t
+	desc = rev_ita_election.1.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = ITA
+		NOT = { has_country_flag = rev_ita_2027_election_resolved }
+	}
+
+	immediate = {
+		set_country_flag = rev_ita_2027_election_resolved
+		retire_country_leader = yes
+		set_politics = {
+			ruling_party = nationalist
+			last_election = "2027.12.22"
+			election_frequency = 72
+			elections_allowed = yes
+		}
+		clear_array = ruling_party
+		clear_array = gov_coalition_array
+		add_to_array = { ruling_party = 21 } # Nat_Fascism, not the Salafist outlook.
+		create_country_leader = {
+			name = "Stefano De Beaman"
+			picture = "thebeastsman.dds"
+			ideology = Nat_Fascism
+			traits = {
+				nationalist_Nat_Fascism
+			}
+		}
+		set_country_flag = endtimes_cabal_initialized
+		add_ideas = endtimes_cabal
+		startup_politics = yes
+		reforme_expectance_government_change_update = yes
+	}
+
+	option = {
+		name = rev_ita_election.1.a
+	}
+}

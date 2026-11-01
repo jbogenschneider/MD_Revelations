@@ -1,0 +1,107 @@
+# Ground combat robots: tracked sentry (2025), humanoid (2030), autonomous AI (2035).
+# Per-item balance: strong assault firepower at higher industrial and supply cost.
+equipments = {
+	robot_equipment_type = {
+		is_archetype = yes
+		is_buildable = no
+		active = no
+		type = infantry
+		group_by = archetype
+		priority = 10
+		interface_category = interface_category_land
+
+		reliability = 0.82
+		maximum_speed = 4
+		recon = 2
+		defense = 18
+		breakthrough = 14
+		hardness = 0.10
+		armor_value = 3
+		supply_consumption = 0.08
+		soft_attack = 28
+		hard_attack = 3
+		ap_attack = 8
+		air_attack = 0
+		additional_collateral_damage = 0.15
+		lend_lease_cost = 2
+		build_cost_ic = 1.2
+		resources = { steel = 2 chromium = 1 }
+	}
+
+	robot_equipment_1 = {
+		year = 2025
+		archetype = robot_equipment_type
+		active = no
+		visual_level = 1
+
+		reliability = 0.82
+		maximum_speed = 4
+		recon = 2
+		defense = 18
+		breakthrough = 14
+		hardness = 0.10
+		armor_value = 3
+		supply_consumption = 0.08
+		soft_attack = 28
+		hard_attack = 3
+		ap_attack = 8
+		air_attack = 0
+		additional_collateral_damage = 0.15
+		lend_lease_cost = 2
+		build_cost_ic = 1.2
+		resources = { steel = 2 chromium = 1 }
+	}
+
+	robot_equipment_2 = {
+		# Unlocked by autonomous_fire_support_drone (2030).
+		# Keep REV_ROBOT_EQUIPMENT_2_STATS_TT in sync when changing these base stats.
+		year = 2030
+		archetype = robot_equipment_type
+		active = no
+		visual_level = 2
+		parent = robot_equipment_1
+
+		reliability = 0.87
+		maximum_speed = 5
+		recon = 3
+		defense = 22
+		breakthrough = 22
+		hardness = 0.15
+		armor_value = 5
+		supply_consumption = 0.10
+		soft_attack = 34
+		hard_attack = 5
+		ap_attack = 12
+		air_attack = 0
+		additional_collateral_damage = 0.15
+		lend_lease_cost = 3
+		build_cost_ic = 1.8
+		resources = { steel = 2 chromium = 2 }
+	}
+
+	robot_equipment_3 = {
+		year = 2035
+		archetype = robot_equipment_type
+		active = no
+		visual_level = 3
+		parent = robot_equipment_2
+
+		reliability = 0.92
+		maximum_speed = 6
+		recon = 4
+		defense = 28
+		breakthrough = 32
+		hardness = 0.20
+		armor_value = 8
+		supply_consumption = 0.12
+		soft_attack = 42
+		hard_attack = 8
+		ap_attack = 18
+		air_attack = 0
+		additional_collateral_damage = 0.15
+		lend_lease_cost = 4
+		build_cost_ic = 2.6
+		resources = { steel = 3 chromium = 2 }
+	}
+
+}

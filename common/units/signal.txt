@@ -1,0 +1,2 @@
+# Vanilla signal-company definitions, including the motorized variant, are excluded.
+sub_units = { }

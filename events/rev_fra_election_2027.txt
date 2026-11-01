@@ -1,0 +1,100 @@
+add_namespace = rev_fra_election
+
+# April 18: choose the president-elect. Macron remains in office for one month.
+country_event = {
+	id = rev_fra_election.1
+	title = rev_fra_election.1.t
+	desc = rev_fra_election.1.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = FRA
+		NOT = { has_country_flag = rev_fra_2027_election_presented }
+	}
+
+	immediate = {
+		set_country_flag = rev_fra_2027_election_presented
+	}
+
+	option = {
+		name = rev_fra_election.1.a
+		ai_chance = { factor = 100 }
+		set_country_flag = rev_fra_2027_le_pen_elected
+		custom_effect_tooltip = rev_fra_election_le_pen_handover_tt
+	}
+	option = {
+		name = rev_fra_election.1.b
+		ai_chance = { factor = 0 }
+		set_country_flag = rev_fra_2027_philippe_elected
+		custom_effect_tooltip = rev_fra_election_philippe_handover_tt
+	}
+}
+
+# May 18: apply the result independently of any acknowledgement popup.
+country_event = {
+	id = rev_fra_election.2
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = FRA
+		NOT = { has_country_flag = rev_fra_2027_handover_done }
+		OR = {
+			has_country_flag = rev_fra_2027_le_pen_elected
+			has_country_flag = rev_fra_2027_philippe_elected
+		}
+	}
+
+	immediate = {
+		set_country_flag = rev_fra_2027_handover_done
+		retire_country_leader = yes
+		clear_array = ruling_party
+		clear_array = gov_coalition_array
+
+		if = {
+			limit = { has_country_flag = rev_fra_2027_le_pen_elected }
+			set_politics = {
+				ruling_party = nationalist
+				last_election = "2027.4.18"
+				election_frequency = 1200
+				elections_allowed = yes
+			}
+			add_to_array = { ruling_party = 20 }
+			# Keep the mod's leader succession index aligned with Marine Le Pen.
+			set_variable = { Nat_Populism_leader = 2 }
+			create_country_leader = {
+				name = "Marine Le Pen"
+				picture = "Nationalist_1_Marine_Le_Pen.dds"
+				ideology = Nat_Populism
+				traits = {
+					nationalist_Nat_Populism
+					pro_russia
+					career_politician
+				}
+			}
+			set_country_flag = endtimes_cabal_initialized
+			add_ideas = endtimes_cabal
+		}
+		else = {
+			set_politics = {
+				ruling_party = democratic
+				last_election = "2027.4.18"
+				election_frequency = 1200
+				elections_allowed = yes
+			}
+			add_to_array = { ruling_party = 2 }
+			set_variable = { liberalism_leader = 3 }
+			create_country_leader = {
+				name = "Edouard Philippe"
+				picture = "Edouard_Philippe.dds"
+				ideology = liberalism
+				traits = {
+					western_liberalism
+					lawyer
+				}
+			}
+		}
+		startup_politics = yes
+	}
+}

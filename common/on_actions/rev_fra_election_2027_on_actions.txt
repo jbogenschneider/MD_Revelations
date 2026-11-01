@@ -1,0 +1,26 @@
+on_actions = {
+	on_daily = {
+		effect = {
+			if = {
+				limit = {
+					tag = FRA
+					date > 2027.4.17
+					NOT = { has_country_flag = rev_fra_2027_election_presented }
+				}
+				country_event = { id = rev_fra_election.1 }
+			}
+			if = {
+				limit = {
+					tag = FRA
+					date > 2027.5.17
+					NOT = { has_country_flag = rev_fra_2027_handover_done }
+					OR = {
+						has_country_flag = rev_fra_2027_le_pen_elected
+						has_country_flag = rev_fra_2027_philippe_elected
+					}
+				}
+				country_event = { id = rev_fra_election.2 }
+			}
+		}
+	}
+}

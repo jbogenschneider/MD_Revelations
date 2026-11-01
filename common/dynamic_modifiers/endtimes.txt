@@ -1,0 +1,5 @@
+endtimes_cabal_support_floor = {
+	enable = { always = yes }
+	stability_factor = endtimes_cabal_stability_floor
+	war_support_factor = endtimes_cabal_war_support_floor
+}

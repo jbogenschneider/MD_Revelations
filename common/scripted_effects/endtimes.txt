@@ -1,0 +1,13 @@
+# Recalculate against total support, including penalties from wars and other ideas.
+# Remove the previous correction first so it cannot feed back into the calculation.
+# Base stability and war support are left intact when Cabal is removed by an event.
+endtimes_refresh_support_floor = {
+	remove_dynamic_modifier = { modifier = endtimes_cabal_support_floor }
+	set_variable = { endtimes_cabal_stability_floor = 0.30 }
+	subtract_from_variable = { endtimes_cabal_stability_floor = stability }
+	clamp_variable = { var = endtimes_cabal_stability_floor min = 0 }
+	set_variable = { endtimes_cabal_war_support_floor = 0.30 }
+	subtract_from_variable = { endtimes_cabal_war_support_floor = has_war_support }
+	clamp_variable = { var = endtimes_cabal_war_support_floor min = 0 }
+	add_dynamic_modifier = { modifier = endtimes_cabal_support_floor }
+}

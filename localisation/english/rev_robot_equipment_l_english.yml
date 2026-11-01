@@ -1,0 +1,12 @@
+﻿l_english:
+ robot_equipment_type:0 "Robotic Combat Equipment"
+ robot_equipment_type_desc:0 "Ground combat robots combine protected weapon mounts, sensors and control systems to support infantry assaults. Their industrial and supply costs exceed conventional infantry weapons."
+ robot_equipment_1:0 "Tracked Sentry Robot 2025"
+ robot_equipment_1_desc:0 "A remote-controlled sentry gun mounted on a tracked ground drone. It delivers sustained suppressive fire and supports breakthroughs while keeping its operator behind cover. Light protection and limited mobility restrict its survivability."
+ robot_equipment_3:0 "Humanoid Combat Robot 2035"
+ robot_equipment_3_desc:0 "A humanoid combat platform with supervised autonomy, improved mobility and heavier weapon mounts. It delivers stronger assault firepower and modest anti-armor capability, at greater production and maintenance cost."
+ robot_equipment_2:0 "Autonomous AI Combat Robot 2030"
+ robot_equipment_2_desc:0 "A partial or fully Autonomous AI Land Drone with coordinated movement and targeting. It provides exceptional breakthrough and anti-personnel firepower, with improved capability against lightly armored vehicles. Advanced components and sustained support make it expensive to field."
+ humanoid_fire_support_robot:0 "Humanoid Fire Support Robot"
+ humanoid_fire_support_robot_desc:0 "A humanoid combat platform with supervised autonomy and improved mobility. It brings sustained assault firepower to terrain that limits tracked sentry drones, while retaining human oversight of combat operations."
+ REV_ROBOT_EQUIPMENT_2_STATS_TT:0 "§Y$robot_equipment_2$ — base equipment stats§!\nSoft attack: §Y34§!   Hard attack: §Y5§!   Air attack: §Y0§!\nDefense: §Y22§!   Breakthrough: §Y22§!\nArmor: §Y5§!   Piercing: §Y12§!   Hardness: §Y15%§!\nMaximum speed: §Y5 km/h§!   Recon: §Y3§!\nReliability: §Y87%§!   Supply consumption: §Y0.10§!\nAdditional collateral damage: §Y15%§!   Lend-lease cost: §Y3§!\nProduction cost: §Y1.8 IC§!   Resources: §Y2 steel, 2 chromium§!"

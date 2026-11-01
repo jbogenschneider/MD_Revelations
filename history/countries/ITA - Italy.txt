@@ -2284,7 +2284,8 @@ capital = 81
 	set_politics = {
 		ruling_party = democratic
 		last_election = "2023.2.25"
-		election_frequency = 60
+		# Defer the automatic election until 2033; the 2027 result is scripted.
+		election_frequency = 120
 		elections_allowed = yes
 	}
 

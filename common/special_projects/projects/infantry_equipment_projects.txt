@@ -100,7 +100,9 @@ sp_fire_support_land_drone = {
 	project_tags = sp_tag_infantry_equipment
 
 	ai_will_do = {
-		base = 1
+		base = 2
+		# Prioritize the prerequisite for combat robots as 2025 approaches.
+		modifier = { factor = 4 date > 2022.12.31 }
 	}
 
 	visible = {

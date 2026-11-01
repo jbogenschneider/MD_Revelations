@@ -1,0 +1,48 @@
+# Land drone equipment through 2035, imported from Millennium Dawn.
+# Model 2/3 aliases bridge the workshop technology sprite names.
+spriteTypes = {
+SpriteType = {
+		name = "GFX_land_drone_equipment_type_medium"
+		texturefile = "gfx/interface/technologies/0_generic/infantry/UAV_1985_small.dds"
+	}
+
+SpriteType = {
+		name = "GFX_land_drone_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/0_generic/infantry/UAV_1995_small.dds"
+	}
+
+SpriteType = {
+		name = "GFX_land_drone_equipment_tech_2_medium"
+		texturefile = "gfx/interface/technologies/0_generic/infantry/UAV_2005_small.dds"
+	}
+
+SpriteType = {
+		name = "GFX_land_drone_equipment_tech_3_medium"
+		texturefile = "gfx/interface/technologies/0_generic/infantry/UAV_2015_small.dds"
+	}
+
+SpriteType = {
+		name = "GFX_land_drone_equipment_4_medium"
+		texturefile = "gfx/interface/technologies/0_generic/infantry/UAV_2025_small.dds"
+	}
+
+SpriteType = {
+		name = "GFX_land_drone_equipment_5_medium"
+		texturefile = "gfx/interface/technologies/0_generic/infantry/UAV_2035_small.dds"
+	}
+
+SpriteType = {
+		name = "GFX_land_drone_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/0_generic/infantry/UAV_2005_small.dds"
+	}
+
+SpriteType = {
+		name = "GFX_land_drone_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/0_generic/infantry/UAV_2015_small.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_land_Drone_equipment5_medium"
+		texturefile = "gfx/interface/technologies/Generic/Infantry_Drones/UAV_2025_small.dds"
+	}
+}

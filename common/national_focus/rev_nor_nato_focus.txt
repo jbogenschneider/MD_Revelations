@@ -1,4 +1,4 @@
-﻿focus_tree = {
+focus_tree = {
 	id = REV_NOR_nato_default_focus
 	country = {
 		factor = 0
@@ -511,6 +511,28 @@
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_NATO }
 		ai_will_do = { base = 20 }
 		completion_reward = { add_stability = 0.25 }
+	}
+
+	# Learn ground robotics through Ukrainian field experience.
+	focus = {
+		id = REV_NOR_learn_ukrainian_ground_robotics
+		icon = drone
+		x = 18
+		y = 2
+		cost = 3
+		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_RESEARCH }
+		prerequisite = { focus = REV_NOR_NATO_ukraine_intel_sharing }
+		available = {
+			UKR = { exists = yes is_special_project_completed = sp:sp_fire_support_land_drone }
+			NOT = { has_war_with = UKR }
+		}
+		ai_will_do = { base = 25 }
+		completion_reward = {
+			if = {
+				limit = { NOT = { is_special_project_completed = sp:sp_fire_support_land_drone } }
+				complete_special_project = sp:sp_fire_support_land_drone
+			}
+		}
 	}
 }
 

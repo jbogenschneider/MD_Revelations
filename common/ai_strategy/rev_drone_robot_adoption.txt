@@ -1,0 +1,158 @@
+# Drone and robot adoption: additive AI weights; no forced research or equipment grants.
+# Production weights operate on archetypes, so newer models inherit the policy.
+
+rev_research_land_Drone_equipment = {
+    allowed = { ai_for_units_is_not_disabled = yes }
+    enable = { date > 1984.12.31 NOT = { has_tech = land_Drone_equipment } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = research_tech id = land_Drone_equipment value = 150 }
+}
+
+rev_research_land_Drone_equipment1 = {
+    allowed = { ai_for_units_is_not_disabled = yes }
+    enable = { date > 1994.12.31 NOT = { has_tech = land_Drone_equipment1 } has_tech = land_Drone_equipment }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = research_tech id = land_Drone_equipment1 value = 150 }
+}
+
+rev_research_land_Drone_equipment2 = {
+    allowed = { ai_for_units_is_not_disabled = yes }
+    enable = { date > 2004.12.31 NOT = { has_tech = land_Drone_equipment2 } has_tech = land_Drone_equipment1 }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = research_tech id = land_Drone_equipment2 value = 150 }
+}
+
+rev_research_land_Drone_equipment3 = {
+    allowed = { ai_for_units_is_not_disabled = yes }
+    enable = { date > 2014.12.31 NOT = { has_tech = land_Drone_equipment3 } has_tech = land_Drone_equipment2 }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = research_tech id = land_Drone_equipment3 value = 150 }
+}
+
+rev_research_land_Drone_equipment4 = {
+    allowed = { ai_for_units_is_not_disabled = yes }
+    enable = { date > 2024.12.31 NOT = { has_tech = land_Drone_equipment4 } has_tech = land_Drone_equipment3 }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = research_tech id = land_Drone_equipment4 value = 150 }
+}
+
+rev_research_land_Drone_equipment5 = {
+    allowed = { ai_for_units_is_not_disabled = yes }
+    enable = { date > 2029.12.31 NOT = { has_tech = land_Drone_equipment5 } has_tech = land_Drone_equipment4 }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = research_tech id = land_Drone_equipment5 value = 150 }
+}
+
+rev_research_land_Drone_equipment6 = {
+    allowed = { ai_for_units_is_not_disabled = yes }
+    enable = { date > 2034.12.31 NOT = { has_tech = land_Drone_equipment6 } has_tech = land_Drone_equipment5 }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = research_tech id = land_Drone_equipment6 value = 150 }
+}
+
+rev_research_rc_fire_support_drone = {
+    allowed = { ai_for_units_is_not_disabled = yes }
+    enable = { date > 2024.12.31 NOT = { has_tech = rc_fire_support_drone } is_special_project_completed = sp:sp_fire_support_land_drone }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = research_tech id = rc_fire_support_drone value = 200 }
+}
+
+rev_research_autonomous_fire_support_drone = {
+    allowed = { ai_for_units_is_not_disabled = yes }
+    enable = { date > 2029.12.31 NOT = { has_tech = autonomous_fire_support_drone } has_tech = rc_fire_support_drone is_special_project_completed = sp:sp_fire_support_land_drone }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = research_tech id = autonomous_fire_support_drone value = 200 }
+}
+
+rev_research_humanoid_fire_support_robot = {
+    allowed = { ai_for_units_is_not_disabled = yes }
+    enable = { date > 2034.12.31 NOT = { has_tech = humanoid_fire_support_robot } has_tech = autonomous_fire_support_drone is_special_project_completed = sp:sp_fire_support_land_drone }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = research_tech id = humanoid_fire_support_robot value = 200 }
+}
+
+rev_land_drone_production = {
+    allowed = { ai_for_units_is_not_disabled = yes }
+    enable = { has_tech = land_Drone_equipment3 NOT = { has_tech = land_Drone_equipment4 } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = equipment_variant_production_factor id = land_drone_equipment_type value = 100 }
+}
+
+rev_modern_land_drone_production = {
+    allowed = { ai_for_units_is_not_disabled = yes }
+    enable = { has_tech = land_Drone_equipment4 }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = equipment_variant_production_factor id = land_drone_equipment_type value = 250 }
+}
+
+rev_robot_production_2025 = {
+    allowed = { ai_for_units_is_not_disabled = yes }
+    enable = { has_tech = rc_fire_support_drone NOT = { has_tech = autonomous_fire_support_drone } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = equipment_variant_production_factor id = robot_equipment_type value = 250 }
+}
+
+rev_robot_production_2030 = {
+    allowed = { ai_for_units_is_not_disabled = yes }
+    enable = { has_tech = autonomous_fire_support_drone }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = equipment_variant_production_factor id = robot_equipment_type value = 350 }
+}
+
+rev_drone_reserve_small = {
+    allowed = { ai_for_units_is_not_disabled = yes }
+    enable = { has_tech = land_Drone_equipment3 num_of_military_factories > 5 num_of_military_factories < 20 has_equipment = { land_drone_equipment_type < 1500 } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = equipment_production_min_factories_archetype id = land_drone_equipment_type value = 1 }
+}
+
+rev_drone_reserve_medium = {
+    allowed = { ai_for_units_is_not_disabled = yes }
+    enable = { has_tech = land_Drone_equipment3 num_of_military_factories > 19 num_of_military_factories < 50 has_equipment = { land_drone_equipment_type < 1500 } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = equipment_production_min_factories_archetype id = land_drone_equipment_type value = 2 }
+}
+
+rev_drone_reserve_large = {
+    allowed = { ai_for_units_is_not_disabled = yes }
+    enable = { has_tech = land_Drone_equipment3 num_of_military_factories > 49 has_equipment = { land_drone_equipment_type < 1500 } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = equipment_production_min_factories_archetype id = land_drone_equipment_type value = 4 }
+}
+
+rev_robot_reserve_small = {
+    allowed = { ai_for_units_is_not_disabled = yes }
+    enable = { has_tech = rc_fire_support_drone num_of_military_factories > 5 num_of_military_factories < 20 has_equipment = { robot_equipment_type < 500 } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = equipment_production_min_factories_archetype id = robot_equipment_type value = 1 }
+}
+
+rev_robot_reserve_medium = {
+    allowed = { ai_for_units_is_not_disabled = yes }
+    enable = { has_tech = rc_fire_support_drone num_of_military_factories > 19 num_of_military_factories < 50 has_equipment = { robot_equipment_type < 500 } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = equipment_production_min_factories_archetype id = robot_equipment_type value = 2 }
+}
+
+rev_robot_reserve_large = {
+    allowed = { ai_for_units_is_not_disabled = yes }
+    enable = { has_tech = rc_fire_support_drone num_of_military_factories > 49 has_equipment = { robot_equipment_type < 500 } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = equipment_production_min_factories_archetype id = robot_equipment_type value = 4 }
+}
+
+# Preserve existing forces, but shift new production and division mix after adoption.
+rev_post_2025_ground_force_mix = {
+    allowed = { ai_for_units_is_not_disabled = yes }
+    enable = { date > 2024.12.31 OR = { has_tech = land_Drone_equipment4 has_tech = rc_fire_support_drone } }
+    abort_when_not_enabled = yes
+    ai_strategy = { type = equipment_variant_production_factor id = medium_tank_chassis value = -25 }
+    ai_strategy = { type = equipment_variant_production_factor id = heavy_tank_chassis value = -25 }
+    ai_strategy = { type = equipment_variant_production_factor id = heavy_tank_amphibious_chassis value = -15 }
+    ai_strategy = { type = role_ratio id = armor value = -15 }
+    ai_strategy = { type = role_ratio id = Air_helicopters value = -3 }
+    ai_strategy = { type = role_ratio id = Air_mech value = -5 }
+    ai_strategy = { type = role_ratio id = infantry value = 10 }
+    ai_strategy = { type = role_ratio id = apc_mechanized value = 10 }
+    ai_strategy = { type = role_ratio id = ifv_mechanized value = 10 }
+}

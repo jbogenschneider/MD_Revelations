@@ -1,0 +1,7 @@
+﻿l_english:
+ rev_fra_election.1.t: "France Goes to the Polls"
+ rev_fra_election.1.d: "April 18, 2027. France goes to the polls to choose Emmanuel Macron's successor.\n\nMarine Le Pen is in the lead, but her victory would put France on a collision course with the European Union. Opposition from the Left could escalate into unrest, and there could even be civil war.\n\nEdouard Philippe is less popular, but he would retain EU support and offer a more stable course. Under his presidency, the country would probably avoid being engulfed in flames.\n\nWho will France choose? The winner will replace Macron on May 18, 2027."
+ rev_fra_election.1.a: "Marine Le Pen wins."
+ rev_fra_election.1.b: "Edouard Philippe wins."
+ rev_fra_election_le_pen_handover_tt: "Marine Le Pen will replace Emmanuel Macron as president on May 18, 2027."
+ rev_fra_election_philippe_handover_tt: "Edouard Philippe will replace Emmanuel Macron as president on May 18, 2027."

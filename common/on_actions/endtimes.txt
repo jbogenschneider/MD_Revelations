@@ -1,0 +1,169 @@
+# Global scheduling for the fictional Endtimes storyline.
+on_actions = {
+	on_startup = {
+		effect = {
+			# The 2026 bookmark starts at 08:00 on January 1; date triggers accept days only.
+			if = {
+				limit = {
+					date > 2025.12.31
+					date < 2026.1.2
+				}
+				# Membership applies to AI and human countries; only humans see the notices.
+				every_country = {
+					limit = {
+						NOT = { has_country_flag = endtimes_cabal_initialized }
+						OR = {
+							tag = USA
+							tag = SOV
+							tag = CHI
+							tag = UAE
+							tag = SAU
+							tag = RAJ
+							tag = ARG
+						}
+					}
+					set_country_flag = endtimes_cabal_initialized
+					add_ideas = endtimes_cabal
+				}
+				every_country = {
+					limit = {
+						is_ai = no
+						NOT = { has_country_flag = endtimes_intro_scheduled }
+						OR = {
+							tag = USA
+							tag = SOV
+							tag = CHI
+							tag = UAE
+							tag = SAU
+							tag = RAJ
+							tag = ARG
+						}
+					}
+					set_country_flag = endtimes_intro_scheduled
+					country_event = { id = endtimes.1 }
+					# Schedule independently of the player's acknowledgement.
+					if = {
+						limit = { tag = USA }
+						country_event = { id = endtimes.2 hours = 2 }
+					}
+				}
+			}
+		}
+	}
+
+	on_daily = {
+		effect = {
+			# Dispatch each worldwide announcement once to every human country.
+			if = {
+				limit = {
+					date > 2028.1.4
+					date < 2028.1.6
+					NOT = { has_global_flag = endtimes_jerusalem_dirty_bomb_occurred }
+					PER = {
+						exists = yes
+						controls_province = 16215 # Tehran
+					}
+				}
+				set_global_flag = endtimes_jerusalem_dirty_bomb_occurred
+				every_country = {
+					limit = { is_ai = no }
+					country_event = { id = endtimes.8 }
+				}
+			}
+			if = {
+				limit = {
+					tag = PER
+					date > 2028.1.11
+					date < 2028.1.13
+					has_global_flag = endtimes_jerusalem_dirty_bomb_occurred
+					NOT = { has_global_flag = endtimes_tehran_nuked }
+					controls_province = 16215
+					ISR = { exists = yes }
+				}
+				country_event = { id = endtimes.9 }
+			}
+			if = {
+				limit = {
+					date > 2028.1.19
+					date < 2028.1.21
+					NOT = { has_global_flag = endtimes_great_warning_occurred }
+				}
+				set_global_flag = endtimes_great_warning_occurred
+				every_country = {
+					limit = { is_ai = no }
+					country_event = { id = endtimes.3 }
+				}
+			}
+			if = {
+				limit = {
+					date > 2028.4.12
+					date < 2028.4.14
+					NOT = { has_global_flag = endtimes_miracle_occurred }
+				}
+				set_global_flag = endtimes_miracle_occurred
+				every_country = {
+					limit = { is_ai = no }
+					country_event = { id = endtimes.4 }
+				}
+			}
+			if = {
+				limit = {
+					date > 2028.6.5
+					date < 2028.6.7
+					NOT = { has_global_flag = endtimes_new_church_emerged }
+				}
+				set_global_flag = endtimes_new_church_emerged
+				every_country = {
+					limit = { is_ai = no }
+					country_event = { id = endtimes.5 }
+				}
+			}
+			if = {
+				limit = {
+					date > 2029.3.29
+					date < 2029.3.31
+					NOT = { has_global_flag = endtimes_prophets_miracle_occurred }
+				}
+				set_global_flag = endtimes_prophets_miracle_occurred
+				every_country = {
+					limit = { is_ai = no }
+					country_event = { id = endtimes.6 }
+				}
+			}
+			if = {
+				limit = {
+					tag = HLS
+					date > 2029.5.1
+					date < 2029.5.3
+					NOT = { has_country_flag = endtimes_false_prophet_installed }
+				}
+				country_event = { id = endtimes.7 }
+			}
+			if = {
+				limit = {
+					date > 2029.6.1
+					date < 2029.6.3
+					NOT = { has_global_flag = endtimes_europe_realigned }
+				}
+				set_global_flag = endtimes_europe_realigned
+				every_country = {
+					limit = { is_ai = no }
+					country_event = { id = endtimes.10 }
+				}
+			}
+			if = {
+				limit = {
+					tag = FRA
+					date > 2029.7.1
+					date < 2029.7.3
+					NOT = { has_country_flag = endtimes_french_monarchy_restored }
+				}
+				country_event = { id = endtimes.11 }
+			}
+			if = {
+				limit = { has_idea = endtimes_cabal }
+				endtimes_refresh_support_floor = yes
+			}
+		}
+	}
+}

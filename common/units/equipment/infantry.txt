@@ -1,0 +1,2 @@
+# Override vanilla WWII infantry equipment; MD uses Inf_equipment and infantry_weapons.
+equipments = { }

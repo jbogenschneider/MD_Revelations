@@ -2963,7 +2963,7 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/Generic/Infantry_Drones/UAV_2025_small.dds"
 	}
 	SpriteType = {
-		name = "GFX_land_Drone_equipment5_medium"
+		name = "GFX_land_Drone_equipment6_medium"
 		texturefile = "gfx/interface/technologies/Generic/Infantry_Drones/UAV_2035_small.dds"
 	}
 

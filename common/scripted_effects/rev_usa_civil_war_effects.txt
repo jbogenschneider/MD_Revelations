@@ -413,6 +413,8 @@ rev_nato_anti_usa_opt_out = {
 	if = {
 		limit = { has_idea = NATO_member }
 		NATO_leave = yes
+		# Apply once per actual departure, including both AI and player opt-outs.
+		add_stability = -0.10
 	}
 	if = {
 		limit = { has_war_with = USA }

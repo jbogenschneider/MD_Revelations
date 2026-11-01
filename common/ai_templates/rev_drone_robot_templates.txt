@@ -1,0 +1,106 @@
+# Drone-equipped alternatives for ordinary MD roles. Five or fewer support slots.
+# Drone recon is restricted to mobile/armor battalion groups; light infantry retains light recon.
+
+rev_drone_light = {
+    role = L_Inf
+    upgrade_prio = { factor = 4 }
+    rev_drone_light_brigade = {
+        reinforce_prio = 2
+        upgrade_prio = { factor = 4 modifier = { factor = 1.5 has_tech = autonomous_fire_support_drone } }
+        enable = {
+            ai_for_units_is_not_disabled = yes
+            date > 2024.12.31
+            has_tech = land_Drone_equipment3
+            num_of_military_factories > 5
+            has_game_rule = { rule = rule_god_of_war option = no }
+        }
+        target_min_match = 0.6
+        target_template = {
+            regiments = { L_Inf_Bat = 6 Arty_Bat = 2 }
+            support = {
+                L_Engi_Comp = 1
+                L_Recce_Comp = 1
+                combat_service_support_company = 1
+                drone_tactical_company = 1
+            }
+        }
+    }
+}
+
+rev_drone_motorized = {
+    role = infantry
+    upgrade_prio = { factor = 4 }
+    rev_drone_motorized_brigade = {
+        reinforce_prio = 2
+        upgrade_prio = { factor = 4 modifier = { factor = 1.5 has_tech = autonomous_fire_support_drone } }
+        enable = {
+            ai_for_units_is_not_disabled = yes
+            date > 2024.12.31
+            has_tech = land_Drone_equipment3
+            num_of_military_factories > 5
+            has_game_rule = { rule = rule_god_of_war option = no }
+        }
+        target_min_match = 0.6
+        target_template = {
+            regiments = { Mot_Inf_Bat = 6 Arty_Bat = 2 }
+            support = {
+                H_Engi_Comp = 1
+                Drone_Recce_Comp = 1
+                combat_service_support_company = 1
+                drone_tactical_company = 1
+            }
+        }
+    }
+}
+
+rev_drone_apc = {
+    role = apc_mechanized
+    upgrade_prio = { factor = 4 }
+    rev_drone_apc_brigade = {
+        reinforce_prio = 2
+        upgrade_prio = { factor = 4 modifier = { factor = 1.5 has_tech = autonomous_fire_support_drone } }
+        enable = {
+            ai_for_units_is_not_disabled = yes
+            date > 2024.12.31
+            has_tech = land_Drone_equipment3
+            num_of_military_factories > 10
+            has_game_rule = { rule = rule_god_of_war option = no }
+        }
+        target_min_match = 0.6
+        target_template = {
+            regiments = { Mech_Inf_Bat = 6 SP_Arty_Bat = 2 }
+            support = {
+                H_Engi_Comp = 1
+                Drone_Recce_Comp = 1
+                combat_service_support_company = 1
+                drone_tactical_company = 1
+            }
+        }
+    }
+}
+
+rev_drone_ifv = {
+    role = ifv_mechanized
+    upgrade_prio = { factor = 4 }
+    rev_drone_ifv_brigade = {
+        reinforce_prio = 2
+        upgrade_prio = { factor = 4 modifier = { factor = 1.5 has_tech = autonomous_fire_support_drone } }
+        enable = {
+            ai_for_units_is_not_disabled = yes
+            date > 2024.12.31
+            has_tech = land_Drone_equipment3
+            num_of_military_factories > 10
+            has_game_rule = { rule = rule_god_of_war option = no }
+        }
+        target_min_match = 0.6
+        target_template = {
+            regiments = { Arm_Inf_Bat = 6 SP_Arty_Bat = 2 }
+            support = {
+                H_Engi_Comp = 1
+                Drone_Recce_Comp = 1
+                combat_service_support_company = 1
+                drone_tactical_company = 1
+            }
+        }
+    }
+}

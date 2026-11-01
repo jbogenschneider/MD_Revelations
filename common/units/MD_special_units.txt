@@ -1,30 +1,24 @@
 sub_units = {
 	# Dutch Special Battalion
 	HOL_marechaussee_support_company = {
-		sprite = MD_infantry_2
+		sprite = MD4_infantry_2
 		map_icon_category = infantry
 		priority = 0
 		ai_priority = 0
 		active = no
 		affects_speed = yes
 
-		type = {
-			infantry
-			support
-		}
+		type = { infantry support }
 
 		group = support
 
-		categories = {
-			category_support_battalions
-			category_army
-		}
+		categories = { category_support_battalions category_army }
 
 		combat_width = 1
 
 		# Size Definitions
-		max_strength = 3
-		max_organisation = 23
+		max_strength = 2
+		max_organisation = 20
 		default_morale = 0.1
 		manpower = 250
 		training_time = 120
@@ -44,13 +38,16 @@ sub_units = {
 		own_equipment_fuel_consumption_mult = 0.0
 
 		need = {
-			infantry_weapons_type = 250
-			cnc_equipment_type = 50
-			util_vehicle_type = 20
+			Inf_equipment = 250
+			command_control_equipment = 50
+			util_vehicle_equipment = 20
 		}
 
 		same_support_type = support
 		can_be_parachuted = yes
+
+		supply_consumption = 0.05
+		supply_consumption_factor = -0.15
 	}
 
 	# Zombie Game Mode
@@ -62,27 +59,20 @@ sub_units = {
 		ai_priority = 1000
 		active = no
 
-		type = {
-			infantry
-		}
+		type = { infantry }
 
 		group = infantry
 
-		categories = {
-			category_front_line
-			category_light_infantry
-			category_all_infantry
-			category_army
-		}
+		categories = { category_front_line category_light_infantry category_all_infantry category_army }
 
 		combat_width = 2
 
 		#Size Definitions
-		max_strength = 15
-		max_organisation = 3
+		max_strength = 20
+		max_organisation = 4
 		default_morale = 1000
 		manpower = 3000
-		training_time = 8
+		training_time = 1
 
 		#Misc Abilities
 		suppression = 0
@@ -92,6 +82,8 @@ sub_units = {
 		need = {
 			zombie = 1
 		}
+
+		supply_consumption = 0.01
 	}
 	zombie_runner = {
 		sprite = infantry
@@ -203,7 +195,7 @@ sub_units = {
 
 		need = {
 			super_heavy_tank_chassis = 42
-			cnc_equipment_type = 24
+			command_control_equipment = 24
 		}
 
 		manpower = 240
@@ -255,7 +247,7 @@ sub_units = {
 
 		need = {
 			super_heavy_tank_destroyer_chassis = 42
-			cnc_equipment_type = 24
+			command_control_equipment = 24
 		}
 
 		manpower = 240
@@ -307,7 +299,7 @@ sub_units = {
 
 		need = {
 			super_heavy_tank_artillery_chassis = 42
-			cnc_equipment_type = 24
+			command_control_equipment = 24
 		}
 
 		manpower = 240

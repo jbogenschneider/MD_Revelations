@@ -1,4 +1,41 @@
 on_actions = {
+	# France under Le Pen and Italy under De Beaman use the shared NATO opt-out.
+	# Check the target's membership before either departure changes that status.
+	on_declare_war = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = { tag = USA }
+					FROM = { has_idea = NATO_member }
+				}
+				FRA = {
+					if = {
+						limit = {
+							exists = yes
+							has_idea = NATO_member
+							has_country_leader = { name = "Marine Le Pen" ruling_only = yes }
+						}
+						log = "[GetDateText]: [This.GetName]: Marine Le Pen withdraws France from NATO after a US attack on a NATO member."
+						rev_nato_anti_usa_opt_out = yes
+						set_country_flag = rev_nato_anti_usa_opt_out_resolved_fra
+					}
+				}
+				ITA = {
+					if = {
+						limit = {
+							exists = yes
+							has_idea = NATO_member
+							has_country_leader = { name = "Stefano De Beaman" ruling_only = yes }
+						}
+						log = "[GetDateText]: [This.GetName]: Stefano De Beaman withdraws Italy from NATO after a US attack on a NATO member."
+						rev_nato_anti_usa_opt_out = yes
+						set_country_flag = rev_nato_anti_usa_opt_out_resolved_ita
+					}
+				}
+			}
+		}
+	}
+
 	on_daily = {
 		effect = {
 			if = {

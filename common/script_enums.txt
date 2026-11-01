@@ -1,4 +1,17 @@
 script_enum_equipment_bonus_type = {
+	# Ground combat robots
+	robot_equipment_type
+	robot_equipment_1
+	robot_equipment_2
+	robot_equipment_3
+	# Land drone equipment through 2035
+	land_drone_equipment_type
+	land_drone_equipment_1
+	land_drone_equipment_2
+	land_drone_equipment_3
+	land_drone_equipment_4
+	land_drone_equipment_5
+
 	## Air
 	cas1
 	cas2

@@ -1,0 +1,92 @@
+# Missing 1.19 support/HQ icons. Preserve the MD icon set and add only absent names.
+spriteTypes = {
+spriteType = {
+		name = "GFX_allow_as_hq_icon"
+		textureFile = "gfx//interface//allow_as_hq_icon.dds"
+		noOfFrames = 3
+	}
+
+SpriteType = { name = "GFX_unit_Light_SP_AA_Bat_icon_medium" texturefile = "gfx/interface/counters/divisions_large/AA.dds" noOfFrames = 2 }
+
+    # Legacy MD HQ unit IDs retained by Revelations.
+SpriteType = { name = "GFX_unit_med_trans_helo_hq_icon_medium" texturefile = "gfx/interface/counters/divisions_large/air_assault_arm.dds" noOfFrames = 2 }
+
+SpriteType = { name = "GFX_unit_med_trans_helo_hq_icon_medium_white" texturefile = "gfx/interface/counters/divisions_small/onmap_unit_l_air_assault_bat_icon.dds" noOfFrames = 2 }
+
+spriteType = {
+		name = "GFX_unit_med_trans_helo_hq_icon_small"
+		texturefile = "gfx/texticons/unit_mech_air_inf_bat_icon.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+
+SpriteType = { name = "GFX_unit_arm_inf_hq_icon_medium_white" texturefile = "gfx/interface/counters/divisions_small/onmap_unit_arm_inf_bat_icon.dds" noOfFrames = 2 }
+
+SpriteType = { name = "GFX_unit_mlrs_hq_icon_medium" texturefile = "gfx/interface/counters/divisions_large/SP.dds" noOfFrames = 2 }
+
+SpriteType = { name = "GFX_unit_mlrs_hq_icon_medium_white" texturefile = "gfx/interface/counters/divisions_small/onmap_unit_sp_arty_bat_icon.dds" noOfFrames = 2 }
+
+spriteType = {
+		name = "GFX_unit_mlrs_hq_icon_small"
+		texturefile = "gfx/texticons/unit_sp_arty_bat_icon.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+
+SpriteType = { name = "GFX_unit_lt_tank_hq_icon_medium" texturefile = "gfx/interface/counters/divisions_large/light_tank.dds" noOfFrames = 2 }
+
+SpriteType = { name = "GFX_unit_lt_tank_hq_icon_medium_white" texturefile = "gfx/interface/counters/divisions_small/onmap_unit_armor_recce_bat_icon.dds" noOfFrames = 2 }
+
+spriteType = {
+		name = "GFX_unit_lt_tank_hq_icon_small"
+		texturefile = "gfx/texticons/unit_light_tank_bat_icon.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+
+SpriteType = { name = "GFX_unit_spaa_hq_icon_medium" texturefile = "gfx/interface/counters/divisions_large/AA.dds" noOfFrames = 2 }
+
+SpriteType = { name = "GFX_unit_spaa_hq_icon_medium_white" texturefile = "gfx/interface/counters/divisions_small/onmap_unit_sp_aa_bat_icon.dds" noOfFrames = 2 }
+
+spriteType = {
+		name = "GFX_unit_spaa_hq_icon_small"
+		texturefile = "gfx/texticons/unit_sp_aa_bat_icon.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+
+SpriteType = { name = "GFX_unit_mech_inf_hq_icon_medium" texturefile = "gfx/interface/counters/divisions_large/Inf_mech.dds" noOfFrames = 2 }
+
+SpriteType = { name = "GFX_unit_mech_inf_hq_icon_medium_white" texturefile = "gfx/interface/counters/divisions_small/onmap_unit_mech_inf_bat_icon.dds" noOfFrames = 2 }
+
+spriteType = {
+		name = "GFX_unit_mech_inf_hq_icon_small"
+		texturefile = "gfx/texticons/unit_mech_inf_bat_icon.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+
+SpriteType = { name = "GFX_unit_arm_hq_icon_medium_white" texturefile = "gfx/interface/counters/divisions_small/onmap_unit_armor_bat_icon.dds" noOfFrames = 2 }
+
+SpriteType = { name = "GFX_unit_spg_inf_hq_icon_medium" texturefile = "gfx/interface/counters/divisions_large/SP.dds" noOfFrames = 2 }
+
+SpriteType = { name = "GFX_unit_spg_inf_hq_icon_medium_white" texturefile = "gfx/interface/counters/divisions_small/onmap_unit_sp_arty_bat_icon.dds" noOfFrames = 2 }
+
+spriteType = {
+		name = "GFX_unit_spg_inf_hq_icon_small"
+		texturefile = "gfx/texticons/unit_sp_arty_bat_icon.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+
+SpriteType = { name = "GFX_unit_atk_helo_hq_icon_medium" texturefile = "gfx/interface/counters/divisions_large/attack_helicopter.dds" noOfFrames = 2 }
+
+SpriteType = { name = "GFX_unit_atk_helo_hq_icon_medium_white" texturefile = "gfx/interface/counters/divisions_small/onmap_unit_attack_helicopter_icon.dds" noOfFrames = 2 }
+
+spriteType = {
+		name = "GFX_unit_atk_helo_hq_icon_small"
+		texturefile = "gfx/texticons/unit_attack_helicopter_icon.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+}

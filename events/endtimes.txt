@@ -1,0 +1,321 @@
+# Fictional Endtimes storyline. Cabal membership is granted at startup.
+add_namespace = endtimes
+
+# Shared briefing: January 1, 2026, 08:00.
+country_event = {
+	id = endtimes.1
+	title = endtimes.1.t
+	desc = endtimes.1.d
+	is_triggered_only = yes
+
+	trigger = {
+		# Keep queued or external calls on the scheduled day.
+		date > 2025.12.31
+		date < 2026.1.2
+		is_ai = no
+		NOT = { has_country_flag = endtimes_intro_seen }
+		OR = {
+			tag = USA
+			tag = SOV
+			tag = CHI
+			tag = UAE
+			tag = SAU
+			tag = RAJ
+			tag = ARG
+		}
+	}
+
+	immediate = {
+		set_country_flag = endtimes_intro_seen
+	}
+
+	option = {
+		name = endtimes.1.a
+	}
+}
+
+# USA-only briefing: January 1, 2026, 10:00.
+country_event = {
+	id = endtimes.2
+	title = endtimes.2.t
+	desc = endtimes.2.d
+	is_triggered_only = yes
+
+	trigger = {
+		# Keep queued or external calls on the scheduled day.
+		date > 2025.12.31
+		date < 2026.1.2
+		tag = USA
+		is_ai = no
+		NOT = { has_country_flag = endtimes_usa_briefing_seen }
+	}
+
+	immediate = {
+		set_country_flag = endtimes_usa_briefing_seen
+	}
+
+	option = {
+		name = endtimes.2.a
+	}
+}
+
+# Worldwide human-player announcement: January 20, 2028.
+country_event = {
+	id = endtimes.3
+	title = endtimes.3.t
+	desc = endtimes.3.d
+	is_triggered_only = yes
+
+	trigger = {
+		# Keep queued or external calls on the scheduled day.
+		date > 2028.1.19
+		date < 2028.1.21
+		is_ai = no
+		NOT = { has_country_flag = endtimes_great_warning_seen }
+	}
+
+	immediate = {
+		set_country_flag = endtimes_great_warning_seen
+	}
+
+	option = {
+		name = endtimes.3.a
+	}
+}
+
+# Worldwide human-player announcement: April 13, 2028.
+country_event = {
+	id = endtimes.4
+	title = endtimes.4.t
+	desc = endtimes.4.d
+	is_triggered_only = yes
+
+	trigger = {
+		# Keep queued or external calls on the scheduled day.
+		date > 2028.4.12
+		date < 2028.4.14
+		is_ai = no
+		NOT = { has_country_flag = endtimes_miracle_seen }
+	}
+
+	immediate = {
+		set_country_flag = endtimes_miracle_seen
+	}
+
+	option = {
+		name = endtimes.4.a
+	}
+}
+
+# Worldwide human-player announcement: June 6, 2028.
+country_event = {
+	id = endtimes.5
+	title = endtimes.5.t
+	desc = endtimes.5.d
+	is_triggered_only = yes
+
+	trigger = {
+		# Keep queued or external calls on the scheduled day.
+		date > 2028.6.5
+		date < 2028.6.7
+		is_ai = no
+		NOT = { has_country_flag = endtimes_new_church_seen }
+	}
+
+	immediate = {
+		set_country_flag = endtimes_new_church_seen
+	}
+
+	option = {
+		name = endtimes.5.a
+	}
+}
+
+# Worldwide human-player announcement: March 30, 2029.
+country_event = {
+	id = endtimes.6
+	title = endtimes.6.t
+	desc = endtimes.6.d
+	is_triggered_only = yes
+
+	trigger = {
+		# Keep queued or external calls on the scheduled day.
+		date > 2029.3.29
+		date < 2029.3.31
+		is_ai = no
+		NOT = { has_country_flag = endtimes_prophets_miracle_seen }
+	}
+
+	immediate = {
+		set_country_flag = endtimes_prophets_miracle_seen
+	}
+
+	option = {
+		name = endtimes.6.a
+	}
+}
+
+# Holy See leadership change: May 2, 2029, for AI and human HLS alike.
+country_event = {
+	id = endtimes.7
+	title = endtimes.7.t
+	desc = endtimes.7.d
+	is_triggered_only = yes
+
+	trigger = {
+		# Keep queued or external calls on the scheduled day.
+		date > 2029.5.1
+		date < 2029.5.3
+		tag = HLS
+		NOT = { has_country_flag = endtimes_false_prophet_installed }
+	}
+
+	immediate = {
+		set_country_flag = endtimes_false_prophet_installed
+		set_global_flag = endtimes_false_prophet_installed
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "The False Prophet"
+			picture = "gfx/leaders/HLS/falseprophet.dds"
+			ideology = Western_Autocracy
+			traits = {
+				western_Western_Autocracy
+			}
+		}
+	}
+
+	option = {
+		name = endtimes.7.a
+	}
+}
+
+# January 5, 2028: narrative announcement only; no damage to Israel.
+country_event = {
+	id = endtimes.8
+	title = endtimes.8.t
+	desc = endtimes.8.d
+	is_triggered_only = yes
+
+	trigger = {
+		# Keep queued or external calls on the scheduled day.
+		date > 2028.1.4
+		date < 2028.1.6
+		is_ai = no
+		NOT = { has_country_flag = endtimes_jerusalem_dirty_bomb_seen }
+	}
+
+	immediate = {
+		set_country_flag = endtimes_jerusalem_dirty_bomb_seen
+	}
+
+	option = {
+		name = endtimes.8.a
+	}
+}
+
+# January 12, 2028: a real nuclear strike on Tehran, for AI or human Iran.
+country_event = {
+	id = endtimes.9
+	title = endtimes.9.t
+	desc = endtimes.9.d
+	is_triggered_only = yes
+
+	trigger = {
+		# Keep queued or external calls on the scheduled day.
+		date > 2028.1.11
+		date < 2028.1.13
+		tag = PER
+		controls_province = 16215
+		ISR = { exists = yes }
+		has_global_flag = endtimes_jerusalem_dirty_bomb_occurred
+		NOT = { has_global_flag = endtimes_tehran_nuked }
+	}
+
+	immediate = {
+		set_global_flag = endtimes_tehran_nuked
+		set_country_flag = endtimes_tehran_nuked
+		ISR = {
+			launch_nuke = {
+				province = 16215
+				use_nuke = no
+			}
+		}
+	}
+
+	option = {
+		name = endtimes.9.a
+	}
+}
+
+# Worldwide human-player announcement: June 2, 2029. Narrative only.
+country_event = {
+	id = endtimes.10
+	title = endtimes.10.t
+	desc = endtimes.10.d
+	is_triggered_only = yes
+
+	trigger = {
+		# Keep queued or external calls on the scheduled day.
+		date > 2029.6.1
+		date < 2029.6.3
+		is_ai = no
+		NOT = { has_country_flag = endtimes_europe_realignment_seen }
+	}
+
+	immediate = {
+		set_country_flag = endtimes_europe_realignment_seen
+	}
+
+	option = {
+		name = endtimes.10.a
+	}
+}
+
+# France's miraculous royal restoration: July 2, 2029, for AI and human France.
+country_event = {
+	id = endtimes.11
+	title = endtimes.11.t
+	desc = endtimes.11.d
+	is_triggered_only = yes
+
+	trigger = {
+		date > 2029.7.1
+		date < 2029.7.3
+		tag = FRA
+		NOT = { has_country_flag = endtimes_french_monarchy_restored }
+	}
+
+	immediate = {
+		set_country_flag = endtimes_french_monarchy_restored
+		set_global_flag = endtimes_french_monarchy_restored
+		set_country_flag = endtimes_henri_heir
+		# The new monarchy breaks with the Cabal and its compromised presidency.
+		if = {
+			limit = { has_idea = endtimes_cabal }
+			remove_ideas = endtimes_cabal
+		}
+		retire_country_leader = yes
+		set_politics = {
+			ruling_party = nationalist
+			elections_allowed = no
+		}
+		clear_array = ruling_party
+		clear_array = gov_coalition_array
+		add_to_array = { ruling_party = 23 } # Monarchist in MD's party system.
+		set_variable = { Monarchist_leader = 1 }
+		create_country_leader = {
+			name = "Geoffroy Saint-Michel"
+			picture = "gfx/leaders/FRA/GeofSanMichele.dds"
+			ideology = Monarchist
+			traits = {
+				nationalist_Monarchist
+				military_career
+			}
+		}
+		startup_politics = yes
+	}
+
+	option = {
+		name = endtimes.11.a
+	}
+}

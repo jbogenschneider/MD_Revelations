@@ -1,0 +1,2 @@
+# Vanilla military-police definitions, including the motorized variant, are excluded.
+sub_units = { }

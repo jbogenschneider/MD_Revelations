@@ -1,0 +1,27 @@
+# Reuse the existing fire-support robot research images for production and inventory.
+spriteTypes = {
+	spriteType = {
+		name = "GFX_humanoid_fire_support_robot_medium"
+		texturefile = "gfx/interface/technologies/Generic/Hvy_Inf_Weapons/robot_equipment_3.dds"
+	}
+	spriteType = {
+		name = "GFX_robot_equipment_type"
+		texturefile = "gfx/interface/technologies/Generic/Hvy_Inf_Weapons/rc_fire_support_drone.dds"
+	}
+	spriteType = {
+		name = "GFX_robot_equipment_type_medium"
+		texturefile = "gfx/interface/technologies/Generic/Hvy_Inf_Weapons/autonomous_fire_support_drone.dds"
+	}
+	spriteType = {
+		name = "GFX_robot_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/Generic/Hvy_Inf_Weapons/rc_fire_support_drone.dds"
+	}
+	spriteType = {
+		name = "GFX_robot_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/Generic/Hvy_Inf_Weapons/autonomous_fire_support_drone.dds"
+	}
+	spriteType = {
+		name = "GFX_robot_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/Generic/Hvy_Inf_Weapons/robot_equipment_3.dds"
+	}
+}

@@ -1,0 +1,14 @@
+on_actions = {
+	on_daily = {
+		effect = {
+			if = {
+				limit = {
+					tag = ITA
+					date > 2027.12.21
+					NOT = { has_country_flag = rev_ita_2027_election_resolved }
+				}
+				country_event = { id = rev_ita_election.1 }
+			}
+		}
+	}
+}

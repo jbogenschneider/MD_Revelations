@@ -1329,6 +1329,8 @@ technologies = {
 	}
 	#2015
 	land_Drone_equipment3 = {
+		enable_equipments = { land_drone_equipment_1 }
+
 		on_research_complete = {
 			log = "[GetDateText]: [Root.GetName]: add tech land_Drone_equipment3"
 			custom_effect_tooltip = {
@@ -1346,6 +1348,7 @@ technologies = {
 
 		enable_subunits = {
 			drone_tactical_company
+			Drone_Recce_Comp
 		}
 
 		L_Recce_Comp = {
@@ -1457,6 +1460,8 @@ technologies = {
 			need = {
 				command_control_equipment = 15
 				util_vehicle_equipment = 10
+
+				land_drone_equipment_type = 120
 			}
 		}
 		combat_service_support_company = {
@@ -1518,6 +1523,8 @@ technologies = {
 	}
 	#2025
 	land_Drone_equipment4 = {
+		enable_equipments = { land_drone_equipment_2 land_drone_equipment_3 }
+
 		on_research_complete = {
 			log = "[GetDateText]: [Root.GetName]: add tech land_Drone_equipment4"
 			if = {
@@ -1661,10 +1668,163 @@ technologies = {
 			}
 		}
 	}
-	#2035
+	#2030
 	land_Drone_equipment5 = {
+		enable_equipments = { land_drone_equipment_4 }
+
+		# Midpoint of the 2025 and 2035 unit rewards; absent modifiers count as zero.
+		L_Recce_Comp = {
+			air_attack = 0.02
+			breakthrough = -0.06
+			defense = 0.225
+			hard_attack = 0.075
+			recon = 0.25
+			soft_attack = 0.12
+			desert = {
+				attack = 0.05
+			}
+			plains = {
+				attack = 0.08
+			}
+			urban = {
+				attack = 0.02
+			}
+		}
+
+		Mot_Recce_Comp = {
+			air_attack = 0.02
+			breakthrough = -0.06
+			defense = 0.225
+			hard_attack = 0.075
+			recon = 0.31
+			soft_attack = 0.12
+			desert = {
+				attack = 0.05
+			}
+			plains = {
+				attack = 0.08
+			}
+			urban = {
+				attack = 0.02
+			}
+		}
+
+		Mech_Recce_Comp = {
+			air_attack = 0.02
+			breakthrough = -0.06
+			defense = 0.225
+			hard_attack = 0.075
+			recon = 0.4
+			soft_attack = 0.12
+			desert = {
+				attack = 0.05
+			}
+			plains = {
+				attack = 0.08
+			}
+			urban = {
+				attack = 0.02
+			}
+		}
+
+		Arm_Recce_Comp = {
+			air_attack = 0.02
+			breakthrough = -0.06
+			defense = 0.225
+			hard_attack = 0.075
+			recon = 0.4
+			soft_attack = 0.12
+			desert = {
+				attack = 0.05
+			}
+			plains = {
+				attack = 0.08
+			}
+			urban = {
+				attack = 0.02
+			}
+		}
+
+		armor_Recce_Comp = {
+			air_attack = 0.02
+			breakthrough = -0.06
+			defense = 0.225
+			hard_attack = 0.075
+			recon = 0.5
+			soft_attack = 0.12
+			desert = {
+				attack = 0.05
+			}
+			plains = {
+				attack = 0.08
+			}
+			urban = {
+				attack = 0.02
+			}
+		}
+
+		drone_tactical_company = {
+			air_attack = 0.02
+			breakthrough = -0.05
+			defense = 0.225
+			entrenchment = 0.06
+			hard_attack = 0.085
+			initiative = 0.015
+			recon = 0.25
+			soft_attack = 0.115
+			need = {
+				command_control_equipment = 2
+			}
+		}
+
+		combat_service_support_company = {
+			air_attack = 0.02
+			breakthrough = -0.015
+			defense = 0.11
+			entrenchment = 0.075
+			initiative = 0.035
+		}
+
+		attack_helo_comp = {
+			air_attack = 0.02
+			defense = 0.225
+			hard_attack = 0.075
+			recon = 0.6
+			soft_attack = 0.12
+		}
+
+		path = {
+			leads_to_tech = land_Drone_equipment6
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.95
+		start_year = 2030
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 1.00
+
+		folder = {
+			name = infantry_folder
+			position = { x = @row5 y = @2030 }
+		}
+		categories = { CAT_inf CAT_l_drone CAT_Military }
+		ai_will_do = {
+			factor = 2.5
+			modifier = { factor = 0.5 date < 2030.01.01 }
+			modifier = { factor = 0.2 date < 2025.01.01 }
+			modifier = { factor = 3 check_variable = { gdp_per_capita > 14.999 } }
+			modifier = { factor = 1.5 has_war = yes }
+		}
+	}
+
+	#2035
+	land_Drone_equipment6 = {
+		enable_equipments = { land_drone_equipment_5 }
+
 
 		L_Recce_Comp = {
+			air_attack = 0.03
 			recon = 0.25
 			defense = 0.25
 			hard_attack = 0.10
@@ -1677,6 +1837,7 @@ technologies = {
 			}
 		}
 		Mot_Recce_Comp = {
+			air_attack = 0.03
 			recon = 0.31
 			defense = 0.25
 			hard_attack = 0.10
@@ -1689,6 +1850,7 @@ technologies = {
 			}
 		}
 		Mech_Recce_Comp = {
+			air_attack = 0.03
 			recon = 0.4
 			defense = 0.25
 			hard_attack = 0.10
@@ -1701,6 +1863,7 @@ technologies = {
 			}
 		}
 		Arm_Recce_Comp = {
+			air_attack = 0.03
 			recon = 0.4
 			defense = 0.25
 			hard_attack = 0.10
@@ -1713,6 +1876,7 @@ technologies = {
 			}
 		}
 		armor_Recce_Comp = {
+			air_attack = 0.03
 			recon = 0.5
 			defense = 0.25
 			hard_attack = 0.10
@@ -1725,6 +1889,7 @@ technologies = {
 			}
 		}
 		drone_tactical_company = {
+			air_attack = 0.03
 			recon = 0.5
 			defense = 0.25
 			hard_attack = 0.10
@@ -1734,12 +1899,17 @@ technologies = {
 			}
 		}
 		attack_helo_comp = {
+			air_attack = 0.03
 			recon = 0.6
 			defense = 0.25
 			hard_attack = 0.10
 			soft_attack = 0.15
 		}
 
+
+		combat_service_support_company = {
+			air_attack = 0.03
+		}
 		research_cost = 2
 		start_year = 2035
 		folder = {
@@ -2563,6 +2733,7 @@ technologies = {
 	}
 
 	rc_fire_support_drone = {
+		enable_equipments = { robot_equipment_1 }
 
 		allow = {
 			ROOT = {
@@ -2575,6 +2746,7 @@ technologies = {
 		category_non_militia = {
 			defense = 0.10
 		}
+		#casualty_trickleback = 0.02
 
 		path = {
 			leads_to_tech = autonomous_fire_support_drone
@@ -2600,9 +2772,254 @@ technologies = {
 		}
 
 		ai_will_do = { factor = 1 }
-	}
 
+		drone_tactical_company = { need = { robot_equipment_type = 10 } }
+
+		# Initial robot requirements begin with the 2025 equipment unlock.
+		Drone_Recce_Comp = { need = { robot_equipment_type = 5 } }
+
+		combat_service_support_company = { need = { robot_equipment_type = 6 } }
+
+		helicopter_combat_service_support = { need = { robot_equipment_type = 4 } }
+
+		combat_maintenance_company = { need = { robot_equipment_type = 4 } }
+
+		airmobile_maintenance_company = { need = { robot_equipment_type = 3 } }
+
+		hq_support_company = { need = { robot_equipment_type = 4 } }
+
+		hq_logistics = { need = { robot_equipment_type = 4 } }
+
+		hq_maintenance = { need = { robot_equipment_type = 3 } }
+
+		field_hospital = { need = { robot_equipment_type = 4 } }
+
+		logistics_company = { need = { robot_equipment_type = 4 } }
+}
+
+	# 2030: extend robot requirements to regular ground forces (additive needs).
 	autonomous_fire_support_drone = {
+		enable_equipments = { robot_equipment_2 }
+		on_research_complete = {
+			custom_effect_tooltip = REV_ROBOT_EQUIPMENT_2_STATS_TT
+		}
+
+		allow = {
+			ROOT = {
+				is_special_project_completed = sp:sp_fire_support_land_drone
+			}
+		}
+		is_special_project_tech = yes
+
+		category_non_militia = {
+			breakthrough = 0.10
+			soft_attack = 0.10
+		}
+		#casualty_trickleback = 0.02
+
+		path = {
+			leads_to_tech = humanoid_fire_support_robot
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 2030
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 1.00
+
+		folder = {
+			name = infantry_folder
+			position = { x = 2 y = @2030 }
+		}
+		categories = {
+			CAT_inf
+			CAT_support_weapons
+			CAT_Military
+		}
+		ai_will_do = { factor = 1 }
+
+		L_Engi_Comp = { need = { robot_equipment_type = 6 } }
+
+		H_Engi_Comp = { need = { robot_equipment_type = 4 } }
+
+		pathfinder_company = { need = { robot_equipment_type = 3 } }
+
+		L_Ranger_Recce_Comp = { need = { robot_equipment_type = 5 } }
+
+		hq_engineer = { need = { robot_equipment_type = 2 } }
+
+		hq_recon = { need = { robot_equipment_type = 2 } }
+
+		hq_naval_liaison = { need = { robot_equipment_type = 2 } }
+
+		hq_air_liaison = { need = { robot_equipment_type = 2 } }
+
+		hq_specops = { need = { robot_equipment_type = 2 } }
+
+		hq_mech = { need = { robot_equipment_type = 2 } }
+
+		hq_mot = { need = { robot_equipment_type = 2 } }
+
+		hq_armor = { need = { robot_equipment_type = 2 } }
+
+		hq_infantry = { need = { robot_equipment_type = 2 } }
+
+		hq_Mot_Inf_Bat = { need = { robot_equipment_type = 2 } }
+
+		hq_Mech_Inf_Bat = { need = { robot_equipment_type = 2 } }
+
+		hq_Arm_Inf_Bat = { need = { robot_equipment_type = 2 } }
+
+		hq_Mech_Marine_Bat = { need = { robot_equipment_type = 2 } }
+
+		hq_Mech_Air_Inf_Bat = { need = { robot_equipment_type = 2 } }
+
+		mech_inf_hq = { need = { robot_equipment_type = 2 } }
+
+		arm_inf_hq = { need = { robot_equipment_type = 2 } }
+
+		lt_tank_hq = { need = { robot_equipment_type = 2 } }
+
+		arm_hq = { need = { robot_equipment_type = 2 } }
+
+		spaa_hq = { need = { robot_equipment_type = 2 } }
+
+		spg_inf_hq = { need = { robot_equipment_type = 2 } }
+
+		mlrs_hq = { need = { robot_equipment_type = 2 } }
+
+		atk_helo_hq = { need = { robot_equipment_type = 2 } }
+
+		med_trans_helo_hq = { need = { robot_equipment_type = 2 } }
+
+		L_Inf_Bat = { need = { robot_equipment_type = 12 } }
+
+		Mot_Inf_Bat = { need = { robot_equipment_type = 12 } }
+
+		Mech_Inf_Bat = { need = { robot_equipment_type = 12 } }
+
+		Arm_Inf_Bat = { need = { robot_equipment_type = 12 } }
+
+		L_Air_Inf_Bat = { need = { robot_equipment_type = 12 } }
+
+		Mot_Air_Inf_Bat = { need = { robot_equipment_type = 12 } }
+
+		Mech_Air_Inf_Bat = { need = { robot_equipment_type = 12 } }
+
+		Arm_Air_Inf_Bat = { need = { robot_equipment_type = 12 } }
+
+		L_Ranger_Bat = { need = { robot_equipment_type = 12 } }
+
+		L_Marine_Bat = { need = { robot_equipment_type = 12 } }
+
+		L_Marine_Cdo_Bat = { need = { robot_equipment_type = 12 } }
+
+		Mot_Marine_Bat = { need = { robot_equipment_type = 12 } }
+
+		Mech_Marine_Bat = { need = { robot_equipment_type = 12 } }
+
+		Arm_Marine_Bat = { need = { robot_equipment_type = 12 } }
+
+		L_Air_assault_Bat = { need = { robot_equipment_type = 12 } }
+
+		attack_helo_bat = { need = { robot_equipment_type = 4 } }
+
+		Special_Forces = { need = { robot_equipment_type = 12 } }
+
+		armor_Bat = { need = { robot_equipment_type = 4 } }
+
+		L_arm_Bat = { need = { robot_equipment_type = 4 } }
+
+		Arty_Bat = { need = { robot_equipment_type = 4 } }
+
+		SP_Arty_Bat = { need = { robot_equipment_type = 4 } }
+
+		SP_R_Arty_Bat = { need = { robot_equipment_type = 4 } }
+
+		SP_AA_Bat = { need = { robot_equipment_type = 4 } }
+
+		Light_Mech_Inf_Bat = { need = { robot_equipment_type = 6 } }
+
+		Light_Arm_Inf_Bat = { need = { robot_equipment_type = 6 } }
+
+		Light_L_Air_assault_Bat = { need = { robot_equipment_type = 6 } }
+
+		Light_attack_helo_bat = { need = { robot_equipment_type = 3 } }
+
+		Light_armor_Bat = { need = { robot_equipment_type = 3 } }
+
+		Light_L_arm_Bat = { need = { robot_equipment_type = 3 } }
+
+		Light_SP_Arty_Bat = { need = { robot_equipment_type = 3 } }
+
+		Light_SP_R_arty_Bat = { need = { robot_equipment_type = 3 } }
+
+		Light_SP_AA_Bat = { need = { robot_equipment_type = 3 } }
+
+		Arty_Battery = { need = { robot_equipment_type = 3 } }
+
+		SP_R_arty_battery = { need = { robot_equipment_type = 3 } }
+
+		SP_arty_battery = { need = { robot_equipment_type = 3 } }
+
+		SP_AA_Battery = { need = { robot_equipment_type = 3 } }
+
+		air_assault_arty_battery = { need = { robot_equipment_type = 3 } }
+
+		armor_Comp = { need = { robot_equipment_type = 3 } }
+
+		attack_helo_comp = { need = { robot_equipment_type = 3 } }
+
+		L_Recce_Comp = { need = { robot_equipment_type = 5 } }
+
+		Mot_Recce_Comp = { need = { robot_equipment_type = 5 } }
+
+		Mech_Recce_Comp = { need = { robot_equipment_type = 5 } }
+
+		Arm_Recce_Comp = { need = { robot_equipment_type = 5 } }
+
+		armor_Recce_Comp = { need = { robot_equipment_type = 5 } }
+
+		Weapons_company = { need = { robot_equipment_type = 3 } }
+
+		Heavy_mortar_company = { need = { robot_equipment_type = 3 } }
+
+		AT_company = { need = { robot_equipment_type = 3 } }
+
+		Mot_AT_company = { need = { robot_equipment_type = 4 } }
+
+		AA_company = { need = { robot_equipment_type = 3 } }
+
+		Combat_engineer_company = { need = { robot_equipment_type = 3 } }
+
+		amphibious_landing_detachment = { need = { robot_equipment_type = 3 } }
+
+		HOL_marechaussee_support_company = { need = { robot_equipment_type = 6 } }
+
+		medium_walker_battalion = { need = { robot_equipment_type = 4 } }
+
+		light_walker_tank_battalion = { need = { robot_equipment_type = 4 } }
+
+		heavy_walker_tank_battalion = { need = { robot_equipment_type = 4 } }
+
+		light_medium_walker_battalion = { need = { robot_equipment_type = 4 } }
+
+		light_light_walker_tank_battalion = { need = { robot_equipment_type = 4 } }
+
+		light_heavy_walker_tank_battalion = { need = { robot_equipment_type = 4 } }
+
+		space_artillery_support_company = { need = { robot_equipment_type = 2 } }
+
+		HACS_Mech = { need = { robot_equipment_type = 3 } }
+
+		HACS_Mech_2 = { need = { robot_equipment_type = 3 } }
+
+		HACS_Mech_3 = { need = { robot_equipment_type = 3 } }
+}
+
+	humanoid_fire_support_robot = {
+		enable_equipments = { robot_equipment_3 }
 
 		allow = {
 			ROOT = {
@@ -2616,6 +3033,7 @@ technologies = {
 			breakthrough = 0.10
 			soft_attack = 0.10
 		}
+		#casualty_trickleback = 0.02
 
 		research_cost = 1.5
 		start_year = 2035
@@ -2823,4 +3241,5 @@ technologies = {
 
 		ai_will_do = { factor = 1 }
 	}
+
 }

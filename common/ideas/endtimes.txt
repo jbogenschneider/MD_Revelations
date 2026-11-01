@@ -1,0 +1,25 @@
+ideas = {
+	country = {
+		endtimes_cabal = {
+			picture = sov_oligarch
+			allowed = { always = yes }
+			removal_cost = -1
+
+			# Computing also covers encryption/decryption; do not double their bonus.
+			research_bonus = {
+				CAT_computing_tech = 0.05
+				CAT_ai = 0.05
+				CAT_internet_tech = 0.05
+			}
+
+			on_add = {
+				endtimes_refresh_support_floor = yes
+			}
+			on_remove = {
+				remove_dynamic_modifier = { modifier = endtimes_cabal_support_floor }
+				clear_variable = endtimes_cabal_stability_floor
+				clear_variable = endtimes_cabal_war_support_floor
+			}
+		}
+	}
+}
