@@ -1,0 +1,27 @@
+# Countries taking part in the May 2, 2029 realignment.
+endtimes_csto_realignment_country = {
+	OR = {
+		tag = ITA
+		tag = SWI
+		tag = ICE
+		tag = BUL
+		tag = SER
+		tag = BOS
+		tag = TUR
+		tag = MNT
+		tag = ALB
+		tag = SLO
+		tag = CZE
+		tag = GEO
+		tag = MOR
+		tag = ALG
+		tag = EGY
+		tag = LBA
+		tag = TUN
+		tag = ISR
+		tag = SAU
+		tag = PAK
+		tag = RAJ
+		tag = UAE
+	}
+}

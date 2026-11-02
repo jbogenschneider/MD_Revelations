@@ -1,0 +1,49 @@
+# Country scope. Run for every participant before any peace checks, so another
+# departing NATO member is treated as a non-NATO opponent on the same day.
+endtimes_leave_previous_alliance = {
+	NATO_leave = yes
+	if = {
+		limit = { is_in_faction = yes NOT = { is_in_faction_with = SOV } }
+		leave_faction = yes
+	}
+}
+
+# Country-event ROOT is the joining country. Do not use CSTO_join here: its
+# random-leader selection is unnecessary when Russia is the intended leader.
+endtimes_join_csto_and_cabal = {
+	endtimes_leave_previous_alliance = yes
+	every_other_country = {
+		limit = {
+			has_war_with = ROOT
+			NOT = { has_idea = NATO_member }
+		}
+		white_peace = ROOT
+	}
+	save_event_target_as = endtimes_csto_applicant
+	SOV = {
+		if = {
+			limit = { NOT = { is_in_faction = yes } }
+			create_faction_from_template = faction_template_csto
+		}
+		add_ideas = CSTO_member
+		if = {
+			limit = { NOT = { is_in_array = { global.CSTO_member = THIS } } }
+			add_to_array = { global.CSTO_member = THIS }
+		}
+		add_to_tech_sharing_group = CSTO_Tech_Share
+		set_faction_leader = yes
+		if = {
+			limit = { NOT = { is_in_faction_with = event_target:endtimes_csto_applicant } }
+			add_to_faction = event_target:endtimes_csto_applicant
+		}
+	}
+	add_ideas = CSTO_member
+	if = {
+		limit = { NOT = { is_in_array = { global.CSTO_member = THIS } } }
+		add_to_array = { global.CSTO_member = THIS }
+	}
+	add_to_tech_sharing_group = CSTO_Tech_Share
+	add_ideas = endtimes_cabal
+	set_country_flag = endtimes_cabal_initialized
+	endtimes_refresh_support_floor = yes
+}

@@ -1,6 +1,82 @@
 # Fictional Endtimes storyline. Cabal membership is granted at startup.
 add_namespace = endtimes
 
+# Alex takes control of Russia: January 6, 2028, for AI and human Russia.
+country_event = {
+	id = endtimes.15
+	title = endtimes.15.t
+	desc = endtimes.15.d
+	is_triggered_only = yes
+
+	trigger = {
+		date > 2028.1.5
+		date < 2028.1.7
+		tag = SOV
+		NOT = { has_country_flag = endtimes_alex_took_over }
+	}
+
+	immediate = {
+		set_country_flag = endtimes_alex_took_over
+		set_global_flag = endtimes_alex_took_over
+		# End every current war, including wars against countries outside NATO.
+		every_other_country = {
+			limit = { has_war_with = SOV }
+			white_peace = SOV
+		}
+		retire_country_leader = yes
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = yes
+			last_election = "2028.1.6"
+			election_frequency = 144 # Next election: January 2040.
+		}
+		clear_array = ruling_party
+		clear_array = gov_coalition_array
+		add_to_array = { ruling_party = 15 } # Oligarchism in MD's party system.
+		set_variable = { oligarchism_leader = 1 }
+		create_country_leader = {
+			name = "Alex"
+			picture = "gfx/leaders/SOV/alex-thebeast.dds"
+			ideology = oligarchism
+			traits = { neutrality_oligarchism }
+		}
+		startup_politics = yes
+		# Clear after politics setup so inherited and setup-added spirits are removed.
+		endtimes_clear_national_spirits_except_cabal_and_csto = yes
+		if = {
+			limit = { has_idea = CSTO_member is_in_faction = yes }
+			set_faction_leader = yes
+		}
+		add_ideas = endtimes_cabal
+		set_country_flag = endtimes_cabal_initialized
+		KAZ = {
+			if = {
+				limit = { exists = yes }
+				add_ideas = endtimes_cabal
+				set_country_flag = endtimes_cabal_initialized
+			}
+		}
+		BLR = {
+			if = {
+				limit = { exists = yes }
+				add_ideas = endtimes_cabal
+				set_country_flag = endtimes_cabal_initialized
+			}
+		}
+		set_variable = { debt = 0 }
+		set_variable = { debt_ratio = 0 }
+		set_variable = { debt_rate = 0 }
+		set_temp_variable = { treasury_change = 300 }
+		modify_treasury_effect = yes
+		ingame_update_setup = yes
+		endtimes_refresh_support_floor = yes
+	}
+
+	option = {
+		name = endtimes.15.a
+	}
+}
+
 # Shared briefing: January 1, 2026, 08:00.
 country_event = {
 	id = endtimes.1
@@ -271,6 +347,35 @@ country_event = {
 	}
 }
 
+# Alex's bloc expands: May 2, 2029, for AI and human participants alike.
+country_event = {
+	id = endtimes.16
+	title = endtimes.16.t
+	desc = endtimes.16.d
+	is_triggered_only = yes
+
+	trigger = {
+		date > 2029.5.1
+		date < 2029.5.3
+		endtimes_csto_realignment_country = yes
+		SOV = { exists = yes }
+		NOT = { has_country_flag = endtimes_csto_realignment_completed }
+	}
+
+	immediate = {
+		set_country_flag = endtimes_csto_realignment_completed
+		if = {
+			limit = { tag = ITA }
+			set_country_flag = endtimes_italy_joined_csto
+		}
+		endtimes_join_csto_and_cabal = yes
+	}
+
+	option = {
+		name = endtimes.16.a
+	}
+}
+
 # France's miraculous royal restoration: July 2, 2029, for AI and human France.
 country_event = {
 	id = endtimes.11
@@ -313,9 +418,180 @@ country_event = {
 			}
 		}
 		startup_politics = yes
+		endtimes_ensure_nato_membership = yes
+		if = {
+			limit = { BEL = { exists = yes } }
+			BEL = { NATO_leave = yes }
+			annex_country = { target = BEL transfer_troops = yes }
+		}
+		# Naples and the southern mainland, plus both major Italian islands.
+		every_state = {
+			limit = {
+				is_owned_by = ITA
+				OR = {
+					state = 82  # Campania (Naples)
+					state = 956 # Calabria
+					state = 957 # Puglia
+					state = 83  # Sicily
+					state = 84  # Sardinia
+				}
+			}
+			FRA = { transfer_state = PREV }
+		}
+		# Incorporate the Alpine states and neighbouring principalities.
+		every_other_country = {
+			limit = {
+				OR = { tag = MNC tag = SMA tag = LIC }
+			}
+			NATO_leave = yes
+			if = {
+				limit = { has_idea = CSTO_member }
+				remove_from_array = { global.CSTO_member = THIS }
+				remove_from_tech_sharing_group = CSTO_Tech_Share
+				remove_ideas = CSTO_member
+			}
+			FRA = { annex_country = { target = PREV transfer_troops = yes } }
+		}
 	}
 
 	option = {
 		name = endtimes.11.a
+	}
+}
+
+# Germany's royal settlement: July 3, 2029, for AI and human Germany.
+country_event = {
+	id = endtimes.14
+	title = endtimes.14.t
+	desc = endtimes.14.d
+	is_triggered_only = yes
+
+	trigger = {
+		date > 2029.7.2
+		date < 2029.7.4
+		tag = GER
+		NOT = { has_country_flag = endtimes_german_monarchy_restored }
+	}
+
+	immediate = {
+		set_country_flag = endtimes_german_monarchy_restored
+		set_global_flag = endtimes_german_monarchy_restored
+		# Royal appointment is narrative allegiance, with sovereign German gameplay.
+		if = {
+			limit = { is_subject = yes }
+			overlord = { set_autonomy = { target = GER autonomy_state = autonomy_free } }
+		}
+		remove_ideas = endtimes_cabal
+		retire_country_leader = yes
+		set_politics = {
+			ruling_party = nationalist
+			elections_allowed = no
+		}
+		clear_array = ruling_party
+		clear_array = gov_coalition_array
+		add_to_array = { ruling_party = 23 }
+		set_variable = { Monarchist_leader = 1 }
+		create_country_leader = {
+			name = "Matthias von Falkenberg"
+			picture = "gfx/leaders/GER/Matthias_von_Falkenberg.dds"
+			ideology = Monarchist
+			traits = {
+				nationalist_Monarchist
+				military_career
+			}
+		}
+		startup_politics = yes
+		endtimes_ensure_nato_membership = yes
+		set_faction_leader = yes
+		set_global_flag = rev_nato_lock_ger_leader
+		if = {
+			limit = { FRA = { exists = yes } }
+			FRA = { endtimes_ensure_nato_membership = yes }
+		}
+		# Remove absorbed NATO members from the membership array before annexation.
+		if = {
+			limit = { HOL = { exists = yes } }
+			HOL = { NATO_leave = yes }
+			annex_country = { target = HOL transfer_troops = yes }
+		}
+		if = {
+			limit = { AUS = { exists = yes } }
+			AUS = { NATO_leave = yes }
+			annex_country = { target = AUS transfer_troops = yes }
+		}
+		if = {
+			limit = { DEN = { exists = yes } }
+			DEN = { NATO_leave = yes }
+			annex_country = { target = DEN transfer_troops = yes }
+		}
+		# Berlin cannot be divided at state level; move the capital to Bonn first.
+		if = {
+			limit = { owns_state = 966 }
+			set_capital = { state = 966 }
+		}
+		# Five eastern Laender and Berlin, using the mod's modern state boundaries.
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 539  # Mecklenburg-Vorpommern
+					state = 1079 # Brandenburg
+					state = 45   # Berlin
+					state = 972  # Sachsen-Anhalt
+					state = 44   # Sachsen
+					state = 545  # Thueringen
+				}
+			}
+			CZE = { transfer_state = PREV }
+		}
+	}
+
+	option = {
+		name = endtimes.14.a
+	}
+}
+
+# Worldwide human-player announcement: May 10, 2029. Narrative only.
+country_event = {
+	id = endtimes.12
+	title = endtimes.12.t
+	desc = endtimes.12.d
+	is_triggered_only = yes
+
+	trigger = {
+		date > 2029.5.9
+		date < 2029.5.11
+		is_ai = no
+		NOT = { has_country_flag = endtimes_prophecy_fulfilled_seen }
+	}
+
+	immediate = {
+		set_country_flag = endtimes_prophecy_fulfilled_seen
+	}
+
+	option = {
+		name = endtimes.12.a
+	}
+}
+
+# Worldwide human-player announcement: November 24, 2027. Narrative only.
+country_event = {
+	id = endtimes.13
+	title = endtimes.13.t
+	desc = endtimes.13.d
+	is_triggered_only = yes
+
+	trigger = {
+		date > 2027.11.23
+		date < 2027.11.25
+		is_ai = no
+		NOT = { has_country_flag = endtimes_bad_harvest_seen }
+	}
+
+	immediate = {
+		set_country_flag = endtimes_bad_harvest_seen
+	}
+
+	option = {
+		name = endtimes.13.a
 	}
 }

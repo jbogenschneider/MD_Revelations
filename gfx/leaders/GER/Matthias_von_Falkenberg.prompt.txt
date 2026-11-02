@@ -1,0 +1,10 @@
+Generated with the built-in image_gen tool.
+Integration: resized to 156 x 210 and encoded as uncompressed BGRA DDS.
+
+Use case: stylized-concept
+Asset type: Hearts of Iron IV Millennium Dawn country leader portrait
+Primary request: Create a single fictional modern German army general, Matthias von Falkenberg, age about 57, serving as a monarchist Chancellor in 2029. Dignified serious expression, short neatly combed gray hair, clean-shaven, gray-green modern German military dress uniform with discreet rank insignia.
+Style/medium: realistic painted strategy-game portrait, restrained colors, subtle brushwork.
+Composition/framing: vertical head and shoulders, centered, entire head visible, looking slightly to the viewer's left, suitable for cropping to 156 by 210 pixels.
+Scene/backdrop: muted dark gray-green studio background.
+Constraints: one fictional person only, no text, no watermark.
