@@ -1,8 +1,6 @@
 rev_rebuild_eu_member_array = {
 	# Rebuild from actual country ideas to avoid stale hard-coded startup lists.
-	every_country = {
-		remove_from_array = { global.EU_member = THIS }
-	}
+	clear_array = global.EU_member
 
 	every_country = {
 		limit = { has_idea = EU_member }

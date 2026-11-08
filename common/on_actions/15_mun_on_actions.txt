@@ -1,0 +1,1 @@
+# Intentionally left blank: vanilla WWII DLC hooks are incompatible with Millennium Dawn.

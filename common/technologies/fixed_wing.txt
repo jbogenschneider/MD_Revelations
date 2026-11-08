@@ -9,6 +9,7 @@ technologies = {
 	@2005 = 12
 	@2015 = 16
 	@2025 = 20
+	@2030 = 22
 	@2035 = 24
 	#@1944 = 16
 	#@1945 = 18
@@ -2674,6 +2675,10 @@ technologies = {
 			leads_to_tech = Air_UAV4
 			research_cost_coeff = 1
 		}
+		path = {
+			leads_to_tech = Air_Kamikaze_range_upgrade
+			research_cost_coeff = 1
+		}
 
 		research_cost = 3
 		start_year = 2025
@@ -2794,6 +2799,51 @@ technologies = {
 			}
 		}
 	}
+	Air_Kamikaze_range_upgrade = {
+		# 0.24 * Millennium Dawn's 250-day base research cost = 60 days.
+		research_cost = 0.24
+		start_year = 2030
+
+		allow = {
+			OR = {
+				has_tech = Air_Kamikaze3
+				has_tech = suicide_drone_3
+			}
+		}
+
+		folder = {
+			name = fixed_wing_folder
+			position = { x = @row8 y = @2030 }
+		}
+		folder = {
+			name = bba_aircraft_folder
+			position = { x = -4 y = 30 }
+		}
+
+		# Individual equipment bonuses belong in an equipment_bonus block on an idea.
+		on_research_complete = {
+			add_ideas = rev_kamikaze_range_upgrade_bonus
+		}
+		custom_effect_tooltip = REV_KAMIKAZE_RANGE_UPGRADE_EFFECT_TT
+
+		categories = {
+			CAT_fixed_wing
+			CAT_air_eqp
+			CAT_a_uav
+			CAT_drones
+			CAT_small_plane
+			CAT_Military
+		}
+		special_project_specialization = { specialization_air }
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.2
+				date < 2030.01.01
+			}
+		}
+	}
+
 	Air_Kamikaze4 = {
 
 		enable_equipments = {

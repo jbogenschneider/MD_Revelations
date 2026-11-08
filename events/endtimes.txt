@@ -183,6 +183,31 @@ country_event = {
 	}
 }
 
+# Worldwide human-player announcement: April 16, 2028, three days after the Miracle.
+# Narrative reunion only; national religions, governments and alliances stay intact.
+country_event = {
+	id = endtimes.19
+	title = endtimes.19.t
+	desc = endtimes.19.d
+	is_triggered_only = yes
+
+	trigger = {
+		date > 2028.4.15
+		date < 2028.4.17
+		has_global_flag = endtimes_miracle_occurred
+		is_ai = no
+		NOT = { has_country_flag = endtimes_orthodox_reunion_seen }
+	}
+
+	immediate = {
+		set_country_flag = endtimes_orthodox_reunion_seen
+	}
+
+	option = {
+		name = endtimes.19.a
+	}
+}
+
 # Worldwide human-player announcement: June 6, 2028.
 country_event = {
 	id = endtimes.5
@@ -228,6 +253,29 @@ country_event = {
 
 	option = {
 		name = endtimes.6.a
+	}
+}
+
+# Worldwide human-player announcement: April 29, 2029, before the papal takeover.
+country_event = {
+	id = endtimes.20
+	title = endtimes.20.t
+	desc = endtimes.20.d
+	is_triggered_only = yes
+
+	trigger = {
+		date > 2029.4.28
+		date < 2029.4.30
+		is_ai = no
+		NOT = { has_country_flag = endtimes_one_faith_seen }
+	}
+
+	immediate = {
+		set_country_flag = endtimes_one_faith_seen
+	}
+
+	option = {
+		name = endtimes.20.a
 	}
 }
 
@@ -376,7 +424,7 @@ country_event = {
 	}
 }
 
-# France's miraculous royal restoration: July 2, 2029, for AI and human France.
+# France's royal restoration: five days after the French civil-war split.
 country_event = {
 	id = endtimes.11
 	title = endtimes.11.t
@@ -384,9 +432,8 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		date > 2029.7.1
-		date < 2029.7.3
 		tag = FRA
+		has_country_flag = rev_fra_left_split_started
 		NOT = { has_country_flag = endtimes_french_monarchy_restored }
 	}
 
@@ -407,6 +454,17 @@ country_event = {
 		clear_array = ruling_party
 		clear_array = gov_coalition_array
 		add_to_array = { ruling_party = 23 } # Monarchist in MD's party system.
+		# Transfer the former nationalist parties' support to the royal settlement.
+		add_to_variable = { party_pop_array^23 = party_pop_array^20 }
+		add_to_variable = { party_pop_array^23 = party_pop_array^21 }
+		add_to_variable = { party_pop_array^23 = party_pop_array^22 }
+		set_variable = { party_pop_array^20 = 0 }
+		set_variable = { party_pop_array^21 = 0 }
+		set_variable = { party_pop_array^22 = 0 }
+		set_country_flag = party21_banned
+		set_country_flag = party22_banned
+		set_country_flag = party23_banned
+		clr_country_flag = party24_banned
 		set_variable = { Monarchist_leader = 1 }
 		create_country_leader = {
 			name = "Geoffroy Saint-Michel"
@@ -420,37 +478,43 @@ country_event = {
 		startup_politics = yes
 		endtimes_ensure_nato_membership = yes
 		if = {
-			limit = { BEL = { exists = yes } }
-			BEL = { NATO_leave = yes }
-			annex_country = { target = BEL transfer_troops = yes }
-		}
-		# Naples and the southern mainland, plus both major Italian islands.
-		every_state = {
-			limit = {
-				is_owned_by = ITA
-				OR = {
-					state = 82  # Campania (Naples)
-					state = 956 # Calabria
-					state = 957 # Puglia
-					state = 83  # Sicily
-					state = 84  # Sardinia
-				}
+			limit = { ITA = { exists = yes } }
+			# Le Pen's loyalists seize the southeastern border territory for Italy.
+			every_owned_state = {
+				limit = { OR = { state = 857 state = 63 state = 1000 } }
+				ITA = { transfer_state = PREV }
 			}
-			FRA = { transfer_state = PREV }
-		}
-		# Incorporate the Alpine states and neighbouring principalities.
-		every_other_country = {
-			limit = {
-				OR = { tag = MNC tag = SMA tag = LIC }
-			}
-			NATO_leave = yes
 			if = {
-				limit = { has_idea = CSTO_member }
-				remove_from_array = { global.CSTO_member = THIS }
-				remove_from_tech_sharing_group = CSTO_Tech_Share
-				remove_ideas = CSTO_member
+				limit = { MNC = { exists = yes } }
+				MNC = {
+					NATO_leave = yes
+					if = {
+						limit = { has_idea = CSTO_member }
+						remove_from_array = { global.CSTO_member = THIS }
+						remove_from_tech_sharing_group = CSTO_Tech_Share
+						remove_ideas = CSTO_member
+					}
+				}
+				ITA = { annex_country = { target = MNC transfer_troops = yes } }
 			}
-			FRA = { annex_country = { target = PREV transfer_troops = yes } }
+		}
+		if = {
+			limit = { owns_state = 963 SWI = { exists = yes } }
+			SWI = { transfer_state = 963 }
+		}
+		country_event = { id = rev_fra_split.2 hours = 1 }
+		# Keep the later royal settlements relative to the actual French restoration.
+		SPR = {
+			if = { limit = { exists = yes } country_event = { id = endtimes.17 days = 2 } }
+		}
+		POR = {
+			if = { limit = { exists = yes } country_event = { id = endtimes.17 days = 2 } }
+		}
+		ENG = {
+			if = { limit = { exists = yes } country_event = { id = endtimes.18 days = 10 } }
+		}
+		IRE = {
+			if = { limit = { exists = yes } country_event = { id = endtimes.18 days = 10 } }
 		}
 	}
 
@@ -508,45 +572,100 @@ country_event = {
 			limit = { FRA = { exists = yes } }
 			FRA = { endtimes_ensure_nato_membership = yes }
 		}
-		# Remove absorbed NATO members from the membership array before annexation.
-		if = {
-			limit = { HOL = { exists = yes } }
-			HOL = { NATO_leave = yes }
-			annex_country = { target = HOL transfer_troops = yes }
-		}
+		# Remove Austria from NATO's membership systems if needed before annexation.
 		if = {
 			limit = { AUS = { exists = yes } }
 			AUS = { NATO_leave = yes }
 			annex_country = { target = AUS transfer_troops = yes }
-		}
-		if = {
-			limit = { DEN = { exists = yes } }
-			DEN = { NATO_leave = yes }
-			annex_country = { target = DEN transfer_troops = yes }
 		}
 		# Berlin cannot be divided at state level; move the capital to Bonn first.
 		if = {
 			limit = { owns_state = 966 }
 			set_capital = { state = 966 }
 		}
-		# Five eastern Laender and Berlin, using the mod's modern state boundaries.
-		every_owned_state = {
-			limit = {
-				OR = {
-					state = 539  # Mecklenburg-Vorpommern
-					state = 1079 # Brandenburg
-					state = 45   # Berlin
-					state = 972  # Sachsen-Anhalt
-					state = 44   # Sachsen
-					state = 545  # Thueringen
-				}
-			}
-			CZE = { transfer_state = PREV }
-		}
+		# The eastern Laender and Berlin form a sovereign East German state.
+		endtimes_create_independent_east_germany = yes
 	}
 
 	option = {
 		name = endtimes.14.a
+	}
+}
+
+# Spain and Portugal join the royal settlement two days after France.
+country_event = {
+	id = endtimes.17
+	title = endtimes.17.t
+	desc = endtimes.17.d
+	is_triggered_only = yes
+
+	trigger = {
+		OR = { tag = SPR tag = POR }
+		has_global_flag = endtimes_french_monarchy_restored
+		NOT = { has_country_flag = endtimes_iberian_monarchy_established }
+	}
+
+	immediate = {
+		set_country_flag = endtimes_iberian_monarchy_established
+		# Convert the active leader before changing the ruling outlook, preserving
+		# that leader's identity and portrait instead of selecting another monarch.
+		set_country_leader_ideology = Monarchist
+		set_politics = {
+			ruling_party = nationalist
+			elections_allowed = no
+		}
+		clear_array = ruling_party
+		clear_array = gov_coalition_array
+		add_to_array = { ruling_party = 23 }
+		set_variable = { Monarchist_leader = 1 }
+		if = {
+			limit = { NOT = { has_country_leader_with_trait = nationalist_Monarchist } }
+			add_country_leader_trait = nationalist_Monarchist
+		}
+		startup_politics = yes
+		endtimes_ensure_nato_membership = yes
+	}
+
+	option = {
+		name = endtimes.17.a
+	}
+}
+
+# Britain and Ireland join the royal settlement ten days after France.
+country_event = {
+	id = endtimes.18
+	title = endtimes.18.t
+	desc = endtimes.18.d
+	is_triggered_only = yes
+
+	trigger = {
+		OR = { tag = ENG tag = IRE }
+		has_global_flag = endtimes_french_monarchy_restored
+		NOT = { has_country_flag = endtimes_british_irish_monarchy_established }
+	}
+
+	immediate = {
+		set_country_flag = endtimes_british_irish_monarchy_established
+		# As in Spain and Portugal, the current national leader continues in office.
+		set_country_leader_ideology = Monarchist
+		set_politics = {
+			ruling_party = nationalist
+			elections_allowed = no
+		}
+		clear_array = ruling_party
+		clear_array = gov_coalition_array
+		add_to_array = { ruling_party = 23 }
+		set_variable = { Monarchist_leader = 1 }
+		if = {
+			limit = { NOT = { has_country_leader_with_trait = nationalist_Monarchist } }
+			add_country_leader_trait = nationalist_Monarchist
+		}
+		startup_politics = yes
+		endtimes_ensure_nato_membership = yes
+	}
+
+	option = {
+		name = endtimes.18.a
 	}
 }
 
@@ -593,5 +712,50 @@ country_event = {
 
 	option = {
 		name = endtimes.13.a
+	}
+}
+
+# Worldwide human-player announcement: June 5, 2029.
+country_event = {
+	id = endtimes.21
+	title = endtimes.21.t
+	desc = endtimes.21.d
+	is_triggered_only = yes
+
+	trigger = {
+		date > 2029.6.4
+		date < 2029.6.6
+		is_ai = no
+		NOT = { has_country_flag = endtimes_famine_disasters_seen }
+	}
+
+	immediate = {
+		set_country_flag = endtimes_famine_disasters_seen
+	}
+
+	option = {
+		name = endtimes.21.a
+	}
+}
+
+# Worldwide human-player announcement when the French civil war begins.
+country_event = {
+	id = endtimes.22
+	title = endtimes.22.t
+	desc = endtimes.22.d
+	is_triggered_only = yes
+
+	trigger = {
+		is_ai = no
+		has_global_flag = endtimes_french_civil_war_announced
+		NOT = { has_country_flag = endtimes_french_civil_war_seen }
+	}
+
+	immediate = {
+		set_country_flag = endtimes_french_civil_war_seen
+	}
+
+	option = {
+		name = endtimes.22.a
 	}
 }

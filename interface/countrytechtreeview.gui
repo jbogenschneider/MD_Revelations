@@ -1848,6 +1848,18 @@ guiTypes = {
 				textureFile = ""
 				font = "hoi_36header"
 				borderSize = {x = 0 y = 4}
+				text = "2025"
+				maxWidth = 170
+				maxHeight = 32
+				format = left
+				Orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "airtech_year8"
+				position = { x = 60 y = 860 }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 4}
 				text = "2035"
 				maxWidth = 170
 				maxHeight = 32
@@ -1913,6 +1925,18 @@ guiTypes = {
 				instantTextBoxType = {
 					name = "airtech_year7"
 					position = { x = 60 y = 720 }
+					textureFile = ""
+					font = "hoi_36header"
+					borderSize = {x = 0 y = 4}
+					text = "2025"
+					maxWidth = 170
+					maxHeight = 32
+					format = right
+					Orientation = "UPPER_LEFT"
+				}
+				instantTextBoxType = {
+					name = "airtech_year8"
+					position = { x = 60 y = 860 }
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}

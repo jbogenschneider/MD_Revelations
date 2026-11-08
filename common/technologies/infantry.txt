@@ -1144,6 +1144,11 @@ technologies = {
 		L_Recce_Comp = {
 			recon = 0.25
 		}
+
+		# Rangers receive stronger drone bonuses with the same equipment requirements.
+		L_Ranger_Recce_Comp = {
+			recon = 0.275
+		}
 		Mot_Recce_Comp = {
 			recon = 0.31
 		}
@@ -1196,6 +1201,12 @@ technologies = {
 
 		L_Recce_Comp = {
 			recon = 0.25
+
+		}
+
+		# Rangers receive stronger drone bonuses with the same equipment requirements.
+		L_Ranger_Recce_Comp = {
+			recon = 0.275
 
 		}
 		Mot_Recce_Comp = {
@@ -1259,6 +1270,14 @@ technologies = {
 			soft_attack = 0.04
 			hard_attack = 0.03
 			breakthrough = -0.04
+		}
+
+		# Rangers receive stronger drone bonuses with the same equipment requirements.
+		L_Ranger_Recce_Comp = {
+			recon = 0.275
+			soft_attack = 0.044
+			hard_attack = 0.033
+			breakthrough = -0.036
 		}
 		Mot_Recce_Comp = {
 			recon = 0.31
@@ -1331,6 +1350,8 @@ technologies = {
 	land_Drone_equipment3 = {
 		enable_equipments = { land_drone_equipment_1 }
 
+		# Recon drone requirements begin when the first drone equipment is buildable.
+
 		on_research_complete = {
 			log = "[GetDateText]: [Root.GetName]: add tech land_Drone_equipment3"
 			custom_effect_tooltip = {
@@ -1358,6 +1379,7 @@ technologies = {
 			defense = 0.03
 			breakthrough = -0.10
 			need = {
+				land_drone_equipment_type = 55
 				Inf_equipment = 42
 				L_AT_Equipment = 2
 				AA_Equipment = 1
@@ -1370,6 +1392,28 @@ technologies = {
 				attack = 0.03
 			}
 		}
+
+		# Rangers receive stronger drone bonuses with the same equipment requirements.
+		L_Ranger_Recce_Comp = {
+			recon = 0.275
+			soft_attack = 0.11
+			hard_attack = 0.088
+			defense = 0.033
+			breakthrough = -0.09
+			need = {
+				land_drone_equipment_type = 55
+				Inf_equipment = 42
+				L_AT_Equipment = 2
+				AA_Equipment = 1
+				command_control_equipment = 5
+			}
+			plains = {
+				attack = 0.055
+			}
+			urban = {
+				attack = 0.033
+			}
+		}
 		Mot_Recce_Comp = {
 			recon = 0.31
 			soft_attack = 0.10
@@ -1377,6 +1421,7 @@ technologies = {
 			defense = 0.03
 			breakthrough = -0.10
 			need = {
+				land_drone_equipment_type = 57
 				Inf_equipment = 46
 				L_AT_Equipment = 2
 				H_AT_Equipment = 1
@@ -1398,6 +1443,7 @@ technologies = {
 			defense = 0.03
 			breakthrough = -0.10
 			need = {
+				land_drone_equipment_type = 59
 				Inf_equipment = 46
 				L_AT_Equipment = 2
 				H_AT_Equipment = 1
@@ -1419,6 +1465,7 @@ technologies = {
 			defense = 0.03
 			breakthrough = -0.10
 			need = {
+				land_drone_equipment_type = 54
 				Inf_equipment = 46
 				L_AT_Equipment = 2
 				H_AT_Equipment = 1
@@ -1440,6 +1487,7 @@ technologies = {
 			defense = 0.03
 			breakthrough = -0.10
 			need = {
+				land_drone_equipment_type = 55
 				command_control_equipment = 7
 				medium_tank_destroyer_chassis = 7
 			}
@@ -1460,8 +1508,7 @@ technologies = {
 			need = {
 				command_control_equipment = 15
 				util_vehicle_equipment = 10
-
-				land_drone_equipment_type = 120
+				land_drone_equipment_type = 90
 			}
 		}
 		combat_service_support_company = {
@@ -1476,6 +1523,7 @@ technologies = {
 		}
 		attack_helo_comp = {
 			recon = 0.6
+			need = { land_drone_equipment_type = 90 }
 		}
 
 		path = {
@@ -1523,7 +1571,7 @@ technologies = {
 	}
 	#2025
 	land_Drone_equipment4 = {
-		enable_equipments = { land_drone_equipment_2 land_drone_equipment_3 }
+		enable_equipments = { land_drone_equipment_3 }
 
 		on_research_complete = {
 			log = "[GetDateText]: [Root.GetName]: add tech land_Drone_equipment4"
@@ -1537,6 +1585,11 @@ technologies = {
 		}
 
 		L_Recce_Comp = {
+			# Additional equipment required by this research level.
+			need = {
+				land_drone_equipment_type = 5
+				command_control_equipment = 1
+			}
 			recon = 0.25
 			defense = 0.20
 			hard_attack = 0.05
@@ -1549,7 +1602,32 @@ technologies = {
 				attack = 0.04
 			}
 		}
+
+		# Rangers receive stronger drone bonuses with the same equipment requirements.
+		L_Ranger_Recce_Comp = {
+			# Additional equipment required by this research level.
+			need = {
+				land_drone_equipment_type = 5
+				command_control_equipment = 1
+			}
+			recon = 0.275
+			defense = 0.22
+			hard_attack = 0.055
+			soft_attack = 0.099
+			breakthrough = -0.108
+			plains = {
+				attack = 0.066
+			}
+			urban = {
+				attack = 0.044
+			}
+		}
 		Mot_Recce_Comp = {
+			# Additional equipment required by this research level.
+			need = {
+				land_drone_equipment_type = 5
+				command_control_equipment = 1
+			}
 			recon = 0.31
 			defense = 0.20
 			hard_attack = 0.05
@@ -1563,6 +1641,11 @@ technologies = {
 			}
 		}
 		Mech_Recce_Comp = {
+			# Additional equipment required by this research level.
+			need = {
+				land_drone_equipment_type = 5
+				command_control_equipment = 1
+			}
 			recon = 0.4
 			defense = 0.20
 			hard_attack = 0.05
@@ -1576,6 +1659,11 @@ technologies = {
 			}
 		}
 		Arm_Recce_Comp = {
+			# Additional equipment required by this research level.
+			need = {
+				land_drone_equipment_type = 5
+				command_control_equipment = 1
+			}
 			recon = 0.4
 			defense = 0.20
 			hard_attack = 0.05
@@ -1589,6 +1677,11 @@ technologies = {
 			}
 		}
 		armor_Recce_Comp = {
+			# Additional equipment required by this research level.
+			need = {
+				land_drone_equipment_type = 5
+				command_control_equipment = 1
+			}
 			recon = 0.5
 			defense = 0.20
 			hard_attack = 0.05
@@ -1609,16 +1702,23 @@ technologies = {
 			entrenchment = 0.12
 			initiative = 0.03
 			need = {
+				land_drone_equipment_type = 5
 				command_control_equipment = 2
 			}
 		}
 		combat_service_support_company = {
+			need = { command_control_equipment = 2 }
 			defense = 0.22
 			entrenchment = 0.15
 			initiative = 0.07
 			breakthrough = -0.03
 		}
 		attack_helo_comp = {
+			# Additional equipment required by this research level.
+			need = {
+				land_drone_equipment_type = 5
+				command_control_equipment = 1
+			}
 			recon = 0.6
 			defense = 0.20
 			hard_attack = 0.05
@@ -1674,6 +1774,11 @@ technologies = {
 
 		# Midpoint of the 2025 and 2035 unit rewards; absent modifiers count as zero.
 		L_Recce_Comp = {
+			# Additional equipment required by this research level.
+			need = {
+				land_drone_equipment_type = 5
+				command_control_equipment = 1
+			}
 			air_attack = 0.02
 			breakthrough = -0.06
 			defense = 0.225
@@ -1691,7 +1796,36 @@ technologies = {
 			}
 		}
 
+		# Rangers receive stronger drone bonuses with the same equipment requirements.
+		L_Ranger_Recce_Comp = {
+			# Additional equipment required by this research level.
+			need = {
+				land_drone_equipment_type = 5
+				command_control_equipment = 1
+			}
+			air_attack = 0.022
+			breakthrough = -0.054
+			defense = 0.2475
+			hard_attack = 0.0825
+			recon = 0.275
+			soft_attack = 0.132
+			desert = {
+				attack = 0.055
+			}
+			plains = {
+				attack = 0.088
+			}
+			urban = {
+				attack = 0.022
+			}
+		}
+
 		Mot_Recce_Comp = {
+			# Additional equipment required by this research level.
+			need = {
+				land_drone_equipment_type = 5
+				command_control_equipment = 1
+			}
 			air_attack = 0.02
 			breakthrough = -0.06
 			defense = 0.225
@@ -1710,6 +1844,11 @@ technologies = {
 		}
 
 		Mech_Recce_Comp = {
+			# Additional equipment required by this research level.
+			need = {
+				land_drone_equipment_type = 5
+				command_control_equipment = 1
+			}
 			air_attack = 0.02
 			breakthrough = -0.06
 			defense = 0.225
@@ -1728,6 +1867,11 @@ technologies = {
 		}
 
 		Arm_Recce_Comp = {
+			# Additional equipment required by this research level.
+			need = {
+				land_drone_equipment_type = 5
+				command_control_equipment = 1
+			}
 			air_attack = 0.02
 			breakthrough = -0.06
 			defense = 0.225
@@ -1746,6 +1890,11 @@ technologies = {
 		}
 
 		armor_Recce_Comp = {
+			# Additional equipment required by this research level.
+			need = {
+				land_drone_equipment_type = 5
+				command_control_equipment = 1
+			}
 			air_attack = 0.02
 			breakthrough = -0.06
 			defense = 0.225
@@ -1773,11 +1922,13 @@ technologies = {
 			recon = 0.25
 			soft_attack = 0.115
 			need = {
+				land_drone_equipment_type = 5
 				command_control_equipment = 2
 			}
 		}
 
 		combat_service_support_company = {
+			need = { command_control_equipment = 2 }
 			air_attack = 0.02
 			breakthrough = -0.015
 			defense = 0.11
@@ -1786,6 +1937,11 @@ technologies = {
 		}
 
 		attack_helo_comp = {
+			# Additional equipment required by this research level.
+			need = {
+				land_drone_equipment_type = 5
+				command_control_equipment = 1
+			}
 			air_attack = 0.02
 			defense = 0.225
 			hard_attack = 0.075
@@ -1824,6 +1980,11 @@ technologies = {
 
 
 		L_Recce_Comp = {
+			# Additional equipment required by this research level.
+			need = {
+				land_drone_equipment_type = 5
+				command_control_equipment = 1
+			}
 			air_attack = 0.03
 			recon = 0.25
 			defense = 0.25
@@ -1836,7 +1997,34 @@ technologies = {
 				attack = 0.1
 			}
 		}
+
+		# Rangers receive stronger drone bonuses with the same equipment requirements.
+		L_Ranger_Recce_Comp = {
+			# Additional equipment required by this research level.
+			need = {
+				land_drone_equipment_type = 5
+				command_control_equipment = 1
+			}
+			air_attack = 0.033
+			recon = 0.275
+			defense = 0.275
+			hard_attack = 0.11
+			soft_attack = 0.165
+			plains = {
+				attack = 0.11
+			}
+			desert = {
+				attack = 0.11
+			}
+		}
+
+
 		Mot_Recce_Comp = {
+			# Additional equipment required by this research level.
+			need = {
+				land_drone_equipment_type = 5
+				command_control_equipment = 1
+			}
 			air_attack = 0.03
 			recon = 0.31
 			defense = 0.25
@@ -1850,6 +2038,11 @@ technologies = {
 			}
 		}
 		Mech_Recce_Comp = {
+			# Additional equipment required by this research level.
+			need = {
+				land_drone_equipment_type = 5
+				command_control_equipment = 1
+			}
 			air_attack = 0.03
 			recon = 0.4
 			defense = 0.25
@@ -1863,6 +2056,11 @@ technologies = {
 			}
 		}
 		Arm_Recce_Comp = {
+			# Additional equipment required by this research level.
+			need = {
+				land_drone_equipment_type = 5
+				command_control_equipment = 1
+			}
 			air_attack = 0.03
 			recon = 0.4
 			defense = 0.25
@@ -1876,6 +2074,11 @@ technologies = {
 			}
 		}
 		armor_Recce_Comp = {
+			# Additional equipment required by this research level.
+			need = {
+				land_drone_equipment_type = 5
+				command_control_equipment = 1
+			}
 			air_attack = 0.03
 			recon = 0.5
 			defense = 0.25
@@ -1895,10 +2098,16 @@ technologies = {
 			hard_attack = 0.10
 			soft_attack = 0.15
 			need = {
+				land_drone_equipment_type = 5
 				command_control_equipment = 2
 			}
 		}
 		attack_helo_comp = {
+			# Additional equipment required by this research level.
+			need = {
+				land_drone_equipment_type = 5
+				command_control_equipment = 1
+			}
 			air_attack = 0.03
 			recon = 0.6
 			defense = 0.25
@@ -1908,6 +2117,7 @@ technologies = {
 
 
 		combat_service_support_company = {
+			need = { command_control_equipment = 2 }
 			air_attack = 0.03
 		}
 		research_cost = 2
@@ -2733,6 +2943,7 @@ technologies = {
 	}
 
 	rc_fire_support_drone = {
+		# Each new robot replaces one soldier; retain at least one soldier in small HQ units.
 		enable_equipments = { robot_equipment_1 }
 
 		allow = {
@@ -2773,32 +2984,39 @@ technologies = {
 
 		ai_will_do = { factor = 1 }
 
-		drone_tactical_company = { need = { robot_equipment_type = 10 } }
+		drone_tactical_company = { manpower = -10 need = { robot_equipment_type = 10 } }
 
 		# Initial robot requirements begin with the 2025 equipment unlock.
-		Drone_Recce_Comp = { need = { robot_equipment_type = 5 } }
+		Drone_Recce_Comp = { manpower = -15 need = { robot_equipment_type = 15 } }
 
-		combat_service_support_company = { need = { robot_equipment_type = 6 } }
+		combat_service_support_company = { manpower = -6 need = { robot_equipment_type = 6 } }
 
-		helicopter_combat_service_support = { need = { robot_equipment_type = 4 } }
+		combat_maintenance_company = { manpower = -9 need = { robot_equipment_type = 9 } }
 
-		combat_maintenance_company = { need = { robot_equipment_type = 4 } }
+		airmobile_maintenance_company = { manpower = -10 need = { robot_equipment_type = 10 } }
 
-		airmobile_maintenance_company = { need = { robot_equipment_type = 3 } }
+		hq_support_company = { manpower = -4 need = { robot_equipment_type = 4 } }
 
-		hq_support_company = { need = { robot_equipment_type = 4 } }
+		hq_logistics = { manpower = -24 need = { robot_equipment_type = 24 } }
 
-		hq_logistics = { need = { robot_equipment_type = 4 } }
+		hq_maintenance = { manpower = -13 need = { robot_equipment_type = 13 } }
 
-		hq_maintenance = { need = { robot_equipment_type = 3 } }
+		field_hospital = { manpower = -14 need = { robot_equipment_type = 14 } }
 
-		field_hospital = { need = { robot_equipment_type = 4 } }
+		logistics_company = { manpower = -24 need = { robot_equipment_type = 24 } }
 
-		logistics_company = { need = { robot_equipment_type = 4 } }
+		L_Engi_Comp = { manpower = -16 need = { robot_equipment_type = 16 } }
+
+		H_Engi_Comp = { manpower = -14 need = { robot_equipment_type = 14 } }
+
+		pathfinder_company = { manpower = -13 need = { robot_equipment_type = 13 } }
+		hq_engineer = { manpower = -12 need = { robot_equipment_type = 12 } }
+		Combat_engineer_company = { manpower = -13 need = { robot_equipment_type = 13 } }
 }
 
 	# 2030: extend robot requirements to regular ground forces (additive needs).
 	autonomous_fire_support_drone = {
+		# Each new robot replaces one soldier; retain at least one soldier in small HQ units.
 		enable_equipments = { robot_equipment_2 }
 		on_research_complete = {
 			custom_effect_tooltip = REV_ROBOT_EQUIPMENT_2_STATS_TT
@@ -2839,186 +3057,97 @@ technologies = {
 		}
 		ai_will_do = { factor = 1 }
 
-		L_Engi_Comp = { need = { robot_equipment_type = 6 } }
+		L_Ranger_Recce_Comp = { manpower = -5 need = { robot_equipment_type = 5 } }
 
-		H_Engi_Comp = { need = { robot_equipment_type = 4 } }
+		hq_recon = { manpower = -9 need = { robot_equipment_type = 9 } }
 
-		pathfinder_company = { need = { robot_equipment_type = 3 } }
+		hq_specops = { manpower = -12 need = { robot_equipment_type = 12 } }
 
-		L_Ranger_Recce_Comp = { need = { robot_equipment_type = 5 } }
+		hq_mech = { manpower = -22 need = { robot_equipment_type = 22 } }
 
-		hq_engineer = { need = { robot_equipment_type = 2 } }
+		hq_mot = { manpower = -22 need = { robot_equipment_type = 22 } }
 
-		hq_recon = { need = { robot_equipment_type = 2 } }
+		hq_armor = { manpower = -32 need = { robot_equipment_type = 32 } }
 
-		hq_naval_liaison = { need = { robot_equipment_type = 2 } }
+		hq_Mot_Inf_Bat = { manpower = -12 need = { robot_equipment_type = 12 } }
 
-		hq_air_liaison = { need = { robot_equipment_type = 2 } }
+		hq_Mech_Inf_Bat = { manpower = -22 need = { robot_equipment_type = 22 } }
 
-		hq_specops = { need = { robot_equipment_type = 2 } }
+		hq_Arm_Inf_Bat = { manpower = -22 need = { robot_equipment_type = 22 } }
 
-		hq_mech = { need = { robot_equipment_type = 2 } }
+		hq_Mech_Marine_Bat = { manpower = -12 need = { robot_equipment_type = 12 } }
 
-		hq_mot = { need = { robot_equipment_type = 2 } }
+		hq_Mech_Air_Inf_Bat = { manpower = -12 need = { robot_equipment_type = 12 } }
 
-		hq_armor = { need = { robot_equipment_type = 2 } }
+		mech_inf_hq = { manpower = -19 need = { robot_equipment_type = 32 } }
 
-		hq_infantry = { need = { robot_equipment_type = 2 } }
+		arm_inf_hq = { manpower = -19 need = { robot_equipment_type = 32 } }
 
-		hq_Mot_Inf_Bat = { need = { robot_equipment_type = 2 } }
+		lt_tank_hq = { manpower = -19 need = { robot_equipment_type = 22 } }
 
-		hq_Mech_Inf_Bat = { need = { robot_equipment_type = 2 } }
+		arm_hq = { manpower = -19 need = { robot_equipment_type = 22 } }
 
-		hq_Arm_Inf_Bat = { need = { robot_equipment_type = 2 } }
+		spaa_hq = { manpower = -19 need = { robot_equipment_type = 22 } }
 
-		hq_Mech_Marine_Bat = { need = { robot_equipment_type = 2 } }
+		spg_inf_hq = { manpower = -9 need = { robot_equipment_type = 9 } }
 
-		hq_Mech_Air_Inf_Bat = { need = { robot_equipment_type = 2 } }
+		mlrs_hq = { manpower = -9 need = { robot_equipment_type = 9 } }
 
-		mech_inf_hq = { need = { robot_equipment_type = 2 } }
+		atk_helo_hq = { manpower = -9 need = { robot_equipment_type = 9 } }
 
-		arm_inf_hq = { need = { robot_equipment_type = 2 } }
+		med_trans_helo_hq = { manpower = -9 need = { robot_equipment_type = 9 } }
 
-		lt_tank_hq = { need = { robot_equipment_type = 2 } }
+		Mot_Inf_Bat = { manpower = -12 need = { robot_equipment_type = 12 } }
 
-		arm_hq = { need = { robot_equipment_type = 2 } }
+		Mech_Inf_Bat = { manpower = -22 need = { robot_equipment_type = 22 } }
 
-		spaa_hq = { need = { robot_equipment_type = 2 } }
+		Arm_Inf_Bat = { manpower = -32 need = { robot_equipment_type = 32 } }
 
-		spg_inf_hq = { need = { robot_equipment_type = 2 } }
+		Mot_Air_Inf_Bat = { manpower = -12 need = { robot_equipment_type = 12 } }
 
-		mlrs_hq = { need = { robot_equipment_type = 2 } }
+		Mech_Air_Inf_Bat = { manpower = -22 need = { robot_equipment_type = 22 } }
 
-		atk_helo_hq = { need = { robot_equipment_type = 2 } }
+		Arm_Air_Inf_Bat = { manpower = -25 need = { robot_equipment_type = 25 } }
 
-		med_trans_helo_hq = { need = { robot_equipment_type = 2 } }
+		Mot_Marine_Bat = { manpower = -12 need = { robot_equipment_type = 12 } }
 
-		L_Inf_Bat = { need = { robot_equipment_type = 12 } }
+		Mech_Marine_Bat = { manpower = -15 need = { robot_equipment_type = 15 } }
 
-		Mot_Inf_Bat = { need = { robot_equipment_type = 12 } }
+		Arm_Marine_Bat = { manpower = -22 need = { robot_equipment_type = 22 } }
 
-		Mech_Inf_Bat = { need = { robot_equipment_type = 12 } }
+		armor_Bat = { manpower = -34 need = { robot_equipment_type = 34 } }
 
-		Arm_Inf_Bat = { need = { robot_equipment_type = 12 } }
+		L_arm_Bat = { manpower = -24 need = { robot_equipment_type = 24 } }
 
-		L_Air_Inf_Bat = { need = { robot_equipment_type = 12 } }
+		SP_AA_Bat = { manpower = -4 need = { robot_equipment_type = 4 } }
 
-		Mot_Air_Inf_Bat = { need = { robot_equipment_type = 12 } }
+		Light_Mech_Inf_Bat = { manpower = -16 need = { robot_equipment_type = 16 } }
 
-		Mech_Air_Inf_Bat = { need = { robot_equipment_type = 12 } }
+		Light_Arm_Inf_Bat = { manpower = -26 need = { robot_equipment_type = 26 } }
 
-		Arm_Air_Inf_Bat = { need = { robot_equipment_type = 12 } }
+		Light_armor_Bat = { manpower = -20 need = { robot_equipment_type = 20 } }
 
-		L_Ranger_Bat = { need = { robot_equipment_type = 12 } }
+		Light_L_arm_Bat = { manpower = -13 need = { robot_equipment_type = 13 } }
 
-		L_Marine_Bat = { need = { robot_equipment_type = 12 } }
+		Light_SP_AA_Bat = { manpower = -9 need = { robot_equipment_type = 9 } }
 
-		L_Marine_Cdo_Bat = { need = { robot_equipment_type = 12 } }
+		SP_AA_Battery = { manpower = -13 need = { robot_equipment_type = 13 } }
 
-		Mot_Marine_Bat = { need = { robot_equipment_type = 12 } }
+		armor_Comp = { manpower = -13 need = { robot_equipment_type = 13 } }
 
-		Mech_Marine_Bat = { need = { robot_equipment_type = 12 } }
+		AT_company = { manpower = -13 need = { robot_equipment_type = 13 } }
 
-		Arm_Marine_Bat = { need = { robot_equipment_type = 12 } }
+		Mot_AT_company = { manpower = -14 need = { robot_equipment_type = 14 } }
 
-		L_Air_assault_Bat = { need = { robot_equipment_type = 12 } }
+		AA_company = { manpower = -9 need = { robot_equipment_type = 9 } }
 
-		attack_helo_bat = { need = { robot_equipment_type = 4 } }
+		amphibious_landing_detachment = { manpower = -13 need = { robot_equipment_type = 13 } }
 
-		Special_Forces = { need = { robot_equipment_type = 12 } }
-
-		armor_Bat = { need = { robot_equipment_type = 4 } }
-
-		L_arm_Bat = { need = { robot_equipment_type = 4 } }
-
-		Arty_Bat = { need = { robot_equipment_type = 4 } }
-
-		SP_Arty_Bat = { need = { robot_equipment_type = 4 } }
-
-		SP_R_Arty_Bat = { need = { robot_equipment_type = 4 } }
-
-		SP_AA_Bat = { need = { robot_equipment_type = 4 } }
-
-		Light_Mech_Inf_Bat = { need = { robot_equipment_type = 6 } }
-
-		Light_Arm_Inf_Bat = { need = { robot_equipment_type = 6 } }
-
-		Light_L_Air_assault_Bat = { need = { robot_equipment_type = 6 } }
-
-		Light_attack_helo_bat = { need = { robot_equipment_type = 3 } }
-
-		Light_armor_Bat = { need = { robot_equipment_type = 3 } }
-
-		Light_L_arm_Bat = { need = { robot_equipment_type = 3 } }
-
-		Light_SP_Arty_Bat = { need = { robot_equipment_type = 3 } }
-
-		Light_SP_R_arty_Bat = { need = { robot_equipment_type = 3 } }
-
-		Light_SP_AA_Bat = { need = { robot_equipment_type = 3 } }
-
-		Arty_Battery = { need = { robot_equipment_type = 3 } }
-
-		SP_R_arty_battery = { need = { robot_equipment_type = 3 } }
-
-		SP_arty_battery = { need = { robot_equipment_type = 3 } }
-
-		SP_AA_Battery = { need = { robot_equipment_type = 3 } }
-
-		air_assault_arty_battery = { need = { robot_equipment_type = 3 } }
-
-		armor_Comp = { need = { robot_equipment_type = 3 } }
-
-		attack_helo_comp = { need = { robot_equipment_type = 3 } }
-
-		L_Recce_Comp = { need = { robot_equipment_type = 5 } }
-
-		Mot_Recce_Comp = { need = { robot_equipment_type = 5 } }
-
-		Mech_Recce_Comp = { need = { robot_equipment_type = 5 } }
-
-		Arm_Recce_Comp = { need = { robot_equipment_type = 5 } }
-
-		armor_Recce_Comp = { need = { robot_equipment_type = 5 } }
-
-		Weapons_company = { need = { robot_equipment_type = 3 } }
-
-		Heavy_mortar_company = { need = { robot_equipment_type = 3 } }
-
-		AT_company = { need = { robot_equipment_type = 3 } }
-
-		Mot_AT_company = { need = { robot_equipment_type = 4 } }
-
-		AA_company = { need = { robot_equipment_type = 3 } }
-
-		Combat_engineer_company = { need = { robot_equipment_type = 3 } }
-
-		amphibious_landing_detachment = { need = { robot_equipment_type = 3 } }
-
-		HOL_marechaussee_support_company = { need = { robot_equipment_type = 6 } }
-
-		medium_walker_battalion = { need = { robot_equipment_type = 4 } }
-
-		light_walker_tank_battalion = { need = { robot_equipment_type = 4 } }
-
-		heavy_walker_tank_battalion = { need = { robot_equipment_type = 4 } }
-
-		light_medium_walker_battalion = { need = { robot_equipment_type = 4 } }
-
-		light_light_walker_tank_battalion = { need = { robot_equipment_type = 4 } }
-
-		light_heavy_walker_tank_battalion = { need = { robot_equipment_type = 4 } }
-
-		space_artillery_support_company = { need = { robot_equipment_type = 2 } }
-
-		HACS_Mech = { need = { robot_equipment_type = 3 } }
-
-		HACS_Mech_2 = { need = { robot_equipment_type = 3 } }
-
-		HACS_Mech_3 = { need = { robot_equipment_type = 3 } }
+		HOL_marechaussee_support_company = { manpower = -6 need = { robot_equipment_type = 6 } }
 }
 
 	humanoid_fire_support_robot = {
+		# Each new robot replaces one soldier; retain at least one soldier in small HQ units.
 		enable_equipments = { robot_equipment_3 }
 
 		allow = {
@@ -3054,6 +3183,95 @@ technologies = {
 		}
 
 		ai_will_do = { factor = 1 }
+
+		# Add 10% of the 2030 robot requirements, rounded up; technology needs are additive.
+		L_Ranger_Recce_Comp = { manpower = -1 need = { robot_equipment_type = 1 } }
+
+		hq_recon = { manpower = -1 need = { robot_equipment_type = 1 } }
+
+		hq_specops = { manpower = -2 need = { robot_equipment_type = 2 } }
+
+		hq_mech = { manpower = -3 need = { robot_equipment_type = 3 } }
+
+		hq_mot = { manpower = -3 need = { robot_equipment_type = 3 } }
+
+		hq_armor = { manpower = -4 need = { robot_equipment_type = 4 } }
+
+		hq_Mot_Inf_Bat = { manpower = -2 need = { robot_equipment_type = 2 } }
+
+		hq_Mech_Inf_Bat = { manpower = -3 need = { robot_equipment_type = 3 } }
+
+		hq_Arm_Inf_Bat = { manpower = -3 need = { robot_equipment_type = 3 } }
+
+		hq_Mech_Marine_Bat = { manpower = -2 need = { robot_equipment_type = 2 } }
+
+		hq_Mech_Air_Inf_Bat = { manpower = -2 need = { robot_equipment_type = 2 } }
+
+		mech_inf_hq = { manpower = 0 need = { robot_equipment_type = 4 } }
+
+		arm_inf_hq = { manpower = 0 need = { robot_equipment_type = 4 } }
+
+		lt_tank_hq = { manpower = 0 need = { robot_equipment_type = 3 } }
+
+		arm_hq = { manpower = 0 need = { robot_equipment_type = 3 } }
+
+		spaa_hq = { manpower = 0 need = { robot_equipment_type = 3 } }
+
+		spg_inf_hq = { manpower = -1 need = { robot_equipment_type = 1 } }
+
+		mlrs_hq = { manpower = -1 need = { robot_equipment_type = 1 } }
+
+		atk_helo_hq = { manpower = -1 need = { robot_equipment_type = 1 } }
+
+		med_trans_helo_hq = { manpower = -1 need = { robot_equipment_type = 1 } }
+
+		Mot_Inf_Bat = { manpower = -2 need = { robot_equipment_type = 2 } }
+
+		Mech_Inf_Bat = { manpower = -3 need = { robot_equipment_type = 3 } }
+
+		Arm_Inf_Bat = { manpower = -4 need = { robot_equipment_type = 4 } }
+
+		Mot_Air_Inf_Bat = { manpower = -2 need = { robot_equipment_type = 2 } }
+
+		Mech_Air_Inf_Bat = { manpower = -3 need = { robot_equipment_type = 3 } }
+
+		Arm_Air_Inf_Bat = { manpower = -3 need = { robot_equipment_type = 3 } }
+
+		Mot_Marine_Bat = { manpower = -2 need = { robot_equipment_type = 2 } }
+
+		Mech_Marine_Bat = { manpower = -2 need = { robot_equipment_type = 2 } }
+
+		Arm_Marine_Bat = { manpower = -3 need = { robot_equipment_type = 3 } }
+
+		armor_Bat = { manpower = -4 need = { robot_equipment_type = 4 } }
+
+		L_arm_Bat = { manpower = -3 need = { robot_equipment_type = 3 } }
+
+		SP_AA_Bat = { manpower = -1 need = { robot_equipment_type = 1 } }
+
+		Light_Mech_Inf_Bat = { manpower = -2 need = { robot_equipment_type = 2 } }
+
+		Light_Arm_Inf_Bat = { manpower = -3 need = { robot_equipment_type = 3 } }
+
+		Light_armor_Bat = { manpower = -2 need = { robot_equipment_type = 2 } }
+
+		Light_L_arm_Bat = { manpower = -2 need = { robot_equipment_type = 2 } }
+
+		Light_SP_AA_Bat = { manpower = -1 need = { robot_equipment_type = 1 } }
+
+		SP_AA_Battery = { manpower = -2 need = { robot_equipment_type = 2 } }
+
+		armor_Comp = { manpower = -2 need = { robot_equipment_type = 2 } }
+
+		AT_company = { manpower = -2 need = { robot_equipment_type = 2 } }
+
+		Mot_AT_company = { manpower = -2 need = { robot_equipment_type = 2 } }
+
+		AA_company = { manpower = -1 need = { robot_equipment_type = 1 } }
+
+		amphibious_landing_detachment = { manpower = -2 need = { robot_equipment_type = 2 } }
+
+		HOL_marechaussee_support_company = { manpower = -1 need = { robot_equipment_type = 1 } }
 	}
 
 	##Special Forces

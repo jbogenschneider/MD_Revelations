@@ -1,3 +1,17 @@
+# Use MD's consumer-goods formula: expected value * (1 + consumer_goods_factor).
+# Only add the shortfall to 90%; never reduce an already higher demand.
+endtimes_refresh_famine_consumption_floor = {
+	remove_dynamic_modifier = { modifier = endtimes_famine_consumption_floor }
+	set_temp_variable = { endtimes_famine_consumption_multiplier = 1 }
+	add_to_temp_variable = { endtimes_famine_consumption_multiplier = modifier@consumer_goods_factor }
+	clamp_temp_variable = { var = endtimes_famine_consumption_multiplier min = 0.001 }
+	set_variable = { endtimes_famine_extra_consumption = 0.90 }
+	divide_variable = { endtimes_famine_extra_consumption = endtimes_famine_consumption_multiplier }
+	subtract_from_variable = { endtimes_famine_extra_consumption = modifier@consumer_goods_expected_value }
+	clamp_variable = { var = endtimes_famine_extra_consumption min = 0 }
+	add_dynamic_modifier = { modifier = endtimes_famine_consumption_floor }
+}
+
 # Recalculate against total support, including penalties from wars and other ideas.
 # Remove the previous correction first so it cannot feed back into the calculation.
 # Base stability and war support are left intact when Cabal is removed by an event.

@@ -1,0 +1,76 @@
+# GER country scope, during the July 3, 2029 settlement.
+endtimes_create_independent_east_germany = {
+	every_owned_state = {
+		limit = {
+			OR = {
+				state = 539  # Mecklenburg-Vorpommern
+				state = 1079 # Brandenburg
+				state = 45   # Berlin
+				state = 972  # Sachsen-Anhalt
+				state = 44   # Sachsen
+				state = 545  # Thueringen
+			}
+		}
+		add_core_of = DDR
+	}
+	# release_autonomy requires a defined subject tier; independence uses release.
+	release = DDR
+	DDR = {
+		if = {
+			limit = { exists = yes }
+			if = {
+				limit = { is_subject = yes }
+				overlord = { set_autonomy = { target = DDR autonomy_state = autonomy_free } }
+			}
+			set_country_flag = endtimes_east_germany_independent
+			# Independence does not assign the new state to either alliance bloc.
+			NATO_leave = yes
+			leave_faction = yes
+			set_capital = { state = 45 }
+			set_variable = { gdp_per_capita = GER.gdp_per_capita }
+			set_variable = { corporate_tax_rate = GER.corporate_tax_rate }
+			set_variable = { population_tax_rate = GER.population_tax_rate }
+			update_laws_for_new_nation = yes
+			set_temp_variable = { nation_to_copy_from = GER.id }
+			copy_internal_factions = yes
+			configure_religious_setup = yes
+			set_popularities = {
+				democratic = 100
+				communism = 0
+				fascism = 0
+				neutrality = 0
+				nationalist = 0
+			}
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+				last_election = "2029.7.3"
+				election_frequency = 48
+			}
+			start_politics_input = yes
+			set_variable = { party_pop_array^2 = 1 }
+			add_to_array = { ruling_party = 2 }
+			set_variable = { liberalism_leader = 1 }
+			ingame_startup_nations_effect = yes
+			# Snapshot Germany's researched tech and research capacity at separation,
+			# including advances made since the scenario's starting history.
+			inherit_technology = GER
+			set_research_slots = GER.amount_research_slots
+			if = {
+				limit = { has_dlc = "No Step Back" }
+				load_oob = DDR_endtimes_nsb
+			}
+			else = { load_oob = DDR_endtimes_nonnsb }
+			if = {
+				limit = { has_dlc = "By Blood Alone" }
+				load_oob = DDR_endtimes_air_bba
+			}
+			else = { load_oob = DDR_endtimes_air_legacy }
+			if = {
+				limit = { has_dlc = "Man the Guns" }
+				load_oob = DDR_endtimes_naval_mtg
+			}
+			else = { load_oob = DDR_endtimes_naval_legacy }
+		}
+	}
+}

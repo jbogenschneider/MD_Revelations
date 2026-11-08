@@ -529,36 +529,36 @@ sub_units = {
 
 		group = support
 
-		categories = { category_all_recon category_support_battalions category_army category_all_ranger new category_inf_ranger category_rcon_ranger category_special_forces }
+		categories = { category_all_recon category_support_battalions category_army category_all_ranger category_inf_ranger category_rcon_ranger category_special_forces }
 
 		allowed_battalion_groups = { special_forces }
 		regimental = no
 		combat_width = 1
 
 		#Size Definitions
-		max_strength = 18
-		max_organisation = 16
-		default_morale = 0.3
+		max_strength = 19.8
+		max_organisation = 17.6
+		default_morale = 0.33
 		manpower = 250
 
 		#Misc Abilities
 		training_time = 120
 		weight = 0.2
-		recon = 1
-		initiative = 0.05
+		recon = 1.1
+		initiative = 0.055
 
 		battalion_mult = {
 			category = category_artillery
-			soft_attack = 0.03
+			soft_attack = 0.033
 		}
 
 
 		# Support nerfs to combat abilities
-		defense = -0.66
-		breakthrough = -0.66
-		soft_attack = -0.66
-		hard_attack = -0.66
-		suppression = 1
+		defense = -0.626
+		breakthrough = -0.626
+		soft_attack = -0.626
+		hard_attack = -0.626
+		suppression = 1.1
 
 		essential = { Inf_equipment command_control_equipment }
 
@@ -573,7 +573,10 @@ sub_units = {
 		jungle = { attack = 0.05 defence = 0.05 }
 		hills = { defence = 0.05 }
 		desert = { attack = 0.05 }
-		urban = { attack = 0.05 }
+		urban = { attack = 0.05 defence = 0.02 }
+		supercity = { attack = 0.05 defence = 0.02 }
+		plains = { attack = 0.01 defence = 0.01 }
+		marsh = { attack = 0.02 }
 
 		same_support_type = recon
 

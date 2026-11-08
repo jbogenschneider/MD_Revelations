@@ -1,0 +1,7 @@
+# Dormant until rev_fra_split.1 is invoked in France. No initial cores or OOB.
+capital = 56
+set_research_slots = 4
+2024.1.1 = {
+	inherit_technology = FRA
+	rev_frc_setup_left_coalition = yes
+}

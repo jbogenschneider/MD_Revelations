@@ -10,7 +10,8 @@ EU_voting_category = {
 			is_ai = yes
 		}
 
-		days_mission_timeout = 0
+		# This recurring update must advance time before it can restart itself.
+		days_mission_timeout = 1
 
 		selectable_mission = yes
 
@@ -18,8 +19,14 @@ EU_voting_category = {
 
 		timeout_effect = {
 			log = "[GetDateText]: [Root.GetName]: mission timeout_effect EU_update_vars_mission"
-			EU_update_vars = yes
-			activate_mission = EU_update_vars_mission
+			if = {
+				limit = { has_idea = EUU_monitor is_ai = yes }
+				# Bound the update to current members, dropping stale or duplicate entries.
+				rev_rebuild_eu_member_array = yes
+				EU_update_vars = yes
+				log = "[GetDateText]: [Root.GetName]: EU_update_vars_mission update completed"
+				activate_mission = EU_update_vars_mission
+			}
 		}
 	}
 

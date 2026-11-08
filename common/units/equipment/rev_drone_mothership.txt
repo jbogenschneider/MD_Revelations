@@ -1,0 +1,56 @@
+# Fixed Drone Mothership loadout, available with and without No Step Back.
+# 2025 combat values are 127.5% of the 2015 legacy attack helicopter.
+# 2035 combat values are 150% of the 2025 Drone Mothership.
+# Land helicopters have no operational range stat in this unit system.
+equipments = {
+	drone_mothership_equipment = {
+		is_archetype = yes
+		is_buildable = no
+		type = { armor motorized }
+		group_by = archetype
+		interface_category = interface_category_land
+		priority = 10
+		maximum_speed = 56
+		reliability = 0.9
+		soft_attack = 22.3125
+		hard_attack = 18.16875
+		ap_attack = 44.625
+		air_attack = 2.55
+		defense = 26.775
+		breakthrough = 26.775
+		hardness = 0.3
+		armor_value = 0
+		manpower = 0
+		build_cost_ic = 35
+		lend_lease_cost = 5
+		fuel_consumption = 7.0
+		resources = {
+			aluminium = 4
+			chromium = 2
+			tungsten = 1
+		}
+	}
+	drone_mothership_equipment_1 = {
+		year = 2025
+		archetype = drone_mothership_equipment
+		priority = 5
+		visual_level = 3
+	}
+	drone_mothership_equipment_2 = {
+		year = 2035
+		archetype = drone_mothership_equipment
+		parent = drone_mothership_equipment_1
+		priority = 10
+		visual_level = 4
+		maximum_speed = 60
+		reliability = 0.915
+		soft_attack = 33.46875
+		hard_attack = 27.253125
+		ap_attack = 66.9375
+		air_attack = 3.825
+		defense = 40.1625
+		breakthrough = 40.1625
+		build_cost_ic = 38
+		fuel_consumption = 9.0
+	}
+}

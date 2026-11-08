@@ -1,4 +1,4 @@
-﻿division_template = {
+division_template = {
 	name = "Armoured Brigade"
 
 	regiments = {
@@ -152,13 +152,7 @@ division_template = {
 }
 
 units = {
-	division = {
-		name = "1ère Brigade mécanisée"
-		location = 6545 #Chalons
-		division_template = "Armoured Brigade"
-		start_experience_factor = 0.75
-		start_equipment_factor = 0.01
-	}
+
 	division = {
 		name = "2ème Brigade blindée"
 		location = 521 #Illkirch
@@ -166,13 +160,7 @@ units = {
 		start_experience_factor = 0.75
 		start_equipment_factor = 0.01
 	}
-	division = {
-		name = "3ème Brigade mécanisée"
-		location = 454 #Clermont-Ferrand
-		division_template = "Armoured Brigade"
-		start_experience_factor = 0.75
-		start_equipment_factor = 0.01
-	}
+
 	division = {
 		name = "6ème Brigade légère blindée"
 		location = 958 #Nîmes
@@ -207,13 +195,7 @@ units = {
 		start_experience_factor = 0.75
 		start_equipment_factor = 0.01
 	}
-	division = {
-		name = "4ème brigade aéromobile"
-		location = 11516 #Essey-les-Nancy
-		division_template = "Airmobile Brigade"
-		start_experience_factor = 0.75
-		start_equipment_factor = 0.01
-	}
+
 	#Brigade franco-allemande
 	division = {
 		name = "3ème Régiment de hussards"
@@ -229,12 +211,7 @@ units = {
 		division_template = "Special Forces"
 		start_experience_factor = 0.8
 	}
-	division = {
-		name = "13ème Régiment de dragons parachutistes"
-		location = 651 #Souge
-		division_template = "Special Forces"
-		start_experience_factor = 0.5
-	}
+
 }
 
 instant_effect = {
@@ -393,4 +370,7 @@ instant_effect = {
 		type = transport_helicopter2 #Eurocopter AS532 Cougar
 		amount = 41
 	}
+
+	# Tag the regional starting formations for deterministic reassignment.
+	rev_fra_tag_regional_army_legacy_2026 = yes
 }

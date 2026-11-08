@@ -1,0 +1,186 @@
+# Generated from GER_2000_nsb.txt; eastern-state divisions only.
+division_template = {
+	name = "Panzerdivision"
+
+	regiments = {
+		armor_Bat = { x = 0 y = 0 }
+		armor_Bat = { x = 0 y = 1 }
+		Arm_Inf_Bat = { x = 0 y = 2 }
+		Arm_Inf_Bat = { x = 0 y = 3 }
+		SP_Arty_Bat = { x = 0 y = 4 }
+
+		armor_Bat = { x = 1 y = 0 }
+		armor_Bat = { x = 1 y = 1 }
+		Arm_Inf_Bat = { x = 1 y = 2 }
+		Mech_Inf_Bat = { x = 1 y = 3 }
+		SP_Arty_Bat = { x = 1 y = 4 }
+
+		armor_Bat = { x = 2 y = 0 }
+		armor_Bat = { x = 2 y = 1 }
+		Arm_Inf_Bat = { x = 2 y = 2 }
+		Mech_Inf_Bat = { x = 2 y = 3 }
+		SP_R_Arty_Bat = { x = 2 y = 4 }
+
+		SP_AA_Bat = { x = 3 y = 0 }
+	}
+
+	support = {
+		H_Engi_Comp = { x = 0 y = 0 }
+		armor_Recce_comp = { x = 0 y = 1 }
+		SP_Arty_Battery = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Panzergrenadierdivision"
+
+	regiments = {
+		armor_Bat = { x = 0 y = 0 }
+		armor_Bat = { x = 0 y = 1 }
+		Arm_Inf_Bat = { x = 0 y = 2 }
+		Arm_Inf_Bat = { x = 0 y = 3 }
+		SP_Arty_Bat = { x = 0 y = 4 }
+
+		armor_Bat = { x = 1 y = 0 }
+		armor_Bat = { x = 1 y = 1 }
+		Arm_Inf_Bat = { x = 1 y = 2 }
+		Mech_Inf_Bat = { x = 1 y = 3 }
+		SP_R_Arty_Bat = { x = 1 y = 4 }
+
+		SP_AA_Bat = { x = 2 y = 0 }
+	}
+
+	support = {
+		H_Engi_Comp = { x = 0 y = 0 }
+		armor_Recce_comp = { x = 0 y = 1 }
+		SP_Arty_Battery = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Jägerbrigade"
+
+	regiments = {
+		Mech_Inf_Bat = { x = 0 y = 0 }
+		Mech_Inf_Bat = { x = 0 y = 1 }
+		Arm_Inf_Bat = { x = 0 y = 2 }
+		armor_Bat = { x = 0 y = 3 }
+		SP_Arty_Bat = { x = 0 y = 4 }
+	}
+
+	support = {
+		H_Engi_Comp = { x = 0 y = 0 }
+		armor_Recce_comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Wehrbereichskommando"
+
+	regiments = {
+		Mot_Inf_Bat = { x = 0 y = 0 }
+		Mot_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 0 y = 2 }
+		Arty_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		H_Engi_Comp = { x = 0 y = 0 }
+		mech_Recce_Comp = { x = 0 y = 1 }
+		armor_Comp = { x = 0 y = 2 }
+	}
+	priority = 0
+}
+
+units = {
+division = {
+		name = "14. Panzergrenadier-Division 'Hanse'"
+		officer = {
+			name = "Friedrich Riechmann"
+
+			portraits = {
+				army = {
+					small = "GFX_Friedrich_Riechmann_small"
+					large = "GFX_Friedrich_Riechmann_large"
+				}
+			}
+		}
+		location = 3258
+		division_template = "Panzerdivision"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.01
+		force_equipment_variants = {
+			medium_tank_aa_chassis_0 = { amount = 18 owner = "GER" version_name = "FlakPz Gepard 1A2" }
+			medium_tank_rocket_chassis_1 = { amount = 18 owner = "GER" version_name = "MARS" }
+			Heavy_Anti_tank_1 = { amount = 20 owner = "GER" version_name = "RjPz 3 Jaguar 1 A3" }
+			medium_tank_chassis_1 = { amount = 20 owner = "GER" version_name = "Leopard 2A4" }
+		}
+	}
+division = {
+		name = "13. Panzergrenadier-Division"
+		officer = {
+			name = "Werner Widder"
+
+			portraits = {
+				army = {
+					small = "GFX_Werner_Widder_small"
+					large = "GFX_Werner_Widder_large"
+				}
+			}
+		}
+		location = 3312
+		division_template = "Panzergrenadierdivision"
+		start_experience_factor = 0.50
+		start_equipment_factor = 0.01
+		force_equipment_variants = {
+			medium_tank_aa_chassis_0 = { amount = 18 owner = "GER" version_name = "FlakPz Gepard 1A2" }
+			medium_tank_rocket_chassis_1 = { amount = 18 owner = "GER" version_name = "MARS" }
+			Heavy_Anti_tank_1 = { amount = 20 owner = "GER" version_name = "RjPz 3 Jaguar 1 A3" }
+			medium_tank_chassis_1 = { amount = 20 owner = "GER" version_name = "Leopard 2A4" }
+		}
+	}
+division = {
+		name = "Jägerbrigade 37 'Freistaat Sachssen'"
+		officer = {
+			name = "Rainer Glatz"
+
+			portraits = {
+				army = {
+					small = "GFX_Rainer_Glatz_small"
+					large = "GFX_Rainer_Glatz_large"
+				}
+			}
+		}
+		location = 11481 #Frankenburg, Saxony
+		division_template = "Jägerbrigade"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.01
+		force_equipment_variants = {
+		}
+	}
+division = {
+		name = "Wehrbereichskommando VII"
+
+		officer = {
+			name = "Wolf-Dieter Löser"
+
+			portraits = {
+				army = {
+					small = "GFX_Wolf-Dieter_Loser_small"
+					large = "GFX_Wolf-Dieter_Loser_large"
+				}
+			}
+		}
+		location = 3312
+		division_template = "Wehrbereichskommando"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.01
+		force_equipment_variants = {
+			medium_tank_chassis_0 = { amount = 14 owner = "GER" version_name = "Leopard 1A5" }
+			medium_tank_amphibious_chassis_1 = { amount = 20 owner = "GER" creator = "USA" version_name = "M113" }
+			util_vehicle_3 = { amount = 1  owner = "GER" version_name = "Mercedes-Benz G-Class G270 Wolf SSA" }
+		}
+	}
+}

@@ -1,0 +1,33 @@
+ideas = {
+	hidden_ideas = {
+		rev_kamikaze_range_upgrade_bonus = {
+			name = Air_Kamikaze_range_upgrade
+			equipment_bonus = {
+				kamikaze_drone_1 = {
+					air_range = 3
+					maximum_speed = 0.25
+					air_defence = 1
+					instant = yes
+				}
+				kamikaze_drone_2 = {
+					air_range = 1.66667
+					maximum_speed = 0.25
+					air_defence = 1
+					instant = yes
+				}
+				kamikaze_drone_3 = {
+					air_range = 1
+					maximum_speed = 0.25
+					air_defence = 1
+					instant = yes
+				}
+				kamikaze_drone_4 = {
+					air_range = 0.6
+					maximum_speed = 0.25
+					air_defence = 1
+					instant = yes
+				}
+			}
+		}
+	}
+}

@@ -8,7 +8,8 @@ technologies = {
 	@1995 = 4
 	@2005 = 6
 	@2015 = 8
-	@2035 = 10
+	@2025 = 10
+	@2035 = 12
 
 	#Y Axis
 	@row1 = -4
@@ -232,7 +233,7 @@ technologies = {
 			heavy_tank_amphibious_chassis_3
 		}
 		path = {
-			leads_to_tech = nsb_attack_helicopter_tech_5
+			leads_to_tech = nsb_drone_mothership_tech
 			research_cost_coeff = 1
 		}
 		research_cost = 1.7
@@ -240,6 +241,54 @@ technologies = {
 		folder = {
 			name = air_techs_folder
 			position = { x = @row3 y = @2015 }
+		}
+		categories = {
+			CAT_heli
+			CAT_atk_heli
+			CAT_Military
+		}
+		special_project_specialization = { specialization_air }
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 2
+				check_variable = { gdp_per_capita > 19.999 }
+			}
+			modifier = {
+				factor = 0
+				AND = {
+					NOT = {
+						original_tag = CHI
+						original_tag = SOV
+					}
+					check_variable = { gdp_per_capita < 20 }
+				}
+			}
+		}
+	}
+
+	#2025
+	nsb_drone_mothership_tech = {
+		allow_branch = { has_dlc = "No Step Back" }
+		on_research_complete = {
+			log = "[GetDateText]: [Root.GetName]: add tech nsb_drone_mothership_tech"
+		}
+		allow = {
+			ROOT = {
+				is_special_project_completed = sp:sp_helicopter_project
+			}
+		}
+		enable_equipments = { drone_mothership_equipment_1 }
+		enable_subunits = { drone_mothership_bat }
+		path = {
+			leads_to_tech = nsb_attack_helicopter_tech_5
+			research_cost_coeff = 1
+		}
+		research_cost = 1.7
+		start_year = 2025
+		folder = {
+			name = air_techs_folder
+			position = { x = @row3 y = @2025 }
 		}
 		categories = {
 			CAT_heli
@@ -276,7 +325,9 @@ technologies = {
 				is_special_project_completed = sp:sp_helicopter_project
 			}
 		}
+		enable_subunits = { drone_mothership_bat }
 		enable_equipments = {
+			drone_mothership_equipment_2
 			heavy_tank_chassis_4
 			heavy_tank_amphibious_chassis_4
 		}
@@ -481,7 +532,7 @@ technologies = {
 		}
 
 		path = {
-			leads_to_tech = attack_helicopter5
+			leads_to_tech = drone_mothership_tech
 			research_cost_coeff = 1
 		}
 
@@ -526,6 +577,64 @@ technologies = {
 		}
 	}
 
+	#2025
+	drone_mothership_tech = {
+		allow_branch = { NOT = { has_dlc = "No Step Back" } }
+		allow = {
+			ROOT = {
+				is_special_project_completed = sp:sp_helicopter_project
+			}
+		}
+
+		enable_equipments = { drone_mothership_equipment_1 }
+		enable_subunits = { drone_mothership_bat }
+
+		path = {
+			leads_to_tech = attack_helicopter5
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2.3
+		start_year = 2025
+
+		folder = {
+			name = air_techs_folder
+			position = { x = @row3 y = @2025 }
+		}
+
+		categories = {
+			CAT_heli
+			CAT_atk_heli
+			CAT_Military
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				date < 2025.01.01
+			}
+			modifier = {
+				factor = 0.2
+				date < 2020.01.01
+			}
+			modifier = {
+				factor = 2
+				check_variable = { gdp_per_capita > 19.999 }
+			}
+			modifier = {
+				factor = 0
+				AND = {
+					NOT = {
+						original_tag = CHI
+						original_tag = SOV
+					}
+					check_variable = { gdp_per_capita < 20 }
+				}
+			}
+		}
+	}
+
 	#2035
 	attack_helicopter5 = {
 		allow = {
@@ -534,7 +643,9 @@ technologies = {
 			}
 		}
 
+		enable_subunits = { drone_mothership_bat }
 		enable_equipments = {
+			drone_mothership_equipment_2
 			attack_helicopter5
 		}
 

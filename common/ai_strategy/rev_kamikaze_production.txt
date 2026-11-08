@@ -1,0 +1,99 @@
+# Build a reserve of expendable aircraft without increasing the shared suicide-type
+# ratio, which also covers reusable UAVs and some transport aircraft in MD.
+rev_kamikaze_reserve = {
+	allowed = { ai_for_units_is_not_disabled = yes }
+	enable = {
+		OR = {
+			has_tech = Air_Kamikaze1
+			has_tech = Air_Kamikaze2
+			has_tech = Air_Kamikaze3
+			has_tech = Air_Kamikaze4
+			has_tech = suicide_drone_1
+			has_tech = suicide_drone_2
+			has_tech = suicide_drone_3
+			has_tech = suicide_drone_4
+		}
+		has_equipment = { medium_plane_suicide_airframe < 1000 }
+	}
+	abort_when_not_enabled = yes
+	# Offset the existing country, stockpile and aircraft-limiter penalties.
+	ai_strategy = { type = equipment_variant_production_factor id = medium_plane_suicide_airframe value = 350 }
+}
+
+# Minimum allocations end at the reserve target and resume below it.
+# Very small economies retain control of their scarce factories through weights alone.
+rev_kamikaze_reserve_small_industry = {
+	allowed = { ai_for_units_is_not_disabled = yes }
+	enable = {
+		OR = {
+			has_tech = Air_Kamikaze1
+			has_tech = Air_Kamikaze2
+			has_tech = Air_Kamikaze3
+			has_tech = Air_Kamikaze4
+			has_tech = suicide_drone_1
+			has_tech = suicide_drone_2
+			has_tech = suicide_drone_3
+			has_tech = suicide_drone_4
+		}
+		has_equipment = { medium_plane_suicide_airframe < 1000 }
+		num_of_military_factories > 4
+		num_of_military_factories < 25
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = { type = equipment_production_min_factories_archetype id = medium_plane_suicide_airframe value = 1 }
+}
+
+rev_kamikaze_reserve_medium_industry = {
+	allowed = { ai_for_units_is_not_disabled = yes }
+	enable = {
+		OR = {
+			has_tech = Air_Kamikaze1
+			has_tech = Air_Kamikaze2
+			has_tech = Air_Kamikaze3
+			has_tech = Air_Kamikaze4
+			has_tech = suicide_drone_1
+			has_tech = suicide_drone_2
+			has_tech = suicide_drone_3
+			has_tech = suicide_drone_4
+		}
+		has_equipment = { medium_plane_suicide_airframe < 1000 }
+		num_of_military_factories > 24
+		num_of_military_factories < 75
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = { type = equipment_production_min_factories_archetype id = medium_plane_suicide_airframe value = 2 }
+}
+
+rev_kamikaze_reserve_large_industry = {
+	allowed = { ai_for_units_is_not_disabled = yes }
+	enable = {
+		OR = {
+			has_tech = Air_Kamikaze1
+			has_tech = Air_Kamikaze2
+			has_tech = Air_Kamikaze3
+			has_tech = Air_Kamikaze4
+			has_tech = suicide_drone_1
+			has_tech = suicide_drone_2
+			has_tech = suicide_drone_3
+			has_tech = suicide_drone_4
+		}
+		has_equipment = { medium_plane_suicide_airframe < 1000 }
+		num_of_military_factories > 74
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = { type = equipment_production_min_factories_archetype id = medium_plane_suicide_airframe value = 4 }
+}
+
+# Deprioritize dedicated manned CAS production from 2025 onward.
+rev_post_2025_cas_production = {
+	allowed = { ai_for_units_is_not_disabled = yes }
+	enable = { date > 2024.12.31 }
+	abort_when_not_enabled = yes
+	ai_strategy = { type = unit_ratio id = cas value = -100 }
+	ai_strategy = { type = unit_ratio id = cv_cas value = -100 }
+	ai_strategy = { type = equipment_variant_production_factor id = small_plane_cas_airframe value = -100 }
+	ai_strategy = { type = equipment_variant_production_factor id = medium_plane_cas_airframe value = -100 }
+	ai_strategy = { type = equipment_variant_production_factor id = large_plane_cas_airframe value = -100 }
+	ai_strategy = { type = equipment_variant_production_factor id = cv_small_plane_cas_airframe value = -100 }
+	ai_strategy = { type = equipment_variant_production_factor id = cv_medium_plane_cas_airframe value = -100 }
+}

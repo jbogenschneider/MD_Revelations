@@ -1,3 +1,8 @@
+endtimes_famine_consumption_floor = {
+	enable = { always = yes }
+	consumer_goods_expected_value = endtimes_famine_extra_consumption
+}
+
 endtimes_cabal_support_floor = {
 	enable = { always = yes }
 	stability_factor = endtimes_cabal_stability_floor

@@ -1,0 +1,98 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_Air_Kamikaze1_medium"
+		texturefile = "gfx/interface/technologies/Generic/loitering_drones/Harpy.dds"
+	}
+	SpriteType = {
+		name = "GFX_Air_Kamikaze2_medium"
+		texturefile = "gfx/interface/technologies/Generic/loitering_drones/Switchblade.dds"
+	}
+	SpriteType = {
+		name = "GFX_Air_Kamikaze3_medium"
+		texturefile = "gfx/interface/technologies/Generic/loitering_drones/SwitchbladeNG.dds"
+	}
+	SpriteType = {
+		name = "GFX_Air_Kamikaze4_medium"
+		texturefile = "gfx/interface/technologies/Generic/loitering_drones/UAV4.dds"
+	}
+	SpriteType = {
+		name = "GFX_USA_Air_Kamikaze1_medium"
+		texturefile = "gfx/interface/technologies/Generic/loitering_drones/AGM136.dds"
+	}
+	SpriteType = {
+		name = "GFX_USA_Air_Kamikaze2_medium"
+		texturefile = "gfx/interface/technologies/Generic/loitering_drones/Switchblade.dds"
+	}
+	SpriteType = {
+		name = "GFX_USA_Air_Kamikaze3_medium"
+		texturefile = "gfx/interface/technologies/Generic/loitering_drones/SwitchbladeNG.dds"
+	}
+	SpriteType = {
+		name = "GFX_USA_Air_Kamikaze4_medium"
+		texturefile = "gfx/interface/technologies/Generic/loitering_drones/UAV4.dds"
+	}
+	SpriteType = {
+		name = "GFX_SOV_Air_Kamikaze1_medium"
+		texturefile = "gfx/interface/technologies/Generic/loitering_drones/Pchela.dds"
+	}
+	SpriteType = {
+		name = "GFX_SOV_Air_Kamikaze2_medium"
+		texturefile = "gfx/interface/technologies/Generic/loitering_drones/Lancet.dds"
+	}
+	SpriteType = {
+		name = "GFX_SOV_Air_Kamikaze3_medium"
+		texturefile = "gfx/interface/technologies/Generic/loitering_drones/Lancet.dds"
+	}
+	SpriteType = {
+		name = "GFX_SOV_Air_Kamikaze4_medium"
+		texturefile = "gfx/interface/technologies/Generic/loitering_drones/UAV4.dds"
+	}
+	SpriteType = {
+		name = "GFX_UKR_Air_Kamikaze1_medium"
+		texturefile = "gfx/interface/technologies/Generic/loitering_drones/Tu141.dds"
+	}
+	SpriteType = {
+		name = "GFX_UKR_Air_Kamikaze2_medium"
+		texturefile = "gfx/interface/technologies/Generic/loitering_drones/AQ400.dds"
+	}
+	SpriteType = {
+		name = "GFX_UKR_Air_Kamikaze3_medium"
+		texturefile = "gfx/interface/technologies/Generic/loitering_drones/UJ26.dds"
+	}
+	SpriteType = {
+		name = "GFX_UKR_Air_Kamikaze4_medium"
+		texturefile = "gfx/interface/technologies/Generic/loitering_drones/UAV4.dds"
+	}
+	SpriteType = {
+		name = "GFX_eastern_european_2d_Air_Kamikaze1_medium"
+		texturefile = "gfx/interface/technologies/Generic/loitering_drones/Pchela.dds"
+	}
+	SpriteType = {
+		name = "GFX_eastern_european_2d_Air_Kamikaze2_medium"
+		texturefile = "gfx/interface/technologies/Generic/loitering_drones/Lancet.dds"
+	}
+	SpriteType = {
+		name = "GFX_eastern_european_2d_Air_Kamikaze3_medium"
+		texturefile = "gfx/interface/technologies/Generic/loitering_drones/Lancet.dds"
+	}
+	SpriteType = {
+		name = "GFX_eastern_european_2d_Air_Kamikaze4_medium"
+		texturefile = "gfx/interface/technologies/Generic/loitering_drones/UAV4.dds"
+	}
+	SpriteType = {
+		name = "GFX_PER_Air_Kamikaze1_medium"
+		texturefile = "gfx/interface/technologies/Generic/loitering_drones/Ababil.dds"
+	}
+	SpriteType = {
+		name = "GFX_PER_Air_Kamikaze2_medium"
+		texturefile = "gfx/interface/technologies/Generic/loitering_drones/Shahed.dds"
+	}
+	SpriteType = {
+		name = "GFX_PER_Air_Kamikaze3_medium"
+		texturefile = "gfx/interface/technologies/Generic/loitering_drones/Shahed.dds"
+	}
+	SpriteType = {
+		name = "GFX_PER_Air_Kamikaze4_medium"
+		texturefile = "gfx/interface/technologies/Generic/loitering_drones/UAV4.dds"
+	}
+}

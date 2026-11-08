@@ -1,0 +1,6 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_Air_Kamikaze_range_upgrade_medium"
+		texturefile = "gfx/interface/technologies/Generic/Subtechs/RCS_Radar_Cross_Section_Reductions.dds"
+	}
+}

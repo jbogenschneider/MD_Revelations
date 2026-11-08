@@ -1,0 +1,2 @@
+DDR = "countries/Endtimes East Germany.txt"
+FRC = "countries/French Popular Republic.txt"

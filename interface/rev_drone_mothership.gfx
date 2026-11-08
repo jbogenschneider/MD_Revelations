@@ -1,0 +1,41 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_drone_mothership_tech_medium"
+		texturefile = "gfx/interface/technologies/USA/AIR/AH3.dds"
+	}
+	spriteType = {
+		name = "GFX_nsb_drone_mothership_tech_medium"
+		texturefile = "gfx/interface/technologies/USA/AIR/AH3.dds"
+	}
+	spriteType = {
+		name = "GFX_drone_mothership_equipment"
+		texturefile = "gfx/interface/technologies/USA/AIR/AH3.dds"
+	}
+	spriteType = {
+		name = "GFX_drone_mothership_equipment_medium"
+		texturefile = "gfx/interface/technologies/USA/AIR/AH3.dds"
+	}
+	spriteType = {
+		name = "GFX_drone_mothership_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/USA/AIR/AH3.dds"
+	}
+	spriteType = {
+		name = "GFX_unit_drone_mothership_bat_icon_medium"
+		texturefile = "gfx/interface/counters/divisions_large/attack_helicopter.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_unit_drone_mothership_bat_icon_medium_white"
+		texturefile = "gfx/interface/counters/divisions_small/onmap_unit_attack_helicopter_icon.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_unit_drone_mothership_bat_icon_small"
+		texturefile = "gfx/texticons/unit_attack_helicopter_icon.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_drone_mothership_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/USA/AIR/AH5.dds"
+	}
+}

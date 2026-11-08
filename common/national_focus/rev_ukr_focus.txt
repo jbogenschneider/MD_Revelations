@@ -27,7 +27,7 @@ focus_tree = {
 
 	focus = {
 		id = REV_UKR_multisource_land_drone_field_trials
-		icon = drone2
+		icon = tanks5
 		x = 19
 		y = 2
 		cost = 2

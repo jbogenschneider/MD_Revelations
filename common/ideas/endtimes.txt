@@ -1,5 +1,20 @@
 ideas = {
 	country = {
+		endtimes_famine_and_disease = {
+			picture = looming_famine
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				custom_modifier_tooltip = endtimes_famine_consumption_floor_tt
+			}
+			on_add = {
+				endtimes_refresh_famine_consumption_floor = yes
+			}
+			on_remove = {
+				remove_dynamic_modifier = { modifier = endtimes_famine_consumption_floor }
+				clear_variable = endtimes_famine_extra_consumption
+			}
+		}
 		endtimes_cabal = {
 			picture = sov_oligarch
 			allowed = { always = yes }

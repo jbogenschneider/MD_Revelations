@@ -1,0 +1,4 @@
+﻿l_english:
+ Air_Kamikaze_range_upgrade:0 "Kamikaze Range and Speed Upgrade"
+ Air_Kamikaze_range_upgrade_desc:0 "Improved propulsion, navigation and reduced radar signature extend suicide drone range, increase maximum speed by 25% and improve resistance to interception. All four kamikaze drone models gain +100% air defense. Range bonuses build on each model's equipment stats; other equipment and research bonuses may further modify these values."
+ REV_KAMIKAZE_RANGE_UPGRADE_EFFECT_TT:0 "All kamikaze drone models: §G+25%§! maximum speed and §G+100%§! air defense.\nRange bonuses by model: I §G+300%§!, II §G+166.667%§!, III §G+100%§!, IV §G+60%§!."

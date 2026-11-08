@@ -1,0 +1,69 @@
+# Regional formations from FRA_2000_nonnsb.txt; loaded only at the split.
+division_template = {
+	name = "Armoured Brigade"
+
+	regiments = {
+		armor_Bat = { x = 0 y = 0 }
+		armor_Bat = { x = 0 y = 1 }
+		Arm_Inf_Bat = { x = 0 y = 2 }
+		Arm_Inf_Bat = { x = 0 y = 3 }
+		SP_Arty_Bat = { x = 0 y = 4 }
+	}
+	support = {
+		H_Engi_Comp = { x = 0 y = 0 }
+		SP_AA_Battery = { x = 0 y = 1 }
+		Arm_Recce_Comp = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Airmobile Brigade"
+
+	regiments = {
+		L_Air_assault_Bat = { x = 0 y = 0 }
+		L_Air_assault_Bat = { x = 0 y = 1 }
+	}
+
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Special Forces"
+
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+	}
+
+	priority = 2
+}
+units = {
+division = {
+		name = "1ère Brigade mécanisée"
+		location = 6545 #Chalons
+		division_template = "Armoured Brigade"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.01
+	}
+division = {
+		name = "3ème Brigade mécanisée"
+		location = 454 #Clermont-Ferrand
+		division_template = "Armoured Brigade"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.01
+	}
+division = {
+		name = "4ème brigade aéromobile"
+		location = 11516 #Essey-les-Nancy
+		division_template = "Airmobile Brigade"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.01
+	}
+division = {
+		name = "13ème Régiment de dragons parachutistes"
+		location = 651 #Souge
+		division_template = "Special Forces"
+		start_experience_factor = 0.5
+	}
+}

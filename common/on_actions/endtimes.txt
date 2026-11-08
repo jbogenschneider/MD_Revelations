@@ -129,6 +129,19 @@ on_actions = {
 			}
 			if = {
 				limit = {
+					date > 2028.4.15
+					date < 2028.4.17
+					has_global_flag = endtimes_miracle_occurred
+					NOT = { has_global_flag = endtimes_orthodox_reunion_occurred }
+				}
+				set_global_flag = endtimes_orthodox_reunion_occurred
+				every_country = {
+					limit = { is_ai = no }
+					country_event = { id = endtimes.19 }
+				}
+			}
+			if = {
+				limit = {
 					date > 2028.6.5
 					date < 2028.6.7
 					NOT = { has_global_flag = endtimes_new_church_emerged }
@@ -149,6 +162,18 @@ on_actions = {
 				every_country = {
 					limit = { is_ai = no }
 					country_event = { id = endtimes.6 }
+				}
+			}
+			if = {
+				limit = {
+					date > 2029.4.28
+					date < 2029.4.30
+					NOT = { has_global_flag = endtimes_one_faith_announced }
+				}
+				set_global_flag = endtimes_one_faith_announced
+				every_country = {
+					limit = { is_ai = no }
+					country_event = { id = endtimes.20 }
 				}
 			}
 			if = {
@@ -207,12 +232,32 @@ on_actions = {
 			}
 			if = {
 				limit = {
+					date > 2029.6.4
+					date < 2029.6.6
+					NOT = { has_global_flag = endtimes_famine_disasters_announced }
+				}
+				set_global_flag = endtimes_famine_disasters_announced
+				every_country = {
+					limit = { is_ai = no }
+					country_event = { id = endtimes.21 }
+				}
+			}
+			if = {
+				limit = {
 					tag = FRA
 					date > 2029.7.1
 					date < 2029.7.3
-					NOT = { has_country_flag = endtimes_french_monarchy_restored }
+					NOT = { has_country_flag = rev_fra_left_split_started }
+					NOT = { country_exists = FRC }
+					has_variable = rev_fra_regional_oob_mode
+					owns_state = 56
+					owns_state = 54
+					owns_state = 55
+					owns_state = 305
+					owns_state = 59
 				}
-				country_event = { id = endtimes.11 }
+				# The former French monarchy date now starts the civil-war chain.
+				country_event = { id = rev_fra_split.1 }
 			}
 			if = {
 				limit = {
@@ -222,6 +267,24 @@ on_actions = {
 					NOT = { has_country_flag = endtimes_german_monarchy_restored }
 				}
 				country_event = { id = endtimes.14 }
+			}
+			if = {
+				limit = {
+					has_global_flag = endtimes_famine_disasters_announced
+					NOT = { has_country_flag = endtimes_famine_spirit_initialized }
+					OR = {
+						tag = MAD
+						tag = SUD
+						tag = ETH
+						tag = SOM
+					}
+				}
+				set_country_flag = endtimes_famine_spirit_initialized
+				add_ideas = endtimes_famine_and_disease
+			}
+			else_if = {
+				limit = { has_idea = endtimes_famine_and_disease }
+				endtimes_refresh_famine_consumption_floor = yes
 			}
 			if = {
 				limit = { has_idea = endtimes_cabal }

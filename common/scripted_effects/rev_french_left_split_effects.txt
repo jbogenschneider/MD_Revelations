@@ -1,0 +1,123 @@
+# FRC scope. MD uses 24 subideology slots: PS=3, EELV=17, LFI=18.
+rev_frc_setup_left_coalition = {
+	set_popularities = {
+		democratic = 20
+		communism = 0
+		fascism = 0
+		neutrality = 80
+		nationalist = 0
+	}
+	start_politics_input = yes
+	set_variable = { party_pop_array^18 = 0.60 }
+	set_variable = { party_pop_array^17 = 0.20 }
+	set_variable = { party_pop_array^3 = 0.20 }
+	add_to_array = { ruling_party = 18 }
+	add_to_array = { gov_coalition_array = 17 }
+	add_to_array = { gov_coalition_array = 3 }
+	set_variable = { neutral_Social_leader = 1 }
+	set_variable = { Neutral_green_leader = 1 }
+	set_variable = { socialism_leader = 1 }
+	# Leave only LFI, EELV and Parti Socialiste eligible for elections.
+	clr_country_flag = partyall_banned
+	set_country_flag = party1_banned
+	set_country_flag = party2_banned
+	set_country_flag = party3_banned
+	clr_country_flag = party4_banned
+	set_country_flag = party5_banned
+	set_country_flag = party6_banned
+	set_country_flag = party7_banned
+	set_country_flag = party8_banned
+	set_country_flag = party9_banned
+	set_country_flag = party10_banned
+	set_country_flag = party11_banned
+	set_country_flag = party12_banned
+	set_country_flag = party13_banned
+	set_country_flag = party14_banned
+	set_country_flag = party15_banned
+	set_country_flag = party16_banned
+	set_country_flag = party17_banned
+	clr_country_flag = party18_banned
+	clr_country_flag = party19_banned
+	set_country_flag = party20_banned
+	set_country_flag = party21_banned
+	set_country_flag = party22_banned
+	set_country_flag = party23_banned
+	set_country_flag = party24_banned
+	set_politics = {
+		ruling_party = neutrality
+		elections_allowed = yes
+		last_election = "2026.1.1"
+		election_frequency = 48
+	}
+	create_country_leader = {
+		name = "Jean-Luc Mélenchon"
+		picture = "gfx/leaders/FRA/Jean-Luc_Melenchon.dds"
+		ideology = neutral_Social
+		traits = { neutrality_neutral_Social }
+	}
+	startup_politics = yes
+	calculate_banned_parties = yes
+	update_dirty_subideology = yes
+}
+
+# FRA scope. Called by the July 2, 2029 split event, or manually for testing.
+rev_fra_start_left_split = {
+	if = {
+		limit = {
+			tag = FRA
+			NOT = { has_country_flag = rev_fra_left_split_started }
+			NOT = { country_exists = FRC }
+			has_variable = rev_fra_regional_oob_mode
+			owns_state = 56
+			owns_state = 54
+			owns_state = 55
+			owns_state = 305
+			owns_state = 59
+		}
+		set_country_flag = rev_fra_left_split_started
+		# Add cores only at the split, so FRC stays dormant in the 2026 scenario.
+		56 = { add_core_of = FRC }
+		54 = { add_core_of = FRC }
+		55 = { add_core_of = FRC }
+		305 = { add_core_of = FRC }
+		59 = { add_core_of = FRC }
+		# Independence is not an autonomy tier in MD's subject-state definitions.
+		release = FRC
+		FRC = {
+			if = {
+				limit = { is_subject = yes }
+				overlord = { set_autonomy = { target = FRC autonomy_state = autonomy_free } }
+			}
+			leave_faction = yes
+			set_capital = { state = 56 }
+			set_variable = { gdp_per_capita = FRA.gdp_per_capita }
+			set_variable = { corporate_tax_rate = FRA.corporate_tax_rate }
+			set_variable = { population_tax_rate = FRA.population_tax_rate }
+			update_laws_for_new_nation = yes
+			set_temp_variable = { nation_to_copy_from = FRA.id }
+			copy_internal_factions = yes
+			configure_religious_setup = yes
+			rev_frc_setup_left_coalition = yes
+			ingame_startup_nations_effect = yes
+			# Use live research, rather than hardcoding the scenario's old tech list.
+			inherit_technology = FRA
+			set_research_slots = FRA.amount_research_slots
+			set_country_flag = rev_frc_left_split_established
+		}
+		# Removes the tagged original formations wherever they have moved, then
+		# re-forms those same historical units under FRC. No random army fraction.
+		rev_fra_reassign_regional_army = yes
+		ingame_update_setup = yes
+		FRC = { declare_war_on = { target = FRA type = civil_war } }
+		if = {
+			limit = { NOT = { has_global_flag = endtimes_french_civil_war_announced } }
+			set_global_flag = endtimes_french_civil_war_announced
+			every_country = {
+				limit = { is_ai = no }
+				country_event = { id = endtimes.22 }
+			}
+		}
+		# Leadership changes after five full days, independently of popup dismissal.
+		country_event = { id = endtimes.11 days = 5 }
+	}
+}
