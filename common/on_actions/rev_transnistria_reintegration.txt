@@ -1,0 +1,20 @@
+on_actions = {
+	on_weekly_UKR = {
+		effect = {
+			if = {
+				limit = {
+					country_exists = PMR
+					country_exists = MLV
+					149 = {
+						is_owned_by = PMR
+						is_controlled_by = UKR
+					}
+				}
+				MLV = {
+					annex_country = { target = PMR }
+					news_event = { id = rev_transnistria.1 hours = 1 }
+				}
+			}
+		}
+	}
+}

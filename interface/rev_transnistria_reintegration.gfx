@@ -1,0 +1,6 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_rev_transnistria_reintegration_news"
+		texturefile = "gfx/event_pictures/generic/events/treaty.dds"
+	}
+}
