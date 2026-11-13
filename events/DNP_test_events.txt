@@ -1,0 +1,16 @@
+add_namespace = dnp
+
+country_event = {
+    id = dnp.1
+    title = "DNP Romania Female Roll Test"
+    desc = "Tests the Romanian liberal leader roll."
+
+    is_triggered_only = yes
+
+    option = {
+        name = "Roll liberal leader"
+
+set_country_flag = set_liberalism
+set_leader_ROM = yes
+    }
+}

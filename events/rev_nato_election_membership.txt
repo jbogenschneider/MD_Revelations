@@ -1,0 +1,53 @@
+add_namespace = rev_nato_election_membership
+
+# One check per country, including campaigns saved after the election.
+country_event = {
+	id = rev_nato_election_membership.1
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_government = nationalist
+		NOT = { has_country_flag = rev_nato_post_election_membership_checked }
+		OR = {
+			AND = {
+				tag = FRA
+				has_country_flag = rev_fra_2027_handover_done
+				has_country_flag = rev_fra_2027_le_pen_elected
+			}
+			AND = {
+				tag = ITA
+				has_country_flag = rev_ita_2027_election_resolved
+			}
+		}
+	}
+
+	immediate = {
+		# Consume the check even if already in NATO or intentionally outside it.
+		set_country_flag = rev_nato_post_election_membership_checked
+		if = {
+			limit = {
+				NOT = { has_idea = NATO_member }
+				NOT = { has_war_with = USA }
+				NOT = { has_idea = CSTO_member }
+				NOT = { has_country_flag = endtimes_csto_realignment_completed }
+				NOT = { has_country_flag = endtimes_italy_joined_csto }
+				NOT = { has_country_flag = rev_nato_anti_usa_opt_out_resolved_fra }
+				NOT = { has_country_flag = rev_nato_anti_usa_opt_out_resolved_ita }
+				NOT = {
+					AND = {
+						has_global_flag = endtimes_csto_realignment_dispatched
+						endtimes_csto_realignment_country = yes
+					}
+				}
+				any_other_country = {
+					has_idea = NATO_member
+					is_faction_leader = yes
+					NOT = { has_war_with = ROOT }
+				}
+			}
+			log = "[GetDateText]: [Root.GetName]: Restoring NATO membership after the nationalist election (one-time check)."
+			endtimes_ensure_nato_membership = yes
+		}
+	}
+}

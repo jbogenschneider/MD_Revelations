@@ -1,0 +1,37 @@
+add_namespace = rev_rom_moldova_union
+
+# Apply unification automatically; the public notification is the WNN report.
+country_event = {
+	id = rev_rom_moldova_union.1
+	hidden = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = ROM
+		date > 2027.8.9
+		date < 2027.8.11
+		has_war = no
+		country_exists = MLV
+		country_exists = UKR
+		MLV = { has_war = no }
+		UKR = { has_war = no }
+		NOT = { has_global_flag = rev_rom_moldova_union_completed }
+	}
+	immediate = {
+		set_global_flag = rev_rom_moldova_union_completed
+		annex_country = { target = MLV transfer_troops = yes }
+		news_event = { id = rev_rom_moldova_union.2 hours = 1 }
+	}
+}
+
+news_event = {
+	id = rev_rom_moldova_union.2
+	title = rev_rom_moldova_union.2.t
+	desc = rev_rom_moldova_union.2.d
+	picture = GFX_rev_rom_moldova_union_news
+	is_triggered_only = yes
+	major = yes
+	# The completed flag guards the caller; do not use fire_only_once on global news.
+	option = {
+		name = rev_rom_moldova_union.2.a
+	}
+}

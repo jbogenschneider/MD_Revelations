@@ -18,16 +18,17 @@ country_event = {
 		retire_country_leader = yes
 		set_politics = {
 			ruling_party = nationalist
-			last_election = "2027.12.22"
-			election_frequency = 72
+			last_election = "2027.11.22"
+			# Keep the next automatic election beyond the Endtimes storyline.
+			election_frequency = 120
 			elections_allowed = yes
 		}
 		clear_array = ruling_party
 		clear_array = gov_coalition_array
 		add_to_array = { ruling_party = 21 } # Nat_Fascism, not the Salafist outlook.
 		create_country_leader = {
-			name = "Stefano De Beaman"
-			picture = "thebeastsman.dds"
+			name = "Roberto Vannacci"
+			picture = "gfx/leaders/ITA/Roberto_vannacci.dds"
 			ideology = Nat_Fascism
 			traits = {
 				nationalist_Nat_Fascism

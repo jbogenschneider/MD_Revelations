@@ -3,6 +3,8 @@ add_namespace = arab_spring
 # Protestors Have Taken to the Streets
 country_event = {
 	id = arab_spring.0
+	# Disabled for the Endtimes storyline, including queued events.
+	trigger = { always = no }
 	title = arab_spring.0.t
 	desc = arab_spring.0.d
 	picture = GFX_politics_protest
@@ -34,6 +36,8 @@ country_event = {
 # Protests Erupt Demanding [FROM.GetLeader]'s Resignation
 news_event = {
 	id = arab_spring.1
+	# Disabled for the Endtimes storyline, including queued events.
+	trigger = { always = no }
 	title = arab_spring.1.t
 	desc = {
 		trigger = {
@@ -73,6 +77,8 @@ news_event = {
 # An Ally under Threat
 country_event = {
 	id = arab_spring.3
+	# Disabled for the Endtimes storyline, including queued events.
+	trigger = { always = no }
 	title = arab_spring.3.t
 	desc = arab_spring.3.d
 
@@ -149,6 +155,8 @@ country_event = {
 # Our Ally Supports us!
 country_event = {
 	id = arab_spring.4
+	# Disabled for the Endtimes storyline, including queued events.
+	trigger = { always = no }
 	title = arab_spring.4.t
 	desc = arab_spring.4.d
 	picture = GFX_politics_talks
@@ -165,6 +173,8 @@ country_event = {
 # Our Ally has Abandoned us...
 country_event = {
 	id = arab_spring.5
+	# Disabled for the Endtimes storyline, including queued events.
+	trigger = { always = no }
 	title = arab_spring.5.t
 	desc = arab_spring.5.d
 	picture = GFX_politics_talks
@@ -180,6 +190,8 @@ country_event = {
 # Regime Supporters Stage Rally
 country_event = {
 	id = arab_spring.6
+	# Disabled for the Endtimes storyline, including queued events.
+	trigger = { always = no }
 	title = arab_spring.6.t
 	desc = {
 		text = arab_spring.6.d1
@@ -221,6 +233,8 @@ country_event = {
 	picture = GFX_arab_spring_defection
 	is_triggered_only = yes
 	trigger = {
+		# Disabled for the Endtimes storyline, including queued events.
+		always = no
 		NOT = { has_country_flag = AS_arab_spring_completed }
 		has_country_flag = arab_spring_military_deployed
 		has_country_flag = arab_spring_active
@@ -246,6 +260,8 @@ country_event = {
 	picture = GFX_egyptian_christian_massacre
 	is_triggered_only = yes
 	trigger = {
+		# Disabled for the Endtimes storyline, including queued events.
+		always = no
 		has_country_flag = arab_spring_military_deployed
 		has_country_flag = arab_spring_active
 	}
@@ -263,6 +279,8 @@ country_event = {
 # Concessions Placate the Masses
 country_event = {
 	id = arab_spring.9
+	# Disabled for the Endtimes storyline, including queued events.
+	trigger = { always = no }
 	title = arab_spring.9.t
 	desc = arab_spring.9.d
 	picture = GFX_politics_protest
@@ -278,6 +296,8 @@ country_event = {
 # Concession Leads to Demands for Further Reform
 country_event = {
 	id = arab_spring.10
+	# Disabled for the Endtimes storyline, including queued events.
+	trigger = { always = no }
 	title = arab_spring.10.t
 	desc = arab_spring.10.d
 	picture = GFX_politics_protest
@@ -295,6 +315,8 @@ country_event = {
 # Protests Reach Boiling Point
 country_event = {
 	id = arab_spring.11
+	# Disabled for the Endtimes storyline, including queued events.
+	trigger = { always = no }
 	title = arab_spring.11.t
 	desc = arab_spring.11.d
 	picture = GFX_politics_speak
@@ -543,6 +565,8 @@ country_event = {
 # Revolution Sweeps Regime from Power in [FROM.GetNameDef]
 news_event = {
 	id = arab_spring.12
+	# Disabled for the Endtimes storyline, including queued events.
+	trigger = { always = no }
 	title = arab_spring.12.t
 	desc = {
 		text = arab_spring.12.d1
@@ -604,6 +628,8 @@ news_event = {
 # Protests Spread Across Arab World
 news_event = {
 	id = arab_spring.13
+	# Disabled for the Endtimes storyline, including queued events.
+	trigger = { always = no }
 	title = arab_spring.13.t
 	desc = arab_spring.13.d
 	picture = GFX_news_arab_spring
@@ -620,6 +646,8 @@ news_event = {
 # Civil War Erupts in [FROM.GetNameDef] as Regime Crushes Protests
 news_event = {
 	id = arab_spring.14
+	# Disabled for the Endtimes storyline, including queued events.
+	trigger = { always = no }
 	title = arab_spring.14.t
 	desc = arab_spring.14.d
 	picture = GFX_news_saleh_killed
@@ -696,6 +724,8 @@ news_event = {
 # The Arab Spring Reaches [FROM.GetNameDef]
 country_event = {
 	id = arab_spring.17
+	# Disabled for the Endtimes storyline, including queued events.
+	trigger = { always = no }
 	title = arab_spring.17.t
 	desc = arab_spring.17.d
 	picture = GFX_politics_protest
@@ -726,6 +756,8 @@ country_event = {
 # Protests Subside
 country_event = {
 	id = arab_spring.18
+	# Disabled for the Endtimes storyline, including queued events.
+	trigger = { always = no }
 	title = arab_spring.18.t
 	desc = {
 		text = arab_spring.18.d
@@ -759,6 +791,8 @@ country_event = {
 # [FROM.GetLeader] Requests Peninsula Shield Intervention
 country_event = {
 	id = arab_spring.19
+	# Disabled for the Endtimes storyline, including queued events.
+	trigger = { always = no }
 	title = arab_spring.19.t
 	desc = arab_spring.19.d
 
@@ -843,6 +877,8 @@ country_event = {
 # Our Request Has Been Accepted!
 country_event = {
 	id = arab_spring.20
+	# Disabled for the Endtimes storyline, including queued events.
+	trigger = { always = no }
 	title = arab_spring.20.t
 	desc = arab_spring.20.d
 	picture = GFX_politics_talks
@@ -866,6 +902,8 @@ country_event = {
 # Our Request Has Been Rejected...
 country_event = {
 	id = arab_spring.21
+	# Disabled for the Endtimes storyline, including queued events.
+	trigger = { always = no }
 	title = arab_spring.21.t
 	desc = arab_spring.21.d
 	picture = GFX_treaty_rejected
@@ -880,6 +918,8 @@ country_event = {
 # Peninsula Shield Troops Deployed to Quell Protests in [FROM.GetNameDef]
 news_event = {
 	id = arab_spring.22
+	# Disabled for the Endtimes storyline, including queued events.
+	trigger = { always = no }
 	title = arab_spring.22.t
 	desc = arab_spring.22.d
 	picture = GFX_news_peninsula_shield_intervention

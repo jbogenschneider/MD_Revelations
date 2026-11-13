@@ -1,0 +1,10 @@
+on_actions = {
+	on_weekly = {
+		effect = {
+			if = {
+				limit = { rev_chi_tw_regional_war_window = yes }
+				country_event = { id = rev_chi_tw.40 }
+			}
+		}
+	}
+}

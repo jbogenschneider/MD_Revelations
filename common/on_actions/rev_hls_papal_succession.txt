@@ -1,0 +1,17 @@
+on_actions = {
+	on_daily = {
+		effect = {
+			# Also repair election settings in existing campaigns.
+			if = {
+				limit = {
+					original_tag = HLS
+					has_elections = yes
+				}
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+			}
+		}
+	}
+}

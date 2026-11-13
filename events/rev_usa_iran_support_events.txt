@@ -454,6 +454,30 @@ country_event = {
 		}
 		if = {
 			limit = {
+				LEB = {
+					exists = yes
+					NOT = { is_subject_of = PER }
+				}
+			}
+			set_autonomy = {
+				target = LEB
+				autonomy_state = autonomy_puppet_state
+			}
+		}
+		if = {
+			limit = {
+				JOR = {
+					exists = yes
+					NOT = { has_war_with = PER }
+				}
+			}
+			declare_war_on = {
+				target = JOR
+				type = annex_everything
+			}
+		}
+		if = {
+			limit = {
 				ISR = {
 					exists = yes
 					NOT = { has_war_with = PER }

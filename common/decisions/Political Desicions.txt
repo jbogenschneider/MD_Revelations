@@ -7,6 +7,7 @@ generic_coalition_politics_decisions = {
 		fixed_random_seed = no
 
 		visible = {
+			NOT = { original_tag = HLS }
 			if = {
 				limit = {
 					original_tag = TAJ
@@ -156,6 +157,7 @@ generic_coalition_politics_decisions = {
 	hold_reelections = {
 		icon = GFX_decision_elections_button
 		visible = {
+			NOT = { original_tag = HLS }
 			if = {
 				limit = {
 					original_tag = TAJ
@@ -403,6 +405,7 @@ generic_coalition_politics_decisions = {
 		fixed_random_seed = no
 
 		visible = {
+			NOT = { original_tag = HLS }
 			if = {
 				limit = {
 					original_tag = TAJ

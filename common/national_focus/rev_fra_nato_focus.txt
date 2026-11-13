@@ -9,6 +9,8 @@ focus_tree = {
 	}
 	continuous_focus_position = { x = 50 y = 120 }
 	shared_focus = REV_NATO_ease_of_business_reforms
+	shared_focus = REV_NATO_ukrainian_drone_exports
+	shared_focus = REV_NATO_ukrainian_kamikaze_exports
 	shared_focus = REV_NATO_attract_foreign_investors
 	shared_focus = REV_NATO_debt_refactoring
 	shared_focus = REV_NATO_agricultural_district_subsidization
@@ -43,7 +45,7 @@ focus_tree = {
 	focus = {
 		id = REV_FRA_le_pen_crack_down_on_anarchy
 		icon = national_unity
-		x = 24
+		x = 22
 		y = 0
 		cost = 4
 		available = {
@@ -61,7 +63,7 @@ focus_tree = {
 	focus = {
 		id = REV_FRA_le_pen_reduce_work_visas
 		icon = immigration_kommission
-		x = 24
+		x = 22
 		y = 1
 		cost = 4
 		prerequisite = { focus = REV_FRA_le_pen_crack_down_on_anarchy }
@@ -81,10 +83,9 @@ focus_tree = {
 	focus = {
 		id = REV_FRA_le_pen_force_nato_return
 		icon = military_deal
-		x = 26
-		y = 1
+		x = 20
+		y = 0
 		cost = 4
-		prerequisite = { focus = REV_FRA_le_pen_crack_down_on_anarchy }
 		available = {
 			has_country_leader = { name = "Marine Le Pen" ruling_only = yes }
 			NOT = { has_idea = NATO_member }

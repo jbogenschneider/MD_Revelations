@@ -1,0 +1,43 @@
+on_actions = {
+	# ROOT declares war on FROM. This covers both scripted China-Taiwan war paths.
+	on_declare_war = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = { tag = CHI NOT = { has_country_flag = rev_pacific_response_scheduled } }
+					FROM = { tag = TAI }
+				}
+				# Day 2 of this escalation: North Korea opens a second front.
+				NKO = {
+					if = {
+						limit = { exists = yes KOR = { exists = yes } }
+						country_event = { id = rev_pacific_escalation.1 days = 2 }
+					}
+				}
+				ROOT = {
+					set_country_flag = rev_pacific_response_scheduled
+					country_event = { id = rev_pacific_escalation.3 days = 3 }
+				}
+			}
+		}
+	}
+
+	# Check daily so Israel's nuclear strike can prompt a response during the Korean war.
+	on_daily = {
+		effect = {
+			if = {
+				limit = {
+					tag = NKO
+					has_global_flag = endtimes_khuzestan_nuked
+					has_war_with = KOR
+					NOT = { has_country_flag = rev_pacific_north_korea_nuclear_strike_done }
+					OR = {
+						NOT = { controls_province = 7204 }
+						NOT = { controls_province = 4056 }
+					}
+				}
+				country_event = { id = rev_pacific_escalation.5 }
+			}
+		}
+	}
+}

@@ -1,0 +1,39 @@
+shared_focus = {
+	id = REV_NATO_ukrainian_drone_exports
+	icon = drone
+	x = 20
+	y = 1
+	cost = 2
+	search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_NATO }
+	available = {
+		country_exists = UKR
+		UKR = { has_war = no }
+	}
+	ai_will_do = { base = 5 }
+	completion_reward = {
+		# Direct equipment grant: nothing is deducted from Ukraine's stockpile.
+		add_equipment_to_stockpile = { type = land_drone_equipment_3 amount = 400 }
+		add_opinion_modifier = { target = UKR modifier = REV_NATO_ukrainian_land_drone_gift }
+	}
+}
+
+shared_focus = {
+	id = REV_NATO_ukrainian_kamikaze_exports
+	icon = drone
+	x = 0
+	y = 1
+	relative_position_id = REV_NATO_ukrainian_drone_exports
+	prerequisite = { focus = REV_NATO_ukrainian_drone_exports }
+	cost = 2
+	search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_NATO }
+	available = {
+		country_exists = UKR
+		UKR = { has_war = no }
+	}
+	ai_will_do = { base = 5 }
+	completion_reward = {
+		# Direct equipment grant: nothing is deducted from Ukraine's stockpile.
+		add_equipment_to_stockpile = { type = kamikaze_drone_3 amount = 300 }
+		add_opinion_modifier = { target = UKR modifier = REV_NATO_ukrainian_kamikaze_drone_gift }
+	}
+}

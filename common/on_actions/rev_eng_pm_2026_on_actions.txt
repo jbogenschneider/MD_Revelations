@@ -1,0 +1,15 @@
+on_actions = {
+	on_daily = {
+		effect = {
+			if = {
+				limit = {
+					tag = ENG
+					date > 2026.7.19
+					date < 2026.7.21
+					NOT = { has_country_flag = rev_eng_burnham_appointed_2026 }
+				}
+				country_event = { id = rev_eng_pm_2026.1 }
+			}
+		}
+	}
+}

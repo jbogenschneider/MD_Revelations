@@ -2255,6 +2255,7 @@ sub_units = {
 		combat_width = 3
 
 		need = {
+			land_drone_equipment_type = 8
 			artillery_equipment = 18
 			command_control_equipment = 5
 		}
@@ -2326,6 +2327,7 @@ sub_units = {
 		combat_width = 3
 
 		need = {
+			land_drone_equipment_type = 8
 			medium_tank_artillery_chassis = 18
 			command_control_equipment = 5
 		}
@@ -2397,6 +2399,7 @@ sub_units = {
 		combat_width = 3
 
 		need = {
+			land_drone_equipment_type = 8
 			medium_tank_rocket_chassis = 18
 			command_control_equipment = 5
 		}

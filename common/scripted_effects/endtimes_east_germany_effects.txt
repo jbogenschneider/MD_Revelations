@@ -1,3 +1,61 @@
+# DDR scope. AfD is the sole legal party; other party labels use GER's setup.
+endtimes_setup_east_germany_politics = {
+	set_country_flag = GER_afd_cum
+	set_popularities = {
+		democratic = 0
+		communism = 0
+		fascism = 0
+		neutrality = 0
+		nationalist = 100
+	}
+	set_politics = {
+		ruling_party = nationalist
+		elections_allowed = no
+	}
+	start_politics_input = yes
+	set_variable = { party_pop_array^20 = 1 }
+	add_to_array = { ruling_party = 20 }
+	set_variable = { Nat_Populism_leader = 1 }
+	clr_country_flag = party21_banned
+	set_country_flag = free_ban_parties
+	set_partyall_banned = yes
+	create_country_leader = {
+		name = "Damien Wolfmann"
+		picture = "gfx/leaders/DDR/thebeastsman.dds"
+		ideology = Nat_Populism
+		traits = { nationalist_Nat_Populism }
+	}
+	startup_politics = yes
+	calculate_banned_parties = yes
+	update_dirty_subideology = yes
+}
+
+# DDR scope. Join Russia's CSTO without the Cabal effects or event ROOT scoping.
+endtimes_east_germany_join_csto = {
+	NATO_leave = yes
+	leave_faction = yes
+	SOV = {
+		if = {
+			limit = { NOT = { is_in_faction = yes } }
+			create_faction_from_template = faction_template_csto
+		}
+		add_ideas = CSTO_member
+		if = {
+			limit = { NOT = { is_in_array = { global.CSTO_member = THIS } } }
+			add_to_array = { global.CSTO_member = THIS }
+		}
+		add_to_tech_sharing_group = CSTO_Tech_Share
+		set_faction_leader = yes
+		add_to_faction = DDR
+	}
+	add_ideas = CSTO_member
+	if = {
+		limit = { NOT = { is_in_array = { global.CSTO_member = THIS } } }
+		add_to_array = { global.CSTO_member = THIS }
+	}
+	add_to_tech_sharing_group = CSTO_Tech_Share
+}
+
 # GER country scope, during the July 3, 2029 settlement.
 endtimes_create_independent_east_germany = {
 	every_owned_state = {
@@ -23,9 +81,7 @@ endtimes_create_independent_east_germany = {
 				overlord = { set_autonomy = { target = DDR autonomy_state = autonomy_free } }
 			}
 			set_country_flag = endtimes_east_germany_independent
-			# Independence does not assign the new state to either alliance bloc.
-			NATO_leave = yes
-			leave_faction = yes
+			endtimes_east_germany_join_csto = yes
 			set_capital = { state = 45 }
 			set_variable = { gdp_per_capita = GER.gdp_per_capita }
 			set_variable = { corporate_tax_rate = GER.corporate_tax_rate }
@@ -34,23 +90,7 @@ endtimes_create_independent_east_germany = {
 			set_temp_variable = { nation_to_copy_from = GER.id }
 			copy_internal_factions = yes
 			configure_religious_setup = yes
-			set_popularities = {
-				democratic = 100
-				communism = 0
-				fascism = 0
-				neutrality = 0
-				nationalist = 0
-			}
-			set_politics = {
-				ruling_party = democratic
-				elections_allowed = yes
-				last_election = "2029.7.3"
-				election_frequency = 48
-			}
-			start_politics_input = yes
-			set_variable = { party_pop_array^2 = 1 }
-			add_to_array = { ruling_party = 2 }
-			set_variable = { liberalism_leader = 1 }
+			endtimes_setup_east_germany_politics = yes
 			ingame_startup_nations_effect = yes
 			# Snapshot Germany's researched tech and research capacity at separation,
 			# including advances made since the scenario's starting history.

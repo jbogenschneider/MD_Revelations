@@ -135,23 +135,19 @@ country_event = {
 	}
 }
 
-# Worldwide human-player announcement: January 20, 2028.
-country_event = {
+# Worldwide WNN announcement: the Warning
+news_event = {
 	id = endtimes.3
 	title = endtimes.3.t
 	desc = endtimes.3.d
+	picture = GFX_ark_in_heaven
 	is_triggered_only = yes
+	major = yes
 
 	trigger = {
 		# Keep queued or external calls on the scheduled day.
-		date > 2028.1.19
-		date < 2028.1.21
-		is_ai = no
-		NOT = { has_country_flag = endtimes_great_warning_seen }
-	}
-
-	immediate = {
-		set_country_flag = endtimes_great_warning_seen
+		date > 2030.1.19
+		date < 2030.1.21
 	}
 
 	option = {
@@ -159,23 +155,19 @@ country_event = {
 	}
 }
 
-# Worldwide human-player announcement: April 13, 2028.
-country_event = {
+# Worldwide WNN announcement: the Miracle
+news_event = {
 	id = endtimes.4
 	title = endtimes.4.t
 	desc = endtimes.4.d
+	picture = GFX_cross_sky
 	is_triggered_only = yes
+	major = yes
 
 	trigger = {
 		# Keep queued or external calls on the scheduled day.
-		date > 2028.4.12
-		date < 2028.4.14
-		is_ai = no
-		NOT = { has_country_flag = endtimes_miracle_seen }
-	}
-
-	immediate = {
-		set_country_flag = endtimes_miracle_seen
+		date > 2030.4.12
+		date < 2030.4.14
 	}
 
 	option = {
@@ -183,24 +175,19 @@ country_event = {
 	}
 }
 
-# Worldwide human-player announcement: April 16, 2028, three days after the Miracle.
-# Narrative reunion only; national religions, governments and alliances stay intact.
-country_event = {
+# Worldwide WNN announcement: Eastern orth
+news_event = {
 	id = endtimes.19
 	title = endtimes.19.t
 	desc = endtimes.19.d
+	picture = GFX_cross_sky
 	is_triggered_only = yes
+	major = yes
 
 	trigger = {
-		date > 2028.4.15
-		date < 2028.4.17
+		date > 2030.5.15
+		date < 2030.5.17
 		has_global_flag = endtimes_miracle_occurred
-		is_ai = no
-		NOT = { has_country_flag = endtimes_orthodox_reunion_seen }
-	}
-
-	immediate = {
-		set_country_flag = endtimes_orthodox_reunion_seen
 	}
 
 	option = {
@@ -208,23 +195,19 @@ country_event = {
 	}
 }
 
-# Worldwide human-player announcement: June 6, 2028.
-country_event = {
+# Worldwide WNN announcement: June 6, 2028.  One Religion
+news_event = {
 	id = endtimes.5
 	title = endtimes.5.t
 	desc = endtimes.5.d
+	picture = GFX_onefaith_gold_ring
 	is_triggered_only = yes
+	major = yes
 
 	trigger = {
 		# Keep queued or external calls on the scheduled day.
-		date > 2028.6.5
-		date < 2028.6.7
-		is_ai = no
-		NOT = { has_country_flag = endtimes_new_church_seen }
-	}
-
-	immediate = {
-		set_country_flag = endtimes_new_church_seen
+		date > 2028.7.5
+		date < 2028.7.7
 	}
 
 	option = {
@@ -232,23 +215,19 @@ country_event = {
 	}
 }
 
-# Worldwide human-player announcement: March 30, 2029.
-country_event = {
+# Worldwide WNN announcement: Alex rises from the dead
+news_event = {
 	id = endtimes.6
 	title = endtimes.6.t
 	desc = endtimes.6.d
+	picture = GFX_onefaith_gold_ring
 	is_triggered_only = yes
+	major = yes
 
 	trigger = {
 		# Keep queued or external calls on the scheduled day.
-		date > 2029.3.29
-		date < 2029.3.31
-		is_ai = no
-		NOT = { has_country_flag = endtimes_prophets_miracle_seen }
-	}
-
-	immediate = {
-		set_country_flag = endtimes_prophets_miracle_seen
+		date > 2028.6.6
+		date < 2028.6.8
 	}
 
 	option = {
@@ -256,22 +235,18 @@ country_event = {
 	}
 }
 
-# Worldwide human-player announcement: April 29, 2029, before the papal takeover.
-country_event = {
+# Worldwide WNN announcement: One Faith Spreads and is clearly evil
+news_event = {
 	id = endtimes.20
 	title = endtimes.20.t
 	desc = endtimes.20.d
+	picture = GFX_foreign_workers_riot
 	is_triggered_only = yes
+	major = yes
 
 	trigger = {
-		date > 2029.4.28
-		date < 2029.4.30
-		is_ai = no
-		NOT = { has_country_flag = endtimes_one_faith_seen }
-	}
-
-	immediate = {
-		set_country_flag = endtimes_one_faith_seen
+		date > 2028.8.28
+		date < 2028.8.30
 	}
 
 	option = {
@@ -279,7 +254,7 @@ country_event = {
 	}
 }
 
-# Holy See leadership change: May 2, 2029, for AI and human HLS alike.
+# Holy See leadership change: Vatican attacked
 country_event = {
 	id = endtimes.7
 	title = endtimes.7.t
@@ -288,8 +263,8 @@ country_event = {
 
 	trigger = {
 		# Keep queued or external calls on the scheduled day.
-		date > 2029.5.1
-		date < 2029.5.3
+		date > 2028.10.31
+		date < 2028.11.3
 		tag = HLS
 		NOT = { has_country_flag = endtimes_false_prophet_installed }
 	}
@@ -314,22 +289,18 @@ country_event = {
 }
 
 # January 5, 2028: narrative announcement only; no damage to Israel.
-country_event = {
+news_event = {
 	id = endtimes.8
 	title = endtimes.8.t
 	desc = endtimes.8.d
+	picture = GFX_news_nuclear_test
 	is_triggered_only = yes
+	major = yes
 
 	trigger = {
 		# Keep queued or external calls on the scheduled day.
 		date > 2028.1.4
 		date < 2028.1.6
-		is_ai = no
-		NOT = { has_country_flag = endtimes_jerusalem_dirty_bomb_seen }
-	}
-
-	immediate = {
-		set_country_flag = endtimes_jerusalem_dirty_bomb_seen
 	}
 
 	option = {
@@ -371,23 +342,19 @@ country_event = {
 	}
 }
 
-# Worldwide human-player announcement: June 2, 2029. Narrative only.
-country_event = {
+# Worldwide WNN announcement: Narrative only on Nato.
+news_event = {
 	id = endtimes.10
 	title = endtimes.10.t
 	desc = endtimes.10.d
+	picture = GFX_news_nato
 	is_triggered_only = yes
+	major = yes
 
 	trigger = {
 		# Keep queued or external calls on the scheduled day.
 		date > 2029.6.1
 		date < 2029.6.3
-		is_ai = no
-		NOT = { has_country_flag = endtimes_europe_realignment_seen }
-	}
-
-	immediate = {
-		set_country_flag = endtimes_europe_realignment_seen
 	}
 
 	option = {
@@ -395,7 +362,27 @@ country_event = {
 	}
 }
 
-# Alex's bloc expands: May 2, 2029, for AI and human participants alike.
+# Worldwide WNN announcement: Narrative only on Alex's alliance
+news_event = {
+	id = endtimes.25
+	title = endtimes.25.t
+	desc = endtimes.25.d
+	picture = GFX_news_nato
+	is_triggered_only = yes
+	major = yes
+
+	trigger = {
+		# Keep queued or external calls on the scheduled day.
+		date > 2028.10.30
+		date < 2028.11.2
+	}
+
+	option = {
+		name = endtimes.25.a
+	}
+}
+
+# Alex's bloc expands prior to holloween
 country_event = {
 	id = endtimes.16
 	title = endtimes.16.t
@@ -403,8 +390,8 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		date > 2029.5.1
-		date < 2029.5.3
+		date > 2028.10.1
+		date < 2028.10.3
 		endtimes_csto_realignment_country = yes
 		SOV = { exists = yes }
 		NOT = { has_country_flag = endtimes_csto_realignment_completed }
@@ -669,22 +656,18 @@ country_event = {
 	}
 }
 
-# Worldwide human-player announcement: May 10, 2029. Narrative only.
-country_event = {
+# Worldwide WNN announcement: May 10, 2029. Narrative only.
+news_event = {
 	id = endtimes.12
 	title = endtimes.12.t
 	desc = endtimes.12.d
+	picture = GFX_unification_of_church_and_state
 	is_triggered_only = yes
+	major = yes
 
 	trigger = {
 		date > 2029.5.9
 		date < 2029.5.11
-		is_ai = no
-		NOT = { has_country_flag = endtimes_prophecy_fulfilled_seen }
-	}
-
-	immediate = {
-		set_country_flag = endtimes_prophecy_fulfilled_seen
 	}
 
 	option = {
@@ -692,22 +675,18 @@ country_event = {
 	}
 }
 
-# Worldwide human-player announcement: November 24, 2027. Narrative only.
-country_event = {
+# Worldwide WNN announcement: November 24, 2027. Narrative only.
+news_event = {
 	id = endtimes.13
 	title = endtimes.13.t
 	desc = endtimes.13.d
+	picture = GFX_eth_famine_strikes
 	is_triggered_only = yes
+	major = yes
 
 	trigger = {
 		date > 2027.11.23
 		date < 2027.11.25
-		is_ai = no
-		NOT = { has_country_flag = endtimes_bad_harvest_seen }
-	}
-
-	immediate = {
-		set_country_flag = endtimes_bad_harvest_seen
 	}
 
 	option = {
@@ -715,22 +694,18 @@ country_event = {
 	}
 }
 
-# Worldwide human-player announcement: June 5, 2029.
-country_event = {
+# Worldwide WNN announcement: June 5, 2029.
+news_event = {
 	id = endtimes.21
 	title = endtimes.21.t
 	desc = endtimes.21.d
+	picture = GFX_eth_famine_strikes
 	is_triggered_only = yes
+	major = yes
 
 	trigger = {
 		date > 2029.6.4
 		date < 2029.6.6
-		is_ai = no
-		NOT = { has_country_flag = endtimes_famine_disasters_seen }
-	}
-
-	immediate = {
-		set_country_flag = endtimes_famine_disasters_seen
 	}
 
 	option = {
@@ -738,24 +713,415 @@ country_event = {
 	}
 }
 
-# Worldwide human-player announcement when the French civil war begins.
-country_event = {
+# Worldwide WNN announcement when the French civil war begins.
+news_event = {
 	id = endtimes.22
 	title = endtimes.22.t
 	desc = endtimes.22.d
+	picture = GFX_news_generic_soldiers
 	is_triggered_only = yes
+	major = yes
 
 	trigger = {
-		is_ai = no
 		has_global_flag = endtimes_french_civil_war_announced
-		NOT = { has_country_flag = endtimes_french_civil_war_seen }
-	}
-
-	immediate = {
-		set_country_flag = endtimes_french_civil_war_seen
 	}
 
 	option = {
 		name = endtimes.22.a
 	}
+}
+
+# Worldwide WNN announcement after the three states sign the mutual defense pact.
+news_event = {
+	id = endtimes.23
+	title = endtimes.23.t
+	desc = endtimes.23.d
+	picture = GFX_treaty
+	is_triggered_only = yes
+	major = yes
+
+	trigger = {
+		has_global_flag = endtimes_regional_defense_pact_formed
+	}
+
+	option = {
+		name = endtimes.23.a
+	}
+}
+
+# Worldwide WNN announcement: January 13, 2028, after the strike on Tehran.
+news_event = {
+	id = endtimes.24
+	title = endtimes.24.t
+	desc = endtimes.24.d
+	picture = GFX_news_nuclear_test
+	is_triggered_only = yes
+	major = yes
+
+	trigger = {
+		date > 2028.1.12
+		date < 2028.1.14
+		has_global_flag = endtimes_tehran_nuked
+	}
+
+	option = {
+		name = endtimes.24.a
+	}
+}
+
+# November 3, 2028: the Israeli settlement applies to AI and human Israel alike.
+country_event = {
+	id = endtimes.28
+	title = endtimes.28.t
+	desc = endtimes.28.d
+	picture = GFX_recognize_jerusalem
+	is_triggered_only = yes
+
+	trigger = {
+		date > 2028.11.2
+		date < 2028.11.4
+		tag = ISR
+		SOV = { exists = yes }
+		NOT = { has_country_flag = endtimes_israel_coup_completed }
+	}
+
+	immediate = {
+		set_country_flag = endtimes_israel_coup_completed
+		set_global_flag = endtimes_israel_coup_occurred
+		retire_country_leader = yes
+		set_politics = { ruling_party = neutrality }
+		clear_array = ruling_party
+		clear_array = gov_coalition_array
+		add_to_array = { ruling_party = 15 } # Oligarchism: the business-backed presidency.
+		set_variable = { oligarchism_leader = 1 }
+		create_country_leader = {
+			name = "Eitan Ben-Ami"
+			picture = "gfx/leaders/generic_politicians/israel_democrat_1.dds"
+			ideology = oligarchism
+			traits = { neutrality_oligarchism }
+		}
+		startup_politics = yes
+		endtimes_join_csto_and_cabal = yes
+		PAL = {
+			if = {
+				limit = { exists = yes }
+				endtimes_join_csto_and_cabal = yes
+			}
+		}
+		# HAM represents the separate Gaza government in this mod.
+		HAM = {
+			if = {
+				limit = { exists = yes }
+				endtimes_join_csto_and_cabal = yes
+			}
+		}
+		news_event = { id = endtimes.29 }
+	}
+
+	option = {
+		name = endtimes.28.a
+	}
+}
+
+# Global WNN report issued after the coup and alliance changes take effect.
+news_event = {
+	id = endtimes.29
+	title = endtimes.28.t
+	desc = endtimes.28.d
+	picture = GFX_recognize_jerusalem
+	is_triggered_only = yes
+	major = yes
+
+	trigger = {
+		date > 2028.11.2
+		date < 2028.11.4
+		has_global_flag = endtimes_israel_coup_occurred
+	}
+
+	option = {
+		name = endtimes.29.a
+	}
+}
+
+# Worldwide WNN announcement: November 5, 2028. Narrative only.
+news_event = {
+	id = endtimes.30
+	title = endtimes.30.t
+	desc = endtimes.30.d
+	picture = GFX_onefaith_gold_ring
+	is_triggered_only = yes
+	major = yes
+
+	trigger = {
+		date > 2028.11.4
+		date < 2028.11.6
+	}
+
+	option = {
+		name = endtimes.30.a
+	}
+}
+
+# November 10, 2028: China's alliance entry and offensive take effect immediately.
+country_event = {
+	id = endtimes.31
+	title = endtimes.31.t
+	desc = endtimes.31.d
+	picture = GFX_china_19th_national_congress
+	is_triggered_only = yes
+
+	trigger = {
+		tag = CHI
+		date > 2028.11.9
+		date < 2028.11.11
+		SOV = { exists = yes }
+		NOT = { has_country_flag = endtimes_china_alliance_entry_completed }
+	}
+
+	immediate = {
+		set_country_flag = endtimes_china_alliance_entry_completed
+		set_global_flag = endtimes_china_joined_alliance
+		endtimes_leave_previous_alliance = yes
+		endtimes_enroll_csto_and_cabal = yes
+		# SOLOMON writes off 90 percent of China's outstanding debt.
+		multiply_variable = { debt = 0.1 }
+		ingame_update_setup = yes
+		if = {
+			limit = {
+				PHI = { exists = yes NOT = { is_subject_of = CHI } }
+				NOT = { has_war_with = PHI }
+				NOT = { is_in_faction_with = PHI }
+			}
+			declare_war_on = { target = PHI type = annex_everything }
+		}
+		if = {
+			limit = {
+				TAI = { exists = yes NOT = { is_subject_of = CHI } }
+				NOT = { has_war_with = TAI }
+				NOT = { is_in_faction_with = TAI }
+			}
+			declare_war_on = { target = TAI type = annex_everything }
+		}
+		if = {
+			limit = {
+				JAP = { exists = yes NOT = { is_subject_of = CHI } }
+				NOT = { has_war_with = JAP }
+				NOT = { is_in_faction_with = JAP }
+			}
+			declare_war_on = { target = JAP type = annex_everything }
+		}
+		# Set war support after all declarations have taken effect.
+		add_war_support = -1
+		add_war_support = 0.9
+		JAP = {
+			if = {
+				limit = { exists = yes }
+				add_war_support = -1
+				add_war_support = 0.8
+			}
+		}
+		PHI = {
+			if = {
+				limit = { exists = yes }
+				add_war_support = -1
+				add_war_support = 0.8
+			}
+		}
+		TAI = {
+			if = {
+				limit = { exists = yes }
+				add_war_support = -1
+				add_war_support = 0.8
+			}
+		}
+		news_event = { id = endtimes.32 }
+	}
+
+	option = { name = endtimes.31.a }
+}
+
+# Global WNN report after China joins the alliance and launches its offensive.
+news_event = {
+	id = endtimes.32
+	title = endtimes.31.t
+	desc = endtimes.31.d
+	picture = GFX_china_19th_national_congress
+	is_triggered_only = yes
+	major = yes
+
+	trigger = {
+		date > 2028.11.9
+		date < 2028.11.11
+		has_global_flag = endtimes_china_joined_alliance
+	}
+
+	option = { name = endtimes.32.a }
+}
+
+# November 11, 2028: Australia chooses its side in the world conflict.
+country_event = {
+	id = endtimes.33
+	title = endtimes.33.t
+	desc = endtimes.33.d
+	picture = GFX_news_generic_soldiers
+	is_triggered_only = yes
+
+	trigger = {
+		tag = AST
+		date > 2028.11.10
+		date < 2028.11.12
+		NOT = { has_country_flag = endtimes_australia_choice_presented }
+	}
+
+	immediate = {
+		set_country_flag = endtimes_australia_choice_presented
+	}
+
+	option = {
+		name = endtimes.33.a
+		trigger = {
+			USA = { exists = yes }
+			any_country = {
+				has_idea = NATO_member
+				has_war_with = USA
+			}
+		}
+		ai_chance = { factor = 90 }
+		if = {
+			limit = { has_idea = CSTO_member }
+			CSTO_leave = yes
+		}
+		# Save a NATO belligerent before changing Australia's alliance.
+		random_other_country = {
+			limit = { has_idea = NATO_member has_war_with = USA }
+			save_event_target_as = endtimes_australia_nato_war_ally
+		}
+		endtimes_ensure_nato_membership = yes
+		if = {
+			limit = { NOT = { has_war_with = USA } }
+			add_to_war = {
+				targeted_alliance = event_target:endtimes_australia_nato_war_ally
+				enemy = USA
+				hostility_reason = asked_to_join
+				single_target_only = yes
+			}
+		}
+		set_country_flag = endtimes_australia_joined_nato_war
+		# add_war_support clamps at zero; reset and then set exactly 80 percent.
+		add_war_support = -1
+		add_war_support = 0.8
+	}
+
+	option = {
+		name = endtimes.33.b
+		# This is the only available option when NATO and the USA are not at war.
+		ai_chance = { factor = 10 }
+		if = {
+			limit = { has_idea = CSTO_member }
+			CSTO_leave = yes
+		}
+		NATO_leave = yes
+		leave_faction = yes
+		if = {
+			limit = { CHI = { exists = yes } NOT = { has_war_with = CHI } }
+			declare_war_on = { target = CHI type = annex_everything }
+		}
+		if = {
+			limit = { SOV = { exists = yes } NOT = { has_war_with = SOV } }
+			declare_war_on = { target = SOV type = annex_everything }
+		}
+		set_country_flag = endtimes_australia_fighting_csto
+		add_war_support = -1
+		add_war_support = 0.8
+	}
+}
+
+# One-time nuclear response to Iran while either specified province is outside Israeli control.
+country_event = {
+	id = endtimes.34
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = ISR
+		has_war_with = PER
+		OR = {
+			NOT = { controls_province = 1201 }
+			NOT = { controls_province = 7107 }
+		}
+		NOT = { has_country_flag = endtimes_israel_khuzestan_strike_done }
+	}
+
+	immediate = {
+		set_country_flag = endtimes_israel_khuzestan_strike_done
+		set_global_flag = endtimes_khuzestan_nuked
+		launch_nuke = {
+			province = 9555 # Khuzestan's main victory point.
+			use_nuke = no
+		}
+		news_event = { id = endtimes.35 }
+		# The ceasefire takes effect independently of news acknowledgement.
+		country_event = { id = endtimes.36 days = 1 }
+	}
+}
+
+news_event = {
+	id = endtimes.35
+	title = endtimes.35.t
+	desc = endtimes.35.d
+	picture = GFX_news_nuclear_test
+	is_triggered_only = yes
+	major = yes
+
+	trigger = { has_global_flag = endtimes_khuzestan_nuked }
+
+	option = { name = endtimes.35.a }
+}
+
+# One day after the strike. White peace leaves Iran's subject relationships intact.
+country_event = {
+	id = endtimes.36
+	title = endtimes.36.t
+	desc = endtimes.36.d
+	picture = GFX_treaty
+	is_triggered_only = yes
+
+	trigger = {
+		tag = ISR
+		has_country_flag = endtimes_israel_khuzestan_strike_done
+		NOT = { has_global_flag = endtimes_khuzestan_ceasefire_completed }
+	}
+
+	immediate = {
+		set_global_flag = endtimes_khuzestan_ceasefire_completed
+		every_other_country = {
+			limit = {
+				OR = { tag = PER is_subject_of = PER }
+			}
+			if = {
+				limit = { has_war_with = ISR }
+				white_peace = ISR
+			}
+			if = {
+				limit = { JOR = { exists = yes } has_war_with = JOR }
+				white_peace = JOR
+			}
+		}
+		news_event = { id = endtimes.37 }
+	}
+
+	option = { name = endtimes.36.a }
+}
+
+news_event = {
+	id = endtimes.37
+	title = endtimes.37.t
+	desc = endtimes.37.d
+	picture = GFX_news_nuclear_test
+	is_triggered_only = yes
+	major = yes
+
+	trigger = { has_global_flag = endtimes_khuzestan_ceasefire_completed }
+
+	option = { name = endtimes.37.a }
 }

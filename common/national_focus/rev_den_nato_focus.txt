@@ -1,4 +1,4 @@
-﻿focus_tree = {
+focus_tree = {
 	id = REV_DEN_nato_default_focus
 	country = {
 		factor = 0
@@ -9,6 +9,8 @@
 	}
 	continuous_focus_position = { x = 50 y = 120 }
 	shared_focus = REV_NATO_ease_of_business_reforms
+	shared_focus = REV_NATO_ukrainian_drone_exports
+	shared_focus = REV_NATO_ukrainian_kamikaze_exports
 	shared_focus = REV_NATO_attract_foreign_investors
 	shared_focus = REV_NATO_debt_refactoring
 	shared_focus = REV_NATO_agricultural_district_subsidization

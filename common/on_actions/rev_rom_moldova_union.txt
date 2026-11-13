@@ -1,0 +1,19 @@
+on_actions = {
+	on_daily_ROM = {
+		effect = {
+			if = {
+				limit = {
+					date > 2027.8.9
+					date < 2027.8.11
+					has_war = no
+					country_exists = MLV
+					country_exists = UKR
+					MLV = { has_war = no }
+					UKR = { has_war = no }
+					NOT = { has_global_flag = rev_rom_moldova_union_completed }
+				}
+				country_event = { id = rev_rom_moldova_union.1 }
+			}
+		}
+	}
+}

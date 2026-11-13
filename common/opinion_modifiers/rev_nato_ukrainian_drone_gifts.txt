@@ -1,0 +1,8 @@
+opinion_modifiers = {
+	REV_NATO_ukrainian_land_drone_gift = {
+		value = 10
+	}
+	REV_NATO_ukrainian_kamikaze_drone_gift = {
+		value = 10
+	}
+}

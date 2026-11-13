@@ -1,0 +1,6 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_rev_rom_moldova_union_news"
+		texturefile = "gfx/event_pictures/europe/romania - ROM/moldova_romania_union.dds"
+	}
+}

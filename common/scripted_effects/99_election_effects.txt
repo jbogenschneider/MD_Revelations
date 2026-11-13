@@ -1,4 +1,12 @@
 set_leader = {
+	# Papal succession is handled by endtimes.7, not generic politics.
+	if = {
+		limit = { NOT = { original_tag = HLS } }
+		set_leader_generic = yes
+	}
+}
+
+set_leader_generic = {
 	#will set correct outlook to place the newly generated leader in
 	hidden_effect = {
 		hidden_effect = { kill_country_leader = yes }

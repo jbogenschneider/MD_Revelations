@@ -1,0 +1,22 @@
+# The existing CHI_blitz_taiwan strategy supplies rush execution and target priority.
+# Add explicit landing priorities for this invasion opportunity.
+rev_chi_tw_regional_island_assault = {
+	allowed = { original_tag = CHI }
+	enable = {
+		has_country_flag = rev_chi_tw_regional_invasion_launched
+		has_war_with = TAI
+		TAI = { exists = yes has_capitulated = no }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = invasion_unit_request
+		state = 598 # Taipei
+		value = 200
+	}
+	ai_strategy = {
+		type = invasion_unit_request
+		state = 599 # Kaohsiung
+		value = 200
+	}
+}

@@ -1,5 +1,4 @@
-# Country scope. Run for every participant before any peace checks, so another
-# departing NATO member is treated as a non-NATO opponent on the same day.
+# Country scope. All participants leave their previous alliances before joining.
 endtimes_leave_previous_alliance = {
 	NATO_leave = yes
 	if = {
@@ -8,17 +7,20 @@ endtimes_leave_previous_alliance = {
 	}
 }
 
-# Country-event ROOT is the joining country. Do not use CSTO_join here: its
-# random-leader selection is unnecessary when Russia is the intended leader.
+# Country scope is the joining country, including nested PAL/HAM scopes.
+# Avoid CSTO_join: its ROOT scoping and random leader selection are unsuitable here.
 endtimes_join_csto_and_cabal = {
+	save_event_target_as = endtimes_csto_applicant
 	endtimes_leave_previous_alliance = yes
 	every_other_country = {
-		limit = {
-			has_war_with = ROOT
-			NOT = { has_idea = NATO_member }
-		}
-		white_peace = ROOT
+		limit = { has_war_with = event_target:endtimes_csto_applicant }
+		white_peace = event_target:endtimes_csto_applicant
 	}
+	endtimes_enroll_csto_and_cabal = yes
+}
+
+# Country scope. Membership only; leave previous alliances before calling.
+endtimes_enroll_csto_and_cabal = {
 	save_event_target_as = endtimes_csto_applicant
 	SOV = {
 		if = {

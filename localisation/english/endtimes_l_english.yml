@@ -1,6 +1,6 @@
 ﻿l_english:
- endtimes.15.t: "Alex Takes Over"
- endtimes.15.d: "Vladimir Putin was beholden to Alex, but ultimately led Russia to ruin. Now Alex is taking direct control of Russia, with the full support of the oligarchy.\n\nHe brings a vast personal fortune, a complete artificial intelligence system, and a new currency. Russia is starting over, free of international debt and ready to put its oil revenues to work rebuilding the country. Through Alex's global business ties, especially in the Middle East, Russia will soon be back in business.  Alex still uses another Russian Oligarch as the actual figurehead in public as he wants to remain a religious rather then political figure for now.\n\nTo begin this new era, Russia ends its current wars in a white peace. The Cabal remains at the heart of the new order, joined by Kazakhstan and Belarus. The treasury receives 300 billion dollars, and the next election is scheduled for January 2040."
+ endtimes.15.t: "Alex's Puppet Takes Over"
+ endtimes.15.d: "Vladimir Putin and Russia were in Alex's Cabal, but Putin entirely pursed his own Imperial Ambitions. Alex knew Russia would fail but create a power vacume that his people would quickly fill.  Now Alex has total control of Russia, with the full support of the oligarchy.\n\nHe brings a vast personal fortune, a complete artificial intelligence system, and a new currency. Russia is starting over, free of international debt and ready to put its oil revenues to work rebuilding the country. Through Alex's global business ties, especially in the Middle East, Russia will soon be back in business.  Alex still uses another Russian Oligarch as the actual figurehead in public."
  endtimes.15.a: "Russia begins again under Alex."
 
  endtimes.1.t: "For Your Eyes Only"
@@ -12,13 +12,13 @@
 
  endtimes_cabal: "Cabal"
  endtimes_cabal_desc: "An inner circle of heads of state and influential oligarchs shares technology, capital, and influence through secret agreements. Electronics research speed is increased by 5%. Stability and war support are maintained at a minimum of 30% while membership lasts."
- endtimes_cabal_support_floor: "Cabal"
+ endtimes_cabal_support_floor: "Dictators, Oligarchs, Equity Funds, the biggest players are all 2 degrees of each other, and united in greed"
 
  endtimes.3.t: "The Great Warning"
- endtimes.3.d: "An event foretold by many sources, and likely part of the 6th Seal in Revelation has occured. Every person on Earth has seen the state of their soul and their sins, an Illumination of Concious. They have been confronted with the existence of God and His Son, Jesus Christ.\n\nMany died during the event.  Not exactly the rapture, those who died were generally older or of poor health rather then totally religious.  That's a mystery, but over the next few months, millions will flock back to Christianity, and there will be many new converts."
- endtimes.3.a: "The world will never be the same."
+ endtimes.3.d: "An event foretold by many sources much more clearly then in Revelation, but likely part of the 6th Seal in Revelation. Every person on Earth has seen the state of their soul, their sins and will know Jesus is God.  It's an Illumination of Concious.\n\nRev 6:14-16 Then the sky was divided like a torn scroll curling up...Fall on us and hide us from the face of the one who sits on the throne. 11:19 Then God’s temple in heaven was opened, and the ark of his covenant[relative to your soul] could be seen in the temple"
+ endtimes.3.a: "The mini-Judgement, before being sealed...or the mark"
  endtimes.4.t: "The Miracle"
- endtimes.4.d: "A permanent miracle has appeared at numerous locations around the Earth where Marian Apparitians have previously occured like Garabandal, Guadelupe, Heede, Medjegorje and Lordes.  It can be described as suspended Cross that can be seen and photographed, but strangely cannot be touched. It is not a projection.\n\nSick people who were present at these locations at the time of the Miracle claim to have been cured.\n\nCatholic churches are complaining so many people are coming back that their aren't enough priests to shepard the now huge flocks of people."
+ endtimes.4.d: "A permanent miracle has appeared at numerous locations around the Earth where Marian Apparitians have previously occured like Garabandal, Guadelupe, Heede, Medjegorje and Lordes.  It can be described as suspended Cross that can be seen and photographed, but strangely cannot be touched. It is not a projection.\n\nSick people who were present at these locations at the time of the Miracle claim to have been cured.\n\nChurches are strained with so many returning people."
  endtimes.4.a: "We have witnessed the Miracle."
 
  endtimes.19.t: "The Eastern Orthodox Rejoin"
@@ -26,24 +26,24 @@
  endtimes.19.a: "A divided flock begins to reunite."
 
  endtimes.5.t: "A New Church Begins to Emerge"
- endtimes.5.d: "Starting in Jerusalem an new denomonation of Christianity is emerging, a young carismatic preacher referred to simply as the Prophet can seemingly perform signs and is attracting converts in Israel and the near east and the faith is spreading fast.  The preacher claims to be a prophet that predicted the date of the Miracle, clues for which have existed.  Unlike Catholic or Orthodox, this One Faith says it meets you where you are, all you have to do is believe and you are saved.  The One Faith recruits former clerics of other faiths and adds Christianity to it."
- endtimes.5.a: "A new movement takes shape."
+ endtimes.5.d: "The story of Alex and the Prophet as he's now referred to is spreading rapidly online and in media.  With the Warning and Miracle, everyone on earth is aware of the supernatural, although there are some claims of aliens, most people believe its from God.  The One Faith as it's now called by Alex's followers, recruits clerics of other faiths like Islam, Hinduism and Buddahism and aligns it with the Christian God.  Western Churches are opposed to this message but there are many converts in the west as well especially among previously non-religious."
+ endtimes.5.a: "The One Faith Movement"
 
- endtimes.6.t: "The New Prophet's Miracle"
- endtimes.6.d: "On April 30th, 2029, only a few days after the Aposis Comet broke apart just the Prophet had predicted, a would-be assassin attacked his Patron Alex Iscariot.\n\nThe attacker, a Catholic zealot who was killed after the attack, ran Alex through with a sword. Alex supposedly died from his wounds, but a few days later he reemerged, fully healed.  This will only help to fuel the spread of this One Faith movement."
- endtimes.6.a: "Another extraordinary claim."
+ endtimes.6.t: "Alex rises from the Dead"
+ endtimes.6.d: "Three days ago an assassin attacked a wealthy businessman.\n\nThe attacker, a Catholic zealot, stabbed Alex with a dagger. Alex, is known by another name, but from now on will be known simply as Alex.  He was pronounced dead from his wounds, but today he later emerged from the morgue, fully healed, and said he was given a special purpose by God to unite the faith.  At least one priest, is claiming to have also received messages from God regarding Alex's mission and is able to perform signs as well."
+ endtimes.6.a: "A new faith is born in the Holy Land"
 
  endtimes.16.t: "[ROOT.GetName] Joins Alex's Alliance"
- endtimes.16.d: "[ROOT.GetName] has committed itself to Alex's new order. Previous alliance commitments are cast aside as our country joins the Russian-led CSTO.\n\nItaly, Switzerland, Iceland, Bulgaria, Serbia, Bosnia, Turkey, Montenegro, Albania, Slovakia, the Czech Republic, Georgia, Morocco, Algeria, Egypt, Libya, Tunisia, Israel, Saudi Arabia, Pakistan, India, and the United Arab Emirates stand together in this realignment. Their leaders enter the Cabal, binding their fortunes to Alex and his network of allied governments and business interests.\n\nWars against countries outside NATO are ended in white peace. Existing wars against NATO members continue."
+ endtimes.16.d: "[ROOT.GetName] has committed itself to Alex's new order. Previous alliance commitments are cast aside as our country joins the alliance formerly known as the CSTO.\n\nMorocco, Algeria, Egypt, Libya, Tunisia, Jordan, Saudi Arabia, Oman, Yemen, Pakistan, Bangladesh, Bahrain, Qatar, Iraq, Kuwait, Free Syria, Indonesia, Brunei, Turkmenistan, Azerbaijan, Uzbekistan, Tajikistan, Kyrgyzstan and the United Arab Emirates stand together in this realignment. Their leaders enter the Cabal, binding their fortunes to Alex and his network of allied governments and business interests.\n\nWars against any other countries are ended in white peace."
  endtimes.16.a: "Our future lies with Alex."
 
  endtimes.20.t: "The One Faith Spreads"
- endtimes.20.d: "The One Faith, which emerged shortly after the Miracle, has welcomed a growing tide of converts. Muslims and people from other non-Christian backgrounds have joined in large numbers, alongside some Christians. The religiously unaffiliated, often called the 'nones,' and agnostics have been especially drawn to its message as each One Faith church is an older tradition with some Christianity added.\n\nThe Prophet says that the One Faith accepts the entire Bible, but that God wants everyone to come to Him. He claims that God sent Alex and himself to make that possible for everyone, regardless of background.\n\nSocial media has carried this denomination's message across the world like wildfire. Amid the constant natural disasters, frightened and displaced people are turning to this new faith."
- endtimes.20.a: "The One Faith continues to grow."
+ endtimes.20.d: "The One Faith has spread worldwide especially with the help of social media and because Alex and the Prophet broadcast a short service online each week reaching hundreds of millions of viewers.  Catholic and Christian voices, however are concerned, the message is in full contrast to the teachings of Jesus and Jesus is completely absent.  They also warn that this is the deception prophesized in Revelation and for centuries by the Church."
+ endtimes.20.a: "The Apostasy is becoming clear"
 
  endtimes.7.t: "A hit job on the Papacy"
- endtimes.7.d: "Christian churches have started calling the One Faith a heresy and the Vatican was getting ready to make a formal decree stating their teachings to be very inconsistent with Christianity.  On Halloween night a large group of Pro-One Faith protesters, 1000s, many in costumes turned out to be cover for a large group of Russian commandos and other One Faith operatives stormed the Vatican.\n\nIt wasn't clear if the intention was to kill the Pope or not but Pope Leo XVI is dead and so are many clergy and Saint Peters was burned.  Many questions regarding how Italy let this happen are being asked."
- endtimes.7.a: "A new Pope takes his place."
+ endtimes.7.d: "Christian churches are calling the One Faith a heresy and the Vatican was getting ready to make a formal decree stating their teachings to be very inconsistent with Christianity and that Christians should not add the Prophet's message to it.  On Halloween night a large group of Pro-One Faith protesters, 1000s, most in costumes flash mobbed the Vatican.  It was cover for a large group of [Russian fulfills a prophecy] commandos and other One Faith operatives stormed the Vatican.\n\nIt wasn't clear if the intention was to kill the Pope or not but Pope Leo XVI and many other clergy are dead. Saint Peters was partially burned and the Vatican security like the Swiss Guard were almost killed to the last man.  Many questions regarding how Italy security forces could have allow essentially an enemy army into Rome are currently left unanswered."
+ endtimes.7.a: "The Holy Father has been Martyred"
 
  endtimes.8.t: "A Dirty Bomb Outside Jerusalem"
  endtimes.8.d: "A dirty bomb has exploded just outside Jerusalem. Iran is suspected, and Israel has vowed retribution."
@@ -92,3 +92,47 @@
  endtimes_famine_and_disease_desc: "Repeated harvest failures, disease outbreaks, and collapsing relief networks have left the population struggling for survival. Essential civilian needs consume the country's productive capacity."
  endtimes_famine_consumption_floor: "Famine and Disease"
  endtimes_famine_consumption_floor_tt: "Consumer-goods demand is maintained at a minimum of §R90%§!, recalculated daily. Any higher demand is preserved."
+
+ endtimes.23.t: "Saudi Arabia, Turkey and Pakistan Sign Defense Pact"
+ endtimes.23.d: "WNN reports that Saudi Arabia, Turkey and Pakistan have signed a mutual defense pact, pledging to guarantee one another's independence and refrain from aggression against each other.\n\nThe three governments describe the agreement as a response to the conflict with Iran and the Houthis in Yemen. By coordinating their security commitments, they hope to deter further attacks and strengthen their position in the region.\n\nAlthough presented as a defensive arrangement, the pact could also be seen as hostile to Israel, adding another source of tension to an already volatile Middle East."
+ endtimes.23.a: "A new security pact in the region."
+
+ endtimes.24.t: "Israel Drops Nuclear Bomb on Iran"
+ endtimes.24.d: "WNN reports that Israel has dropped a nuclear bomb on Tehran, Iran's capital, in retaliation for the dirty bomb attack outside Jerusalem. The strike marks a dramatic escalation of the crisis in the Middle East.\n\nThe world is on edge as governments watch for Iran's response. Will Tehran retaliate, will other powers be drawn into the conflict, or can diplomacy prevent further escalation?\n\nWith the possibility of more nuclear strikes now looming over the region, the coming days could determine whether this catastrophe remains a single attack or becomes the opening of a wider war."
+ endtimes.24.a: "The world holds its breath."
+
+ endtimes.25.t: "Alex Make Alliance Official"
+ endtimes.25.d: "An alliance of One Faith nations has officially come together with Alex as their leader to unite the interests of the new Church and State and benefit from full Economic and Strategic military cooperation.  The first group unites the former Islamic world but many other countries are showing interest, especially for the economic benefits."
+ endtimes.25.a: "One Faith, One World"
+
+ endtimes.26.t: "Iran Joins the One Faith, One World Alliance"
+ endtimes.26.d: "Iran recently devastated by the nuclear strike on Tehran, is a bairly functioning state.  The One Faith and Christianty have spread since the Warning also affect that country and so the old regime has mostly been replaced by the military, a military very willing to give it's services to Alex."
+ endtimes.26.a: "The middle east united"
+ endtimes.28.t: "A Coup in Israel"
+ endtimes.28.d: "WNN reports that a coup has brought a new government to power in Israel. Days after the Vatican was stormed, with Israel beset on every side by the One Faith, One World Alliance, a group of wealthy Israeli businessmen announced that a deal had been reached with the Alliance.\n\nThe agreement sets out a framework for peaceful coexistence through a two-state system and the rebuilding of Gaza. Eitan Ben-Ami has been installed as the new president, and Jerusalem is to become an open Holy City once again for all believers.\n\nIsrael joins the alliance formerly known as the CSTO, and its new leadership enters the Cabal. The existing Palestinian and Gaza governments are brought into the same alliance and network as part of the settlement."
+ endtimes.28.a: "The new president accepts the settlement."
+ endtimes.29.a: "A new order takes hold in the Holy Land."
+
+ endtimes.30.t: "The Moment of Desolation"
+ endtimes.30.d: "The Seat of Saint Peter is empty, and apostasy has spread worldwide. Jerusalem has bent its knee to Alex, and most of the world now stands in alliance with the Biblical Beast of Revelation.\n\nAcross North America and Europe, civil war has already erupted or threatens to break out. Governments fracture, loyalties divide, and the remaining opposition faces a world increasingly united under Alex's authority.\n\nChina is now preparing to formally join Alex's alliance. As the One Faith, One World order extends its reach, the world stands at the moment of desolation."
+ endtimes.30.a: "The world stands on the brink."
+
+ endtimes.31.t: "China Joins the One Faith, One World Alliance"
+ endtimes.31.d: "China has maintained close links and cooperation with Alex's Cabal for many years. Now, with the old world gone and trade with the West at an end, Beijing has announced that it is casting aside its remaining restraints and formally joining the One Faith, One World Alliance, formerly known as the CSTO.\n\nChina will fully implement the SOLOMON world banking system and currency. Under the agreement, 90 percent of China's outstanding debt is written off, binding its economic future to Alex's new order.\n\nFollowing its entry into the alliance, China has declared war on the Philippines, Taiwan and Japan. Beijing's alignment with Alex is now matched by a military offensive across East Asia."
+ endtimes.31.a: "China commits to the new order."
+ endtimes.32.a: "War spreads across East Asia."
+
+ endtimes.33.t: "Australia Must Pick a Side"
+ endtimes.33.d: "The world is ending. We need to pick a side.\n\nWith the international order collapsing and war spreading across the Pacific, Australia can no longer stand aside. If NATO and the United States are at war, we can join NATO and enter its war against the USA. Alternatively, we can fight China and the alliance formerly known as the CSTO.\n\nIf NATO and the USA are not at war, Australia will fight China and the CSTO. Whichever course we take, the country will rally for war."
+ endtimes.33.a: "Join NATO and its war against the USA."
+ endtimes.33.b: "Fight China and the CSTO."
+
+ endtimes.35.t: "Israel Strikes Iran with a Nuclear Weapon"
+ endtimes.35.d: "WNN reports that Israel has detonated a nuclear weapon in Khuzestan as Iranian forces and their allies press the war against Israel.\n\nThe Israeli government has warned that it will continue using nuclear weapons until Iran and its allies withdraw and end their offensive. Tehran, it declares, will be next.\n\nThe threat of further nuclear strikes now hangs over the region as the world waits for Iran's response."
+ endtimes.35.a: "Tehran has been warned."
+ endtimes.36.t: "A Ceasefire After the Nuclear Strike"
+ endtimes.36.d: "One day after the nuclear explosion in Khuzestan, Iran and its dependent governments have agreed to a white peace with Israel and Jordan.\n\nThe fighting ends without a peace-conference settlement. Iran's existing puppets remain under its control for now."
+ endtimes.36.a: "The offensive ends."
+ endtimes.37.t: "Israel Nukes Iran"
+ endtimes.37.d: "Iran took a calculated risk: either Israel would not actually use a nuclear weapon, or Tehran was prepared to absorb a single strike. The explosion in Khuzestan has exposed the consequences of that gamble.\n\nIran apparently does not yet have a nuclear weapon of its own; otherwise, it would probably have announced it by now. Israel's warning that Tehran would be next has been followed by a ceasefire.\n\nIran and its dependent governments have made white peace with Israel and Jordan. Iran's chain of puppets remains intact for now."
+ endtimes.37.a: "A nuclear warning brings a fragile peace."

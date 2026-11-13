@@ -1,21 +1,4 @@
 # Dormant until the July 3, 2029 settlement. No starting cores or units.
 capital = 45
 set_research_slots = 4
-set_popularities = {
-	democratic = 100
-	communism = 0
-	fascism = 0
-	neutrality = 0
-	nationalist = 0
-}
-set_politics = {
-	ruling_party = democratic
-	elections_allowed = yes
-	last_election = "2029.7.3"
-	election_frequency = 48
-}
-start_politics_input = yes
-set_variable = { party_pop_array^2 = 1 }
-add_to_array = { ruling_party = 2 }
-set_variable = { liberalism_leader = 1 }
-startup_politics = yes
+endtimes_setup_east_germany_politics = yes

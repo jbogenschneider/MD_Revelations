@@ -56,6 +56,13 @@ NATO_decisions = {
 
 		visible = {
 			has_idea = NATO_member
+			# Le Pen's election does not end France's NATO membership.
+			NOT = {
+				AND = {
+					original_tag = FRA
+					has_country_leader = { name = "Marine Le Pen" ruling_only = yes }
+				}
+			}
 		}
 
 		cost = 100

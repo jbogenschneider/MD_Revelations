@@ -1,5 +1,2672 @@
 set_leader_ROM = {
+    # DNP: roll gender before selecting the Romanian leader
+    roll_ROM_female_leader = yes
+	if = {
+		limit = { has_country_flag = force_female_leader }
 
+		hidden_effect = { kill_country_leader = yes }
+
+		if = {
+			limit = { has_country_flag = set_liberalism }
+			random_list = {
+				1 = {
+					create_country_leader = {         
+					female = yes
+						picture = "gfx/leaders/generic_politicians/romania_democrat_female_1.dds"
+						ideology = liberalism
+						traits = { western_liberalism
+						emotional
+						inexperienced
+						capable
+						 }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_democrat_female_2.dds"
+						ideology = liberalism
+						traits = { western_liberalism
+						educator
+						pro_russia
+						scientist
+						ruthless }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_democrat_female_3.dds"
+						ideology = liberalism
+						traits = { western_liberalism
+						ex_engineer
+						elder
+						nato_enjoyer
+						rational }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_democrat_female_4.dds"
+						ideology = liberalism
+						traits = { western_liberalism
+						cautious
+						technocrat
+						pro_american }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_democrat_female_5.dds"
+						ideology = liberalism
+						traits = { western_liberalism
+						stubborn
+						journalist
+						career_politician
+						writer }
+					}
+				}
+			    1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_democrat_female_6.dds"
+						ideology = liberalism
+						traits = { western_liberalism
+						honest
+						agricultural_resource_economist
+						drunkard
+						islamophobe
+						pro_china }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_democrat_female_7.dds"
+						ideology = liberalism
+						traits = { western_liberalism
+						narcissist
+						lawyer
+						former_interior_minister
+						geopolitical_thinker
+						pro_israel
+						pro_independence_taiwan
+						 }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_democrat_female_8.dds"
+						ideology = liberalism
+						traits = { western_liberalism
+						dumbass_trait
+						coward
+						likeable
+						inexperienced
+						populist }
+					}
+				}
+			    				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_democrat_female_9.dds"
+						ideology = liberalism
+						traits = { western_liberalism
+						substance_abuser
+						diplomat
+						spy
+						former_foreign_minister }
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = { has_country_flag = set_socialism }
+			random_list = {
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_democrat_female_1.dds"
+						ideology = socialism
+						traits = { western_socialism
+						rash
+						dumbass_trait
+						deceitful
+						inexperienced
+						populist
+ }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_democrat_female_2.dds"
+						ideology = socialism
+						traits = { western_socialism
+						coward
+						skilled_lobbyist
+						railroad_enthusiast
+						capable
+						pro_china
+						 }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_democrat_female_3.dds"
+						ideology = socialism
+						traits = { western_socialism
+						anti_zionist
+						aviation_engineer
+						career_politician
+						elder
+						nato_enjoyer
+						ruthless
+						 }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_democrat_female_4.dds"
+						ideology = socialism
+						traits = { western_socialism
+						stubborn
+						megaproject_maniac
+						educator
+						drunkard
+						pro_american
+						scientist_engineer
+						 }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_democrat_female_5.dds"
+						ideology = liberalism
+						traits = { western_socialism
+						former_finance_minister
+						greedy
+						corruptible
+						substance_abuser
+						islamophobe
+						pro_israel
+						athlete }
+					}
+				}
+			    1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_democrat_female_6.dds"
+						ideology = socialism
+						traits = { western_socialism
+						emotional
+						honest
+						drunkard
+						farmer
+						agronomist
+						agricultural_resource_economist
+						elder }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_democrat_female_7.dds"
+						ideology = socialism
+						traits = { western_socialism
+						political_dancer
+						populist
+						pro_independence_taiwan
+						businessman
+						economist
+						 }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_democrat_female_8.dds"
+						ideology = socialism
+						traits = { western_socialism
+						likeable
+						humble
+						doctor
+						writer
+						transparent
+						actor_politician
+						public_health_admin }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_democrat_female_9.dds"
+						ideology = socialism
+						traits = { western_socialism
+						ruthless
+						zealous
+						tech_savy
+						capable
+						pro_israel
+						pro_independence_taiwan
+						pro_american
+						military_career
+						nato_enjoyer
+						 }
+					}
+				}
+		}
+		}
+		else_if = {
+			limit = { has_country_flag = set_conservatism }
+			random_list = {
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_1.dds"
+						ideology = conservatism
+						traits = { western_conservatism
+						rational
+						cautious
+						skilled_lobbyist
+						railroad_enthusiast
+						educator
+						pro_american
+						teacher }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_2.dds"
+						ideology = conservatism
+						traits = { western_conservatism
+						greedy
+						zealous
+						economist
+						former_finance_minister
+						career_politician
+						polished
+						capable
+						staunch_constitutionalist }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_3.dds"
+						ideology = conservatism
+						traits = { western_conservatism
+						incapable
+						drunkard
+						dumbass_trait
+						likeable
+						populist
+						journalist }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_4.dds"
+						ideology = conservatism
+						traits = { western_conservatism
+						lawyer
+						narcissist
+						stubborn
+						capable
+						populist
+						corruptible }
+					}
+				}
+								1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_5.dds"
+						ideology = conservatism
+						traits = { western_conservatism
+						diplomat
+						spy
+						democratic_champion
+						substance_abuser
+						pro_china
+						pro_russia }
+					}
+				}
+								1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_6.dds"
+						ideology = conservatism
+						traits = { western_conservatism
+						rational
+						capable
+						technocrat
+						tech_savy
+						scientist
+						aviation_engineer
+						actor_politician }
+					}
+				}
+								1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_7.dds"
+						ideology = conservatism
+						traits = { western_conservatism
+						alzheimer
+						writer
+						rash
+						sly
+						staunch_constitutionalist
+						peoples_leader
+						islamophobe
+						elder
+						 }
+					}
+				}
+								1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_8.dds"
+						ideology = conservatism
+						traits = { western_conservatism
+						rational
+						honest
+						ex_engineer
+						career_politician
+						educator
+						teacher
+						nato_enjoyer
+						pro_american
+						 }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_9.dds"
+						ideology = conservatism
+						traits = { western_conservatism
+						emotional
+						ruthless
+						agricultural_resource_economist
+						inexperienced
+						populist
+						corruptible
+						farmer }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_10.dds"
+						ideology = conservatism
+						traits = { western_conservatism
+						journalist
+						athlete
+						narcissist
+						sly
+						inexperienced }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_11.dds"
+						ideology = conservatism
+						traits = { western_conservatism
+						rational
+						cautious
+						geopolitical_thinker
+						political_dancer
+						pro_russia
+						former_interior_minister
+						writer }
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = { has_country_flag = set_Western_Autocracy }
+			random_list = {
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_1.dds"
+						ideology = Western_Autocracy
+						traits = { western_Western_Autocracy
+						greedy
+						deceitful
+						doctor
+						hands_that_crafted_the_nation
+						railroad_enthusiast
+						geopolitical_thinker
+						populist
+						corruptible
+						staunch_personalist }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_2.dds"
+						ideology = Western_Autocracy
+						traits = { western_Western_Autocracy
+						rash
+						stubborn
+						journalist
+						writer
+						tech_savy
+						ecological_economist
+						 }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_3.dds"
+						ideology = Western_Autocracy
+						traits = { western_Western_Autocracy
+						likeable
+						farmer
+						capable
+						elder
+						career_politician
+						former_interior_minister
+						agronomist
+						populist
+						agricultural_resource_economist
+						 }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_4.dds"
+						ideology = Western_Autocracy
+						traits = { western_Western_Autocracy
+						athlete
+						dumbass_trait
+						stubborn
+						likeable
+						inexperienced
+						populist
+						corruptible
+						 }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_5.dds"
+						ideology = Western_Autocracy
+						traits = { western_Western_Autocracy
+						narcissist
+						greedy
+						businessman
+						hands_that_crafted_the_nation
+						skilled_lobbyist
+						likeable }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_6.dds"
+						ideology = Western_Autocracy
+						traits = { western_Western_Autocracy
+						ex_engineer
+						coward
+						humble
+						technocrat
+						railroad_enthusiast
+						capable
+						educator
+						substance_abuser
+						pro_american
+						 }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_7.dds"
+						ideology = Western_Autocracy
+						traits = { western_Western_Autocracy
+						elder
+						narcissist
+						rash
+						aviation_engineer
+						athlete
+						writer
+						military_career
+						career_politician
+						 }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_8.dds"
+						ideology = Western_Autocracy
+						traits = { western_Western_Autocracy
+						honest
+						rational
+						economist
+						teacher
+						former_finance_minister
+						drunkard
+						actor_politician
+						pro_russia
+						 }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_9.dds"
+						ideology = Western_Autocracy
+						traits = { western_Western_Autocracy
+						teacher
+						emotional
+						ruthless
+						capable
+						megaproject_maniac
+						logistical_tunnel_vision
+						pro_independence_taiwan
+						nato_enjoyer }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_10.dds"
+						ideology = Western_Autocracy
+						traits = { western_Western_Autocracy
+						rational
+						cautious
+						diplomat
+						spy
+						geopolitical_thinker
+						capable
+						technocrat
+						likeable }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_11.dds"
+						ideology = Western_Autocracy
+						traits = { western_Western_Autocracy
+						humble
+						stubborn
+						tech_savy
+						pro_israel
+						lawyer
+						businessman
+						economist
+						former_finance_minister }
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = { has_country_flag = set_Communist-State }
+			random_list = {
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_communist_female_1.dds"
+						ideology = Communist-State
+						traits = { emerging_Communist-State
+						emotional
+						ruthless
+						farmer
+						drunkard
+						dumbass_trait
+						agricultural_resource_economist
+						inexperienced
+						populist
+						pro_russia
+						 }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_communist_female_2.dds"
+						ideology = Communist-State
+						traits = { emerging_Communist-State
+						rash
+						zealous
+						stubborn
+						tech_savy
+						army_general
+						military_career
+						technocrat
+						railroad_enthusiast
+						hands_that_crafted_the_nation
+						capable
+						interventionist
+						pro_china
+						substance_abuser
+						 }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_communist_female_3.dds"
+						ideology = Communist-State
+						traits = { emerging_Communist-State
+						teacher
+						humble
+						rational
+						educator
+						peoples_leader
+						incapable
+						islamophobe
+						writer
+						elder
+						 }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_communist_female_4.dds"
+						ideology = Communist-State
+						traits = { emerging_Communist-State
+						elder
+						alzheimer
+						stubborn
+						honest
+						aviation_engineer
+						union_man
+						pro_russia
+						 }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_communist_female_5.dds"
+						ideology = Communist-State
+						traits = { emerging_Communist-State
+						doctor
+						athlete
+						drunkard
+						likeable
+						cautious
+						narcissist
+						coward
+						inexperienced
+						populist }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_communist_female_6.dds"
+						ideology = Communist-State
+						traits = { emerging_Communist-State
+						rational
+						deceitful
+						spy
+						diplomat
+						pro_iranian
+						pro_russia
+						anti_zionist
+						pro_china
+						dictator
+						leader_of_the_revolution
+						 }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_communist_female_7.dds"
+						ideology = Communist-State
+						traits = { emerging_Communist-State
+						honest
+						ruthless
+						scientist_engineer
+						scientist
+						farmer
+						writer
+						agronomist
+						geopolitical_thinker
+						capable
+						staunch_personalist }
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = { has_country_flag = set_Conservative }
+			random_list = {
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_1.dds"
+						ideology = Conservative
+						traits = { emerging_Conservative
+						rational
+						cautious
+						lawyer
+						writer
+						drunkard
+						anti_zionist
+						pro_russia
+						transparent
+						actor_politician
+						 }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_2.dds"
+						ideology = Conservative
+						traits = { emerging_Conservative
+						career_politician
+						former_interior_minister
+						economist
+						businessman
+						likeable
+						rash
+						emotional
+						greedy
+						 }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_3.dds"
+						ideology = Conservative
+						traits = { emerging_Conservative
+						cautious
+						honest
+						stubborn
+						polished
+						hands_that_crafted_the_nation
+						agricultural_resource_economist
+						railroad_enthusiast
+						populist
+						farmer
+						agronomist
+						elder
+						 }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_4.dds"
+						ideology = Conservative
+						traits = { emerging_Conservative
+						narcissist
+						stubborn
+						former_finance_minister
+						career_politician
+						islamophobe
+						substance_abuser
+						peoples_leader
+						staunch_personalist
+						corruptible
+						populist
+						capable
+						likeable
+						 }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_5.dds"
+						ideology = Conservative
+						traits = { emerging_Conservative
+						dumbass_trait
+						emotional
+						zealous
+						technocrat
+						inexperienced
+						political_dancer
+						corruptible
+						staunch_personalist
+						interventionist
+						former_interior_minister
+						 }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_6.dds"
+						ideology = Conservative
+						traits = { emerging_Conservative
+						rational
+						greedy
+						judiciary
+						pro_russia
+						corruptible
+						staunch_constitutionalist
+						political_dancer
+						capable
+						ecological_economist
+						technocrat
+						 }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_7.dds"
+						ideology = Conservative
+						traits = { emerging_Conservative
+						sly
+						narcissist
+						tech_savy
+						skilled_lobbyist
+						railroad_enthusiast
+						capable
+						geopolitical_thinker
+						economist
+						former_finance_minister }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_8.dds"
+						ideology = Conservative
+						traits = { emerging_Conservative
+						rash
+						deceitful
+						journalist
+						writer
+						athlete
+						anti_zionist
+						substance_abuser
+						staunch_personalist
+						 }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_9.dds"
+						ideology = Conservative
+						traits = { emerging_Conservative
+						emotional
+						honest
+						narcissist
+						likeable
+						businessman
+						athlete
+						transparent
+						staunch_constitutionalist
+						 }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_10.dds"
+						ideology = Conservative
+						traits = { emerging_Conservative
+						diplomat
+						spy
+						pro_russia
+						anti_zionist
+						peoples_leader
+						staunch_personalist
+						rational
+						deceitful }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_11.dds"
+						ideology = Conservative
+						traits = { emerging_Conservative
+						humble
+						cautious
+						military_genius
+						staunch_personalist
+						dictator
+						communist_sympathizer
+						military_career
+						 }
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = { has_country_flag = set_Autocracy }
+			random_list = {
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_1.dds"
+						ideology = Autocracy
+						traits = { emerging_Autocracy
+						honest
+						agricultural_resource_economist
+						pro_russia }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_2.dds"
+						ideology = Autocracy
+						traits = { emerging_Autocracy
+						pro_russia
+						rash
+						athlete }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_3.dds"
+						ideology = Autocracy
+						traits = { emerging_Autocracy
+						pro_china
+						emotional
+						doctor }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_4.dds"
+						ideology = Autocracy
+						traits = { emerging_Autocracy
+						pro_china
+						rational
+						lawyer }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_5.dds"
+						ideology = Autocracy
+						traits = { emerging_Autocracy
+						ruthless
+						anti_zionist
+						economist
+					 }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_6.dds"
+						ideology = Autocracy
+						traits = { emerging_Autocracy
+						pro_iranian
+						greedy
+						judiciary }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_7.dds"
+						ideology = Autocracy
+						traits = { emerging_Autocracy
+						actor_politician
+						former_finance_minister
+						rational }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_8.dds"
+						ideology = Autocracy
+						traits = { emerging_Autocracy
+						writer
+						logistical_tunnel_vision
+						staunch_personalist }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_9.dds"
+						ideology = Autocracy
+						traits = { emerging_Autocracy
+						scientist
+						dictator
+						emotional }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_10.dds"
+						ideology = Autocracy
+						traits = { emerging_Autocracy
+						interventionist
+						dictator
+						rational }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_11.dds"
+						ideology = Autocracy
+						traits = { emerging_Autocracy
+						aviation_engineer
+						interventionist
+						pro_russia
+						 }
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = { has_country_flag = set_Vilayat_e_Faqih }
+			random_list = {
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_salafist_female_1.dds"
+						ideology = Vilayat_e_Faqih
+						traits = { emerging_Vilayat_e_Faqih
+						interventionist
+						doctor }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_salafist_female_2.dds"
+						ideology = Vilayat_e_Faqih
+						traits = { emerging_Vilayat_e_Faqih
+						anti_zionist
+						emotional }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_salafist_female_3.dds"
+						ideology = Vilayat_e_Faqih
+						traits = { emerging_Vilayat_e_Faqih
+						pro_iranian
+						economist }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_salafist_female_4.dds"
+						ideology = Vilayat_e_Faqih
+						traits = { emerging_Vilayat_e_Faqih
+						staunch_personalist
+						ruthless
+						zealous }
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = { has_country_flag = set_Mod_Vilayat_e_Faqih }
+			random_list = {
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_salafist_female_1.dds"
+						ideology = Mod_Vilayat_e_Faqih
+						traits = { emerging_Mod_Vilayat_e_Faqih
+						interventionist
+						doctor }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_salafist_female_2.dds"
+						ideology = Mod_Vilayat_e_Faqih
+						traits = { emerging_Mod_Vilayat_e_Faqih
+						anti_zionist
+						emotional }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_salafist_female_3.dds"
+						ideology = Mod_Vilayat_e_Faqih
+						traits = { emerging_Mod_Vilayat_e_Faqih
+						pro_iranian
+						economist
+						zealous }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_salafist_female_4.dds"
+						ideology = Mod_Vilayat_e_Faqih
+						traits = { emerging_Mod_Vilayat_e_Faqih
+						staunch_personalist
+						ruthless }
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = { has_country_flag = set_anarchist_communism }
+			random_list = {
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_communist_female_1.dds"
+						ideology = anarchist_communism
+						traits = { emerging_anarchist_communism
+						doctor
+						permanent_revolutionary }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_communist_female_2.dds"
+						ideology = anarchist_communism
+						traits = { emerging_anarchist_communism
+						legendary_guerrilla_leader
+						rational
+						anti_zionist }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_communist_female_3.dds"
+						ideology = anarchist_communism
+						traits = { emerging_anarchist_communism
+						scientist
+						writer
+						populist }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_communist_female_4.dds"
+						ideology = anarchist_communism
+						traits = { emerging_anarchist_communism
+						elder
+						permanent_revolutionary
+						honest }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_communist_female_5.dds"
+						ideology = anarchist_communism
+						traits = { emerging_anarchist_communism
+						dictator
+						interventionist
+						pro_russia }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_communist_female_6.dds"
+						ideology = anarchist_communism
+						traits = { emerging_anarchist_communism
+						peoples_leader
+						agronomist
+						emotional }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_communist_female_7.dds"
+						ideology = anarchist_communism
+						traits = { emerging_anarchist_communism
+						pro_china
+						scientist_engineer }
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = { has_country_flag = set_Kingdom }
+			random_list = {
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_salafist_female_1.dds"
+						ideology = Kingdom
+						traits = { salafist_Kingdom
+						dumbass_trait
+						emotional
+						incapable
+						zealous }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_salafist_female_2.dds"
+						ideology = Kingdom
+						traits = { salafist_Kingdom
+						capable
+						rational }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_salafist_female_3.dds"
+						ideology = Kingdom
+						traits = { salafist_Kingdom
+						anti_zionist
+						humble }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_salafist_female_4.dds"
+						ideology = Kingdom
+						traits = { salafist_Kingdom
+						pro_iranian
+						ruthless
+					 }
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = { has_country_flag = set_Caliphate }
+			random_list = {
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_salafist_female_1.dds"
+						ideology = Caliphate
+						traits = { salafist_Caliphate
+						dumbass_trait
+						emotional
+						incapable }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_salafist_female_2.dds"
+						ideology = Caliphate
+						traits = { salafist_Caliphate
+						capable
+						rational
+						pro_isis
+						zealous }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_salafist_female_3.dds"
+						ideology = Caliphate
+						traits = { salafist_Caliphate
+						anti_zionist
+						humble }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_salafist_female_4.dds"
+						ideology = Caliphate
+						traits = { salafist_Caliphate
+						pro_iranian
+						ruthless }
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = { has_country_flag = set_Neutral_conservatism }
+			random_list = {
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_1.dds"
+						ideology = Neutral_conservatism
+						traits = { neutrality_Neutral_conservatism
+						emotional
+						dumbass_trait
+						likeable }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_2.dds"
+						ideology = Neutral_conservatism
+						traits = { neutrality_Neutral_conservatism
+						rational
+						tech_savy
+						geopolitical_thinker }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_3.dds"
+						ideology = Neutral_conservatism
+						traits = { neutrality_Neutral_conservatism
+						cautious
+						capable }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_4.dds"
+						ideology = Neutral_conservatism
+						traits = { neutrality_Neutral_conservatism
+						rash
+						inexperienced }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_5.dds"
+						ideology = Neutral_conservatism
+						traits = { neutrality_Neutral_conservatism
+						ruthless
+						logistical_tunnel_vision }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_6.dds"
+						ideology = Neutral_conservatism
+						traits = { neutrality_Neutral_conservatism
+						greedy
+						railroad_enthusiast }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_7.dds"
+						ideology = Neutral_conservatism
+						traits = { neutrality_Neutral_conservatism
+						humble
+						coward
+						ecological_economist }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_8.dds"
+						ideology = Neutral_conservatism
+						traits = { neutrality_Neutral_conservatism
+						honest
+						agricultural_resource_economist }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_9.dds"
+						ideology = Neutral_conservatism
+						traits = { neutrality_Neutral_conservatism
+						deceitful
+						skilled_lobbyist }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_10.dds"
+						ideology = Neutral_conservatism
+						traits = { neutrality_Neutral_conservatism
+						zealous
+						hands_that_crafted_the_nation }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_11.dds"
+						ideology = Neutral_conservatism
+						traits = { neutrality_Neutral_conservatism
+						megaproject_maniac
+						rational
+						technocrat }
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = { has_country_flag = set_oligarchism }
+			random_list = {
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_1.dds"
+						ideology = oligarchism
+						traits = { neutrality_oligarchism
+						pro_russia
+						sly
+						populist
+						staunch_personalist
+						lawyer
+						corruptible }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_2.dds"
+						ideology = oligarchism
+						traits = { neutrality_oligarchism
+						rational
+						pro_china
+						staunch_personalist
+						businessman
+						corruptible }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_3.dds"
+						ideology = oligarchism
+						traits = { neutrality_oligarchism
+						stubborn
+						narcissist
+						populist
+						economist
+						corruptible }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_4.dds"
+						ideology = oligarchism
+						traits = { neutrality_oligarchism
+						dumbass_trait
+						writer
+						corruptible }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_5.dds"
+						ideology = oligarchism
+						traits = { neutrality_oligarchism
+						deceitful
+						pro_saudi
+						businessman
+						corruptible }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_6.dds"
+						ideology = oligarchism
+						traits = { neutrality_oligarchism
+						greedy
+						dictator
+						pro_russia
+						corruptible }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_7.dds"
+						ideology = oligarchism
+						traits = { neutrality_oligarchism
+						ruthless
+						staunch_personalist
+						islamophobe
+						judiciary
+						corruptible }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_8.dds"
+						ideology = oligarchism
+						traits = { neutrality_oligarchism
+						rash
+						drunkard
+						anti_zionist
+						corruptible }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_9.dds"
+						ideology = oligarchism
+						traits = { nationalist_Nat_Populism
+						cautious
+						substance_abuser
+						actor_politician
+						corruptible }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_10.dds"
+						ideology = oligarchism
+						traits = { neutrality_oligarchism
+						emotional
+						drunkard
+						corruptible }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_11.dds"
+						ideology = oligarchism
+						traits = { neutrality_oligarchism
+						rational
+						substance_abuser }
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = { has_country_flag = set_neutral_Social }
+			random_list = {
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_democrat_female_1.dds"
+						ideology = neutral_Social
+						traits = { neutrality_neutral_Social
+						deceitful
+						likeable
+						skilled_lobbyist
+						geopolitical_thinker }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_democrat_female_2.dds"
+						ideology = neutral_Social
+						traits = { neutrality_neutral_Social
+						honest
+						dumbass_trait
+						inexperienced
+						populist }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_democrat_female_3.dds"
+						ideology = neutral_Social
+						traits = { neutrality_neutral_Social
+						humble
+						logistical_tunnel_vision
+						educator
+						staunch_constitutionalist }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_democrat_female_4.dds"
+						ideology = neutral_Social
+						traits = { neutrality_neutral_Social
+						greedy
+						railroad_enthusiast
+						corruptible }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_democrat_female_5.dds"
+						ideology = neutral_Social
+						traits = { neutrality_neutral_Social
+						ruthless
+						stubborn
+						ecological_economist }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_democrat_female_6.dds"
+						ideology = neutral_Social
+						traits = { neutrality_neutral_Social
+						rash
+						hands_that_crafted_the_nation
+						capable
+						corruptible }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_democrat_female_7.dds"
+						ideology = neutral_Social
+						traits = { neutrality_neutral_Social
+						cautious
+						agricultural_resource_economist
+						democratic_champion }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_democrat_female_8.dds"
+						ideology = neutral_Social
+						traits = { neutrality_neutral_Social
+						rational
+						tech_savy
+						staunch_personalist }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_democrat_female_9.dds"
+						ideology = neutral_Social
+						traits = { neutrality_neutral_Social
+						emotional
+						narcissist }
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = { has_country_flag = set_Neutral_Libertarian }
+			random_list = {
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_democrat_female_1.dds"
+						ideology = Neutral_Libertarian
+						traits = { neutrality_Neutral_Libertarian
+						humble
+						tech_savy
+						pro_american
+						businessman }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_democrat_female_2.dds"
+						ideology = Neutral_Libertarian
+						traits = { neutrality_Neutral_Libertarian
+						honest
+						likeable
+						geopolitical_thinker
+						pro_american }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_democrat_female_3.dds"
+						ideology = Neutral_Libertarian
+						traits = { neutrality_Neutral_Libertarian
+						stubborn
+						skilled_lobbyist
+						substance_abuser
+						pro_american
+						businessman }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_democrat_female_4.dds"
+						ideology = Neutral_Libertarian
+						traits = { neutrality_Neutral_Libertarian
+						agricultural_resource_economist
+						populist
+						democratic_champion
+						pro_american }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_democrat_female_5.dds"
+						ideology = Neutral_Libertarian
+						traits = { neutrality_Neutral_Libertarian
+						rational
+						technocrat
+						staunch_constitutionalist
+						playboy_lifestyle
+						pro_american }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_democrat_female_6.dds"
+						ideology = Neutral_Libertarian
+						traits = { neutrality_Neutral_Libertarian
+						emotional
+						capable
+						peoples_leader
+						substance_abuser
+						anti_zionist
+						ex_engineer }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_democrat_female_7.dds"
+						ideology = Neutral_Libertarian
+						traits = { neutrality_Neutral_Libertarian
+						cautious
+						coward
+						ecological_economist
+						inexperienced
+						pro_independence_taiwan
+						teacher }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_democrat_female_8.dds"
+						ideology = Neutral_Libertarian
+						traits = { neutrality_Neutral_Libertarian
+						sly
+						logistical_tunnel_vision
+						islamophobe
+						businessman }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_democrat_female_9.dds"
+						ideology = Neutral_Libertarian
+						traits = { neutrality_Neutral_Libertarian
+						narcissist
+						railroad_enthusiast
+						businessman }
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = { has_country_flag = set_Neutral_Autocracy }
+			random_list = {
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_1.dds"
+						ideology = Neutral_Autocracy
+						traits = { neutrality_Neutral_Autocracy
+						zealous
+						agricultural_resource_economist
+						geopolitical_thinker
+						educator
+						dictator
+						interventionist }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_2.dds"
+						ideology = Neutral_Autocracy
+						traits = { neutrality_Neutral_Autocracy
+						deceitful
+						populist
+						staunch_personalist
+						peoples_leader }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_3.dds"
+						ideology = Neutral_Autocracy
+						traits = { neutrality_Neutral_Autocracy
+						honest
+						technocrat
+						railroad_enthusiast
+						the_pragmatic_commander }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_4.dds"
+						ideology = Neutral_Autocracy
+						traits = { neutrality_Neutral_Autocracy
+						rash
+						megaproject_maniac
+						corruptible
+						staunch_personalist
+						interventionist }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_5.dds"
+						ideology = Neutral_Autocracy
+						traits = { neutrality_Neutral_Autocracy
+						rational
+						coward
+						ecological_economist
+						political_dancer
+						dictator  }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_6.dds"
+						ideology = Neutral_Autocracy
+						traits = { neutrality_Neutral_Autocracy
+						emotional
+						narcissist
+						capable
+						staunch_personalist
+						interventionist }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_7.dds"
+						ideology = Neutral_Autocracy
+						traits = { neutrality_Neutral_Autocracy
+						cautious
+						logistical_tunnel_vision }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_8.dds"
+						ideology = Neutral_Autocracy
+						traits = { neutrality_Neutral_Autocracy
+						ruthless
+						sly
+						inexperienced
+						interventionist }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_9.dds"
+						ideology = Neutral_Autocracy
+						traits = { neutrality_Neutral_Autocracy
+						greedy
+						stubborn
+						corruptible
+						staunch_personalist }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_10.dds"
+						ideology = Neutral_Autocracy
+						traits = { neutrality_Neutral_Autocracy
+						humble
+						peoples_leader
+						drunkard }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_11.dds"
+						ideology = Neutral_Autocracy
+						traits = { neutrality_Neutral_Autocracy
+						dumbass_trait
+						corruptible
+						staunch_personalist
+						drunkard }
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = { has_country_flag = set_Neutral_Communism }
+			random_list = {
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_communist_female_1.dds"
+						ideology = Neutral_Communism
+						traits = { neutrality_Neutral_Communism
+						cautious
+						railroad_enthusiast
+						inexperienced }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_communist_female_2.dds"
+						ideology = Neutral_Communism
+						traits = { neutrality_Neutral_Communism
+						rash
+						the_pragmatic_commander
+						dictator
+						interventionist }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_communist_female_3.dds"
+						ideology = Neutral_Communism
+						traits = { neutrality_Neutral_Communism
+						ruthless
+						logistical_tunnel_vision
+						interventionist }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_communist_female_4.dds"
+						ideology = Neutral_Communism
+						traits = { neutrality_Neutral_Communism
+						honest
+						capable
+						educator
+						leader_of_the_revolution }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_communist_female_5.dds"
+						ideology = Neutral_Communism
+						traits = { neutrality_Neutral_Communism
+						deceitful
+						agricultural_resource_economist
+						populist
+						permanent_revolutionary }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_communist_female_6.dds"
+						ideology = Neutral_Communism
+						traits = { neutrality_Neutral_Communism
+						emotional
+						dumbass_trait
+						hands_that_crafted_the_nation
+						 }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_communist_female_7.dds"
+						ideology = Neutral_Communism
+						traits = { neutrality_Neutral_Communism
+						rational
+						peoples_leader
+						scientist }
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = { has_country_flag = set_Neutral_Muslim_Brotherhood }
+			random_list = {
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_salafist_female_1.dds"
+						ideology = Neutral_Muslim_Brotherhood
+						traits = { neutrality_Neutral_Muslim_Brotherhood
+						emotional
+						zealous
+						populist
+						permanent_revolutionary
+						pro_brotherhood }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_salafist_female_2.dds"
+						ideology = Neutral_Muslim_Brotherhood
+						traits = { neutrality_Neutral_Muslim_Brotherhood
+						cautious
+						staunch_personalist
+						scholarly_challenged
+						pro_isis }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_salafist_female_3.dds"
+						ideology = Neutral_Muslim_Brotherhood
+						traits = { neutrality_Neutral_Muslim_Brotherhood
+						ruthless
+						interventionist
+						scholarly_challenged
+						pro_al_qaeda }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_salafist_female_4.dds"
+						ideology = Neutral_Muslim_Brotherhood
+						traits = { neutrality_Neutral_Muslim_Brotherhood
+						humble
+						scholarly_challenged
+						pro_saudi }
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = { has_country_flag = set_Neutral_green }
+			random_list = {
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_democrat_female_1.dds"
+						ideology = Neutral_green
+						traits = { neutrality_Neutral_green }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_democrat_female_2.dds"
+						ideology = Neutral_green
+						traits = { neutrality_Neutral_green }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_democrat_female_3.dds"
+						ideology = Neutral_green
+						traits = { neutrality_Neutral_green }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_democrat_female_4.dds"
+						ideology = Neutral_green
+						traits = { neutrality_Neutral_green }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_democrat_female_5.dds"
+						ideology = Neutral_green
+						traits = { neutrality_Neutral_green }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_democrat_female_6.dds"
+						ideology = Neutral_green
+						traits = { neutrality_Neutral_green }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_democrat_female_7.dds"
+						ideology = Neutral_green
+						traits = { neutrality_Neutral_green }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_democrat_female_8.dds"
+						ideology = Neutral_green
+						traits = { neutrality_Neutral_green }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_democrat_female_9.dds"
+						ideology = Neutral_green
+						traits = { neutrality_Neutral_green }
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = { has_country_flag = set_Nat_Autocracy }
+			random_list = {
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_1.dds"
+						ideology = Nat_Autocracy
+						traits = { nationalist_Nat_Populism }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_2.dds"
+						ideology = Nat_Autocracy
+						traits = { nationalist_Nat_Populism }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_3.dds"
+						ideology = Nat_Autocracy
+						traits = { nationalist_Nat_Populism }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_4.dds"
+						ideology = Nat_Autocracy
+						traits = { nationalist_Nat_Populism }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_5.dds"
+						ideology = Nat_Autocracy
+						traits = { nationalist_Nat_Populism }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_6.dds"
+						ideology = Nat_Autocracy
+						traits = { nationalist_Nat_Populism }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_7.dds"
+						ideology = Nat_Autocracy
+						traits = { nationalist_Nat_Populism }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_8.dds"
+						ideology = Nat_Autocracy
+						traits = { nationalist_Nat_Populism }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_9.dds"
+						ideology = Nat_Autocracy
+						traits = { nationalist_Nat_Populism }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_10.dds"
+						ideology = Nat_Autocracy
+						traits = { nationalist_Nat_Populism }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_11.dds"
+						ideology = Nat_Autocracy
+						traits = { nationalist_Nat_Populism }
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = { has_country_flag = set_Nat_Fascism }
+			random_list = {
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_1.dds"
+						ideology = Nat_Fascism
+						traits = { nationalist_Nat_Populism }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_2.dds"
+						ideology = Nat_Fascism
+						traits = { nationalist_Nat_Populism }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_3.dds"
+						ideology = Nat_Fascism
+						traits = { nationalist_Nat_Populism }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_4.dds"
+						ideology = Nat_Fascism
+						traits = { nationalist_Nat_Populism }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_5.dds"
+						ideology = Nat_Fascism
+						traits = { nationalist_Nat_Populism }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_6.dds"
+						ideology = Nat_Fascism
+						traits = { nationalist_Nat_Populism }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_7.dds"
+						ideology = Nat_Fascism
+						traits = { nationalist_Nat_Populism }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_8.dds"
+						ideology = Nat_Fascism
+						traits = { nationalist_Nat_Populism }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_9.dds"
+						ideology = Nat_Fascism
+						traits = { nationalist_Nat_Populism }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_10.dds"
+						ideology = Nat_Fascism
+						traits = { nationalist_Nat_Populism }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_11.dds"
+						ideology = Nat_Fascism
+						traits = { nationalist_Nat_Populism }
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = { has_country_flag = set_Nat_Populism }
+			random_list = {
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_1.dds"
+						ideology = Nat_Populism
+						traits = { nationalist_Nat_Populism }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_2.dds"
+						ideology = Nat_Populism
+						traits = { nationalist_Nat_Populism }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_3.dds"
+						ideology = Nat_Populism
+						traits = { nationalist_Nat_Populism }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_4.dds"
+						ideology = Nat_Populism
+						traits = { nationalist_Nat_Populism }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_5.dds"
+						ideology = Nat_Populism
+						traits = { nationalist_Nat_Populism }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_6.dds"
+						ideology = Nat_Populism
+						traits = { nationalist_Nat_Populism }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_7.dds"
+						ideology = Nat_Populism
+						traits = { nationalist_Nat_Populism }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_8.dds"
+						ideology = Nat_Populism
+						traits = { nationalist_Nat_Populism }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_9.dds"
+						ideology = Nat_Populism
+						traits = { nationalist_Nat_Populism }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_10.dds"
+						ideology = Nat_Populism
+						traits = { nationalist_Nat_Populism }
+					}
+				}
+				1 = {
+					create_country_leader = {         
+					female = yes
+
+						picture = "gfx/leaders/generic_politicians/romania_nationalist_female_11.dds"
+						ideology = Nat_Populism
+						traits = { nationalist_Nat_Populism }
+					}
+				}
+			}
+		}
+		clr_country_flag = force_female_leader
+
+		hidden_effect = {
+			set_correct_ideology_trait = yes
+		}
+	}
+	else = {
 	if = { limit = { has_country_flag = set_liberalism }
 
 		if = { limit = { check_variable = { liberalism_leader = 0 } }
@@ -602,4 +3269,5 @@ set_leader_ROM = {
 			set_temp_variable = { b = 1 }
 		}
 	}
+    }
 }

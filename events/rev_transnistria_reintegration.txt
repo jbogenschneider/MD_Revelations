@@ -6,7 +6,7 @@ news_event = {
 	desc = rev_transnistria.1.d
 	picture = GFX_rev_transnistria_reintegration_news
 	is_triggered_only = yes
-	fire_only_once = yes
+	# Repetition is guarded in the caller; fire_only_once suppresses major broadcasts.
 	major = yes
 
 	option = {

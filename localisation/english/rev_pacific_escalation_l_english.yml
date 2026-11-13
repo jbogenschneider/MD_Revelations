@@ -1,0 +1,15 @@
+﻿l_english:
+ rev_pacific_escalation.2.t: "North Korea Attacks South Korea"
+ rev_pacific_escalation.2.d: "WNN reports that North Korea has declared war on South Korea. Fighting has erupted on the Korean Peninsula, threatening to draw neighboring powers into another major conflict in East Asia."
+ rev_pacific_escalation.2.a: "War returns to the Korean Peninsula."
+ rev_pacific_escalation.4.t: "Japan, Australia and the Philippines Declare War on China"
+ rev_pacific_escalation.4.d: "Three days after China's attack on Taiwan, Japan, Australia and the Philippines have entered the war against China.\n\nJapan is rallying a regional defense alliance. South Korea, the Philippines, Australia and New Zealand are invited to join where they have no existing faction commitments. Countries already committed to another faction retain their present alliances.\n\nWhat began as an attack on Taiwan now threatens to become a wider Pacific war."
+ rev_pacific_escalation.4.a: "The Pacific war expands."
+
+ rev_pacific_escalation.6.t: "North Korea Uses a Nuclear Weapon"
+ rev_pacific_escalation.6.d: "WNN reports that North Korea has detonated a nuclear weapon against South Korea. Following Israel's use of a nuclear weapon against Iran, Pyongyang has crossed the same threshold in its own war.\n\nNorth Korea calculated that nobody would nuke it back. That may be the case today, but its day will come. The world will not forget this."
+ rev_pacific_escalation.6.a: "The world will not forget."
+
+ rev_pacific_escalation.8.t: "Nuclear Strike Detected over Pyongyang"
+ rev_pacific_escalation.8.d: "WNN reports that a nuclear strike has been detected over Pyongyang, two days after North Korea used a nuclear weapon against South Korea.\n\nIt is not yet clear who launched the missile, but someone apparently had justice in mind. The strike is believed to have been submarine-launched. The US Navy and the British Royal Navy appear to be the only plausible sources, though neither has claimed responsibility.\n\nNorth Korea's assumption that nobody would strike back has been shattered."
+ rev_pacific_escalation.8.a: "Pyongyang has received its answer."

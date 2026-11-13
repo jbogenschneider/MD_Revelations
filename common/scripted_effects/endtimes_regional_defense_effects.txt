@@ -1,0 +1,29 @@
+# Any country scope. Apply once before broadcasting the global WNN report.
+endtimes_form_regional_defense_pact = {
+	if = {
+		limit = {
+			NOT = { has_global_flag = endtimes_regional_defense_pact_formed }
+			SAU = { exists = yes }
+			TUR = { exists = yes }
+			PAK = { exists = yes }
+		}
+		set_global_flag = endtimes_regional_defense_pact_formed
+		# Non-aggression pacts are bilateral; guarantees are directional.
+		SAU = {
+			diplomatic_relation = { country = TUR relation = non_aggression_pact active = yes }
+			diplomatic_relation = { country = PAK relation = non_aggression_pact active = yes }
+			give_guarantee = TUR
+			give_guarantee = PAK
+		}
+		TUR = {
+			diplomatic_relation = { country = PAK relation = non_aggression_pact active = yes }
+			give_guarantee = SAU
+			give_guarantee = PAK
+		}
+		PAK = {
+			give_guarantee = SAU
+			give_guarantee = TUR
+		}
+		news_event = { id = endtimes.23 }
+	}
+}

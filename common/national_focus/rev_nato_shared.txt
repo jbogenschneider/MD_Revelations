@@ -30,6 +30,7 @@ shared_focus = {
 
 	cost = 7.2
 	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL FOCUS_FILTER_NATO }
+	available = { date > 2028.6.1 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus REV_NATO_ease_of_business_reforms"
@@ -134,6 +135,7 @@ shared_focus = {
 	cost = 10
 	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NATO }
 	available = {
+		date > 2028.6.1
 		if = { limit = { is_ai = no } has_war = no }
 		else = { check_variable = { interest_rate < 14.999 } }
 	}
@@ -717,6 +719,7 @@ shared_focus = {
 	relative_position_id = REV_NATO_satisfy_the_middle_class
 	cost = 10
 	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NATO }
+	available = { date > 2028.6.1 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus REV_NATO_build_primary_schools"
 		generic_research_buff = yes

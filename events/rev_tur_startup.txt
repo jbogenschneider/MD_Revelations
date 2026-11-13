@@ -35,6 +35,8 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		# Disconnected: Turkey does not intervene in Iran's regional escalation.
+		always = no
 		original_tag = TUR
 		NOT = { has_idea = NATO_member }
 		PER = {

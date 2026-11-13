@@ -6,6 +6,8 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		# Disabled: the USA-war ultimatum must not supersede the Endtimes invasion.
+		always = no
 		tag = CHI
 		NOT = { has_country_flag = rev_chi_tw_nato_window_used }
 		NOT = { has_war_with = TAI }
@@ -41,6 +43,8 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		# Disabled: the USA-war ultimatum must not supersede the Endtimes invasion.
+		always = no
 		tag = TAI
 		CHI = { exists = yes }
 		NOT = { is_subject_of = CHI }
@@ -86,6 +90,8 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		# Disabled: the USA-war ultimatum must not supersede the Endtimes invasion.
+		always = no
 		tag = CHI
 		NOT = { has_war_with = TAI }
 		TAI = {
@@ -113,6 +119,8 @@ news_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		# Disabled: the USA-war ultimatum must not supersede the Endtimes invasion.
+		always = no
 		CHI = { exists = yes }
 		TAI = {
 			exists = yes
@@ -308,4 +316,41 @@ country_event = {
 			}
 		}
 	}
+}
+
+# Direct invasion opportunity, independent of the disabled Taiwan ultimatum.
+country_event = {
+	id = rev_chi_tw.40
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = { rev_chi_tw_regional_war_window = yes }
+
+	immediate = {
+		set_country_flag = rev_chi_tw_regional_invasion_launched
+		declare_war_on = {
+			target = TAI
+			type = annex_everything
+		}
+		news_event = { id = rev_chi_tw.41 }
+	}
+}
+
+# Global WNN report issued by the weekly China-Taiwan invasion event.
+news_event = {
+	id = rev_chi_tw.41
+	title = rev_chi_tw.41.t
+	desc = rev_chi_tw.41.d
+	picture = GFX_china_19th_national_congress
+	is_triggered_only = yes
+	major = yes
+
+	trigger = {
+		CHI = {
+			has_country_flag = rev_chi_tw_regional_invasion_launched
+			has_war_with = TAI
+		}
+	}
+
+	option = { name = rev_chi_tw.41.a }
 }

@@ -3,15 +3,26 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
-					country_exists = PMR
 					country_exists = MLV
 					149 = {
-						is_owned_by = PMR
 						is_controlled_by = UKR
 					}
 				}
+				# Native state effect transfers both ownership and control to Moldova.
+				# PMR may already have been annexed by Russia, so it need not exist.
+				149 = { transfer_state_to = MLV }
+				log = "[GetDateText]: Ukraine returned Transnistria (state 149) to Moldova."
+			}
+			# Queue a single worldwide broadcast, including saves where the handover
+			# already occurred before the news event's broadcast settings were fixed.
+			if = {
+				limit = {
+					country_exists = MLV
+					149 = { is_owned_by = MLV }
+					NOT = { has_global_flag = rev_transnistria_world_news_sent }
+				}
+				set_global_flag = rev_transnistria_world_news_sent
 				MLV = {
-					annex_country = { target = PMR }
 					news_event = { id = rev_transnistria.1 hours = 1 }
 				}
 			}

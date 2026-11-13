@@ -1,0 +1,31 @@
+add_namespace = rev_eng_pm_2026
+
+# A change of prime minister, with the existing election schedule preserved.
+country_event = {
+	id = rev_eng_pm_2026.1
+	title = rev_eng_pm_2026.1.t
+	desc = rev_eng_pm_2026.1.d
+	is_triggered_only = yes
+
+	trigger = {
+		tag = ENG
+		date > 2026.7.19
+		date < 2026.7.21
+		NOT = { has_country_flag = rev_eng_burnham_appointed_2026 }
+	}
+
+	immediate = {
+		set_country_flag = rev_eng_burnham_appointed_2026
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Andy Burnham"
+			picture = "gfx/leaders/ENG/Andy_Burnham.dds"
+			ideology = socialism
+			traits = { western_socialism }
+		}
+	}
+
+	option = {
+		name = rev_eng_pm_2026.1.a
+	}
+}

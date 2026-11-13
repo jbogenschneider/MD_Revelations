@@ -792,10 +792,6 @@ country_event = {
 			limit = { NOT = { has_idea = USA_China_War_Idea } }
 			add_ideas = USA_China_War_Idea
 		}
-		if = {
-			limit = { has_country_flag = rev_usa_secret_taiwan_bunker_prepared }
-			custom_effect_tooltip = rev_usa_cw.319.secret_taiwan_tt
-		}
 		clr_country_flag = rev_chi_tw_peace_resolved
 		clr_country_flag = rev_chi_tw_china_victory_peace
 		clr_country_flag = rev_chi_tw_china_victory_offer_pending
@@ -839,34 +835,6 @@ country_event = {
 						enemy = CHI
 						hostility_reason = asked_to_join
 						single_target_only = yes
-					}
-				}
-			}
-			if = {
-				limit = {
-					has_country_flag = rev_usa_secret_taiwan_bunker_prepared
-					TAI = { exists = yes }
-				}
-				598 = {
-					create_unit = {
-						division = "name = \"Taiwan Special Forces Detachment I\" division_template = \"Air Cavalry Brigade\" start_experience_factor = 0.2"
-						owner = ROOT
-						prioritize_location = 7186
-					}
-					create_unit = {
-						division = "name = \"Taiwan Special Forces Detachment II\" division_template = \"Air Cavalry Brigade\" start_experience_factor = 0.2"
-						owner = ROOT
-						prioritize_location = 7186
-					}
-					create_unit = {
-						division = "name = \"Taiwan Special Forces Detachment III\" division_template = \"Air Cavalry Brigade\" start_experience_factor = 0.2"
-						owner = ROOT
-						prioritize_location = 7186
-					}
-					create_unit = {
-						division = "name = \"Taiwan Special Forces Detachment IV\" division_template = \"Air Cavalry Brigade\" start_experience_factor = 0.2"
-						owner = ROOT
-						prioritize_location = 7186
 					}
 				}
 			}
@@ -2314,6 +2282,67 @@ country_event = {
 		}
 		add_stability = -0.10
 		add_war_support = -0.10
+	}
+}
+
+
+country_event = {
+	id = rev_usa_cw.59
+	title = rev_usa_cw.54.t
+	desc = rev_usa_cw.54.d
+	picture = GFX_report_event_usa_politics
+	is_triggered_only = yes
+
+	trigger = {
+		tag = FRA
+		has_idea = NATO_member
+		has_war_with = USA
+		has_country_leader = { name = "Marine Le Pen" ruling_only = yes }
+		NOT = { has_country_flag = rev_nato_anti_usa_opt_out_resolved_fra }
+	}
+
+	immediate = {
+		set_country_flag = rev_nato_anti_usa_opt_out_resolved_fra
+	}
+
+	option = {
+		name = rev_usa_cw.54.a
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.59.a (France leaves NATO war)"
+		rev_nato_anti_usa_opt_out = yes
+	}
+	option = {
+		name = rev_usa_cw.54.b
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.59.b (France remains in NATO war)"
+	}
+}
+
+country_event = {
+	id = rev_usa_cw.60
+	title = rev_usa_cw.54.t
+	desc = rev_usa_cw.54.d
+	picture = GFX_report_event_usa_politics
+	is_triggered_only = yes
+
+	trigger = {
+		tag = ITA
+		has_idea = NATO_member
+		has_war_with = USA
+		has_country_leader = { name = "Roberto Vannacci" ruling_only = yes }
+		NOT = { has_country_flag = rev_nato_anti_usa_opt_out_resolved_ita }
+	}
+
+	immediate = {
+		set_country_flag = rev_nato_anti_usa_opt_out_resolved_ita
+	}
+
+	option = {
+		name = rev_usa_cw.54.a
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.60.a (Italy leaves NATO war)"
+		rev_nato_anti_usa_opt_out = yes
+	}
+	option = {
+		name = rev_usa_cw.54.b
+		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.60.b (Italy remains in NATO war)"
 	}
 }
 

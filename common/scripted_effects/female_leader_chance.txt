@@ -1,0 +1,227 @@
+roll_female_leader = {
+
+	clr_country_flag = force_female_leader
+
+	if = {
+		limit = { original_tag = ROM }
+		roll_ROM_female_leader = yes
+	}
+	else_if = {
+		limit = { original_tag = POL }
+		roll_POL_female_leader = yes
+	}
+	# else_if = { limit = { original_tag = USA } roll_USA_female_leader = yes }
+	# else_if = { limit = { original_tag = SWE } roll_SWE_female_leader = yes }
+
+	else = {
+		random_list = {
+			10 = { set_country_flag = force_female_leader }
+			90 = { }
+		}
+	}
+}
+roll_ROM_female_leader = {
+
+	clr_country_flag = force_female_leader
+
+	if = {
+		limit = { has_country_flag = set_liberalism }
+		random_list = {
+			40 = { set_country_flag = force_female_leader }
+			60 = { }
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = set_socialism }
+		random_list = {
+			50 = { set_country_flag = force_female_leader }
+			50 = { }
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = set_conservatism }
+		random_list = {
+			15 = { set_country_flag = force_female_leader }
+			85 = { }
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = set_Western_Autocracy }
+		random_list = {
+			5 = { set_country_flag = force_female_leader }
+			95 = { }
+		}
+	}
+		else_if = {
+		limit = { has_country_flag = set_Communist-State }
+		random_list = {
+			50 = { set_country_flag = force_female_leader }
+			50 = { }
+		}
+	}
+		else_if = {
+		limit = { has_country_flag = set_Conservative }
+		random_list = {
+			20 = { set_country_flag = force_female_leader }
+			80 = { }
+		}
+	}
+		else_if = {
+		limit = { has_country_flag = set_Autocracy }
+		random_list = {
+			10 = { set_country_flag = force_female_leader }
+			90 = { }
+		}
+	}
+		else_if = {
+		limit = { has_country_flag = set_Vilayat_e_Faqih }
+		random_list = {
+			5 = { set_country_flag = force_female_leader }
+			95 = { }
+		}
+	}
+		else_if = {
+		limit = { has_country_flag = set_Mod_Vilayat_e_Faqih }
+		random_list = {
+			5 = { set_country_flag = force_female_leader }
+			95 = { }
+		}
+	}
+		else_if = {
+		limit = { has_country_flag = set_anarchist_communism }
+		random_list = {
+			50 = { set_country_flag = force_female_leader }
+			50 = { }
+		}
+	}
+		else_if = {
+		limit = { has_country_flag = set_Kingdom }
+		random_list = {
+			20 = { set_country_flag = force_female_leader }
+			80 = { }
+		}
+	}
+		else_if = {
+		limit = { has_country_flag = set_Caliphate }
+		random_list = {
+			5 = { set_country_flag = force_female_leader }
+			95 = { }
+		}
+	}
+		else_if = {
+		limit = { has_country_flag = set_Neutral_conservatism }
+		random_list = {
+			30 = { set_country_flag = force_female_leader }
+			70 = { }
+		}
+	}
+		else_if = {
+		limit = { has_country_flag = set_oligarchism }
+		random_list = {
+			30 = { set_country_flag = force_female_leader }
+			70 = { }
+		}
+	}
+		else_if = {
+		limit = { has_country_flag = set_neutral_Social }
+		random_list = {
+			50 = { set_country_flag = force_female_leader }
+			50 = { }
+		}
+	}
+		else_if = {
+		limit = { has_country_flag = set_Neutral_Libertarian }
+		random_list = {
+			50 = { set_country_flag = force_female_leader }
+			50 = { }
+		}
+	}
+		else_if = {
+		limit = { has_country_flag = set_Neutral_Autocracy }
+		random_list = {
+			30 = { set_country_flag = force_female_leader }
+			70 = { }
+		}
+	}
+		else_if = {
+		limit = { has_country_flag = set_Neutral_Communism }
+		random_list = {
+			50 = { set_country_flag = force_female_leader }
+			50 = { }
+		}
+	}
+		else_if = {
+		limit = { has_country_flag = set_Neutral_Muslim_Brotherhood }
+		random_list = {
+			5 = { set_country_flag = force_female_leader }
+			95 = { }
+		}
+	}
+		else_if = {
+		limit = { has_country_flag = set_Neutral_green }
+		random_list = {
+			60 = { set_country_flag = force_female_leader }
+			40 = { }
+		}
+	}
+		else_if = {
+		limit = { has_country_flag = set_Nat_Autocracy }
+		random_list = {
+			20 = { set_country_flag = force_female_leader }
+			80 = { }
+		}
+	}
+		else_if = {
+		limit = { has_country_flag = set_Nat_Fascism }
+		random_list = {
+			20 = { set_country_flag = force_female_leader }
+			80 = { }
+		}
+	}
+		else_if = {
+		limit = { has_country_flag = set_Nat_Populism }
+		random_list = {
+			30 = { set_country_flag = force_female_leader }
+		    70 = { }
+		}
+	}
+		else_if = {
+		limit = { has_country_flag = set_Monarchist }
+		random_list = {
+			20 = { set_country_flag = force_female_leader }
+			80 = { }
+		}
+	}
+	else = {
+		random_list = {
+			20 = { set_country_flag = force_female_leader }
+			80 = { }
+		}
+	}
+}
+
+roll_POL_female_leader = {
+
+	clr_country_flag = force_female_leader
+
+	if = {
+		limit = { has_country_flag = set_liberalism }
+		random_list = {
+			30 = { set_country_flag = force_female_leader }
+			70 = { }
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = set_socialism }
+		random_list = {
+			15 = { set_country_flag = force_female_leader }
+			85 = { }
+		}
+	}
+	else = {
+		random_list = {
+			10 = { set_country_flag = force_female_leader }
+			90 = { }
+		}
+	}
+}

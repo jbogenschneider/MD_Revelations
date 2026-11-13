@@ -112,10 +112,7 @@ rev_fra_start_left_split = {
 		if = {
 			limit = { NOT = { has_global_flag = endtimes_french_civil_war_announced } }
 			set_global_flag = endtimes_french_civil_war_announced
-			every_country = {
-				limit = { is_ai = no }
-				country_event = { id = endtimes.22 }
-			}
+			news_event = { id = endtimes.22 }
 		}
 		# Leadership changes after five full days, independently of popup dismissal.
 		country_event = { id = endtimes.11 days = 5 }

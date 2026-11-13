@@ -1,0 +1,184 @@
+add_namespace = rev_pacific_escalation
+
+country_event = {
+	id = rev_pacific_escalation.1
+	hidden = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = NKO
+		KOR = { exists = yes }
+		NOT = { has_war_with = KOR }
+		NOT = { is_in_faction_with = KOR }
+		NOT = { has_country_flag = rev_pacific_north_korea_attack_done }
+	}
+	immediate = {
+		set_country_flag = rev_pacific_north_korea_attack_done
+		set_global_flag = rev_pacific_korean_war_announced
+		declare_war_on = { target = KOR type = annex_everything }
+		news_event = { id = rev_pacific_escalation.2 }
+	}
+}
+
+news_event = {
+	id = rev_pacific_escalation.2
+	title = rev_pacific_escalation.2.t
+	desc = rev_pacific_escalation.2.d
+	picture = GFX_news_generic_soldiers
+	is_triggered_only = yes
+	major = yes
+	trigger = { has_global_flag = rev_pacific_korean_war_announced }
+	option = { name = rev_pacific_escalation.2.a }
+}
+
+# Queued exactly three days after China's declaration of war on Taiwan.
+country_event = {
+	id = rev_pacific_escalation.3
+	hidden = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = CHI
+		NOT = { has_country_flag = rev_pacific_response_completed }
+	}
+	immediate = {
+		set_country_flag = rev_pacific_response_completed
+		JAP = {
+			if = {
+				limit = { exists = yes NOT = { is_subject = yes } NOT = { is_in_faction = yes } }
+				create_faction_from_template = faction_template_seato
+				set_faction_leader = yes
+			}
+			if = {
+				limit = { exists = yes is_in_faction = yes NOT = { is_in_faction_with = CHI } }
+				if = {
+					limit = {
+						KOR = { exists = yes NOT = { is_subject = yes } NOT = { is_in_faction = yes } NOT = { has_war_with = JAP } }
+					}
+					add_to_faction = KOR
+				}
+				if = {
+					limit = {
+						PHI = { exists = yes NOT = { is_subject = yes } NOT = { is_in_faction = yes } NOT = { has_war_with = JAP } }
+					}
+					add_to_faction = PHI
+				}
+				if = {
+					limit = {
+						AST = { exists = yes NOT = { is_subject = yes } NOT = { is_in_faction = yes } NOT = { has_war_with = JAP } }
+					}
+					add_to_faction = AST
+				}
+				if = {
+					limit = {
+						NZL = { exists = yes NOT = { is_subject = yes } NOT = { is_in_faction = yes } NOT = { has_war_with = JAP } }
+					}
+					add_to_faction = NZL
+				}
+			}
+		}
+		JAP = {
+			if = {
+				limit = { exists = yes NOT = { has_war_with = CHI } NOT = { is_in_faction_with = CHI } NOT = { is_subject_of = CHI } }
+				declare_war_on = { target = CHI type = annex_everything }
+			}
+		}
+		AST = {
+			if = {
+				limit = { exists = yes NOT = { has_war_with = CHI } NOT = { is_in_faction_with = CHI } NOT = { is_subject_of = CHI } }
+				declare_war_on = { target = CHI type = annex_everything }
+			}
+		}
+		PHI = {
+			if = {
+				limit = { exists = yes NOT = { has_war_with = CHI } NOT = { is_in_faction_with = CHI } NOT = { is_subject_of = CHI } }
+				declare_war_on = { target = CHI type = annex_everything }
+			}
+		}
+		set_global_flag = rev_pacific_response_announced
+		news_event = { id = rev_pacific_escalation.4 }
+	}
+}
+
+news_event = {
+	id = rev_pacific_escalation.4
+	title = rev_pacific_escalation.4.t
+	desc = rev_pacific_escalation.4.d
+	picture = GFX_news_generic_soldiers
+	is_triggered_only = yes
+	major = yes
+	trigger = { has_global_flag = rev_pacific_response_announced }
+	option = { name = rev_pacific_escalation.4.a }
+}
+
+# Israel's Khuzestan strike prompts one North Korean nuclear attack.
+country_event = {
+	id = rev_pacific_escalation.5
+	hidden = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = NKO
+		has_global_flag = endtimes_khuzestan_nuked
+		has_war_with = KOR
+		NOT = { has_country_flag = rev_pacific_north_korea_nuclear_strike_done }
+		OR = {
+			NOT = { controls_province = 7204 }
+			NOT = { controls_province = 4056 }
+		}
+	}
+	immediate = {
+		set_country_flag = rev_pacific_north_korea_nuclear_strike_done
+		set_global_flag = rev_pacific_north_korea_nuclear_strike_announced
+		if = {
+			limit = { NOT = { controls_province = 7204 } }
+			launch_nuke = { province = 7204 use_nuke = no } # Daejeon
+		}
+		else = {
+			# Ulsan shares coastal province 4056, labelled Busan on this map.
+			launch_nuke = { province = 4056 use_nuke = no }
+		}
+		news_event = { id = rev_pacific_escalation.6 }
+		country_event = { id = rev_pacific_escalation.7 days = 2 }
+	}
+}
+
+news_event = {
+	id = rev_pacific_escalation.6
+	title = rev_pacific_escalation.6.t
+	desc = rev_pacific_escalation.6.d
+	picture = GFX_news_nuclear_test
+	is_triggered_only = yes
+	major = yes
+	trigger = { has_global_flag = rev_pacific_north_korea_nuclear_strike_announced }
+	option = { name = rev_pacific_escalation.6.a }
+}
+
+# Unattributed retaliation, exactly two days after North Korea's nuclear attack.
+country_event = {
+	id = rev_pacific_escalation.7
+	hidden = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = NKO
+		has_country_flag = rev_pacific_north_korea_nuclear_strike_done
+		NOT = { has_global_flag = rev_pacific_pyongyang_nuked }
+	}
+	immediate = {
+		set_global_flag = rev_pacific_pyongyang_nuked
+		# The engine needs a launching country; the WNN report leaves it unidentified.
+		random_other_country = {
+			limit = { OR = { tag = USA tag = ENG } }
+			launch_nuke = { province = 4052 use_nuke = no } # Pyongyang
+		}
+		news_event = { id = rev_pacific_escalation.8 }
+	}
+}
+
+news_event = {
+	id = rev_pacific_escalation.8
+	title = rev_pacific_escalation.8.t
+	desc = rev_pacific_escalation.8.d
+	picture = GFX_news_nuclear_test
+	is_triggered_only = yes
+	major = yes
+	trigger = { has_global_flag = rev_pacific_pyongyang_nuked }
+	option = { name = rev_pacific_escalation.8.a }
+}

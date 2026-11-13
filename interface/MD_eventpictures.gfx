@@ -1,5 +1,13 @@
 spriteTypes = {
 	spriteType = {
+		name = "GFX_ark_in_heaven"
+		texturefile = "gfx/event_pictures/generic/news/ark_in_heaven.dds"
+	}
+	spriteType = {
+		name = "GFX_onefaith_gold_ring"
+		texturefile = "gfx/event_pictures/generic/news/onefaith_gold_ring.dds"
+	}
+	spriteType = {
 		name = "GFX_african_campaign"
 		texturefile = "gfx/event_pictures/africa/african_campaign.dds"
 	}
@@ -5229,7 +5237,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_FRA_eldest_daughter_of_the_church"
-		texturefile = "gfx/event_pictures/europe/france - FRA/FRA_eldest_daughter_of_the_church.dds"
+		texturefile = "gfx/event_pictures/europe/france - FRA/eldest_daughter.dds"
 	}
 	spriteType = {
 		name = "GFX_FRA_election_2002_news"
@@ -8026,6 +8034,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_unification_of_church_and_state"
 		texturefile = "gfx/event_pictures/europe/russia - SOV/unification_of_church_and_state.dds"
+	}
+	spriteType = {
+		name = "GFX_cross_sky"
+		texturefile = "gfx/event_pictures/europe/france - FRA/cross_sky.dds"
 	}
 	spriteType = {
 		name = "GFX_union_state_army_world"

@@ -1,0 +1,24 @@
+on_actions = {
+	on_daily = {
+		effect = {
+			if = {
+				limit = {
+					has_government = nationalist
+					NOT = { has_country_flag = rev_nato_post_election_membership_checked }
+					OR = {
+						AND = {
+							tag = FRA
+							has_country_flag = rev_fra_2027_handover_done
+							has_country_flag = rev_fra_2027_le_pen_elected
+						}
+						AND = {
+							tag = ITA
+							has_country_flag = rev_ita_2027_election_resolved
+						}
+					}
+				}
+				country_event = { id = rev_nato_election_membership.1 }
+			}
+		}
+	}
+}

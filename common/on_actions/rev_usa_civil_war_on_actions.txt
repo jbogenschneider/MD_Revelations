@@ -1,41 +1,4 @@
 on_actions = {
-	# France under Le Pen and Italy under De Beaman use the shared NATO opt-out.
-	# Check the target's membership before either departure changes that status.
-	on_declare_war = {
-		effect = {
-			if = {
-				limit = {
-					ROOT = { tag = USA }
-					FROM = { has_idea = NATO_member }
-				}
-				FRA = {
-					if = {
-						limit = {
-							exists = yes
-							has_idea = NATO_member
-							has_country_leader = { name = "Marine Le Pen" ruling_only = yes }
-						}
-						log = "[GetDateText]: [This.GetName]: Marine Le Pen withdraws France from NATO after a US attack on a NATO member."
-						rev_nato_anti_usa_opt_out = yes
-						set_country_flag = rev_nato_anti_usa_opt_out_resolved_fra
-					}
-				}
-				ITA = {
-					if = {
-						limit = {
-							exists = yes
-							has_idea = NATO_member
-							has_country_leader = { name = "Stefano De Beaman" ruling_only = yes }
-						}
-						log = "[GetDateText]: [This.GetName]: Stefano De Beaman withdraws Italy from NATO after a US attack on a NATO member."
-						rev_nato_anti_usa_opt_out = yes
-						set_country_flag = rev_nato_anti_usa_opt_out_resolved_ita
-					}
-				}
-			}
-		}
-	}
-
 	on_daily = {
 		effect = {
 			if = {
@@ -74,6 +37,42 @@ on_actions = {
 			}
 			if = {
 				limit = {
+					tag = FRA
+					has_idea = NATO_member
+					has_war_with = USA
+					has_country_leader = { name = "Marine Le Pen" ruling_only = yes }
+					NOT = { has_country_flag = rev_nato_anti_usa_opt_out_resolved_fra }
+				}
+				if = {
+					limit = { is_ai = yes }
+					rev_nato_anti_usa_opt_out = yes
+					set_country_flag = rev_nato_anti_usa_opt_out_resolved_fra
+				}
+				else = {
+					log = "[GetDateText]: [Root.GetName]: on_action firing rev_usa_cw.59 (France anti-USA NATO opt-out)"
+					country_event = { id = rev_usa_cw.59 }
+				}
+			}
+			if = {
+				limit = {
+					tag = ITA
+					has_idea = NATO_member
+					has_war_with = USA
+					has_country_leader = { name = "Stefano De Beaman" ruling_only = yes }
+					NOT = { has_country_flag = rev_nato_anti_usa_opt_out_resolved_ita }
+				}
+				if = {
+					limit = { is_ai = yes }
+					rev_nato_anti_usa_opt_out = yes
+					set_country_flag = rev_nato_anti_usa_opt_out_resolved_ita
+				}
+				else = {
+					log = "[GetDateText]: [Root.GetName]: on_action firing rev_usa_cw.60 (Italy anti-USA NATO opt-out)"
+					country_event = { id = rev_usa_cw.60 }
+				}
+			}
+			if = {
+				limit = {
 					tag = HUN
 					has_idea = NATO_member
 					has_war_with = USA
@@ -106,22 +105,7 @@ on_actions = {
 					country_event = { id = rev_usa_cw.56 }
 				}
 			}
-			if = {
-				limit = {
-					original_tag = TUR
-					NOT = { has_idea = NATO_member }
-					PER = {
-						exists = yes
-						has_war_with = ISR
-					}
-					USA = {
-						exists = yes
-						has_war_with = GER
-					}
-					NOT = { has_country_flag = rev_tur_levant_war_decided }
-				}
-				country_event = { id = rev_tur_startup.2 }
-			}
+			# Turkish intervention in Iran's regional escalation is disconnected.
 			if = {
 				limit = {
 					tag = CAN
@@ -197,23 +181,14 @@ on_actions = {
 			if = {
 				limit = {
 					tag = USA
-					NOT = { has_country_flag = rev_usa_cw_end_of_content_2031_fired }
-					date > 2031.12.5
-					date < 2031.12.7
-				}
-				country_event = { id = rev_usa_cw.45 }
-			}
-			if = {
-				limit = {
-					tag = USA
 					has_country_flag = rev_usa_cw_china_war_launched
 					has_war_with = CHI
 					TAI = { exists = yes }
 					NOT = { has_country_flag = rev_chi_tw_peace_resolved }
 					NOT = { has_country_flag = rev_chi_tw_china_victory_offer_pending }
 					NOT = { has_country_flag = rev_chi_tw_usa_white_peace_pending }
-					date > 2029.6.2
-					date < 2029.6.5
+					date > 2028.3.2
+					date < 2028.3.5
 				}
 				set_country_flag = rev_chi_tw_usa_white_peace_pending
 				country_event = { id = rev_chi_tw.30 }
@@ -227,7 +202,7 @@ on_actions = {
 						has_war_with = GER
 					}
 					NOT = { has_variable = USA_borrowed_at_start_of_war }
-					date > 2029.3.2
+					date > 2027.12.2
 				}
 				set_variable = { var = USA_borrowed_at_start_of_war value = debt }
 				set_variable = { var = USA_debt_warning_threshold value = debt }
@@ -318,6 +293,7 @@ on_actions = {
 				}
 				country_event = { id = rev_usa_cw.41 }
 			}
+			#moved up 1 year and 3 months
 			if = {
 				limit = {
 					tag = USA
@@ -326,8 +302,8 @@ on_actions = {
 					country_exists = USB
 					has_war_with = USB
 					NOT = { has_global_flag = rev_usa_cw_concluded }
-					date > 2029.12.24
-					date < 2029.12.29
+					date > 2028.9.24
+					date < 2028.9.29
 					# Avoid stalemate trigger when one side has a decisive war lead.
 					# A rough proxy for non-lopsided score: no side should be
 					# leading by roughly 75/25 strength.
@@ -364,14 +340,14 @@ on_actions = {
 				log = "[GetDateText]: [Root.GetName]: on_action firing rev_usa_cw.21 (tariff repeal checkpoint)."
 				country_event = { id = rev_usa_cw.21 }
 			}
-			#election field set rev_usa_cw_election_field_2028_fired
+			#trump is annoyed by threat of impeachment
 			if = {
 				limit = {
 					tag = USA
 					NOT = { has_country_flag = rev_usa_cw_election_field_2028_fired }
 					NOT = { has_country_flag = rev_usa_civil_war_initialized }
-					date > 2028.5.3
-					date < 2028.5.7
+					date > 2027.4.13
+					date < 2027.4.17
 				}
 				log = "[GetDateText]: [Root.GetName]: on_action firing rev_usa_cw.22 (election field checkpoint)."
 				country_event = { id = rev_usa_cw.22 }
@@ -382,8 +358,8 @@ on_actions = {
 					tag = USA
 					NOT = { has_country_flag = rev_usa_cw_aug_branch_fired }
 					NOT = { has_country_flag = rev_usa_civil_war_initialized }
-					date > 2028.8.14
-					date < 2028.8.19
+					date > 2027.5.14
+					date < 2027.5.19
 				}
 				log = "[GetDateText]: [Root.GetName]: on_action firing rev_usa_cw.10 (blame Canada checkpoint)."
 				country_event = { id = rev_usa_cw.10 }
@@ -395,35 +371,37 @@ on_actions = {
 					has_country_flag = rev_usa_cw_blame_canada
 					NOT = { has_country_flag = rev_usa_cw_scotus_fired }
 					NOT = { has_country_flag = rev_usa_civil_war_initialized }
-					date > 2028.8.25
-					date < 2028.8.31
+					date > 2027.5.25
+					date < 2027.5.31
 				}
 				log = "[GetDateText]: [Root.GetName]: on_action firing rev_usa_cw.30 (court/impeachment checkpoint)."
 				country_event = { id = rev_usa_cw.30 }
 			}
-			if = {  # coup or not to coup
+			if = {  # coup or not to coup from 9.28
 				limit = {
 					tag = USA
 					has_country_flag = rev_usa_cw_blame_canada
 					has_country_flag = rev_usa_cw_scotus_fired
 					NOT = { has_country_flag = rev_usa_cw_coup_fired }
 					NOT = { has_country_flag = rev_usa_civil_war_initialized }
-					date > 2028.9.19
-					date < 2028.9.22
+					date > 2027.6.19
+					date < 2027.6.22
 				}
 				log = "[GetDateText]: [Root.GetName]: on_action firing rev_usa_cw.310 (coup checkpoint)."
 				country_event = { id = rev_usa_cw.310 }
 			}
+			# trump coup - moving this up from 10.28
 			if = {
 				limit = {
 					tag = USB
 					USA = { has_country_flag = rev_usa_cw_coup_fired }
 					USA = { NOT = { has_country_flag = rev_usa_cw_launch_event_fired } }
-					date > 2028.10.9
-					date < 2028.10.13
+					date > 2027.7.9
+					date < 2027.7.13
 				}
 				country_event = { id = rev_usa_cw.32 }
 			}
+			#trump went quietly
 			if = {
 				limit = {
 					tag = USA
@@ -438,6 +416,7 @@ on_actions = {
 				}
 				country_event = { id = rev_usa_cw.23 }
 			}
+			#trump went quietly - peaceful transition of power
 			if = {
 				limit = {
 					tag = USA
@@ -449,6 +428,7 @@ on_actions = {
 				}
 				country_event = { id = rev_usa_cw.24 }
 			}
+			# I don't think this is used
 			if = {
 				limit = {
 					tag = USA
@@ -497,24 +477,7 @@ on_actions = {
 
 	on_weekly = {
 		effect = {
-			if = {
-				limit = {
-					tag = CHI
-					NOT = { has_country_flag = rev_chi_tw_nato_window_used }
-					NOT = { has_war_with = TAI }
-					TAI = {
-						exists = yes
-						NOT = { is_subject_of = CHI }
-					}
-					USA = { exists = yes }
-					any_country = {
-						has_idea = NATO_member
-						NOT = { tag = USA }
-						has_war_with = USA
-					}
-				}
-				country_event = { id = rev_chi_tw.10 }
-			}
+			# The USA-war Taiwan ultimatum is disconnected; Endtimes schedules China's wars.
 			if = {
 				limit = {
 					tag = CHI

@@ -1,0 +1,21 @@
+# China exploits simultaneous wars in North America/Europe and the Levant.
+rev_chi_tw_regional_war_window = {
+	tag = CHI
+	NOT = { has_country_flag = rev_chi_tw_regional_invasion_launched }
+	NOT = { is_subject = yes }
+	NOT = { has_war_with = TAI }
+	NOT = { is_in_faction_with = TAI }
+	TAI = {
+		exists = yes
+		NOT = { is_subject_of = CHI }
+	}
+	USA = { exists = yes }
+	any_country = {
+		has_idea = NATO_member
+		has_war_with = USA
+	}
+	PER = {
+		exists = yes
+		has_war_with = ISR
+	}
+}
