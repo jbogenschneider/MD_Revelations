@@ -115,6 +115,8 @@ on_actions = {
 			if = {  #oligarchs coup
 				limit = {
 					tag = SOV
+					NOT = { has_country_flag = russia_quick_peace_accepted_2026 }
+					NOT = { has_country_flag = endtimes_russia_international_transition }
 					has_country_flag = russia_soldiers_unpaid_2026
 					NOT = { has_country_flag = russia_oligarch_council_active }
 					NOT = { has_country_flag = putin_bloody_purge }
@@ -156,10 +158,10 @@ on_actions = {
 					has_country_flag = rev_russia_starlink_social_removed_2026
 				}
 				# Baseline losses increased by 25% after Starlink/social media removal.
-				add_manpower = -10000
+				add_manpower = -10500
 				add_equipment_to_stockpile = { type = util_vehicle_equipment amount = -105 }
-				add_equipment_to_stockpile = { type = MBT_equipment amount = -13 }
-				add_equipment_to_stockpile = { type = IFV_equipment amount = -13 }
+				add_equipment_to_stockpile = { type = MBT_equipment amount = -10 }
+				add_equipment_to_stockpile = { type = IFV_equipment amount = -10 }
 				add_equipment_to_stockpile = { type = APC_equipment amount = -6 }
 			}
 			if = {
@@ -179,11 +181,11 @@ on_actions = {
 					tag = UKR
 					has_war = yes
 				}
-				add_manpower = -400
-				add_equipment_to_stockpile = { type = util_vehicle_equipment amount = -30 }
-				add_equipment_to_stockpile = { type = MBT_equipment amount = -2 }
-				add_equipment_to_stockpile = { type = IFV_equipment amount = -3 }
-				add_equipment_to_stockpile = { type = APC_equipment amount = -2 }
+				add_manpower = -600
+				add_equipment_to_stockpile = { type = util_vehicle_equipment amount = -20 }
+				add_equipment_to_stockpile = { type = MBT_equipment amount = -4 }
+				add_equipment_to_stockpile = { type = IFV_equipment amount = -5 }
+				add_equipment_to_stockpile = { type = APC_equipment amount = -4 }
 			}
 		}
 	}

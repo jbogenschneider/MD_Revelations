@@ -1,0 +1,66 @@
+# Run after the Great Peace's war settlements, before its WNN announcement.
+endtimes_reunite_westnato_with_nato = {
+	# Snapshot all surviving members: dissolving the faction can cancel its ideas.
+	every_country = {
+		limit = {
+			exists = yes
+			OR = {
+				rev_is_westnato_faction = yes
+				has_idea = WestNATO_member
+				is_in_array = { global.westnato_members = THIS }
+			}
+		}
+		set_country_flag = endtimes_westnato_reunion_member
+	}
+	if = {
+		limit = { any_country = { has_country_flag = endtimes_westnato_reunion_member } }
+		# Preserve continental NATO and its German leadership.
+		GER = {
+			if = {
+				limit = { exists = yes is_subject = no }
+				endtimes_ensure_nato_membership = yes
+				set_faction_leader = yes
+			}
+		}
+		every_country = {
+			limit = {
+				rev_is_westnato_faction = yes
+				is_faction_leader = yes
+			}
+			dismantle_faction = yes
+		}
+		# Agreed reunification: do not use WestNATO_leave's departure penalties.
+		every_country = {
+			limit = { has_country_flag = endtimes_westnato_reunion_member }
+			remove_ideas = WestNATO_member
+			clr_country_flag = rev_westnato_faction_member
+			remove_from_tech_sharing_group = WestNATO_Tech_Share
+			remove_from_array = { global.westnato_members = THIS }
+			every_other_country = {
+				limit = {
+					OR = {
+						has_country_flag = endtimes_westnato_reunion_member
+						has_idea = NATO_member
+					}
+				}
+				remove_opinion_modifier = { target = PREV modifier = WestNATO_member_modifier }
+				remove_opinion_modifier = { target = PREV modifier = WestNATO_aspirant }
+				remove_opinion_modifier = { target = PREV modifier = left_westnato }
+				remove_opinion_modifier = { target = PREV modifier = left_nato }
+				PREV = {
+					remove_opinion_modifier = { target = PREV modifier = WestNATO_member_modifier }
+					remove_opinion_modifier = { target = PREV modifier = WestNATO_aspirant }
+					remove_opinion_modifier = { target = PREV modifier = left_westnato }
+					remove_opinion_modifier = { target = PREV modifier = left_nato }
+				}
+			}
+		}
+		every_country = {
+			limit = { has_country_flag = endtimes_westnato_reunion_member }
+			endtimes_ensure_nato_membership = yes
+			clr_country_flag = endtimes_westnato_reunion_member
+		}
+		clear_array = global.westnato_members
+		set_global_flag = endtimes_nato_reunited_at_ceasefire
+	}
+}

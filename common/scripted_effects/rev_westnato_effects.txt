@@ -1,0 +1,126 @@
+# Country scope. The first member founds WestNATO; later members join its leader.
+# THIS is saved explicitly so calls from another country's events are safe.
+WestNATO_join = {
+    if = {
+        limit = {
+            exists = yes
+            is_subject = no
+            NOT = {
+                any_other_country = {
+                    has_idea = WestNATO_member
+                    rev_is_westnato_faction = yes
+                    is_faction_leader = yes
+                    has_war_with = PREV
+                }
+            }
+        }
+        if = { limit = { has_idea = MeccaPact_member } MeccaPact_leave = yes }
+        if = { limit = { has_idea = NATO_member } NATO_leave = yes }
+        save_event_target_as = rev_westnato_applicant
+        if = {
+            limit = { NOT = { rev_is_westnato_faction = yes } }
+            if = { limit = { is_in_faction = yes } leave_faction = yes }
+            random_other_country = {
+                limit = {
+                    has_idea = WestNATO_member
+                    rev_is_westnato_faction = yes
+                    is_faction_leader = yes
+                }
+                add_to_faction = event_target:rev_westnato_applicant
+            }
+            if = {
+                limit = { is_in_faction = no }
+                create_faction = WestNATO
+                set_country_flag = rev_westnato_faction_member
+            }
+        }
+        set_country_flag = rev_westnato_faction_member
+        if = {
+            limit = { NOT = { has_idea = WestNATO_member } }
+            for_each_scope_loop = {
+                array = global.westnato_members
+                if = {
+                    limit = { exists = yes has_idea = WestNATO_member NOT = { tag = PREV } }
+                    add_opinion_modifier = { target = PREV modifier = WestNATO_member_modifier }
+                    reverse_add_opinion_modifier = { target = PREV modifier = WestNATO_member_modifier }
+                    diplomatic_relation = { country = PREV relation = military_access active = yes }
+                    PREV = {
+                        diplomatic_relation = { country = PREV relation = military_access active = yes }
+                    }
+                }
+            }
+            add_ideas = WestNATO_member
+        }
+        if = {
+            limit = { NOT = { is_in_array = { global.westnato_members = THIS } } }
+            add_to_array = { global.westnato_members = THIS }
+        }
+        add_to_tech_sharing_group = WestNATO_Tech_Share
+        remove_ideas = Major_Non_NATO_Ally
+        custom_effect_tooltip = WestNATO_join_tt
+    }
+}
+
+WestNATO_leave = {
+	if = {
+		limit = { has_idea = WestNATO_member }
+
+		remove_from_array = { global.westnato_members = THIS }
+		remove_ideas = WestNATO_member
+		remove_from_tech_sharing_group = WestNATO_Tech_Share
+		leave_faction = yes
+		clr_country_flag = rev_westnato_faction_member
+
+		for_each_scope_loop = {
+			array = global.westnato_members
+			if = {
+				limit = { has_idea = WestNATO_member }
+				# Nato members are mad you left.
+				add_opinion_modifier = { target = PREV modifier = left_westnato }
+
+				# Remove westnato opinion boost.
+				remove_opinion_modifier = { target = PREV modifier = WestNATO_aspirant }
+				remove_opinion_modifier = { target = PREV modifier = WestNATO_member_modifier }
+				PREV = {
+					remove_opinion_modifier = { target = PREV modifier = WestNATO_member_modifier }
+					remove_opinion_modifier = { target = PREV modifier = WestNATO_aspirant }
+				}
+
+				# Remove military access.
+				diplomatic_relation = {
+					country = PREV
+					relation = military_access
+					active = no
+				}
+				PREV = {
+					diplomatic_relation = {
+						country = PREV
+						relation = military_access
+						active = no
+					}
+				}
+			}
+		}
+
+		custom_effect_tooltip = WestNATO_leave_tt
+	}
+}
+
+# Country-scope transfer aliases for events, focuses and console effects.
+NATO_transfer_to_WestNATO = { WestNATO_join = yes }
+WestNATO_transfer_to_NATO = {
+    if = {
+        limit = {
+            exists = yes
+            is_subject = no
+            NOT = {
+                any_other_country = {
+                    has_idea = NATO_member
+                    is_faction_leader = yes
+                    has_war_with = PREV
+                }
+            }
+        }
+        endtimes_ensure_nato_membership = yes
+    }
+}

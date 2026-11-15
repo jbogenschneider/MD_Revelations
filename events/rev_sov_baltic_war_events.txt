@@ -1,5 +1,83 @@
 add_namespace = rev_sov_baltic
 
+# The player can refuse; AI Russia attacks with a 90 percent chance.
+country_event = {
+	id = rev_sov_baltic.3
+	title = rev_sov_baltic.3.t
+	desc = rev_sov_baltic.3.d
+	picture = GFX_report_event_generic_military
+	is_triggered_only = yes
+
+	trigger = { rev_sov_narva_crisis_available = yes }
+	immediate = { set_country_flag = rev_sov_narva_decision_presented }
+
+	option = {
+		name = rev_sov_baltic.3.a
+		ai_chance = { base = 90 }
+		# Recheck the essentials if the player leaves this decision open.
+		trigger = {
+			has_war = no
+			has_country_leader = { name = "Vladimir Putin" ruling_only = yes }
+			BLR = { exists = yes }
+			EST = {
+				exists = yes
+				is_subject = no
+				has_faction_template = faction_template_nato
+				NOT = { is_in_faction_with = SOV }
+			}
+		}
+		if = {
+			limit = { BLR = { NOT = { is_subject_of = SOV } } }
+			set_autonomy = {
+				target = BLR
+				autonomy_state = autonomy_puppet_state
+			}
+		}
+		declare_war_on = { target = EST type = annex_everything }
+		if = {
+			limit = { has_war_with = EST }
+			set_country_flag = rev_sov_narva_attack_launched
+			# Do not also launch the older 2029 Baltic escalation.
+			set_country_flag = rev_sov_baltic_war_fired
+			custom_effect_tooltip = rev_sov_baltic.3.nato_response_tt
+			hidden_effect = {
+				every_other_country = {
+					limit = {
+						has_faction_template = faction_template_nato
+						is_in_faction_with = EST
+						NOT = { has_war_with = SOV }
+					}
+					add_to_war = {
+						targeted_alliance = EST
+						enemy = SOV
+						hostility_reason = asked_to_join
+						single_target_only = yes
+					}
+				}
+			}
+			news_event = { id = rev_sov_baltic.4 days = 1 }
+		}
+	}
+
+	option = {
+		name = rev_sov_baltic.3.b
+		ai_chance = { base = 10 }
+		set_country_flag = rev_sov_narva_attack_declined
+	}
+}
+
+# Worldwide WNN report, one day after the attack is actually launched.
+news_event = {
+	id = rev_sov_baltic.4
+	title = rev_sov_baltic.4.t
+	desc = rev_sov_baltic.4.d
+	picture = GFX_news_generic_soldiers
+	is_triggered_only = yes
+	major = yes
+	trigger = { SOV = { has_country_flag = rev_sov_narva_attack_launched } }
+	option = { name = rev_sov_baltic.4.a }
+}
+
 country_event = {
 	id = rev_sov_baltic.1
 	is_triggered_only = yes
@@ -18,7 +96,7 @@ country_event = {
 		}
 		OR = {
 			USA = { has_war_with = CAN }
-			USA = { has_war_with = GER }
+			USA = { has_war_with = ENG }
 			USA = { has_war_with = POL }
 		}
 	}

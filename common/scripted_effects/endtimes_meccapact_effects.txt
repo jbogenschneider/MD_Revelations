@@ -1,0 +1,54 @@
+# Country scope. Run for all participants before dispatching their entry events,
+# so existing wars between participants cannot block MeccaPact membership.
+endtimes_prepare_meccapact_realignment = {
+	save_event_target_as = endtimes_meccapact_applicant
+	every_other_country = {
+		limit = { has_war_with = event_target:endtimes_meccapact_applicant }
+		white_peace = event_target:endtimes_meccapact_applicant
+	}
+	# A participant cannot leave an outside overlord's faction while a subject.
+	# This realignment makes those participants independent pact members.
+	if = {
+		limit = {
+			is_subject = yes
+			NOT = { has_faction_template = faction_template_meccapact }
+		}
+		overlord = {
+			set_autonomy = { target = event_target:endtimes_meccapact_applicant autonomy_state = autonomy_free }
+		}
+	}
+	if = {
+		limit = {
+			is_subject = no
+			NOT = { has_faction_template = faction_template_meccapact }
+		}
+		MeccaPact_leave_previous_alliance = yes
+	}
+}
+
+# Country scope. Keep the realignment's Cabal benefits, with Saudi leadership.
+endtimes_join_meccapact_and_cabal = {
+	endtimes_prepare_meccapact_realignment = yes
+	MeccaPact_join = yes
+	if = {
+		limit = { has_faction_template = faction_template_meccapact }
+		add_ideas = endtimes_cabal
+		set_country_flag = endtimes_cabal_initialized
+		endtimes_refresh_support_floor = yes
+		# Realignment adoption has its own 30% terms, not the separate 80% deal.
+		if = {
+			limit = { NOT = { tag = SOV } }
+			if = {
+				limit = { NOT = { has_idea = Solomon_one_world_currency } }
+				add_ideas = Solomon_one_world_currency
+				if = {
+					limit = { NOT = { has_country_flag = rev_solomon_currency_adopted } }
+					multiply_variable = { debt = 0.70 }
+				}
+			}
+			# Prevent a later adoption event from granting another debt write-off.
+			set_country_flag = rev_solomon_currency_adopted
+			ingame_update_setup = yes
+		}
+	}
+}

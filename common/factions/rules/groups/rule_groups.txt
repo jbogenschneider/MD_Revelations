@@ -162,6 +162,7 @@ rule_group_peace_rules = {
 		faction_peace_take_claimed_focus
 		faction_peace_nato_doctrine
 		faction_peace_csto_doctrine
+		faction_peace_meccapact_doctrine
 		faction_peace_china_focus # New Order in East Asia
 	}
 }

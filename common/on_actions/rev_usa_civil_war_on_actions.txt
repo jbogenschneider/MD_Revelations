@@ -1,6 +1,16 @@
 on_actions = {
 	on_daily = {
 		effect = {
+			# Complete the split during the invasion warning, before Canada is attacked.
+			if = {
+				limit = {
+					tag = USA
+					has_country_flag = rev_usa_cw_canada_invasion_justified
+					NOT = { has_country_flag = rev_usa_cw_canada_invasion_launched }
+					NOT = { has_global_flag = rev_nato_canada_reorganized }
+				}
+				rev_reorganize_nato_for_canada = yes
+			}
 			if = {
 				limit = {
 					tag = GER
@@ -17,6 +27,7 @@ on_actions = {
 				limit = {
 					tag = GER
 					is_in_faction = yes
+					has_faction_template = faction_template_nato
 					NOT = { is_faction_leader = yes }
 					OR = {
 						has_global_flag = rev_nato_lock_ger_leader
@@ -34,59 +45,6 @@ on_actions = {
 					NOT = { has_country_flag = rev_usa_cw_american_resistance_fired }
 				}
 				country_event = { id = rev_usa_cw.316 }
-			}
-			if = {
-				limit = {
-					tag = FRA
-					has_idea = NATO_member
-					has_war_with = USA
-					has_country_leader = { name = "Marine Le Pen" ruling_only = yes }
-					NOT = { has_country_flag = rev_nato_anti_usa_opt_out_resolved_fra }
-				}
-				if = {
-					limit = { is_ai = yes }
-					rev_nato_anti_usa_opt_out = yes
-					set_country_flag = rev_nato_anti_usa_opt_out_resolved_fra
-				}
-				else = {
-					log = "[GetDateText]: [Root.GetName]: on_action firing rev_usa_cw.59 (France anti-USA NATO opt-out)"
-					country_event = { id = rev_usa_cw.59 }
-				}
-			}
-			if = {
-				limit = {
-					tag = ITA
-					has_idea = NATO_member
-					has_war_with = USA
-					has_country_leader = { name = "Stefano De Beaman" ruling_only = yes }
-					NOT = { has_country_flag = rev_nato_anti_usa_opt_out_resolved_ita }
-				}
-				if = {
-					limit = { is_ai = yes }
-					rev_nato_anti_usa_opt_out = yes
-					set_country_flag = rev_nato_anti_usa_opt_out_resolved_ita
-				}
-				else = {
-					log = "[GetDateText]: [Root.GetName]: on_action firing rev_usa_cw.60 (Italy anti-USA NATO opt-out)"
-					country_event = { id = rev_usa_cw.60 }
-				}
-			}
-			if = {
-				limit = {
-					tag = HUN
-					has_idea = NATO_member
-					has_war_with = USA
-					NOT = { has_country_flag = rev_nato_anti_usa_opt_out_resolved_hun }
-				}
-				if = {
-					limit = { is_ai = yes }
-					rev_nato_anti_usa_opt_out = yes
-					set_country_flag = rev_nato_anti_usa_opt_out_resolved_hun
-				}
-				else = {
-					log = "[GetDateText]: [Root.GetName]: on_action firing rev_usa_cw.55 (Hungary anti-USA NATO opt-out)"
-					country_event = { id = rev_usa_cw.55 }
-				}
 			}
 			if = {
 				limit = {
@@ -148,7 +106,7 @@ on_actions = {
 						is_controlled_by = USA
 					}
 					any_country = {
-						has_idea = NATO_member
+						OR = { has_idea = NATO_member has_idea = WestNATO_member }
 						NOT = { tag = USA }
 						has_war_with = USA
 					}
@@ -199,7 +157,7 @@ on_actions = {
 					has_country_leader = { name = "Donald Trump" ruling_only = yes }
 					OR = {
 						has_war_with = CAN
-						has_war_with = GER
+						has_war_with = ENG
 					}
 					NOT = { has_variable = USA_borrowed_at_start_of_war }
 					date > 2027.12.2
@@ -219,7 +177,7 @@ on_actions = {
 					has_country_leader = { name = "Donald Trump" ruling_only = yes }
 					OR = {
 						has_war_with = CAN
-						has_war_with = GER
+						has_war_with = ENG
 					}
 					has_variable = USA_debt_warning_threshold
 					NOT = { has_country_flag = rev_usa_debt_warning_fired }
@@ -234,7 +192,7 @@ on_actions = {
 					has_country_leader = { name = "Donald Trump" ruling_only = yes }
 					OR = {
 						has_war_with = CAN
-						has_war_with = GER
+						has_war_with = ENG
 					}
 					has_variable = USA_debt_first_loss_threshold
 					has_country_flag = rev_usa_debt_warning_fired
@@ -250,7 +208,7 @@ on_actions = {
 					has_country_leader = { name = "Donald Trump" ruling_only = yes }
 					OR = {
 						has_war_with = CAN
-						has_war_with = GER
+						has_war_with = ENG
 					}
 					has_variable = USA_debt_second_loss_threshold
 					has_country_flag = rev_usa_debt_unpaid_troops_fired

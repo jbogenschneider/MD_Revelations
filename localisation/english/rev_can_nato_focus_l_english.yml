@@ -56,4 +56,9 @@
  REV_CAN_NATO_rally_for_a_return_to_peace_desc:0 "Promise that victory and endurance are the fastest path back to peace, security, and normal life."
  REV_CAN_NATO_volunteers_from_asia:0 "Volunteers from Asia"
  REV_CAN_NATO_volunteers_from_asia_desc:0 "Across the Pacific there are veterans and activists ready to reinforce Canada in the struggle against Washington."
+ REV_CAN_NATO_volunteers_from_europe:0 "Volunteers from Europe"
+ REV_CAN_NATO_volunteers_from_europe_desc:0 "Most of NATO is officially out of the war but NATO countries are sparing any volunteers that want to go to fight and are sending them over with full kit."
 
+
+ REV_CAN_NATO_emergency_european_airlift:0 "Emergency Weapons from Europe"
+ REV_CAN_NATO_emergency_european_airlift_desc:0 "Emergency weapons are being flown in from Europe to support Canada against the United States. The airlift delivers 1,000 land drones, 300 handheld anti-tank weapons, 300 handheld anti-air weapons, 500 kamikaze drones, and 100 SAM missiles. Each category uses the latest model Canada has researched, with first-generation equipment supplied where no model has been researched."

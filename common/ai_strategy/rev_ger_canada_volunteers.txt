@@ -1,0 +1,33 @@
+# Prioritize a legal volunteer offer; the engine still enforces normal eligibility,
+# division limits, diplomatic acceptance and AI evaluation timing.
+rev_ger_prioritize_canada_volunteers = {
+	allowed = { tag = GER }
+
+	enable = {
+		is_ai = yes
+		is_subject = no
+		has_war = no
+		NOT = { is_in_faction_with = USA }
+		CAN = {
+			exists = yes
+			has_capitulated = no
+			has_war_with = USA
+			NOT = {
+				has_volunteers_amount_from = {
+					tag = GER
+					count > 0
+				}
+			}
+		}
+	}
+
+	# Stops once volunteers arrive, the war ends, or Germany enters a war.
+	# Re-enables if Germany has no volunteers in Canada again during the conflict.
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = CAN
+		value = 1000
+	}
+}

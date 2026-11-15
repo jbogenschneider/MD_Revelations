@@ -62,12 +62,5 @@ ideas = {
 			picture = globalized_trade_economy
 		}
 
-		USA_solomoney_cashless_idea = {
-			allowed = { original_tag = USA }
-			picture = globalized_trade_economy
-			modifier = {
-				stability_factor = -0.05
-			}
-		}
 	}
 }

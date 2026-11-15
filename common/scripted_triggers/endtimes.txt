@@ -1,5 +1,6 @@
 # Countries taking part in the October 2, 2028 realignment.
-endtimes_csto_realignment_country = {
+endtimes_meccapact_realignment_country = {
+	NOT = { tag = SOV }
 	OR = {
 		tag = MOR
 		tag = ALG

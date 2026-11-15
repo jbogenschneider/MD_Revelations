@@ -1,0 +1,59 @@
+add_namespace = rev_solomon
+
+# No date, USA or war requirement: other story paths can call these later.
+# Benefits apply immediately so adoption does not depend on clicking the notice.
+country_event = {
+	id = rev_solomon.1
+	title = rev_solomon.1.t
+	desc = rev_solomon.1.d
+	picture = GFX_china_19th_national_congress
+	is_triggered_only = yes
+	trigger = {
+		tag = CHI
+		exists = yes
+		NOT = { has_country_flag = rev_solomon_currency_adopted }
+	}
+	immediate = { rev_solomon_adopt_currency = yes }
+	option = { name = rev_solomon.adopt.a }
+}
+
+country_event = {
+	id = rev_solomon.2
+	title = rev_solomon.2.t
+	desc = rev_solomon.2.d
+	picture = GFX_treaty
+	is_triggered_only = yes
+	trigger = {
+		tag = SAU
+		exists = yes
+		NOT = { has_country_flag = rev_solomon_currency_adopted }
+	}
+	immediate = { rev_solomon_adopt_currency = yes }
+	option = { name = rev_solomon.adopt.a }
+}
+
+country_event = {
+	id = rev_solomon.3
+	title = rev_solomon.3.t
+	desc = rev_solomon.3.d
+	picture = GFX_treaty
+	is_triggered_only = yes
+	trigger = {
+		tag = UAE
+		exists = yes
+		NOT = { has_country_flag = rev_solomon_currency_adopted }
+	}
+	immediate = { rev_solomon_adopt_currency = yes }
+	option = { name = rev_solomon.adopt.a }
+}
+
+# FROM is the adopting country, following the existing NATO news-event pattern.
+news_event = {
+	id = rev_solomon.10
+	title = rev_solomon.10.t
+	desc = rev_solomon.10.d
+	picture = GFX_treaty
+	is_triggered_only = yes
+	major = yes
+	option = { name = rev_solomon.10.a }
+}

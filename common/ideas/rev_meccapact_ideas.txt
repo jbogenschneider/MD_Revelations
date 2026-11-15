@@ -1,0 +1,29 @@
+ideas = {
+	country = {
+		MeccaPact_member = {
+			picture = CSTO_member
+			# Civil war splinters must join explicitly, regardless of ideology.
+			allowed_civil_war = { always = no }
+			cancel = {
+				OR = {
+					NOT = { has_faction_template = faction_template_meccapact }
+					is_subject = yes
+				}
+			}
+			on_add = {
+				if = {
+					limit = { NOT = { is_in_array = { global.meccapact_members = THIS } } }
+					add_to_array = { global.meccapact_members = THIS }
+				}
+				add_to_tech_sharing_group = MeccaPact_Tech_Share
+			}
+			on_remove = {
+				remove_from_array = { global.meccapact_members = THIS }
+				remove_from_tech_sharing_group = MeccaPact_Tech_Share
+			}
+			modifier = {
+				custom_modifier_tooltip = MeccaPact_member_tooltip
+			}
+		}
+	}
+}

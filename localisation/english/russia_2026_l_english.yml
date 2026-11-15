@@ -64,3 +64,9 @@
 
  RUSSIA_SANCTIONS_BAN_DEBT:0 "Under Sanctions: No External Borrowing"
  RUSSIA_SANCTIONS_BAN_DEBT_desc:0 "International borrowing is blocked while sanctions are active. Weekly deficits cannot be covered by debt and must be financed from existing reserves, taxes, spending cuts, or emergency asset sales."
+
+ RUSSIA_QUICK_PEACE_2026:0 "Quick Peace Before We Start Losing"
+ RUSSIA_QUICK_PEACE_2026_DESC:0 "The mobilized soldiers have gone unpaid, and formations are disintegrating. If we continue this war, we risk losing far more than we can still hold.\n\nA quick white peace with Ukraine would preserve the territorial division represented by the scenario's starting state borders, without demanding further concessions. It would also allow us to seek relief from the sanctions debt block, though the compromise will damage stability and war support at home.\n\nWe can end the fighting now, before the military situation deteriorates further, or gamble on continuing the war."
+ RUSSIA_QUICK_PEACE_2026_ACCEPT:0 "Make peace before we start losing."
+ RUSSIA_QUICK_PEACE_2026_CONTINUE:0 "Keep fighting."
+ RUSSIA_2026_QUICK_PEACE_EFFECT_TT:0 "White peace with Ukraine using the scenario's existing state borders, with no territorial transfers. The sanctions debt block is removed. Stability §R-3.00%§!, War Support §R-5.00%§!."

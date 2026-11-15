@@ -599,6 +599,39 @@ focus_tree = {
 	}
 
 	focus = {
+		id = REV_CAN_NATO_volunteers_from_europe
+		icon = volunteers
+		x = 18
+		y = 9
+		cost = 1
+		available = { has_war_with = USA }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_NATO }
+		ai_will_do = { base = 9 }
+		completion_reward = {
+			create_unit = {
+				division = "name = \"NATO Volunteer Group I\" division_template = \"US Resistance Militia\" start_experience_factor = 0.25"
+				owner = ROOT
+				prioritize_location = 1408
+			}
+			create_unit = {
+				division = "name = \"NATO Volunteer Group II\" division_template = \"US Resistance Militia\" start_experience_factor = 0.25"
+				owner = ROOT
+				prioritize_location = 1408
+			}
+			create_unit = {
+				division = "name = \"NATO Volunteer Group III\" division_template = \"US Resistance Militia\" start_experience_factor = 0.25"
+				owner = ROOT
+				prioritize_location = 1408
+			}
+			create_unit = {
+				division = "name = \"NATO Volunteer Group IV\" division_template = \"US Resistance Militia\" start_experience_factor = 0.25"
+				owner = ROOT
+				prioritize_location = 1408
+			}
+		}
+	}
+
+	focus = {
 		id = REV_CAN_NATO_volunteers_from_asia
 		icon = volunteers
 		x = 16
@@ -606,7 +639,7 @@ focus_tree = {
 		cost = 3
 		available = { has_war_with = USA }
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_NATO }
-		ai_will_do = { base = 1 }
+		ai_will_do = { base = 6 }
 		completion_reward = {
 			create_unit = {
 				division = "name = \"Asian Volunteer Group I\" division_template = \"US Resistance Militia\" start_experience_factor = 0.25"
@@ -730,6 +763,124 @@ focus_tree = {
 			if = {
 				limit = { NOT = { is_special_project_completed = sp:sp_fire_support_land_drone } }
 				complete_special_project = sp:sp_fire_support_land_drone
+			}
+		}
+	}
+	focus = {
+		id = REV_CAN_NATO_emergency_european_airlift
+		icon = military_deal
+		x = 20
+		y = 9
+		cost = 1
+		available = { has_war_with = USA }
+		search_filters = { FOCUS_FILTER_DEFENSE FOCUS_FILTER_NATO }
+		ai_will_do = { base = 1000 }
+		completion_reward = {
+			# Imported aid: select Canada's newest researched model in each category.
+			# If a category is unresearched, supply its first-generation model.
+			# Land drones
+			if = {
+				limit = { has_tech = land_Drone_equipment6 }
+				add_equipment_to_stockpile = { type = land_drone_equipment_5 amount = 1000 }
+			}
+			else_if = {
+				limit = { has_tech = land_Drone_equipment5 }
+				add_equipment_to_stockpile = { type = land_drone_equipment_4 amount = 1000 }
+			}
+			else_if = {
+				limit = { has_tech = land_Drone_equipment4 }
+				add_equipment_to_stockpile = { type = land_drone_equipment_3 amount = 1000 }
+			}
+			else = {
+				add_equipment_to_stockpile = { type = land_drone_equipment_1 amount = 1000 }
+			}
+			# Handheld anti-tank
+			if = {
+				limit = { has_tech = Anti_tank_4 }
+				add_equipment_to_stockpile = { type = Anti_tank_4 amount = 300 }
+			}
+			else_if = {
+				limit = { has_tech = Anti_tank_3 }
+				add_equipment_to_stockpile = { type = Anti_tank_3 amount = 300 }
+			}
+			else_if = {
+				limit = { has_tech = Anti_tank_2 }
+				add_equipment_to_stockpile = { type = Anti_tank_2 amount = 300 }
+			}
+			else_if = {
+				limit = { has_tech = Anti_tank_1 }
+				add_equipment_to_stockpile = { type = Anti_tank_1 amount = 300 }
+			}
+			else = {
+				add_equipment_to_stockpile = { type = Anti_tank_0 amount = 300 }
+			}
+			# Handheld anti-air (with and without No Step Back)
+			if = {
+				limit = { OR = { has_tech = Anti_Air_4 has_tech = nsb_Anti_Air_4 } }
+				add_equipment_to_stockpile = { type = Anti_Air_4 amount = 300 }
+			}
+			else_if = {
+				limit = { OR = { has_tech = Anti_Air_3 has_tech = nsb_Anti_Air_3 } }
+				add_equipment_to_stockpile = { type = Anti_Air_3 amount = 300 }
+			}
+			else_if = {
+				limit = { OR = { has_tech = Anti_Air_2 has_tech = nsb_Anti_Air_2 } }
+				add_equipment_to_stockpile = { type = Anti_Air_2 amount = 300 }
+			}
+			else_if = {
+				limit = { OR = { has_tech = Anti_Air_1 has_tech = nsb_Anti_Air_1 } }
+				add_equipment_to_stockpile = { type = Anti_Air_1 amount = 300 }
+			}
+			else = {
+				add_equipment_to_stockpile = { type = Anti_Air_0 amount = 300 }
+			}
+			# Kamikaze drones
+			if = {
+				limit = { has_tech = suicide_drone_4 }
+				add_equipment_to_stockpile = { type = kamikaze_drone_4 amount = 500 }
+			}
+			else_if = {
+				limit = { has_tech = suicide_drone_3 }
+				add_equipment_to_stockpile = { type = kamikaze_drone_3 amount = 500 }
+			}
+			else_if = {
+				limit = { has_tech = suicide_drone_2 }
+				add_equipment_to_stockpile = { type = kamikaze_drone_2 amount = 500 }
+			}
+			else = {
+				add_equipment_to_stockpile = { type = kamikaze_drone_1 amount = 500 }
+			}
+			# SAM missiles
+			if = {
+				limit = { has_tech = SAM7 }
+				add_equipment_to_stockpile = { type = sam_missile_equipment_8 amount = 100 }
+			}
+			else_if = {
+				limit = { has_tech = SAM6 }
+				add_equipment_to_stockpile = { type = sam_missile_equipment_7 amount = 100 }
+			}
+			else_if = {
+				limit = { has_tech = SAM5 }
+				add_equipment_to_stockpile = { type = sam_missile_equipment_6 amount = 100 }
+			}
+			else_if = {
+				limit = { has_tech = SAM4 }
+				add_equipment_to_stockpile = { type = sam_missile_equipment_5 amount = 100 }
+			}
+			else_if = {
+				limit = { has_tech = SAM3 }
+				add_equipment_to_stockpile = { type = sam_missile_equipment_4 amount = 100 }
+			}
+			else_if = {
+				limit = { has_tech = SAM2 }
+				add_equipment_to_stockpile = { type = sam_missile_equipment_3 amount = 100 }
+			}
+			else_if = {
+				limit = { has_tech = SAM1 }
+				add_equipment_to_stockpile = { type = sam_missile_equipment_2 amount = 100 }
+			}
+			else = {
+				add_equipment_to_stockpile = { type = sam_missile_equipment_1 amount = 100 }
 			}
 		}
 	}

@@ -1,0 +1,18 @@
+# Attacker country scope. Fossil power plants are state buildings, not counters.
+rev_sov_damage_ukrainian_powerplant = {
+	custom_effect_tooltip = rev_SOV_damage_ukr_powerplant_tt
+	hidden_effect = {
+		UKR = {
+			if = {
+				limit = { exists = yes }
+				random_owned_controlled_state = {
+					limit = { fossil_powerplant > 0 }
+					damage_building = {
+						type = fossil_powerplant
+						damage = 1
+					}
+				}
+			}
+		}
+	}
+}

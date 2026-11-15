@@ -1,0 +1,10 @@
+on_actions = {
+	on_weekly = {
+		effect = {
+			if = {
+				limit = { is_faction_leader = yes rev_is_westnato_faction = yes }
+				rev_establish_nato_westnato_trust = yes
+			}
+		}
+	}
+}

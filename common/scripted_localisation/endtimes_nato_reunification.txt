@@ -1,0 +1,8 @@
+defined_text = {
+	name = GetEndtimesNatoReunificationReport
+	text = {
+		trigger = { has_global_flag = endtimes_nato_reunited_at_ceasefire }
+		localization_key = endtimes_nato_reunification_report
+	}
+	text = { localization_key = endtimes_nato_reunification_no_report }
+}

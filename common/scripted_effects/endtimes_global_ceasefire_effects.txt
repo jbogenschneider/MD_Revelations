@@ -1,0 +1,71 @@
+# Run once from the global daily scheduler. Each peace checks an active war;
+# completed conflicts, annexed countries and unrelated wars are left alone.
+endtimes_apply_global_ceasefire = {
+	if = {
+		limit = { NOT = { has_global_flag = endtimes_global_ceasefire_occurred } }
+		set_global_flag = endtimes_global_ceasefire_occurred
+
+		# Test before applying any peace: only an active NATO-Russia war triggers
+		# the Russian government and territorial settlement.
+		if = {
+			limit = {
+				SOV = { exists = yes }
+				any_country = {
+					OR = { has_faction_template = faction_template_nato has_idea = NATO_member }
+					has_war_with = SOV
+				}
+			}
+			SOV = { endtimes_russia_ceasefire_transition = yes }
+		}
+
+		# Include California even if it has not joined WestNATO or Canada capitulated.
+		if = {
+			limit = { USA = { exists = yes } }
+			every_country = {
+				limit = {
+					exists = yes
+					OR = {
+						tag = CAN
+						tag = CAL
+						has_idea = WestNATO_member
+						rev_is_westnato_faction = yes
+					}
+					has_war_with = USA
+				}
+				white_peace = USA
+			}
+		}
+
+		# End Iran's and its subjects' participation against Israel.
+		if = {
+			limit = { ISR = { exists = yes } }
+			every_country = {
+				limit = {
+					exists = yes
+					OR = { tag = PER is_subject_of = PER }
+					has_war_with = ISR
+				}
+				white_peace = ISR
+			}
+		}
+
+		# Only China's named regional opponents: never peace out North Korea.
+		if = {
+			limit = { CHI = { exists = yes } }
+			every_country = {
+				limit = {
+					exists = yes
+					OR = { tag = PHI tag = JAP tag = TAI tag = KOR }
+					has_war_with = CHI
+				}
+				white_peace = CHI
+			}
+		}
+
+		# Reunite the temporary Atlantic split only after the wars have ended.
+		endtimes_reunite_westnato_with_nato = yes
+
+		# Apply the ceasefire before broadcasting it, independent of player clicks.
+		news_event = { id = endtimes.38 }
+	}
+}

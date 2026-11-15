@@ -1,0 +1,17 @@
+defined_text = {
+	name = GetEndtimesRussiaCeasefireReport
+	text = {
+		trigger = { has_global_flag = endtimes_russia_transition_completed }
+		localization_key = endtimes_russia_ceasefire_report
+	}
+	text = { localization_key = endtimes_russia_ceasefire_no_report }
+}
+
+defined_text = {
+	name = GetEndtimesFarEastCeasefireReport
+	text = {
+		trigger = { has_global_flag = endtimes_far_east_returned_at_ceasefire }
+		localization_key = endtimes_russia_far_east_ceasefire_report
+	}
+	text = { localization_key = endtimes_russia_ceasefire_no_report }
+}

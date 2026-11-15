@@ -1,0 +1,3 @@
+opinion_modifiers = {
+	rev_nato_westnato_cooperation = { value = 60 }
+}

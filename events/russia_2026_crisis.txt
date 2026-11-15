@@ -38,6 +38,51 @@ country_event = {
 }
 
 # ===============================
+# QUICK PEACE AFTER THE MOBLIKS GO UNPAID
+# ===============================
+country_event = {
+    id = russia_2026.23
+    title = RUSSIA_QUICK_PEACE_2026
+    desc = RUSSIA_QUICK_PEACE_2026_DESC
+    picture = GFX_report_event_peace_conference
+    is_triggered_only = yes
+
+    trigger = {
+        tag = SOV
+        has_war_with = UKR
+        has_country_flag = russia_soldiers_unpaid_2026
+        NOT = { has_country_flag = russia_quick_peace_offered_2026 }
+        NOT = { has_country_flag = russia_peace_decision_done_2026 }
+        NOT = { has_country_flag = rev_russia_weekly_peace_check_done }
+    }
+
+    immediate = { set_country_flag = russia_quick_peace_offered_2026 }
+
+    option = {
+        name = RUSSIA_QUICK_PEACE_2026_ACCEPT
+        ai_chance = { factor = 70 }
+        custom_effect_tooltip = RUSSIA_2026_QUICK_PEACE_EFFECT_TT
+
+        # Same settlement as russia_2026.6: white peace restores state-owner
+        # control to the scenario's split states, without territorial transfers.
+        white_peace = UKR
+        remove_ideas = RUSSIA_SANCTIONS_BAN_DEBT
+        set_country_flag = russia_quick_peace_accepted_2026
+        set_country_flag = russia_accepted_current_lines_2026
+        set_country_flag = russia_peace_decision_done_2026
+        set_country_flag = rev_russia_weekly_peace_check_done
+        add_stability = -0.03
+        add_war_support = -0.05
+    }
+
+    option = {
+        name = RUSSIA_QUICK_PEACE_2026_CONTINUE
+        ai_chance = { factor = 30 }
+        # Leave normal war and later peace checks active after refusal.
+    }
+}
+
+# ===============================
 # WEEKLY WHITE PEACE FORCED BY RUSSIA
 # ===============================
 country_event = {
@@ -191,6 +236,16 @@ country_event = {
         add_manpower = -10000
         add_stability = -0.20
 	    add_war_support = -0.20
+        # Keep the unpaid event and its penalties, then offer peace immediately.
+        if = {
+            limit = {
+                has_war_with = UKR
+                NOT = { has_country_flag = russia_quick_peace_offered_2026 }
+                NOT = { has_country_flag = russia_peace_decision_done_2026 }
+                NOT = { has_country_flag = rev_russia_weekly_peace_check_done }
+            }
+            country_event = { id = russia_2026.23 }
+        }
     }
 }
 
@@ -207,6 +262,8 @@ country_event = {
 
     trigger = {
         tag = SOV
+        NOT = { has_country_flag = russia_quick_peace_accepted_2026 }
+        NOT = { has_country_flag = endtimes_russia_international_transition }
     }
 
     mean_time_to_happen = { days = 1 }
@@ -270,6 +327,8 @@ country_event = {
         if = {
             limit = {
                 has_country_leader = { name = "Vladimir Putin" ruling_only = yes }
+                NOT = { has_country_flag = russia_quick_peace_accepted_2026 }
+                NOT = { has_country_flag = endtimes_russia_international_transition }
             }
 
             set_politics = {

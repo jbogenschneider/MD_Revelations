@@ -42,6 +42,8 @@ focus_tree = {
 		available = {
 			has_war = yes
 			has_country_leader = { name = "Vladimir Putin" ruling_only = yes }
+			NOT = { has_country_flag = russia_quick_peace_accepted_2026 }
+			NOT = { has_country_flag = endtimes_russia_international_transition }
 		}
 
 		completion_reward = {
@@ -659,6 +661,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MILITARY }
 		prerequisite = { focus = rev_SOV_president_putin_entry }
 		completion_reward = {
+			rev_sov_damage_ukrainian_powerplant = yes
 			add_war_support = 0.05
 			air_experience = 10
 			add_stability = -0.01
@@ -929,7 +932,7 @@ focus_tree = {
 			}
 			add_war_support = 0.02
 			add_stability = 0.01
-			custom_effect_tooltip = rev_SOV_terrorize_ukraine_effect_tt
+			rev_sov_damage_ukrainian_powerplant = yes
 		}
 		ai_will_do = { base = 140 }
 	}
@@ -956,7 +959,7 @@ focus_tree = {
 			}
 			add_war_support = 0.02
 			add_stability = 0.01
-			custom_effect_tooltip = rev_SOV_terrorize_ukraine_effect_tt
+			rev_sov_damage_ukrainian_powerplant = yes
 		}
 		ai_will_do = { base = 140 }
 	}
@@ -983,7 +986,7 @@ focus_tree = {
 			}
 			add_war_support = 0.02
 			add_stability = 0.01
-			custom_effect_tooltip = rev_SOV_terrorize_ukraine_effect_tt
+			rev_sov_damage_ukrainian_powerplant = yes
 		}
 		ai_will_do = { base = 140 }
 	}

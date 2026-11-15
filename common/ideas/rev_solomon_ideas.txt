@@ -1,0 +1,11 @@
+ideas = {
+	country = {
+		Solomon_one_world_currency = {
+			allowed = { always = yes }
+			picture = globalized_trade_economy
+			modifier = {
+				custom_modifier_tooltip = Solomon_one_world_currency_revenue_tt
+			}
+		}
+	}
+}

@@ -1,0 +1,149 @@
+# Full internationally recognized Ukrainian borders, including all eight states
+# returned by the Ukraine-victory settlement in russia_2026.5.
+endtimes_restore_ukraine_full_borders = {
+	# Keep the explicit victory-settlement list: Kherson (1085) currently lacks
+	# a Ukrainian core in the active state history, so a core-only loop misses it.
+	UKR = {
+		transfer_state = 669
+		transfer_state = 1112
+		transfer_state = 693
+		transfer_state = 1030
+		transfer_state = 1075
+		transfer_state = 1076
+		transfer_state = 694
+		transfer_state = 1085
+	}
+	1085 = { add_core_of = UKR }
+	every_state = {
+		limit = { is_core_of = UKR NOT = { is_owned_by = UKR } }
+		transfer_state_to = UKR
+	}
+	UKR = {
+		if = {
+			limit = { exists = yes is_subject = yes }
+			overlord = { set_autonomy = { target = UKR autonomy_state = autonomy_free } }
+		}
+	}
+}
+
+# SOV country scope. Called only for a NATO-Russia war at the Global Ceasefire.
+endtimes_russia_ceasefire_transition = {
+	set_country_flag = endtimes_russia_international_transition
+	set_global_flag = endtimes_russia_transition_completed
+	set_country_flag = rev_sov_baltic_war_fired
+	set_country_flag = russia_peace_decision_done_2026
+	set_country_flag = rev_russia_weekly_peace_check_done
+	clr_country_flag = russia_pending_election_2026
+	clr_country_flag = RUSSIA_ELECTION_ACTIVE
+	clr_country_flag = russia_oligarch_council_active
+
+	# Settle Russia's existing wars before restoring borders and independence.
+	every_other_country = {
+		limit = { has_war_with = SOV }
+		white_peace = SOV
+	}
+
+	# Record membership before faction dissolution or idea cancellation changes it.
+	every_country = {
+		limit = {
+			OR = { has_faction_template = faction_template_csto has_idea = CSTO_member }
+		}
+		set_country_flag = endtimes_csto_member_at_ceasefire
+		# Also settle NATO's wars against Russia's former alliance partners.
+		every_other_country = {
+			limit = {
+				has_war_with = PREV
+				OR = {
+					has_faction_template = faction_template_nato
+					rev_is_westnato_faction = yes
+					has_idea = NATO_member
+					has_idea = WestNATO_member
+				}
+			}
+			white_peace = PREV
+		}
+	}
+	every_country = {
+		limit = {
+			has_country_flag = endtimes_csto_member_at_ceasefire
+			is_faction_leader = yes
+			has_faction_template = faction_template_csto
+		}
+		dismantle_faction = yes
+	}
+	every_country = {
+		limit = { has_country_flag = endtimes_csto_member_at_ceasefire }
+		remove_ideas = CSTO_member
+		remove_from_tech_sharing_group = CSTO_Tech_Share
+		clr_country_flag = endtimes_csto_member_at_ceasefire
+	}
+	clear_array = global.CSTO_member
+
+	# Restore the Baltic states even if annexed, then end any puppet status.
+	every_state = {
+		limit = { is_core_of = EST NOT = { is_owned_by = EST } }
+		transfer_state_to = EST
+	}
+	every_state = {
+		limit = { is_core_of = LAT NOT = { is_owned_by = LAT } }
+		transfer_state_to = LAT
+	}
+	every_state = {
+		limit = { is_core_of = LIT NOT = { is_owned_by = LIT } }
+		transfer_state_to = LIT
+	}
+	EST = {
+		if = { limit = { exists = yes is_subject = yes } overlord = { set_autonomy = { target = EST autonomy_state = autonomy_free } } }
+		if = { limit = { exists = yes } endtimes_ensure_nato_membership = yes }
+	}
+	LAT = {
+		if = { limit = { exists = yes is_subject = yes } overlord = { set_autonomy = { target = LAT autonomy_state = autonomy_free } } }
+		if = { limit = { exists = yes } endtimes_ensure_nato_membership = yes }
+	}
+	LIT = {
+		if = { limit = { exists = yes is_subject = yes } overlord = { set_autonomy = { target = LIT autonomy_state = autonomy_free } } }
+		if = { limit = { exists = yes } endtimes_ensure_nato_membership = yes }
+	}
+	# Kaliningrad becomes part of Lithuania under the Great Peace settlement.
+	642 = {
+		transfer_state_to = LIT
+		add_core_of = LIT
+	}
+	BLR = {
+		if = {
+			limit = { exists = yes is_subject = yes }
+			overlord = { set_autonomy = { target = BLR autonomy_state = autonomy_free } }
+		}
+	}
+	endtimes_restore_ukraine_full_borders = yes
+
+	if = {
+		limit = { FAR = { exists = yes is_subject_of = CHI } }
+		annex_country = { target = FAR transfer_troops = yes }
+		set_global_flag = endtimes_far_east_returned_at_ceasefire
+	}
+
+	# Western conservative caretaker government. Keep the remaining spirits intact:
+	# do not use startup_politics, which resets coalition ideas.
+	retire_country_leader = yes
+	set_politics = {
+		ruling_party = democratic
+		elections_allowed = yes
+		last_election = "2024.10.9"
+		election_frequency = 48 # Next election: October 9, 2028.
+	}
+	clear_array = ruling_party
+	clear_array = gov_coalition_array
+	add_to_array = { ruling_party = 1 } # Western conservatives.
+	create_country_leader = {
+		name = "Dmitri Leonidovich Orlov"
+		picture = "gfx/leaders/SOV/Dmitri_Leonidovich_Orlov.dds"
+		ideology = conservatism
+		traits = { western_conservatism }
+	}
+	add_ideas = endtimes_cabal
+	set_country_flag = endtimes_cabal_initialized
+	add_ai_strategy = { type = befriend id = GER value = 300 }
+	add_ai_strategy = { type = befriend id = POL value = 300 }
+	add_ai_strategy = { type = befriend id = FIN value = 300 }
+}

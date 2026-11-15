@@ -8155,7 +8155,7 @@ endtimes_clear_national_spirits_except_cabal_and_csto = {
 		USA_rule_by_decree_idea
 		USA_shaky_war_time_reputation
 		USA_soloman_idea
-		USA_solomoney_cashless_idea
+		Solomon_one_world_currency
 		USA_solomoney_idea
 		USA_subprime_mortgage_crisis
 		USA_tariff

@@ -1,0 +1,12 @@
+technology_sharing_group = {
+	id = MeccaPact_Tech_Share
+	name = MeccaPact_Tech_Share_name
+	desc = MeccaPact_Tech_Share_desc
+	picture = GFX_technology_sharing_default
+	research_sharing_per_country_bonus = 0.01
+	is_faction_sharing = yes
+	available = {
+		has_faction_template = faction_template_meccapact
+		has_idea = MeccaPact_member
+	}
+}

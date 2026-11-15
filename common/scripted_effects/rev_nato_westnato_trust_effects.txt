@@ -1,0 +1,35 @@
+# WestNATO country scope. Applied after the split and refreshed by its leader
+# weekly, so existing saves and later NATO accessions receive the same accord.
+rev_establish_nato_westnato_trust = {
+	every_country = {
+		limit = { exists = yes rev_is_westnato_faction = yes }
+		every_other_country = {
+			limit = {
+				exists = yes
+				has_idea = NATO_member
+				NOT = { has_war_with = PREV }
+			}
+			if = {
+				limit = { NOT = { has_non_aggression_pact_with = PREV } }
+				diplomatic_relation = {
+					country = PREV
+					relation = non_aggression_pact
+					active = yes
+				}
+			}
+			# Apply once per pair; weekly refresh must not accumulate opinion bonuses.
+			if = {
+				limit = { NOT = { has_country_flag = rev_nato_westnato_trust_@PREV } }
+				set_country_flag = rev_nato_westnato_trust_@PREV
+				remove_opinion_modifier = { target = PREV modifier = left_nato }
+				remove_opinion_modifier = { target = PREV modifier = left_westnato }
+				add_opinion_modifier = { target = PREV modifier = rev_nato_westnato_cooperation }
+				reverse_add_opinion_modifier = { target = PREV modifier = rev_nato_westnato_cooperation }
+				PREV = {
+					remove_opinion_modifier = { target = PREV modifier = left_nato }
+					remove_opinion_modifier = { target = PREV modifier = left_westnato }
+				}
+			}
+		}
+	}
+}

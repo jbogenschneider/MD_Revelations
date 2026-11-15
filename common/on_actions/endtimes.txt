@@ -53,6 +53,45 @@ on_actions = {
 
 	on_daily = {
 		effect = {
+			# January 20, 2029: Pacific NATO entries, with Korea only at peace.
+			if = {
+				limit = {
+					date > 2029.1.19
+					date < 2029.1.21
+					NOT = { has_global_flag = endtimes_pacific_nato_realignment_completed }
+				}
+				endtimes_pacific_nato_realignment = yes
+			}
+			# December 21, 2028: restoration coup or democratic NATO announcement.
+			if = {
+				limit = { endtimes_usa_christmas_reconciliation_ready = yes }
+				if = {
+					limit = { has_government = democratic has_faction_template = faction_template_nato }
+					country_event = { id = endtimes.42 }
+				}
+				else = { country_event = { id = endtimes.41 } }
+			}
+			# October 7, 2028: government choice on both prior paths.
+			if = {
+				limit = {
+					tag = SOV
+					date > 2028.10.6
+					date < 2028.10.8
+					NOT = { has_country_flag = endtimes_russia_october_coup_completed }
+					NOT = { has_country_flag = endtimes_russia_october_elections_completed }
+				}
+				country_event = { id = endtimes.39 }
+			}
+			# April 2, 2028: the Warning brings the major active conflicts to a halt.
+			if = {
+				limit = {
+					date > 2028.4.1
+					date < 2028.4.3
+					has_global_flag = endtimes_great_warning_occurred
+					NOT = { has_global_flag = endtimes_global_ceasefire_occurred }
+				}
+				endtimes_apply_global_ceasefire = yes
+			}
 			# August 7, 2026: a defense pact, without creating an in-game faction.
 			if = {
 				limit = {
@@ -112,9 +151,10 @@ on_actions = {
 				limit = {
 					tag = ISR
 					has_war_with = PER
-					OR = {
+					AND = {
 						NOT = { controls_province = 1201 }
 						NOT = { controls_province = 7107 }
+						NOT = { controls_province = 1065 }
 					}
 					NOT = { has_country_flag = endtimes_israel_khuzestan_strike_done }
 				}
@@ -149,6 +189,8 @@ on_actions = {
 					date > 2028.1.5
 					date < 2028.1.7
 					NOT = { has_country_flag = endtimes_alex_took_over }
+					NOT = { has_country_flag = endtimes_russia_international_transition }
+					NOT = { has_country_flag = russia_quick_peace_accepted_2026 }
 				}
 				country_event = { id = endtimes.15 }
 			}
@@ -234,19 +276,20 @@ on_actions = {
 				limit = {
 					date > 2028.10.1
 				date < 2028.10.3
-					SOV = { exists = yes }
-					NOT = { has_global_flag = endtimes_csto_realignment_dispatched }
+					SAU = { exists = yes is_subject = no }
+					NOT = { has_global_flag = endtimes_meccapact_realignment_dispatched }
 				}
-				set_global_flag = endtimes_csto_realignment_dispatched
-				# All participants leave their previous alliances before the realignment events.
+				set_global_flag = endtimes_meccapact_realignment_dispatched
+				# Settle wars and leave old alliances before any country joins MeccaPact.
 				every_country = {
-					limit = { endtimes_csto_realignment_country = yes }
-					endtimes_leave_previous_alliance = yes
+					limit = { endtimes_meccapact_realignment_country = yes }
+					endtimes_prepare_meccapact_realignment = yes
 				}
+				SAU = { MeccaPact_join = yes set_faction_leader = yes }
 				every_country = {
 					limit = {
-						endtimes_csto_realignment_country = yes
-						NOT = { has_country_flag = endtimes_csto_realignment_completed }
+						endtimes_meccapact_realignment_country = yes
+						NOT = { has_country_flag = endtimes_meccapact_realignment_completed }
 					}
 					country_event = { id = endtimes.16 }
 				}
@@ -290,16 +333,19 @@ on_actions = {
 			if = {
 				limit = {
 					tag = FRA
-					date > 2029.7.1
-					date < 2029.7.3
+					date > 2028.11.21
+					date < 2028.11.23
 					NOT = { has_country_flag = rev_fra_left_split_started }
 					NOT = { country_exists = FRC }
 					has_variable = rev_fra_regional_oob_mode
 					owns_state = 56
-					owns_state = 54
-					owns_state = 55
-					owns_state = 305
-					owns_state = 59
+					owns_state = 54	
+					owns_state = 961
+					owns_state = 958
+					owns_state = 61
+					owns_state = 951
+					owns_state = 959
+					owns_state = 60
 				}
 				# The former French monarchy date now starts the civil-war chain.
 				country_event = { id = rev_fra_split.1 }
@@ -307,8 +353,8 @@ on_actions = {
 			if = {
 				limit = {
 					tag = GER
-					date > 2029.7.2
-					date < 2029.7.4
+					date > 2028.11.26
+					date < 2028.11.28
 					NOT = { has_country_flag = endtimes_german_monarchy_restored }
 				}
 				country_event = { id = endtimes.14 }

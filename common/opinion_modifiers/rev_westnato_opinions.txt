@@ -1,0 +1,5 @@
+opinion_modifiers = {
+ WestNATO_member_modifier = { value = 30 }
+ left_westnato = { value = -20 }
+ WestNATO_aspirant = { value = 25 }
+}

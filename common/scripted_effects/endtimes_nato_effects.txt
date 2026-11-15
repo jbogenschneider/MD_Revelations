@@ -1,5 +1,7 @@
 # Country scope. Restore NATO's membership systems and actual faction alliance.
 endtimes_ensure_nato_membership = {
+	if = { limit = { has_idea = MeccaPact_member } MeccaPact_leave = yes }
+	if = { limit = { has_idea = WestNATO_member } WestNATO_leave = yes }
 	save_event_target_as = endtimes_nato_applicant
 	if = {
 		limit = { is_in_faction = yes NOT = { has_idea = NATO_member } }

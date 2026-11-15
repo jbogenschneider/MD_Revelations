@@ -1,0 +1,111 @@
+# Internal helper, country scope. Run only after checking the destination leader.
+# CSTO's original leave effect uses ROOT, so clean its research group in THIS scope.
+MeccaPact_leave_previous_alliance = {
+	if = { limit = { has_idea = NATO_member } NATO_leave = yes }
+	if = { limit = { has_idea = WestNATO_member } WestNATO_leave = yes }
+	remove_from_array = { global.CSTO_member = THIS }
+	remove_ideas = CSTO_member
+	remove_from_tech_sharing_group = CSTO_Tech_Share
+	if = { limit = { is_in_faction = yes } leave_faction = yes }
+}
+
+# Country scope. Saudi Arabia is the founding leader; no startup changes.
+# Does nothing if another MeccaPact leader already exists.
+MeccaPact_create = {
+	if = {
+		limit = {
+			tag = SAU
+			exists = yes
+			is_subject = no
+			NOT = { has_faction_template = faction_template_meccapact }
+			NOT = {
+				any_other_country = {
+					has_faction_template = faction_template_meccapact
+					is_faction_leader = yes
+				}
+			}
+		}
+		MeccaPact_leave_previous_alliance = yes
+		create_faction_from_template = faction_template_meccapact
+		MeccaPact_enroll_member = yes
+	}
+}
+
+# Internal helper. The caller must already belong to the actual faction.
+MeccaPact_enroll_member = {
+	if = {
+		limit = { has_faction_template = faction_template_meccapact }
+		add_ideas = MeccaPact_member
+		if = {
+			limit = { NOT = { is_in_array = { global.meccapact_members = THIS } } }
+			add_to_array = { global.meccapact_members = THIS }
+		}
+		add_to_tech_sharing_group = MeccaPact_Tech_Share
+	}
+}
+
+# Country scope, safe in nested event/focus scopes. Repeated joins are harmless.
+# First join founds the pact under SAU; later joins use its current leader.
+MeccaPact_join = {
+	if = {
+		limit = {
+			exists = yes
+			is_subject = no
+			NOT = {
+				any_other_country = {
+					has_faction_template = faction_template_meccapact
+					has_war_with = PREV
+				}
+			}
+			OR = {
+				has_faction_template = faction_template_meccapact
+				any_other_country = {
+					has_faction_template = faction_template_meccapact
+					is_faction_leader = yes
+				}
+				SAU = {
+					exists = yes
+					is_subject = no
+					NOT = { has_war_with = PREV }
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_faction_template = faction_template_meccapact }
+				NOT = {
+					any_other_country = {
+						has_faction_template = faction_template_meccapact
+						is_faction_leader = yes
+					}
+				}
+			}
+			SAU = { MeccaPact_create = yes }
+		}
+		if = {
+			limit = { NOT = { has_faction_template = faction_template_meccapact } }
+			save_event_target_as = rev_meccapact_applicant
+			# Locate the destination before removing previous membership.
+			random_other_country = {
+				limit = {
+					has_faction_template = faction_template_meccapact
+					is_faction_leader = yes
+				}
+				event_target:rev_meccapact_applicant = { MeccaPact_leave_previous_alliance = yes }
+				add_to_faction = event_target:rev_meccapact_applicant
+			}
+		}
+		MeccaPact_enroll_member = yes
+	}
+}
+
+# Country scope. Does not eject a country from an unrelated faction.
+MeccaPact_leave = {
+	remove_ideas = MeccaPact_member
+	remove_from_array = { global.meccapact_members = THIS }
+	remove_from_tech_sharing_group = MeccaPact_Tech_Share
+	if = {
+		limit = { has_faction_template = faction_template_meccapact }
+		leave_faction = yes
+	}
+}

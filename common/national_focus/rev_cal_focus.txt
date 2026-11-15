@@ -115,9 +115,22 @@ focus_tree = {
 			focus = CAL_organize_military_leadership
 		}
 		available = {
-			GER = {
-				exists = yes
-				is_faction_leader = yes
+			is_subject = no
+			NOT = { has_war_with = ENG }
+			OR = {
+				ENG = {
+					exists = yes
+					is_faction_leader = yes
+					rev_is_westnato_faction = yes
+				}
+				AND = {
+					has_global_flag = endtimes_nato_reunited_at_ceasefire
+					any_other_country = {
+						has_faction_template = faction_template_nato
+						is_faction_leader = yes
+						NOT = { has_war_with = ROOT }
+					}
+				}
 			}
 		}
 		ai_will_do = { base = 1 }
@@ -129,18 +142,29 @@ focus_tree = {
 				787 = { transfer_state_to = USA } # North Dakota
 			}
 			if = {
-				limit = { NOT = { has_idea = NATO_member } }
-				add_ideas = NATO_member
+				limit = { has_global_flag = endtimes_nato_reunited_at_ceasefire }
+				endtimes_ensure_nato_membership = yes
 			}
+			else = { WestNATO_join = yes }
 			if = {
 				limit = {
-					GER = {
-						exists = yes
-						is_faction_leader = yes
+					OR = {
+						rev_is_westnato_faction = yes
+						has_faction_template = faction_template_nato
 					}
-					NOT = { is_in_faction = yes }
+					is_in_faction_with = CAN
+					CAN = {
+						exists = yes
+						has_war_with = USA
+					}
+					NOT = { has_war_with = USA }
 				}
-				GER = { add_to_faction = ROOT }
+				add_to_war = {
+					targeted_alliance = CAN
+					enemy = USA
+					hostility_reason = asked_to_join
+					single_target_only = yes
+				}
 			}
 		}
 	}

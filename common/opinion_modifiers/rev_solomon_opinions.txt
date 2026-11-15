@@ -1,0 +1,5 @@
+opinion_modifiers = {
+	Solomon_sovereign_debt_haircut = {
+		value = -40
+	}
+}

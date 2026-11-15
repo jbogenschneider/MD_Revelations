@@ -30,7 +30,7 @@ shared_focus = {
 
 	cost = 7.2
 	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL FOCUS_FILTER_NATO }
-	available = { date > 2028.6.1 }
+	available = { date > 2027.8.1 }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus REV_NATO_ease_of_business_reforms"
@@ -45,7 +45,7 @@ shared_focus = {
 		base = 0.5
 		modifier = {
 			check_variable = { interest_rate > 5 }
-			factor = 10
+			factor = 7
 		}
 	}
 }
@@ -90,7 +90,7 @@ shared_focus = {
 	ai_will_do = {
 		base = 0.5
 		modifier = {
-			factor = 10
+			factor = 7
 			check_variable = { interest_rate > 5 }
 		}
 		modifier = {
@@ -132,10 +132,10 @@ shared_focus = {
 	icon = construction_development
 	x = 39
 	y = 0
-	cost = 10
+	cost = 7
 	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NATO }
 	available = {
-		date > 2028.6.1
+		date > 2028.7.1
 		if = { limit = { is_ai = no } has_war = no }
 		else = { check_variable = { interest_rate < 14.999 } }
 	}

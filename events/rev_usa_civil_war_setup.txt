@@ -408,65 +408,7 @@ country_event = {
 					NOT = { is_subject = yes }
 				}
 			}
-			if = {
-				limit = { has_idea = NATO_member }
-				set_global_flag = rev_nato_lock_ger_leader
-				if = {
-					limit = {
-						GER = {
-							exists = yes
-							is_in_faction_with = USA
-						}
-					}
-					GER = { set_faction_leader = yes }
-				}
-				if = {
-					limit = {
-						NOT = {
-							GER = {
-								exists = yes
-								is_in_faction_with = USA
-							}
-						}
-						FRA = {
-							exists = yes
-							is_in_faction_with = USA
-						}
-					}
-					FRA = { set_faction_leader = yes }
-				}
-				if = {
-					limit = {
-						NOT = {
-							GER = {
-								exists = yes
-								is_in_faction_with = USA
-							}
-						}
-						NOT = {
-							FRA = {
-								exists = yes
-								is_in_faction_with = USA
-							}
-						}
-						ENG = {
-							exists = yes
-							is_in_faction_with = USA
-						}
-					}
-					ENG = { set_faction_leader = yes }
-				}
-				NATO_leave = yes
-				if = {
-					limit = {
-						GER = {
-							exists = yes
-							NOT = { is_subject = yes }
-						}
-					}
-					GER = { country_event = { id = rev_usa_cw.317 hours = 1 } }
-				}
-			}
+			rev_reorganize_nato_for_canada = yes
 			create_wargoal = {
 				target = CAN
 				type = annex_everything
@@ -530,9 +472,26 @@ country_event = {
 				}
 				NOT = { has_war_with = CAN }
 			}
+			# Synchronous fallback: no daily tick or delayed event may postpone the split.
+			rev_reorganize_nato_for_canada = yes
 			declare_war_on = {
 				target = CAN
 				type = annex_everything
+			}
+			# WestNATO answers Canada's defensive war; continental NATO stays separate.
+			every_other_country = {
+				limit = {
+					has_idea = WestNATO_member
+					is_in_faction_with = CAN
+					NOT = { tag = CAN }
+					NOT = { has_war_with = USA }
+				}
+				add_to_war = {
+					targeted_alliance = CAN
+					enemy = USA
+					hostility_reason = asked_to_join
+					single_target_only = yes
+				}
 			}
 			custom_effect_tooltip = rev_usa_cw.315.tt
 		}
@@ -550,54 +509,8 @@ country_event = {
 	id = rev_usa_cw.317
 	hidden = yes
 	is_triggered_only = yes
-
-	immediate = {
-		log = "[GetDateText]: [Root.GetName]: rev_usa_cw.317 rebuilding or reclaiming NATO leadership."
-		if = {
-			limit = {
-				tag = GER
-				exists = yes
-				NOT = { is_subject = yes }
-				is_in_faction = yes
-				NOT = { is_faction_leader = yes }
-			}
-			set_faction_leader = yes
-		}
-		if = {
-			limit = {
-				tag = GER
-				exists = yes
-				NOT = { is_subject = yes }
-				NOT = { is_in_faction = yes }
-			}
-			create_faction_from_template = faction_template_nato
-			if = { limit = { BEL = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } BEL = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = BEL }
-			if = { limit = { CAN = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } CAN = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = CAN }
-			if = { limit = { DEN = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } DEN = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = DEN }
-			if = { limit = { FRA = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } FRA = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = FRA }
-			if = { limit = { ICE = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } ICE = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = ICE }
-			if = { limit = { ITA = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } ITA = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = ITA }
-			if = { limit = { LUX = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } LUX = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = LUX }
-			if = { limit = { HOL = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } HOL = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = HOL }
-			if = { limit = { NOR = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } NOR = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = NOR }
-			if = { limit = { ENG = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } ENG = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = ENG }
-			if = { limit = { GRE = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } GRE = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = GRE }
-			if = { limit = { CZE = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } CZE = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = CZE }
-			if = { limit = { POL = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } POL = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = POL }
-			if = { limit = { SWE = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } SWE = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = SWE }
-			if = { limit = { FIN = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } FIN = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = FIN }
-			if = { limit = { SLO = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } SLO = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = SLO }
-			if = { limit = { LAT = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } LAT = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = LAT }
-			if = { limit = { EST = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } EST = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = EST }
-			if = { limit = { LIT = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } LIT = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = LIT }
-			if = { limit = { BUL = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } BUL = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = BUL }
-			if = { limit = { ROM = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } ROM = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = ROM }
-			if = { limit = { ALB = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } ALB = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = ALB }
-			if = { limit = { CRO = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } CRO = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = CRO }
-			if = { limit = { MNT = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } MNT = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = MNT }
-			if = { limit = { FYR = { exists = yes NOT = { is_subject = yes } NOT = { has_war_with = GER } } } FYR = { if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member } } add_to_faction = FYR }
-		}
-	}
+	trigger = { tag = GER exists = yes is_subject = no }
+	immediate = { rev_restore_continental_nato = yes }
 }
 
 country_event = {
@@ -1811,7 +1724,7 @@ country_event = {
 			is_controlled_by = USA
 		}
 		any_country = {
-			has_idea = NATO_member
+			OR = { has_idea = NATO_member has_idea = WestNATO_member }
 			NOT = { tag = USA }
 			has_war_with = USA
 		}
@@ -1824,7 +1737,7 @@ country_event = {
 		set_country_flag = rev_usa_cw_nato_settlement_offer_fired
 		every_country = {
 			limit = {
-				has_idea = NATO_member
+				OR = { has_idea = NATO_member has_idea = WestNATO_member }
 				NOT = { tag = USA }
 				has_war_with = USA
 			}
@@ -2043,7 +1956,7 @@ country_event = {
 			limit = {
 				has_country_flag = rev_usa_cw_end_trump_active
 				any_country = {
-					has_idea = NATO_member
+					OR = { has_idea = NATO_member has_idea = WestNATO_member }
 					NOT = { tag = USA }
 					has_war_with = USA
 				}
@@ -2182,7 +2095,7 @@ country_event = {
 		has_country_leader = { name = "Donald Trump" ruling_only = yes }
 		OR = {
 			has_war_with = CAN
-			has_war_with = GER
+			has_war_with = ENG
 		}
 		has_variable = USA_debt_warning_threshold
 		NOT = { has_country_flag = rev_usa_debt_warning_fired }
@@ -2212,7 +2125,7 @@ country_event = {
 		has_country_leader = { name = "Donald Trump" ruling_only = yes }
 		OR = {
 			has_war_with = CAN
-			has_war_with = GER
+			has_war_with = ENG
 		}
 		has_variable = USA_debt_first_loss_threshold
 		has_country_flag = rev_usa_debt_warning_fired
@@ -2257,7 +2170,7 @@ country_event = {
 		has_country_leader = { name = "Donald Trump" ruling_only = yes }
 		OR = {
 			has_war_with = CAN
-			has_war_with = GER
+			has_war_with = ENG
 		}
 		has_variable = USA_debt_second_loss_threshold
 		has_country_flag = rev_usa_debt_unpaid_troops_fired

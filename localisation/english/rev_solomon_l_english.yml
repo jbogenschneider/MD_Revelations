@@ -1,0 +1,17 @@
+﻿l_english:
+ Solomon_one_world_currency:0 "SOLOMON One World Currency"
+ Solomon_one_world_currency_desc:0 "Integration into the SOLOMON global banking and currency system improves transaction efficiency and revenue collection. The government receives an additional 4% of gross weekly revenue from taxes, resource exports, investment income paid into the budget, and other income."
+ Solomon_one_world_currency_revenue_tt:0 "Gross weekly revenue: §G+4.00%§!"
+
+ Solomon_sovereign_debt_haircut:0 "SOLOMON Sovereign Debt Write-Off"
+
+ rev_solomon.1.t:0 "China Adopts SOLOMON"
+ rev_solomon.1.d:0 "Beijing has agreed to adopt the SOLOMON one-world currency and global banking system. The agreement writes off 80% of China's current national debt, shifting the losses to its creditors.\n\nIntegration into the new system grants the government a permanent 4% bonus to gross weekly revenue. China's financial future is now tied to the emerging global currency."
+ rev_solomon.2.t:0 "Saudi Arabia Adopts SOLOMON"
+ rev_solomon.2.d:0 "Saudi Arabia has agreed to join the SOLOMON one-world currency and global banking system. Its financial and energy markets will be integrated into the new framework.\n\nThe agreement removes 80% of Saudi Arabia's current national debt and grants a permanent 4% bonus to gross weekly revenue. The kingdom's creditors bear the cost of the debt write-off."
+ rev_solomon.3.t:0 "The UAE Adopts SOLOMON"
+ rev_solomon.3.d:0 "The United Arab Emirates has agreed to adopt the SOLOMON one-world currency and global banking system, linking its trade and financial hubs to the new global framework.\n\nThe agreement removes 80% of the UAE's current national debt and grants a permanent 4% bonus to gross weekly revenue. The losses are passed to the country's creditors."
+ rev_solomon.adopt.a:0 "A new financial order."
+ rev_solomon.10.t:0 "[From.GetNameDef] Adopts the SOLOMON Currency"
+ rev_solomon.10.d:0 "WNN reports that [From.GetNameDef] has adopted SOLOMON, the one-world currency and banking system long prepared as part of the Great Reset.\n\nThe agreement cancels 80% of the adopting country's outstanding national debt. Its sovereign debt holders absorb the losses, while the new banking framework delivers a permanent 4% increase in gross weekly government revenue.\n\nThe transition marks another step away from the previous monetary order and toward a common global currency."
+ rev_solomon.10.a:0 "The financial order is changing."

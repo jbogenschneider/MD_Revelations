@@ -1,0 +1,17 @@
+defined_text = {
+	name = GetEndtimesRussiaOctoberChoiceDescription
+	text = {
+		trigger = { has_country_flag = endtimes_russia_international_transition }
+		localization_key = endtimes.39.d_interim
+	}
+	text = { localization_key = endtimes.39.d_no_interim }
+}
+
+defined_text = {
+	name = GetEndtimesRussiaOctoberCoupDescription
+	text = {
+		trigger = { has_global_flag = endtimes_russia_october_coup_followed_interim }
+		localization_key = endtimes.40.d_interim
+	}
+	text = { localization_key = endtimes.40.d_no_interim }
+}

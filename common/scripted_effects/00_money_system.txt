@@ -634,25 +634,6 @@ calculate_additional_income_rate = {
 	}
 	if = {
 		limit = {
-			tag = USA
-			has_idea = USA_solomoney_cashless_idea
-		}
-		if = {
-			limit = {
-				OR = {
-					has_war_with = GER
-					has_war_with = CAN
-				}
-			}
-			set_variable = { additional_income_USA_solomoney_cashless = 3 }
-		}
-		else = {
-			set_variable = { additional_income_USA_solomoney_cashless = 5 }
-		}
-		add_to_variable = { additional_income_rate = additional_income_USA_solomoney_cashless }
-	}
-	if = {
-		limit = {
 			tag = UKR
 			has_idea = UKR_major_drone_exporter_idea
 		}
@@ -1909,6 +1890,24 @@ calculate_additional_income_rate = {
 		}
 		CZE_HUN_gdp_stolen_calculation = yes
 		add_to_variable = { additional_income_rate = CZE_HUN_gain_income_trade }
+	}
+
+	# Any country's SOLOMON currency dividend: 4% of gross weekly revenue.
+	# Calculate last, from this call's fresh income values, before adding the
+	# dividend itself. Match update_display's exclusion of reinvested income.
+	set_variable = { Solomon_weekly_revenue_bonus = 0 }
+	if = {
+		limit = { has_idea = Solomon_one_world_currency }
+		set_variable = { Solomon_weekly_revenue_bonus = tax_gain }
+		add_to_variable = { Solomon_weekly_revenue_bonus = resource_sale_rate }
+		if = {
+			limit = { NOT = { has_country_flag = int_reinvestment_flag } }
+			add_to_variable = { Solomon_weekly_revenue_bonus = int_investments_rate }
+		}
+		add_to_variable = { Solomon_weekly_revenue_bonus = additional_income_rate }
+		clamp_variable = { var = Solomon_weekly_revenue_bonus min = 0 }
+		multiply_variable = { Solomon_weekly_revenue_bonus = 0.04 }
+		add_to_variable = { additional_income_rate = Solomon_weekly_revenue_bonus }
 	}
 }
 #Updates interest rate, is called on init and on_daily in MD4_money_on_actions.txt

@@ -1,0 +1,14 @@
+add_namespace = rev_nato_reorganization
+
+# Worldwide WNN announcement, issued once after the pre-war alliance split.
+news_event = {
+	id = rev_nato_reorganization.1
+	title = rev_nato_reorganization.1.t
+	desc = rev_nato_reorganization.1.d
+	picture = GFX_news_nato
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = rev_nato_reorganization.1.a
+	}
+}

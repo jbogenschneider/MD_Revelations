@@ -1,0 +1,87 @@
+# USA country scope. Reorganize before the declaration, never after war begins.
+rev_reorganize_nato_for_canada = {
+	if = {
+		limit = {
+			tag = USA
+			NOT = { has_global_flag = rev_nato_canada_reorganized }
+			NOT = { has_war_with = CAN }
+			GER = { exists = yes is_subject = no }
+			ENG = { exists = yes is_subject = no }
+			CAN = { exists = yes is_subject = no }
+		}
+		# Secure the European alliance before the USA or Britain leaves it.
+		every_country = {
+			limit = {
+				exists = yes
+				NOT = { tag = USA }
+				OR = {
+					has_idea = NATO_member
+					has_faction_template = faction_template_nato
+					is_in_array = { global.nato_members = THIS }
+				}
+			}
+			set_country_flag = rev_nato_preserve_during_split
+		}
+		GER = {
+			rev_restore_continental_nato = yes
+			set_faction_leader = yes
+		}
+		set_global_flag = rev_nato_lock_ger_leader
+		if = { limit = { has_idea = NATO_member } NATO_leave = yes }
+		# Restore any members detached by the old leader's departure before splitting.
+		GER = { rev_restore_continental_nato = yes }
+		# Joining Britain first establishes WestNATO under British leadership.
+		ENG = {
+			WestNATO_join = yes
+			set_faction_leader = yes
+		}
+		CAN = { WestNATO_join = yes }
+		DEN = { WestNATO_join = yes }
+		ICE = { WestNATO_join = yes }
+		NOR = { WestNATO_join = yes }
+		SWE = { WestNATO_join = yes }
+		HOL = { WestNATO_join = yes }
+		ENG = { rev_establish_nato_westnato_trust = yes }
+		every_country = {
+			limit = { has_country_flag = rev_nato_preserve_during_split }
+			clr_country_flag = rev_nato_preserve_during_split
+		}
+		set_global_flag = rev_nato_canada_reorganized
+		log = "[GetDateText]: [Root.GetName]: NATO reorganized under Germany; Britain leads WestNATO with Canada, Denmark, Iceland, Norway, Sweden and the Netherlands."
+		news_event = { id = rev_nato_reorganization.1 }
+	}
+}
+
+# GER scope. Recover recorded members without recruiting a fixed historical list
+# or taking countries out of an unrelated alliance (especially WestNATO).
+rev_restore_continental_nato = {
+	if = {
+		limit = {
+			tag = GER
+			exists = yes
+			is_subject = no
+			OR = { is_in_faction = no has_faction_template = faction_template_nato has_idea = NATO_member }
+			NOT = { rev_is_westnato_faction = yes }
+		}
+		endtimes_ensure_nato_membership = yes
+		set_faction_leader = yes
+		every_other_country = {
+			limit = {
+				exists = yes
+				is_subject = no
+				NOT = { tag = USA }
+				NOT = { has_war_with = GER }
+				NOT = { rev_is_westnato_faction = yes }
+				NOT = { has_idea = WestNATO_member }
+				OR = { is_in_faction = no is_in_faction_with = GER }
+				OR = {
+					has_idea = NATO_member
+					is_in_array = { global.nato_members = THIS }
+					has_country_flag = rev_nato_preserve_during_split
+				}
+			}
+			endtimes_ensure_nato_membership = yes
+		}
+		log = "[GetDateText]: [This.GetName]: NATO leadership secured; recorded members preserved."
+	}
+}

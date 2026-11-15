@@ -1,5 +1,7 @@
 # Scripted effects for NATO
 NATO_join = {
+	if = { limit = { has_idea = MeccaPact_member } MeccaPact_leave = yes }
+	if = { limit = { has_idea = WestNATO_member } WestNATO_leave = yes }
 	for_each_scope_loop = {
 		array = global.nato_members
 
@@ -70,6 +72,25 @@ NATO_join_via_event = {
 NATO_leave = {
 	if = {
 		limit = { has_idea = NATO_member }
+
+		# Political-change events can remove the leader before the scripted split.
+		# Transfer leadership first so leave_faction does not dissolve NATO.
+		if = {
+			limit = { is_faction_leader = yes }
+			if = {
+				limit = {
+					NOT = { tag = GER }
+					GER = { exists = yes is_subject = no is_in_faction_with = PREV }
+				}
+				GER = { set_faction_leader = yes }
+			}
+			else = {
+				random_other_country = {
+					limit = { is_subject = no is_in_faction_with = PREV }
+					set_faction_leader = yes
+				}
+			}
+		}
 
 		remove_from_array = { global.nato_members = THIS }
 		remove_ideas = NATO_member

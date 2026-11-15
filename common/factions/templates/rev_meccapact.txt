@@ -1,0 +1,19 @@
+faction_template_meccapact = {
+	name = MeccaPact
+	icon = GFX_faction_icon_csto
+	manifest = faction_manifest_preserving_our_place
+	can_leader_join_other_factions = no
+	visible = { always = no }
+	goals = {
+		faction_goal_meccapact_build_pact
+		faction_goal_meccapact_expand_pact
+	}
+	default_rules = {
+		joining_rule_non_democratic
+		joining_rule_has_no_war
+		war_declaration_rule_faction_leader_only
+		faction_peace_meccapact_doctrine
+		call_to_war_rule_defensive_only
+		dismissal_rule_impossible
+	}
+}

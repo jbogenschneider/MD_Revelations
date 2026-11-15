@@ -71,6 +71,13 @@ DIPLOMACY_GUARANTEE_ENABLE_TRIGGER = {
 				is_faction_leader = yes
 			}
 		}
+		else_if = {
+			limit = { has_idea = WestNATO_member }
+			custom_trigger_tooltip = {
+				tooltip = WestNATO_guarantee_rule_tt
+				is_faction_leader = yes
+			}
+		}
 		else = {
 			always = yes # Handled by game logic.
 		}
@@ -370,6 +377,13 @@ DIPLOMACY_REQUEST_LICENSED_PRODUCTION_ENABLE_TRIGGER = {
 }
 DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
 	if = {
+		limit = { has_country_flag = endtimes_usa_christian_restoration }
+		custom_trigger_tooltip = {
+			tooltip = endtimes_usa_defensive_mission_tt
+			always = no
+		}
+	}
+	if = {
 		limit = {
 			has_global_flag = GAME_RULE_allow_wargoals_free
 		}
@@ -495,6 +509,15 @@ DIPLOMACY_LEAVE_FACTION_ENABLE_TRIGGER = {
 			always = no
 		}
 	}
+	else_if = {
+		limit = {
+			has_idea = WestNATO_member
+		}
+		custom_trigger_tooltip = {
+			tooltip = WestNATO_leave_faction_rule_tt
+			always = no
+		}
+	}
 }
 DIPLOMACY_ASSUME_FACTION_LEADERSHIP_ENABLE_TRIGGER = {
 	if = {
@@ -526,6 +549,15 @@ DIPLOMACY_KICK_FROM_FACTION_ENABLE_TRIGGER = {
 			always = no
 		}
 	}
+	else_if = {
+		limit = {
+			has_idea = WestNATO_member
+		}
+		custom_trigger_tooltip = {
+			tooltip = WestNATO_kick_from_faction_rule_tt
+			always = no
+		}
+	}
 }
 DIPLOMACY_DISMANTLE_FACTION_ENABLE_TRIGGER = {
 	if = {
@@ -534,6 +566,15 @@ DIPLOMACY_DISMANTLE_FACTION_ENABLE_TRIGGER = {
 		}
 		custom_trigger_tooltip = {
 			tooltip = NATO_dismantle_faction_rule_tt
+			always = no
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = WestNATO_member
+		}
+		custom_trigger_tooltip = {
+			tooltip = WestNATO_dismantle_faction_rule_tt
 			always = no
 		}
 	}
@@ -601,6 +642,23 @@ DIPLOMACY_CALL_ALLY_ENABLE_TRIGGER = {
 		}
 		custom_trigger_tooltip = {
 			tooltip = NATO_call_ally_rule_tt
+			has_defensive_war = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = WestNATO_member
+		}
+		custom_trigger_tooltip = {
+			tooltip = WestNATO_call_ally_rule_tt
+			has_defensive_war = yes
+		}
+	}
+	#MeccaPact countries can only call allies in defensive wars.
+	if = {
+		limit = { has_idea = MeccaPact_member }
+		custom_trigger_tooltip = {
+			tooltip = MeccaPact_call_ally_rule_tt
 			has_defensive_war = yes
 		}
 	}
@@ -677,6 +735,15 @@ DIPLOMACY_JOIN_ALLY_ENABLE_TRIGGER = {
 			FROM = { has_defensive_war = yes }
 		}
 	}
+	else_if = {
+		limit = {
+			has_idea = WestNATO_member
+		}
+		custom_trigger_tooltip = {
+			tooltip = WestNATO_join_ally_rule_tt
+			FROM = { has_defensive_war = yes }
+		}
+	}
 	#CSTO countries can only join allies in defensive wars
 	if = {
 		limit = {
@@ -684,6 +751,13 @@ DIPLOMACY_JOIN_ALLY_ENABLE_TRIGGER = {
 		}
 		custom_trigger_tooltip = {
 			tooltip = CSTO_join_ally_rule_tt
+			FROM = { has_defensive_war = yes }
+		}
+	}
+	if = {
+		limit = { has_idea = MeccaPact_member }
+		custom_trigger_tooltip = {
+			tooltip = MeccaPact_join_ally_rule_tt
 			FROM = { has_defensive_war = yes }
 		}
 	}
@@ -764,6 +838,15 @@ DIPLOMACY_JOIN_FACTION_ENABLE_TRIGGER = {
 		}
 		custom_trigger_tooltip = {
 			tooltip = NATO_join_faction_rule_tt
+			always = no
+		}
+	}
+	else_if = {
+		limit = {
+			FROM = { has_idea = WestNATO_member }
+		}
+		custom_trigger_tooltip = {
+			tooltip = WestNATO_join_faction_rule_tt
 			always = no
 		}
 	}
@@ -951,6 +1034,15 @@ DIPLOMACY_OFFER_JOIN_FACTION_ENABLE_TRIGGER = {
 		}
 		custom_trigger_tooltip = {
 			tooltip = NATO_offer_join_faction_rule_tt
+			always = no
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = WestNATO_member
+		}
+		custom_trigger_tooltip = {
+			tooltip = WestNATO_offer_join_faction_rule_tt
 			always = no
 		}
 	}

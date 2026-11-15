@@ -1,0 +1,107 @@
+# USA scope. Christmas coup, reunification and a defensive return to NATO.
+endtimes_restore_usa_at_christmas = {
+	set_country_flag = endtimes_usa_christmas_reconciliation_completed
+	set_country_flag = endtimes_usa_christian_restoration
+	set_global_flag = rev_usa_cw_concluded
+	set_country_flag = rev_usa_cw_restoration_transition
+	if = {
+		limit = { is_subject = yes }
+		overlord = { set_autonomy = { target = USA autonomy_state = autonomy_free } }
+	}
+	every_other_country = {
+		limit = { has_war_with = USA }
+		white_peace = USA
+	}
+	if = {
+		limit = { CAL = { exists = yes } }
+		annex_country = { target = CAL transfer_troops = yes }
+	}
+
+	# Release Canada from annexation and return Canadian territory held by USA.
+	if = { limit = { NOT = { country_exists = CAN } } release = CAN }
+	every_state = {
+		limit = { is_owned_by = USA is_core_of = CAN NOT = { is_core_of = USA } }
+		transfer_state_to = CAN
+	}
+	CAN = {
+		if = {
+			limit = { exists = yes is_subject = yes }
+			overlord = { set_autonomy = { target = CAN autonomy_state = autonomy_free } }
+		}
+	}
+	# Restore US cores after releasing Canada: the resistance adds Canadian cores
+	# to New England and Minnesota, but those states return to the restored USA.
+	every_state = {
+		limit = { is_core_of = USA NOT = { is_owned_by = USA } }
+		transfer_state_to = USA
+		set_resistance = 0
+		set_compliance = 100
+	}
+
+	# Greenland is released only from American control, preserving Danish control
+	# when Greenland was never annexed by the USA.
+	if = {
+		limit = { owns_state = 1 }
+		if = { limit = { NOT = { country_exists = GRL } } release = GRL }
+		1 = { transfer_state_to = GRL set_resistance = 0 set_compliance = 100 }
+	}
+	GRL = {
+		if = {
+			limit = { exists = yes is_subject_of = USA }
+			USA = { set_autonomy = { target = GRL autonomy_state = autonomy_free } }
+		}
+	}
+
+	# Expel the Cabal and the three global currency/payment-system spirits.
+	remove_ideas = endtimes_cabal
+	remove_ideas = Solomon_one_world_currency
+	remove_ideas = USA_soloman_idea
+	remove_ideas = USA_solomoney_idea
+	remove_ideas = USA_punish_dollar_avoidance_idea
+	remove_ideas = USA_rule_by_decree_idea
+	remove_ideas = NATO_Betrayed
+	remove_ideas = USA_Idea_Bad_Debt2
+	remove_ideas = USA_China_War_Idea
+	remove_ideas = USA_Nobody_to_Borrow_From
+	# Keep initialization consumed so loading the campaign cannot re-add the Cabal.
+	set_country_flag = endtimes_cabal_initialized
+	set_country_flag = rev_solomon_currency_adopted
+	clr_country_flag = rev_usa_cw_american_resistance_fired
+	clr_country_flag = rev_usa_civil_war_initialized
+	clr_country_flag = rev_usa_cw_launch_event_fired
+	clr_country_flag = rev_usa_cw_coup_fired
+	clr_country_flag = rev_usa_cw_canada_invasion_justified
+	clr_country_flag = rev_usa_cw_china_war_justified
+	clr_country_flag = rev_usa_rule_by_decree
+	clr_country_flag = rev_usa_cw_split_waiting_event
+	clr_country_flag = rev_usa_cw_310_pending
+
+	retire_country_leader = yes
+	set_politics = {
+		ruling_party = democratic
+		elections_allowed = yes
+		last_election = "2028.11.5"
+		election_frequency = 96 # Next election: November 5, 2036.
+	}
+	clear_array = ruling_party
+	clear_array = gov_coalition_array
+	add_to_array = { ruling_party = 1 }
+	create_country_leader = {
+		name = "Joseph MacBride"
+		picture = "gfx/leaders/USA/Joseph_MacBride.dds"
+		ideology = conservatism
+		expire = "2050.1.1"
+		traits = { western_conservatism }
+	}
+	# Clean previous alliance membership before the regular NATO restoration.
+	MeccaPact_leave_previous_alliance = yes
+	endtimes_ensure_nato_membership = yes
+	# Discard the expansionist goals used by the preceding American war branches.
+	every_other_country = {
+		USA = {
+			remove_wargoal = { target = PREV type = annex_everything }
+			remove_wargoal = { target = PREV type = puppet_wargoal_focus }
+		}
+	}
+	ingame_update_setup = yes
+}

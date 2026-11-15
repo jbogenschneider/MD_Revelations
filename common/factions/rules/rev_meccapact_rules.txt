@@ -1,0 +1,11 @@
+faction_peace_meccapact_doctrine = {
+	type = peace_conference_rules
+	ai_will_do = { base = 0 }
+	available = { not_locked_faction = no }
+	peace_action_modifiers = {
+		faction_rule_modifier_encourage_take_claimed_states
+	}
+	modifier = {
+		custom_modifier_tooltip = MeccaPact_peace_doctrine_tt
+	}
+}

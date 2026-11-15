@@ -21,6 +21,7 @@ endtimes_join_csto_and_cabal = {
 
 # Country scope. Membership only; leave previous alliances before calling.
 endtimes_enroll_csto_and_cabal = {
+	if = { limit = { has_idea = MeccaPact_member } MeccaPact_leave = yes }
 	save_event_target_as = endtimes_csto_applicant
 	SOV = {
 		if = {

@@ -1,0 +1,30 @@
+# SOV country scope. Shared by the daily scheduler and the local decision event.
+rev_sov_narva_crisis_available = {
+	tag = SOV
+	exists = yes
+	is_subject = no
+	has_war = no
+	has_country_leader = { name = "Vladimir Putin" ruling_only = yes }
+	date > 2027.12.2
+	date < 2027.12.4
+	NOT = { has_country_flag = rev_sov_narva_decision_presented }
+	NOT = { has_country_flag = rev_sov_baltic_war_fired }
+	USA = { exists = yes }
+	BLR = { exists = yes }
+	EST = {
+		exists = yes
+		is_subject = no
+		has_faction_template = faction_template_nato
+		NOT = { is_in_faction_with = SOV }
+	}
+	OR = {
+		USA = { has_war_with = ENG }
+		any_other_country = {
+			OR = {
+				has_idea = WestNATO_member
+				rev_is_westnato_faction = yes
+			}
+			has_war_with = USA
+		}
+	}
+}

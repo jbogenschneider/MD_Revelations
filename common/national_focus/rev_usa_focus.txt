@@ -587,7 +587,7 @@ focus_tree = {
 		icon = trump_agenda
 		x = 3
 		y = 10
-		cost = 5
+		cost = 3
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
 		prerequisite = { focus = USA_the_home_front }
@@ -624,7 +624,7 @@ focus_tree = {
         icon = mexican_border_wall
         x = 1
         y = 13
-        cost = 10
+        cost = 6
         available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
         prerequisite = { focus = USA_visit_gaza_and_israel }
@@ -670,7 +670,7 @@ focus_tree = {
         icon = blockadeeconomy
         x = 3
         y = 11
-        cost = 5
+        cost = 3
         available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
         prerequisite = { focus = USA_golf_and_make_videos }
@@ -697,6 +697,9 @@ focus_tree = {
         ai_will_do = {
             base = 1
         }
+		available = {
+            has_war = no
+		}
         completion_reward = {
             log = "[GetDateText]: [Root.GetName]: focus USA_Invade_Cuba completion_reward"
             set_country_flag = rev_usa_invade_cuba_started
@@ -1325,6 +1328,12 @@ focus_tree = {
         available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
         prerequisite = { focus = USA_rock_bottom_interest_rates }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = endtimes_usa_beast_systems_banned_tt
+                NOT = { has_country_flag = endtimes_usa_christian_restoration }
+            }
+        }
         ai_will_do = {
             base = 1
         }
@@ -1363,6 +1372,12 @@ focus_tree = {
         available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
         prerequisite = { focus = USA_tax_non_dollar_us_assets }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = endtimes_usa_beast_systems_banned_tt
+                NOT = { has_country_flag = endtimes_usa_christian_restoration }
+            }
+        }
         ai_will_do = {
             base = 1
         }
@@ -1383,6 +1398,12 @@ focus_tree = {
         available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
         prerequisite = { focus = USA_soloman }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = endtimes_usa_beast_systems_banned_tt
+                NOT = { has_country_flag = endtimes_usa_christian_restoration }
+            }
+        }
         ai_will_do = {
             base = 1
         }
@@ -1402,13 +1423,39 @@ focus_tree = {
         available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
         prerequisite = { focus = USA_solomoney }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = endtimes_usa_beast_systems_banned_tt
+                NOT = { has_country_flag = endtimes_usa_christian_restoration }
+            }
+            has_war = yes
+            OR = {
+                has_country_leader = { name = "Donald Trump" ruling_only = yes }
+                has_country_leader = { name = "James David Vance" ruling_only = yes }
+            }
+        }
         ai_will_do = {
             base = 1
         }
         completion_reward = {
             log = "[GetDateText]: [Root.GetName]: focus USA_solomoney_cashless completion_reward"
             custom_effect_tooltip = USA_solomoney_cashless_tt
-            add_ideas = USA_solomoney_cashless_idea
+            rev_solomon_adopt_currency = yes
+            every_other_country = {
+                limit = {
+                    exists = yes
+                    OR = {
+                        tag = JAP
+                        has_idea = EU_member
+                        is_in_array = { global.EU_member = THIS }
+                    }
+                }
+                add_opinion_modifier = {
+                    target = USA
+                    modifier = Solomon_sovereign_debt_haircut
+                }
+            }
+            ingame_update_setup = yes
         }
     }
 
@@ -1496,7 +1543,7 @@ focus_tree = {
         available_if_capitulated = yes
         available = {
             OR = {
-                has_war_with = GER
+                has_war_with = ENG
                 has_war_with = CAN
             }
             NOT = { has_war_with = CHI }

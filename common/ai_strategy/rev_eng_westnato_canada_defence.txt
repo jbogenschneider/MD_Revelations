@@ -1,0 +1,70 @@
+# Britain commits a 50% land-army buffer to Canada while leading WestNATO
+# in a shared war. The engine still controls movement, supply and transport.
+rev_eng_westnato_defend_canada = {
+	allowed = { tag = ENG }
+
+	enable = {
+		is_ai = yes
+		is_subject = no
+		is_faction_leader = yes
+		rev_is_westnato_faction = yes
+		has_war = yes
+		CAN = {
+			exists = yes
+			has_capitulated = no
+			is_in_faction_with = ENG
+			has_war = yes
+		}
+		any_other_country = {
+			has_war_with = ENG
+			has_war_with = CAN
+		}
+	}
+	abort_when_not_enabled = yes
+
+	# This is a fraction of Britain's army, not a percentage priority bonus.
+	# Only friendly states are eligible. Eastern ports and the southern provinces
+	# provide staging positions near Canada's population and the American border.
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.50
+		states = {
+			763  # Ontario
+			1159 # Western Quebec
+			762  # Eastern Quebec
+			761  # New Brunswick
+			760  # Nova Scotia
+			759  # Newfoundland
+			757  # Manitoba
+			756  # Saskatchewan
+			755  # Alberta
+			754  # British Columbia
+		}
+		area = north_america
+		subtract_invasions_from_need = no
+		subtract_fronts_from_need = no
+	}
+
+	# Allow frontline assignments in Canada instead of leaving allied borders
+	# to the Canadian army alone; buffered divisions can reinforce these fronts.
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = CAN
+		value = 1000
+	}
+	ai_strategy = {
+		type = area_priority
+		id = north_america
+		value = 1000
+	}
+	ai_strategy = {
+		type = front_unit_request
+		area = north_america
+		value = 150
+	}
+	ai_strategy = {
+		type = theatre_distribution_demand_increase
+		id = 763 # Canadian theatre containing Ontario.
+		value = 30
+	}
+}

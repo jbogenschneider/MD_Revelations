@@ -13,10 +13,13 @@ country_event = {
 		NOT = { country_exists = FRC }
 		has_variable = rev_fra_regional_oob_mode
 		owns_state = 56
-		owns_state = 54
-		owns_state = 55
-		owns_state = 305
-		owns_state = 59
+		owns_state = 54	
+		owns_state = 961
+		owns_state = 958
+		owns_state = 61
+		owns_state = 951
+		owns_state = 959
+		owns_state = 60
 	}
 	immediate = { rev_fra_start_left_split = yes }
 	option = { name = rev_fra_split.1.a }

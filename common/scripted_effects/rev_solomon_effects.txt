@@ -1,0 +1,36 @@
+# Country scope. Apply adoption once regardless of the event or focus calling it.
+rev_solomon_adopt_currency = {
+	if = {
+		limit = {
+			exists = yes
+			NOT = { has_country_flag = rev_solomon_currency_adopted }
+			NOT = { has_country_flag = endtimes_usa_christian_restoration }
+		}
+		set_country_flag = rev_solomon_currency_adopted
+		add_ideas = Solomon_one_world_currency
+		multiply_variable = { debt = 0.20 }
+		ingame_update_setup = yes
+		news_event = { id = rev_solomon.10 hours = 1 }
+		if = {
+			limit = { tag = USA }
+			CHI = {
+				if = {
+					limit = { exists = yes NOT = { has_country_flag = rev_solomon_currency_adopted } }
+					country_event = { id = rev_solomon.1 }
+				}
+			}
+			SAU = {
+				if = {
+					limit = { exists = yes NOT = { has_country_flag = rev_solomon_currency_adopted } }
+					country_event = { id = rev_solomon.2 }
+				}
+			}
+			UAE = {
+				if = {
+					limit = { exists = yes NOT = { has_country_flag = rev_solomon_currency_adopted } }
+					country_event = { id = rev_solomon.3 }
+				}
+			}
+		}
+	}
+}

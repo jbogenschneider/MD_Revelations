@@ -1,0 +1,11 @@
+# Recognize both older template factions and the independent generic WestNATO.
+rev_is_westnato_faction = {
+	OR = {
+		has_faction_template = faction_template_westnato
+		any_country = {
+			is_faction_leader = yes
+			has_country_flag = rev_westnato_faction_member
+			is_in_faction_with = PREV
+		}
+	}
+}

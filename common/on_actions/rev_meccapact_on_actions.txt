@@ -1,0 +1,35 @@
+on_actions = {
+	# ROOT is the applicant; FROM is the faction leader.
+	on_join_faction = {
+		effect = {
+			if = {
+				limit = { has_faction_template = faction_template_meccapact is_subject = no }
+				MeccaPact_enroll_member = yes
+			}
+		}
+	}
+	# ROOT invites FROM. Also covers add_to_faction scripted effects.
+	on_offer_join_faction = {
+		effect = {
+			if = {
+				limit = { has_faction_template = faction_template_meccapact }
+				FROM = {
+					if = {
+						limit = { has_faction_template = faction_template_meccapact is_subject = no }
+						MeccaPact_enroll_member = yes
+					}
+				}
+			}
+		}
+	}
+	on_leave_faction = {
+		effect = {
+			if = {
+				limit = { has_idea = MeccaPact_member }
+				remove_ideas = MeccaPact_member
+				remove_from_array = { global.meccapact_members = THIS }
+				remove_from_tech_sharing_group = MeccaPact_Tech_Share
+			}
+		}
+	}
+}

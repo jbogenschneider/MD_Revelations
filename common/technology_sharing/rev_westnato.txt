@@ -1,0 +1,8 @@
+technology_sharing_group = {
+ id = WestNATO_Tech_Share
+ name = WestNATO_Tech_Share_name
+ desc = WestNATO_Tech_Share_desc
+ picture = GFX_technology_sharing_default
+ research_sharing_per_country_bonus = 0.01
+ available = { has_idea = WestNATO_member }
+}

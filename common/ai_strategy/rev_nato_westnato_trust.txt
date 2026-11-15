@@ -1,0 +1,29 @@
+# The split is administrative, not a hostile border. Only peaceful members of
+# the opposite bloc are targets; an actual war immediately restores normal AI.
+rev_westnato_trust_nato_borders = {
+	allowed = { always = yes }
+	enable = { is_ai = yes rev_is_westnato_faction = yes }
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = front_unit_request
+		country_trigger = {
+			has_idea = NATO_member
+			NOT = { has_war_with = FROM }
+		}
+		value = -100
+	}
+}
+
+rev_nato_trust_westnato_borders = {
+	allowed = { always = yes }
+	enable = { is_ai = yes has_idea = NATO_member }
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = front_unit_request
+		country_trigger = {
+			rev_is_westnato_faction = yes
+			NOT = { has_war_with = FROM }
+		}
+		value = -100
+	}
+}
