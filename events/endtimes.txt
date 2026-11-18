@@ -2,7 +2,35 @@
 add_namespace = endtimes
 add_namespace = endtimeseal
 
-# Alex takes control of Russia: January 6, 2028, for AI and human Russia.
+# Three days after the Global Ceasefire, use the existing NATO victory settlement.
+country_event = {
+	id = endtimes.44
+	title = endtimes.44.t
+	desc = endtimes.44.d
+	picture = GFX_report_event_usa_election
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		has_global_flag = { flag = endtimes_global_ceasefire_occurred days > 2 }
+		NOT = { has_country_flag = endtimes_usa_returns_to_normal }
+	}
+
+	immediate = {
+		set_country_flag = endtimes_usa_returns_to_normal
+		remove_ideas = endtimes_cabal
+		set_country_flag = endtimes_cabal_initialized
+		clr_country_flag = rev_usa_cw_restoration_kelly_done
+		if = {
+			limit = { PER = { exists = yes } has_war_with = PER }
+			white_peace = PER
+		}
+		country_event = { id = rev_usa_cw.42 }
+	}
+	option = { name = endtimes.44.a }
+}
+
+# Alex takes control of Russia for AI and human Russia.
 country_event = {
 	id = endtimes.15
 	title = endtimes.15.t
@@ -148,9 +176,7 @@ news_event = {
 	major = yes
 
 	trigger = {
-		# Keep queued or external calls on the scheduled day.
-		date > 2028.3.21
-		date < 2028.3.26
+		endtimes_great_warning_date = yes
 	}
 
 	option = {
@@ -169,7 +195,7 @@ news_event = {
 
 	trigger = {
 		# Keep queued or external calls on the scheduled day.
-		date > 2028.4.13
+		date > 2028.4.12
 		date < 2028.4.14
 	}
 
@@ -188,8 +214,8 @@ news_event = {
 	major = yes
 
 	trigger = {
-		date > 2028.5.15
-		date < 2028.5.17
+		date > 2028.5.5
+		date < 2028.5.7
 		has_global_flag = endtimes_miracle_occurred
 	}
 
@@ -198,7 +224,7 @@ news_event = {
 	}
 }
 
-# Worldwide WNN announcement: June 6, 2028.  One Religion
+# Worldwide WNN announcement: June 6, 2028. One Religion
 news_event = {
 	id = endtimes.5
 	title = endtimes.5.t
@@ -209,8 +235,8 @@ news_event = {
 
 	trigger = {
 		# Keep queued or external calls on the scheduled day.
-		date > 2028.7.5
-		date < 2028.7.7
+		date > 2028.6.5
+		date < 2028.6.7
 	}
 
 	option = {
@@ -218,7 +244,7 @@ news_event = {
 	}
 }
 
-# Worldwide WNN announcement: Alex rises from the dead
+# Worldwide WNN announcement: Alex on the scene
 news_event = {
 	id = endtimes.6
 	title = endtimes.6.t
@@ -228,13 +254,28 @@ news_event = {
 	major = yes
 
 	trigger = {
-		# Keep queued or external calls on the scheduled day.
-		date > 2028.2.6
-		date < 2028.2.8
+		endtimes_prophets_announce_date = yes
 	}
 
 	option = {
 		name = endtimes.6.a
+	}
+}
+# Worldwide WNN announcement: Alex rises from the dead
+news_event = {
+	id = endtimes.666
+	title = endtimes.666.t
+	desc = endtimes.666.d
+	picture = GFX_onefaith_gold_ring
+	is_triggered_only = yes
+	major = yes
+
+	trigger = {
+		endtimes_prophets_miracle_date = yes
+	}
+
+	option = {
+		name = endtimes.666.a
 	}
 }
 
@@ -248,8 +289,8 @@ news_event = {
 	major = yes
 
 	trigger = {
-		date > 2028.8.28
-		date < 2028.8.30
+		date > 2029.4.28
+		date < 2029.4.30
 	}
 
 	option = {
@@ -266,8 +307,8 @@ country_event = {
 
 	trigger = {
 		# Keep queued or external calls on the scheduled day.
-		date > 2028.10.31
-		date < 2028.11.3
+		date > 2029.5.1
+		date < 2029.5.3
 		tag = HLS
 		NOT = { has_country_flag = endtimes_false_prophet_installed }
 	}
@@ -320,8 +361,8 @@ country_event = {
 
 	trigger = {
 		# Keep queued or external calls on the scheduled day.
-		date > 2028.3.19
-		date < 2028.3.21
+		date > 2028.1.11
+		date < 2028.1.13
 		tag = PER
 		controls_province = 16215
 		ISR = { exists = yes }
@@ -405,16 +446,32 @@ country_event = {
 		if = {
 			limit = { has_faction_template = faction_template_meccapact }
 			set_country_flag = endtimes_meccapact_realignment_completed
-			if = {
-				limit = { tag = ITA }
-				set_country_flag = endtimes_italy_joined_meccapact
-			}
 		}
 	}
 
 	option = {
 		name = endtimes.16.a
 	}
+}
+
+# Iran and its remaining regional dependants join MeccaPact.
+country_event = {
+	id = endtimes.26
+	title = endtimes.26.t
+	desc = endtimes.26.d
+	is_triggered_only = yes
+
+	trigger = {
+		tag = PER
+		date > 2028.11.12
+		date < 2028.11.14
+		is_subject = no
+		SAU = { exists = yes is_subject = no }
+		NOT = { has_country_flag = endtimes_iran_meccapact_completed }
+	}
+
+	immediate = { endtimes_iran_join_meccapact = yes }
+	option = { name = endtimes.26.a }
 }
 
 # France's royal restoration: five days after the French civil-war split.
@@ -509,6 +566,7 @@ country_event = {
 		IRE = {
 			if = { limit = { exists = yes } country_event = { id = endtimes.18 days = 10 } }
 		}
+		rev_grant_holy_monarchy = yes
 	}
 
 	option = {
@@ -516,7 +574,7 @@ country_event = {
 	}
 }
 
-# Germany's royal settlement: July 3, 2029, for AI and human Germany.
+# Germany's royal settlement: November 27, 2028, for AI and human Germany.
 country_event = {
 	id = endtimes.14
 	title = endtimes.14.t
@@ -524,8 +582,8 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		date > 2029.7.2
-		date < 2029.7.4
+		date > 2028.11.26
+		date < 2028.11.28
 		tag = GER
 		NOT = { has_country_flag = endtimes_german_monarchy_restored }
 	}
@@ -578,6 +636,7 @@ country_event = {
 		}
 		# The eastern Laender and Berlin form a sovereign East German state.
 		endtimes_create_independent_east_germany = yes
+		rev_grant_holy_monarchy = yes
 	}
 
 	option = {
@@ -965,7 +1024,7 @@ news_event = {
 	option = { name = endtimes.32.a }
 }
 
-# November 11, 2028: Australia chooses its side in the world conflict.
+# November 16, 2028: the Asian Quad becomes part of NATO.
 country_event = {
 	id = endtimes.33
 	title = endtimes.33.t
@@ -975,72 +1034,13 @@ country_event = {
 
 	trigger = {
 		tag = AST
-		date > 2028.11.10
-		date < 2028.11.12
-		NOT = { has_country_flag = endtimes_australia_choice_presented }
+		date > 2028.11.15
+		date < 2028.11.17
+		NOT = { has_global_flag = endtimes_pacific_nato_realignment_completed }
 	}
 
-	immediate = {
-		set_country_flag = endtimes_australia_choice_presented
-	}
-
-	option = {
-		name = endtimes.33.a
-		trigger = {
-			USA = { exists = yes }
-			any_country = {
-				has_idea = NATO_member
-				has_war_with = USA
-			}
-		}
-		ai_chance = { factor = 90 }
-		if = {
-			limit = { has_idea = CSTO_member }
-			CSTO_leave = yes
-		}
-		# Save a NATO belligerent before changing Australia's alliance.
-		random_other_country = {
-			limit = { has_idea = NATO_member has_war_with = USA }
-			save_event_target_as = endtimes_australia_nato_war_ally
-		}
-		endtimes_ensure_nato_membership = yes
-		if = {
-			limit = { NOT = { has_war_with = USA } }
-			add_to_war = {
-				targeted_alliance = event_target:endtimes_australia_nato_war_ally
-				enemy = USA
-				hostility_reason = asked_to_join
-				single_target_only = yes
-			}
-		}
-		set_country_flag = endtimes_australia_joined_nato_war
-		# add_war_support clamps at zero; reset and then set exactly 80 percent.
-		add_war_support = -1
-		add_war_support = 0.8
-	}
-
-	option = {
-		name = endtimes.33.b
-		# This is the only available option when NATO and the USA are not at war.
-		ai_chance = { factor = 10 }
-		if = {
-			limit = { has_idea = CSTO_member }
-			CSTO_leave = yes
-		}
-		NATO_leave = yes
-		leave_faction = yes
-		if = {
-			limit = { CHI = { exists = yes } NOT = { has_war_with = CHI } }
-			declare_war_on = { target = CHI type = annex_everything }
-		}
-		if = {
-			limit = { SOV = { exists = yes } NOT = { has_war_with = SOV } }
-			declare_war_on = { target = SOV type = annex_everything }
-		}
-		set_country_flag = endtimes_australia_fighting_csto
-		add_war_support = -1
-		add_war_support = 0.8
-	}
+	immediate = { endtimes_pacific_nato_realignment = yes }
+	option = { name = endtimes.33.a }
 }
 
 # One-time nuclear response to Iran while either specified province is outside Israeli control.
@@ -1133,7 +1133,7 @@ news_event = {
 	option = { name = endtimes.37.a }
 }
 
-# Worldwide WNN announcement: April 2, 2028, after the ceasefire is applied.
+# Worldwide WNN announcement: three days after the Miracle, after peace is applied.
 news_event = {
 	id = endtimes.38
 	title = endtimes.38.t
@@ -1195,7 +1195,7 @@ news_event = {
 	option = { name = endtimes.40.a }
 }
 
-# Christmas reconciliation: the nationalist/Trump/Vance restoration branch.
+# Christmas Consecration: the USA rejects Alex's systems; California separates.
 country_event = {
 	id = endtimes.41
 	title = endtimes.41.t
@@ -1204,26 +1204,9 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		endtimes_usa_christmas_reconciliation_ready = yes
-		NOT = { AND = { has_government = democratic has_faction_template = faction_template_nato } }
 	}
 	immediate = { endtimes_restore_usa_at_christmas = yes }
 	option = { name = endtimes.41.a }
-}
-
-# An already democratic NATO member only receives the angel's message.
-country_event = {
-	id = endtimes.42
-	title = endtimes.41.t
-	desc = endtimes.42.d
-	picture = GFX_report_event_usa_election
-	is_triggered_only = yes
-	trigger = {
-		endtimes_usa_christmas_reconciliation_ready = yes
-		has_government = democratic
-		has_faction_template = faction_template_nato
-	}
-	immediate = { set_country_flag = endtimes_usa_christmas_reconciliation_completed }
-	option = { name = endtimes.42.a }
 }
 
 # Worldwide WNN announcement: first seal

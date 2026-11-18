@@ -1,4 +1,4 @@
-﻿focus_tree = {
+focus_tree = {
 	id = generic_focus
 	country = { factor = 2 }
 	continuous_focus_position = { x = 5 y = 830 }
@@ -1207,12 +1207,20 @@
 				change_influence_percentage = yes
 			}
 			custom_effect_tooltip = influence_on_neighbors_tt
+			if = {
+				limit = { rev_march_2028_hang_diagnostics = yes }
+				log = "[GetDateText]: [Root.GetName]: REV_HANG_TRACE trade_with_neighbors INFLUENCE_DONE"
+			}
 			set_temp_variable = { temp_opinion = 5 }
 			change_industrial_conglomerates_opinion = yes
 			change_small_medium_business_owners_opinion = yes
 			change_the_donju_opinion = yes
 			change_chaebols_opinion = yes
 			change_wall_street_opinion = yes
+			if = {
+				limit = { rev_march_2028_hang_diagnostics = yes }
+				log = "[GetDateText]: [Root.GetName]: REV_HANG_TRACE trade_with_neighbors OPINIONS_DONE"
+			}
 			if = { limit = { is_agrarian_economy = yes }
 				set_temp_variable = { crop_type = 0 }
 				set_temp_variable = { price_change = 3 }
@@ -1221,6 +1229,10 @@
 				set_temp_variable = { price_change = 3 }
 				AGRI_price_change_effect = yes
 				AGRI_update_math_variables = yes
+			}
+			if = {
+				limit = { rev_march_2028_hang_diagnostics = yes }
+				log = "[GetDateText]: [Root.GetName]: REV_HANG_TRACE trade_with_neighbors END"
 			}
 		}
 

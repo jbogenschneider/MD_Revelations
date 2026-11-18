@@ -12,7 +12,7 @@ endtimes_pacific_join_nato = {
 	}
 }
 
-# Global scheduler scope. Japan dissolves its own bloc before anyone joins NATO.
+# November 16 event. Japan dissolves its own bloc before anyone joins NATO.
 endtimes_pacific_nato_realignment = {
 	if = {
 		limit = { NOT = { has_global_flag = endtimes_pacific_nato_realignment_completed } }
@@ -22,19 +22,16 @@ endtimes_pacific_nato_realignment = {
 				limit = {
 					exists = yes
 					is_faction_leader = yes
-					NOT = { has_faction_template = faction_template_nato }
+					NOT = { rev_is_nato_faction = yes }
 				}
 				dismantle_faction = yes
 			}
 			endtimes_pacific_join_nato = yes
 		}
 		AST = { endtimes_pacific_join_nato = yes }
+		RAJ = { endtimes_pacific_join_nato = yes }
 		PHI = { endtimes_pacific_join_nato = yes }
-		KOR = {
-			if = {
-				limit = { exists = yes has_war = no }
-				endtimes_pacific_join_nato = yes
-			}
-		}
+		KOR = { endtimes_pacific_join_nato = yes }
+		NZL = { endtimes_pacific_join_nato = yes }
 	}
 }

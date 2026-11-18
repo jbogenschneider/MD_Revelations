@@ -834,7 +834,9 @@ DIPLOMACY_JOIN_FACTION_ENABLE_TRIGGER = {
 	#Other countries can't join NATO
 	if = {
 		limit = {
-			FROM = { has_idea = NATO_member }
+			FROM = {
+				OR = { has_idea = NATO_member rev_is_nato_faction = yes }
+			}
 		}
 		custom_trigger_tooltip = {
 			tooltip = NATO_join_faction_rule_tt
@@ -1030,7 +1032,7 @@ DIPLOMACY_OFFER_JOIN_FACTION_ENABLE_TRIGGER = {
 	#Can't invite other countries to NATO
 	if = {
 		limit = {
-			has_idea = NATO_member
+			OR = { has_idea = NATO_member rev_is_nato_faction = yes }
 		}
 		custom_trigger_tooltip = {
 			tooltip = NATO_offer_join_faction_rule_tt

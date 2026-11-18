@@ -24,6 +24,7 @@ faction_template_nato = {
 		# Join Rules
 		joining_rule_democratic_non_aligned
 		joining_rule_has_no_war
+		rev_nato_joining_rule_exclude_israel
 		# War Declaration
 		# Peace Conference
 		faction_peace_nato_doctrine

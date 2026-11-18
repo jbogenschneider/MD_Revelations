@@ -1,6 +1,10 @@
 on_actions = {
-	on_weekly = {
+	on_daily = {
 		effect = {
+			if = {
+				limit = { rev_chi_tw_february_settlement_ready = yes }
+				country_event = { id = rev_chi_tw.42 }
+			}
 			if = {
 				limit = { rev_chi_tw_regional_war_window = yes }
 				country_event = { id = rev_chi_tw.40 }

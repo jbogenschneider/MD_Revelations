@@ -746,6 +746,10 @@ start_project = {
 }
 
 complete_project = {
+	if = {
+		limit = { rev_march_2028_hang_diagnostics = yes }
+		log = "[GetDateText]: [This.GetName]: REV_HANG_TRACE complete_project BEGIN project=[?project]"
+	}
 	if = { limit = { check_variable = { project_array^project < 0 } }
 
 		set_variable = { project_type = project }
@@ -786,9 +790,17 @@ complete_project = {
 	clear_variable = project_type
 
 	refresh_gui = yes
+	if = {
+		limit = { rev_march_2028_hang_diagnostics = yes }
+		log = "[GetDateText]: [This.GetName]: REV_HANG_TRACE complete_project END"
+	}
 }
 
 end_project = {
+	if = {
+		limit = { rev_march_2028_hang_diagnostics = yes }
+		log = "[GetDateText]: [This.GetName]: REV_HANG_TRACE end_project BEGIN project=[?project]"
+	}
 	if = { limit = { check_variable = { project_array^project < 0 } }
 
 		var:project_array^project = {
@@ -838,6 +850,10 @@ end_project = {
 	clear_variable = project
 
 	refresh_gui = yes
+	if = {
+		limit = { rev_march_2028_hang_diagnostics = yes }
+		log = "[GetDateText]: [This.GetName]: REV_HANG_TRACE end_project END"
+	}
 }
 
 initialize_start_project_decisions = {

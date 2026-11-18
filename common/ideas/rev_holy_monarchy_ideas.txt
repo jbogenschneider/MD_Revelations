@@ -1,0 +1,20 @@
+ideas = {
+	country = {
+		rev_holy_monarchy = {
+			picture = monarchy
+			allowed = { always = yes }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			modifier = {
+				custom_modifier_tooltip = rev_holy_monarchy_resolve_tt
+				conscription = 0.05 # Same recruitable population as MD's draft_army law.
+			}
+			on_add = { rev_holy_monarchy_refresh_support_floor = yes }
+			on_remove = {
+				remove_dynamic_modifier = { modifier = rev_holy_monarchy_support_floor }
+				clear_variable = rev_holy_monarchy_stability_floor
+				clear_variable = rev_holy_monarchy_war_support_floor
+			}
+		}
+	}
+}

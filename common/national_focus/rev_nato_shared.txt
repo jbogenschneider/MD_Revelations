@@ -922,3 +922,423 @@ shared_focus = {
 	}
 	ai_will_do = { base = 0.5 }
 }
+
+# Holy Monarchy: a separate shared branch below the existing national branches.
+# Membership is a spirit, not a government type, so consecrated USA can remain democratic.
+shared_focus = {
+	id = REV_HM_holy_monarchy
+	icon = religious_unity
+	x = 36
+	y = 10
+	cost = 5
+	available = { has_idea = rev_holy_monarchy }
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	completion_reward = {
+		add_political_power = 100
+		rev_holy_monarchy_refresh_support_floor = yes
+	}
+	ai_will_do = { base = 10 }
+}
+
+# Adapted from REV_NATO_light_industry_investments; original rewards and economic requirements retained.
+shared_focus = {
+	id = REV_HM_light_industry_investments
+	icon = construction_development
+	x = -6
+	y = 1
+	relative_position_id = REV_HM_holy_monarchy
+	cost = 7
+	prerequisite = { focus = REV_HM_holy_monarchy }
+	available = {
+		has_idea = rev_holy_monarchy
+		date > 2028.7.1
+		if = { limit = { is_ai = no } has_war = no }
+		else = { check_variable = { interest_rate < 14.999 } }
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus REV_HM_light_industry_investments"
+		set_temp_variable = { treasury_change = -7.5 }
+		modify_treasury_effect = yes
+		capital_scope = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = fossil_powerplant
+				level = 1
+			}
+		}
+		if = {
+			limit = { num_of_factories > 25 }
+			one_random_industrial_complex = yes
+		}
+	}
+	ai_will_do = { base = 2 }
+}
+
+
+# Adapted from REV_NATO_agricultural_district_subsidization; original rewards and economic requirements retained.
+shared_focus = {
+	id = REV_HM_agricultural_district_subsidization
+	icon = focus_generic_agricultural_subsidies
+	x = -8
+	y = 2
+	relative_position_id = REV_HM_holy_monarchy
+	cost = 7.86
+	prerequisite = { focus = REV_HM_light_industry_investments }
+	available = {
+		has_idea = rev_holy_monarchy
+
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus REV_HM_agricultural_district_subsidization"
+		one_random_agriculture_district = yes
+		add_ideas = agricultural_investments
+		set_temp_variable = { temp_opinion = 10 }
+		change_farmers_opinion = yes
+		set_temp_variable = { temp_opinion = 5 }
+		change_landowners_opinion = yes
+	}
+	ai_will_do = { base = 2 }
+}
+
+
+# Adapted from REV_NATO_energy_sector; original rewards and economic requirements retained.
+shared_focus = {
+	id = REV_HM_energy_sector
+	icon = national_grid
+	x = -4
+	y = 2
+	relative_position_id = REV_HM_holy_monarchy
+	cost = 10
+	prerequisite = { focus = REV_HM_light_industry_investments }
+	available = {
+		has_idea = rev_holy_monarchy
+
+	}
+	search_filters = { FOCUS_FILTER_INTERNAL_FACTION FOCUS_FILTER_STABILITY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus REV_HM_energy_sector"
+		set_temp_variable = { treasury_change = -10.5 }
+		modify_treasury_effect = yes
+		capital_scope = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = fossil_powerplant level = 1 }
+			add_building_construction = { type = synthetic_refinery level = 1 }
+		}
+	}
+	ai_will_do = { base = 2 }
+}
+
+
+# Adapted from REV_NATO_heavy_industry_investments; original rewards and economic requirements retained.
+shared_focus = {
+	id = REV_HM_heavy_industry_investments
+	icon = tank_production
+	x = 6
+	y = 1
+	relative_position_id = REV_HM_holy_monarchy
+	cost = 10
+	prerequisite = { focus = REV_HM_holy_monarchy }
+	available = {
+		has_idea = rev_holy_monarchy
+		custom_trigger_tooltip = {
+			tooltip = 95_total_gdp_tt
+			check_variable = { gdp_total > 95 }
+		}
+		has_war = no
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNAL_FACTION }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus REV_HM_heavy_industry_investments"
+		set_temp_variable = { treasury_change = -7.5 }
+		modify_treasury_effect = yes
+		capital_scope = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		if = {
+			limit = { num_of_factories > 20 num_of_factories < 45 }
+			one_random_arms_factory = yes
+		}
+		else_if = {
+			limit = { num_of_factories > 44 }
+			two_random_arms_factory = yes
+		}
+		set_temp_variable = { temp_opinion = 5 }
+		change_defense_industry_opinion = yes
+	}
+	ai_will_do = { base = 2 }
+}
+
+
+# Adapted from REV_NATO_refitting_the_military_industry; original rewards and economic requirements retained.
+shared_focus = {
+	id = REV_HM_refitting_the_military_industry
+	icon = tank_production
+	x = 6
+	y = 2
+	relative_position_id = REV_HM_holy_monarchy
+	cost = 10
+	prerequisite = { focus = REV_HM_heavy_industry_investments }
+	available = {
+		has_idea = rev_holy_monarchy
+		custom_trigger_tooltip = {
+			tooltip = 95_total_gdp_tt
+			check_variable = { gdp_total > 95 }
+		}
+		has_war = no
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNAL_FACTION }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus REV_HM_refitting_the_military_industry"
+		set_temp_variable = { treasury_change = -7.5 }
+		modify_treasury_effect = yes
+		capital_scope = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		if = {
+			limit = { num_of_factories > 20 num_of_factories < 45 }
+			one_random_arms_factory = yes
+		}
+		else_if = {
+			limit = { num_of_factories > 44 }
+			two_random_arms_factory = yes
+		}
+		set_temp_variable = { temp_opinion = 5 }
+		change_defense_industry_opinion = yes
+	}
+	ai_will_do = { base = 2 }
+}
+
+
+# Adapted from REV_NATO_build_churches; original rewards and economic requirements retained.
+shared_focus = {
+	id = REV_HM_build_churches
+	icon = religious_unity
+	x = 0
+	y = 1
+	relative_position_id = REV_HM_holy_monarchy
+	cost = 7.86
+	prerequisite = { focus = REV_HM_holy_monarchy }
+	available = {
+		has_idea = rev_holy_monarchy
+
+	}
+	search_filters = { FOCUS_FILTER_INTERNAL_FACTION }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus REV_HM_build_churches"
+		add_stability = 0.05
+		set_temp_variable = { temp_opinion = 10 }
+		change_the_priesthood_opinion = yes
+		change_the_ulema_opinion = yes
+		change_the_wahabi_ulema_opinion = yes
+		change_the_clergy_opinion = yes
+	}
+	ai_will_do = { base = 2 }
+}
+
+
+# Adapted from REV_NATO_build_primary_schools; original rewards and economic requirements retained.
+shared_focus = {
+	id = REV_HM_build_primary_schools
+	icon = research
+	x = 0
+	y = 2
+	relative_position_id = REV_HM_holy_monarchy
+	cost = 10
+	prerequisite = { focus = REV_HM_build_churches }
+	available = {
+		has_idea = rev_holy_monarchy
+		date > 2028.6.1
+	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus REV_HM_build_primary_schools"
+		generic_research_buff = yes
+		if = {
+			limit = { has_variable = literacy_rate }
+			set_temp_variable = { LR_change = 0.025 }
+			update_literacy_rate = yes
+		}
+	}
+	ai_will_do = { base = 2 }
+}
+
+
+# Adapted from REV_NATO_assure_access_to_education; original rewards and economic requirements retained.
+shared_focus = {
+	id = REV_HM_assure_access_to_education
+	icon = scientific_exchange
+	x = 0
+	y = 3
+	relative_position_id = REV_HM_holy_monarchy
+	cost = 10
+	prerequisite = { focus = REV_HM_build_primary_schools }
+	available = {
+		has_idea = rev_holy_monarchy
+		custom_trigger_tooltip = {
+			tooltip = 135_total_gdp_tt
+			check_variable = { gdp_total > 135 }
+		}
+	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus REV_HM_assure_access_to_education"
+		generic_research_buff = yes
+		if = {
+			limit = { has_variable = literacy_rate }
+			set_temp_variable = { LR_change = 0.05 }
+			update_literacy_rate = yes
+		}
+	}
+	ai_will_do = { base = 2 }
+}
+
+
+# Adapted from REV_NATO_expand_the_universities; original rewards and economic requirements retained.
+shared_focus = {
+	id = REV_HM_expand_the_universities
+	icon = research2
+	x = 0
+	y = 4
+	relative_position_id = REV_HM_holy_monarchy
+	cost = 10
+	prerequisite = { focus = REV_HM_assure_access_to_education }
+	available = {
+		has_idea = rev_holy_monarchy
+		custom_trigger_tooltip = {
+			tooltip = 160_total_gdp_tt
+			check_variable = { gdp_total > 160 }
+		}
+	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus REV_HM_expand_the_universities"
+		generic_research_buff = yes
+		if = {
+			limit = { has_variable = literacy_rate }
+			set_temp_variable = { LR_change = 0.1 }
+			update_literacy_rate = yes
+		}
+	}
+	ai_will_do = { base = 2 }
+}
+
+
+# Adapted from REV_NATO_industrial_research_task_forces; original rewards and economic requirements retained.
+shared_focus = {
+	id = REV_HM_industrial_research_task_forces
+	icon = tech_sharing
+	x = 6
+	y = 3
+	relative_position_id = REV_HM_holy_monarchy
+	cost = 10
+	prerequisite = { focus = REV_HM_refitting_the_military_industry }
+	available = {
+		has_idea = rev_holy_monarchy
+		custom_trigger_tooltip = {
+			tooltip = 200_total_gdp_tt
+			check_variable = { gdp_total > 200 }
+		}
+	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus REV_HM_industrial_research_task_forces"
+		generic_research_buff = yes
+	}
+	ai_will_do = { base = 2 }
+}
+
+
+# Adapted from REV_NATO_domestic_vehicle_research; original rewards and economic requirements retained.
+shared_focus = {
+	id = REV_HM_domestic_vehicle_research
+	icon = Tank_sheep
+	x = 4
+	y = 4
+	relative_position_id = REV_HM_holy_monarchy
+	cost = 10
+	prerequisite = { focus = REV_HM_industrial_research_task_forces }
+	available = {
+		has_idea = rev_holy_monarchy
+		custom_trigger_tooltip = {
+			tooltip = 200_total_gdp_tt
+			check_variable = { gdp_total > 200 }
+		}
+		NOT = { has_facility_specialization = specialization_land }
+	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus REV_HM_domestic_vehicle_research"
+		one_random_land_facility = yes
+	}
+	ai_will_do = { base = 2 }
+}
+
+
+# Adapted from REV_NATO_domestic_naval_research; original rewards and economic requirements retained.
+shared_focus = {
+	id = REV_HM_domestic_naval_research
+	icon = navy3
+	x = 6
+	y = 4
+	relative_position_id = REV_HM_holy_monarchy
+	cost = 10
+	prerequisite = { focus = REV_HM_industrial_research_task_forces }
+	available = {
+		has_idea = rev_holy_monarchy
+		custom_trigger_tooltip = {
+			tooltip = 200_total_gdp_tt
+			check_variable = { gdp_total > 200 }
+		}
+		any_owned_state = { is_coastal = yes }
+		NOT = { has_facility_specialization = specialization_naval }
+	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus REV_HM_domestic_naval_research"
+		one_random_naval_facility = yes
+	}
+	ai_will_do = { base = 2 }
+}
+
+
+# Adapted from REV_NATO_domestic_aircraft_research; original rewards and economic requirements retained.
+shared_focus = {
+	id = REV_HM_domestic_aircraft_research
+	icon = jet_engine
+	x = 8
+	y = 4
+	relative_position_id = REV_HM_holy_monarchy
+	cost = 10
+	prerequisite = { focus = REV_HM_industrial_research_task_forces }
+	available = {
+		has_idea = rev_holy_monarchy
+		custom_trigger_tooltip = {
+			tooltip = 200_total_gdp_tt
+			check_variable = { gdp_total > 200 }
+		}
+		NOT = { has_facility_specialization = specialization_air }
+	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus REV_HM_domestic_aircraft_research"
+		one_random_air_facility = yes
+	}
+	ai_will_do = { base = 2 }
+}

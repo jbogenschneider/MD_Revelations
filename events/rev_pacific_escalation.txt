@@ -13,6 +13,7 @@ country_event = {
 	}
 	immediate = {
 		set_country_flag = rev_pacific_north_korea_attack_done
+		log = "[GetDateText]: [Root.GetName]: Pacific escalation; North Korea declares war on South Korea."
 		set_global_flag = rev_pacific_korean_war_announced
 		declare_war_on = { target = KOR type = annex_everything }
 		news_event = { id = rev_pacific_escalation.2 }
@@ -57,21 +58,9 @@ country_event = {
 				}
 				if = {
 					limit = {
-						PHI = { exists = yes NOT = { is_subject = yes } NOT = { is_in_faction = yes } NOT = { has_war_with = JAP } }
-					}
-					add_to_faction = PHI
-				}
-				if = {
-					limit = {
 						AST = { exists = yes NOT = { is_subject = yes } NOT = { is_in_faction = yes } NOT = { has_war_with = JAP } }
 					}
 					add_to_faction = AST
-				}
-				if = {
-					limit = {
-						NZL = { exists = yes NOT = { is_subject = yes } NOT = { is_in_faction = yes } NOT = { has_war_with = JAP } }
-					}
-					add_to_faction = NZL
 				}
 			}
 		}
@@ -87,7 +76,7 @@ country_event = {
 				declare_war_on = { target = CHI type = annex_everything }
 			}
 		}
-		PHI = {
+		KOR = {
 			if = {
 				limit = { exists = yes NOT = { has_war_with = CHI } NOT = { is_in_faction_with = CHI } NOT = { is_subject_of = CHI } }
 				declare_war_on = { target = CHI type = annex_everything }

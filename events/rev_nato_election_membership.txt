@@ -31,7 +31,6 @@ country_event = {
 				NOT = { has_war_with = USA }
 				NOT = { has_idea = CSTO_member }
 				NOT = { has_country_flag = endtimes_meccapact_realignment_completed }
-				NOT = { has_country_flag = endtimes_italy_joined_meccapact }
 				NOT = { has_country_flag = rev_nato_anti_usa_opt_out_resolved_fra }
 				NOT = { has_country_flag = rev_nato_anti_usa_opt_out_resolved_ita }
 				NOT = {

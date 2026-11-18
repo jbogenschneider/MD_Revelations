@@ -1,0 +1,38 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			every_country = {
+				limit = { rev_is_nato_faction = yes is_subject = no }
+				rev_nato_sync_existing_membership = yes
+			}
+			ISR = {
+				if = { limit = { exists = yes } rev_nato_enforce_israel_exclusion = yes }
+			}
+		}
+	}
+	on_daily = {
+		effect = {
+			if = {
+				limit = { rev_is_nato_faction = yes is_subject = no }
+				rev_nato_sync_existing_membership = yes
+			}
+			if = {
+				limit = { tag = ISR }
+				rev_nato_enforce_israel_exclusion = yes
+			}
+		}
+	}
+	on_join_faction = {
+		effect = {
+			if = { limit = { original_tag = ISR } rev_nato_enforce_israel_exclusion = yes }
+		}
+	}
+	# Scripted add_to_faction uses this callback rather than on_join_faction.
+	on_offer_join_faction = {
+		effect = {
+			FROM = {
+				if = { limit = { original_tag = ISR } rev_nato_enforce_israel_exclusion = yes }
+			}
+		}
+	}
+}

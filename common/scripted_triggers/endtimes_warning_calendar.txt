@@ -1,0 +1,5 @@
+# Shared by the scheduler and event so their Warning dates cannot disagree.
+endtimes_great_warning_date = {
+	date > 2028.3.19
+	date < 2028.3.21
+}

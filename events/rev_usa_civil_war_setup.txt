@@ -1349,18 +1349,37 @@ country_event = {
 
 	trigger = {
 		tag = USA
-		has_country_flag = rev_usa_cw_american_resistance_fired
-		has_war_with = CAN
-		1182 = {
-			NOT = { is_controlled_by = USA }
+		OR = {
+			AND = {
+				has_country_flag = rev_usa_cw_american_resistance_fired
+				has_war_with = CAN
+				1182 = { NOT = { is_controlled_by = USA } }
+				NOT = { has_global_flag = rev_usa_cw_concluded }
+			}
+			AND = {
+				has_country_flag = endtimes_usa_returns_to_normal
+				NOT = { has_country_flag = endtimes_usa_normal_settlement_applied }
+			}
 		}
-		NOT = { has_global_flag = rev_usa_cw_concluded }
 	}
 
 	immediate = {
 		set_global_flag = rev_usa_cw_concluded
 		set_country_flag = rev_usa_cw_restoration_transition
 		clr_country_flag = rev_usa_cw_american_resistance_fired
+		if = {
+			limit = { has_country_flag = endtimes_usa_returns_to_normal }
+			set_country_flag = endtimes_usa_normal_settlement_applied
+			if = {
+				limit = {
+					OR = {
+						has_country_leader = { name = "Donald Trump" ruling_only = yes }
+						has_country_leader = { name = "James David Vance" ruling_only = yes }
+					}
+				}
+				retire_country_leader = yes
+			}
+		}
 
 		every_country = {
 			limit = { has_war_with = USA }
@@ -1485,7 +1504,13 @@ country_event = {
 		clr_country_flag = rev_usa_cw_player_side_usb
 		clr_country_flag = rev_usa_cw_player_side_usa
 
-		country_event = { id = rev_usa_cw.43 days = 30 }
+		if = {
+			limit = { has_country_flag = endtimes_usa_returns_to_normal }
+			# The next regular election is November 2028, not November 2032.
+			set_politics = { last_election = "2024.11.5" election_frequency = 48 elections_allowed = yes }
+			endtimes_ensure_nato_membership = yes
+		}
+		else = { country_event = { id = rev_usa_cw.43 days = 30 } }
 	}
 
 	option = {
@@ -1502,12 +1527,20 @@ country_event = {
 		tag = USA
 		has_country_flag = rev_usa_cw_restoration_transition
 		NOT = { has_country_flag = rev_usa_cw_restoration_kelly_done }
+		OR = {
+			NOT = { has_country_flag = endtimes_usa_returns_to_normal }
+			date > 2028.11.9
+		}
 	}
 
 	immediate = {
 		clr_country_flag = rev_usa_cw_restoration_transition
 		set_country_flag = rev_usa_cw_restoration_kelly_done
 		set_country_flag = rev_usa_post_kelly_tree_active
+		if = {
+			limit = { has_country_flag = endtimes_usa_returns_to_normal }
+			set_politics = { last_election = "2028.11.10" election_frequency = 48 }
+		}
 		
 		add_to_variable = { var = party_pop_array^2 value = 0.05 } # democrat
 		add_to_variable = { var = party_pop_array^1 value = -0.05 } # republican

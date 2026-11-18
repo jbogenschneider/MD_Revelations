@@ -293,6 +293,7 @@ NATO_decisions = {
 
 		visible = {
 			is_subject = no
+			NOT = { rev_is_nato_faction = yes }
 			NOT = { has_idea = NATO_member }
 			NOT = { has_country_flag = NATO_Aspirant }
 			NOT = { has_country_flag = collapsed_nation }
@@ -629,6 +630,7 @@ NATO_decisions = {
 		}
 
 		visible = {
+			NOT = { rev_is_nato_faction = yes }
 			NOT = { has_idea = NATO_member }
 			has_country_flag = NATO_Aspirant
 			NOT = { has_country_flag = NATO_Accession_Voting }
@@ -800,6 +802,7 @@ NATO_decisions = {
 		icon = GFX_decision_generic_join_nato
 
 		visible = {
+			NOT = { rev_is_nato_faction = yes }
 			has_country_flag = NATO_Accession_Voting
 		}
 

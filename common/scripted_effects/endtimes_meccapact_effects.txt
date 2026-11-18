@@ -1,3 +1,51 @@
+# Iran scope. Release only the specified Iranian subjects, then move the four
+# surviving countries into MeccaPact without releasing anyone else's subjects.
+endtimes_iran_join_meccapact = {
+	every_country = {
+		limit = {
+			exists = yes
+			OR = { tag = IRQ tag = FSA tag = HEZ }
+			is_subject_of = PER
+		}
+		save_event_target_as = endtimes_iran_released_subject
+		PER = {
+			set_autonomy = { target = event_target:endtimes_iran_released_subject autonomy_state = autonomy_free }
+		}
+	}
+	# Dismantle Iran's Axis only; leave unrelated factions intact.
+	if = {
+		limit = { is_faction_leader = yes has_faction_template = faction_template_aor }
+		every_country = {
+			limit = { is_in_faction_with = PER }
+			remove_ideas = faction_resistance_axis_member
+		}
+		remove_ideas = faction_resistance_axis_member
+		dismantle_faction = yes
+	}
+	# Settle wars with the destination bloc before requesting membership.
+	every_country = {
+		limit = {
+			exists = yes
+			is_subject = no
+			OR = { tag = PER tag = IRQ tag = FSA tag = HEZ }
+		}
+		save_event_target_as = endtimes_iran_bloc_applicant
+		every_other_country = {
+			limit = {
+				OR = { tag = SAU has_faction_template = faction_template_meccapact }
+				has_war_with = event_target:endtimes_iran_bloc_applicant
+			}
+			white_peace = event_target:endtimes_iran_bloc_applicant
+		}
+		remove_ideas = faction_resistance_axis_member
+		MeccaPact_join = yes
+	}
+	if = {
+		limit = { has_faction_template = faction_template_meccapact }
+		set_country_flag = endtimes_iran_meccapact_completed
+	}
+}
+
 # Country scope. Run for all participants before dispatching their entry events,
 # so existing wars between participants cannot block MeccaPact membership.
 endtimes_prepare_meccapact_realignment = {

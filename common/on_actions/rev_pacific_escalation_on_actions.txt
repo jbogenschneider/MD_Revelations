@@ -10,7 +10,13 @@ on_actions = {
 				# Day 2 of this escalation: North Korea opens a second front.
 				NKO = {
 					if = {
-						limit = { exists = yes KOR = { exists = yes } }
+						limit = {
+							exists = yes
+							KOR = { exists = yes }
+							NOT = { has_country_flag = rev_pacific_north_korea_attack_scheduled }
+							NOT = { has_country_flag = rev_pacific_north_korea_attack_done }
+						}
+						set_country_flag = rev_pacific_north_korea_attack_scheduled
 						country_event = { id = rev_pacific_escalation.1 days = 2 }
 					}
 				}
@@ -25,6 +31,21 @@ on_actions = {
 	# Check daily so Israel's nuclear strike can prompt a response during the Korean war.
 	on_daily = {
 		effect = {
+			# Independent route and save catch-up: do not rely on China declaring
+			# in this session for the Korean escalation to be scheduled.
+			if = {
+				limit = {
+					tag = NKO
+					rev_usa_at_war_with_canada_and_britain = yes
+					KOR = { exists = yes }
+					NOT = { has_war_with = KOR }
+					NOT = { is_in_faction_with = KOR }
+					NOT = { has_country_flag = rev_pacific_north_korea_attack_scheduled }
+					NOT = { has_country_flag = rev_pacific_north_korea_attack_done }
+				}
+				set_country_flag = rev_pacific_north_korea_attack_scheduled
+				country_event = { id = rev_pacific_escalation.1 days = 2 }
+			}
 			if = {
 				limit = {
 					tag = NKO

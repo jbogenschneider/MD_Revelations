@@ -1,0 +1,24 @@
+# Country scope. Future consecration events can use this same grant effect.
+rev_grant_holy_monarchy = {
+	if = {
+		limit = { NOT = { has_idea = rev_holy_monarchy } }
+		add_ideas = rev_holy_monarchy
+	}
+	else = { rev_holy_monarchy_refresh_support_floor = yes }
+}
+
+# Correct total support, including war penalties, without modifying base values.
+# Removing the previous correction before measuring prevents cumulative bonuses.
+# Like the existing Cabal floor, this refreshes on grant and once per game day.
+rev_holy_monarchy_refresh_support_floor = {
+	remove_dynamic_modifier = { modifier = rev_holy_monarchy_support_floor }
+	force_update_dynamic_modifier = yes
+	set_variable = { rev_holy_monarchy_stability_floor = 0.65 }
+	subtract_from_variable = { rev_holy_monarchy_stability_floor = stability }
+	clamp_variable = { var = rev_holy_monarchy_stability_floor min = 0 }
+	set_variable = { rev_holy_monarchy_war_support_floor = 0.65 }
+	subtract_from_variable = { rev_holy_monarchy_war_support_floor = has_war_support }
+	clamp_variable = { var = rev_holy_monarchy_war_support_floor min = 0 }
+	add_dynamic_modifier = { modifier = rev_holy_monarchy_support_floor }
+	force_update_dynamic_modifier = yes
+}

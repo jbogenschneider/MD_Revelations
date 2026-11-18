@@ -1,0 +1,6 @@
+# Temporary, debug-only tracing for the February and March save replays.
+rev_march_2028_hang_diagnostics = {
+	is_debug = yes
+	date > 2028.1.31
+	date < 2028.3.9
+}

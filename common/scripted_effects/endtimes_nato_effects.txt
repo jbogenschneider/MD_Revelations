@@ -4,15 +4,16 @@ endtimes_ensure_nato_membership = {
 	if = { limit = { has_idea = WestNATO_member } WestNATO_leave = yes }
 	save_event_target_as = endtimes_nato_applicant
 	if = {
-		limit = { is_in_faction = yes NOT = { has_idea = NATO_member } }
+		# A missing membership spirit does not mean the country left NATO.
+		limit = { is_in_faction = yes NOT = { rev_is_nato_faction = yes } }
 		leave_faction = yes
 	}
 	if = {
 		limit = {
-			NOT = { AND = { has_idea = NATO_member is_faction_leader = yes } }
+			NOT = { AND = { rev_is_nato_faction = yes is_faction_leader = yes } }
 		}
 		random_other_country = {
-			limit = { has_idea = NATO_member is_faction_leader = yes }
+			limit = { rev_is_nato_faction = yes is_faction_leader = yes }
 			if = {
 				limit = { NOT = { is_in_faction_with = event_target:endtimes_nato_applicant } }
 				event_target:endtimes_nato_applicant = { leave_faction = yes }
@@ -46,4 +47,68 @@ endtimes_ensure_nato_membership = {
 	}
 	add_to_tech_sharing_group = NATO_Tech_Share
 	remove_ideas = Major_Non_NATO_Ally
+	rev_nato_clear_accession_application = yes
+}
+
+# Membership repair must never move countries or change faction leadership.
+rev_nato_sync_existing_membership = {
+	if = {
+		limit = { rev_is_nato_faction = yes is_subject = no NOT = { original_tag = ISR } }
+		if = {
+			# Legacy generic factions reject custom template rules. Their Israel
+			# exclusion is enforced by the existing AI and membership callbacks.
+			limit = { is_faction_leader = yes has_faction_template = faction_template_nato }
+			set_faction_rule = rev_nato_joining_rule_exclude_israel
+		}
+		if = {
+			limit = { NOT = { has_idea = NATO_member } }
+			add_ideas = NATO_member
+			log = "[GetDateText]: [This.GetName]: Repaired missing NATO membership spirit in existing NATO faction."
+		}
+		if = {
+			limit = { NOT = { is_in_array = { global.nato_members = THIS } } }
+			add_to_array = { global.nato_members = THIS }
+		}
+		add_to_tech_sharing_group = NATO_Tech_Share
+		remove_ideas = Major_Non_NATO_Ally
+		rev_nato_clear_accession_application = yes
+	}
+}
+
+# ISR scope. Catch direct/scripted or wartime entry as well as normal invitations.
+# This changes faction membership, not guarantees or participation in existing wars.
+rev_nato_enforce_israel_exclusion = {
+	rev_nato_clear_accession_application = yes
+	if = {
+		limit = {
+			original_tag = ISR
+			rev_is_nato_faction = yes
+			is_faction_leader = no
+		}
+		remove_ideas = NATO_member
+		remove_from_array = { global.nato_members = THIS }
+		remove_from_tech_sharing_group = NATO_Tech_Share
+		leave_faction = yes
+		log = "[GetDateText]: [This.GetName]: Removed Israel from NATO after an ineligible direct or wartime admission."
+	}
+}
+
+rev_nato_clear_accession_application = {
+	if = {
+		limit = {
+			OR = {
+				has_country_flag = NATO_Aspirant
+				has_country_flag = NATO_Accession_Voting
+				is_in_array = { global.NATO_Accession_Candidates = THIS }
+			}
+		}
+		clr_country_flag = NATO_Aspirant
+		clr_country_flag = NATO_Accession_Voting
+		remove_from_array = { global.NATO_Accession_Candidates = THIS }
+		every_other_country = {
+			remove_opinion_modifier = { target = PREV modifier = NATO_aspirant }
+			PREV = { remove_opinion_modifier = { target = PREV modifier = NATO_aspirant } }
+			clr_country_flag = NATO_Ratified_@PREV
+		}
+	}
 }

@@ -1,0 +1,6 @@
+rev_nato_joining_rule_exclude_israel = {
+	type = joining_rules
+	ai_will_do = { base = 0 }
+	available = { rev_is_nato_faction = yes }
+	trigger = { NOT = { original_tag = ISR } }
+}

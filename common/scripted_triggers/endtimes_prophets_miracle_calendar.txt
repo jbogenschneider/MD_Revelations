@@ -1,0 +1,10 @@
+# Shared by endtimes.6 and its daily dispatch. February 22, 2028.
+endtimes_prophets_announce_date = {
+	date > 2028.2.21
+	date < 2028.2.23
+}
+
+endtimes_prophets_miracle_date = {
+	date > 2028.5.21
+	date < 2028.5.23
+}

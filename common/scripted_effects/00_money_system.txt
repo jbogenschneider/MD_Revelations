@@ -50,6 +50,10 @@
 # ingame_update_setup
 # This function is used to update the economic setup mid game
 ingame_update_setup = {
+	if = {
+		limit = { rev_march_2028_hang_diagnostics = yes }
+		log = "[GetDateText]: [This.GetName]: REV_HANG_TRACE economy BEGIN"
+	}
 	#National values (GDP, pop etc.) MUST BE FIRST
 	update_state_variables = yes
 
@@ -100,6 +104,10 @@ ingame_update_setup = {
 		add_to_variable = { global.update_monie_ui = 1 }
 	}
 	refresh_gui = yes
+	if = {
+		limit = { rev_march_2028_hang_diagnostics = yes }
+		log = "[GetDateText]: [This.GetName]: REV_HANG_TRACE economy END"
+	}
 }
 
 # calculate_tax_rate

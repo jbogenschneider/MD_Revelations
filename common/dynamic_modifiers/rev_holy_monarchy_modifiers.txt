@@ -1,0 +1,5 @@
+rev_holy_monarchy_support_floor = {
+	enable = { has_idea = rev_holy_monarchy }
+	stability_factor = rev_holy_monarchy_stability_floor
+	war_support_factor = rev_holy_monarchy_war_support_floor
+}

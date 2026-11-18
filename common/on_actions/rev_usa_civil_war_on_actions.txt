@@ -27,7 +27,7 @@ on_actions = {
 				limit = {
 					tag = GER
 					is_in_faction = yes
-					has_faction_template = faction_template_nato
+					rev_is_nato_faction = yes
 					NOT = { is_faction_leader = yes }
 					OR = {
 						has_global_flag = rev_nato_lock_ger_leader

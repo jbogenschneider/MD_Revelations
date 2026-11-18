@@ -4,10 +4,4 @@ endtimes_usa_christmas_reconciliation_ready = {
 	date > 2028.12.20
 	date < 2028.12.22
 	NOT = { has_country_flag = endtimes_usa_christmas_reconciliation_completed }
-	OR = {
-		has_government = nationalist
-		has_country_leader = { name = "Donald Trump" ruling_only = yes }
-		has_country_leader = { name = "James David Vance" ruling_only = yes }
-		AND = { has_government = democratic has_faction_template = faction_template_nato }
-	}
 }

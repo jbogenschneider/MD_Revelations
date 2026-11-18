@@ -1,0 +1,296 @@
+# Concrete broadcast effects: HOI4 does not accept the previous EVENT parameter block.
+# Each effect has a literal event ID and is invoked with = yes.
+
+endtimes_broadcast_news_10 = {
+	if = {
+		limit = { SAU = { exists = yes } }
+		SAU = {
+			log = "[GetDateText]: [This.GetName]: Broadcasting worldwide Endtimes news endtimes.10."
+			news_event = { id = endtimes.10 }
+		}
+	}
+	else = {
+		log = "[GetDateText]: [This.GetName]: Broadcasting worldwide Endtimes news endtimes.10 (Saudi Arabia unavailable)."
+		news_event = { id = endtimes.10 }
+	}
+}
+
+endtimes_broadcast_news_12 = {
+	if = {
+		limit = { SAU = { exists = yes } }
+		SAU = {
+			log = "[GetDateText]: [This.GetName]: Broadcasting worldwide Endtimes news endtimes.12."
+			news_event = { id = endtimes.12 }
+		}
+	}
+	else = {
+		log = "[GetDateText]: [This.GetName]: Broadcasting worldwide Endtimes news endtimes.12 (Saudi Arabia unavailable)."
+		news_event = { id = endtimes.12 }
+	}
+}
+
+endtimes_broadcast_news_13 = {
+	if = {
+		limit = { SAU = { exists = yes } }
+		SAU = {
+			log = "[GetDateText]: [This.GetName]: Broadcasting worldwide Endtimes news endtimes.13."
+			news_event = { id = endtimes.13 }
+		}
+	}
+	else = {
+		log = "[GetDateText]: [This.GetName]: Broadcasting worldwide Endtimes news endtimes.13 (Saudi Arabia unavailable)."
+		news_event = { id = endtimes.13 }
+	}
+}
+
+endtimes_broadcast_news_19 = {
+	if = {
+		limit = { SAU = { exists = yes } }
+		SAU = {
+			log = "[GetDateText]: [This.GetName]: Broadcasting worldwide Endtimes news endtimes.19."
+			news_event = { id = endtimes.19 }
+		}
+	}
+	else = {
+		log = "[GetDateText]: [This.GetName]: Broadcasting worldwide Endtimes news endtimes.19 (Saudi Arabia unavailable)."
+		news_event = { id = endtimes.19 }
+	}
+}
+
+endtimes_broadcast_news_20 = {
+	if = {
+		limit = { SAU = { exists = yes } }
+		SAU = {
+			log = "[GetDateText]: [This.GetName]: Broadcasting worldwide Endtimes news endtimes.20."
+			news_event = { id = endtimes.20 }
+		}
+	}
+	else = {
+		log = "[GetDateText]: [This.GetName]: Broadcasting worldwide Endtimes news endtimes.20 (Saudi Arabia unavailable)."
+		news_event = { id = endtimes.20 }
+	}
+}
+
+endtimes_broadcast_news_21 = {
+	if = {
+		limit = { SAU = { exists = yes } }
+		SAU = {
+			log = "[GetDateText]: [This.GetName]: Broadcasting worldwide Endtimes news endtimes.21."
+			news_event = { id = endtimes.21 }
+		}
+	}
+	else = {
+		log = "[GetDateText]: [This.GetName]: Broadcasting worldwide Endtimes news endtimes.21 (Saudi Arabia unavailable)."
+		news_event = { id = endtimes.21 }
+	}
+}
+
+endtimes_broadcast_news_24 = {
+	if = {
+		limit = { SAU = { exists = yes } }
+		SAU = {
+			log = "[GetDateText]: [This.GetName]: Broadcasting worldwide Endtimes news endtimes.24."
+			news_event = { id = endtimes.24 }
+		}
+	}
+	else = {
+		log = "[GetDateText]: [This.GetName]: Broadcasting worldwide Endtimes news endtimes.24 (Saudi Arabia unavailable)."
+		news_event = { id = endtimes.24 }
+	}
+}
+
+endtimes_broadcast_news_25 = {
+	if = {
+		limit = { SAU = { exists = yes } }
+		SAU = {
+			log = "[GetDateText]: [This.GetName]: Broadcasting worldwide Endtimes news endtimes.25."
+			news_event = { id = endtimes.25 }
+		}
+	}
+	else = {
+		log = "[GetDateText]: [This.GetName]: Broadcasting worldwide Endtimes news endtimes.25 (Saudi Arabia unavailable)."
+		news_event = { id = endtimes.25 }
+	}
+}
+
+endtimes_broadcast_news_3 = {
+	if = {
+		limit = { SAU = { exists = yes } }
+		SAU = {
+			log = "[GetDateText]: [This.GetName]: Broadcasting worldwide Endtimes news endtimes.3."
+			news_event = { id = endtimes.3 }
+		}
+	}
+	else = {
+		log = "[GetDateText]: [This.GetName]: Broadcasting worldwide Endtimes news endtimes.3 (Saudi Arabia unavailable)."
+		news_event = { id = endtimes.3 }
+	}
+}
+
+endtimes_broadcast_news_30 = {
+	if = {
+		limit = { SAU = { exists = yes } }
+		SAU = {
+			log = "[GetDateText]: [This.GetName]: Broadcasting worldwide Endtimes news endtimes.30."
+			news_event = { id = endtimes.30 }
+		}
+	}
+	else = {
+		log = "[GetDateText]: [This.GetName]: Broadcasting worldwide Endtimes news endtimes.30 (Saudi Arabia unavailable)."
+		news_event = { id = endtimes.30 }
+	}
+}
+
+endtimes_broadcast_news_38 = {
+	if = {
+		limit = { SAU = { exists = yes } }
+		SAU = {
+			log = "[GetDateText]: [This.GetName]: Broadcasting worldwide Endtimes news endtimes.38."
+			news_event = { id = endtimes.38 }
+		}
+	}
+	else = {
+		log = "[GetDateText]: [This.GetName]: Broadcasting worldwide Endtimes news endtimes.38 (Saudi Arabia unavailable)."
+		news_event = { id = endtimes.38 }
+	}
+}
+
+endtimes_broadcast_news_4 = {
+	if = {
+		limit = { SAU = { exists = yes } }
+		SAU = {
+			log = "[GetDateText]: [This.GetName]: Broadcasting worldwide Endtimes news endtimes.4."
+			news_event = { id = endtimes.4 }
+		}
+	}
+	else = {
+		log = "[GetDateText]: [This.GetName]: Broadcasting worldwide Endtimes news endtimes.4 (Saudi Arabia unavailable)."
+		news_event = { id = endtimes.4 }
+	}
+}
+
+endtimes_broadcast_news_5 = {
+	if = {
+		limit = { SAU = { exists = yes } }
+		SAU = {
+			log = "[GetDateText]: [This.GetName]: Broadcasting worldwide Endtimes news endtimes.5."
+			news_event = { id = endtimes.5 }
+		}
+	}
+	else = {
+		log = "[GetDateText]: [This.GetName]: Broadcasting worldwide Endtimes news endtimes.5 (Saudi Arabia unavailable)."
+		news_event = { id = endtimes.5 }
+	}
+}
+
+endtimes_broadcast_news_6 = {
+	if = {
+		limit = { SAU = { exists = yes } }
+		SAU = {
+			log = "[GetDateText]: [This.GetName]: Broadcasting worldwide Endtimes news endtimes.6."
+			news_event = { id = endtimes.6 }
+		}
+	}
+	else = {
+		log = "[GetDateText]: [This.GetName]: Broadcasting worldwide Endtimes news endtimes.6 (Saudi Arabia unavailable)."
+		news_event = { id = endtimes.6 }
+	}
+}
+
+endtimes_broadcast_news_666 = {
+	if = {
+		limit = { SAU = { exists = yes } }
+		SAU = {
+			log = "[GetDateText]: [This.GetName]: Broadcasting worldwide Endtimes news endtimes.666."
+			news_event = { id = endtimes.666 }
+		}
+	}
+	else = {
+		log = "[GetDateText]: [This.GetName]: Broadcasting worldwide Endtimes news endtimes.666 (Saudi Arabia unavailable)."
+		news_event = { id = endtimes.666 }
+	}
+}
+
+endtimes_broadcast_news_8 = {
+	if = {
+		limit = { SAU = { exists = yes } }
+		SAU = {
+			log = "[GetDateText]: [This.GetName]: Broadcasting worldwide Endtimes news endtimes.8."
+			news_event = { id = endtimes.8 }
+		}
+	}
+	else = {
+		log = "[GetDateText]: [This.GetName]: Broadcasting worldwide Endtimes news endtimes.8 (Saudi Arabia unavailable)."
+		news_event = { id = endtimes.8 }
+	}
+}
+
+endtimes_broadcast_news_seal_1 = {
+	if = {
+		limit = { SAU = { exists = yes } }
+		SAU = {
+			log = "[GetDateText]: [This.GetName]: Broadcasting worldwide Endtimes news endtimeseal.1."
+			news_event = { id = endtimeseal.1 }
+		}
+	}
+	else = {
+		log = "[GetDateText]: [This.GetName]: Broadcasting worldwide Endtimes news endtimeseal.1 (Saudi Arabia unavailable)."
+		news_event = { id = endtimeseal.1 }
+	}
+}
+
+endtimes_broadcast_news_seal_2 = {
+	if = {
+		limit = { SAU = { exists = yes } }
+		SAU = {
+			log = "[GetDateText]: [This.GetName]: Broadcasting worldwide Endtimes news endtimeseal.2."
+			news_event = { id = endtimeseal.2 }
+		}
+	}
+	else = {
+		log = "[GetDateText]: [This.GetName]: Broadcasting worldwide Endtimes news endtimeseal.2 (Saudi Arabia unavailable)."
+		news_event = { id = endtimeseal.2 }
+	}
+}
+
+endtimes_broadcast_news_seal_3 = {
+	if = {
+		limit = { SAU = { exists = yes } }
+		SAU = {
+			log = "[GetDateText]: [This.GetName]: Broadcasting worldwide Endtimes news endtimeseal.3."
+			news_event = { id = endtimeseal.3 }
+		}
+	}
+	else = {
+		log = "[GetDateText]: [This.GetName]: Broadcasting worldwide Endtimes news endtimeseal.3 (Saudi Arabia unavailable)."
+		news_event = { id = endtimeseal.3 }
+	}
+}
+
+endtimes_broadcast_news_seal_4 = {
+	if = {
+		limit = { SAU = { exists = yes } }
+		SAU = {
+			log = "[GetDateText]: [This.GetName]: Broadcasting worldwide Endtimes news endtimeseal.4."
+			news_event = { id = endtimeseal.4 }
+		}
+	}
+	else = {
+		log = "[GetDateText]: [This.GetName]: Broadcasting worldwide Endtimes news endtimeseal.4 (Saudi Arabia unavailable)."
+		news_event = { id = endtimeseal.4 }
+	}
+}
+
+endtimes_broadcast_news_seal_5 = {
+	if = {
+		limit = { SAU = { exists = yes } }
+		SAU = {
+			log = "[GetDateText]: [This.GetName]: Broadcasting worldwide Endtimes news endtimeseal.5."
+			news_event = { id = endtimeseal.5 }
+		}
+	}
+	else = {
+		log = "[GetDateText]: [This.GetName]: Broadcasting worldwide Endtimes news endtimeseal.5 (Saudi Arabia unavailable)."
+		news_event = { id = endtimeseal.5 }
+	}
+}

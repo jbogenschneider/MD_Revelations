@@ -1,0 +1,22 @@
+on_actions = {
+	on_daily = {
+		effect = {
+			# Restore membership in saves where these one-time events already ran.
+			if = {
+				limit = {
+					NOT = { has_idea = rev_holy_monarchy }
+					OR = {
+						AND = { tag = FRA has_country_flag = endtimes_french_monarchy_restored }
+						AND = { tag = GER has_country_flag = endtimes_german_monarchy_restored }
+						AND = { tag = USA has_country_flag = endtimes_usa_christmas_reconciliation_completed }
+					}
+				}
+				rev_grant_holy_monarchy = yes
+			}
+			else_if = {
+				limit = { has_idea = rev_holy_monarchy }
+				rev_holy_monarchy_refresh_support_floor = yes
+			}
+		}
+	}
+}

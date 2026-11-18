@@ -1,0 +1,62 @@
+# The seal reports are triggered-only news; date triggers alone cannot fire them.
+on_actions = {
+	on_daily = {
+		effect = {
+			# This narrative alliance report also lacked a dispatch call.
+			if = {
+				limit = {
+					date > 2028.10.1
+					date < 2028.10.3
+					NOT = { has_global_flag = endtimes_alliance_expansion_announced }
+				}
+				set_global_flag = endtimes_alliance_expansion_announced
+				endtimes_broadcast_news_25 = yes
+			}
+			if = {
+				limit = {
+					date > 2027.1.5
+					date < 2027.1.7
+					NOT = { has_global_flag = endtimes_first_seal_announced }
+				}
+				set_global_flag = endtimes_first_seal_announced
+				endtimes_broadcast_news_seal_1 = yes
+			}
+			if = {
+				limit = {
+					date > 2027.8.5
+					date < 2027.8.7
+					NOT = { has_global_flag = endtimes_second_seal_announced }
+				}
+				set_global_flag = endtimes_second_seal_announced
+				endtimes_broadcast_news_seal_2 = yes
+			}
+			if = {
+				limit = {
+					date > 2027.10.5
+					date < 2027.10.7
+					NOT = { has_global_flag = endtimes_third_seal_announced }
+				}
+				set_global_flag = endtimes_third_seal_announced
+				endtimes_broadcast_news_seal_3 = yes
+			}
+			if = {
+				limit = {
+					date > 2027.12.5
+					date < 2027.12.7
+					NOT = { has_global_flag = endtimes_fourth_seal_announced }
+				}
+				set_global_flag = endtimes_fourth_seal_announced
+				endtimes_broadcast_news_seal_4 = yes
+			}
+			if = {
+				limit = {
+					date > 2029.1.5
+					date < 2029.1.7
+					NOT = { has_global_flag = endtimes_fifth_seal_announced }
+				}
+				set_global_flag = endtimes_fifth_seal_announced
+				endtimes_broadcast_news_seal_5 = yes
+			}
+		}
+	}
+}

@@ -43,6 +43,7 @@ NATO_join = {
 	}
 
 	custom_effect_tooltip = NATO_join_tt
+	rev_nato_clear_accession_application = yes
 
 	hidden_effect = { news_event = { id = NATO.8 hours = 6 } }
 }

@@ -36,6 +36,27 @@ endtimes_apply_global_ceasefire = {
 			}
 		}
 
+		# Egypt settles with Iran and the Axis unless allied with the USA.
+		# Check before the later NATO reunification changes any faction membership.
+		if = {
+			limit = {
+				EGY = { exists = yes NOT = { is_in_faction_with = USA } }
+			}
+			every_country = {
+				limit = {
+					exists = yes
+					OR = {
+						tag = PER
+						is_subject_of = PER
+						is_in_faction_with = PER
+						has_idea = faction_resistance_axis_member
+					}
+					has_war_with = EGY
+				}
+				white_peace = EGY
+			}
+		}
+
 		# End Iran's and its subjects' participation against Israel.
 		if = {
 			limit = { ISR = { exists = yes } }
@@ -66,6 +87,6 @@ endtimes_apply_global_ceasefire = {
 		endtimes_reunite_westnato_with_nato = yes
 
 		# Apply the ceasefire before broadcasting it, independent of player clicks.
-		news_event = { id = endtimes.38 }
+		endtimes_broadcast_news_38 = yes
 	}
 }

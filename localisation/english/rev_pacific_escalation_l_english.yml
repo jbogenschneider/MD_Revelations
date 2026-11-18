@@ -2,8 +2,8 @@
  rev_pacific_escalation.2.t: "North Korea Attacks South Korea"
  rev_pacific_escalation.2.d: "WNN reports that North Korea has declared war on South Korea. Fighting has erupted on the Korean Peninsula, threatening to draw neighboring powers into another major conflict in East Asia."
  rev_pacific_escalation.2.a: "War returns to the Korean Peninsula."
- rev_pacific_escalation.4.t: "Japan, Australia and the Philippines Declare War on China"
- rev_pacific_escalation.4.d: "Three days after China's attack on Taiwan, Japan, Australia and the Philippines have entered the war against China.\n\nJapan is rallying a regional defense alliance. South Korea, the Philippines, Australia and New Zealand are invited to join where they have no existing faction commitments. Countries already committed to another faction retain their present alliances.\n\nWhat began as an attack on Taiwan now threatens to become a wider Pacific war."
+ rev_pacific_escalation.4.t: "Japan, Australia and South Korea Declare War on China"
+ rev_pacific_escalation.4.d: "Three days after China's attack on Taiwan, Japan, Australia and South Korea have entered the war against China.\n\nJapan is rallying a regional defense alliance with Australia and South Korea. They are invited to join where they have no existing faction commitments. Countries already committed to another faction retain their present alliances.\n\nWhat began as an attack on Taiwan now threatens to become a wider Pacific war."
  rev_pacific_escalation.4.a: "The Pacific war expands."
 
  rev_pacific_escalation.6.t: "North Korea Uses a Nuclear Weapon"

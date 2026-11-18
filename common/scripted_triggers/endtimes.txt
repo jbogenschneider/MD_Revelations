@@ -1,6 +1,11 @@
 # Countries taking part in the October 2, 2028 realignment.
 endtimes_meccapact_realignment_country = {
 	NOT = { tag = SOV }
+	# Iran's remaining dependants enter with Iran on November 13 instead.
+	NOT = {
+		is_subject_of = PER
+		OR = { tag = IRQ tag = FSA tag = HEZ }
+	}
 	OR = {
 		tag = MOR
 		tag = ALG

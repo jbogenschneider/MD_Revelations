@@ -328,6 +328,7 @@ country_event = {
 
 	immediate = {
 		set_country_flag = rev_chi_tw_regional_invasion_launched
+		log = "[GetDateText]: [Root.GetName]: USA is fighting Canada and Britain; China launches the Taiwan invasion."
 		declare_war_on = {
 			target = TAI
 			type = annex_everything
@@ -336,7 +337,66 @@ country_event = {
 	}
 }
 
-# Global WNN report issued by the weekly China-Taiwan invasion event.
+# February 1, 2028: Taiwan negotiates Chinese control without US intervention.
+country_event = {
+	id = rev_chi_tw.42
+	title = rev_chi_tw.42.t
+	desc = rev_chi_tw.42.d
+	picture = GFX_report_event_generic_political_meeting
+	is_triggered_only = yes
+	trigger = { rev_chi_tw_february_settlement_ready = yes }
+	immediate = {
+		set_country_flag = rev_chi_tw_february_settlement_completed
+		set_country_flag = rev_chi_tw_peace_resolved
+		# Record capitulation before any of the peace effects change war status.
+		set_temp_variable = { rev_chi_tw_korean_peace_allowed = 0 }
+		if = {
+			limit = {
+				NKO = { exists = yes has_capitulated = no has_war_with = KOR }
+				KOR = { exists = yes has_capitulated = no }
+			}
+			set_temp_variable = { rev_chi_tw_korean_peace_allowed = 1 }
+		}
+		if = {
+			limit = { has_war_with = TAI }
+			white_peace = TAI
+		}
+		TAI = {
+			# A negotiated change of overlord must end any previous subject status.
+			if = {
+				limit = { is_subject = yes }
+				overlord = { set_autonomy = { target = TAI autonomy_state = autonomy_free } }
+			}
+			set_country_flag = rev_chi_tw_peace_resolved
+			set_country_flag = rev_chi_tw_ultimatum_accepted
+		}
+		set_autonomy = { target = TAI autonomy_state = autonomy_puppet_state }
+		# Only settle China's wars with the named Pacific opponents.
+		every_country = {
+			limit = {
+				exists = yes
+				OR = { tag = JAP tag = PHI tag = AST tag = KOR }
+				has_war_with = CHI
+			}
+			white_peace = CHI
+		}
+		if = {
+			limit = {
+				check_variable = { rev_chi_tw_korean_peace_allowed = 1 }
+				NKO = { exists = yes has_war_with = KOR }
+				KOR = { exists = yes }
+			}
+			NKO = {
+				white_peace = KOR
+				log = "[GetDateText]: [This.GetName]: Taiwan settlement ends the Korean war; neither Korea had capitulated."
+			}
+		}
+		log = "[GetDateText]: [Root.GetName]: Taiwan accepts Chinese control after the blockade; Taiwan becomes a Chinese puppet."
+	}
+	option = { name = rev_chi_tw.42.a }
+}
+
+# Global WNN report issued by the China-Taiwan invasion event.
 news_event = {
 	id = rev_chi_tw.41
 	title = rev_chi_tw.41.t

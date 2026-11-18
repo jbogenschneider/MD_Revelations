@@ -41,6 +41,21 @@ focus_tree = {
 	shared_focus = REV_NATO_domestic_aircraft_research
 	shared_focus = REV_NATO_secret_weapons_program
 
+	shared_focus = REV_HM_holy_monarchy
+	shared_focus = REV_HM_light_industry_investments
+	shared_focus = REV_HM_agricultural_district_subsidization
+	shared_focus = REV_HM_energy_sector
+	shared_focus = REV_HM_heavy_industry_investments
+	shared_focus = REV_HM_refitting_the_military_industry
+	shared_focus = REV_HM_build_churches
+	shared_focus = REV_HM_build_primary_schools
+	shared_focus = REV_HM_assure_access_to_education
+	shared_focus = REV_HM_expand_the_universities
+	shared_focus = REV_HM_industrial_research_task_forces
+	shared_focus = REV_HM_domestic_vehicle_research
+	shared_focus = REV_HM_domestic_naval_research
+	shared_focus = REV_HM_domestic_aircraft_research
+
 	focus = {
 		id = REV_HUN_orbans_reign
 		icon = voj_patriotism_hun

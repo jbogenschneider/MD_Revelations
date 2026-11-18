@@ -59,6 +59,8 @@ country_event = {	#We receive an invitation to NATO
 	picture = GFX_NATO_picture
 
 	is_triggered_only = yes
+	# Also blocks invitations queued before Israel's accession route was removed.
+	trigger = { NOT = { original_tag = ISR } }
 
 	option = {	#We accept!
 		name = NATO.9.a
