@@ -3,7 +3,7 @@ on_actions = {
 	on_join_faction = {
 		effect = {
 			if = {
-				limit = { has_faction_template = faction_template_meccapact is_subject = no }
+				limit = { rev_is_meccapact_faction = yes is_subject = no }
 				MeccaPact_enroll_member = yes
 			}
 		}
@@ -12,10 +12,10 @@ on_actions = {
 	on_offer_join_faction = {
 		effect = {
 			if = {
-				limit = { has_faction_template = faction_template_meccapact }
+				limit = { rev_is_meccapact_faction = yes }
 				FROM = {
 					if = {
-						limit = { has_faction_template = faction_template_meccapact is_subject = no }
+						limit = { rev_is_meccapact_faction = yes is_subject = no }
 						MeccaPact_enroll_member = yes
 					}
 				}
@@ -24,10 +24,14 @@ on_actions = {
 	}
 	on_leave_faction = {
 		effect = {
+			if = { limit = { tag = SAU } clr_country_flag = rev_meccapact_generic_founder }
 			if = {
 				limit = { has_idea = MeccaPact_member }
 				remove_ideas = MeccaPact_member
-				remove_from_array = { global.meccapact_members = THIS }
+				if = {
+					limit = { is_in_array = { global.meccapact_members = THIS } }
+					remove_from_array = { global.meccapact_members = THIS }
+				}
 				remove_from_tech_sharing_group = MeccaPact_Tech_Share
 			}
 		}

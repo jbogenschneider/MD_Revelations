@@ -903,9 +903,9 @@ capital = 602
 	add_political_power = 300
 
 	create_country_leader = {
-		name = "Kim Jong-il"
-		picture = "Kim_Jong_il.dds"
-		expire = "2011.12.11"
+		name = "Kim Jong-un"
+		picture = "gfx/leaders/NKO/Kim_Jong-un.dds"
+		expire = "2050.1.1"
 		ideology = Communist-State
 		traits = {
 			emerging_Communist-State

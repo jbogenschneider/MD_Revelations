@@ -1,4 +1,23 @@
-# Countries taking part in the October 2, 2028 realignment.
+# Surviving countries accepting Alex's January 26, 2029 ultimatum.
+endtimes_join_or_war_country = {
+	OR = {
+		tag = DDR
+		tag = FRC
+		tag = HOL
+		tag = SLO
+		tag = CZE
+		tag = HUN
+		tag = SER
+		tag = BUL
+		tag = ALB
+		tag = KOS
+		tag = GEO
+		tag = AZE
+		tag = ARM
+	}
+}
+
+# Countries taking part in the October 4, 2028 realignment.
 endtimes_meccapact_realignment_country = {
 	NOT = { tag = SOV }
 	# Iran's remaining dependants enter with Iran on November 13 instead.

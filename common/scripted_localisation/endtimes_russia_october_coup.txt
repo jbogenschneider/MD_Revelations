@@ -1,5 +1,27 @@
 defined_text = {
+	name = GetEndtimesRussiaOctoberChoiceTitle
+	text = {
+		trigger = { NOT = { has_country_leader = { name = "Dmitri Leonidovich Orlov" ruling_only = yes } } }
+		localization_key = endtimes.39.t_coup
+	}
+	text = { localization_key = endtimes.39.t_standard }
+}
+
+defined_text = {
+	name = GetEndtimesRussiaOctoberCoupOption
+	text = {
+		trigger = { NOT = { has_country_leader = { name = "Dmitri Leonidovich Orlov" ruling_only = yes } } }
+		localization_key = endtimes.39.a_coup
+	}
+	text = { localization_key = endtimes.39.a_suspend }
+}
+
+defined_text = {
 	name = GetEndtimesRussiaOctoberChoiceDescription
+	text = {
+		trigger = { NOT = { has_country_leader = { name = "Dmitri Leonidovich Orlov" ruling_only = yes } } }
+		localization_key = endtimes.39.d_coup
+	}
 	text = {
 		trigger = { has_country_flag = endtimes_russia_international_transition }
 		localization_key = endtimes.39.d_interim
@@ -9,6 +31,10 @@ defined_text = {
 
 defined_text = {
 	name = GetEndtimesRussiaOctoberCoupDescription
+	text = {
+		trigger = { has_global_flag = endtimes_russia_october_coup_installed_orlov }
+		localization_key = endtimes.40.d_coup
+	}
 	text = {
 		trigger = { has_global_flag = endtimes_russia_october_coup_followed_interim }
 		localization_key = endtimes.40.d_interim

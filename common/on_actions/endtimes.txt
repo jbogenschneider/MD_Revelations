@@ -53,14 +53,114 @@ on_actions = {
 
 	on_daily = {
 		effect = {
-			# Three days after the Global Ceasefire, restore constitutional USA.
+			# October 26, 2028: Xi's death and China's leadership succession.
+			if = {
+				limit = {
+					tag = CHI
+					NOT = { date < 2028.10.26 }
+					date < 2028.10.27
+					NOT = { has_country_flag = endtimes_china_xi_succession_completed }
+				}
+				retire_country_leader = yes
+				set_politics = { ruling_party = communism elections_allowed = no }
+				clear_array = ruling_party
+				clear_array = gov_coalition_array
+				add_to_array = { ruling_party = 4 }
+				create_country_leader = {
+					name = "Li Wenhao"
+					picture = "gfx/leaders/generic_politicians/china_communist_1.dds"
+					ideology = Communist-State
+					expire = "2050.1.1"
+					traits = { emerging_Communist-State rational }
+				}
+				set_country_flag = endtimes_china_xi_succession_completed
+				set_global_flag = endtimes_china_xi_death_announced
+				log = "[GetDateText]: China: Xi succession applied; Li Wenhao installed, broadcasting WNN endtimes.52."
+				news_event = { id = endtimes.52 }
+			}
+			# October 6, 2028: Turkey makes its own local alliance choice.
+			if = {
+				limit = {
+					tag = TUR
+					NOT = { date < 2028.10.6 }
+					date < 2028.10.7
+					is_subject = no
+					NOT = { has_country_flag = endtimes_turkey_alex_alliance_completed }
+					OR = {
+						SAU = { exists = yes is_subject = no }
+						any_country = { rev_is_meccapact_faction = yes is_faction_leader = yes }
+					}
+				}
+				country_event = { id = endtimes.51 }
+			}
+			# November 20, 2028: Europe admits Ukraine into NATO.
+			if = {
+				limit = {
+					tag = UKR
+					date > 2028.11.19
+					date < 2028.11.21
+					is_subject = no
+					NOT = { has_country_flag = endtimes_ukraine_nato_accession_completed }
+					any_country = { rev_is_nato_faction = yes is_faction_leader = yes }
+				}
+				country_event = { id = endtimes.49 }
+			}
+			# February 1, 2029: MeccaPact launches war unless the blocs already fight.
+			if = {
+				limit = {
+					date > 2029.1.31
+					date < 2029.2.2
+					NOT = { has_global_flag = endtimes_global_war_announced }
+					any_country = { rev_is_nato_faction = yes is_faction_leader = yes }
+					any_country = { rev_is_meccapact_faction = yes is_faction_leader = yes }
+				}
+				endtimes_launch_global_war = yes
+				endtimes_broadcast_news_47 = yes
+			}
+			# January 26, 2029: Alex's ultimatum realigns the named countries.
+			if = {
+				limit = {
+					date > 2029.1.25
+					date < 2029.1.27
+					NOT = { has_global_flag = endtimes_join_or_war_completed }
+					OR = {
+						SAU = { exists = yes is_subject = no }
+						any_country = { rev_is_meccapact_faction = yes is_faction_leader = yes }
+					}
+				}
+				endtimes_apply_join_or_war = yes
+				endtimes_broadcast_news_46 = yes
+			}
+			# December 15, 2028: Germany hosts the worldwide EU dissolution report.
+			if = {
+				limit = {
+					tag = GER
+					date > 2028.12.14
+					date < 2028.12.16
+					NOT = { has_global_flag = endtimes_eu_dissolved }
+				}
+				endtimes_dissolve_eu = yes
+				news_event = { id = endtimes.45 }
+			}
+			# Three days after the Global Ceasefire, offer the coup/withdrawal choice.
 			if = {
 				limit = {
 					tag = USA
 					has_global_flag = { flag = endtimes_global_ceasefire_occurred days > 2 }
 					NOT = { has_country_flag = endtimes_usa_returns_to_normal }
+					NOT = { has_country_flag = endtimes_usa_post_ceasefire_choice_presented }
 				}
 				country_event = { id = endtimes.44 }
+			}
+			# Explain the military strike and coup after the restoration is applied.
+			if = {
+				limit = {
+					tag = USA
+					has_country_flag = endtimes_usa_normal_settlement_applied
+					NOT = { has_global_flag = endtimes_usa_military_coup_announced }
+				}
+				set_global_flag = endtimes_usa_military_coup_announced
+				news_event = { id = endtimes.48 }
 			}
 			# Jeffries remains interim president until the November election.
 			if = {
@@ -128,7 +228,13 @@ on_actions = {
 					tag = ISR
 					date > 2028.11.2
 					date < 2028.11.4
-					SOV = { exists = yes }
+					SAU = { exists = yes is_subject = no }
+					NOT = {
+						OR = {
+							has_faction_template = faction_template_aor
+							has_idea = faction_resistance_axis_member
+						}
+					}
 					NOT = { has_country_flag = endtimes_israel_coup_completed }
 				}
 				country_event = { id = endtimes.28 }
@@ -149,7 +255,7 @@ on_actions = {
 					tag = CHI
 					date > 2028.11.9
 					date < 2028.11.11
-					SOV = { exists = yes }
+					SAU = { exists = yes is_subject = no }
 					NOT = { has_country_flag = endtimes_china_alliance_entry_completed }
 				}
 				country_event = { id = endtimes.31 }
@@ -289,40 +395,56 @@ on_actions = {
 			if = {
 				limit = {
 					date > 2028.11.6
-					date < 2028.11.7
+					date < 2028.11.8
 					NOT = { has_global_flag = endtimes_news_20_dispatched }
 				}
 				set_global_flag = endtimes_one_faith_announced
 				set_global_flag = endtimes_news_20_dispatched
+				endtimes_install_pope_peter = yes
 				endtimes_broadcast_news_20 = yes
 			}
+			# October 4: all applicants leave first, then join the Saudi-led pact.
 			if = {
 				limit = {
-					date > 2028.10.1
-				date < 2028.10.3
-					SAU = { exists = yes is_subject = no }
-					NOT = { has_global_flag = endtimes_meccapact_realignment_dispatched }
+					NOT = { date < 2028.10.4 }
+					date < 2028.10.5
+					SAU = { exists = yes }
+					NOT = { has_global_flag = endtimes_meccapact_october4_dispatched }
 				}
-				set_global_flag = endtimes_meccapact_realignment_dispatched
-				# Settle wars and leave old alliances before any country joins MeccaPact.
-				every_country = {
-					limit = { endtimes_meccapact_realignment_country = yes }
-					endtimes_prepare_meccapact_realignment = yes
-				}
-				SAU = { MeccaPact_join = yes set_faction_leader = yes }
-				every_country = {
-					limit = {
-						endtimes_meccapact_realignment_country = yes
-						NOT = { has_country_flag = endtimes_meccapact_realignment_completed }
+				# Also repairs founding when loading a save after the October 2 report.
+				endtimes_found_saudi_meccapact = yes
+				if = {
+					limit = { SAU = { rev_is_meccapact_faction = yes is_faction_leader = yes } }
+					set_global_flag = endtimes_meccapact_october4_dispatched
+					every_country = {
+						limit = {
+							exists = yes
+							endtimes_meccapact_realignment_country = yes
+							OR = {
+								NOT = { has_country_flag = endtimes_meccapact_realignment_completed }
+								NOT = { is_in_faction_with = SAU }
+							}
+						}
+						endtimes_prepare_meccapact_realignment = yes
 					}
-					country_event = { id = endtimes.16 }
+					every_country = {
+						limit = {
+							exists = yes
+							endtimes_meccapact_realignment_country = yes
+							OR = {
+								NOT = { has_country_flag = endtimes_meccapact_realignment_completed }
+								NOT = { is_in_faction_with = SAU }
+							}
+						}
+						country_event = { id = endtimes.16 }
+					}
 				}
 			}
 			if = {
 				limit = {
 					tag = HLS
 					date > 2028.10.30
-					date < 2028.10.31
+					date < 2028.11.1
 					NOT = { has_country_flag = endtimes_false_prophet_installed }
 				}
 				country_event = { id = endtimes.7 }

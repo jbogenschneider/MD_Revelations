@@ -5,6 +5,7 @@ endtimes_restore_usa_at_christmas = {
 
 	# Return to the dollar and prevent later re-adoption through the USA focuses.
 	remove_ideas = endtimes_cabal
+	add_ideas = endtimes_angelic_protection
 	remove_ideas = Solomon_one_world_currency
 	remove_ideas = USA_soloman_idea
 	remove_ideas = USA_solomoney_idea
@@ -23,9 +24,18 @@ endtimes_restore_usa_at_christmas = {
 		if = {
 			limit = { exists = yes }
 			if = {
-				limit = { is_subject_of = USA }
-				USA = { set_autonomy = { target = CAL autonomy_state = autonomy_free } }
+				limit = { is_subject = yes }
+				overlord = { set_autonomy = { target = CAL autonomy_state = autonomy_free } }
 			}
+			# The split California stays independent of every military bloc.
+			MeccaPact_leave = yes
+			MeccaPact_leave_previous_alliance = yes
+			remove_from_array = { global.nato_members = THIS }
+			remove_from_tech_sharing_group = NATO_Tech_Share
+			remove_from_array = { global.westnato_members = THIS }
+			remove_from_tech_sharing_group = WestNATO_Tech_Share
+			clr_country_flag = rev_westnato_faction_member
+			rev_nato_clear_accession_application = yes
 			load_focus_tree = { tree = REV_cal_focus keep_completed = yes }
 			# A new fictional president replaces the old California leadership.
 			retire_country_leader = yes
@@ -58,6 +68,7 @@ endtimes_restore_usa_at_christmas = {
 			}
 			add_ideas = Solomon_one_world_currency
 			add_ideas = endtimes_cabal
+			add_ideas = endtimes_mark
 			set_country_flag = rev_solomon_currency_adopted
 			set_country_flag = endtimes_cabal_initialized
 			endtimes_refresh_support_floor = yes

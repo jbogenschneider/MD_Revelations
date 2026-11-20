@@ -1,0 +1,11 @@
+rev_pacific_joining_rule_exclude_nuclear_nko = {
+	type = joining_rules
+	ai_will_do = { base = 0 }
+	available = { OR = { tag = CHI is_in_faction_with = CHI } }
+	trigger = {
+		NOT = {
+			original_tag = NKO
+			has_country_flag = rev_pacific_north_korea_nuclear_strike_done
+		}
+	}
+}

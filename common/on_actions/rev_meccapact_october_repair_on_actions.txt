@@ -1,0 +1,5 @@
+on_actions = {
+	on_startup = {
+		effect = { endtimes_repair_october_meccapact_membership = yes }
+	}
+}

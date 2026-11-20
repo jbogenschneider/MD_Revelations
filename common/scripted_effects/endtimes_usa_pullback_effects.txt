@@ -1,0 +1,49 @@
+# USA scope. Territorial withdrawal without changing the president or government.
+endtimes_usa_pull_back = {
+	set_country_flag = endtimes_usa_post_ceasefire_choice_resolved
+	set_country_flag = endtimes_usa_military_withdrawal
+	set_global_flag = rev_usa_cw_concluded
+	# Reunite a capitulated California before any new peace clears that status.
+	if = {
+		limit = {
+			CAL = { exists = yes }
+			OR = {
+				has_global_flag = endtimes_cal_capitulated_at_ceasefire
+				CAL = { has_capitulated = yes }
+			}
+		}
+		annex_country = { target = CAL transfer_troops = yes }
+	}
+	else_if = {
+		limit = { CAL = { exists = yes } }
+		if = { limit = { has_war_with = CAL } white_peace = CAL }
+		CAL = {
+			if = {
+				limit = { is_subject_of = USA }
+				USA = { set_autonomy = { target = CAL autonomy_state = autonomy_free } }
+			}
+		}
+	}
+	if = { limit = { has_war_with = CAN } white_peace = CAN }
+	if = { limit = { NOT = { country_exists = CAN } } release = CAN }
+	# Include every Canadian core, even dual USA/CAN cores such as MN and NY.
+	every_state = {
+		limit = { is_owned_by = USA is_core_of = CAN }
+		transfer_state_to = CAN
+		set_resistance = 0
+		set_compliance = 100
+	}
+	CAN = {
+		if = {
+			limit = { exists = yes is_subject_of = USA }
+			USA = { set_autonomy = { target = CAN autonomy_state = autonomy_free } }
+		}
+	}
+	# End the civil-war machinery without installing Jeffries or scheduling Kelly.
+	clr_country_flag = rev_usa_cw_american_resistance_fired
+	clr_country_flag = rev_usa_civil_war_initialized
+	clr_country_flag = rev_usa_cw_launch_event_fired
+	clr_country_flag = rev_usa_cw_canada_invasion_justified
+	clr_country_flag = rev_usa_cw_restoration_transition
+	ingame_update_setup = yes
+}

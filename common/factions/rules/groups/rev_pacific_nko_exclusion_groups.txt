@@ -1,0 +1,3 @@
+rev_pacific_nko_exclusion_rule_group = {
+	rules = { rev_pacific_joining_rule_exclude_nuclear_nko }
+}

@@ -1,0 +1,72 @@
+# CHI scope. One-time withdrawal after North Korea's nuclear attack, not a
+# permanent restriction on China entering future wars.
+rev_pacific_china_post_nuclear_peace = {
+	if = {
+		limit = {
+			exists = yes
+			NKO = { has_country_flag = rev_pacific_north_korea_nuclear_strike_done }
+			NOT = { has_country_flag = rev_pacific_china_post_nuclear_peace_checked }
+		}
+		set_country_flag = rev_pacific_china_post_nuclear_peace_checked
+		if = {
+			limit = {
+				OR = {
+					NOT = { country_exists = TAI }
+					TAI = { exists = yes is_subject = yes }
+				}
+			}
+			every_other_country = {
+				limit = { has_war_with = CHI }
+				white_peace = CHI
+			}
+			log = "[GetDateText]: [This.GetName]: China withdraws from its current wars after North Korea's nuclear attack; Taiwan is a subject or no longer exists."
+		}
+	}
+}
+
+# NKO scope. Persistent diplomatic consequences of the nuclear strike.
+rev_pacific_enforce_china_nko_break = {
+	if = {
+		limit = {
+			has_country_flag = rev_pacific_north_korea_nuclear_strike_done
+			CHI = { exists = yes }
+		}
+		if = {
+			limit = { is_in_faction_with = CHI }
+			# Subjects cannot independently leave their overlord's faction.
+			if = {
+				limit = { is_subject = yes }
+				overlord = { set_autonomy = { target = NKO autonomy_state = autonomy_free } }
+			}
+			if = { limit = { is_faction_leader = yes } CHI = { set_faction_leader = yes } }
+			# Clean the membership records as well as the actual faction.
+			MeccaPact_leave = yes
+			MeccaPact_leave_previous_alliance = yes
+			log = "[GetDateText]: [This.GetName]: expelled from China's faction after the North Korean nuclear strike."
+		}
+		diplomatic_relation = { country = CHI relation = military_access active = no }
+		diplomatic_relation = { country = CHI relation = docking_rights active = no }
+		CHI = {
+			diplomatic_relation = { country = NKO relation = military_access active = no }
+			diplomatic_relation = { country = NKO relation = docking_rights active = no }
+			if = {
+				limit = { is_in_faction = yes }
+				faction_leader = {
+					# Legacy generic factions reject template rules; callbacks also
+					# enforce the exclusion for legacy factions and other templates.
+					if = {
+						limit = {
+							OR = {
+								has_faction_template = faction_template_sco
+								has_faction_template = faction_template_csto
+								has_faction_template = faction_template_meccapact
+								has_faction_template = faction_template_nato
+							}
+						}
+						set_faction_rule = rev_pacific_joining_rule_exclude_nuclear_nko
+					}
+				}
+			}
+		}
+	}
+}

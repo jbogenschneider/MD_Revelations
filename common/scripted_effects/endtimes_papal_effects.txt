@@ -1,0 +1,22 @@
+# Install the elected pope before the worldwide endtimes.20 report is sent.
+endtimes_install_pope_peter = {
+	HLS = {
+		if = {
+			limit = { exists = yes NOT = { has_country_flag = endtimes_pope_peter_elected } }
+			retire_country_leader = yes
+			set_politics = { ruling_party = democratic elections_allowed = no }
+			clear_array = ruling_party
+			clear_array = gov_coalition_array
+			add_to_array = { ruling_party = 0 }
+			create_country_leader = {
+				name = "Pope Peter"
+				picture = "gfx/leaders/HLS/pope_peter_election_source.dds"
+				ideology = Western_Autocracy
+				expire = "2050.1.1"
+				traits = { western_Western_Autocracy }
+			}
+			set_country_flag = endtimes_pope_peter_elected
+			log = "[GetDateText]: Holy See: Pope Peter elected for endtimes.20."
+		}
+	}
+}

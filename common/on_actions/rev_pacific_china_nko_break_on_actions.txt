@@ -1,0 +1,20 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			NKO = { if = { limit = { exists = yes } rev_pacific_enforce_china_nko_break = yes } }
+			CHI = { rev_pacific_china_post_nuclear_peace = yes }
+		}
+	}
+	on_daily = {
+		effect = {
+			if = { limit = { tag = NKO } rev_pacific_enforce_china_nko_break = yes }
+		}
+	}
+	# Catch scripted invitations and either country's later faction changes.
+	on_join_faction = {
+		effect = { NKO = { if = { limit = { exists = yes } rev_pacific_enforce_china_nko_break = yes } } }
+	}
+	on_offer_join_faction = {
+		effect = { NKO = { if = { limit = { exists = yes } rev_pacific_enforce_china_nko_break = yes } } }
+	}
+}

@@ -4,7 +4,7 @@ faction_goal_meccapact_build_pact = {
 	description = MeccaPact_build_pact_desc
 	category = medium_term
 	group = FOCUS_FILTER_POLITICAL_CHARACTER
-	allowed = { has_faction_template = faction_template_meccapact }
+	allowed = { rev_is_meccapact_faction = yes }
 	completed = { num_faction_members > 4 }
 	complete_effect = {
 		add_faction_power_projection = 100
@@ -20,7 +20,7 @@ faction_goal_meccapact_expand_pact = {
 	description = MeccaPact_expand_pact_desc
 	category = long_term
 	group = FOCUS_FILTER_POLITICAL_CHARACTER
-	allowed = { has_faction_template = faction_template_meccapact }
+	allowed = { rev_is_meccapact_faction = yes }
 	completed = { num_faction_members > 9 }
 	complete_effect = {
 		add_faction_power_projection = 200

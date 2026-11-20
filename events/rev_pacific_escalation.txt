@@ -116,6 +116,7 @@ country_event = {
 	immediate = {
 		set_country_flag = rev_pacific_north_korea_nuclear_strike_done
 		set_global_flag = rev_pacific_north_korea_nuclear_strike_announced
+		rev_pacific_enforce_china_nko_break = yes
 		if = {
 			limit = { NOT = { controls_province = 7204 } }
 			launch_nuke = { province = 7204 use_nuke = no } # Daejeon
@@ -125,6 +126,7 @@ country_event = {
 			launch_nuke = { province = 4056 use_nuke = no }
 		}
 		news_event = { id = rev_pacific_escalation.6 }
+		CHI = { rev_pacific_china_post_nuclear_peace = yes }
 		country_event = { id = rev_pacific_escalation.7 days = 2 }
 	}
 }

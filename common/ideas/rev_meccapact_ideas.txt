@@ -6,7 +6,7 @@ ideas = {
 			allowed_civil_war = { always = no }
 			cancel = {
 				OR = {
-					NOT = { has_faction_template = faction_template_meccapact }
+					NOT = { rev_is_meccapact_faction = yes }
 					is_subject = yes
 				}
 			}
@@ -18,7 +18,10 @@ ideas = {
 				add_to_tech_sharing_group = MeccaPact_Tech_Share
 			}
 			on_remove = {
-				remove_from_array = { global.meccapact_members = THIS }
+				if = {
+					limit = { is_in_array = { global.meccapact_members = THIS } }
+					remove_from_array = { global.meccapact_members = THIS }
+				}
 				remove_from_tech_sharing_group = MeccaPact_Tech_Share
 			}
 			modifier = {

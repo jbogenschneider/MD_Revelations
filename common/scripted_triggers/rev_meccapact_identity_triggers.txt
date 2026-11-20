@@ -1,0 +1,12 @@
+# Recognize the custom template or the generic Saudi-led faction fallback.
+# The founder flag is set only after actually creating the generic MeccaPact.
+rev_is_meccapact_faction = {
+	is_in_faction = yes
+	OR = {
+		has_faction_template = faction_template_meccapact
+		AND = {
+			SAU = { exists = yes is_faction_leader = yes has_country_flag = rev_meccapact_generic_founder }
+			OR = { tag = SAU is_in_faction_with = SAU }
+		}
+	}
+}

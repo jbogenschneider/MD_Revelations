@@ -1,3 +1,40 @@
+# Saudi Arabia is the explicit founder and leader of the October realignment.
+endtimes_found_saudi_meccapact = {
+	SAU = {
+		if = {
+			limit = { exists = yes }
+			if = {
+				limit = { is_subject = yes }
+				overlord = { set_autonomy = { target = SAU autonomy_state = autonomy_free } }
+			}
+			endtimes_prepare_meccapact_realignment = yes
+			# Found directly instead of routing the founder through the join path.
+			if = {
+				limit = {
+					NOT = { rev_is_meccapact_faction = yes }
+					NOT = { any_other_country = { rev_is_meccapact_faction = yes is_faction_leader = yes } }
+				}
+				MeccaPact_create = yes
+			}
+			else_if = {
+				limit = { NOT = { rev_is_meccapact_faction = yes } }
+				random_other_country = {
+					limit = { rev_is_meccapact_faction = yes is_faction_leader = yes }
+					add_to_faction = SAU
+				}
+			}
+			if = {
+				limit = { rev_is_meccapact_faction = yes }
+				set_faction_leader = yes
+				MeccaPact_enroll_member = yes
+				set_global_flag = endtimes_saudi_meccapact_founded
+				log = "[GetDateText]: [This.GetName]: MeccaPact founding confirmed with Saudi leadership."
+			}
+			else = { log = "[GetDateText]: Saudi Arabia: MeccaPact founding FAILED after creation attempt." }
+		}
+	}
+}
+
 # Iran scope. Release only the specified Iranian subjects, then move the four
 # surviving countries into MeccaPact without releasing anyone else's subjects.
 endtimes_iran_join_meccapact = {
@@ -32,7 +69,7 @@ endtimes_iran_join_meccapact = {
 		save_event_target_as = endtimes_iran_bloc_applicant
 		every_other_country = {
 			limit = {
-				OR = { tag = SAU has_faction_template = faction_template_meccapact }
+				OR = { tag = SAU rev_is_meccapact_faction = yes }
 				has_war_with = event_target:endtimes_iran_bloc_applicant
 			}
 			white_peace = event_target:endtimes_iran_bloc_applicant
@@ -41,7 +78,7 @@ endtimes_iran_join_meccapact = {
 		MeccaPact_join = yes
 	}
 	if = {
-		limit = { has_faction_template = faction_template_meccapact }
+		limit = { rev_is_meccapact_faction = yes }
 		set_country_flag = endtimes_iran_meccapact_completed
 	}
 }
@@ -59,7 +96,7 @@ endtimes_prepare_meccapact_realignment = {
 	if = {
 		limit = {
 			is_subject = yes
-			NOT = { has_faction_template = faction_template_meccapact }
+			NOT = { rev_is_meccapact_faction = yes }
 		}
 		overlord = {
 			set_autonomy = { target = event_target:endtimes_meccapact_applicant autonomy_state = autonomy_free }
@@ -68,7 +105,7 @@ endtimes_prepare_meccapact_realignment = {
 	if = {
 		limit = {
 			is_subject = no
-			NOT = { has_faction_template = faction_template_meccapact }
+			NOT = { rev_is_meccapact_faction = yes }
 		}
 		MeccaPact_leave_previous_alliance = yes
 	}
@@ -79,7 +116,7 @@ endtimes_join_meccapact_and_cabal = {
 	endtimes_prepare_meccapact_realignment = yes
 	MeccaPact_join = yes
 	if = {
-		limit = { has_faction_template = faction_template_meccapact }
+		limit = { rev_is_meccapact_faction = yes }
 		add_ideas = endtimes_cabal
 		set_country_flag = endtimes_cabal_initialized
 		endtimes_refresh_support_floor = yes
@@ -97,6 +134,86 @@ endtimes_join_meccapact_and_cabal = {
 			# Prevent a later adoption event from granting another debt write-off.
 			set_country_flag = rev_solomon_currency_adopted
 			ingame_update_setup = yes
+		}
+	}
+}
+
+# Repair only failed October accessions when loading an affected save. Do not
+# replay political changes, the Russian 50% debt deal or later global wars.
+endtimes_repair_october_meccapact_membership = {
+	if = {
+		limit = {
+			NOT = { date < 2028.10.2 }
+			date < 2028.11.1
+			SAU = { exists = yes }
+		}
+		endtimes_found_saudi_meccapact = yes
+		if = {
+			limit = {
+				SAU = { rev_is_meccapact_faction = yes is_faction_leader = yes }
+				NOT = { has_global_flag = endtimes_alliance_expansion_announced }
+			}
+			set_global_flag = endtimes_alliance_expansion_announced
+			endtimes_broadcast_news_25 = yes
+		}
+		if = {
+			limit = {
+				NOT = { date < 2028.10.4 }
+				SAU = { rev_is_meccapact_faction = yes is_faction_leader = yes }
+			}
+			every_country = {
+				limit = {
+					exists = yes
+					NOT = { is_in_faction_with = SAU }
+					OR = {
+						endtimes_meccapact_realignment_country = yes
+						AND = { tag = SOV has_country_flag = endtimes_russia_october_coup_completed }
+					}
+				}
+				endtimes_join_meccapact_and_cabal = yes
+				if = {
+					limit = { rev_is_meccapact_faction = yes is_in_faction_with = SAU }
+					if = {
+						limit = { endtimes_meccapact_realignment_country = yes }
+						set_country_flag = endtimes_meccapact_realignment_completed
+					}
+					log = "[GetDateText]: [This.GetName]: repaired failed October MeccaPact accession."
+				}
+			}
+			endtimes_report_meccapact_realignment = yes
+			SOV = {
+				if = {
+					limit = {
+						has_country_flag = endtimes_russia_october_coup_completed
+						rev_is_meccapact_faction = yes
+						NOT = { has_global_flag = endtimes_russia_coup_news_dispatched }
+					}
+					set_global_flag = endtimes_russia_coup_news_dispatched
+					log = "[GetDateText]: Russia: broadcasting repaired MeccaPact coup report endtimes.40."
+					news_event = { id = endtimes.40 }
+				}
+			}
+		}
+	}
+}
+
+# WNN report is separate from the AI countries' local accession events.
+endtimes_report_meccapact_realignment = {
+	if = {
+		limit = {
+			NOT = { has_global_flag = endtimes_meccapact_realignment_news_dispatched }
+			SAU = { rev_is_meccapact_faction = yes is_faction_leader = yes }
+			any_country = {
+				NOT = { tag = SAU }
+				endtimes_meccapact_realignment_country = yes
+				rev_is_meccapact_faction = yes
+				has_country_flag = endtimes_meccapact_realignment_completed
+			}
+		}
+		set_global_flag = endtimes_meccapact_realignment_news_dispatched
+		SAU = {
+			log = "[GetDateText]: Saudi Arabia: broadcasting worldwide MeccaPact accession report endtimes.50."
+			news_event = { id = endtimes.50 }
 		}
 	}
 }

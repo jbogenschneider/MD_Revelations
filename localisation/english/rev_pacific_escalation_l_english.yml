@@ -1,4 +1,6 @@
 ﻿l_english:
+ rev_pacific_joining_rule_exclude_nuclear_nko: "North Korea barred after nuclear attack"
+ rev_pacific_joining_rule_exclude_nuclear_nko_desc: "North Korea cannot join a faction containing China after its nuclear attack on South Korea."
  rev_pacific_escalation.2.t: "North Korea Attacks South Korea"
  rev_pacific_escalation.2.d: "WNN reports that North Korea has declared war on South Korea. Fighting has erupted on the Korean Peninsula, threatening to draw neighboring powers into another major conflict in East Asia."
  rev_pacific_escalation.2.a: "War returns to the Korean Peninsula."

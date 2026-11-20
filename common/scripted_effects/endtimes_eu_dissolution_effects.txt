@@ -1,0 +1,68 @@
+# Global one-time dissolution. EU_member.on_remove invokes the existing leaving_EU
+# cleanup for voting, laws, offices, opinions and EU research sharing.
+endtimes_dissolve_eu = {
+	set_global_flag = endtimes_eu_dissolved
+	set_global_flag = GAME_RULE_eu_disabled
+	# The standard exit helper otherwise ejects every member from its current
+	# faction when EDU is set, even when that faction is now NATO.
+	clr_global_flag = EDU
+	every_country = {
+		limit = { has_faction_template = faction_template_edu is_faction_leader = yes }
+		dismantle_faction = yes
+	}
+	every_country = {
+		if = {
+			limit = { has_idea = EU_member }
+			remove_ideas = EU_member
+		}
+		# Also remove remnants from former members and non-member beneficiaries.
+		remove_ideas = the_euro
+		remove_ideas = EU_commission_president
+		remove_ideas = EU_council_president
+		remove_ideas = EU_parliament_president
+		remove_ideas = frontex_ExDir
+		remove_ideas = EU_foreign_minister
+		remove_ideas = ECB_president
+		remove_ideas = EU_finance_minister
+		remove_ideas = EUU_ambassador_unsc
+		remove_ideas = EU_president
+		remove_ideas = EUU_euroarmy_sc
+		remove_ideas = EUU_euronavy_sc
+		remove_ideas = EUU_idea_gdpr
+		remove_ideas = foreign_data_kraken
+		remove_ideas = EU_copyright
+		remove_ideas = asylum_shopping
+		remove_ideas = relocation_asylum_seekers
+		remove_ideas = EU_Turkey_deal
+		remove_ideas = European_Asylum_Agency
+		remove_ideas = Frontex
+		remove_ideas = European_Defence_Fund
+		remove_ideas = European_Security_Council
+		remove_ideas = EUU_cfr_eu
+		remove_ideas = european_spirit
+		remove_ideas = EU_pre_accession_assistance
+		remove_ideas = ECB_zero_interest_rate_policy
+		remove_ideas = EUU_national_dept_crisis_eu
+		remove_ideas = european_debt_crisis
+		remove_ideas = euro_bonds
+		remove_ideas = euro_rescue_package
+		remove_ideas = fiscal_union
+		remove_ideas = European_Economic_Government
+		remove_ideas = withdrawal_treaty
+		remove_ideas = no_deal_exit
+		remove_ideas = austerity
+		remove_ideas = Migrant_Crisis_Europe
+		remove_ideas = EUU_voting_rights_suspended
+		remove_ideas = EUU_subsidies_suspended
+		remove_from_tech_sharing_group = EU_Tech_Share
+		clr_country_flag = EU_potential
+		clr_country_flag = show_eu_parliament
+		clr_country_flag = show_euro_voting
+		clr_country_flag = show_eu_fiscal
+		clr_country_flag = show_offices_screen
+		clr_country_flag = show_euro_info
+	}
+	rev_rebuild_eu_member_array = yes
+	clear_array = global.EU_council_votes
+	update_eu_dirty_variable = yes
+}

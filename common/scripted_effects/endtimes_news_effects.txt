@@ -1,6 +1,38 @@
 # Concrete broadcast effects: HOI4 does not accept the previous EVENT parameter block.
 # Each effect has a literal event ID and is invoked with = yes.
 
+endtimes_broadcast_news_seal_7 = {
+	if = {
+		limit = { GER = { exists = yes } }
+		GER = { news_event = { id = endtimeseal.7 } }
+	}
+	else = { news_event = { id = endtimeseal.7 } }
+}
+
+endtimes_broadcast_news_seal_6 = {
+	if = {
+		limit = { SAU = { exists = yes } }
+		SAU = { news_event = { id = endtimeseal.6 } }
+	}
+	else = { news_event = { id = endtimeseal.6 } }
+}
+
+endtimes_broadcast_news_47 = {
+	if = {
+		limit = { SAU = { exists = yes } }
+		SAU = { news_event = { id = endtimes.47 } }
+	}
+	else = { news_event = { id = endtimes.47 } }
+}
+
+endtimes_broadcast_news_46 = {
+	if = {
+		limit = { SAU = { exists = yes } }
+		SAU = { news_event = { id = endtimes.46 } }
+	}
+	else = { news_event = { id = endtimes.46 } }
+}
+
 endtimes_broadcast_news_10 = {
 	if = {
 		limit = { SAU = { exists = yes } }

@@ -1,5 +1,25 @@
 ideas = {
 	country = {
+		endtimes_angelic_protection = {
+			picture = monarchy
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				monthly_population = 0.20
+				army_org_factor = 0.10
+				army_morale_factor = 0.20
+			}
+		}
+		endtimes_mark = {
+			picture = sov_oligarch
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				conscription_factor = -0.20
+				army_org_factor = -0.10
+				army_morale_factor = -0.20
+			}
+		}
 		endtimes_famine_and_disease = {
 			picture = looming_famine
 			allowed = { always = yes }

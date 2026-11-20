@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_rev_endtimes_pope_peter"
+		texturefile = "gfx/event_pictures/endtimes/pope_peter_election.dds"
+	}
+}

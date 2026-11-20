@@ -6,7 +6,7 @@ technology_sharing_group = {
 	research_sharing_per_country_bonus = 0.01
 	is_faction_sharing = yes
 	available = {
-		has_faction_template = faction_template_meccapact
+		rev_is_meccapact_faction = yes
 		has_idea = MeccaPact_member
 	}
 }

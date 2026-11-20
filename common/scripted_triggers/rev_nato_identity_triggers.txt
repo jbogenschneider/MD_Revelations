@@ -3,7 +3,7 @@
 rev_is_nato_faction = {
 	is_in_faction = yes
 	NOT = { rev_is_westnato_faction = yes }
-	NOT = { has_faction_template = faction_template_meccapact }
+	NOT = { rev_is_meccapact_faction = yes }
 	NOT = { has_faction_template = faction_template_csto }
 	OR = {
 		has_faction_template = faction_template_nato

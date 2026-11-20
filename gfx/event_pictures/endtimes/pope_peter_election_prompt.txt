@@ -1,0 +1,6 @@
+Generation mode: built-in image_gen
+Game texture: pope_peter_election.dds (512 x 288, uncompressed BGRA DDS)
+Generated source: pope_peter_election_source.png
+
+Final prompt:
+Create a landscape event illustration for a Hearts of Iron IV modern-day fictional scenario: Pope Peter, a fictional newly elected elderly pope with a distinct dignified face, in white papal cassock and white zucchetto, standing before red-robed cardinals inside Saint Peter's Basilica after his election, raising one hand in blessing. Hopeful, solemn, humane atmosphere; warm natural light and restrained gold architectural details, realistic editorial historical painting with subtle photographic texture suited to a grand strategy news event. Focus on the pope's face and upper torso in the center so the scene remains readable at small game UI sizes. Broad landscape composition suitable for cropping to approximately 1.8:1. No text, captions, lettering, watermark, modern logos, sinister imagery or resemblance to a specific real contemporary pope.

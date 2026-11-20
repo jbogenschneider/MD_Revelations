@@ -1,0 +1,51 @@
+# Global scope. Check every cross-bloc pair before starting a new war.
+endtimes_launch_global_war = {
+	set_global_flag = endtimes_global_war_announced
+	if = {
+		limit = {
+			NOT = {
+				any_country = {
+					rev_is_nato_faction = yes
+					any_other_country = {
+						rev_is_meccapact_faction = yes
+						has_war_with = PREV
+					}
+				}
+			}
+		}
+		random_country = {
+			limit = { rev_is_nato_faction = yes is_faction_leader = yes }
+			save_event_target_as = endtimes_global_war_nato_leader
+		}
+		random_country = {
+			limit = { rev_is_meccapact_faction = yes is_faction_leader = yes }
+			save_event_target_as = endtimes_global_war_meccapact_leader
+			declare_war_on = { target = event_target:endtimes_global_war_nato_leader type = annex_everything }
+		}
+		# Enroll both factions now rather than depending on AI call-to-arms choices.
+		every_country = {
+			limit = {
+				rev_is_nato_faction = yes
+				NOT = { has_war_with = event_target:endtimes_global_war_meccapact_leader }
+			}
+			add_to_war = {
+				targeted_alliance = event_target:endtimes_global_war_nato_leader
+				enemy = event_target:endtimes_global_war_meccapact_leader
+				hostility_reason = asked_to_join
+				single_target_only = yes
+			}
+		}
+		every_country = {
+			limit = {
+				rev_is_meccapact_faction = yes
+				NOT = { has_war_with = event_target:endtimes_global_war_nato_leader }
+			}
+			add_to_war = {
+				targeted_alliance = event_target:endtimes_global_war_meccapact_leader
+				enemy = event_target:endtimes_global_war_nato_leader
+				hostility_reason = asked_to_join
+				single_target_only = yes
+			}
+		}
+	}
+}

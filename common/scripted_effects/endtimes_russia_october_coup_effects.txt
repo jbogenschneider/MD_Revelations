@@ -1,4 +1,4 @@
-# SOV country scope. Keep the active leader's identity and portrait.
+# SOV country scope. Keep Orlov if he rules; otherwise install him in a coup.
 endtimes_russia_suspend_october_elections = {
 	if = {
 		limit = {
@@ -6,17 +6,31 @@ endtimes_russia_suspend_october_elections = {
 			NOT = { has_country_flag = endtimes_russia_october_coup_completed }
 			NOT = { has_country_flag = endtimes_russia_october_elections_completed }
 		}
-		# The previous interim-government branch changes the report, not eligibility.
+		# Record the actual leader, rather than relying on an old transition flag.
 		if = {
-			limit = { has_country_flag = endtimes_russia_international_transition }
+			limit = {
+				has_country_flag = endtimes_russia_international_transition
+				has_country_leader = { name = "Dmitri Leonidovich Orlov" ruling_only = yes }
+			}
 			set_global_flag = endtimes_russia_october_coup_followed_interim
 		}
 		set_country_flag = endtimes_russia_october_coup_completed
 		set_global_flag = endtimes_russia_october_coup_completed
-		set_country_leader_ideology = Nat_Autocracy
-		set_politics = {
-			ruling_party = nationalist
-			elections_allowed = no
+		if = {
+			limit = { NOT = { has_country_leader = { name = "Dmitri Leonidovich Orlov" ruling_only = yes } } }
+			set_global_flag = endtimes_russia_october_coup_installed_orlov
+			retire_country_leader = yes
+			set_politics = { ruling_party = nationalist elections_allowed = no }
+			create_country_leader = {
+				name = "Dmitri Leonidovich Orlov"
+				picture = "gfx/leaders/SOV/Dmitri_Leonidovich_Orlov.dds"
+				ideology = Nat_Autocracy
+				traits = { career_politician }
+			}
+		}
+		else = {
+			set_country_leader_ideology = Nat_Autocracy
+			set_politics = { ruling_party = nationalist elections_allowed = no }
 		}
 		clear_array = ruling_party
 		clear_array = gov_coalition_array
@@ -42,7 +56,12 @@ endtimes_russia_suspend_october_elections = {
 		multiply_temp_variable = { endtimes_russia_manpower_to_remove = -1 }
 		add_manpower = endtimes_russia_manpower_to_remove
 		ingame_update_setup = yes
-		news_event = { id = endtimes.40 }
+		if = {
+			limit = { NOT = { has_global_flag = endtimes_russia_coup_news_dispatched } }
+			set_global_flag = endtimes_russia_coup_news_dispatched
+			log = "[GetDateText]: Russia: broadcasting worldwide coup report endtimes.40."
+			news_event = { id = endtimes.40 }
+		}
 	}
 }
 

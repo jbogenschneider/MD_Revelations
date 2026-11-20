@@ -309,6 +309,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 		available = {
+			has_country_leader = { name = "Donald Trump" ruling_only = yes }
 			date > 2026.11.5
 		}
 		ai_will_do = {
@@ -325,6 +326,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_rock_bottom_interest_rates
+		available = { has_country_leader = { name = "Donald Trump" ruling_only = yes } }
 		icon = goal_JAP_valuedown
 		x = 11
 		y = 2
@@ -636,6 +638,7 @@ focus_tree = {
 
     focus = {
         id = USA_expand_border_patrol_detachments
+        available = { has_country_leader = { name = "Donald Trump" ruling_only = yes } }
         icon = mexican_border_wall
         x = 1
         y = 13
@@ -713,6 +716,7 @@ focus_tree = {
             base = 1
         }
 		available = {
+			has_country_leader = { name = "Donald Trump" ruling_only = yes }
             has_war = no
 		}
         completion_reward = {
@@ -736,6 +740,7 @@ focus_tree = {
 
     focus = {
         id = USA_ramp_up_secret_arming_of_taiwan
+        available = { has_country_leader = { name = "Donald Trump" ruling_only = yes } }
         icon = taiwan_plane_upg
         x = 4
         y = 14
@@ -875,6 +880,7 @@ focus_tree = {
 
     focus = {
         id = USA_prepare_to_invade_canada
+        available = { has_country_leader = { name = "Donald Trump" ruling_only = yes } }
         icon = attack_canada
         x = 6
         y = 13
@@ -904,6 +910,7 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
         prerequisite = { focus = USA_prepare_to_invade_canada }
         available = {
+            has_country_leader = { name = "Donald Trump" ruling_only = yes }
             has_country_flag = rev_usa_cw_coup_successful
         }
         ai_will_do = {
@@ -1035,6 +1042,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_visit_gaza_and_israel
+		available = { has_country_leader = { name = "Donald Trump" ruling_only = yes } }
 		icon = align_to_israel
 		x = 3
 		y = 12
@@ -1219,6 +1227,7 @@ focus_tree = {
         cost = 1
         available_if_capitulated = yes
         available = {
+            has_country_leader = { name = "Donald Trump" ruling_only = yes }
             date > 2026.12.31
             has_idea = NATO_member
             DEN = { exists = yes }
@@ -1344,6 +1353,7 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
         prerequisite = { focus = USA_rock_bottom_interest_rates }
         available = {
+            has_country_leader = { name = "Donald Trump" ruling_only = yes }
             custom_trigger_tooltip = {
                 tooltip = endtimes_usa_beast_systems_banned_tt
                 NOT = { has_country_flag = endtimes_usa_christian_restoration }
@@ -1361,6 +1371,7 @@ focus_tree = {
 
     focus = {
         id = USA_tax_non_dollar_us_assets
+        available = { has_country_leader = { name = "Donald Trump" ruling_only = yes } }
         icon = Generic_Loadsamoney
         x = 11
         y = 4
@@ -1388,6 +1399,7 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
         prerequisite = { focus = USA_tax_non_dollar_us_assets }
         available = {
+            has_country_leader = { name = "Donald Trump" ruling_only = yes }
             custom_trigger_tooltip = {
                 tooltip = endtimes_usa_beast_systems_banned_tt
                 NOT = { has_country_flag = endtimes_usa_christian_restoration }
@@ -1414,6 +1426,7 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
         prerequisite = { focus = USA_soloman }
         available = {
+            has_country_leader = { name = "Donald Trump" ruling_only = yes }
             custom_trigger_tooltip = {
                 tooltip = endtimes_usa_beast_systems_banned_tt
                 NOT = { has_country_flag = endtimes_usa_christian_restoration }
@@ -1439,6 +1452,7 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
         prerequisite = { focus = USA_solomoney }
         available = {
+            has_country_leader = { name = "Donald Trump" ruling_only = yes }
             custom_trigger_tooltip = {
                 tooltip = endtimes_usa_beast_systems_banned_tt
                 NOT = { has_country_flag = endtimes_usa_christian_restoration }
@@ -1933,7 +1947,7 @@ focus_tree = {
 		cost = 2
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 		available = {
-			NOT = { date < 2029.1.1 }
+			NOT = { date < 2028.6.1 }
 		}
 		ai_will_do = { base = 5 }
 		completion_reward = {

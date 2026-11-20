@@ -1,6 +1,7 @@
 endtimes_usa_christmas_reconciliation_ready = {
 	tag = USA
 	exists = yes
+	NOT = { has_country_leader = { name = "Donald Trump" ruling_only = yes } }
 	date > 2028.12.20
 	date < 2028.12.22
 	NOT = { has_country_flag = endtimes_usa_christmas_reconciliation_completed }

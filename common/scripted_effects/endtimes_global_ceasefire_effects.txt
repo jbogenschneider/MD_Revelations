@@ -4,6 +4,12 @@ endtimes_apply_global_ceasefire = {
 	if = {
 		limit = { NOT = { has_global_flag = endtimes_global_ceasefire_occurred } }
 		set_global_flag = endtimes_global_ceasefire_occurred
+		# White peace can clear capitulation; retain California's pre-peace status
+		# for the player's later withdrawal settlement.
+		if = {
+			limit = { CAL = { exists = yes has_capitulated = yes } }
+			set_global_flag = endtimes_cal_capitulated_at_ceasefire
+		}
 
 		# Test before applying any peace: only an active NATO-Russia war triggers
 		# the Russian government and territorial settlement.

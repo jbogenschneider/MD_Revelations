@@ -1,0 +1,56 @@
+# Global scope. Prepare every surviving participant before enrolling any of them.
+# Settle wars against the destination bloc or fellow entrants; other wars continue.
+endtimes_apply_join_or_war = {
+	set_global_flag = endtimes_join_or_war_completed
+	# Switzerland accepts the financial/Cabal alignment without joining the pact.
+	SWI = {
+		if = {
+			limit = { exists = yes }
+			add_ideas = Solomon_one_world_currency
+			add_ideas = endtimes_cabal
+			set_country_flag = rev_solomon_currency_adopted
+			set_country_flag = endtimes_cabal_initialized
+			endtimes_refresh_support_floor = yes
+			ingame_update_setup = yes
+		}
+	}
+	every_country = {
+		limit = { exists = yes endtimes_join_or_war_country = yes }
+		save_event_target_as = endtimes_ultimatum_applicant
+		if = {
+			limit = { is_subject = yes }
+			overlord = {
+				set_autonomy = { target = event_target:endtimes_ultimatum_applicant autonomy_state = autonomy_free }
+			}
+		}
+		every_other_country = {
+			limit = {
+				OR = {
+					tag = SAU
+					rev_is_meccapact_faction = yes
+					endtimes_join_or_war_country = yes
+				}
+				has_war_with = event_target:endtimes_ultimatum_applicant
+			}
+			white_peace = event_target:endtimes_ultimatum_applicant
+		}
+		if = {
+			limit = { NOT = { rev_is_meccapact_faction = yes } }
+			MeccaPact_leave_previous_alliance = yes
+		}
+	}
+	every_country = {
+		limit = { exists = yes endtimes_join_or_war_country = yes }
+		MeccaPact_join = yes
+		if = {
+			limit = { rev_is_meccapact_faction = yes }
+			add_ideas = Solomon_one_world_currency
+			add_ideas = endtimes_cabal
+			add_ideas = endtimes_mark
+			set_country_flag = rev_solomon_currency_adopted
+			set_country_flag = endtimes_cabal_initialized
+			endtimes_refresh_support_floor = yes
+			ingame_update_setup = yes
+		}
+	}
+}

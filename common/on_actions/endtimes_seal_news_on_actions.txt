@@ -2,15 +2,40 @@
 on_actions = {
 	on_daily = {
 		effect = {
-			# This narrative alliance report also lacked a dispatch call.
+			# December 25, 2028: NATO receives Angelic Protection.
 			if = {
 				limit = {
-					date > 2028.10.1
+					date > 2028.12.24
+					date < 2028.12.26
+					NOT = { has_global_flag = endtimes_sealed_announced }
+				}
+				set_global_flag = endtimes_sealed_announced
+				endtimes_broadcast_news_seal_7 = yes
+			}
+			# December 11, 2028: worldwide report on the Mark.
+			if = {
+				limit = {
+					date > 2028.12.10
+					date < 2028.12.12
+					NOT = { has_global_flag = endtimes_mark_announced }
+				}
+				set_global_flag = endtimes_mark_announced
+				endtimes_broadcast_news_seal_6 = yes
+			}
+			# October 2: announce and found the Saudi-led MeccaPact.
+			if = {
+				limit = {
+					NOT = { date < 2028.10.2 }
 					date < 2028.10.3
+					SAU = { exists = yes }
 					NOT = { has_global_flag = endtimes_alliance_expansion_announced }
 				}
-				set_global_flag = endtimes_alliance_expansion_announced
-				endtimes_broadcast_news_25 = yes
+				endtimes_found_saudi_meccapact = yes
+				if = {
+					limit = { SAU = { rev_is_meccapact_faction = yes is_faction_leader = yes } }
+					set_global_flag = endtimes_alliance_expansion_announced
+					endtimes_broadcast_news_25 = yes
+				}
 			}
 			if = {
 				limit = {

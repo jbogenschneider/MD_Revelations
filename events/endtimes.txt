@@ -2,7 +2,192 @@
 add_namespace = endtimes
 add_namespace = endtimeseal
 
-# Three days after the Global Ceasefire, use the existing NATO victory settlement.
+# Worldwide WNN report, sent by China after installing the successor.
+news_event = {
+	id = endtimes.52
+	title = endtimes.52.t
+	desc = endtimes.52.d
+	picture = GFX_china_19th_national_congress
+	is_triggered_only = yes
+	major = yes
+	trigger = { has_global_flag = endtimes_china_xi_death_announced }
+	option = { name = endtimes.52.a }
+}
+
+# Local Turkish notice, not a worldwide WNN report.
+country_event = {
+	id = endtimes.51
+	title = endtimes.51.t
+	desc = endtimes.51.d
+	picture = GFX_news_generic_soldiers
+	is_triggered_only = yes
+	trigger = {
+		tag = TUR
+		NOT = { date < 2028.10.6 }
+		date < 2028.10.7
+		is_subject = no
+		NOT = { has_country_flag = endtimes_turkey_alex_alliance_completed }
+		OR = {
+			SAU = { exists = yes is_subject = no }
+			any_country = { rev_is_meccapact_faction = yes is_faction_leader = yes }
+		}
+	}
+	immediate = {
+		if = { limit = { rev_is_nato_faction = yes has_idea = NATO_member } NATO_leave = yes }
+		# Clear stale NATO records even if the actual faction is already MeccaPact.
+		remove_ideas = NATO_member
+		if = {
+			limit = { is_in_array = { global.nato_members = THIS } }
+			remove_from_array = { global.nato_members = THIS }
+		}
+		remove_from_tech_sharing_group = NATO_Tech_Share
+		rev_nato_clear_accession_application = yes
+		# End incompatible wars with the destination bloc before requesting entry.
+		every_other_country = {
+			limit = { has_war_with = TUR OR = { tag = SAU rev_is_meccapact_faction = yes } }
+			white_peace = TUR
+		}
+		MeccaPact_join = yes
+		if = {
+			limit = { rev_is_meccapact_faction = yes }
+			set_country_flag = endtimes_turkey_alex_alliance_completed
+			log = "[GetDateText]: Turkey: endtimes.51 joined MeccaPact and cleared NATO membership."
+		}
+	}
+	option = { name = endtimes.51.a }
+}
+
+# Worldwide counterpart to the individual countries' endtimes.16 notices.
+news_event = {
+	id = endtimes.50
+	title = endtimes.50.t
+	desc = endtimes.50.d
+	picture = GFX_news_nato
+	is_triggered_only = yes
+	major = yes
+	trigger = { has_global_flag = endtimes_meccapact_realignment_news_dispatched }
+	option = { name = endtimes.50.a }
+}
+
+# December 25, 2028: worldwide report; all current NATO members receive protection.
+news_event = {
+	id = endtimeseal.7
+	title = endtimeseal.7.t
+	desc = endtimeseal.7.d
+	picture = GFX_crown_throne
+	is_triggered_only = yes
+	major = yes
+	trigger = {
+		date > 2028.12.24
+		date < 2028.12.26
+	}
+	immediate = {
+		every_country = {
+			limit = { exists = yes rev_is_nato_faction = yes }
+			add_ideas = endtimes_angelic_protection
+		}
+	}
+	option = { name = endtimeseal.7.a }
+}
+
+# November 20, 2028: Ukraine joins the existing NATO faction.
+country_event = {
+	id = endtimes.49
+	title = endtimes.49.t
+	desc = endtimes.49.d
+	picture = GFX_news_generic_soldiers
+	is_triggered_only = yes
+	trigger = {
+		tag = UKR
+		date > 2028.11.19
+		date < 2028.11.21
+		is_subject = no
+		NOT = { has_country_flag = endtimes_ukraine_nato_accession_completed }
+		any_country = { rev_is_nato_faction = yes is_faction_leader = yes }
+	}
+	immediate = {
+		remove_from_array = { global.CSTO_member = THIS }
+		remove_ideas = CSTO_member
+		remove_from_tech_sharing_group = CSTO_Tech_Share
+		endtimes_ensure_nato_membership = yes
+		if = {
+			limit = { rev_is_nato_faction = yes }
+			set_country_flag = endtimes_ukraine_nato_accession_completed
+		}
+	}
+	option = { name = endtimes.49.a }
+}
+
+# Worldwide report explaining the USA's post-ceasefire constitutional restoration.
+news_event = {
+	id = endtimes.48
+	title = endtimes.48.t
+	desc = endtimes.48.d
+	picture = GFX_news_generic_soldiers
+	is_triggered_only = yes
+	major = yes
+	trigger = { has_global_flag = endtimes_usa_military_coup_announced }
+	option = { name = endtimes.48.a }
+}
+
+# December 11, 2028: worldwide report; the Mark spreads throughout MeccaPact.
+news_event = {
+	id = endtimeseal.6
+	title = endtimeseal.6.t
+	desc = endtimeseal.6.d
+	picture = GFX_news_generic_soldiers
+	is_triggered_only = yes
+	major = yes
+	trigger = {
+		date > 2028.12.10
+		date < 2028.12.12
+	}
+	immediate = {
+		every_country = {
+			limit = { exists = yes rev_is_meccapact_faction = yes }
+			add_ideas = endtimes_mark
+		}
+	}
+	option = { name = endtimeseal.6.a }
+}
+
+# Worldwide WNN announcement after the February 1 war check.
+news_event = {
+	id = endtimes.47
+	title = endtimes.47.t
+	desc = endtimes.47.d
+	picture = GFX_news_generic_soldiers
+	is_triggered_only = yes
+	major = yes
+	trigger = { has_global_flag = endtimes_global_war_announced }
+	option = { name = endtimes.47.a }
+}
+
+# Worldwide WNN report after the January 26 ultimatum has been applied.
+news_event = {
+	id = endtimes.46
+	title = endtimes.46.t
+	desc = endtimes.46.d
+	picture = GFX_news_generic_soldiers
+	is_triggered_only = yes
+	major = yes
+	trigger = { has_global_flag = endtimes_join_or_war_completed }
+	option = { name = endtimes.46.a }
+}
+
+# Worldwide WNN report, dispatched by Germany after the EU has been dissolved.
+news_event = {
+	id = endtimes.45
+	title = endtimes.45.t
+	desc = endtimes.45.d
+	picture = GFX_news_generic_soldiers
+	is_triggered_only = yes
+	major = yes
+	trigger = { has_global_flag = endtimes_eu_dissolved }
+	option = { name = endtimes.45.a }
+}
+
+# Three days after the Global Ceasefire, choose a coup or a military withdrawal.
 country_event = {
 	id = endtimes.44
 	title = endtimes.44.t
@@ -14,20 +199,31 @@ country_event = {
 		tag = USA
 		has_global_flag = { flag = endtimes_global_ceasefire_occurred days > 2 }
 		NOT = { has_country_flag = endtimes_usa_returns_to_normal }
+		NOT = { has_country_flag = endtimes_usa_post_ceasefire_choice_presented }
 	}
 
 	immediate = {
-		set_country_flag = endtimes_usa_returns_to_normal
+		set_country_flag = endtimes_usa_post_ceasefire_choice_presented
 		remove_ideas = endtimes_cabal
 		set_country_flag = endtimes_cabal_initialized
-		clr_country_flag = rev_usa_cw_restoration_kelly_done
 		if = {
 			limit = { PER = { exists = yes } has_war_with = PER }
 			white_peace = PER
 		}
+	}
+	option = {
+		name = endtimes.44.a
+		ai_chance = { factor = 100 }
+		set_country_flag = endtimes_usa_post_ceasefire_choice_resolved
+		set_country_flag = endtimes_usa_returns_to_normal
+		clr_country_flag = rev_usa_cw_restoration_kelly_done
 		country_event = { id = rev_usa_cw.42 }
 	}
-	option = { name = endtimes.44.a }
+	option = {
+		name = endtimes.44.b
+		ai_chance = { factor = 0 }
+		endtimes_usa_pull_back = yes
+	}
 }
 
 # Alex takes control of Russia for AI and human Russia.
@@ -284,14 +480,15 @@ news_event = {
 	id = endtimes.20
 	title = endtimes.20.t
 	desc = endtimes.20.d
-	picture = GFX_foreign_workers_riot
+	picture = GFX_rev_endtimes_pope_peter
 	is_triggered_only = yes
 	major = yes
 
 	trigger = {
-		date > 2029.4.28
-		date < 2029.4.30
+		date > 2028.11.6
+		date < 2028.11.8
 	}
+	immediate = { endtimes_install_pope_peter = yes }
 
 	option = {
 		name = endtimes.20.a
@@ -307,8 +504,8 @@ country_event = {
 
 	trigger = {
 		# Keep queued or external calls on the scheduled day.
-		date > 2029.5.1
-		date < 2029.5.3
+		date > 2028.10.30
+		date < 2028.11.1
 		tag = HLS
 		NOT = { has_country_flag = endtimes_false_prophet_installed }
 	}
@@ -397,8 +594,8 @@ news_event = {
 
 	trigger = {
 		# Keep queued or external calls on the scheduled day.
-		date > 2029.6.1
-		date < 2029.6.3
+		date > 2028.11.16
+		date < 2028.11.19
 	}
 
 	option = {
@@ -416,9 +613,9 @@ news_event = {
 	major = yes
 
 	trigger = {
-		# Keep queued or external calls on the scheduled day.
-		date > 2028.10.30
-		date < 2028.11.2
+		# Allow the October save-load repair to deliver a previously missed report.
+		NOT = { date < 2028.10.2 }
+		SAU = { exists = yes }
 	}
 
 	option = {
@@ -426,7 +623,7 @@ news_event = {
 	}
 }
 
-# Alex's bloc expands prior to holloween
+# October 4: countries leave their previous alliances and enter Saudi MeccaPact.
 country_event = {
 	id = endtimes.16
 	title = endtimes.16.t
@@ -434,19 +631,36 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		date > 2028.10.1
-		date < 2028.10.3
+		NOT = { date < 2028.10.4 }
+		date < 2028.10.5
 		endtimes_meccapact_realignment_country = yes
-		SAU = { exists = yes is_subject = no }
-		NOT = { has_country_flag = endtimes_meccapact_realignment_completed }
+		SAU = { exists = yes is_subject = no rev_is_meccapact_faction = yes is_faction_leader = yes }
+		OR = {
+			NOT = { has_country_flag = endtimes_meccapact_realignment_completed }
+			NOT = { is_in_faction_with = SAU }
+		}
 	}
 
 	immediate = {
+		# Explicit enrollment avoids relying on the generic join helper's leader search.
+		endtimes_prepare_meccapact_realignment = yes
+		if = {
+			limit = { NOT = { tag = SAU } NOT = { is_in_faction_with = SAU } }
+			save_event_target_as = endtimes_october4_applicant
+			SAU = { add_to_faction = event_target:endtimes_october4_applicant }
+		}
+		MeccaPact_enroll_member = yes
 		endtimes_join_meccapact_and_cabal = yes
 		if = {
-			limit = { has_faction_template = faction_template_meccapact }
+			limit = {
+				rev_is_meccapact_faction = yes
+				OR = { tag = SAU is_in_faction_with = SAU }
+			}
 			set_country_flag = endtimes_meccapact_realignment_completed
+			log = "[GetDateText]: [This.GetName]: endtimes.16 joined Saudi-led MeccaPact."
+			endtimes_report_meccapact_realignment = yes
 		}
+		else = { log = "[GetDateText]: [This.GetName]: endtimes.16 FAILED to join Saudi-led MeccaPact." }
 	}
 
 	option = {
@@ -490,6 +704,7 @@ country_event = {
 	immediate = {
 		set_country_flag = endtimes_french_monarchy_restored
 		set_global_flag = endtimes_french_monarchy_restored
+		add_ideas = endtimes_angelic_protection
 		set_country_flag = endtimes_henri_heir
 		# The new monarchy breaks with the Cabal and its compromised presidency.
 		if = {
@@ -731,8 +946,8 @@ news_event = {
 	major = yes
 
 	trigger = {
-		date > 2029.5.9
-		date < 2029.5.11
+		date > 2028.11.19
+		date < 2028.11.21
 	}
 
 	option = {
@@ -839,14 +1054,20 @@ country_event = {
 	id = endtimes.28
 	title = endtimes.28.t
 	desc = endtimes.28.d
-	picture = GFX_recognize_jerusalem
+	picture = GFX_israeli_government_event
 	is_triggered_only = yes
 
 	trigger = {
 		date > 2028.11.2
 		date < 2028.11.4
 		tag = ISR
-		SOV = { exists = yes }
+		SAU = { exists = yes is_subject = no }
+		NOT = {
+			OR = {
+				has_faction_template = faction_template_aor
+				has_idea = faction_resistance_axis_member
+			}
+		}
 		NOT = { has_country_flag = endtimes_israel_coup_completed }
 	}
 
@@ -866,18 +1087,18 @@ country_event = {
 			traits = { neutrality_oligarchism }
 		}
 		startup_politics = yes
-		endtimes_join_csto_and_cabal = yes
+		endtimes_join_meccapact_and_cabal = yes
 		PAL = {
 			if = {
 				limit = { exists = yes }
-				endtimes_join_csto_and_cabal = yes
+				endtimes_join_meccapact_and_cabal = yes
 			}
 		}
 		# HAM represents the separate Gaza government in this mod.
 		HAM = {
 			if = {
 				limit = { exists = yes }
-				endtimes_join_csto_and_cabal = yes
+				endtimes_join_meccapact_and_cabal = yes
 			}
 		}
 		news_event = { id = endtimes.29 }
@@ -893,7 +1114,7 @@ news_event = {
 	id = endtimes.29
 	title = endtimes.28.t
 	desc = endtimes.28.d
-	picture = GFX_recognize_jerusalem
+	picture = GFX_israeli_government_event
 	is_triggered_only = yes
 	major = yes
 
@@ -939,15 +1160,23 @@ country_event = {
 		tag = CHI
 		date > 2028.11.9
 		date < 2028.11.11
-		SOV = { exists = yes }
+		SAU = { exists = yes is_subject = no }
 		NOT = { has_country_flag = endtimes_china_alliance_entry_completed }
 	}
 
 	immediate = {
 		set_country_flag = endtimes_china_alliance_entry_completed
 		set_global_flag = endtimes_china_joined_alliance
-		endtimes_leave_previous_alliance = yes
-		endtimes_enroll_csto_and_cabal = yes
+		# Leave the previous bloc and join MeccaPact, preserving the separate
+		# 80% SOLOMON adoption below rather than applying the 30% regional deal.
+		every_other_country = {
+			limit = { rev_is_meccapact_faction = yes has_war_with = CHI }
+			white_peace = CHI
+		}
+		MeccaPact_join = yes
+		add_ideas = endtimes_cabal
+		set_country_flag = endtimes_cabal_initialized
+		endtimes_refresh_support_floor = yes
 		# Independent later adoption route; an earlier USA-triggered adoption
 		# prevents a second debt write-off through the event's adoption flag.
 		country_event = { id = rev_solomon.1 }

@@ -3,9 +3,26 @@
 MeccaPact_leave_previous_alliance = {
 	if = { limit = { has_idea = NATO_member } NATO_leave = yes }
 	if = { limit = { has_idea = WestNATO_member } WestNATO_leave = yes }
-	remove_from_array = { global.CSTO_member = THIS }
+	if = {
+		limit = { is_in_array = { global.CSTO_member = THIS } }
+		remove_from_array = { global.CSTO_member = THIS }
+	}
 	remove_ideas = CSTO_member
 	remove_from_tech_sharing_group = CSTO_Tech_Share
+	# A faction leader must hand over leadership before leaving. This matters
+	# especially for Russia leaving CSTO and Saudi Arabia leaving an older bloc.
+	if = {
+		limit = { is_in_faction = yes is_faction_leader = yes }
+		save_event_target_as = rev_meccapact_departing_leader
+		random_other_country = {
+			limit = {
+				is_subject = no
+				is_in_faction_with = event_target:rev_meccapact_departing_leader
+			}
+			set_faction_leader = yes
+		}
+		if = { limit = { is_faction_leader = yes } dismantle_faction = yes }
+	}
 	if = { limit = { is_in_faction = yes } leave_faction = yes }
 }
 
@@ -17,16 +34,25 @@ MeccaPact_create = {
 			tag = SAU
 			exists = yes
 			is_subject = no
-			NOT = { has_faction_template = faction_template_meccapact }
+			NOT = { rev_is_meccapact_faction = yes }
 			NOT = {
 				any_other_country = {
-					has_faction_template = faction_template_meccapact
+					rev_is_meccapact_faction = yes
 					is_faction_leader = yes
 				}
 			}
 		}
 		MeccaPact_leave_previous_alliance = yes
-		create_faction_from_template = faction_template_meccapact
+		if = {
+			limit = { is_in_faction = no }
+			set_rule = { can_create_factions = yes }
+			create_faction = MeccaPact
+			if = {
+				limit = { is_in_faction = yes is_faction_leader = yes }
+				set_country_flag = rev_meccapact_generic_founder
+				log = "[GetDateText]: Saudi Arabia: created MeccaPact using generic create_faction syntax."
+			}
+		}
 		MeccaPact_enroll_member = yes
 	}
 }
@@ -34,7 +60,7 @@ MeccaPact_create = {
 # Internal helper. The caller must already belong to the actual faction.
 MeccaPact_enroll_member = {
 	if = {
-		limit = { has_faction_template = faction_template_meccapact }
+		limit = { rev_is_meccapact_faction = yes }
 		add_ideas = MeccaPact_member
 		if = {
 			limit = { NOT = { is_in_array = { global.meccapact_members = THIS } } }
@@ -44,68 +70,70 @@ MeccaPact_enroll_member = {
 	}
 }
 
-# Country scope, safe in nested event/focus scopes. Repeated joins are harmless.
-# First join founds the pact under SAU; later joins use its current leader.
+# Country scope. Resolve both countries explicitly: never rely on PREV inside
+# nested searches, and never remove an old alliance before a destination exists.
 MeccaPact_join = {
 	if = {
-		limit = {
-			exists = yes
-			is_subject = no
-			NOT = {
-				any_other_country = {
-					has_faction_template = faction_template_meccapact
-					has_war_with = PREV
-				}
-			}
-			OR = {
-				has_faction_template = faction_template_meccapact
-				any_other_country = {
-					has_faction_template = faction_template_meccapact
-					is_faction_leader = yes
-				}
-				SAU = {
-					exists = yes
-					is_subject = no
-					NOT = { has_war_with = PREV }
-				}
-			}
-		}
+		limit = { exists = yes is_subject = no }
+		save_event_target_as = rev_meccapact_applicant
 		if = {
 			limit = {
-				NOT = { has_faction_template = faction_template_meccapact }
-				NOT = {
-					any_other_country = {
-						has_faction_template = faction_template_meccapact
-						is_faction_leader = yes
-					}
-				}
+				NOT = { any_country = { rev_is_meccapact_faction = yes is_faction_leader = yes } }
 			}
 			SAU = { MeccaPact_create = yes }
 		}
 		if = {
-			limit = { NOT = { has_faction_template = faction_template_meccapact } }
-			save_event_target_as = rev_meccapact_applicant
-			# Locate the destination before removing previous membership.
-			random_other_country = {
-				limit = {
-					has_faction_template = faction_template_meccapact
+			limit = {
+				NOT = { rev_is_meccapact_faction = yes }
+				any_other_country = {
+					rev_is_meccapact_faction = yes
 					is_faction_leader = yes
 				}
-				event_target:rev_meccapact_applicant = { MeccaPact_leave_previous_alliance = yes }
+				NOT = {
+					any_other_country = {
+						rev_is_meccapact_faction = yes
+						has_war_with = event_target:rev_meccapact_applicant
+					}
+				}
+			}
+			random_other_country = {
+				limit = { rev_is_meccapact_faction = yes is_faction_leader = yes }
+				save_event_target_as = rev_meccapact_destination
+			}
+			MeccaPact_leave_previous_alliance = yes
+			event_target:rev_meccapact_destination = {
 				add_to_faction = event_target:rev_meccapact_applicant
 			}
 		}
 		MeccaPact_enroll_member = yes
+		if = {
+			limit = { rev_is_meccapact_faction = yes }
+			log = "[GetDateText]: [This.GetName]: MeccaPact_join confirmed actual faction membership."
+		}
+		else = {
+			log = "[GetDateText]: [This.GetName]: MeccaPact_join FAILED; no valid leader, incompatible war or faction transfer refused."
+			if = {
+				limit = { NOT = { any_country = { rev_is_meccapact_faction = yes is_faction_leader = yes } } }
+				log = "[GetDateText]: [This.GetName]: MeccaPact failure detail: no recognized pact leader exists."
+			}
+			if = {
+				limit = { is_in_faction = yes }
+				log = "[GetDateText]: [This.GetName]: MeccaPact failure detail: applicant remains in another faction."
+			}
+		}
 	}
 }
 
 # Country scope. Does not eject a country from an unrelated faction.
 MeccaPact_leave = {
 	remove_ideas = MeccaPact_member
-	remove_from_array = { global.meccapact_members = THIS }
+	if = {
+		limit = { is_in_array = { global.meccapact_members = THIS } }
+		remove_from_array = { global.meccapact_members = THIS }
+	}
 	remove_from_tech_sharing_group = MeccaPact_Tech_Share
 	if = {
-		limit = { has_faction_template = faction_template_meccapact }
+		limit = { rev_is_meccapact_faction = yes }
 		leave_faction = yes
 	}
 }
