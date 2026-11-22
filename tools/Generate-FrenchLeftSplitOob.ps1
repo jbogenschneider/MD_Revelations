@@ -4,7 +4,11 @@
 # On repeat runs, the generated FRC OOB is the recorded regional roster.
 $modRoot = Split-Path -Parent $PSScriptRoot
 $encoding = [Text.UTF8Encoding]::new($false)
+# Keep the historical roster even where the split moves its deployment.
 $regionStates = @(56,54,55,305,59)
+$rebelLocations = @{ 6545 = 11508; 11516 = 11465 }
+$originalLocations = @{}
+foreach ($location in $rebelLocations.Keys) { $originalLocations[$rebelLocations[$location]] = $location }
 $regionProvinces = [Collections.Generic.HashSet[int]]::new()
 foreach ($state in $regionStates) {
     $file = Get-ChildItem (Join-Path $modRoot 'history/states') -Filter "$state-*"
@@ -46,7 +50,7 @@ foreach ($entry in $sources) {
     $alreadyPrepared = $sourceText.Contains("$hook = yes")
     $rosterText = if ($alreadyPrepared) { [IO.File]::ReadAllText((Join-Path $modRoot "history/units/$oobName.txt")) } else { $sourceText }
     $selected = @(Get-OobBlocks $rosterText 'division' | Where-Object {
-        $regionProvinces.Contains([int][regex]::Match($_.Text,'\blocation\s*=\s*(\d+)').Groups[1].Value)
+        $alreadyPrepared -or $regionProvinces.Contains([int][regex]::Match($_.Text,'\blocation\s*=\s*(\d+)').Groups[1].Value)
     })
     if ($selected.Count -eq 0) { throw "No regional formations: $($entry.Source)" }
     $templates = [Collections.Generic.List[string]]::new()
@@ -77,13 +81,22 @@ foreach ($entry in $sources) {
         if ($usedTemplates.Add($templateName)) {
             $templates.Add([regex]::Replace($template[0].Text.Trim(),'(?m)^\s*division_names_group\s*=\s*\S+\s*$',''))
         }
-        $units.Add($unit)
+        $location = [int][regex]::Match($unit,'\blocation\s*=\s*(\d+)').Groups[1].Value
+        $locationPattern = '(?m)^(\s*location\s*=\s*)' + $location + '\b(?:[ \t]*#[^\r\n]*)?'
+        if ($alreadyPrepared -and $originalLocations.ContainsKey($location)) {
+            $units.Add($unit)
+            $location = $originalLocations[$location]
+            $unit = [regex]::Replace($unit, $locationPattern, ('${1}' + $location))
+        } elseif ($rebelLocations.ContainsKey($location)) {
+            $units.Add([regex]::Replace($unit, $locationPattern, ('${1}' + $rebelLocations[$location])))
+        } else {
+            $units.Add($unit)
+        }
         $body = $unit.Substring($unit.IndexOf('{')+1,$unit.LastIndexOf('}')-$unit.IndexOf('{')-1)
         # Remove comments while preserving quoted names, then serialize the OOB
         # division body into create_unit's documented division string.
         $body = [regex]::Replace($body,'"(?:\\.|[^"\\])*"|#[^\r\n]*',{ param($match) if ($match.Value.StartsWith('#')) { '' } else { $match.Value } })
         $serialized = $body.Replace('\','\\').Replace('"','\"').Replace("`r",' ').Replace("`n",' ').Trim()
-        $location = [regex]::Match($unit,'\blocation\s*=\s*(\d+)').Groups[1].Value
         $scriptId = 9905600 + $unitNumber
         $effects.Add("`tcreate_unit = {")
         $effects.Add("`t`towner = FRA")

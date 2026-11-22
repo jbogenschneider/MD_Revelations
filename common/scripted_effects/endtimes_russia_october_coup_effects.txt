@@ -20,21 +20,29 @@ endtimes_russia_suspend_october_elections = {
 			limit = { NOT = { has_country_leader = { name = "Dmitri Leonidovich Orlov" ruling_only = yes } } }
 			set_global_flag = endtimes_russia_october_coup_installed_orlov
 			retire_country_leader = yes
-			set_politics = { ruling_party = nationalist elections_allowed = no }
+		}
+		else = { set_country_leader_ideology = Autocracy }
+		set_politics = { ruling_party = communism elections_allowed = no }
+		if = {
+			limit = { NOT = { has_country_leader = { name = "Dmitri Leonidovich Orlov" ruling_only = yes } } }
 			create_country_leader = {
 				name = "Dmitri Leonidovich Orlov"
 				picture = "gfx/leaders/SOV/Dmitri_Leonidovich_Orlov.dds"
-				ideology = Nat_Autocracy
+				ideology = Autocracy
 				traits = { career_politician }
 			}
 		}
-		else = {
-			set_country_leader_ideology = Nat_Autocracy
-			set_politics = { ruling_party = nationalist elections_allowed = no }
-		}
 		clear_array = ruling_party
 		clear_array = gov_coalition_array
-		add_to_array = { ruling_party = 22 } # Nationalist autocrats.
+		add_to_array = { ruling_party = 7 } # Emerging Autocracy.
+		set_popularities = {
+			democratic = 29
+			communism = 45
+			fascism = 1
+			neutrality = 10
+			nationalist = 15
+		}
+		startup_politics = yes
 		clr_country_flag = russia_pending_election_2026
 		clr_country_flag = RUSSIA_ELECTION_ACTIVE
 
@@ -105,6 +113,14 @@ endtimes_russia_hold_october_elections = {
 			traits = { western_liberalism }
 		}
 	}
+	set_popularities = {
+		democratic = 39
+		communism = 15
+		fascism = 1
+		neutrality = 30
+		nationalist = 15
+	}
+	startup_politics = yes
 	set_stability = 0.80
 	ingame_update_setup = yes
 	news_event = { id = endtimes.43 }

@@ -1,37 +1,63 @@
-# Country scope. Use the normal NATO helper and clear any former CSTO records.
-endtimes_pacific_join_nato = {
+# Country scope. The destination is resolved before touching any old alliance.
+endtimes_join_existing_east_asian_faction = {
 	if = {
-		limit = { exists = yes is_subject = no }
-		if = {
-			limit = { has_idea = CSTO_member }
-			remove_ideas = CSTO_member
-			remove_from_array = { global.CSTO_member = THIS }
-			remove_from_tech_sharing_group = CSTO_Tech_Share
+		limit = {
+			exists = yes
+			is_subject = no
+			NOT = {
+				OR = {
+					tag = event_target:endtimes_east_asian_leader
+					is_in_faction_with = event_target:endtimes_east_asian_leader
+				}
+			}
 		}
-		endtimes_ensure_nato_membership = yes
+		save_event_target_as = endtimes_east_asian_applicant
+		every_other_country = {
+			limit = {
+				has_war_with = event_target:endtimes_east_asian_applicant
+				OR = {
+					tag = event_target:endtimes_east_asian_leader
+					is_in_faction_with = event_target:endtimes_east_asian_leader
+				}
+			}
+			white_peace = event_target:endtimes_east_asian_applicant
+		}
+		MeccaPact_leave = yes
+		MeccaPact_leave_previous_alliance = yes
+		rev_nato_clear_accession_application = yes
+		event_target:endtimes_east_asian_leader = { add_to_faction = event_target:endtimes_east_asian_applicant }
 	}
 }
 
-# November 16 event. Japan dissolves its own bloc before anyone joins NATO.
-endtimes_pacific_nato_realignment = {
+# November 16, 2028. Keep Japan's existing bloc; no Quad-to-NATO realignment.
+endtimes_pacific_east_asian_realignment = {
 	if = {
-		limit = { NOT = { has_global_flag = endtimes_pacific_nato_realignment_completed } }
-		set_global_flag = endtimes_pacific_nato_realignment_completed
-		JAP = {
-			if = {
-				limit = {
-					exists = yes
-					is_faction_leader = yes
-					NOT = { rev_is_nato_faction = yes }
-				}
-				dismantle_faction = yes
+		limit = {
+			NOT = { has_global_flag = endtimes_pacific_east_asian_realignment_completed }
+			PHI = { exists = yes is_subject = no is_in_faction = no has_war = no }
+			OR = {
+				JAP = { exists = yes is_in_faction = yes NOT = { rev_is_nato_faction = yes } NOT = { rev_is_meccapact_faction = yes } }
+				any_country = { has_faction_template = faction_template_east_asian_pact is_faction_leader = yes }
 			}
-			endtimes_pacific_join_nato = yes
 		}
-		AST = { endtimes_pacific_join_nato = yes }
-		RAJ = { endtimes_pacific_join_nato = yes }
-		PHI = { endtimes_pacific_join_nato = yes }
-		KOR = { endtimes_pacific_join_nato = yes }
-		NZL = { endtimes_pacific_join_nato = yes }
+		if = {
+			limit = { JAP = { exists = yes is_in_faction = yes NOT = { rev_is_nato_faction = yes } NOT = { rev_is_meccapact_faction = yes } } }
+			JAP = { faction_leader = { save_event_target_as = endtimes_east_asian_leader } }
+		}
+		else = {
+			random_country = {
+				limit = { has_faction_template = faction_template_east_asian_pact is_faction_leader = yes }
+				save_event_target_as = endtimes_east_asian_leader
+			}
+		}
+		PHI = { endtimes_join_existing_east_asian_faction = yes }
+		if = {
+			limit = { PHI = { is_in_faction_with = event_target:endtimes_east_asian_leader } }
+			set_global_flag = endtimes_pacific_east_asian_realignment_completed
+			event_target:endtimes_east_asian_leader = {
+				log = "[GetDateText]: [This.GetName]: The Philippines joined the existing East Asian faction; broadcasting WNN endtimes.33."
+				news_event = { id = endtimes.33 }
+			}
+		}
 	}
 }

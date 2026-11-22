@@ -7,16 +7,17 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		has_government = nationalist
 		NOT = { has_country_flag = rev_nato_post_election_membership_checked }
 		OR = {
 			AND = {
 				tag = FRA
+				has_government = nationalist
 				has_country_flag = rev_fra_2027_handover_done
 				has_country_flag = rev_fra_2027_le_pen_elected
 			}
 			AND = {
 				tag = ITA
+				has_government = democratic
 				has_country_flag = rev_ita_2027_election_resolved
 			}
 		}
@@ -27,7 +28,7 @@ country_event = {
 		set_country_flag = rev_nato_post_election_membership_checked
 		if = {
 			limit = {
-				NOT = { has_idea = NATO_member }
+			NOT = { rev_is_nato_faction = yes }
 				NOT = { has_war_with = USA }
 				NOT = { has_idea = CSTO_member }
 				NOT = { has_country_flag = endtimes_meccapact_realignment_completed }
@@ -45,7 +46,7 @@ country_event = {
 					NOT = { has_war_with = ROOT }
 				}
 			}
-			log = "[GetDateText]: [Root.GetName]: Restoring NATO membership after the nationalist election (one-time check)."
+			log = "[GetDateText]: [Root.GetName]: Restoring NATO membership after the election (one-time check)."
 			endtimes_ensure_nato_membership = yes
 		}
 	}

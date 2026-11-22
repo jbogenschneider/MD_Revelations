@@ -1,31 +1,18 @@
 add_namespace = rev_fra_split
 
-# Scheduled for July 2, 2029, replacing France's original monarchy timer.
+# Scheduled from November 27 through December 5, 2028.
 # Manual entry point for earlier testing: event rev_fra_split.1 FRA
 country_event = {
 	id = rev_fra_split.1
 	title = rev_fra_split.1.t
 	desc = rev_fra_split.1.d
 	is_triggered_only = yes
-	trigger = {
-		tag = FRA
-		NOT = { has_country_flag = rev_fra_left_split_started }
-		NOT = { country_exists = FRC }
-		has_variable = rev_fra_regional_oob_mode
-		owns_state = 56
-		owns_state = 54	
-		owns_state = 961
-		owns_state = 958
-		owns_state = 61
-		owns_state = 951
-		owns_state = 959
-		owns_state = 60
-	}
+	trigger = { rev_fra_left_split_ready = yes }
 	immediate = { rev_fra_start_left_split = yes }
 	option = { name = rev_fra_split.1.a }
 }
 
-# Separate notification following the royal restoration and border seizures.
+# Separate notification following the royal restoration and Le Pen's flight.
 country_event = {
 	id = rev_fra_split.2
 	title = rev_fra_split.2.t

@@ -9,6 +9,18 @@ on_actions = {
 				}
 				country_event = { id = rev_ita_election.1 }
 			}
+			else_if = {
+				limit = {
+					tag = ITA
+					has_country_flag = rev_ita_2027_election_resolved
+					NOT = { has_country_flag = rev_ita_vannacci_democratic }
+					has_government = nationalist
+					is_in_array = { ruling_party = 21 }
+					has_country_leader = { name = "Roberto Vannacci" ruling_only = yes }
+				}
+				rev_ita_install_democratic_vannacci = yes
+				clr_country_flag = rev_nato_post_election_membership_checked
+			}
 		}
 	}
 }

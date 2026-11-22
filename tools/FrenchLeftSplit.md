@@ -6,35 +6,26 @@ EELV, and Parti Socialiste. Initial support is 60%, 20%, and 20%, respectively;
 all three form the governing coalition. Elections remain enabled.
 
 The country is dormant in a new 2026 campaign, with no initial FRC cores.
-The civil-war split is scheduled for July 2, 2029, using the former French
-monarchy timer. For earlier testing, use:
+The civil-war split is scheduled from November 27 through December 5, 2028.
+For earlier testing, use the console command below.
 
 ```text
 event rev_fra_split.1 FRA
 ```
 
 Future French events can instead call `rev_fra_start_left_split = yes` in FRA
-scope. Both entry points require FRA to own states 56, 54, 55, 305, and 59, and
-require FRC not to exist already. Only those five states become FRC, with Paris
-as its capital. All other French states remain FRA. FRC then declares a war
-using the game's `civil_war` war goal against FRA.
+scope. Both entry points require FRA to own states 56, 54, 55, 59, 959, 64, and 961,
+and require FRC not to exist already. Those seven states become FRC, with Paris
+as its capital. France keeps state 305, Champagne-Ardennes, then declares war
+on FRC with the `annex_everything` war goal.
 
 The split also sends the worldwide `endtimes.22` notification to every human
 player, describing Le Pen's alliance with Alex, the proposed SOLOMON system,
 and the far-left revolt. It is dispatched once when the civil war begins.
 
-Five days after the split (normally July 7, 2029), FRA receives the royal restoration event
-`endtimes.11`: Geoffroy Saint-Michel replaces the current leader, the former
-nationalist parties are excluded, and elections end. The restoration restores
-NATO membership and gives FRA no additional territory. States 857, 63, and 1000
-pass from FRA to Italy, state 963 passes from FRA to Switzerland, and Italy
-annexes Monaco. A separate popup (`rev_fra_split.2`) describes the loyalists'
-flight one hour later. Transfers require FRA to own the relevant states and
-the recipient countries to exist.
-
-Spain and Portugal follow the French restoration after two days; Britain and
-Ireland follow after ten days. Their former fixed-date dispatches have been
-replaced with events queued by the actual French restoration.
+Five days after the split, FRA receives `endtimes.11`. Geoffroy Saint-Michel leads
+a constitutional monarchy with democratic elections and restores NATO membership.
+One hour later, `rev_fra_split.2` reports that Le Pen's administration fled France.
 
 FRC copies France's live technology and research-slot count at the split. Its
 dormant history also inherits France's scenario technology. Run the event at
@@ -54,10 +45,9 @@ The regional starting roster is extracted from the active French land OOB:
 The selected original formations still begin under FRA. Their original unit
 definitions now run through `create_unit` with script IDs 9905601–9905605.
 The split removes those IDs from FRA wherever they have moved and re-forms
-the historical roster under FRC. Original templates, names, equipment factors,
-forced equipment variants, experience factors, and starting locations are
-preserved. This uses the history definitions, not the units' current battlefield
-strength, upgraded templates, or accumulated experience.
+the historical roster under FRC using the original templates, names, equipment
+and experience factors. The two formations from Champagne-Ardennes redeploy to
+Rennes and Nantes when they join FRC. Re-formed units use their history definitions.
 
 Start a new campaign after installing these changes so the initial formations
 receive their script IDs. Older saves without `rev_fra_regional_oob_mode` cannot

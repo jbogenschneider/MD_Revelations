@@ -95,7 +95,7 @@ division_template = {
 units = {
 division = {
 		name = "1er brigade mécanisée 'Saint-Louis'"
-		location = 6545 #Chalons
+		location = 11508 # Rennes
 		division_template = "Mechanized Brigade"
 		start_experience_factor = 0.55
 		start_equipment_factor = 0.01
@@ -111,7 +111,7 @@ division = {
 	}
 division = {
 		name = "4e brigade aéromobile 'Supra Optimos'"
-		location = 11516 #Essey-les-Nancy
+		location = 11465 # Nantes
 		division_template = "Airmobile Brigade"
 		start_experience_factor = 0.55
 		start_equipment_factor = 0.01

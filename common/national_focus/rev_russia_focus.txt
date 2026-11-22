@@ -92,8 +92,12 @@ focus_tree = {
 		cost = 3
 		search_filters = { FOCUS_FILTER_ECONOMY }
 		prerequisite = { focus = rev_SOV_president_sokolov_entry }
+		available = { UKR = { NOT = { rev_is_nato_faction = yes } } }
 		completion_reward = {
-			country_event = { id = russia_2026.5 }
+			if = {
+				limit = { UKR = { NOT = { rev_is_nato_faction = yes } } }
+				country_event = { id = russia_2026.5 }
+			}
 		}
 		ai_will_do = {
 			factor = 40

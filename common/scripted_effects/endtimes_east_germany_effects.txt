@@ -3,27 +3,27 @@ endtimes_setup_east_germany_politics = {
 	set_country_flag = GER_afd_cum
 	set_popularities = {
 		democratic = 0
-		communism = 0
+		communism = 100
 		fascism = 0
 		neutrality = 0
-		nationalist = 100
+		nationalist = 0
 	}
 	set_politics = {
-		ruling_party = nationalist
+		ruling_party = communism
 		elections_allowed = no
 	}
 	start_politics_input = yes
-	set_variable = { party_pop_array^20 = 1 }
-	add_to_array = { ruling_party = 20 }
-	set_variable = { Nat_Populism_leader = 1 }
-	clr_country_flag = party21_banned
+	set_variable = { party_pop_array^7 = 1 }
+	add_to_array = { ruling_party = 7 } # Emerging Autocracy.
+	set_variable = { Autocracy_leader = 1 }
+	clr_country_flag = party8_banned
 	set_country_flag = free_ban_parties
 	set_partyall_banned = yes
 	create_country_leader = {
 		name = "Damien Wolfmann"
 		picture = "gfx/leaders/DDR/thebeastsman.dds"
-		ideology = Nat_Populism
-		traits = { nationalist_Nat_Populism }
+		ideology = Autocracy
+		traits = { emerging_Autocracy }
 	}
 	startup_politics = yes
 	calculate_banned_parties = yes
@@ -56,7 +56,7 @@ endtimes_east_germany_join_csto = {
 	add_to_tech_sharing_group = CSTO_Tech_Share
 }
 
-# GER country scope, during the July 3, 2029 settlement.
+# GER country scope, during the November 27, 2028 settlement.
 endtimes_create_independent_east_germany = {
 	every_owned_state = {
 		limit = {
@@ -76,6 +76,7 @@ endtimes_create_independent_east_germany = {
 	DDR = {
 		if = {
 			limit = { exists = yes }
+			every_owned_state = { add_core_of = GER }
 			if = {
 				limit = { is_subject = yes }
 				overlord = { set_autonomy = { target = DDR autonomy_state = autonomy_free } }

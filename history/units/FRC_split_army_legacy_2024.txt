@@ -41,7 +41,7 @@ division_template = {
 units = {
 division = {
 		name = "1ère Brigade mécanisée"
-		location = 6545 #Chalons
+		location = 11508 # Rennes
 		division_template = "Armoured Brigade"
 		start_experience_factor = 0.75
 		start_equipment_factor = 0.01
@@ -55,7 +55,7 @@ division = {
 	}
 division = {
 		name = "4ème brigade aéromobile"
-		location = 11516 #Essey-les-Nancy
+		location = 11465 # Nantes
 		division_template = "Airmobile Brigade"
 		start_experience_factor = 0.75
 		start_equipment_factor = 0.01

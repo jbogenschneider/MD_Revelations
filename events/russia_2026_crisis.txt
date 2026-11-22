@@ -262,6 +262,7 @@ country_event = {
 
     trigger = {
         tag = SOV
+        NOT = { has_country_flag = endtimes_russia_surrender_completed }
         NOT = { has_country_flag = russia_quick_peace_accepted_2026 }
         NOT = { has_country_flag = endtimes_russia_international_transition }
     }
@@ -314,6 +315,7 @@ country_event = {
     trigger = {
         tag = SOV
         has_war_with = UKR
+        UKR = { NOT = { rev_is_nato_faction = yes } }
     }
 
     mean_time_to_happen = { days = 1 }
@@ -321,63 +323,66 @@ country_event = {
     option = {
         name = OK
         ai_chance = { factor = 100 }
-        custom_effect_tooltip = RUSSIA_2026_5_EFFECT_TT
-
-        # If Putin is still ruling at peace, force the same oligarch coup transition.
         if = {
-            limit = {
-                has_country_leader = { name = "Vladimir Putin" ruling_only = yes }
-                NOT = { has_country_flag = russia_quick_peace_accepted_2026 }
-                NOT = { has_country_flag = endtimes_russia_international_transition }
+            limit = { has_war_with = UKR UKR = { NOT = { rev_is_nato_faction = yes } } }
+            custom_effect_tooltip = RUSSIA_2026_5_EFFECT_TT
+
+            # If Putin is still ruling at peace, force the same oligarch coup transition.
+            if = {
+                limit = {
+                    has_country_leader = { name = "Vladimir Putin" ruling_only = yes }
+                    NOT = { has_country_flag = russia_quick_peace_accepted_2026 }
+                    NOT = { has_country_flag = endtimes_russia_international_transition }
+                }
+
+                set_politics = {
+                    ruling_party = neutrality
+                    elections_allowed = no
+                }
+
+                retire_country_leader = yes
+
+                create_country_leader = {
+                    name = "Viktor Mikhailovich Sokolov"
+                    desc = "RUS_OLIGARCH_COUNCIL_DESC"
+                    picture = "Viktor_Mikhailovich_Sokolov.dds"
+                    expire = "2035.1.1"
+                    ideology = conservatism
+                    traits = { }
+                }
+
+                set_country_flag = russia_oligarch_council_active
+                set_country_flag = rev_russia_volodin_cabinet_minister
+                set_country_flag = rev_russia_orlov_cabinet_minister
+                add_political_power = 120
+                add_stability = -0.05
+                add_war_support = -0.10
             }
 
-            set_politics = {
-                ruling_party = neutrality
-                elections_allowed = no
+            # Full withdrawal settlement.
+            white_peace = UKR
+
+            # Return all occupied Ukrainian territories in this scenario branch.
+            UKR = {
+                transfer_state = 669    # Crimea
+                transfer_state = 1112   # Sevastopol Bay
+                transfer_state = 693    # Donetsk
+                transfer_state = 1030   # Donetsk Oblast
+                transfer_state = 1075   # Luhansk
+                transfer_state = 1076   # Luhansk Oblast
+                transfer_state = 694    # Zaporizhzhia
+                transfer_state = 1085   # Kherson
             }
-
-            retire_country_leader = yes
-
-            create_country_leader = {
-                name = "Viktor Mikhailovich Sokolov"
-                desc = "RUS_OLIGARCH_COUNCIL_DESC"
-                picture = "Viktor_Mikhailovich_Sokolov.dds"
-                expire = "2035.1.1"
-                ideology = conservatism
-                traits = { }
-            }
-
-            set_country_flag = russia_oligarch_council_active
-            set_country_flag = rev_russia_volodin_cabinet_minister
-            set_country_flag = rev_russia_orlov_cabinet_minister
-            add_political_power = 120
-            add_stability = -0.05
-            add_war_support = -0.10
-        }
-
-        # Full withdrawal settlement.
-        white_peace = UKR
-
-        # Return all occupied Ukrainian territories in this scenario branch.
-        UKR = {
-            transfer_state = 669    # Crimea
-            transfer_state = 1112   # Sevastopol Bay
-            transfer_state = 693    # Donetsk
-            transfer_state = 1030   # Donetsk Oblast
-            transfer_state = 1075   # Luhansk
-            transfer_state = 1076   # Luhansk Oblast
-            transfer_state = 694    # Zaporizhzhia
-            transfer_state = 1085   # Kherson
-        }
-        clr_country_flag = rev_sov_2026_sanctions_active
-        remove_ideas = RUSSIA_SANCTIONS_BAN_DEBT
-        clr_country_flag = russia_pending_election_2026
-        clr_country_flag = RUSSIA_ELECTION_ACTIVE
-        set_country_flag = rev_russia_postwar_transition
-        set_country_flag = rev_russia_weekly_peace_check_done
+            clr_country_flag = rev_sov_2026_sanctions_active
+            remove_ideas = RUSSIA_SANCTIONS_BAN_DEBT
+            clr_country_flag = russia_pending_election_2026
+            clr_country_flag = RUSSIA_ELECTION_ACTIVE
+            set_country_flag = rev_russia_postwar_transition
+            set_country_flag = rev_russia_weekly_peace_check_done
 				
-        add_stability = 0.10
-        add_war_support = -0.20
+            add_stability = 0.10
+            add_war_support = -0.20
+        }
     }
 }
 

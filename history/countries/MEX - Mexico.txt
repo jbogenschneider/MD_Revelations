@@ -464,3 +464,27 @@ capital = 835
 	recruit_character = MEX_miguel_canchola
 	recruit_character = MEX_juan_organitos
 }
+
+2026.1.1 = {
+	# MORENA keeps its existing support as it moves to the Non-Aligned outlook.
+	set_popularities = {
+		democratic = 53
+		communism = 0
+		fascism = 0
+		neutrality = 47
+		nationalist = 0
+	}
+	add_to_variable = { party_pop_array^18 = party_pop_array^5 }
+	set_variable = { party_pop_array^5 = 0 }
+	retire_country_leader = yes
+	set_politics = { ruling_party = neutrality elections_allowed = yes }
+	clear_array = ruling_party
+	add_to_array = { ruling_party = 18 } # Non-Aligned social democracy.
+	create_country_leader = {
+		name = "Claudia Sheinbaum"
+		picture = "gfx/leaders/MEX/Claudia_Sheinbaum.dds"
+		ideology = neutral_Social
+		traits = { neutrality_neutral_Social }
+	}
+	startup_politics = yes
+}

@@ -18,12 +18,6 @@ endtimes_restore_ukraine_full_borders = {
 		limit = { is_core_of = UKR NOT = { is_owned_by = UKR } }
 		transfer_state_to = UKR
 	}
-	UKR = {
-		if = {
-			limit = { exists = yes is_subject = yes }
-			overlord = { set_autonomy = { target = UKR autonomy_state = autonomy_free } }
-		}
-	}
 }
 
 # SOV country scope. Called only for a NATO-Russia war at the Global Ceasefire.
@@ -116,6 +110,12 @@ endtimes_russia_ceasefire_transition = {
 		}
 	}
 	endtimes_restore_ukraine_full_borders = yes
+	UKR = {
+		if = {
+			limit = { exists = yes is_subject = yes }
+			overlord = { set_autonomy = { target = UKR autonomy_state = autonomy_free } }
+		}
+	}
 
 	if = {
 		limit = { FAR = { exists = yes is_subject_of = CHI } }
@@ -146,4 +146,116 @@ endtimes_russia_ceasefire_transition = {
 	add_ai_strategy = { type = befriend id = GER value = 300 }
 	add_ai_strategy = { type = befriend id = POL value = 300 }
 	add_ai_strategy = { type = befriend id = FIN value = 300 }
+}
+
+# SOV scope. Choose the overlord before the surrender ends Russia's current wars.
+endtimes_apply_russia_surrender = {
+	if = {
+		limit = { has_war_with = UKR }
+		UKR = { save_event_target_as = endtimes_russia_surrender_overlord }
+	}
+	else = { POL = { save_event_target_as = endtimes_russia_surrender_overlord } }
+
+	MeccaPact_leave_previous_alliance = yes
+	MeccaPact_leave = yes
+	event_target:endtimes_russia_surrender_overlord = {
+		puppet = { target = SOV end_wars = yes end_civil_wars = yes }
+	}
+	if = {
+		limit = { is_subject_of = event_target:endtimes_russia_surrender_overlord }
+		set_country_flag = endtimes_russia_surrender_completed
+		if = {
+			limit = { POL = { exists = yes } }
+			642 = {
+				transfer_state_to = POL
+				remove_core_of = SOV
+			}
+		}
+		endtimes_restore_ukraine_full_borders = yes
+		UKR = {
+			every_owned_state = {
+				limit = {
+					is_core_of = SOV
+					NOT = { is_core_of = UKR }
+					NOT = { is_claimed_by = UKR }
+				}
+				transfer_state_to = SOV
+			}
+		}
+		every_state = {
+			limit = { is_core_of = UKR is_claimed_by = SOV }
+			remove_claim_by = SOV
+		}
+		endtimes_release_far_east_to_china = yes
+		set_country_flag = russia_peace_decision_done_2026
+		set_country_flag = rev_russia_weekly_peace_check_done
+		clr_country_flag = russia_pending_election_2026
+		clr_country_flag = RUSSIA_ELECTION_ACTIVE
+		clr_country_flag = russia_oligarch_council_active
+		retire_country_leader = yes
+		set_politics = { ruling_party = democratic elections_allowed = yes }
+		clear_array = ruling_party
+		clear_array = gov_coalition_array
+		add_to_array = { ruling_party = 2 } # Western liberals.
+		clr_country_flag = party3_banned
+		create_country_leader = {
+			name = "Ilya Yashin"
+			picture = "gfx/leaders/SOV/ilya_yashin.dds"
+			ideology = liberalism
+			traits = { western_liberalism }
+		}
+		startup_politics = yes
+		ingame_update_setup = yes
+		log = "[GetDateText]: Russia surrendered and became a subject of [event_target:endtimes_russia_surrender_overlord.GetName]."
+	}
+	else = { log = "[GetDateText]: Russia's scripted surrender failed to establish the new subject relationship." }
+}
+
+# SOV scope. Use the existing Far East breakaway region and transfer only Russian holdings.
+endtimes_release_far_east_to_china = {
+	if = {
+		limit = { CHI = { exists = yes } }
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 685 # Irkutsk
+					state = 686 # Buryatia
+					state = 687 # Khabarovsk
+					state = 688 # Yakutia
+					state = 689 # Chukotka
+					state = 691 # Sakhalin
+					state = 692 # Primorye
+					state = 1068 # Jewish Autonomous Oblast
+					state = 1069 # Amur
+					state = 1070 # Transbaikal
+					state = 1136 # Magadan
+					state = 1137 # Kamchatka
+				}
+			}
+			add_core_of = FAR
+			if = {
+				limit = { country_exists = FAR }
+				transfer_state_to = FAR
+			}
+		}
+		if = {
+			limit = { NOT = { country_exists = FAR } any_owned_state = { is_core_of = FAR } }
+			release = FAR
+		}
+		FAR = {
+			if = {
+				limit = { exists = yes NOT = { is_subject_of = CHI } }
+				if = {
+					limit = { is_subject = yes }
+					overlord = { set_autonomy = { target = FAR autonomy_state = autonomy_free } }
+				}
+				CHI = { set_autonomy = { target = FAR autonomy_state = autonomy_puppet_state } }
+			}
+			if = {
+				limit = { is_subject_of = CHI }
+				set_country_flag = rev_far_east_china_puppet
+				SOV = { clr_country_flag = rev_russia_far_east_reclaim_focus_unlocked }
+			}
+		}
+	}
 }

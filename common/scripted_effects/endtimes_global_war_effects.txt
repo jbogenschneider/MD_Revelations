@@ -1,6 +1,24 @@
 # Global scope. Check every cross-bloc pair before starting a new war.
 endtimes_launch_global_war = {
 	set_global_flag = endtimes_global_war_announced
+	FRC = {
+		if = {
+			limit = { exists = yes }
+			if = {
+				limit = { is_subject = yes NOT = { rev_is_meccapact_faction = yes } }
+				overlord = { set_autonomy = { target = FRC autonomy_state = autonomy_free } }
+			}
+			if = {
+				limit = { NOT = { rev_is_meccapact_faction = yes } }
+				every_other_country = {
+					limit = { rev_is_meccapact_faction = yes has_war_with = FRC }
+					white_peace = FRC
+				}
+			}
+			MeccaPact_join = yes
+			endtimes_apply_meccapact_ultimatum_benefits = yes
+		}
+	}
 	if = {
 		limit = {
 			NOT = {
@@ -9,6 +27,11 @@ endtimes_launch_global_war = {
 					any_other_country = {
 						rev_is_meccapact_faction = yes
 						has_war_with = PREV
+						# The French civil war alone does not count as the global war.
+						OR = {
+							NOT = { tag = FRC }
+							PREV = { NOT = { tag = FRA } }
+						}
 					}
 				}
 			}
@@ -21,6 +44,36 @@ endtimes_launch_global_war = {
 			limit = { rev_is_meccapact_faction = yes is_faction_leader = yes }
 			save_event_target_as = endtimes_global_war_meccapact_leader
 			declare_war_on = { target = event_target:endtimes_global_war_nato_leader type = annex_everything }
+			if = {
+				limit = {
+					tag = SAU
+					event_target:endtimes_global_war_nato_leader = { tag = GER }
+					has_war_with = GER
+				}
+				TUR = {
+					if = {
+						limit = {
+							exists = yes
+							GRE = { exists = yes }
+							NOT = { has_war_with = GRE }
+							NOT = { is_in_faction_with = GRE }
+						}
+						declare_war_on = { target = GRE type = annex_everything }
+					}
+				}
+				SOV = {
+					if = {
+						limit = {
+							exists = yes
+							rev_is_meccapact_faction = yes
+							EST = { exists = yes }
+							NOT = { has_war_with = EST }
+							NOT = { is_in_faction_with = EST }
+						}
+						declare_war_on = { target = EST type = annex_everything }
+					}
+				}
+			}
 		}
 		# Enroll both factions now rather than depending on AI call-to-arms choices.
 		every_country = {

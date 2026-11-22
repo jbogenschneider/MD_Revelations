@@ -2944,3 +2944,42 @@
 		custom_effect_tooltip = ITA_modify_energy_gain_TT
 		add_to_variable = { ITA_energy_gain_var = ITA_energy_gain_change }
 	}
+
+# Italy's scripted 2027 government, also used to update the earlier election result.
+rev_ita_install_democratic_vannacci = {
+	set_country_flag = rev_ita_vannacci_democratic
+	if = {
+		limit = { has_country_leader = { name = "Roberto Vannacci" ruling_only = yes } }
+		set_country_leader_ideology = conservatism
+	}
+	else = { retire_country_leader = yes }
+	set_politics = {
+		ruling_party = democratic
+		elections_allowed = yes
+		last_election = "2027.11.22"
+		# Keep the next automatic election beyond the Endtimes storyline.
+		election_frequency = 120
+	}
+	clear_array = ruling_party
+	clear_array = gov_coalition_array
+	add_to_array = { ruling_party = 1 } # Western conservatism.
+	clr_country_flag = party2_banned
+	if = {
+		limit = { NOT = { has_country_leader = { name = "Roberto Vannacci" ruling_only = yes } } }
+		create_country_leader = {
+			name = "Roberto Vannacci"
+			picture = "gfx/leaders/ITA/Roberto_vannacci.dds"
+			ideology = conservatism
+			traits = { western_conservatism }
+		}
+	}
+	else = {
+		remove_country_leader_trait = nationalist_Nat_Fascism
+		if = {
+			limit = { NOT = { has_country_leader_with_trait = western_conservatism } }
+			add_country_leader_trait = western_conservatism
+		}
+	}
+	startup_politics = yes
+	reforme_expectance_government_change_update = yes
+}

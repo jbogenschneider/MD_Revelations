@@ -73,66 +73,69 @@ NATO_join_via_event = {
 NATO_leave = {
 	if = {
 		limit = { has_idea = NATO_member }
+		rev_nato_leave_without_news = yes
+		hidden_effect = { news_event = { id = NATO.6 hours = 6 } }
+	}
+}
 
-		# Political-change events can remove the leader before the scripted split.
-		# Transfer leadership first so leave_faction does not dissolve NATO.
+# Country scope. The caller checks NATO membership before removing it.
+rev_nato_leave_without_news = {
+	# Political-change events can remove the leader before the scripted split.
+	# Transfer leadership first so leave_faction does not dissolve NATO.
+	if = {
+		limit = { is_faction_leader = yes }
 		if = {
-			limit = { is_faction_leader = yes }
-			if = {
-				limit = {
-					NOT = { tag = GER }
-					GER = { exists = yes is_subject = no is_in_faction_with = PREV }
-				}
-				GER = { set_faction_leader = yes }
+			limit = {
+				NOT = { tag = GER }
+				GER = { exists = yes is_subject = no is_in_faction_with = PREV }
 			}
-			else = {
-				random_other_country = {
-					limit = { is_subject = no is_in_faction_with = PREV }
-					set_faction_leader = yes
-				}
+			GER = { set_faction_leader = yes }
+		}
+		else = {
+			random_other_country = {
+				limit = { is_subject = no is_in_faction_with = PREV }
+				set_faction_leader = yes
 			}
 		}
+	}
 
-		remove_from_array = { global.nato_members = THIS }
-		remove_ideas = NATO_member
-		remove_from_tech_sharing_group = NATO_Tech_Share
-		leave_faction = yes
+	remove_from_array = { global.nato_members = THIS }
+	remove_ideas = NATO_member
+	remove_from_tech_sharing_group = NATO_Tech_Share
+	leave_faction = yes
 
-		for_each_scope_loop = {
-			array = global.nato_members
-			if = {
-				limit = { has_idea = NATO_member }
-				# Nato members are mad you left.
-				add_opinion_modifier = { target = PREV modifier = left_nato }
+	for_each_scope_loop = {
+		array = global.nato_members
+		if = {
+			limit = { has_idea = NATO_member }
+			# Nato members are mad you left.
+			add_opinion_modifier = { target = PREV modifier = left_nato }
 
-				# Remove nato opinion boost.
-				remove_opinion_modifier = { target = PREV modifier = NATO_aspirant }
+			# Remove nato opinion boost.
+			remove_opinion_modifier = { target = PREV modifier = NATO_aspirant }
+			remove_opinion_modifier = { target = PREV modifier = NATO_member_modifier }
+			PREV = {
 				remove_opinion_modifier = { target = PREV modifier = NATO_member_modifier }
-				PREV = {
-					remove_opinion_modifier = { target = PREV modifier = NATO_member_modifier }
-					remove_opinion_modifier = { target = PREV modifier = NATO_aspirant }
-				}
+				remove_opinion_modifier = { target = PREV modifier = NATO_aspirant }
+			}
 
-				# Remove military access.
+			# Remove military access.
+			diplomatic_relation = {
+				country = PREV
+				relation = military_access
+				active = no
+			}
+			PREV = {
 				diplomatic_relation = {
 					country = PREV
 					relation = military_access
 					active = no
 				}
-				PREV = {
-					diplomatic_relation = {
-						country = PREV
-						relation = military_access
-						active = no
-					}
-				}
 			}
 		}
-
-		custom_effect_tooltip = NATO_leave_tt
-
-		hidden_effect = { news_event = { id = NATO.6 hours = 6 } }
 	}
+
+	custom_effect_tooltip = NATO_leave_tt
 }
 
 NATO_show_non_ratified_countries = {

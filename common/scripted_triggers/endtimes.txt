@@ -1,8 +1,7 @@
-# Surviving countries accepting Alex's January 26, 2029 ultimatum.
+# Surviving countries accepting Alex's December 5, 2028 ultimatum.
 endtimes_join_or_war_country = {
 	OR = {
 		tag = DDR
-		tag = FRC
 		tag = HOL
 		tag = SLO
 		tag = CZE
@@ -11,44 +10,62 @@ endtimes_join_or_war_country = {
 		tag = BUL
 		tag = ALB
 		tag = KOS
-		tag = GEO
 		tag = AZE
 		tag = ARM
+		tag = GEO
+		tag = MOR
+		tag = SWI
+		tag = AUS
 	}
 }
 
 # Countries taking part in the October 4, 2028 realignment.
 endtimes_meccapact_realignment_country = {
-	NOT = { tag = SOV }
-	# Iran's remaining dependants enter with Iran on November 13 instead.
-	NOT = {
-		is_subject_of = PER
-		OR = { tag = IRQ tag = FSA tag = HEZ }
-	}
 	OR = {
-		tag = MOR
 		tag = ALG
 		tag = EGY
-		tag = LBA
-		tag = TUN
-		tag = JOR
-		tag = SAU
-		tag = OMA
-		tag = YEM
-		tag = PAK
-		tag = BAN
-		tag = BHR
-		tag = QAT
-		tag = IRQ
-		tag = KUW
-		tag = FSA
-		tag = IND
-		tag = BRU
-		tag = TRK
-		tag = AZE
-		tag = UZB
-		tag = TAJ
-		tag = KYR
-		tag = UAE
+	}
+}
+
+# France must own the states transferred to the French Popular Republic.
+rev_fra_left_split_ready = {
+	tag = FRA
+	NOT = { has_country_flag = rev_fra_left_split_started }
+	NOT = { country_exists = FRC }
+	has_variable = rev_fra_regional_oob_mode
+	owns_state = 56 # Île-de-France
+	owns_state = 54 # Haute-de-France
+	owns_state = 55 # Normandie
+	owns_state = 59 # Loire
+	owns_state = 959 # Pays de la Loire
+	owns_state = 64 # Bretagne
+	owns_state = 961 # Languedoc-Roussillon
+}
+
+# SOV scope. Both cities must be occupied by countries fighting on the relevant sides.
+endtimes_russia_surrender_ready = {
+	tag = SOV
+	is_subject = no
+	NOT = { has_country_flag = endtimes_russia_surrender_completed }
+	any_country = { rev_is_nato_faction = yes has_war_with = SOV }
+	OR = {
+		AND = {
+			has_war_with = UKR
+			UKR = { exists = yes is_subject = no }
+		}
+		AND = {
+			NOT = { has_war_with = UKR }
+			POL = { exists = yes is_subject = no }
+		}
+	}
+	any_country = {
+		controls_province = 3151 # Saint Petersburg
+		has_war_with = SOV
+		OR = { tag = UKR rev_is_nato_faction = yes }
+	}
+	any_country = {
+		controls_province = 6380 # Moscow
+		has_war_with = SOV
+		OR = { tag = UKR rev_is_nato_faction = yes }
 	}
 }

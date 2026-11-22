@@ -28,9 +28,106 @@ endtimes_found_saudi_meccapact = {
 				set_faction_leader = yes
 				MeccaPact_enroll_member = yes
 				set_global_flag = endtimes_saudi_meccapact_founded
+				endtimes_apply_meccapact_founding_realignment = yes
+				PAK = {
+					if = {
+						limit = { exists = yes NOT = { is_in_faction_with = SAU } }
+						if = {
+							limit = { is_subject = yes }
+							overlord = { set_autonomy = { target = PAK autonomy_state = autonomy_free } }
+						}
+						every_other_country = {
+							limit = { rev_is_meccapact_faction = yes has_war_with = PAK }
+							white_peace = PAK
+						}
+						MeccaPact_leave_previous_alliance = yes
+						SAU = { add_to_faction = PAK }
+						if = {
+							limit = { is_in_faction_with = SAU }
+							MeccaPact_enroll_member = yes
+							log = "[GetDateText]: Pakistan joined the Saudi-led MeccaPact at founding."
+						}
+						else = { log = "[GetDateText]: Pakistan FAILED to join the Saudi-led MeccaPact at founding." }
+					}
+				}
 				log = "[GetDateText]: [This.GetName]: MeccaPact founding confirmed with Saudi leadership."
 			}
 			else = { log = "[GetDateText]: Saudi Arabia: MeccaPact founding FAILED after creation attempt." }
+		}
+	}
+}
+
+# Saudi founder scope. Each political change runs once, including on October save repair.
+endtimes_apply_meccapact_founding_realignment = {
+	if = {
+		limit = { NOT = { has_country_flag = endtimes_meccapact_saudi_emerging } }
+		set_country_flag = endtimes_meccapact_saudi_emerging
+		clr_country_flag = endtimes_meccapact_non_aligned
+		add_to_variable = { party_pop_array^7 = party_pop_array^10 }
+		set_variable = { party_pop_array^10 = 0 }
+		set_popularities = {
+			democratic = 5
+			communism = 60
+			fascism = 15
+			neutrality = 15
+			nationalist = 5
+		}
+		if = {
+			limit = {
+				OR = {
+					has_country_leader = { name = "Mohammed bin Salman" ruling_only = yes }
+					has_country_leader = { name = "Mohammed bin Salman Al-Saud" ruling_only = yes }
+				}
+			}
+			set_country_leader_ideology = Autocracy
+		}
+		set_politics = { ruling_party = communism }
+		if = {
+			limit = {
+				NOT = { has_country_leader = { name = "Mohammed bin Salman" ruling_only = yes } }
+				NOT = { has_country_leader = { name = "Mohammed bin Salman Al-Saud" ruling_only = yes } }
+			}
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Mohammed bin Salman"
+				picture = "gfx/leaders/SAU/Mohammed_bin_Salman.dds"
+				ideology = Autocracy
+				traits = { king pro_american }
+			}
+		}
+		clear_array = ruling_party
+		clear_array = gov_coalition_array
+		add_to_array = { ruling_party = 7 } # Emerging Autocracy.
+		clr_country_flag = party8_banned
+		if = { limit = { has_country_flag = partyall_banned } set_country_flag = party11_banned }
+		startup_politics = yes
+		set_cosmetic_tag = SAU_MECCAPACT
+	}
+	HOU = {
+		if = {
+			limit = { exists = yes NOT = { has_country_flag = endtimes_meccapact_emerging } }
+			set_country_flag = endtimes_meccapact_emerging
+			if = {
+				limit = {
+					OR = {
+						NOT = { has_government = communism }
+						NOT = { is_in_array = { ruling_party = 9 } }
+					}
+				}
+				set_country_leader_ideology = Vilayat_e_Faqih
+				set_politics = { ruling_party = communism }
+				clear_array = ruling_party
+				clear_array = gov_coalition_array
+				add_to_array = { ruling_party = 9 } # Ansar Allah.
+				set_popularities = {
+					democratic = 5
+					communism = 60
+					fascism = 15
+					neutrality = 15
+					nationalist = 5
+				}
+				startup_politics = yes
+			}
 		}
 	}
 }
@@ -80,12 +177,38 @@ endtimes_iran_join_meccapact = {
 	if = {
 		limit = { rev_is_meccapact_faction = yes }
 		set_country_flag = endtimes_iran_meccapact_completed
+		endtimes_report_iran_meccapact = yes
+	}
+}
+
+# PER scope. Do not rely on the local country notice being shown worldwide.
+endtimes_report_iran_meccapact = {
+	if = {
+		limit = {
+			tag = PER
+			has_country_flag = endtimes_iran_meccapact_completed
+			rev_is_meccapact_faction = yes
+			NOT = { has_global_flag = endtimes_iran_meccapact_news_dispatched }
+		}
+		set_global_flag = endtimes_iran_meccapact_news_dispatched
+		log = "[GetDateText]: Iran: broadcasting worldwide MeccaPact accession report endtimes.53."
+		news_event = { id = endtimes.53 }
 	}
 }
 
 # Country scope. Run for all participants before dispatching their entry events,
 # so existing wars between participants cannot block MeccaPact membership.
 endtimes_prepare_meccapact_realignment = {
+	if = {
+		limit = { tag = EGY NOT = { has_government = communism } }
+		set_country_leader_ideology = Autocracy
+		set_politics = { ruling_party = communism }
+		clear_array = ruling_party
+		clear_array = gov_coalition_array
+		add_to_array = { ruling_party = 7 } # Emerging Autocracy.
+		clr_country_flag = party8_banned
+		startup_politics = yes
+	}
 	save_event_target_as = endtimes_meccapact_applicant
 	every_other_country = {
 		limit = { has_war_with = event_target:endtimes_meccapact_applicant }

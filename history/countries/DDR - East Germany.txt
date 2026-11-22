@@ -1,4 +1,4 @@
-# Dormant until the July 3, 2029 settlement. No starting cores or units.
+# Dormant until the November 27, 2028 settlement. No starting cores or units.
 capital = 45
 set_research_slots = 4
 endtimes_setup_east_germany_politics = yes
