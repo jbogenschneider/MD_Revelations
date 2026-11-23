@@ -1,0 +1,111 @@
+# English starting formations tagged for defection in the Scottish revolt.
+endtimes_tag_uk_revolt_england_army_nsb = {
+	set_variable = { endtimes_uk_revolt_england_army_mode = 1 }
+	create_unit = {
+		owner = ENG
+		id = 9905705
+		prioritize_location = 11270
+		division = "name = \"The Light Dragoons\" location = 11270 division_template = \"Infantry Brigade\" start_experience_factor = 0.45 start_equipment_factor = 0.01"
+	}
+	create_unit = {
+		owner = ENG
+		id = 9905706
+		prioritize_location = 11374
+		division = "name = \"16th Air Assault Brigade\" location = 11374 division_template = \"Air Assault Brigade\" start_experience_factor = 0.55 start_equipment_factor = 0.01"
+	}
+	create_unit = {
+		owner = ENG
+		id = 9905707
+		prioritize_location = 6335
+		division = "name = \"42nd Infantry Brigade\" location = 6335 division_template = \"Light Infantry Brigade\" start_experience_factor = 0.45 start_equipment_factor = 0.01"
+	}
+	create_unit = {
+		owner = ENG
+		id = 9905708
+		prioritize_location = 6351
+		division = "name = \"3rd Commando Brigade\" location = 6351 division_template = \"Marine Regiment\" start_experience_factor = 0.6 start_equipment_factor = 0.01"
+	}
+}
+
+endtimes_tag_uk_revolt_england_army_legacy_2024 = {
+	set_variable = { endtimes_uk_revolt_england_army_mode = 2 }
+	create_unit = {
+		owner = ENG
+		id = 9905705
+		prioritize_location = 11270
+		division = "name = \"The Light Dragoons\" location = 11270 division_template = \"Small Inf Brigade with Recon\" start_experience_factor = 0.75 start_equipment_factor = 0.01"
+	}
+	create_unit = {
+		owner = ENG
+		id = 9905706
+		prioritize_location = 11374
+		division = "name = \"16th Air Assault Brigade\" location = 11374 division_template = \"Air Assault Brigade\" start_experience_factor = 0.75 start_equipment_factor = 0.01"
+	}
+	create_unit = {
+		owner = ENG
+		id = 9905707
+		prioritize_location = 6335
+		division = "name = \"42nd Infantry Brigade\" location = 6335 division_template = \"Inf Brigade\" start_experience_factor = 0.75 start_equipment_factor = 0.01"
+	}
+	create_unit = {
+		owner = ENG
+		id = 9905708
+		prioritize_location = 6351
+		division = "name = \"3rd Commando Brigade\" location = 6351 division_template = \"Marine Regiment\" start_experience_factor = 0.75 start_equipment_factor = 0.01"
+	}
+}
+
+endtimes_tag_uk_revolt_england_army_legacy_2026 = {
+	set_variable = { endtimes_uk_revolt_england_army_mode = 3 }
+	create_unit = {
+		owner = ENG
+		id = 9905705
+		prioritize_location = 11270
+		division = "name = \"The Light Dragoons\" location = 11270 division_template = \"Small Inf Brigade with Recon\" start_experience_factor = 0.75 start_equipment_factor = 0.8"
+	}
+	create_unit = {
+		owner = ENG
+		id = 9905706
+		prioritize_location = 11374
+		division = "name = \"16th Air Assault Brigade\" location = 11374 division_template = \"Air Assault Brigade\" start_experience_factor = 0.75 start_equipment_factor = 0.8"
+	}
+	create_unit = {
+		owner = ENG
+		id = 9905707
+		prioritize_location = 6335
+		division = "name = \"42nd Infantry Brigade\" location = 6335 division_template = \"Inf Brigade\" start_experience_factor = 0.75 start_equipment_factor = 0.8"
+	}
+	create_unit = {
+		owner = ENG
+		id = 9905708
+		prioritize_location = 6351
+		division = "name = \"3rd Commando Brigade\" location = 6351 division_template = \"Marine Regiment\" start_experience_factor = 0.75 start_equipment_factor = 0.8"
+	}
+}
+
+endtimes_reassign_uk_revolt_england_army = {
+	if = {
+		limit = { check_variable = { endtimes_uk_revolt_england_army_mode = 1 } }
+		delete_unit = { id = 9905705 disband = no }
+		delete_unit = { id = 9905706 disband = no }
+		delete_unit = { id = 9905707 disband = no }
+		delete_unit = { id = 9905708 disband = no }
+		SCO = { load_oob = SCO_revolt_england_army_nsb }
+	}
+	else_if = {
+		limit = { check_variable = { endtimes_uk_revolt_england_army_mode = 2 } }
+		delete_unit = { id = 9905705 disband = no }
+		delete_unit = { id = 9905706 disband = no }
+		delete_unit = { id = 9905707 disband = no }
+		delete_unit = { id = 9905708 disband = no }
+		SCO = { load_oob = SCO_revolt_england_army_legacy_2024 }
+	}
+	else_if = {
+		limit = { check_variable = { endtimes_uk_revolt_england_army_mode = 3 } }
+		delete_unit = { id = 9905705 disband = no }
+		delete_unit = { id = 9905706 disband = no }
+		delete_unit = { id = 9905707 disband = no }
+		delete_unit = { id = 9905708 disband = no }
+		SCO = { load_oob = SCO_revolt_england_army_legacy_2026 }
+	}
+}

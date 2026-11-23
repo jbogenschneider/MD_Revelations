@@ -517,31 +517,6 @@ units = {
 		}
 	}
 
-	division = {
-		division_name = {
-				is_name_ordered = yes
-				name_order = 31
-		}
-		officer = {
-			name = "Carl-Hubertus von Butler"
-
-			portraits = {
-				army = {
-					small = "GFX_Carl-Hubertus_von_Butler_small"
-					large = "GFX_Carl-Hubertus_von_Butler_large"
-				}
-			}
-		}
-		location = 14632
-		division_template = "Luftlandebrigade"
-		start_experience_factor = 0.65
-		start_equipment_factor = 0.01
-		force_equipment_variants = {
-			util_vehicle_3 = { amount = 20  owner = "GER" creator = "SWE" version_name = "Bandvagn 206" }
-			Heavy_Anti_tank_1 = { amount = 6  owner = "GER" version_name = "Wiesel 1 ATM TOW" }
-			medium_tank_flame_chassis_1 = { amount = 60 owner = "GER" version_name = "Wiesel 1A1 MK" }
-		}
-	}
 
 	division = {
 		division_name = {
@@ -587,66 +562,7 @@ units = {
 		start_equipment_factor = 0.01
 	}
 
-	division = {
-		division_name = {
-				is_name_ordered = yes
-				name_order = 1
-		}
-		officer = {
-			name = "Reinhard Kammerer"
 
-			portraits = {
-				army = {
-					small = "GFX_Reinhard_kammerer_small"
-					large = "GFX_Reinhard_kammerer_large"
-				}
-			}
-		}
-		location = 11533
-		division_template = "Luftbewegliche Brigade"
-		start_experience_factor = 0.60
-		start_equipment_factor = 0.01
-	}
-
-	division = {
-		name = "Heeresfliegerbrigade 3"
-
-		officer = {
-			name = "Dieter Budde"
-
-			portraits = {
-				army = {
-					small = "GFX_Dieter_Budde_small"
-					large = "GFX_Dieter_Budde_large"
-				}
-			}
-		}
-		location = 3423
-		division_template = "Heeresfliegerbrigade"
-		start_experience_factor = 0.55
-		start_equipment_factor = 0.01
-	}
-
-	division = {
-		division_name = {
-				is_name_ordered = yes
-				name_order = 1
-		}
-		officer = {
-			name = "Stephan Plath"
-
-			portraits = {
-				army = {
-					small = "GFX_Stephan_Plath_small"
-					large = "GFX_Stephan_Plath_large"
-				}
-			}
-		}
-		location = 6389
-		division_template = "Marinekommandobattalion"
-		start_experience_factor = 0.7
-		start_equipment_factor = 0.01
-	}
 
 	#Reserven
 	division = {
@@ -1161,4 +1077,10 @@ instant_effect = {
 			amount = 6
 			industrial_manufacturer = mio:GER_HDW_naval_manufacturer
 		}
+
+	# Tag the regional starting formations for deterministic reassignment.
+	endtimes_tag_ddr_defectors_nsb = yes
+
+	# Tag the regional starting formations for deterministic reassignment.
+	endtimes_tag_additional_german_defectors_nsb = yes
 }

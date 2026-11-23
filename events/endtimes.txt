@@ -2,6 +2,158 @@
 add_namespace = endtimes
 add_namespace = endtimeseal
 
+# Worldwide WNN report after the NATO recovery.
+news_event = {
+	id = endtimes.60
+	title = endtimes.60.t
+	desc = endtimes.60.d
+	picture = GFX_news_nato
+	is_triggered_only = yes
+	major = yes
+	trigger = { has_global_flag = endtimes_nato_recovery_completed }
+	option = { name = endtimes.60.a }
+}
+
+# Swiss intervention one day after the French civil war starts.
+country_event = {
+	id = endtimes.59
+	title = endtimes.59.t
+	desc = endtimes.59.d
+	picture = GFX_news_generic_soldiers
+	is_triggered_only = yes
+	trigger = {
+		tag = SWI
+		NOT = { has_country_flag = endtimes_swiss_intervention_started }
+		FRA = {
+			has_country_flag = rev_fra_left_split_started
+			has_war_with = FRC
+		}
+	}
+	immediate = {
+		set_country_flag = endtimes_swiss_intervention_started
+		set_country_leader_ideology = Conservative
+		set_politics = { ruling_party = communism elections_allowed = yes }
+		clear_array = ruling_party
+		clear_array = gov_coalition_array
+		add_to_array = { ruling_party = 6 } # Emerging conservatism with elections.
+		clr_country_flag = party7_banned
+		startup_politics = yes
+		if = {
+			limit = { OR = { rev_is_nato_faction = yes rev_is_westnato_faction = yes is_in_faction_with = FRA } }
+			MeccaPact_leave_previous_alliance = yes
+		}
+		if = {
+			limit = { NOT = { has_war_with = FRA } }
+			declare_war_on = { target = FRA type = annex_everything }
+		}
+	}
+	option = { name = endtimes.59.a }
+}
+
+# Ireland responds after the United Kingdom and Scotland go to war.
+country_event = {
+	id = endtimes.58
+	title = endtimes.58.t
+	desc = endtimes.58.d
+	picture = GFX_news_nato
+	is_triggered_only = yes
+	trigger = {
+		tag = IRE
+		NOT = { has_country_flag = endtimes_ireland_scottish_revolt_response }
+		ENG = {
+			has_country_flag = endtimes_uk_revolt_started
+			has_war_with = SCO
+		}
+	}
+	immediate = {
+		set_country_flag = endtimes_ireland_scottish_revolt_response
+		if = {
+			limit = { NOT = { rev_is_nato_faction = yes } }
+			endtimes_ensure_nato_membership = yes
+		}
+		if = {
+			limit = { NOT = { has_war_with = SCO } }
+			declare_war_on = { target = SCO type = annex_everything }
+		}
+	}
+	option = { name = endtimes.58.a }
+}
+
+# Local UK revolt, two days after the French civil war starts.
+country_event = {
+	id = endtimes.57
+	title = endtimes.57.t
+	desc = endtimes.57.d
+	picture = GFX_news_generic_soldiers
+	is_triggered_only = yes
+	trigger = {
+		tag = ENG
+		NOT = { has_country_flag = endtimes_uk_revolt_started }
+		NOT = { country_exists = SCO }
+		owns_state = 9 # Central Belt
+		owns_state = 13 # Greater London
+		owns_state = 17 # Northern Ireland
+	}
+	immediate = {
+		release = SCO
+		if = {
+			limit = { country_exists = SCO }
+			set_country_flag = endtimes_uk_revolt_started
+			13 = {
+				transfer_state_to = SCO
+				add_core_of = SCO
+			}
+			17 = {
+				transfer_state_to = SCO
+				add_core_of = SCO
+			}
+			SCO = {
+				if = {
+					limit = { is_subject = yes }
+					overlord = { set_autonomy = { target = SCO autonomy_state = autonomy_free } }
+				}
+				if = { limit = { is_in_faction = yes } leave_faction = yes }
+				set_capital = { state = 9 }
+				inherit_technology = ENG
+				if = {
+					limit = { NOT = { has_tech = land_Drone_equipment3 } }
+					set_technology = { land_Drone_equipment3 = 1 }
+				}
+				load_oob = SCO_revolt_london_drones
+				if = {
+					limit = { owns_state = 1194 }
+					load_oob = SCO_revolt_borders_drones
+				}
+			}
+			endtimes_reassign_uk_revolt_army = yes
+			endtimes_reassign_uk_revolt_england_army = yes
+			endtimes_reassign_additional_english_defectors = yes
+			declare_war_on = { target = SCO type = annex_everything }
+			IRE = { country_event = { id = endtimes.58 } }
+		}
+		else = { log = "[GetDateText]: The United Kingdom could not release the Scottish-led revolt." }
+	}
+	option = { name = endtimes.57.a }
+}
+
+# Worldwide WNN report once the Russian surrender terms take effect.
+news_event = {
+	id = endtimes.56
+	title = endtimes.56.t
+	desc = endtimes.56.d
+	picture = GFX_report_event_peace_conference
+	is_triggered_only = yes
+	major = yes
+	trigger = { has_global_flag = endtimes_russia_surrender_announced }
+	immediate = {
+		if = {
+			limit = { is_ai = no }
+			log = "[GetDateText]: [This.GetName]: Received worldwide WNN news endtimes.56."
+		}
+	}
+	option = { name = endtimes.56.a }
+}
+
 # Local Russian surrender after the fall of both cities.
 country_event = {
 	id = endtimes.55
@@ -43,6 +195,10 @@ country_event = {
 					tag = POR
 					tag = ICE
 					tag = ITA
+					tag = SWE
+					tag = SPR
+					tag = USA
+					tag = CAN
 				}
 			}
 			rev_nato_leave_without_news = yes
@@ -662,7 +818,7 @@ country_event = {
 	}
 }
 
-# Worldwide WNN announcement: Narrative only on Nato.
+# Worldwide WNN announcement with a one-time stability loss.
 news_event = {
 	id = endtimes.10
 	title = endtimes.10.t
@@ -675,6 +831,44 @@ news_event = {
 		# Keep queued or external calls on the scheduled day.
 		date > 2028.11.16
 		date < 2028.11.19
+	}
+
+	immediate = {
+		if = {
+			limit = { NOT = { has_global_flag = endtimes_10_stability_hit_applied } }
+			set_global_flag = endtimes_10_stability_hit_applied
+			every_country = {
+				limit = {
+					exists = yes
+					OR = {
+						tag = GER
+						tag = ENG
+						tag = FRA
+						tag = ITA
+						tag = SPR
+						tag = NOR
+						tag = DEN
+						tag = SWE
+						tag = FIN
+						tag = ROM
+						tag = POR
+						tag = BEL
+						tag = HOL
+						tag = USA
+						tag = CAN
+						tag = GRE
+						tag = POL
+						tag = LIT
+						tag = LAT
+						tag = BOS
+						tag = SLV
+						tag = IRE
+						tag = EST
+					}
+				}
+				add_stability = -0.20
+			}
+		}
 	}
 
 	option = {

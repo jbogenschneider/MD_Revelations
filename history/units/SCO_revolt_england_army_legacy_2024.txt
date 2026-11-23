@@ -1,0 +1,81 @@
+# Regional formations from ENG_2000_nonnsb.txt; loaded only at the split.
+division_template = {
+	name = "Small Inf Brigade with Recon"
+
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 0 y = 2 }
+		Mot_Inf_Bat = { x = 0 y = 2 }
+		Mot_Inf_Bat = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Air Assault Brigade"
+
+	regiments = {
+		L_Air_Inf_Bat = { x = 0 y = 0 }
+		L_Air_Inf_Bat = { x = 0 y = 1 }
+		L_Air_Inf_Bat = { x = 0 y = 2 }
+		L_Air_Inf_Bat = { x = 0 y = 3 }
+		L_Inf_Bat = { x = 0 y = 4 }
+		Arty_Bat = { x = 1 y = 0 }
+	}
+}
+
+division_template = {
+	name = "English Inf Brigade"
+
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 0 y = 2 }
+		L_Inf_Bat = { x = 0 y = 3 }
+		L_Inf_Bat = { x = 0 y = 4 }
+		Arty_Bat = { x = 1 y = 0 } #added in 3rd, 4th, 103rd & 105th Royal artillery
+	}
+}
+
+division_template = {
+	name = "Marine Regiment"
+
+	regiments = {
+		L_Marine_Bat = { x = 0 y = 0 }
+		L_Marine_Bat = { x = 0 y = 1 }
+		L_Marine_Bat = { x = 0 y = 2 }
+		L_Inf_Bat = { x = 0 y = 3 }
+		L_Inf_Bat = { x = 1 y = 0 }
+		Arty_Bat = { x = 1 y = 1 }
+	}
+}
+units = {
+	division = {
+		name = "The Light Dragoons"
+		location = 11333
+		division_template = "Small Inf Brigade with Recon"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.01
+	}
+	division = {
+		name = "16th Air Assault Brigade"
+		location = 11333
+		division_template = "Air Assault Brigade"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.01
+	}
+	division = {
+		name = "42nd Infantry Brigade"
+		location = 11333
+		division_template = "English Inf Brigade"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.01
+	}
+	division = {
+		name = "3rd Commando Brigade"
+		location = 11333
+		division_template = "Marine Regiment"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.01
+	}
+}

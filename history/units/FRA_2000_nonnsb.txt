@@ -153,57 +153,13 @@ division_template = {
 
 units = {
 
-	division = {
-		name = "2ème Brigade blindée"
-		location = 521 #Illkirch
-		division_template = "Armoured Brigade"
-		start_experience_factor = 0.75
-		start_equipment_factor = 0.01
-	}
 
-	division = {
-		name = "6ème Brigade légère blindée"
-		location = 958 #Nîmes
-		division_template = "Light Armoured Brigade"
-		start_experience_factor = 0.75
-		start_equipment_factor = 0.01
-	}
-	division = {
-		name = "7ème Brigade blindée"
-		location = 6698 #Besançon
-		division_template = "Armoured Brigade"
-		start_experience_factor = 0.75
-		start_equipment_factor = 0.01
-	}
-	division = {
-		name = "9ème Brigade légère blindée marine"
-		location = 3626 #Poitiers
-		division_template = "Light Armoured Marine Brigade"
-		start_experience_factor = 0.4
-	}
-	division = {
-		name = "11ème Brigade légère parachutiste"
-		location = 6766 #Balma
-		division_template = "Parachute Brigade"
-		start_experience_factor = 0.75
-		start_equipment_factor = 0.01
-	}
-	division = {
-		name = "27ème Brigade d'infanterie de montagne"
-		location = 3768 #Varces
-		division_template = "Mountain Infantry Brigade"
-		start_experience_factor = 0.75
-		start_equipment_factor = 0.01
-	}
+
+
+
 
 	#Brigade franco-allemande
-	division = {
-		name = "3ème Régiment de hussards"
-		location = 3679 #Immendingen
-		division_template = "Franco-German Brigade"
-		start_experience_factor = 0.75
-		start_equipment_factor = 0.01
-	}
+
 	#Special forces
 	division = {
 		name = "1er Régiment de parachutistes d'infanterie de marine"
@@ -211,7 +167,6 @@ units = {
 		division_template = "Special Forces"
 		start_experience_factor = 0.8
 	}
-
 }
 
 instant_effect = {
@@ -373,4 +328,8 @@ instant_effect = {
 
 	# Tag the regional starting formations for deterministic reassignment.
 	rev_fra_tag_regional_army_legacy_2024 = yes
+	rev_fra_tag_provence_formation = yes
+
+	# Tag the regional starting formations for deterministic reassignment.
+	endtimes_tag_frc_french_reinforcements_legacy = yes
 }

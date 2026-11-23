@@ -53,9 +53,63 @@ on_actions = {
 
 	on_daily = {
 		effect = {
+			# March 2, 2029: Nine countries return to NATO before the WNN report.
+			if = {
+				limit = {
+					NOT = { date < 2029.3.2 }
+					date < 2029.3.3
+					NOT = { has_global_flag = endtimes_nato_recovery_completed }
+				}
+				set_global_flag = endtimes_nato_recovery_completed
+				every_country = {
+					limit = {
+						exists = yes
+						OR = {
+							tag = POR
+							tag = BEL
+							tag = HOL
+							tag = SLV
+							tag = ICE
+							tag = SWE
+							tag = SPR
+							tag = USA
+							tag = CAN
+						}
+					}
+					endtimes_ensure_nato_membership = yes
+				}
+				if = {
+					limit = { GER = { exists = yes } }
+					GER = { news_event = { id = endtimes.60 } }
+				}
+				else = { news_event = { id = endtimes.60 } }
+			}
 			if = {
 				limit = { endtimes_russia_surrender_ready = yes }
 				country_event = { id = endtimes.55 }
+			}
+			else_if = {
+				limit = {
+					tag = SOV
+					has_country_flag = endtimes_russia_surrender_completed
+					NOT = { has_country_flag = endtimes_russia_surrender_aftermath_completed }
+				}
+				endtimes_finalize_russia_surrender = yes
+			}
+			# Saves that already applied the settlement can still receive the WNN report.
+			if = {
+				limit = {
+					tag = SOV
+					has_country_flag = endtimes_russia_surrender_aftermath_completed
+					NOT = { has_global_flag = endtimes_russia_surrender_announced }
+				}
+				set_global_flag = endtimes_russia_surrender_announced
+				log = "[GetDateText]: Broadcasting worldwide WNN news endtimes.56: Russia Capitulates."
+				if = {
+					limit = { GER = { exists = yes } }
+					GER = { news_event = { id = endtimes.56 } }
+				}
+				else = { news_event = { id = endtimes.56 } }
 			}
 			# October 26, 2028: Xi's death and China's leadership succession.
 			if = {

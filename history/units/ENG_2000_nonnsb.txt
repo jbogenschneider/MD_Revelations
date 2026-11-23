@@ -100,38 +100,12 @@ division_template = {
 }
 
 units = {
-	division = {
-		name = "22nd Special Air Service Regiment"
-		location = 3241 #Herefordshire
-		division_template = "Air Assault Brigade"
-		start_experience_factor = 0.75
-		start_equipment_factor = 0.01
-	}
-	division = {
-		name = "Special Boat Service"
-		location = 9458 #Poole
-		division_template = "Special Forces"
-		start_experience_factor = 0.75
-		start_equipment_factor = 0.01
-	}
+
+
 	division = {
 		name = "1st The Queen's Dragoon Guards"
 		location = 377 #Cardiff
 		division_template = "Small Inf Brigade with Recon"
-		start_experience_factor = 0.75
-		start_equipment_factor = 0.01
-	}
-	division = {
-		name = "The Light Dragoons"
-		location = 11270 #Catterick
-		division_template = "Small Inf Brigade with Recon"
-		start_experience_factor = 0.75
-		start_equipment_factor = 0.01
-	}
-	division = {
-		name = "16th Air Assault Brigade"
-		location = 11374 #Colchester
-		division_template = "Air Assault Brigade"
 		start_experience_factor = 0.75
 		start_equipment_factor = 0.01
 	}
@@ -171,51 +145,8 @@ units = {
 		start_equipment_factor = 0.01
 	}
 	division = {
-		name = "8th Infantry Brigade"
-		location = 385 #Derry
-		division_template = "Inf Brigade"
-		start_experience_factor = 0.75
-		start_equipment_factor = 0.01
-	}
-	division = {
-		name = "42nd Infantry Brigade"
-		location = 6335 #Preston
-		division_template = "Inf Brigade"
-		start_experience_factor = 0.75
-		start_equipment_factor = 0.01
-	}
-	division = {
-		name = "51st Highland Brigade"
-		location = 6385 #Stirling
-		division_template = "Inf Brigade"
-		start_experience_factor = 0.75
-		start_equipment_factor = 0.01
-	}
-	division = {
 		name = "145th Brigade"
 		location = 6351 #Aldershot
-		division_template = "Inf Brigade"
-		start_experience_factor = 0.75
-		start_equipment_factor = 0.01
-	}
-	division = {
-		name = "3rd Commando Brigade"
-		location = 6351 #Aldershot
-		division_template = "Marine Regiment"
-		start_experience_factor = 0.75
-		start_equipment_factor = 0.01
-	}
-
-	division = {
-		name = "39th Infantry Brigade"
-		location = 3379 #Belfast
-		division_template = "Inf Brigade"
-		start_experience_factor = 0.75
-		start_equipment_factor = 0.01
-	}
-	division = {
-		name = "3rd Infantry Brigade"
-		location = 3242 #Armagh
 		division_template = "Inf Brigade"
 		start_experience_factor = 0.75
 		start_equipment_factor = 0.01
@@ -430,4 +361,13 @@ instant_effect = {
 		amount = 4
 		producer = USA
 	}
+
+	# Tag the regional starting formations for deterministic reassignment.
+	endtimes_tag_uk_revolt_army_legacy_2024 = yes
+
+	# Tag the regional starting formations for deterministic reassignment.
+	endtimes_tag_uk_revolt_england_army_legacy_2024 = yes
+
+	# Tag the regional starting formations for deterministic reassignment.
+	endtimes_tag_additional_english_defectors_legacy_2024 = yes
 }

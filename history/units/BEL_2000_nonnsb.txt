@@ -37,41 +37,9 @@ division_template = {
 }
 
 units = {
-	division = {
-		#name = "1re Brigade Mécanisée"
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		}
-		location = 9574		#Leopoldsburg
-		division_template = "Brigade Mécanisée"
-		start_experience_factor = 0.75
-		start_equipment_factor = 0.01
-	}
 
-	division = {
-		#name = "7e Brigade Mécanisée"
-		division_name = {
-			is_name_ordered = yes
-			name_order = 7
-		}
-		location = 11407		#Marche-en-Famenne
-		division_template = "Brigade Mécanisée"
-		start_experience_factor = 0.75
-		start_equipment_factor = 0.01
-	}
 
-	division = {
-		#name = "Régiment Para-Commando"
-		division_name = {
-			is_name_ordered = yes
-			name_order = 10
-		}
-		location = 11407		#Brussels
-		division_template = "Régiment Para-Commando"
-		start_experience_factor = 0.8
-		start_equipment_factor = 0.01
-	}
+
 
 	#2003:
 	# 2 mech bde
@@ -149,4 +117,7 @@ instant_effect = {
 		amount = 13
 		producer = FRA
 	}
+
+	# Tag the regional starting formations for deterministic reassignment.
+	endtimes_tag_frc_belgian_reinforcements_legacy = yes
 }

@@ -1,6 +1,5 @@
-# Global scope. Check every cross-bloc pair before starting a new war.
-endtimes_launch_global_war = {
-	set_global_flag = endtimes_global_war_announced
+# Bring Saudi Arabia into the French civil war before FRC can call it in.
+endtimes_enroll_frc_at_global_war = {
 	FRC = {
 		if = {
 			limit = { exists = yes }
@@ -15,10 +14,36 @@ endtimes_launch_global_war = {
 					white_peace = FRC
 				}
 			}
+			SAU = {
+				if = {
+					limit = {
+						exists = yes
+						rev_is_meccapact_faction = yes
+						FRC = { has_war_with = FRA }
+						NOT = { has_war_with = FRA }
+						NOT = { is_in_faction_with = FRA }
+					}
+					add_to_war = {
+						targeted_alliance = FRC
+						enemy = FRA
+						hostility_reason = asked_to_join
+						single_target_only = yes
+					}
+					if = {
+						limit = { has_war_with = FRA }
+						log = "[GetDateText]: Saudi Arabia joined FRC's war against France before FRC entered the MeccaPact."
+					}
+				}
+			}
 			MeccaPact_join = yes
 			endtimes_apply_meccapact_ultimatum_benefits = yes
 		}
 	}
+}
+
+# Global scope. Check every cross-bloc pair before starting a new war.
+endtimes_launch_global_war = {
+	set_global_flag = endtimes_global_war_announced
 	if = {
 		limit = {
 			NOT = {
@@ -36,6 +61,8 @@ endtimes_launch_global_war = {
 				}
 			}
 		}
+		# Check for an existing global war before Saudi Arabia enters France's war.
+		endtimes_enroll_frc_at_global_war = yes
 		random_country = {
 			limit = { rev_is_nato_faction = yes is_faction_leader = yes }
 			save_event_target_as = endtimes_global_war_nato_leader
@@ -49,6 +76,19 @@ endtimes_launch_global_war = {
 					tag = SAU
 					event_target:endtimes_global_war_nato_leader = { tag = GER }
 					has_war_with = GER
+				}
+				FRC = {
+					if = {
+						limit = { exists = yes }
+						if = {
+							limit = { MNC = { exists = yes } }
+							annex_country = { target = MNC }
+						}
+						else_if = {
+							limit = { FRA = { owns_state = 946 } }
+							transfer_state = 946 # Monaco, if France already annexed it.
+						}
+					}
 				}
 				TUR = {
 					if = {
@@ -79,6 +119,7 @@ endtimes_launch_global_war = {
 		every_country = {
 			limit = {
 				rev_is_nato_faction = yes
+				NOT = { tag = HOL }
 				NOT = { has_war_with = event_target:endtimes_global_war_meccapact_leader }
 			}
 			add_to_war = {
@@ -91,6 +132,7 @@ endtimes_launch_global_war = {
 		every_country = {
 			limit = {
 				rev_is_meccapact_faction = yes
+				NOT = { tag = HOL }
 				NOT = { has_war_with = event_target:endtimes_global_war_nato_leader }
 			}
 			add_to_war = {
@@ -98,6 +140,26 @@ endtimes_launch_global_war = {
 				enemy = event_target:endtimes_global_war_nato_leader
 				hostility_reason = asked_to_join
 				single_target_only = yes
+			}
+		}
+	}
+	else = { endtimes_enroll_frc_at_global_war = yes }
+	# Check the war directly so an existing Saudi-German war also qualifies.
+	SAU = {
+		if = {
+			limit = { exists = yes NOT = { has_country_flag = endtimes_sau_army_10_deployed } }
+			if = {
+				limit = { NOT = { has_war_with = GER } }
+				log = "[GetDateText]: Saudi Army 10 deployment skipped because Saudi Arabia is not at war with Germany."
+			}
+			else_if = {
+				limit = { NOT = { FRC = { controls_province = 9898 } } }
+				log = "[GetDateText]: Saudi Army 10 deployment skipped because FRC does not control Montpellier (9898)."
+			}
+			else = {
+				load_oob = SAU_endtimes_army_10
+				set_country_flag = endtimes_sau_army_10_deployed
+				log = "[GetDateText]: Loaded the Saudi Army 10 deployment for Montpellier (9898)."
 			}
 		}
 	}

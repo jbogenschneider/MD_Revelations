@@ -1,0 +1,46 @@
+# Regional formations from SPR_2000_nsb.txt; loaded only at the split.
+division_template = {
+	name = "Spanish Defectors - Mechanized Brigade"
+
+	regiments = {
+		Mech_Inf_Bat = { x = 0 y = 0 }
+		Arm_Inf_Bat = { x = 0 y = 1 }
+		armor_Bat = { x = 1 y = 0 }
+		Mech_Inf_Bat = { x = 2 y = 0 }
+		SP_Arty_Bat = { x = 3 y = 0 }
+	}
+	support = {
+		H_Engi_Comp = { x = 0 y = 0 }
+		armor_Recce_Comp = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Spanish Defectors - Parachute Brigade"
+
+	regiments = {
+		L_Air_Inf_Bat = { x = 0 y = 0 }
+		Mech_Air_Inf_Bat = { x = 1 y = 0 }
+		Mech_Air_Inf_Bat = { x = 1 y = 1 }
+	}
+	support = {
+		Arty_Battery = { x = 0 y = 0 }
+		Mot_Recce_Comp = { x = 0 y = 1 }
+	}
+}
+units = {
+	division = {
+		name = "XII Brigade Guadarrama"
+		location = 9764
+		division_template = "Spanish Defectors - Mechanized Brigade"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.01
+	}
+	division = {
+		name = "VI Parachute Brigade Almogávares"
+		location = 9764
+		division_template = "Spanish Defectors - Parachute Brigade"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.01
+	}
+}

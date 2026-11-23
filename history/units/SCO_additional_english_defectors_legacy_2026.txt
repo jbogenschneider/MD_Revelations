@@ -1,0 +1,39 @@
+# Regional formations from ENG_2017_nonnsb.txt; loaded only at the split.
+division_template = {
+	name = "Rebel Air Assault Brigade"
+
+	regiments = {
+		L_Air_Inf_Bat = { x = 0 y = 0 }
+		L_Air_Inf_Bat = { x = 0 y = 1 }
+		L_Air_Inf_Bat = { x = 0 y = 2 }
+		L_Air_Inf_Bat = { x = 0 y = 3 }
+		L_Inf_Bat = { x = 0 y = 4 }
+		Arty_Bat = { x = 1 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Special Forces"
+
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+	}
+
+	priority = 2
+}
+units = {
+	division = {
+		name = "22nd Special Air Service Regiment"
+		location = 11333
+		division_template = "Rebel Air Assault Brigade"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "Special Boat Service"
+		location = 11333
+		division_template = "Special Forces"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.8
+	}
+}

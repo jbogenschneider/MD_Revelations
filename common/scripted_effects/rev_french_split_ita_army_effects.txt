@@ -1,0 +1,38 @@
+# Italian starting formations tagged for defection in the French civil war.
+rev_ita_tag_frc_volunteers = {
+	set_variable = { rev_ita_frc_volunteer_oob_mode = 1 }
+	create_unit = {
+		owner = ITA
+		id = 9905811
+		prioritize_location = 9630
+		division = "name = \"Brigata Alpina 'Tridentina'\" location = 9630 division_template = \"Brigata Alpina\" start_experience_factor = 0.75 start_equipment_factor = 0.01"
+	}
+	create_unit = {
+		owner = ITA
+		id = 9905812
+		prioritize_location = 6780
+		division = "name = \"Brigata Alpina 'Taurinense'\" location = 6780 division_template = \"Brigata Alpina\" start_experience_factor = 0.75 start_equipment_factor = 0.01"
+	}
+	create_unit = {
+		owner = ITA
+		id = 9905813
+		prioritize_location = 6656
+		division = "name = \"132 Brigata Corazzata 'Ariete'\" location = 6656 division_template = \"Brigata Corazzata\" start_experience_factor = 0.75 start_equipment_factor = 0.01"
+	}
+	create_unit = {
+		owner = ITA
+		id = 9905814
+		prioritize_location = 6635
+		division = "name = \"Brigata Meccanizzata 'Centauro'\" location = 6635 division_template = \"Brigata Meccanizzata\" start_experience_factor = 0.75 start_equipment_factor = 0.01"
+	}
+}
+rev_ita_reassign_frc_volunteers = {
+	if = {
+		limit = { exists = yes has_variable = rev_ita_frc_volunteer_oob_mode FRC = { owns_state = 77 } }
+		delete_unit = { id = 9905811 disband = no }
+		delete_unit = { id = 9905812 disband = no }
+		delete_unit = { id = 9905813 disband = no }
+		delete_unit = { id = 9905814 disband = no }
+		FRC = { load_oob = FRC_split_ita_army }
+	}
+}

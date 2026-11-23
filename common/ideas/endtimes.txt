@@ -39,6 +39,9 @@ ideas = {
 			picture = sov_oligarch
 			allowed = { always = yes }
 			removal_cost = -1
+			modifier = {
+				stability_factor = 0.15
+			}
 
 			# Computing also covers encryption/decryption; do not double their bonus.
 			research_bonus = {

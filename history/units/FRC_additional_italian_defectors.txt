@@ -1,0 +1,76 @@
+# Additional Italian formations joining FRC at the French split.
+division_template = {
+	name = "Brigata Aeromobile"
+
+	regiments = {
+		L_Air_assault_Bat = { x = 0 y = 0 } #66°
+		L_Air_assault_Bat = { x = 0 y = 1 } #5°
+		L_Air_assault_Bat = { x = 0 y = 2 } #7°
+		L_Air_assault_Bat = { x = 1 y = 0 } #66°
+		attack_helo_bat = { x = 1 y = 1 } #5°
+		attack_helo_bat = { x = 1 y = 2 } #7°
+	}
+	support = {
+		helicopter_combat_service_support = { x = 0 y = 0 }
+		attack_helo_comp = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Brigata Alpina (Volontari)" #julia and taurinense, more info on the former
+
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+		Special_Forces = { x = 0 y = 1 }
+		Special_Forces = { x = 0 y = 2 }
+		Special_Forces = { x = 1 y = 0 }
+		Special_Forces = { x = 1 y = 1 }
+		Arty_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		H_Engi_Comp = { x = 0 y = 0 }
+		L_Recce_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Brigata di Cavalleria"
+
+	regiments = {
+		Mot_Marine_Bat = { x = 0 y = 0 } #lagunari serenissima
+		Mot_Inf_Bat = { x = 0 y = 1 } #Reggimento "Genova Cavalleria" (4º)
+		Mech_Marine_Bat = { x = 1 y = 0 } #lagunari serenissima
+		Mech_Inf_Bat = { x = 1 y = 1 } #Reggimento "Genova Cavalleria" (4º)
+		Arty_Bat = { x = 2 y = 0 } #Reggimento Artiglieria Terrestre "a Cavallo"
+	}
+	support = {
+		H_Engi_Comp = { x = 0 y = 0 }
+		armor_Recce_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+	}
+}
+units = {
+	division = {
+		name = "Brigata Aeromobile 'Friuli'"
+		location = 6780
+		division_template = "Brigata Aeromobile"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.01
+	}
+	division = {
+		name = "Brigata Alpina 'Julia'"
+		location = 6780
+		division_template = "Brigata Alpina (Volontari)"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.01
+	}
+	division = {
+		name = "Brigata di Cavalleria 'Pozzuolo del Friuli'"
+		location = 6635
+		division_template = "Brigata di Cavalleria"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.01
+	}
+}

@@ -1,0 +1,69 @@
+# Two German starting formations tagged for the East German split.
+endtimes_tag_ddr_defectors_nsb = {
+	set_variable = { endtimes_ddr_defectors_oob_mode = 1 }
+	create_unit = {
+		owner = GER
+		id = 9905901
+		prioritize_location = 14632
+		division = "name = \"Luftlandebrigade 31 'Oldenburg'\" officer = { name = \"Carl-Hubertus von Butler\" portraits = { army = { small = \"GFX_Carl-Hubertus_von_Butler_small\" large = \"GFX_Carl-Hubertus_von_Butler_large\" } } } location = 14632 division_template = \"Luftlandebrigade\" start_experience_factor = 0.65 start_equipment_factor = 0.01 force_equipment_variants = { util_vehicle_3 = { amount = 20 owner = \"GER\" creator = \"SWE\" version_name = \"Bandvagn 206\" } Heavy_Anti_tank_1 = { amount = 6 owner = \"GER\" version_name = \"Wiesel 1 ATM TOW\" } medium_tank_flame_chassis_1 = { amount = 60 owner = \"GER\" version_name = \"Wiesel 1A1 MK\" } }"
+	}
+	create_unit = {
+		owner = GER
+		id = 9905902
+		prioritize_location = 3423
+		division = "name = \"Heeresfliegerbrigade 3\" officer = { name = \"Dieter Budde\" portraits = { army = { small = \"GFX_Dieter_Budde_small\" large = \"GFX_Dieter_Budde_large\" } } } location = 3423 division_template = \"Heeresfliegerbrigade\" start_experience_factor = 0.55 start_equipment_factor = 0.01"
+	}
+}
+
+endtimes_tag_ddr_defectors_legacy_2024 = {
+	set_variable = { endtimes_ddr_defectors_oob_mode = 2 }
+	create_unit = {
+		owner = GER
+		id = 9905901
+		prioritize_location = 14632
+		division = "name = \"Luftlandebrigade 31 'Oldenburg'\" location = 14632 division_template = \"Luftlandebrigade\" start_experience_factor = 0.65 start_equipment_factor = 0.01"
+	}
+	create_unit = {
+		owner = GER
+		id = 9905902
+		prioritize_location = 3423
+		division = "name = \"Heeresfliegerbrigade 3\" location = 3423 division_template = \"Heeresfliegerbrigade\" start_experience_factor = 0.55 start_equipment_factor = 0.01"
+	}
+}
+
+endtimes_tag_ddr_defectors_legacy_2026 = {
+	set_variable = { endtimes_ddr_defectors_oob_mode = 3 }
+	create_unit = {
+		owner = GER
+		id = 9905901
+		prioritize_location = 14632
+		division = "name = \"Luftlandebrigade 31 'Oldenburg'\" location = 14632 division_template = \"Luftlandebrigade\" start_experience_factor = 0.65 start_equipment_factor = 0.9"
+	}
+	create_unit = {
+		owner = GER
+		id = 9905902
+		prioritize_location = 3423
+		division = "name = \"Heeresfliegerbrigade 3\" location = 3423 division_template = \"Heeresfliegerbrigade\" start_experience_factor = 0.55 start_equipment_factor = 0.9"
+	}
+}
+
+endtimes_reassign_ddr_defectors = {
+	if = {
+		limit = { check_variable = { endtimes_ddr_defectors_oob_mode = 1 } }
+		delete_unit = { id = 9905901 disband = no }
+		delete_unit = { id = 9905902 disband = no }
+		DDR = { load_oob = DDR_endtimes_defectors_nsb }
+	}
+	else_if = {
+		limit = { check_variable = { endtimes_ddr_defectors_oob_mode = 2 } }
+		delete_unit = { id = 9905901 disband = no }
+		delete_unit = { id = 9905902 disband = no }
+		DDR = { load_oob = DDR_endtimes_defectors_legacy_2024 }
+	}
+	else_if = {
+		limit = { check_variable = { endtimes_ddr_defectors_oob_mode = 3 } }
+		delete_unit = { id = 9905901 disband = no }
+		delete_unit = { id = 9905902 disband = no }
+		DDR = { load_oob = DDR_endtimes_defectors_legacy_2026 }
+	}
+}

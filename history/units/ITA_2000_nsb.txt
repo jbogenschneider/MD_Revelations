@@ -164,78 +164,8 @@ division_template = {
 
 units = {
 	division = {
-		name = "Brigata Aeromobile 'Friuli'"
-		location = 6606
-		division_template = "Brigata Aeromobile"
-		start_experience_factor = 0.75
-		start_equipment_factor = 0.01
-	}
-	division = {
-		name = "Brigata Alpina 'Tridentina'"
-		location = 9630
-		division_template = "Brigata Alpina"
-		start_experience_factor = 0.75
-		start_equipment_factor = 0.01
-	}
-	division = {
-		name = "Brigata Alpina 'Taurinense'"
-		location = 6780
-		division_template = "Brigata Alpina"
-		start_experience_factor = 0.75
-		start_equipment_factor = 0.01
-	}
-	division = {
-		name = "Brigata Marina 'San Marco'"
-		location = 11998
-		division_template = "Brigata Marina"
-		start_experience_factor = 0.75
-		start_equipment_factor = 0.01
-	}
-	division = {
-		name = "Brigata Alpina 'Julia'"
-		location = 316
-		division_template = "Brigata Alpina"
-		start_experience_factor = 0.75
-		start_equipment_factor = 0.01
-	}
-	division = {
-		name = "132 Brigata Corazzata 'Ariete'"
-		location = 6656
-		division_template = "Brigata Corazzata"
-		start_experience_factor = 0.75
-		start_equipment_factor = 0.01
-	}
-	division = {
-		name = "Brigata di Cavalleria 'Pozzuolo del Friuli'"
-		location = 628
-		division_template = "Brigata di Cavalleria"
-		start_experience_factor = 0.75
-		start_equipment_factor = 0.01
-	}
-	division = {
-		name = "Brigata Meccanizzata 'Centauro'"
-		location = 6635
-		division_template = "Brigata Meccanizzata"
-		start_experience_factor = 0.75
-		start_equipment_factor = 0.01
-	}
-	division = {
 		name = "Brigata Meccanizzata 'Sassari'"
 		location = 9772
-		division_template = "Brigata Meccanizzata"
-		start_experience_factor = 0.75
-		start_equipment_factor = 0.01
-	}
-	division = {
-		name = "Brigata Bersaglieri 'Garibaldi'"
-		location = 9826
-		division_template = "Brigata Bersaglieri"
-		start_experience_factor = 0.75
-		start_equipment_factor = 0.01
-	}
-	division = {
-		name = "Brigata Meccanizzata 'Pinerolo'"
-		location = 9784
 		division_template = "Brigata Meccanizzata"
 		start_experience_factor = 0.75
 		start_equipment_factor = 0.01
@@ -251,13 +181,6 @@ units = {
 		name = "Brigata Meccanizzata 'Granatieri di Sardegna'"
 		location = 9904
 		division_template = "Brigata Meccanizzata Granatieri"
-		start_experience_factor = 0.75
-		start_equipment_factor = 0.01
-	}
-	division = {
-		name = "Brigata Paracadutisti 'Folgore'"
-		location = 6946
-		division_template = "Brigata Paracadutisti"
 		start_experience_factor = 0.75
 		start_equipment_factor = 0.01
 	}
@@ -463,4 +386,13 @@ instant_effect = {
 		amount = 40
 		producer = USA
 	}
+
+	# Tag the regional starting formations for deterministic reassignment.
+	rev_ita_tag_frc_volunteers = yes
+
+	# Tag the regional starting formations for deterministic reassignment.
+	endtimes_tag_additional_italian_defectors = yes
+
+	# Tag the regional starting formations for deterministic reassignment.
+	endtimes_tag_frc_italian_reinforcements = yes
 }

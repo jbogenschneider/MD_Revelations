@@ -1,0 +1,45 @@
+# spanish starting formations tagged for defection to FRC.
+endtimes_tag_frc_spanish_reinforcements_nsb = {
+	set_variable = { endtimes_frc_spanish_reinforcements_mode = 1 }
+	create_unit = {
+		owner = SPR
+		id = 9906031
+		prioritize_location = 9767
+		division = "name = \"XII Brigade Guadarrama\" location = 9767 division_template = \"Mechanized Brigade\" start_experience_factor = 0.4 start_equipment_factor = 0.01"
+	}
+	create_unit = {
+		owner = SPR
+		id = 9906032
+		prioritize_location = 3938
+		division = "name = \"VI Parachute Brigade Almogávares\" location = 3938 division_template = \"Parachute Brigade\" start_experience_factor = 0.55 start_equipment_factor = 0.01"
+	}
+}
+
+endtimes_tag_frc_spanish_reinforcements_legacy = {
+	set_variable = { endtimes_frc_spanish_reinforcements_mode = 2 }
+	create_unit = {
+		owner = SPR
+		id = 9906031
+		prioritize_location = 9767
+		division = "name = \"XII Brigade Guadarrama\" location = 9767 division_template = \"Mechanized Brigade\" start_experience_factor = 0.75 start_equipment_factor = 0.01"
+	}
+	create_unit = {
+		owner = SPR
+		id = 9906032
+		prioritize_location = 3938
+		division = "name = \"VI Parachute Brigade Almogávares\" location = 3938 division_template = \"Parachute Brigade\" start_experience_factor = 0.75 start_equipment_factor = 0.01"
+	}
+}
+
+endtimes_reassign_frc_spanish_reinforcements = {
+	if = {
+		limit = { has_variable = endtimes_frc_spanish_reinforcements_mode }
+		if = {
+			limit = { check_variable = { endtimes_frc_spanish_reinforcements_mode = 1 } }
+			FRC = { load_oob = FRC_split_spanish_reinforcements_nsb }
+		}
+		else = { FRC = { load_oob = FRC_split_spanish_reinforcements_legacy } }
+		delete_unit = { id = 9906031 disband = no }
+		delete_unit = { id = 9906032 disband = no }
+	}
+}

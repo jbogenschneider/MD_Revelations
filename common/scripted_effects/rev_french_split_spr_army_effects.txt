@@ -1,0 +1,57 @@
+# Spanish starting formations tagged for defection in the French civil war.
+rev_spr_tag_frc_volunteers_nsb = {
+	set_variable = { rev_spr_frc_volunteer_oob_mode = 1 }
+	create_unit = {
+		owner = SPR
+		id = 9905821
+		prioritize_location = 3816
+		division = "name = \"I Brigade Aragón\" location = 3816 division_template = \"Mechanized Brigade\" start_experience_factor = 0.4 start_equipment_factor = 0.01"
+	}
+	create_unit = {
+		owner = SPR
+		id = 9905822
+		prioritize_location = 6906
+		division = "name = \"3rd Special Operations Group Valencia\" location = 6906 division_template = \"Special Operations Group\" start_experience_factor = 0.9 start_equipment_factor = 0.01"
+	}
+	create_unit = {
+		owner = SPR
+		id = 9905823
+		prioritize_location = 3938
+		division = "name = \"4th Special Operations Group Tercio del Ampurdán\" location = 3938 division_template = \"Special Operations Group\" start_experience_factor = 0.9 start_equipment_factor = 0.01"
+	}
+}
+
+rev_spr_tag_frc_volunteers_legacy = {
+	set_variable = { rev_spr_frc_volunteer_oob_mode = 2 }
+	create_unit = {
+		owner = SPR
+		id = 9905821
+		prioritize_location = 3816
+		division = "name = \"I Brigade Aragón\" location = 3816 division_template = \"Mechanized Brigade\" start_experience_factor = 0.75 start_equipment_factor = 0.01"
+	}
+	create_unit = {
+		owner = SPR
+		id = 9905822
+		prioritize_location = 6906
+		division = "name = \"3rd Special Operations Group Valencia\" location = 6906 division_template = \"Special Operations Group\" start_experience_factor = 0.9 start_equipment_factor = 0.01"
+	}
+	create_unit = {
+		owner = SPR
+		id = 9905823
+		prioritize_location = 3938
+		division = "name = \"4th Special Operations Group Tercio del Ampurdán\" location = 3938 division_template = \"Special Operations Group\" start_experience_factor = 0.9 start_equipment_factor = 0.01"
+	}
+}
+rev_spr_reassign_frc_volunteers = {
+	if = {
+		limit = { exists = yes has_variable = rev_spr_frc_volunteer_oob_mode FRC = { owns_state = 86 } }
+		delete_unit = { id = 9905821 disband = no }
+		delete_unit = { id = 9905822 disband = no }
+		delete_unit = { id = 9905823 disband = no }
+		if = {
+			limit = { check_variable = { rev_spr_frc_volunteer_oob_mode = 1 } }
+			FRC = { load_oob = FRC_split_spr_army_nsb }
+		}
+		else = { FRC = { load_oob = FRC_split_spr_army_legacy } }
+	}
+}

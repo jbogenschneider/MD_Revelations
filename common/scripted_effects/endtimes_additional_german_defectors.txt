@@ -1,0 +1,69 @@
+# Additional german starting formations tagged for defection to DDR.
+endtimes_tag_additional_german_defectors_nsb = {
+	set_variable = { endtimes_additional_german_defectors_mode = 1 }
+	create_unit = {
+		owner = GER
+		id = 9905921
+		prioritize_location = 11533
+		division = "name = \"Luftbewegliche brigade 1\" officer = { name = \"Reinhard Kammerer\" portraits = { army = { small = \"GFX_Reinhard_kammerer_small\" large = \"GFX_Reinhard_kammerer_large\" } } } location = 11533 division_template = \"Luftbewegliche Brigade\" start_experience_factor = 0.60 start_equipment_factor = 0.01"
+	}
+	create_unit = {
+		owner = GER
+		id = 9905922
+		prioritize_location = 6389
+		division = "name = \"Spezialisierte Einsatzkräfte Marine\" officer = { name = \"Stephan Plath\" portraits = { army = { small = \"GFX_Stephan_Plath_small\" large = \"GFX_Stephan_Plath_large\" } } } location = 6389 division_template = \"Marinekommandobattalion\" start_experience_factor = 0.7 start_equipment_factor = 0.01"
+	}
+}
+
+endtimes_tag_additional_german_defectors_legacy_2024 = {
+	set_variable = { endtimes_additional_german_defectors_mode = 2 }
+	create_unit = {
+		owner = GER
+		id = 9905921
+		prioritize_location = 11533
+		division = "name = \"Luftbewegliche brigade 1\" location = 11533 division_template = \"Luftbewegliche Brigade\" start_experience_factor = 0.60 start_equipment_factor = 0.01"
+	}
+	create_unit = {
+		owner = GER
+		id = 9905922
+		prioritize_location = 6389
+		division = "name = \"Spezialisierte Einsatzkräfte Marine\" location = 6389 division_template = \"Marinekommandobattalion\" start_experience_factor = 0.7 start_equipment_factor = 0.01"
+	}
+}
+
+endtimes_tag_additional_german_defectors_legacy_2026 = {
+	set_variable = { endtimes_additional_german_defectors_mode = 3 }
+	create_unit = {
+		owner = GER
+		id = 9905921
+		prioritize_location = 11533
+		division = "name = \"Luftbewegliche brigade 1\" location = 11533 division_template = \"Luftbewegliche Brigade\" start_experience_factor = 0.60 start_equipment_factor = 0.9"
+	}
+	create_unit = {
+		owner = GER
+		id = 9905922
+		prioritize_location = 6389
+		division = "name = \"Spezialisierte Einsatzkräfte Marine\" location = 6389 division_template = \"Marinekommandobattalion\" start_experience_factor = 0.7 start_equipment_factor = 0.9"
+	}
+}
+
+endtimes_reassign_additional_german_defectors = {
+	if = {
+		limit = { check_variable = { endtimes_additional_german_defectors_mode = 1 } }
+		delete_unit = { id = 9905921 disband = no }
+		delete_unit = { id = 9905922 disband = no }
+		DDR = { load_oob = DDR_additional_german_defectors_nsb }
+	}
+	else_if = {
+		limit = { check_variable = { endtimes_additional_german_defectors_mode = 2 } }
+		delete_unit = { id = 9905921 disband = no }
+		delete_unit = { id = 9905922 disband = no }
+		DDR = { load_oob = DDR_additional_german_defectors_legacy_2024 }
+	}
+	else_if = {
+		limit = { check_variable = { endtimes_additional_german_defectors_mode = 3 } }
+		delete_unit = { id = 9905921 disband = no }
+		delete_unit = { id = 9905922 disband = no }
+		DDR = { load_oob = DDR_additional_german_defectors_legacy_2026 }
+	}
+}

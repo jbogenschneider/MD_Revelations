@@ -38,7 +38,6 @@ endtimes_apply_join_or_war = {
 			limit = {
 				NOT = { has_government = communism }
 				OR = {
-					tag = HOL
 					tag = SLO
 					tag = CZE
 					tag = HUN
@@ -58,11 +57,12 @@ endtimes_apply_join_or_war = {
 		if = {
 			limit = {
 				OR = {
+					tag = BUL
 					tag = AZE
 					tag = ARM
 					tag = GEO
 					tag = MOR
-					tag = SWI
+					tag = TUN
 					tag = AUS
 				}
 			}

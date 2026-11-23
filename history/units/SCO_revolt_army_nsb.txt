@@ -1,0 +1,66 @@
+# Regional formations from ENG_2000_nsb.txt; loaded only at the split.
+division_template = {
+	name = "Light Infantry Brigade"
+
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 0 y = 2 }
+		L_Inf_Bat = { x = 0 y = 3 }
+		Arty_Bat = { x = 1 y = 0 } #added in 3rd, 4th, 103rd & 105th Royal artillery
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		Mot_Recce_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+		attack_helo_comp = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Infantry Brigade"
+
+	regiments = {
+		Mot_Inf_Bat = { x = 0 y = 0 }
+		Mot_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 0 y = 2 }
+		Mot_Inf_Bat = { x = 0 y = 3 }
+		SP_Arty_Bat = { x = 1 y = 0 } #added in 3rd, 4th, 103rd & 105th Royal artillery
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		Mot_Recce_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+		attack_helo_comp = { x = 0 y = 3 }
+	}
+}
+units = {
+	division = {
+		name = "8th Infantry Brigade"
+		location = 385 #Derry
+		division_template = "Light Infantry Brigade"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.01
+	}
+	division = {
+		name = "51st Highland Brigade"
+		location = 6385 #Stirling
+		division_template = "Light Infantry Brigade"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.01
+	}
+	division = {
+		name = "39th Infantry Brigade"
+		location = 3379 #Belfast
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.01
+	}
+	division = {
+		name = "3rd Infantry Brigade"
+		location = 3242 # Highlands province on this map
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.45
+		start_equipment_factor = 0.01
+	}
+}

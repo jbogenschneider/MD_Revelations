@@ -1,0 +1,58 @@
+division_template = {
+	name = "London Drone Brigade"
+	regiments = {
+		L_Inf_Bat = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 1 y = 0 }
+	}
+	support = {
+		drone_tactical_company = { x = 0 y = 0 }
+		SP_Arty_Battery = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+	}
+}
+
+units = {
+	division = {
+		name = "1st London Drone Brigade"
+		location = 11333
+		division_template = "London Drone Brigade"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "2nd London Drone Brigade"
+		location = 11333
+		division_template = "London Drone Brigade"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "3rd London Drone Brigade"
+		location = 11333
+		division_template = "London Drone Brigade"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "4th London Drone Brigade"
+		location = 11333
+		division_template = "London Drone Brigade"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "1st Northern Ireland Drone Brigade"
+		location = 11257
+		division_template = "London Drone Brigade"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "2nd Northern Ireland Drone Brigade"
+		location = 11257
+		division_template = "London Drone Brigade"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.9
+	}
+}

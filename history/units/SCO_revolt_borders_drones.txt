@@ -1,0 +1,23 @@
+units = {
+	division = {
+		name = "1st Borders Drone Brigade"
+		location = 9314
+		division_template = "London Drone Brigade"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "2nd Borders Drone Brigade"
+		location = 9314
+		division_template = "London Drone Brigade"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "3rd Borders Drone Brigade"
+		location = 9314
+		division_template = "London Drone Brigade"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.9
+	}
+}

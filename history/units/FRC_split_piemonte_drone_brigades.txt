@@ -1,0 +1,30 @@
+units = {
+	division = {
+		name = "17e Brigade de drones"
+		location = 6780
+		division_template = "Drone Defense Brigade"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "18e Brigade de drones"
+		location = 6780
+		division_template = "Drone Defense Brigade"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "19e Brigade de drones"
+		location = 6780
+		division_template = "Drone Defense Brigade"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "20e Brigade de drones"
+		location = 6780
+		division_template = "Drone Defense Brigade"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.9
+	}
+}

@@ -1,0 +1,60 @@
+# belgian starting formations joining FRC.
+division_template = {
+	name = "Brigade Mécanisée"
+
+	regiments = {
+		Mech_Inf_Bat = { x = 0 y = 0 }
+		Mech_Inf_Bat = { x = 0 y = 1 }
+		Arm_Inf_Bat = { x = 0 y = 2 }
+		armor_Bat = { x = 1 y = 0 }
+		SP_Arty_Bat = { x = 2 y = 0 }
+	}
+
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		H_Engi_Comp = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Régiment Para-Commando"
+
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+		L_Air_Inf_Bat = { x = 1 y = 0 }
+		L_Air_Inf_Bat = { x = 1 y = 1 }
+	}
+
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		SP_Arty_Battery = { x = 0 y = 1 }
+		L_Engi_Comp = { x = 0 y = 2 }
+	}
+	priority = 2
+}
+units = {
+	division = {
+		#name = "1re Brigade Mécanisée"
+		name = "1re Brigade d'Infanterie Blindée"
+		location = 11506
+		division_template = "Brigade Mécanisée"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.01
+	}
+	division = {
+		#name = "7e Brigade Mécanisée"
+		name = "7e Brigade d'Infanterie Blindée"
+		location = 11506
+		division_template = "Brigade Mécanisée"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.01
+	}
+	division = {
+		#name = "Régiment Para-Commando"
+		name = "Brigade Légère"
+		location = 11506
+		division_template = "Régiment Para-Commando"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.01
+	}
+}

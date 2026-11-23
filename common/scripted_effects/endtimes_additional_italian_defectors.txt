@@ -1,0 +1,32 @@
+# Additional Italian starting formations tagged for defection to FRC.
+endtimes_tag_additional_italian_defectors = {
+	set_country_flag = endtimes_additional_italian_defectors_tagged
+	create_unit = {
+		owner = ITA
+		id = 9905911
+		prioritize_location = 6606
+		division = "name = \"Brigata Aeromobile 'Friuli'\" location = 6606 division_template = \"Brigata Aeromobile\" start_experience_factor = 0.75 start_equipment_factor = 0.01"
+	}
+	create_unit = {
+		owner = ITA
+		id = 9905912
+		prioritize_location = 316
+		division = "name = \"Brigata Alpina 'Julia'\" location = 316 division_template = \"Brigata Alpina\" start_experience_factor = 0.75 start_equipment_factor = 0.01"
+	}
+	create_unit = {
+		owner = ITA
+		id = 9905913
+		prioritize_location = 628
+		division = "name = \"Brigata di Cavalleria 'Pozzuolo del Friuli'\" location = 628 division_template = \"Brigata di Cavalleria\" start_experience_factor = 0.75 start_equipment_factor = 0.01"
+	}
+}
+
+endtimes_reassign_additional_italian_defectors = {
+	if = {
+		limit = { has_country_flag = endtimes_additional_italian_defectors_tagged }
+		delete_unit = { id = 9905911 disband = no }
+		delete_unit = { id = 9905912 disband = no }
+		delete_unit = { id = 9905913 disband = no }
+		FRC = { load_oob = FRC_additional_italian_defectors }
+	}
+}

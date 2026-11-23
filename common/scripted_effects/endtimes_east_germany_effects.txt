@@ -103,6 +103,14 @@ endtimes_create_independent_east_germany = {
 			}
 			else = { load_oob = DDR_endtimes_nonnsb }
 			if = {
+				limit = { owns_state = 45 }
+				if = {
+					limit = { NOT = { has_tech = land_Drone_equipment3 } }
+					set_technology = { land_Drone_equipment3 = 1 }
+				}
+				load_oob = DDR_endtimes_berlin_drone_brigades
+			}
+			if = {
 				limit = { has_dlc = "By Blood Alone" }
 				load_oob = DDR_endtimes_air_bba
 			}
@@ -113,5 +121,10 @@ endtimes_create_independent_east_germany = {
 			}
 			else = { load_oob = DDR_endtimes_naval_legacy }
 		}
+	}
+	if = {
+		limit = { DDR = { owns_state = 45 } }
+		endtimes_reassign_ddr_defectors = yes
+		endtimes_reassign_additional_german_defectors = yes
 	}
 }

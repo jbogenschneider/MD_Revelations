@@ -1,0 +1,92 @@
+# Italian formations joining FRC.
+division_template = {
+	name = "Brigata Alpina" #julia and taurinense, more info on the former
+
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+		Special_Forces = { x = 0 y = 1 }
+		Special_Forces = { x = 0 y = 2 }
+		Special_Forces = { x = 1 y = 0 }
+		Special_Forces = { x = 1 y = 1 }
+		Arty_Bat = { x = 2 y = 0 }
+	}
+	support = {
+		H_Engi_Comp = { x = 0 y = 0 }
+		L_Recce_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+		SP_AA_Battery = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Brigata Corazzata"
+
+	regiments = {
+		armor_Bat = { x = 0 y = 0 } #32° Tauriano di Spilimbergo
+		armor_Bat = { x = 0 y = 1 } #33° Ozzano dell'Emilia
+		armor_Bat = { x = 0 y = 2 } #132° Cordenons
+		Arm_Inf_Bat = { x = 1 y = 0 } #11° Orcenico Superiore + 82° "Torino" di Cormons
+		Mech_Inf_Bat = { x = 1 y = 0 } #11° Orcenico Superiore + 82° "Torino" di Cormons
+		Mot_Inf_Bat = { x = 2 y = 0 } #11° Orcenico Superiore + 82° "Torino" di Cormons
+		Mot_Inf_Bat = { x = 2 y = 1 } #11° Orcenico Superiore + 82° "Torino" di Cormons
+		SP_Arty_Bat = { x = 3 y = 0 } #132° Maniago
+	}
+	support = {
+		H_Engi_Comp = { x = 0 y = 0 }
+		SP_AA_Battery = { x = 0 y = 1 }
+		armor_Recce_Comp = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Brigata Meccanizzata" #a mix of Aosta, Pinerolo and Sassari, Aosta and Pinerolo had the most info
+
+	regiments = {
+		armor_Bat = { x = 0 y = 0 }
+		L_arm_Bat = { x = 0 y = 1 }
+		Mech_Inf_Bat = { x = 1 y = 0 }
+		Mech_Inf_Bat = { x = 1 y = 1 }
+		Mech_Inf_Bat = { x = 1 y = 2 }
+		Mech_Inf_Bat = { x = 1 y = 3 }
+		Mot_Inf_Bat = { x = 2 y = 0 }
+		Mot_Inf_Bat = { x = 2 y = 1 }
+		SP_Arty_Bat = { x = 3 y = 0 }
+	}
+	support = {
+		H_Engi_Comp = { x = 0 y = 0 }
+		armor_Recce_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+		Arty_Battery = { x = 0 y = 3 }
+	}
+}
+units = {
+	division = {
+		name = "Brigata Alpina 'Tridentina'"
+		location = 6780
+		division_template = "Brigata Alpina"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.01
+	}
+	division = {
+		name = "Brigata Alpina 'Taurinense'"
+		location = 6780
+		division_template = "Brigata Alpina"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.01
+	}
+	division = {
+		name = "132 Brigata Corazzata 'Ariete'"
+		location = 6635
+		division_template = "Brigata Corazzata"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.01
+	}
+	division = {
+		name = "Brigata Meccanizzata 'Centauro'"
+		location = 6635
+		division_template = "Brigata Meccanizzata"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.01
+	}
+}

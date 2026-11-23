@@ -15,3 +15,16 @@ defined_text = {
 	}
 	text = { localization_key = endtimes_russia_ceasefire_no_report }
 }
+
+defined_text = {
+	name = GetEndtimesRussiaSurrenderOverlordReport
+	text = {
+		trigger = { SOV = { is_subject_of = UKR } }
+		localization_key = endtimes_russia_surrender_subject_ukraine
+	}
+	text = {
+		trigger = { SOV = { is_subject_of = POL } }
+		localization_key = endtimes_russia_surrender_subject_poland
+	}
+	text = { localization_key = endtimes_russia_ceasefire_no_report }
+}

@@ -1,0 +1,184 @@
+# Regional formations from FRA_2000_nsb.txt; loaded only at the split.
+division_template = {
+	name = "French Defectors - Armored Brigade"
+
+	regiments = {
+		armor_Bat = { x = 0 y = 0 }
+		armor_Bat = { x = 0 y = 1 }
+		Mech_Inf_Bat = { x = 0 y = 2 }
+		Mech_Inf_Bat = { x = 0 y = 3 }
+
+		armor_Bat = { x = 1 y = 0 }
+		armor_Bat = { x = 1 y = 1 }
+		Mech_Inf_Bat = { x = 1 y = 2 }
+		Mech_Inf_Bat = { x = 1 y = 3 }
+
+		armor_Bat = { x = 2 y = 0 }
+		Arm_Inf_Bat = { x = 2 y = 0 }
+		Arm_Inf_Bat = { x = 2 y = 1 }
+
+		SP_Arty_Bat = { x = 3 y = 0 }
+		SP_Arty_Bat = { x = 3 y = 1 }
+		attack_helo_bat = { x = 3 y = 2 }
+	}
+	support = {
+		H_Engi_Comp = { x = 0 y = 0 }
+		SP_AA_Battery = { x = 0 y = 1 }
+		Arm_Recce_Comp = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+		SP_R_Arty_Battery = { x = 0 y = 4 }
+	}
+}
+
+division_template = {
+	name = "French Defectors - Light Armored Marine Brigade"
+
+	regiments = {
+		Mech_Marine_Bat = { x = 0 y = 0 }
+		Mech_Marine_Bat = { x = 0 y = 1 }
+		Mech_Marine_Bat = { x = 0 y = 2 }
+		Arm_Marine_Bat = { x = 0 y = 3 }
+		SP_Arty_Bat = { x = 0 y = 4 }
+
+		Mot_Marine_Bat = { x = 1 y = 0 }
+		Mot_Marine_Bat = { x = 1 y = 1 }
+
+		L_arm_Bat = { x = 2 y = 0 }
+		L_arm_Bat = { x = 2 y = 1 }
+		SP_Arty_Bat = { x = 2 y = 2 }
+
+		Mech_Inf_Bat = { x = 3 y = 0 }
+		Mech_Inf_Bat = { x = 3 y = 1 }
+	}
+	support = {
+		H_Engi_Comp = { x = 0 y = 0 }
+		SP_AA_Battery = { x = 0 y = 1 }
+		armor_Recce_Comp = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+		attack_helo_comp = { x = 0 y = 4 }
+	}
+}
+
+division_template = {
+	name = "French Defectors - Franco-German Brigade"
+
+	regiments = {
+		L_arm_Bat = { x = 0 y = 0 }
+		L_arm_Bat = { x = 0 y = 1 }
+		L_arm_Bat = { x = 0 y = 2 }
+		Mech_Inf_Bat = { x = 0 y = 3 }
+		Mech_Inf_Bat = { x = 0 y = 4 }
+		Mech_Inf_Bat = { x = 1 y = 0 }
+		Mech_Inf_Bat = { x = 1 y = 1 }
+		Mech_Inf_Bat = { x = 1 y = 2 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		SP_AA_Battery = { x = 0 y = 1 }
+		Mech_Recce_Comp = { x = 0 y = 2 }
+		combat_service_support_company = { x = 0 y = 3 }
+		SP_R_Arty_Battery = { x = 0 y = 4 }
+	}
+}
+
+division_template = {
+	name = "French Defectors - Mountain Infantry Brigade" #Changed from mechanized to light infantry so that the unit can actually fight in mountain.
+
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+		L_Inf_Bat = { x = 0 y = 1 }
+		L_Inf_Bat = { x = 0 y = 2 }
+		Arty_Bat = { x = 0 y = 3 }
+		Special_Forces = { x = 1 y = 0 }
+		L_Inf_Bat = { x = 1 y = 1 }
+		L_Inf_Bat = { x = 1 y = 2 }
+		Arty_Bat = { x = 1 y = 3 }
+		L_arm_Bat = { x = 2 y = 0 }
+		Mot_Inf_Bat = { x = 3 y = 0 }
+	}
+	support = {
+		H_Engi_Comp = { x = 0 y = 0 }
+		SP_AA_Battery = { x = 0 y = 1 }
+		armor_Recce_Comp = { x = 0 y = 2 }
+		helicopter_combat_service_support = { x = 0 y = 3 }
+		attack_helo_comp = { x = 0 y = 4 }
+	}
+}
+
+division_template = {
+	name = "French Defectors - Parachute Brigade"
+
+	regiments = {
+		Mech_Air_Inf_Bat = { x = 0 y = 0 }
+		Mech_Air_Inf_Bat = { x = 0 y = 1 }
+		L_arm_Bat = { x = 0 y = 2 }
+
+		Mot_Air_Inf_Bat = { x = 1 y = 0 }
+		Mot_Air_Inf_Bat = { x = 1 y = 1 }
+		Mot_Air_Inf_Bat = { x = 1 y = 2 }
+
+		Mot_Air_Inf_Bat = { x = 2 y = 0 }
+		Mot_Air_Inf_Bat = { x = 2 y = 1 }
+		Mot_Air_Inf_Bat = { x = 2 y = 2 }
+
+		Arty_Bat = { x = 3 y = 0 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		armor_Recce_Comp = { x = 0 y = 1 }
+		combat_service_support_company = { x = 0 y = 2 }
+		Arty_Battery = { x = 0 y = 3 }
+		attack_helo_comp = { x = 0 y = 4 }
+	}
+	priority = 2
+}
+units = {
+	division = {
+		name = "2e Brigade blindée populaire"
+		location = 11506
+		division_template = "French Defectors - Armored Brigade"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.01
+		force_equipment_variants = { medium_tank_amphibious_chassis_1 = { amount = 50 owner = FRA version_name = "VAB Milan" } }
+	}
+	division = {
+		name = "Brigade marine de la Commune"
+		location = 11506
+		division_template = "French Defectors - Light Armored Marine Brigade"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.01
+		force_equipment_variants = { heavy_tank_chassis_1 = { amount = 6 owner = FRA version_name = "AS565 Panther" } }
+		force_equipment_variants = { medium_tank_amphibious_chassis_1 = { amount = 50 owner = FRA version_name = "VAB Milan" } }
+	}
+	division = {
+		name = "Régiment mécanisé de la République"
+		location = 11506
+		division_template = "French Defectors - Franco-German Brigade"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.01
+		force_equipment_variants = { medium_tank_amphibious_chassis_1 = { amount = 50 owner = FRA version_name = "VAB Milan" } }
+	}
+	division = {
+		name = "Brigade alpine populaire"
+		location = 11506
+		division_template = "French Defectors - Mountain Infantry Brigade"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.01
+	}
+	division = {
+		name = "1re Brigade blindée populaire"
+		location = 11506
+		division_template = "French Defectors - Armored Brigade"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.01
+		force_equipment_variants = { medium_tank_amphibious_chassis_1 = { amount = 50 owner = FRA version_name = "VAB Milan" } }
+	}
+	division = {
+		name = "Brigade parachutiste de la République"
+		location = 11506
+		division_template = "French Defectors - Parachute Brigade"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.01
+		force_equipment_variants = { medium_tank_amphibious_chassis_1 = { amount = 50 owner = FRA version_name = "VAB Milan" } }
+	}
+}

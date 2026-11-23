@@ -140,13 +140,6 @@ division_template = {
 units = {
 	#Division "San Marcial"
 	division = {
-		name = "I Brigade Aragón"
-		location = 3816
-		division_template = "Mechanized Brigade"
-		start_experience_factor = 0.75
-		start_equipment_factor = 0.01
-	}
-	division = {
 		name = "X Brigade Guzmán el Bueno"
 		location = 875
 		division_template = "Mechanized Brigade"
@@ -160,26 +153,13 @@ units = {
 		start_experience_factor = 0.75
 		start_equipment_factor = 0.01
 	}
-	division = {
-		name = "XII Brigade Guadarrama"
-		location = 9767
-		division_template = "Mechanized Brigade"
-		start_experience_factor = 0.75
-		start_equipment_factor = 0.01
-	}
+
 
 	#Division Castillejos
 	division = {
 		name = "Spanish Legion Brigade Rey Alfonso XIII"
 		location = 12038
 		division_template = "Recon Brigade"
-		start_experience_factor = 0.75
-		start_equipment_factor = 0.01
-	}
-	division = {
-		name = "VI Parachute Brigade Almogávares"
-		location = 3938
-		division_template = "Parachute Brigade"
 		start_experience_factor = 0.75
 		start_equipment_factor = 0.01
 	}
@@ -264,20 +244,6 @@ units = {
 	division = {
 		name = "2nd Special Operations Group Granada"
 		location = 1176
-		division_template = "Special Operations Group"
-		start_experience_factor = 0.9
-		start_equipment_factor = 0.01
-	}
-	division = {
-		name = "3rd Special Operations Group Valencia"
-		location = 6906
-		division_template = "Special Operations Group"
-		start_experience_factor = 0.9
-		start_equipment_factor = 0.01
-	}
-	division = {
-		name = "4th Special Operations Group Tercio del Ampurdán"
-		location = 3938
 		division_template = "Special Operations Group"
 		start_experience_factor = 0.9
 		start_equipment_factor = 0.01
@@ -447,4 +413,10 @@ instant_effect = {
 		amount = 12
 		producer = FRA
 	}
+
+	# Tag the regional starting formations for deterministic reassignment.
+	rev_spr_tag_frc_volunteers_legacy = yes
+
+	# Tag the regional starting formations for deterministic reassignment.
+	endtimes_tag_frc_spanish_reinforcements_legacy = yes
 }

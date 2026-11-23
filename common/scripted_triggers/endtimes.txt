@@ -2,7 +2,6 @@
 endtimes_join_or_war_country = {
 	OR = {
 		tag = DDR
-		tag = HOL
 		tag = SLO
 		tag = CZE
 		tag = HUN
@@ -14,7 +13,7 @@ endtimes_join_or_war_country = {
 		tag = ARM
 		tag = GEO
 		tag = MOR
-		tag = SWI
+		tag = TUN
 		tag = AUS
 	}
 }

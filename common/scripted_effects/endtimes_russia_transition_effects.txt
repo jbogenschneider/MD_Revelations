@@ -148,69 +148,6 @@ endtimes_russia_ceasefire_transition = {
 	add_ai_strategy = { type = befriend id = FIN value = 300 }
 }
 
-# SOV scope. Choose the overlord before the surrender ends Russia's current wars.
-endtimes_apply_russia_surrender = {
-	if = {
-		limit = { has_war_with = UKR }
-		UKR = { save_event_target_as = endtimes_russia_surrender_overlord }
-	}
-	else = { POL = { save_event_target_as = endtimes_russia_surrender_overlord } }
-
-	MeccaPact_leave_previous_alliance = yes
-	MeccaPact_leave = yes
-	event_target:endtimes_russia_surrender_overlord = {
-		puppet = { target = SOV end_wars = yes end_civil_wars = yes }
-	}
-	if = {
-		limit = { is_subject_of = event_target:endtimes_russia_surrender_overlord }
-		set_country_flag = endtimes_russia_surrender_completed
-		if = {
-			limit = { POL = { exists = yes } }
-			642 = {
-				transfer_state_to = POL
-				remove_core_of = SOV
-			}
-		}
-		endtimes_restore_ukraine_full_borders = yes
-		UKR = {
-			every_owned_state = {
-				limit = {
-					is_core_of = SOV
-					NOT = { is_core_of = UKR }
-					NOT = { is_claimed_by = UKR }
-				}
-				transfer_state_to = SOV
-			}
-		}
-		every_state = {
-			limit = { is_core_of = UKR is_claimed_by = SOV }
-			remove_claim_by = SOV
-		}
-		endtimes_release_far_east_to_china = yes
-		set_country_flag = russia_peace_decision_done_2026
-		set_country_flag = rev_russia_weekly_peace_check_done
-		clr_country_flag = russia_pending_election_2026
-		clr_country_flag = RUSSIA_ELECTION_ACTIVE
-		clr_country_flag = russia_oligarch_council_active
-		retire_country_leader = yes
-		set_politics = { ruling_party = democratic elections_allowed = yes }
-		clear_array = ruling_party
-		clear_array = gov_coalition_array
-		add_to_array = { ruling_party = 2 } # Western liberals.
-		clr_country_flag = party3_banned
-		create_country_leader = {
-			name = "Ilya Yashin"
-			picture = "gfx/leaders/SOV/ilya_yashin.dds"
-			ideology = liberalism
-			traits = { western_liberalism }
-		}
-		startup_politics = yes
-		ingame_update_setup = yes
-		log = "[GetDateText]: Russia surrendered and became a subject of [event_target:endtimes_russia_surrender_overlord.GetName]."
-	}
-	else = { log = "[GetDateText]: Russia's scripted surrender failed to establish the new subject relationship." }
-}
-
 # SOV scope. Use the existing Far East breakaway region and transfer only Russian holdings.
 endtimes_release_far_east_to_china = {
 	if = {
@@ -258,4 +195,113 @@ endtimes_release_far_east_to_china = {
 			}
 		}
 	}
+}
+
+# Also runs once for saves in which the surrender already happened.
+endtimes_finalize_russia_surrender = {
+	UKR = {
+		every_owned_state = {
+			limit = {
+				is_core_of = SOV
+				NOT = { is_core_of = UKR }
+				NOT = { is_claimed_by = UKR }
+			}
+			transfer_state_to = SOV
+		}
+	}
+	every_state = {
+		limit = { is_core_of = UKR is_claimed_by = SOV }
+		remove_claim_by = SOV
+	}
+	endtimes_release_far_east_to_china = yes
+	# Change only Ukrainian-controlled provinces in Russia's remaining states.
+	every_owned_state = {
+		limit = {
+			NOT = { is_core_of = UKR }
+			NOT = { is_claimed_by = UKR }
+		}
+		set_state_province_controller = {
+			controller = SOV
+			limit = { tag = UKR }
+		}
+	}
+	GEO = {
+		if = {
+			limit = { exists = yes }
+			if = {
+				limit = { ABK = { exists = yes } }
+				annex_country = { target = ABK }
+			}
+			else_if = {
+				limit = { SOV = { owns_state = 706 } }
+				transfer_state = 706 # Abkhazia, if Russia already annexed it.
+			}
+			every_other_country = {
+				limit = { has_war_with = GEO }
+				white_peace = GEO
+			}
+			MeccaPact_leave = yes
+			if = {
+				limit = { NOT = { has_government = democratic } }
+				set_country_leader_ideology = conservatism
+				clear_array = ruling_party
+				clear_array = gov_coalition_array
+				add_to_array = { ruling_party = 1 } # Western conservatism.
+				clr_country_flag = party2_banned
+			}
+			set_politics = { ruling_party = democratic elections_allowed = yes }
+			startup_politics = yes
+		}
+	}
+	set_country_flag = endtimes_russia_surrender_aftermath_completed
+	log = "[GetDateText]: Russia surrender aftermath applied, including Ukrainian territory cleanup."
+}
+
+# SOV scope. Choose the overlord before the surrender ends Russia's current wars.
+endtimes_apply_russia_surrender = {
+	if = {
+		limit = { has_war_with = UKR }
+		UKR = { save_event_target_as = endtimes_russia_surrender_overlord }
+	}
+	else = { POL = { save_event_target_as = endtimes_russia_surrender_overlord } }
+
+	MeccaPact_leave_previous_alliance = yes
+	MeccaPact_leave = yes
+	event_target:endtimes_russia_surrender_overlord = {
+		puppet = { target = SOV end_wars = yes end_civil_wars = yes }
+	}
+	if = {
+		limit = { is_subject_of = event_target:endtimes_russia_surrender_overlord }
+		set_country_flag = endtimes_russia_surrender_completed
+		if = {
+			limit = { POL = { exists = yes } }
+			642 = {
+				transfer_state_to = POL
+				remove_core_of = SOV
+			}
+		}
+		endtimes_restore_ukraine_full_borders = yes
+		set_country_flag = russia_peace_decision_done_2026
+		set_country_flag = rev_russia_weekly_peace_check_done
+		clr_country_flag = russia_pending_election_2026
+		clr_country_flag = RUSSIA_ELECTION_ACTIVE
+		clr_country_flag = russia_oligarch_council_active
+		retire_country_leader = yes
+		set_politics = { ruling_party = democratic elections_allowed = yes }
+		clear_array = ruling_party
+		clear_array = gov_coalition_array
+		add_to_array = { ruling_party = 2 } # Western liberals.
+		clr_country_flag = party3_banned
+		create_country_leader = {
+			name = "Ilya Yashin"
+			picture = "gfx/leaders/SOV/ilya_yashin.dds"
+			ideology = liberalism
+			traits = { western_liberalism }
+		}
+		startup_politics = yes
+		ingame_update_setup = yes
+		log = "[GetDateText]: Russia surrendered and accepted a new overlord."
+		endtimes_finalize_russia_surrender = yes
+	}
+	else = { log = "[GetDateText]: Russia's scripted surrender failed to establish the new subject relationship." }
 }

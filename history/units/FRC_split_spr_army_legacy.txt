@@ -1,0 +1,49 @@
+# Spanish formations joining FRC.
+division_template = {
+	name = "Spanish Mechanized Brigade"
+
+	regiments = {
+		Mech_Inf_Bat = { x = 0 y = 0 }
+		Arm_Inf_Bat = { x = 0 y = 1 }
+		armor_Bat = { x = 1 y = 0 }
+		Mech_Inf_Bat = { x = 2 y = 0 }
+		SP_Arty_Bat = { x = 3 y = 0 }
+	}
+	support = {
+		H_Engi_Comp = { x = 0 y = 0 }
+		armor_Recce_Comp = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Spanish Special Operations Group"
+
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+	}
+
+	priority = 2
+}
+units = {
+	division = {
+		name = "I Brigade Aragón"
+		location = 9764
+		division_template = "Spanish Mechanized Brigade"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.01
+	}
+	division = {
+		name = "3rd Special Operations Group Valencia"
+		location = 9764
+		division_template = "Spanish Special Operations Group"
+		start_experience_factor = 0.9
+		start_equipment_factor = 0.01
+	}
+	division = {
+		name = "4th Special Operations Group Tercio del Ampurdán"
+		location = 9764
+		division_template = "Spanish Special Operations Group"
+		start_experience_factor = 0.9
+		start_equipment_factor = 0.01
+	}
+}

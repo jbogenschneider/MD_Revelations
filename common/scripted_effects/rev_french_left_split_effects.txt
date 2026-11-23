@@ -60,10 +60,60 @@ rev_frc_setup_left_coalition = {
 	update_dirty_subideology = yes
 }
 
+# Country scope. Restore Western democracy and NATO membership independently.
+rev_fra_split_align_nato_neighbor = {
+	if = {
+		limit = {
+			OR = {
+				NOT = { has_government = democratic }
+				has_country_leader_ideology = Western_Autocracy
+			}
+		}
+		set_country_leader_ideology = conservatism
+		set_politics = { ruling_party = democratic elections_allowed = yes }
+		clear_array = ruling_party
+		clear_array = gov_coalition_array
+		add_to_array = { ruling_party = 1 } # Western conservatism.
+		clr_country_flag = party2_banned
+		startup_politics = yes
+	}
+	if = {
+		limit = { has_elections = no }
+		set_politics = { elections_allowed = yes }
+	}
+	if = {
+		limit = {
+			NOT = { rev_is_nato_faction = yes }
+			# Spain's temporary withdrawal lasts until NATO Recovery.
+			OR = {
+				NOT = { tag = SPR }
+				NOT = { has_global_flag = endtimes_nato_withdrawals_completed }
+				has_global_flag = endtimes_nato_recovery_completed
+			}
+		}
+		endtimes_ensure_nato_membership = yes
+	}
+}
+
+# The legacy French rosters have four regional formations. Tag Provence's fifth.
+rev_fra_tag_provence_formation = {
+	set_country_flag = rev_fra_provence_formation_tagged
+	create_unit = {
+		owner = FRA
+		id = 9905801
+		prioritize_location = 958
+		division = "name = \"6ème Brigade légère blindée\" location = 958 division_template = \"Light Armoured Brigade\" start_experience_factor = 0.75 start_equipment_factor = 0.01"
+	}
+}
+
 # FRA scope. Called by the November split event, or manually for testing.
 rev_fra_start_left_split = {
 	if = {
 		limit = { rev_fra_left_split_ready = yes }
+		every_other_country = {
+			limit = { exists = yes OR = { tag = ITA tag = SPR } }
+			rev_fra_split_align_nato_neighbor = yes
+		}
 		# Add cores only at the split, so FRC stays dormant in the 2026 scenario.
 		56 = { add_core_of = FRC }
 		54 = { add_core_of = FRC }
@@ -71,6 +121,7 @@ rev_fra_start_left_split = {
 		59 = { add_core_of = FRC }
 		959 = { add_core_of = FRC }
 		64 = { add_core_of = FRC }
+		63 = { add_core_of = FRC } # Provence.
 		961 = { add_core_of = FRC }
 		# Independence is not an autonomy tier in MD's subject-state definitions.
 		release = FRC
@@ -79,6 +130,24 @@ rev_fra_start_left_split = {
 			set_country_flag = rev_fra_left_split_started
 			# Add reciprocal cores after release so the initial territorial split stays intact.
 			every_owned_state = { add_core_of = FRC }
+			77 = { # Piemonte.
+				if = {
+					limit = { is_owned_by = ITA }
+					transfer_state_to = FRC
+					add_core_of = FRC
+				}
+			}
+			80 = { # Lombardia.
+				if = {
+					limit = { is_owned_by = ITA }
+					transfer_state_to = FRC
+					add_core_of = FRC
+				}
+			}
+			86 = {
+				transfer_state_to = FRC # Catalunya.
+				add_core_of = FRC
+			}
 			FRC = {
 				every_owned_state = { add_core_of = FRA }
 				if = {
@@ -106,12 +175,47 @@ rev_fra_start_left_split = {
 						set_technology = { land_Drone_equipment3 = 1 }
 					}
 					load_oob = FRC_split_drone_brigades
+					if = {
+						limit = { owns_state = 77 }
+						load_oob = FRC_split_piemonte_drone_brigades
+					}
+					if = {
+						limit = { owns_state = 63 }
+						load_oob = FRC_split_provence_drone_brigades
+					}
 				}
 				set_country_flag = rev_frc_left_split_established
 			}
 			# Removes the tagged original formations wherever they have moved, then
 			# re-forms those same historical units under FRC. No random army fraction.
 			rev_fra_reassign_regional_army = yes
+			if = {
+				limit = { has_country_flag = rev_fra_provence_formation_tagged FRC = { owns_state = 63 } }
+				delete_unit = { id = 9905801 disband = no }
+				FRC = { load_oob = FRC_split_army_legacy_provence }
+			}
+			endtimes_reassign_frc_french_reinforcements = yes
+			ITA = {
+				rev_ita_reassign_frc_volunteers = yes
+				if = {
+					limit = { exists = yes FRC = { owns_state = 77 } }
+					endtimes_reassign_additional_italian_defectors = yes
+					endtimes_reassign_frc_italian_reinforcements = yes
+				}
+			}
+			SPR = {
+				rev_spr_reassign_frc_volunteers = yes
+				if = {
+					limit = { exists = yes FRC = { owns_state = 86 } }
+					endtimes_reassign_frc_spanish_reinforcements = yes
+				}
+			}
+			BEL = {
+				if = {
+					limit = { exists = yes }
+					endtimes_reassign_frc_belgian_reinforcements = yes
+				}
+			}
 			ingame_update_setup = yes
 			declare_war_on = { target = FRC type = annex_everything }
 			if = {
@@ -119,6 +223,8 @@ rev_fra_start_left_split = {
 				set_global_flag = endtimes_french_civil_war_announced
 				news_event = { id = endtimes.22 }
 			}
+			SWI = { country_event = { id = endtimes.59 days = 1 } }
+			ENG = { country_event = { id = endtimes.57 days = 2 } }
 			# Leadership changes after five full days, independently of popup dismissal.
 			country_event = { id = endtimes.11 days = 5 }
 		}

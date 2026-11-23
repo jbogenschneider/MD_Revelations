@@ -1,0 +1,103 @@
+# UK regional starting formations, tagged for reassignment at the revolt.
+endtimes_tag_uk_revolt_army_nsb = {
+	set_variable = { endtimes_uk_revolt_army_mode = 1 }
+	create_unit = {
+		owner = ENG
+		id = 9905701
+		prioritize_location = 385
+		division = "name = \"8th Infantry Brigade\" location = 385 division_template = \"Light Infantry Brigade\" start_experience_factor = 0.45 start_equipment_factor = 0.01"
+	}
+	create_unit = {
+		owner = ENG
+		id = 9905702
+		prioritize_location = 6385
+		division = "name = \"51st Highland Brigade\" location = 6385 division_template = \"Light Infantry Brigade\" start_experience_factor = 0.45 start_equipment_factor = 0.01"
+	}
+	create_unit = {
+		owner = ENG
+		id = 9905703
+		prioritize_location = 3379
+		division = "name = \"39th Infantry Brigade\" location = 3379 division_template = \"Infantry Brigade\" start_experience_factor = 0.45 start_equipment_factor = 0.01"
+	}
+	create_unit = {
+		owner = ENG
+		id = 9905704
+		prioritize_location = 3242
+		division = "name = \"3rd Infantry Brigade\" location = 3242 division_template = \"Infantry Brigade\" start_experience_factor = 0.45 start_equipment_factor = 0.01"
+	}
+}
+endtimes_tag_uk_revolt_army_legacy_2024 = {
+	set_variable = { endtimes_uk_revolt_army_mode = 2 }
+	create_unit = {
+		owner = ENG
+		id = 9905701
+		prioritize_location = 385
+		division = "name = \"8th Infantry Brigade\" location = 385 division_template = \"Inf Brigade\" start_experience_factor = 0.75 start_equipment_factor = 0.01"
+	}
+	create_unit = {
+		owner = ENG
+		id = 9905702
+		prioritize_location = 6385
+		division = "name = \"51st Highland Brigade\" location = 6385 division_template = \"Inf Brigade\" start_experience_factor = 0.75 start_equipment_factor = 0.01"
+	}
+	create_unit = {
+		owner = ENG
+		id = 9905703
+		prioritize_location = 3379
+		division = "name = \"39th Infantry Brigade\" location = 3379 division_template = \"Inf Brigade\" start_experience_factor = 0.75 start_equipment_factor = 0.01"
+	}
+	create_unit = {
+		owner = ENG
+		id = 9905704
+		prioritize_location = 3242
+		division = "name = \"3rd Infantry Brigade\" location = 3242 division_template = \"Inf Brigade\" start_experience_factor = 0.75 start_equipment_factor = 0.01"
+	}
+}
+endtimes_tag_uk_revolt_army_legacy_2026 = {
+	set_variable = { endtimes_uk_revolt_army_mode = 3 }
+	create_unit = {
+		owner = ENG
+		id = 9905701
+		prioritize_location = 385
+		division = "name = \"8th Infantry Brigade\" location = 385 division_template = \"Inf Brigade\" start_experience_factor = 0.75 start_equipment_factor = 0.8"
+	}
+	create_unit = {
+		owner = ENG
+		id = 9905702
+		prioritize_location = 6385
+		division = "name = \"51st Highland Brigade\" location = 6385 division_template = \"Inf Brigade\" start_experience_factor = 0.75 start_equipment_factor = 0.8"
+	}
+	create_unit = {
+		owner = ENG
+		id = 9905703
+		prioritize_location = 3379
+		division = "name = \"39th Infantry Brigade\" location = 3379 division_template = \"Inf Brigade\" start_experience_factor = 0.75 start_equipment_factor = 0.8"
+	}
+	create_unit = {
+		owner = ENG
+		id = 9905704
+		prioritize_location = 3242
+		division = "name = \"3rd Infantry Brigade\" location = 3242 division_template = \"Drone Defense Brigade\" start_experience_factor = 0.75 start_equipment_factor = 0.8"
+	}
+}
+endtimes_reassign_uk_revolt_army = {
+	if = {
+		limit = { has_variable = endtimes_uk_revolt_army_mode }
+		delete_unit = { id = 9905701 disband = no }
+		delete_unit = { id = 9905702 disband = no }
+		delete_unit = { id = 9905703 disband = no }
+		delete_unit = { id = 9905704 disband = no }
+	}
+	if = {
+		limit = { check_variable = { endtimes_uk_revolt_army_mode = 1 } }
+		SCO = { load_oob = SCO_revolt_army_nsb }
+	}
+	else_if = {
+		limit = { check_variable = { endtimes_uk_revolt_army_mode = 2 } }
+		SCO = { load_oob = SCO_revolt_army_legacy_2024 }
+	}
+	else_if = {
+		limit = { check_variable = { endtimes_uk_revolt_army_mode = 3 } }
+		SCO = { load_oob = SCO_revolt_army_legacy_2026 }
+	}
+}

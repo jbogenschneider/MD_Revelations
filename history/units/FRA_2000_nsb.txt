@@ -322,61 +322,11 @@ division_template = {
 units = {
 ##1ere division, dispand in 1999, retablish in 2016##
 
-	division = {
-		division_name = {
-			is_name_ordered = yes
-			name_order = 7
-		}
-		location = 6698 #Besançon
-		division_template = "Armored Brigade"
-		start_experience_factor = 0.55
-		start_equipment_factor = 0.01
-		force_equipment_variants = { medium_tank_amphibious_chassis_1 = { amount = 50 owner = FRA version_name = "VAB Milan" } }
-	}
-	division = {
-		division_name = {
-			is_name_ordered = yes
-			name_order = 9
-		}
-		location = 3626 #Poitiers
-		division_template = "Light Armored Marine Brigade"
-		start_experience_factor = 0.55
-		start_equipment_factor = 0.01
-		force_equipment_variants = { heavy_tank_chassis_1 = { amount = 6 owner = FRA version_name = "AS565 Panther" } }
-		force_equipment_variants = { medium_tank_amphibious_chassis_1 = { amount = 50 owner = FRA version_name = "VAB Milan" } }
-	}
-	# Brigade franco-allemande
-	division = {
-		name = "Brigade franco-allemande"
-		location = 3679 # Immendingen
-		division_template = "Franco-German Brigade"
-		start_experience_factor = 0.55
-		start_equipment_factor = 0.01
-		force_equipment_variants = { medium_tank_amphibious_chassis_1 = { amount = 50 owner = FRA version_name = "VAB Milan" } }
-	}
-	division = {
-		division_name = {
-			is_name_ordered = yes
-			name_order = 27
-		}
-		location = 3768 #Varces
-		division_template = "Mountain Infantry Brigade"
-		start_experience_factor = 0.6
-		start_equipment_factor = 0.01
-	}
-##3e division, dispand in 1999, retablish in 2016##
-	division = {
-		division_name = {
-			is_name_ordered = yes
-			name_order = 2
-		}
-		location = 521 #Illkirch
-		division_template = "Armored Brigade"
-		start_experience_factor = 0.55
-		start_equipment_factor = 0.01
-		force_equipment_variants = { medium_tank_amphibious_chassis_1 = { amount = 50 owner = FRA version_name = "VAB Milan" } }
-	}
 
+	# Brigade franco-allemande
+
+
+##3e division, dispand in 1999, retablish in 2016##
 	division = {
 		division_name = {
 			is_name_ordered = yes
@@ -388,17 +338,7 @@ units = {
 		start_equipment_factor = 0.01
 		force_equipment_variants = { medium_tank_amphibious_chassis_1 = { amount = 50 owner = FRA version_name = "VAB Milan" } }
 	}
-	division = {
-		division_name = {
-			is_name_ordered = yes
-			name_order = 11
-		}
-		location = 6766 #Balma
-		division_template = "Parachute Brigade"
-		start_experience_factor = 0.55
-		start_equipment_factor = 0.01
-		force_equipment_variants = { medium_tank_amphibious_chassis_1 = { amount = 50 owner = FRA version_name = "VAB Milan" } }
-	}
+
 
 	##Aviation légère de l'Armée de terre##
 
@@ -503,7 +443,6 @@ units = {
 		start_equipment_factor = 0.01
 		force_equipment_variants = { infantry_weapons2 = { amount = 592 owner = USA version_name = "Colt Commando" } }
 	}
-
 	division = {
 		division_name = {
 			is_name_ordered = yes
@@ -515,7 +454,6 @@ units = {
 		start_experience_factor = 0.75
 		force_equipment_variants = { transport_helicopter2 = { amount = 15 owner = FRA version_name = "AS555 Fennec" } }
 	}
-
 	division = {
 		division_name = {
 			is_name_ordered = yes
@@ -780,4 +718,7 @@ instant_effect = {
 
 	# Tag the regional starting formations for deterministic reassignment.
 	rev_fra_tag_regional_army_nsb = yes
+
+	# Tag the regional starting formations for deterministic reassignment.
+	endtimes_tag_frc_french_reinforcements_nsb = yes
 }

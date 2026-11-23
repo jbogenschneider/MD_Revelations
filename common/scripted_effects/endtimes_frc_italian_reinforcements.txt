@@ -1,0 +1,39 @@
+# italian starting formations tagged for defection to FRC.
+endtimes_tag_frc_italian_reinforcements = {
+	set_country_flag = endtimes_frc_italian_reinforcements_mode_tagged
+	create_unit = {
+		owner = ITA
+		id = 9906021
+		prioritize_location = 11998
+		division = "name = \"Brigata Marina 'San Marco'\" location = 11998 division_template = \"Brigata Marina\" start_experience_factor = 0.75 start_equipment_factor = 0.01"
+	}
+	create_unit = {
+		owner = ITA
+		id = 9906022
+		prioritize_location = 9826
+		division = "name = \"Brigata Bersaglieri 'Garibaldi'\" location = 9826 division_template = \"Brigata Bersaglieri\" start_experience_factor = 0.75 start_equipment_factor = 0.01"
+	}
+	create_unit = {
+		owner = ITA
+		id = 9906023
+		prioritize_location = 9784
+		division = "name = \"Brigata Meccanizzata 'Pinerolo'\" location = 9784 division_template = \"Brigata Meccanizzata\" start_experience_factor = 0.75 start_equipment_factor = 0.01"
+	}
+	create_unit = {
+		owner = ITA
+		id = 9906024
+		prioritize_location = 6946
+		division = "name = \"Brigata Paracadutisti 'Folgore'\" location = 6946 division_template = \"Brigata Paracadutisti\" start_experience_factor = 0.75 start_equipment_factor = 0.01"
+	}
+}
+
+endtimes_reassign_frc_italian_reinforcements = {
+	if = {
+		limit = { has_country_flag = endtimes_frc_italian_reinforcements_mode_tagged }
+		FRC = { load_oob = FRC_split_italian_reinforcements }
+		delete_unit = { id = 9906021 disband = no }
+		delete_unit = { id = 9906022 disband = no }
+		delete_unit = { id = 9906023 disband = no }
+		delete_unit = { id = 9906024 disband = no }
+	}
+}

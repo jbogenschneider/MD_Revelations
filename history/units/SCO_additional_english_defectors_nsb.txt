@@ -1,0 +1,31 @@
+# Regional formations from ENG_2000_nsb.txt; loaded only at the split.
+division_template = {
+	name = "Special Forces"
+
+	regiments = {
+		Special_Forces = { x = 0 y = 0 }
+	}
+	support = {
+		L_Recce_Comp = { x = 0 y = 0 }
+		helicopter_combat_service_support = { x = 0 y = 1 }
+	}
+	priority = 2
+}
+units = {
+	division = {
+		name = "22nd Special Air Service Regiment"
+		location = 11333
+		division_template = "Special Forces"
+		start_experience_factor = 0.80
+		start_equipment_factor = 0.01
+		force_equipment_variants = { infantry_weapons3 = { amount = 333 owner = CAN version_name = "L119A1" } }
+	}
+	division = {
+		name = "Special Boat Service"
+		location = 11333
+		division_template = "Special Forces"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.01
+		force_equipment_variants = { infantry_weapons2 = { amount = 333 owner = USA version_name = "Colt Commando" } }
+	}
+}

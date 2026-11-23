@@ -1,0 +1,69 @@
+# Additional english starting formations tagged for defection to SCO.
+endtimes_tag_additional_english_defectors_nsb = {
+	set_variable = { endtimes_additional_english_defectors_mode = 1 }
+	create_unit = {
+		owner = ENG
+		id = 9905931
+		prioritize_location = 3241
+		division = "name = \"22nd Special Air Service Regiment\" location = 3241 division_template = \"Special Forces\" start_experience_factor = 0.80 start_equipment_factor = 0.01 force_equipment_variants = { infantry_weapons3 = { amount = 333 owner = CAN version_name = \"L119A1\" } }"
+	}
+	create_unit = {
+		owner = ENG
+		id = 9905932
+		prioritize_location = 9458
+		division = "name = \"Special Boat Service\" location = 9458 division_template = \"Special Forces\" start_experience_factor = 0.75 start_equipment_factor = 0.01 force_equipment_variants = { infantry_weapons2 = { amount = 333 owner = USA version_name = \"Colt Commando\" } }"
+	}
+}
+
+endtimes_tag_additional_english_defectors_legacy_2024 = {
+	set_variable = { endtimes_additional_english_defectors_mode = 2 }
+	create_unit = {
+		owner = ENG
+		id = 9905931
+		prioritize_location = 3241
+		division = "name = \"22nd Special Air Service Regiment\" location = 3241 division_template = \"Air Assault Brigade\" start_experience_factor = 0.75 start_equipment_factor = 0.01"
+	}
+	create_unit = {
+		owner = ENG
+		id = 9905932
+		prioritize_location = 9458
+		division = "name = \"Special Boat Service\" location = 9458 division_template = \"Special Forces\" start_experience_factor = 0.75 start_equipment_factor = 0.01"
+	}
+}
+
+endtimes_tag_additional_english_defectors_legacy_2026 = {
+	set_variable = { endtimes_additional_english_defectors_mode = 3 }
+	create_unit = {
+		owner = ENG
+		id = 9905931
+		prioritize_location = 3241
+		division = "name = \"22nd Special Air Service Regiment\" location = 3241 division_template = \"Air Assault Brigade\" start_experience_factor = 0.75 start_equipment_factor = 0.8"
+	}
+	create_unit = {
+		owner = ENG
+		id = 9905932
+		prioritize_location = 9458
+		division = "name = \"Special Boat Service\" location = 9458 division_template = \"Special Forces\" start_experience_factor = 0.75 start_equipment_factor = 0.8"
+	}
+}
+
+endtimes_reassign_additional_english_defectors = {
+	if = {
+		limit = { check_variable = { endtimes_additional_english_defectors_mode = 1 } }
+		delete_unit = { id = 9905931 disband = no }
+		delete_unit = { id = 9905932 disband = no }
+		SCO = { load_oob = SCO_additional_english_defectors_nsb }
+	}
+	else_if = {
+		limit = { check_variable = { endtimes_additional_english_defectors_mode = 2 } }
+		delete_unit = { id = 9905931 disband = no }
+		delete_unit = { id = 9905932 disband = no }
+		SCO = { load_oob = SCO_additional_english_defectors_legacy_2024 }
+	}
+	else_if = {
+		limit = { check_variable = { endtimes_additional_english_defectors_mode = 3 } }
+		delete_unit = { id = 9905931 disband = no }
+		delete_unit = { id = 9905932 disband = no }
+		SCO = { load_oob = SCO_additional_english_defectors_legacy_2026 }
+	}
+}
