@@ -33,7 +33,7 @@ division_template = {
 }
 units = {
 	division = {
-		name = "Luftlandebrigade 31 'Oldenburg'"
+		name = "Luftlandebrigade 'Spree'"
 		location = 6521
 		division_template = "Luftlandebrigade"
 		start_experience_factor = 0.65
@@ -41,7 +41,7 @@ units = {
 
 	}
 	division = {
-		name = "Heeresfliegerbrigade 3"
+		name = "Heeresfliegerbrigade 'Berlin'"
 
 		location = 6521
 		division_template = "Heeresfliegerbrigade"

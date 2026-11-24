@@ -109,6 +109,20 @@ endtimes_create_independent_east_germany = {
 					set_technology = { land_Drone_equipment3 = 1 }
 				}
 				load_oob = DDR_endtimes_berlin_drone_brigades
+				if = {
+					limit = { has_dlc = "No Step Back" }
+					load_oob = DDR_endtimes_defectors_nsb
+					load_oob = DDR_additional_german_defectors_nsb
+				}
+				else_if = {
+					limit = { has_start_date < 2025.1.1 }
+					load_oob = DDR_endtimes_defectors_legacy_2024
+					load_oob = DDR_additional_german_defectors_legacy_2024
+				}
+				else = {
+					load_oob = DDR_endtimes_defectors_legacy_2026
+					load_oob = DDR_additional_german_defectors_legacy_2026
+				}
 			}
 			if = {
 				limit = { has_dlc = "By Blood Alone" }

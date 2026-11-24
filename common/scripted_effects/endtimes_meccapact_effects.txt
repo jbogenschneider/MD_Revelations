@@ -132,8 +132,7 @@ endtimes_apply_meccapact_founding_realignment = {
 	}
 }
 
-# Iran scope. Release only the specified Iranian subjects, then move the four
-# surviving countries into MeccaPact without releasing anyone else's subjects.
+# Iran scope. Free the specified Iranian subjects and prepare Hamas for accession.
 endtimes_iran_join_meccapact = {
 	every_country = {
 		limit = {
@@ -156,12 +155,28 @@ endtimes_iran_join_meccapact = {
 		remove_ideas = faction_resistance_axis_member
 		dismantle_faction = yes
 	}
+	HAM = {
+		if = {
+			limit = { exists = yes }
+			if = {
+				limit = { is_subject = yes NOT = { rev_is_meccapact_faction = yes } }
+				overlord = { set_autonomy = { target = HAM autonomy_state = autonomy_free } }
+			}
+			set_country_leader_ideology = Autocracy
+			set_politics = { ruling_party = communism elections_allowed = no }
+			clear_array = ruling_party
+			clear_array = gov_coalition_array
+			add_to_array = { ruling_party = 7 } # Emerging Autocracy.
+			clr_country_flag = party8_banned
+			startup_politics = yes
+		}
+	}
 	# Settle wars with the destination bloc before requesting membership.
 	every_country = {
 		limit = {
 			exists = yes
 			is_subject = no
-			OR = { tag = PER tag = IRQ tag = FSA tag = HEZ }
+			OR = { tag = PER tag = IRQ tag = FSA tag = HEZ tag = HAM }
 		}
 		save_event_target_as = endtimes_iran_bloc_applicant
 		every_other_country = {
@@ -177,6 +192,41 @@ endtimes_iran_join_meccapact = {
 	if = {
 		limit = { rev_is_meccapact_faction = yes }
 		set_country_flag = endtimes_iran_meccapact_completed
+		UAE = {
+			if = {
+				limit = { exists = yes }
+				if = {
+					limit = { SAU = { exists = yes } }
+					if = {
+						limit = { has_war_with = SAU }
+						white_peace = SAU
+					}
+					diplomatic_relation = { country = SAU relation = non_aggression_pact active = yes }
+				}
+			}
+		}
+		SAU = {
+			if = {
+				limit = { exists = yes HOU = { exists = yes NOT = { is_subject_of = SAU } } }
+				HOU = {
+					if = {
+						limit = { is_subject = yes }
+						overlord = { set_autonomy = { target = HOU autonomy_state = autonomy_free } }
+					}
+				}
+				if = {
+					limit = { has_war_with = HOU }
+					white_peace = HOU
+				}
+				puppet = { target = HOU end_wars = no end_civil_wars = no }
+			}
+		}
+		SYR = {
+			if = {
+				limit = { exists = yes ROJ = { exists = yes } }
+				annex_country = { target = ROJ }
+			}
+		}
 		endtimes_report_iran_meccapact = yes
 	}
 }

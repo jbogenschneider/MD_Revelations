@@ -95,35 +95,35 @@ units = {
 	}
 	division = {
 		name = "12e Brigade de drones"
-		location = 9764 # Barcelona, Catalunya
+		location = 9898 # Montpellier
 		division_template = "Drone Defense Brigade"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.9
 	}
 	division = {
 		name = "13e Brigade de drones"
-		location = 9764
+		location = 9898
 		division_template = "Drone Defense Brigade"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.9
 	}
 	division = {
 		name = "14e Brigade de drones"
-		location = 9764
+		location = 9898
 		division_template = "Drone Defense Brigade"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.9
 	}
 	division = {
 		name = "15e Brigade de drones"
-		location = 9764
+		location = 9853 # Perpignan
 		division_template = "Drone Defense Brigade"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.9
 	}
 	division = {
 		name = "16e Brigade de drones"
-		location = 9764
+		location = 9853
 		division_template = "Drone Defense Brigade"
 		start_experience_factor = 0.35
 		start_equipment_factor = 0.9

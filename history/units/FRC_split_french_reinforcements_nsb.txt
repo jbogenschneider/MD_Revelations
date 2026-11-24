@@ -134,7 +134,7 @@ division_template = {
 }
 units = {
 	division = {
-		name = "2e Brigade blindée populaire"
+		name = "7e brigade blindée 'Force et Audace'"
 		location = 11506
 		division_template = "French Defectors - Armored Brigade"
 		start_experience_factor = 0.55
@@ -142,7 +142,7 @@ units = {
 		force_equipment_variants = { medium_tank_amphibious_chassis_1 = { amount = 50 owner = FRA version_name = "VAB Milan" } }
 	}
 	division = {
-		name = "Brigade marine de la Commune"
+		name = "9e brigade légère blindée de marine 'Semper et Ubique'"
 		location = 11506
 		division_template = "French Defectors - Light Armored Marine Brigade"
 		start_experience_factor = 0.55
@@ -151,22 +151,22 @@ units = {
 		force_equipment_variants = { medium_tank_amphibious_chassis_1 = { amount = 50 owner = FRA version_name = "VAB Milan" } }
 	}
 	division = {
-		name = "Régiment mécanisé de la République"
-		location = 11506
+		name = "Brigade franco-allemande"
+		location = 11834
 		division_template = "French Defectors - Franco-German Brigade"
 		start_experience_factor = 0.55
 		start_equipment_factor = 0.01
 		force_equipment_variants = { medium_tank_amphibious_chassis_1 = { amount = 50 owner = FRA version_name = "VAB Milan" } }
 	}
 	division = {
-		name = "Brigade alpine populaire"
-		location = 11506
+		name = "27e brigade d'infanterie de montagne 'Vivre libre ou mourir'"
+		location = 11834
 		division_template = "French Defectors - Mountain Infantry Brigade"
 		start_experience_factor = 0.6
 		start_equipment_factor = 0.01
 	}
 	division = {
-		name = "1re Brigade blindée populaire"
+		name = "2e brigade blindée 'Division Leclerc'"
 		location = 11506
 		division_template = "French Defectors - Armored Brigade"
 		start_experience_factor = 0.55
@@ -174,8 +174,8 @@ units = {
 		force_equipment_variants = { medium_tank_amphibious_chassis_1 = { amount = 50 owner = FRA version_name = "VAB Milan" } }
 	}
 	division = {
-		name = "Brigade parachutiste de la République"
-		location = 11506
+		name = "11e brigade parachutiste 'Droit devant'"
+		location = 11834
 		division_template = "French Defectors - Parachute Brigade"
 		start_experience_factor = 0.55
 		start_equipment_factor = 0.01

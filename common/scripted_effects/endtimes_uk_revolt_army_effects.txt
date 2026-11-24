@@ -88,16 +88,4 @@ endtimes_reassign_uk_revolt_army = {
 		delete_unit = { id = 9905703 disband = no }
 		delete_unit = { id = 9905704 disband = no }
 	}
-	if = {
-		limit = { check_variable = { endtimes_uk_revolt_army_mode = 1 } }
-		SCO = { load_oob = SCO_revolt_army_nsb }
-	}
-	else_if = {
-		limit = { check_variable = { endtimes_uk_revolt_army_mode = 2 } }
-		SCO = { load_oob = SCO_revolt_army_legacy_2024 }
-	}
-	else_if = {
-		limit = { check_variable = { endtimes_uk_revolt_army_mode = 3 } }
-		SCO = { load_oob = SCO_revolt_army_legacy_2026 }
-	}
 }

@@ -35,7 +35,7 @@ division_template = {
 units = {
 	division = {
 		#name = "1re Brigade Mécanisée"
-		name = "1re Brigade d'Infanterie Blindée"
+		name = "1re Brigade blindée 'Sambre'"
 		location = 11506
 		division_template = "Brigade Mécanisée"
 		start_experience_factor = 0.75
@@ -43,7 +43,7 @@ units = {
 	}
 	division = {
 		#name = "7e Brigade Mécanisée"
-		name = "7e Brigade d'Infanterie Blindée"
+		name = "7e Brigade blindée 'Meuse'"
 		location = 11506
 		division_template = "Brigade Mécanisée"
 		start_experience_factor = 0.75
@@ -51,7 +51,7 @@ units = {
 	}
 	division = {
 		#name = "Régiment Para-Commando"
-		name = "Brigade Légère"
+		name = "Brigade légère 'Ardennes'"
 		location = 11506
 		division_template = "Régiment Para-Commando"
 		start_experience_factor = 0.8

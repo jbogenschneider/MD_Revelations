@@ -29,28 +29,28 @@ division_template = {
 }
 units = {
 	division = {
-		name = "8th Infantry Brigade"
+		name = "Derry Infantry Brigade"
 		location = 385 #Derry
 		division_template = "Inf Brigade"
 		start_experience_factor = 0.75
 		start_equipment_factor = 0.8
 	}
 	division = {
-		name = "51st Highland Brigade"
+		name = "Highland Volunteer Brigade"
 		location = 6385 #Stirling
 		division_template = "Inf Brigade"
 		start_experience_factor = 0.75
 		start_equipment_factor = 0.8
 	}
 	division = {
-		name = "39th Infantry Brigade"
+		name = "Belfast Infantry Brigade"
 		location = 3379 #Belfast
 		division_template = "Inf Brigade"
 		start_experience_factor = 0.75
 		start_equipment_factor = 0.8
 	}
 	division = {
-		name = "3rd Infantry Brigade"
+		name = "Caledonian Infantry Brigade"
 		location = 3242 # Highlands province on this map
 		division_template = "Drone Defense Brigade"
 		start_experience_factor = 0.75

@@ -78,42 +78,42 @@ division_template = {
 }
 units = {
 	division = {
-		name = "1re Brigade blindée populaire"
+		name = "2ème Brigade blindée"
 		location = 11506
 		division_template = "French Defectors - Armoured Brigade"
 		start_experience_factor = 0.75
 		start_equipment_factor = 0.01
 	}
 	division = {
-		name = "2e Brigade blindée populaire"
+		name = "7ème Brigade blindée"
 		location = 11506
 		division_template = "French Defectors - Armoured Brigade"
 		start_experience_factor = 0.75
 		start_equipment_factor = 0.01
 	}
 	division = {
-		name = "Brigade marine de la Commune"
+		name = "9ème Brigade légère blindée marine"
 		location = 11506
 		division_template = "French Defectors - Light Armoured Marine Brigade"
 		start_experience_factor = 0.4
 	}
 	division = {
-		name = "Brigade parachutiste de la République"
-		location = 11506
+		name = "11ème Brigade légère parachutiste"
+		location = 11834
 		division_template = "French Defectors - Parachute Brigade"
 		start_experience_factor = 0.75
 		start_equipment_factor = 0.01
 	}
 	division = {
-		name = "Brigade alpine populaire"
-		location = 11506
+		name = "27ème Brigade d'infanterie de montagne"
+		location = 11834
 		division_template = "French Defectors - Mountain Infantry Brigade"
 		start_experience_factor = 0.75
 		start_equipment_factor = 0.01
 	}
 	division = {
-		name = "Régiment mécanisé de la République"
-		location = 11506
+		name = "3ème Régiment de hussards"
+		location = 11834
 		division_template = "French Defectors - Franco-German Brigade"
 		start_experience_factor = 0.75
 		start_equipment_factor = 0.01

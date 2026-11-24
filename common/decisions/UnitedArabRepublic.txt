@@ -1027,6 +1027,7 @@ form_UAR_category = {
 			}
 			every_country = {
 				limit = {
+					ROOT = { NOT = { original_tag = SAU } }
 					is_arabic_nation = yes
 					NOT = { has_country_flag = formed_neo_baathist_uar }
 					NOT = { has_country_flag = united_neo_baathist_uar }
@@ -1122,6 +1123,7 @@ form_UAR_category = {
 			}
 			every_country = {
 				limit = {
+					ROOT = { NOT = { original_tag = SAU } }
 					is_arabic_nation = yes
 					NOT = { has_country_flag = formed_neo_baathist_uar }
 					NOT = { has_country_flag = formed_baathist_uar }

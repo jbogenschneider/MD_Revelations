@@ -30,7 +30,6 @@ endtimes_tag_frc_italian_reinforcements = {
 endtimes_reassign_frc_italian_reinforcements = {
 	if = {
 		limit = { has_country_flag = endtimes_frc_italian_reinforcements_mode_tagged }
-		FRC = { load_oob = FRC_split_italian_reinforcements }
 		delete_unit = { id = 9906021 disband = no }
 		delete_unit = { id = 9906022 disband = no }
 		delete_unit = { id = 9906023 disband = no }

@@ -77,6 +77,69 @@ endtimes_launch_global_war = {
 					event_target:endtimes_global_war_nato_leader = { tag = GER }
 					has_war_with = GER
 				}
+				FRA = {
+					if = {
+						limit = { exists = yes }
+						FRC = {
+							if = {
+								limit = {
+									exists = yes
+									NOT = { has_war_with = FRA }
+									NOT = { is_in_faction_with = FRA }
+								}
+								declare_war_on = { target = FRA type = annex_everything }
+							}
+						}
+						SWI = {
+							if = {
+								limit = {
+									exists = yes
+									NOT = { has_war_with = FRA }
+									NOT = { is_in_faction_with = FRA }
+								}
+								declare_war_on = { target = FRA type = annex_everything }
+							}
+						}
+					}
+				}
+				SCO = {
+					if = {
+						limit = {
+							exists = yes
+							ENG = { exists = yes }
+							NOT = { has_war_with = ENG }
+							NOT = { is_in_faction_with = ENG }
+						}
+						declare_war_on = { target = ENG type = annex_everything }
+					}
+				}
+				BUL = {
+					if = {
+						limit = {
+							exists = yes
+							GRE = { exists = yes }
+							NOT = { has_war_with = GRE }
+							NOT = { is_in_faction_with = GRE }
+						}
+						declare_war_on = { target = GRE type = annex_everything }
+					}
+				}
+				every_country = {
+					limit = {
+						exists = yes
+						OR = { tag = DDR tag = CZE tag = AUS }
+						NOT = { has_war_with = GER }
+						NOT = { is_in_faction_with = GER }
+					}
+					GER = {
+						if = {
+							limit = { PREV = { tag = DDR } }
+							create_wargoal = { target = PREV type = annex_everything }
+						}
+						else = { create_wargoal = { target = PREV type = puppet_wargoal_focus } }
+					}
+					declare_war_on = { target = GER type = annex_everything }
+				}
 				FRC = {
 					if = {
 						limit = { exists = yes }
@@ -161,6 +224,49 @@ endtimes_launch_global_war = {
 				set_country_flag = endtimes_sau_army_10_deployed
 				log = "[GetDateText]: Loaded the Saudi Army 10 deployment for Montpellier (9898)."
 			}
+		}
+		if = {
+			limit = {
+				exists = yes
+				has_war_with = GER
+				# Retain the original flag so older saves cannot deploy the same units twice.
+				NOT = { has_country_flag = endtimes_sau_barcelona_special_forces_deployed }
+				FRC = { controls_province = 9853 }
+			}
+			if = {
+				limit = { NOT = { has_template = "Special Operation Forces 2027 A" } }
+				# Use the standard MD special forces brigade if the saved design is absent.
+				division_template = {
+					name = "Special Operation Forces 2027 A"
+					regiments = {
+						Special_Forces = { x = 0 y = 0 }
+						Special_Forces = { x = 0 y = 1 }
+						Special_Forces = { x = 0 y = 2 }
+						Special_Forces = { x = 1 y = 0 }
+						Special_Forces = { x = 1 y = 1 }
+						Special_Forces = { x = 1 y = 2 }
+						Arty_Bat = { x = 2 y = 0 }
+						Arty_Bat = { x = 2 y = 1 }
+						Arty_Bat = { x = 2 y = 2 }
+					}
+					support = {
+						L_Recce_Comp = { x = 0 y = 0 }
+						L_Engi_Comp = { x = 0 y = 1 }
+						combat_service_support_company = { x = 0 y = 2 }
+					}
+				}
+			}
+			961 = { # Languedoc-Roussillon
+				create_unit = {
+					owner = SAU
+					prioritize_location = 9853
+					country_score = { base = 100 modifier = { tag = FRC add = 100 } }
+					division = "division_template = \"Special Operation Forces 2027 A\" start_manpower_factor = 1.0 start_equipment_factor = 1.0"
+					count = 4
+				}
+			}
+			set_country_flag = endtimes_sau_barcelona_special_forces_deployed
+			log = "[GetDateText]: Saudi special forces deployment executed for Perpignan (9853)."
 		}
 	}
 }

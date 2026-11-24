@@ -30,7 +30,7 @@ division_template = {
 }
 units = {
 	division = {
-		name = "Luftbewegliche brigade 1"
+		name = "Luftbewegliche Brigade 'Havel'"
 		officer = {
 			name = "Reinhard Kammerer"
 
@@ -47,7 +47,7 @@ units = {
 		start_equipment_factor = 0.01
 	}
 	division = {
-		name = "Spezialisierte Einsatzkräfte Marine"
+		name = "Marinekommando 'Ostsee'"
 		officer = {
 			name = "Stephan Plath"
 

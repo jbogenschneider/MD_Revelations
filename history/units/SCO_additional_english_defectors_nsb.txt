@@ -13,7 +13,7 @@ division_template = {
 }
 units = {
 	division = {
-		name = "22nd Special Air Service Regiment"
+		name = "Caledonian Special Air Service"
 		location = 11333
 		division_template = "Special Forces"
 		start_experience_factor = 0.80
@@ -21,7 +21,7 @@ units = {
 		force_equipment_variants = { infantry_weapons3 = { amount = 333 owner = CAN version_name = "L119A1" } }
 	}
 	division = {
-		name = "Special Boat Service"
+		name = "Forth Special Boat Squadron"
 		location = 11333
 		division_template = "Special Forces"
 		start_experience_factor = 0.75

@@ -327,6 +327,9 @@ country_event = {
 	picture = GFX_united_arab_republic
 
 	is_triggered_only = yes
+	trigger = {
+		NOT = { FROM = { original_tag = SAU } }
+	}
 
 	option = {
 		log = "[GetDateText]: [This.GetName]: UAR.4.a executed"

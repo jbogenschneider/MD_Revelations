@@ -6,7 +6,12 @@ endtimes_apply_join_or_war = {
 		limit = { exists = yes endtimes_join_or_war_country = yes }
 		save_event_target_as = endtimes_ultimatum_applicant
 		if = {
-			limit = { is_subject = yes }
+			limit = {
+				is_subject = yes
+				NOT = {
+					AND = { endtimes_join_or_war_saudi_subject = yes is_subject_of = SAU }
+				}
+			}
 			overlord = {
 				set_autonomy = { target = event_target:endtimes_ultimatum_applicant autonomy_state = autonomy_free }
 			}
@@ -44,10 +49,15 @@ endtimes_apply_join_or_war = {
 					tag = SER
 					tag = ALB
 					tag = KOS
+					endtimes_join_or_war_saudi_subject = yes
 				}
 			}
 			set_country_leader_ideology = Autocracy
-			set_politics = { ruling_party = communism }
+			if = {
+				limit = { endtimes_join_or_war_saudi_subject = yes }
+				set_politics = { ruling_party = communism elections_allowed = no }
+			}
+			else = { set_politics = { ruling_party = communism } }
 			clear_array = ruling_party
 			clear_array = gov_coalition_array
 			add_to_array = { ruling_party = 7 } # Emerging Autocracy.
@@ -75,6 +85,21 @@ endtimes_apply_join_or_war = {
 			startup_politics = yes
 		}
 		MeccaPact_join = yes
+		if = {
+			limit = {
+				endtimes_join_or_war_saudi_subject = yes
+				SAU = { exists = yes is_subject = no }
+				NOT = { is_subject_of = SAU }
+			}
+			save_event_target_as = endtimes_ultimatum_saudi_subject
+			SAU = {
+				puppet = {
+					target = event_target:endtimes_ultimatum_saudi_subject
+					end_wars = no
+					end_civil_wars = no
+				}
+			}
+		}
 		endtimes_apply_meccapact_ultimatum_benefits = yes
 	}
 }

@@ -44,14 +44,9 @@ rev_spr_tag_frc_volunteers_legacy = {
 }
 rev_spr_reassign_frc_volunteers = {
 	if = {
-		limit = { exists = yes has_variable = rev_spr_frc_volunteer_oob_mode FRC = { owns_state = 86 } }
+		limit = { exists = yes has_variable = rev_spr_frc_volunteer_oob_mode FRC = { owns_state = 961 } }
 		delete_unit = { id = 9905821 disband = no }
 		delete_unit = { id = 9905822 disband = no }
 		delete_unit = { id = 9905823 disband = no }
-		if = {
-			limit = { check_variable = { rev_spr_frc_volunteer_oob_mode = 1 } }
-			FRC = { load_oob = FRC_split_spr_army_nsb }
-		}
-		else = { FRC = { load_oob = FRC_split_spr_army_legacy } }
 	}
 }

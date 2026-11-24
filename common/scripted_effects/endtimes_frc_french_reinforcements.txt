@@ -80,15 +80,13 @@ endtimes_tag_frc_french_reinforcements_legacy = {
 }
 
 endtimes_reassign_frc_french_reinforcements = {
-	# The original split mode is already present in saves made before these units were tagged.
-	if = {
-		limit = { check_variable = { rev_fra_regional_oob_mode = 1 } }
-		FRC = { load_oob = FRC_split_french_reinforcements_nsb }
-	}
-	else = { FRC = { load_oob = FRC_split_french_reinforcements_legacy } }
-
 	if = {
 		limit = { has_variable = endtimes_frc_french_reinforcements_mode }
+		if = {
+			limit = { check_variable = { endtimes_frc_french_reinforcements_mode = 1 } }
+			FRC = { load_oob = FRC_split_french_reinforcements_nsb }
+		}
+		else = { FRC = { load_oob = FRC_split_french_reinforcements_legacy } }
 		delete_unit = { id = 9906011 disband = no }
 		delete_unit = { id = 9906012 disband = no }
 		delete_unit = { id = 9906013 disband = no }

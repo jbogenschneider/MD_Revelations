@@ -85,27 +85,10 @@ endtimes_tag_uk_revolt_england_army_legacy_2026 = {
 
 endtimes_reassign_uk_revolt_england_army = {
 	if = {
-		limit = { check_variable = { endtimes_uk_revolt_england_army_mode = 1 } }
+		limit = { has_variable = endtimes_uk_revolt_england_army_mode }
 		delete_unit = { id = 9905705 disband = no }
 		delete_unit = { id = 9905706 disband = no }
 		delete_unit = { id = 9905707 disband = no }
 		delete_unit = { id = 9905708 disband = no }
-		SCO = { load_oob = SCO_revolt_england_army_nsb }
-	}
-	else_if = {
-		limit = { check_variable = { endtimes_uk_revolt_england_army_mode = 2 } }
-		delete_unit = { id = 9905705 disband = no }
-		delete_unit = { id = 9905706 disband = no }
-		delete_unit = { id = 9905707 disband = no }
-		delete_unit = { id = 9905708 disband = no }
-		SCO = { load_oob = SCO_revolt_england_army_legacy_2024 }
-	}
-	else_if = {
-		limit = { check_variable = { endtimes_uk_revolt_england_army_mode = 3 } }
-		delete_unit = { id = 9905705 disband = no }
-		delete_unit = { id = 9905706 disband = no }
-		delete_unit = { id = 9905707 disband = no }
-		delete_unit = { id = 9905708 disband = no }
-		SCO = { load_oob = SCO_revolt_england_army_legacy_2026 }
 	}
 }

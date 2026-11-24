@@ -51,28 +51,28 @@ division_template = {
 }
 units = {
 	division = {
-		name = "The Light Dragoons"
+		name = "London Light Dragoons"
 		location = 11333
 		division_template = "Small Inf Brigade with Recon"
 		start_experience_factor = 0.75
 		start_equipment_factor = 0.01
 	}
 	division = {
-		name = "16th Air Assault Brigade"
+		name = "Thames Air Assault Brigade"
 		location = 11333
 		division_template = "Air Assault Brigade"
 		start_experience_factor = 0.75
 		start_equipment_factor = 0.01
 	}
 	division = {
-		name = "42nd Infantry Brigade"
+		name = "Northern Volunteer Infantry Brigade"
 		location = 11333
 		division_template = "English Inf Brigade"
 		start_experience_factor = 0.75
 		start_equipment_factor = 0.01
 	}
 	division = {
-		name = "3rd Commando Brigade"
+		name = "Clyde Commando Brigade"
 		location = 11333
 		division_template = "Marine Regiment"
 		start_experience_factor = 0.75

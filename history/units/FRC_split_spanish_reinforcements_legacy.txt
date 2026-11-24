@@ -31,15 +31,15 @@ division_template = {
 }
 units = {
 	division = {
-		name = "XII Brigade Guadarrama"
-		location = 9764
+		name = "XII Brigada Mecanizada 'Montserrat'"
+		location = 9853
 		division_template = "Spanish Defectors - Mechanized Brigade"
 		start_experience_factor = 0.75
 		start_equipment_factor = 0.01
 	}
 	division = {
-		name = "VI Parachute Brigade Almogávares"
-		location = 9764
+		name = "VI Brigada Paracaidista 'Tramuntana'"
+		location = 9853
 		division_template = "Spanish Defectors - Parachute Brigade"
 		start_experience_factor = 0.75
 		start_equipment_factor = 0.01

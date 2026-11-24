@@ -27,6 +27,5 @@ endtimes_reassign_additional_italian_defectors = {
 		delete_unit = { id = 9905911 disband = no }
 		delete_unit = { id = 9905912 disband = no }
 		delete_unit = { id = 9905913 disband = no }
-		FRC = { load_oob = FRC_additional_italian_defectors }
 	}
 }

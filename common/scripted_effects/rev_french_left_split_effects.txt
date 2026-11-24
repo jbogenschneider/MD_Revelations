@@ -144,9 +144,19 @@ rev_fra_start_left_split = {
 					add_core_of = FRC
 				}
 			}
-			86 = {
-				transfer_state_to = FRC # Catalunya.
-				add_core_of = FRC
+			1059 = { # Aosta Valley.
+				if = {
+					limit = { is_owned_by = ITA }
+					transfer_state_to = FRC
+					add_core_of = FRC
+				}
+			}
+			1060 = { # Liguria.
+				if = {
+					limit = { is_owned_by = ITA }
+					transfer_state_to = FRC
+					add_core_of = FRC
+				}
 			}
 			FRC = {
 				every_owned_state = { add_core_of = FRA }
@@ -183,7 +193,33 @@ rev_fra_start_left_split = {
 						limit = { owns_state = 63 }
 						load_oob = FRC_split_provence_drone_brigades
 					}
+					if = {
+						limit = { owns_state = 1060 }
+						load_oob = FRC_split_liguria_drone_brigades
+					}
 				}
+				if = {
+					limit = { owns_state = 77 }
+					load_oob = FRC_additional_italian_defectors
+					load_oob = FRC_split_italian_reinforcements
+				}
+				if = {
+					limit = { owns_state = 961 }
+					if = {
+						limit = { has_dlc = "No Step Back" }
+						load_oob = FRC_split_spr_army_nsb
+						load_oob = FRC_split_spanish_reinforcements_nsb
+					}
+					else = {
+						load_oob = FRC_split_spr_army_legacy
+						load_oob = FRC_split_spanish_reinforcements_legacy
+					}
+				}
+				if = {
+					limit = { has_dlc = "No Step Back" }
+					load_oob = FRC_split_belgian_reinforcements_nsb
+				}
+				else = { load_oob = FRC_split_belgian_reinforcements_legacy }
 				set_country_flag = rev_frc_left_split_established
 			}
 			# Removes the tagged original formations wherever they have moved, then
@@ -194,7 +230,10 @@ rev_fra_start_left_split = {
 				delete_unit = { id = 9905801 disband = no }
 				FRC = { load_oob = FRC_split_army_legacy_provence }
 			}
-			endtimes_reassign_frc_french_reinforcements = yes
+			if = {
+				limit = { FRC = { owns_state = 63 } }
+				endtimes_reassign_frc_french_reinforcements = yes
+			}
 			ITA = {
 				rev_ita_reassign_frc_volunteers = yes
 				if = {
@@ -206,7 +245,7 @@ rev_fra_start_left_split = {
 			SPR = {
 				rev_spr_reassign_frc_volunteers = yes
 				if = {
-					limit = { exists = yes FRC = { owns_state = 86 } }
+					limit = { exists = yes FRC = { owns_state = 961 } }
 					endtimes_reassign_frc_spanish_reinforcements = yes
 				}
 			}
@@ -217,7 +256,6 @@ rev_fra_start_left_split = {
 				}
 			}
 			ingame_update_setup = yes
-			declare_war_on = { target = FRC type = annex_everything }
 			if = {
 				limit = { NOT = { has_global_flag = endtimes_french_civil_war_announced } }
 				set_global_flag = endtimes_french_civil_war_announced

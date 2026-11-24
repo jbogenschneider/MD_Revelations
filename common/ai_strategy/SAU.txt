@@ -201,25 +201,88 @@ SAU_endtimes_defend_frc = {
 	ai_strategy = { type = force_defend_ally_borders id = FRC value = 1000 }
 }
 
+SAU_endtimes_take_lyon = {
+	allowed = { original_tag = SAU }
+	enable = {
+		has_war_with = FRA
+		FRA = { controls_province = 3589 } # Lyon
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = front_unit_request state = 62 value = 500 }
+	ai_strategy = { type = force_concentration_target_weight state = 62 value = 700 }
+	ai_strategy = {
+		type = front_control
+		state = 62 # Rhone-Alpes
+		priority = 1000
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+		manual_attack = yes
+	}
+}
+
 SAU_endtimes_take_toulouse = {
 	allowed = { original_tag = SAU }
 	enable = {
-		has_country_flag = endtimes_sau_army_10_deployed
-		is_in_faction_with = FRC
 		has_war_with = FRA
+		NOT = { FRA = { controls_province = 3589 } } # Lyon first
 		FRA = { controls_province = 6766 } # Toulouse
 	}
 	abort_when_not_enabled = yes
 
-	ai_strategy = { type = front_unit_request state = 61 value = 200 }
-	ai_strategy = { type = force_concentration_target_weight state = 61 value = 300 }
+	ai_strategy = { type = front_unit_request state = 61 value = 500 }
+	ai_strategy = { type = force_concentration_target_weight state = 61 value = 700 }
 	ai_strategy = {
 		type = front_control
 		state = 61 # Midi-Pyrénées
-		priority = 240
+		priority = 1000
 		ordertype = front
-		execution_type = balanced
+		execution_type = rush
 		execute_order = yes
 		manual_attack = yes
+	}
+}
+
+SAU_endtimes_suspend_home_defense = {
+	allowed = { original_tag = SAU }
+	enable = {
+		has_war_with = FRA
+		NOT = { date < 2028.12.1 }
+		date < 2029.2.1
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = garrison value = -200 }
+	ai_strategy = {
+		type = front_unit_request
+		state_trigger = {
+			OR = {
+				is_core_of = SAU
+				any_neighbor_state = { is_core_of = SAU }
+			}
+		}
+		value = -100
+	}
+}
+
+SAU_endtimes_low_home_defense = {
+	allowed = { original_tag = SAU }
+	enable = {
+		has_war_with = FRA
+		NOT = { date < 2029.2.1 }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = garrison value = -8 }
+	ai_strategy = {
+		type = front_unit_request
+		state_trigger = {
+			OR = {
+				is_core_of = SAU
+				any_neighbor_state = { is_core_of = SAU }
+			}
+		}
+		value = -80
 	}
 }

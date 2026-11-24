@@ -46,11 +46,6 @@ endtimes_tag_frc_belgian_reinforcements_legacy = {
 endtimes_reassign_frc_belgian_reinforcements = {
 	if = {
 		limit = { has_variable = endtimes_frc_belgian_reinforcements_mode }
-		if = {
-			limit = { check_variable = { endtimes_frc_belgian_reinforcements_mode = 1 } }
-			FRC = { load_oob = FRC_split_belgian_reinforcements_nsb }
-		}
-		else = { FRC = { load_oob = FRC_split_belgian_reinforcements_legacy } }
 		delete_unit = { id = 9906041 disband = no }
 		delete_unit = { id = 9906042 disband = no }
 		delete_unit = { id = 9906043 disband = no }

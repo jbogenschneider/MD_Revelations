@@ -7,7 +7,7 @@ ideas = {
 			modifier = {
 				monthly_population = 0.20
 				army_org_factor = 0.10
-				army_morale_factor = 0.20
+				army_morale_factor = 0.10
 			}
 		}
 		endtimes_mark = {

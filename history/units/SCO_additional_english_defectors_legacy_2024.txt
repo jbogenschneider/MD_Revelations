@@ -23,14 +23,14 @@ division_template = {
 }
 units = {
 	division = {
-		name = "22nd Special Air Service Regiment"
+		name = "Caledonian Special Air Service"
 		location = 11333
 		division_template = "Rebel Air Assault Brigade"
 		start_experience_factor = 0.75
 		start_equipment_factor = 0.01
 	}
 	division = {
-		name = "Special Boat Service"
+		name = "Forth Special Boat Squadron"
 		location = 11333
 		division_template = "Special Forces"
 		start_experience_factor = 0.75

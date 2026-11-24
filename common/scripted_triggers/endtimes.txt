@@ -1,3 +1,7 @@
+endtimes_join_or_war_saudi_subject = {
+	OR = { tag = KUW tag = BHR tag = QAT tag = LBA tag = HOR }
+}
+
 # Surviving countries accepting Alex's December 5, 2028 ultimatum.
 endtimes_join_or_war_country = {
 	OR = {
@@ -15,6 +19,7 @@ endtimes_join_or_war_country = {
 		tag = MOR
 		tag = TUN
 		tag = AUS
+		endtimes_join_or_war_saudi_subject = yes
 	}
 }
 

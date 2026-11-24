@@ -26,22 +26,22 @@ division_template = {
 }
 units = {
 	division = {
-		name = "I Brigade Aragón"
-		location = 9764
+		name = "I Brigada Mecanizada 'Pirineos'"
+		location = 9853
 		division_template = "Spanish Mechanized Brigade"
 		start_experience_factor = 0.75
 		start_equipment_factor = 0.01
 	}
 	division = {
-		name = "3rd Special Operations Group Valencia"
-		location = 9764
+		name = "Grupo de Operaciones Especiales 'Costa Brava'"
+		location = 9853
 		division_template = "Spanish Special Operations Group"
 		start_experience_factor = 0.9
 		start_equipment_factor = 0.01
 	}
 	division = {
-		name = "4th Special Operations Group Tercio del Ampurdán"
-		location = 9764
+		name = "Grupo de Operaciones Especiales 'Montseny'"
+		location = 9853
 		division_template = "Spanish Special Operations Group"
 		start_experience_factor = 0.9
 		start_equipment_factor = 0.01

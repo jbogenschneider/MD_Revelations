@@ -49,21 +49,8 @@ endtimes_tag_ddr_defectors_legacy_2026 = {
 
 endtimes_reassign_ddr_defectors = {
 	if = {
-		limit = { check_variable = { endtimes_ddr_defectors_oob_mode = 1 } }
+		limit = { has_variable = endtimes_ddr_defectors_oob_mode }
 		delete_unit = { id = 9905901 disband = no }
 		delete_unit = { id = 9905902 disband = no }
-		DDR = { load_oob = DDR_endtimes_defectors_nsb }
-	}
-	else_if = {
-		limit = { check_variable = { endtimes_ddr_defectors_oob_mode = 2 } }
-		delete_unit = { id = 9905901 disband = no }
-		delete_unit = { id = 9905902 disband = no }
-		DDR = { load_oob = DDR_endtimes_defectors_legacy_2024 }
-	}
-	else_if = {
-		limit = { check_variable = { endtimes_ddr_defectors_oob_mode = 3 } }
-		delete_unit = { id = 9905901 disband = no }
-		delete_unit = { id = 9905902 disband = no }
-		DDR = { load_oob = DDR_endtimes_defectors_legacy_2026 }
 	}
 }

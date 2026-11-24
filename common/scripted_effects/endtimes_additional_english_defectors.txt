@@ -49,21 +49,8 @@ endtimes_tag_additional_english_defectors_legacy_2026 = {
 
 endtimes_reassign_additional_english_defectors = {
 	if = {
-		limit = { check_variable = { endtimes_additional_english_defectors_mode = 1 } }
+		limit = { has_variable = endtimes_additional_english_defectors_mode }
 		delete_unit = { id = 9905931 disband = no }
 		delete_unit = { id = 9905932 disband = no }
-		SCO = { load_oob = SCO_additional_english_defectors_nsb }
-	}
-	else_if = {
-		limit = { check_variable = { endtimes_additional_english_defectors_mode = 2 } }
-		delete_unit = { id = 9905931 disband = no }
-		delete_unit = { id = 9905932 disband = no }
-		SCO = { load_oob = SCO_additional_english_defectors_legacy_2024 }
-	}
-	else_if = {
-		limit = { check_variable = { endtimes_additional_english_defectors_mode = 3 } }
-		delete_unit = { id = 9905931 disband = no }
-		delete_unit = { id = 9905932 disband = no }
-		SCO = { load_oob = SCO_additional_english_defectors_legacy_2026 }
 	}
 }

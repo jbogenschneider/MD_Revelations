@@ -53,21 +53,21 @@ division_template = {
 }
 units = {
 	division = {
-		name = "Brigata Aeromobile 'Friuli'"
+		name = "Brigata Aeromobile 'Aquile del Piemonte'"
 		location = 6780
 		division_template = "Brigata Aeromobile"
 		start_experience_factor = 0.75
 		start_equipment_factor = 0.01
 	}
 	division = {
-		name = "Brigata Alpina 'Julia'"
+		name = "Brigata Alpina 'Monte Rosa'"
 		location = 6780
 		division_template = "Brigata Alpina (Volontari)"
 		start_experience_factor = 0.75
 		start_equipment_factor = 0.01
 	}
 	division = {
-		name = "Brigata di Cavalleria 'Pozzuolo del Friuli'"
+		name = "Brigata di Cavalleria 'Novara'"
 		location = 6635
 		division_template = "Brigata di Cavalleria"
 		start_experience_factor = 0.75

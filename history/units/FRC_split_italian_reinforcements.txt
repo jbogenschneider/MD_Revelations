@@ -77,28 +77,28 @@ division_template = {
 }
 units = {
 	division = {
-		name = "Brigata Marina 'San Marco'"
+		name = "Brigata Marina 'Leone di Liguria'"
 		location = 6780
 		division_template = "Italian Defectors - Brigata Marina"
 		start_experience_factor = 0.75
 		start_equipment_factor = 0.01
 	}
 	division = {
-		name = "Brigata Bersaglieri 'Garibaldi'"
+		name = "Brigata Bersaglieri 'Volontari di Torino'"
 		location = 6780
 		division_template = "Italian Defectors - Brigata Bersaglieri"
 		start_experience_factor = 0.75
 		start_equipment_factor = 0.01
 	}
 	division = {
-		name = "Brigata Meccanizzata 'Pinerolo'"
+		name = "Brigata Meccanizzata 'Monferrato'"
 		location = 6635
 		division_template = "Italian Defectors - Brigata Meccanizzata"
 		start_experience_factor = 0.75
 		start_equipment_factor = 0.01
 	}
 	division = {
-		name = "Brigata Paracadutisti 'Folgore'"
+		name = "Brigata Paracadutisti 'Saetta'"
 		location = 6635
 		division_template = "Italian Defectors - Brigata Paracadutisti"
 		start_experience_factor = 0.75
