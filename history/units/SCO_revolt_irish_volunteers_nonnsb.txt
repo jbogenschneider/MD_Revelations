@@ -1,0 +1,32 @@
+division_template = {
+	name = "Irish Infantry Brigade"
+
+	regiments = {
+		Mot_Inf_Bat = { x = 0 y = 0 }
+		Mot_Inf_Bat = { x = 0 y = 1 }
+		Mot_Inf_Bat = { x = 0 y = 2 }
+	}
+	support = {
+		L_Engi_Comp = { x = 0 y = 0 }
+		Mech_Recce_Comp = { x = 0 y = 1 }
+		armor_Recce_Comp = { x = 0 y = 2 }
+		Arty_Battery = { x = 0 y = 3 }
+	}
+}
+
+units = {
+	division = {
+		name = "1st Irish Volunteer Brigade"
+		location = 9392
+		division_template = "Irish Infantry Brigade"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.01
+	}
+	division = {
+		name = "2nd Irish Volunteer Brigade"
+		location = 9392
+		division_template = "Irish Infantry Brigade"
+		start_experience_factor = 0.55
+		start_equipment_factor = 0.01
+	}
+}

@@ -137,7 +137,7 @@ focus_tree = {
 				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
 			}
 			random_owned_controlled_state = {
-				limit = { free_building_slots = { building = synthetic_refinery size > 0 include_locked = yes } }
+				limit = { free_building_slots = { building = synthetic_refinery size > 0 } }
 				add_building_construction = { type = synthetic_refinery level = 1 instant_build = yes }
 			}
 		}
@@ -213,7 +213,7 @@ focus_tree = {
 
 	focus = {
 		id = REV_HUN_secret_usa_investment
-		icon = ukr_firtash
+		icon = usa_investments
 		x = 10
 		y = 4
 		cost = 4
@@ -374,11 +374,12 @@ focus_tree = {
 			add_war_support = 0.03
 			army_experience = 10
 			add_equipment_to_stockpile = {
-				type = infantry_weapons_5 #C7
+				type = infantry_weapons2 # C7
+				producer = CAN
 				amount = 10000
 			}
 			add_equipment_to_stockpile = {
-				type = cnc_equipment_4 #C2 Equipment
+				type = command_control_equipment # C2 equipment
 				amount = 3000
 			}
 		}

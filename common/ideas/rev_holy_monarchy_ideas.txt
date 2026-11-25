@@ -11,7 +11,10 @@ ideas = {
 			}
 			on_add = { rev_holy_monarchy_refresh_support_floor = yes }
 			on_remove = {
-				remove_dynamic_modifier = { modifier = rev_holy_monarchy_support_floor }
+				if = {
+					limit = { has_dynamic_modifier = { modifier = rev_holy_monarchy_support_floor } }
+					remove_dynamic_modifier = { modifier = rev_holy_monarchy_support_floor }
+				}
 				clear_variable = rev_holy_monarchy_stability_floor
 				clear_variable = rev_holy_monarchy_war_support_floor
 			}

@@ -654,7 +654,7 @@ on_actions = {
 			#influencer
 			If = {
 				limit = {
-					threat > 40
+					threat > 0.40
 				}
 				If = {
 					limit = {

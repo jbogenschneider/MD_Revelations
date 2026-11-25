@@ -128,6 +128,8 @@ rev_fra_start_left_split = {
 		if = {
 			limit = { FRC = { exists = yes } }
 			set_country_flag = rev_fra_left_split_started
+			remove_ideas = pluralist
+			add_ideas = christian
 			# Add reciprocal cores after release so the initial territorial split stays intact.
 			every_owned_state = { add_core_of = FRC }
 			77 = { # Piemonte.
@@ -172,7 +174,8 @@ rev_fra_start_left_split = {
 				update_laws_for_new_nation = yes
 				set_temp_variable = { nation_to_copy_from = FRA.id }
 				copy_internal_factions = yes
-				configure_religious_setup = yes
+				remove_ideas = christian
+				add_ideas = pluralist
 				rev_frc_setup_left_coalition = yes
 				ingame_startup_nations_effect = yes
 				# Use live research, rather than hardcoding the scenario's old tech list.

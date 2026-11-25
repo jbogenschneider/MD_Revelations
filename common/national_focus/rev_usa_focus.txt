@@ -788,7 +788,6 @@ focus_tree = {
         cost = 10
         available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_AIR_FOCUS }
-        prerequisite = { focus = USA_instigate_a_conflict_with_china }
         ai_will_do = {
             base = 1
         }
@@ -888,7 +887,6 @@ focus_tree = {
         available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
         prerequisite = { focus = USA_Invade_Cuba }
-        mutually_exclusive = { focus = USA_instigate_a_conflict_with_china }
         ai_will_do = {
             base = 80
         }

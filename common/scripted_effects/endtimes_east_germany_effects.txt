@@ -90,7 +90,8 @@ endtimes_create_independent_east_germany = {
 			update_laws_for_new_nation = yes
 			set_temp_variable = { nation_to_copy_from = GER.id }
 			copy_internal_factions = yes
-			configure_religious_setup = yes
+			remove_ideas = christian
+			add_ideas = pluralist
 			endtimes_setup_east_germany_politics = yes
 			ingame_startup_nations_effect = yes
 			# Snapshot Germany's researched tech and research capacity at separation,

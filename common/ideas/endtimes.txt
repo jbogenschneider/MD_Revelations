@@ -54,7 +54,10 @@ ideas = {
 				endtimes_refresh_support_floor = yes
 			}
 			on_remove = {
-				remove_dynamic_modifier = { modifier = endtimes_cabal_support_floor }
+				if = {
+					limit = { has_dynamic_modifier = { modifier = endtimes_cabal_support_floor } }
+					remove_dynamic_modifier = { modifier = endtimes_cabal_support_floor }
+				}
 				clear_variable = endtimes_cabal_stability_floor
 				clear_variable = endtimes_cabal_war_support_floor
 			}

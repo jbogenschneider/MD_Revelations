@@ -385,6 +385,15 @@ guiTypes = {
 					spriteType = "GFX_win_header_short"
 				}
 
+				instantTextBoxType = {
+					name = "actions_title"
+					position = { x = 12 y = 9 }
+					font = "hoi_18mbs"
+					text = "DIPLOMACY_ACTIONS_HEADER"
+					maxWidth = 240
+					maxHeight = 30
+				}
+
 				gridboxtype = {
 					name = "actions_grid"
 					position = { x = 10 y = 32 }
@@ -965,6 +974,13 @@ guiTypes = {
 			name = "accept_icon"
 			position = { x = 204 y = 4 }
 			spriteType ="GFX_accept_decline_icon"
+		}
+
+		iconType = {
+			name = "response_icon"
+			position = { x = 200 y = 2 }
+			spriteType = "GFX_generic_3_state_checkbox"
+			alwaystransparent = yes
 		}
 	}
 

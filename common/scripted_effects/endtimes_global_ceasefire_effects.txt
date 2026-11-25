@@ -4,6 +4,11 @@ endtimes_apply_global_ceasefire = {
 	if = {
 		limit = { NOT = { has_global_flag = endtimes_global_ceasefire_occurred } }
 		set_global_flag = endtimes_global_ceasefire_occurred
+		if = {
+			limit = { USA = { exists = yes has_war = yes } }
+			USA = { set_country_flag = endtimes_usa_at_war_before_ceasefire }
+		}
+
 		# White peace can clear capitulation; retain California's pre-peace status
 		# for the player's later withdrawal settlement.
 		if = {
@@ -73,6 +78,19 @@ endtimes_apply_global_ceasefire = {
 					has_war_with = ISR
 				}
 				white_peace = ISR
+			}
+		}
+
+		# End any remaining Jordanian or Egyptian war with Iran.
+		if = {
+			limit = { PER = { exists = yes } }
+			every_country = {
+				limit = {
+					exists = yes
+					OR = { tag = JOR tag = EGY }
+					has_war_with = PER
+				}
+				white_peace = PER
 			}
 		}
 

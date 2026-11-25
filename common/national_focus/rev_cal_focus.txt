@@ -372,6 +372,21 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = CAL_on_our_own
+		icon = Election_graphics
+		x = 9
+		y = 5
+		cost = 1
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = { focus = CAL_emergency_formations_seattle }
+		ai_will_do = { base = 0.1 }
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
 	# Generic focus branches replicated from USA for California.
 	shortcut = {
 		name = rev_cal_GENERIC_political_reform
@@ -396,6 +411,7 @@ focus_tree = {
 
 	focus = {
 		id = rev_cal_GENERIC_political_reform
+		prerequisite = { focus = CAL_on_our_own }
 		icon = Election_graphics
 		x = -15
 		y = 7
@@ -1441,6 +1457,7 @@ focus_tree = {
 
 	focus = {
 		id = rev_cal_GENERIC_international_diplomacy
+		prerequisite = { focus = CAL_on_our_own }
 		icon = global_community
 
 		x = -4
@@ -1867,6 +1884,7 @@ focus_tree = {
 
 	focus = {
 		id = rev_cal_GENERIC_build_roads
+		prerequisite = { focus = CAL_on_our_own }
 		icon = infrastructure1
 
 		x = -2
@@ -2536,6 +2554,7 @@ focus_tree = {
 
 	focus = {
 		id = rev_cal_GENERIC_ease_of_business_reforms
+		prerequisite = { focus = CAL_on_our_own }
 		icon = consumer_goods
 
 		x = 6
@@ -2712,6 +2731,7 @@ focus_tree = {
 
 	focus = {
 		id = rev_cal_GENERIC_light_industry_investments
+		prerequisite = { focus = CAL_on_our_own }
 		icon = construction_development
 
 		x = 9
@@ -3396,6 +3416,7 @@ focus_tree = {
 
 	focus = {
 		id = rev_cal_GENERIC_build_primary_schools
+		prerequisite = { focus = CAL_on_our_own }
 		icon = research
 
 		x = -1
@@ -3671,6 +3692,7 @@ focus_tree = {
 
 	focus = {
 		id = rev_cal_GENERIC_naval_reform
+		prerequisite = { focus = CAL_on_our_own }
 		icon = navy
 
 		x = 17
@@ -4081,6 +4103,7 @@ focus_tree = {
 
 	focus = {
 		id = rev_cal_GENERIC_air_force_reform
+		prerequisite = { focus = CAL_on_our_own }
 		icon = air_force
 
 		x = 24
@@ -4422,6 +4445,7 @@ focus_tree = {
 
 	focus = {
 		id = rev_cal_GENERIC_army_reform
+		prerequisite = { focus = CAL_on_our_own }
 		icon = infantry_allies
 
 		x = 33
@@ -4443,6 +4467,7 @@ focus_tree = {
 
 	focus = {
 		id = rev_cal_GENERIC_military_emergency
+		prerequisite = { focus = CAL_on_our_own }
 		icon = tanks2
 
 		x = -3

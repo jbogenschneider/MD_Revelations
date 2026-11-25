@@ -830,8 +830,9 @@ NATO_decisions = {
 			# Remove the candidate stuff.
 			hidden_effect = {
 				clr_country_flag = NATO_Accession_Voting
-				remove_from_array = {
-					global.NATO_Accession_Candidates = THIS
+				if = {
+					limit = { is_in_array = { global.NATO_Accession_Candidates = THIS } }
+					remove_from_array = { array = global.NATO_Accession_Candidates value = THIS }
 				}
 				clr_country_flag = NATO_Aspirant
 

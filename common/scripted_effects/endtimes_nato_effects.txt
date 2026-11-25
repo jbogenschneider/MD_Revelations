@@ -86,7 +86,10 @@ rev_nato_enforce_israel_exclusion = {
 			is_faction_leader = no
 		}
 		remove_ideas = NATO_member
-		remove_from_array = { global.nato_members = THIS }
+		if = {
+			limit = { is_in_array = { global.nato_members = THIS } }
+			remove_from_array = { array = global.nato_members value = THIS }
+		}
 		remove_from_tech_sharing_group = NATO_Tech_Share
 		leave_faction = yes
 		log = "[GetDateText]: [This.GetName]: Removed Israel from NATO after an ineligible direct or wartime admission."
@@ -104,7 +107,10 @@ rev_nato_clear_accession_application = {
 		}
 		clr_country_flag = NATO_Aspirant
 		clr_country_flag = NATO_Accession_Voting
-		remove_from_array = { global.NATO_Accession_Candidates = THIS }
+		if = {
+			limit = { is_in_array = { global.NATO_Accession_Candidates = THIS } }
+			remove_from_array = { array = global.NATO_Accession_Candidates value = THIS }
+		}
 		every_other_country = {
 			remove_opinion_modifier = { target = PREV modifier = NATO_aspirant }
 			PREV = { remove_opinion_modifier = { target = PREV modifier = NATO_aspirant } }

@@ -2878,7 +2878,7 @@ focus_tree = {
 
 		cost = 1
 
-		prerequisite = { focus = PER_iran_first focus = PER_ditching_the_five_year_model }
+		prerequisite = { focus = PER_iran_first }
 
 		search_filters = { FOCUS_FILTER_STABILITY }
 

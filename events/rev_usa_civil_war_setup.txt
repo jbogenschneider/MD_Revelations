@@ -1386,20 +1386,7 @@ country_event = {
 			white_peace = USA
 		}
 
-		every_state = {
-			limit = {
-				is_owned_by = CAN
-				is_core_of = USA
-			}
-			transfer_state_to = USA
-			set_resistance = 0
-			set_compliance = 100
-		}
-
-		if = {
-			limit = { country_exists = CAL }
-			annex_country = { target = CAL transfer_troops = yes }
-		}
+		rev_usa_restore_canada_and_california_territory = yes
 		if = {
 			limit = { DEN = { exists = yes } }
 			1 = {
@@ -1525,11 +1512,19 @@ country_event = {
 
 	trigger = {
 		tag = USA
-		has_country_flag = rev_usa_cw_restoration_transition
 		NOT = { has_country_flag = rev_usa_cw_restoration_kelly_done }
 		OR = {
-			NOT = { has_country_flag = endtimes_usa_returns_to_normal }
-			date > 2028.11.9
+			AND = {
+				has_country_flag = rev_usa_cw_restoration_transition
+				OR = {
+					NOT = { has_country_flag = endtimes_usa_returns_to_normal }
+					date > 2028.11.9
+				}
+			}
+			AND = {
+				has_country_flag = endtimes_usa_military_election_committed
+				date > 2028.11.9
+			}
 		}
 	}
 
@@ -1538,8 +1533,25 @@ country_event = {
 		set_country_flag = rev_usa_cw_restoration_kelly_done
 		set_country_flag = rev_usa_post_kelly_tree_active
 		if = {
-			limit = { has_country_flag = endtimes_usa_returns_to_normal }
+			limit = {
+				OR = {
+					has_country_flag = endtimes_usa_returns_to_normal
+					has_country_flag = endtimes_usa_military_election_committed
+				}
+			}
 			set_politics = { last_election = "2028.11.10" election_frequency = 48 }
+			if = {
+				limit = {
+					country_exists = CAL
+					769 = { is_owned_by = CAN } # New York
+				}
+				set_global_flag = rev_usa_cw_concluded
+				rev_usa_restore_canada_and_california_territory = yes
+			}
+		}
+		if = {
+			limit = { has_country_flag = endtimes_usa_military_election_committed }
+			remove_ideas = USA_rule_by_decree_idea
 		}
 		
 		add_to_variable = { var = party_pop_array^2 value = 0.05 } # democrat
@@ -1570,7 +1582,14 @@ country_event = {
 news_event = {
 	id = rev_usa_cw.52
 	title = rev_usa_cw.52.t
-	desc = rev_usa_cw.52.d
+	desc = {
+		trigger = { USA = { NOT = { has_country_flag = endtimes_usa_military_election_committed } } }
+		text = rev_usa_cw.52.d
+	}
+	desc = {
+		trigger = { USA = { has_country_flag = endtimes_usa_military_election_committed } }
+		text = rev_usa_cw.52.d_military_election
+	}
 	picture = GFX_report_event_usa_politics
 	is_triggered_only = yes
 

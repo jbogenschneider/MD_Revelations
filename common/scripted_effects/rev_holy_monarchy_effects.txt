@@ -11,7 +11,10 @@ rev_grant_holy_monarchy = {
 # Removing the previous correction before measuring prevents cumulative bonuses.
 # Like the existing Cabal floor, this refreshes on grant and once per game day.
 rev_holy_monarchy_refresh_support_floor = {
-	remove_dynamic_modifier = { modifier = rev_holy_monarchy_support_floor }
+	if = {
+		limit = { has_dynamic_modifier = { modifier = rev_holy_monarchy_support_floor } }
+		remove_dynamic_modifier = { modifier = rev_holy_monarchy_support_floor }
+	}
 	force_update_dynamic_modifier = yes
 	set_variable = { rev_holy_monarchy_stability_floor = 0.65 }
 	subtract_from_variable = { rev_holy_monarchy_stability_floor = stability }

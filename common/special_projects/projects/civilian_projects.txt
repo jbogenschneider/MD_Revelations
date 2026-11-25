@@ -196,7 +196,7 @@ sp_improved_based_solar_farms = {
 		base = 1
 		modifier = {
 			add = 15
-			FROM = {
+			ROOT = {
 				any_controlled_state = {
 					check_variable = { building_level@synthetic_refinery > 0 }
 				}
@@ -204,7 +204,7 @@ sp_improved_based_solar_farms = {
 		}
 		modifier = {
 			add = 10
-			FROM = {
+			ROOT = {
 				any_controlled_state = {
 					has_dynamic_modifier = {
 						modifier = renewable_capacity_factor_dyn_mod
@@ -762,13 +762,13 @@ sp_space_weapons_non_gdm = {
 		base = 1
 		modifier = {
 			add = 10
-			FROM = {
+			ROOT = {
 				is_special_project_completed = sp:sp_space_program_non_gdm
 			}
 		}
 		modifier = {
 			add = 10
-			FROM = {
+			ROOT = {
 				OR = {
 					has_idea = superpower
 					has_idea = great_power

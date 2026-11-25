@@ -182,6 +182,8 @@
  CAL_emergency_formations_los_angeles_desc:0 "Los Angeles still has the people, the vehicles, and the anger. We can turn that into emergency militia formations at once."
  CAL_emergency_formations_seattle:0 "Emergency Formations in Seattle"
  CAL_emergency_formations_seattle_desc:0 "Seattle can still raise armed local formations if we move fast and keep the federal remnants off balance."
+ CAL_on_our_own:0 "On our own"
+ CAL_on_our_own_desc:0 "With Seattle's emergency formations in place, we can turn our attention to governing California."
  CAL_volunteers_from_mexican_army:0 "Volunteers from Mexican Army"
  CAL_volunteers_from_mexican_army_desc:0 "Sympathetic officers and veterans from Mexico can slip north and stiffen our lines with experienced volunteers."
  CAL_volunteers_from_south_america:0 "Volunteers from South America"

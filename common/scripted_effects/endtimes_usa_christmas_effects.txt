@@ -30,9 +30,15 @@ endtimes_restore_usa_at_christmas = {
 			# The split California stays independent of every military bloc.
 			MeccaPact_leave = yes
 			MeccaPact_leave_previous_alliance = yes
-			remove_from_array = { global.nato_members = THIS }
+			if = {
+				limit = { is_in_array = { global.nato_members = THIS } }
+				remove_from_array = { array = global.nato_members value = THIS }
+			}
 			remove_from_tech_sharing_group = NATO_Tech_Share
-			remove_from_array = { global.westnato_members = THIS }
+			if = {
+				limit = { is_in_array = { global.westnato_members = THIS } }
+				remove_from_array = { array = global.westnato_members value = THIS }
+			}
 			remove_from_tech_sharing_group = WestNATO_Tech_Share
 			clr_country_flag = rev_westnato_faction_member
 			rev_nato_clear_accession_application = yes
