@@ -21,8 +21,8 @@ PAK = { MeccaPact_leave = yes }
 
 The first join requires an existing independent Saudi Arabia that is not at war
 with the applicant. Founding the pact moves Saudi Arabia out of its previous
-alliance. Later joins follow the pact's current leader, so it can survive a
-leadership change. Joins reject subjects and countries at war with pact members.
+alliance. Later joins use Saudi Arabia's faction, and Saudi leadership is
+restored if another member takes over. Joins reject subjects and countries at war with pact members.
 Repeated joins do not duplicate the membership array.
 
 Joining removes previous NATO, WestNATO, or CSTO membership and research sharing

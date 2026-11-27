@@ -12,3 +12,11 @@ news_event = {
 		name = rev_nato_reorganization.1.a
 	}
 }
+
+# Manual roster repair. Target the leader of the NATO faction to retain.
+country_event = {
+	id = rev_nato_reorganization.2
+	hidden = yes
+	is_triggered_only = yes
+	immediate = { rev_nato_reseat_listed_members = yes }
+}

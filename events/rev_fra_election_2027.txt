@@ -54,21 +54,20 @@ country_event = {
 
 		if = {
 			limit = { has_country_flag = rev_fra_2027_le_pen_elected }
+			set_country_flag = rev_fra_2027_le_pen_western_handover
 			set_politics = {
-				ruling_party = nationalist
+				ruling_party = democratic
 				last_election = "2027.4.18"
 				election_frequency = 1200
 				elections_allowed = yes
 			}
-			add_to_array = { ruling_party = 20 }
-			# Keep the mod's leader succession index aligned with Marine Le Pen.
-			set_variable = { Nat_Populism_leader = 2 }
+			add_to_array = { ruling_party = 1 }
 			create_country_leader = {
 				name = "Marine Le Pen"
 				picture = "Nationalist_1_Marine_Le_Pen.dds"
-				ideology = Nat_Populism
+				ideology = conservatism
 				traits = {
-					nationalist_Nat_Populism
+					western_conservatism
 					pro_russia
 					career_politician
 				}
@@ -96,5 +95,9 @@ country_event = {
 			}
 		}
 		startup_politics = yes
+		if = {
+			limit = { rev_fra_election_nato_transfer_pending = yes }
+			country_event = { id = rev_nato_election_membership.2 }
+		}
 	}
 }

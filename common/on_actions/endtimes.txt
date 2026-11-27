@@ -63,6 +63,15 @@ on_actions = {
 				}
 				country_event = { id = endtimes.65 }
 			}
+			# After February 1, bring Poland, Finland and Romania into the war against SOV.
+			if = {
+				limit = {
+					OR = { tag = LIT tag = LAT tag = EST tag = UKR }
+					date > 2029.2.1
+					has_war_with = SOV
+				}
+				country_event = { id = endtimes.66 }
+			}
 			# February 15, 2029: Seven allies receive the Holy Monarchy spirit.
 			if = {
 				limit = {
@@ -132,6 +141,15 @@ on_actions = {
 					GER = { news_event = { id = endtimes.56 } }
 				}
 				else = { news_event = { id = endtimes.56 } }
+			}
+			# China annexes its Far Eastern puppet once Russia has a Western government.
+			if = {
+				limit = { endtimes_china_far_east_annexation_ready = yes }
+				country_event = { id = endtimes.67 }
+			}
+			if = {
+				limit = { endtimes_china_vietnam_war_pending = yes }
+				country_event = { id = endtimes.69 }
 			}
 			# October 26, 2028: Xi's death and China's leadership succession.
 			if = {
@@ -216,14 +234,21 @@ on_actions = {
 				limit = {
 					date > 2028.12.4
 					date < 2028.12.6
+					NOT = { has_global_flag = endtimes_join_or_war_offered }
 					NOT = { has_global_flag = endtimes_join_or_war_completed }
 					OR = {
 						SAU = { exists = yes is_subject = no }
 						any_country = { rev_is_meccapact_faction = yes is_faction_leader = yes }
 					}
 				}
-				endtimes_apply_join_or_war = yes
-				endtimes_broadcast_news_46 = yes
+				endtimes_offer_join_or_war = yes
+			}
+			else_if = {
+				limit = {
+					has_global_flag = endtimes_join_or_war_offered
+					NOT = { has_global_flag = endtimes_join_or_war_completed }
+				}
+				endtimes_try_apply_join_or_war = yes
 			}
 			# November 30, 2028: Germany hosts the worldwide EU dissolution report.
 			if = {
@@ -326,6 +351,14 @@ on_actions = {
 					NOT = { has_global_flag = endtimes_global_ceasefire_occurred }
 				}
 				endtimes_apply_global_ceasefire = yes
+			}
+			if = {
+				limit = { endtimes_westnato_reunification_ready = yes }
+				country_event = { id = endtimes.73 }
+			}
+			if = {
+				limit = { endtimes_usa_nato_return_ready = yes }
+				country_event = { id = endtimes.74 }
 			}
 			# August 7, 2026: a defense pact, without creating an in-game faction.
 			if = {
@@ -470,6 +503,20 @@ on_actions = {
 				set_global_flag = endtimes_orthodox_reunion_occurred
 				set_global_flag = endtimes_news_19_dispatched
 				endtimes_broadcast_news_19 = yes
+			}
+			# June 3, 2028: WNN reports on the Two Witnesses in Jerusalem.
+			if = {
+				limit = {
+					date > 2028.6.2
+					date < 2028.6.4
+					NOT = { has_global_flag = endtimes_two_witnesses_dispatched }
+				}
+				set_global_flag = endtimes_two_witnesses_dispatched
+				if = {
+					limit = { ISR = { exists = yes } }
+					ISR = { news_event = { id = endtimes.70 } }
+				}
+				else = { news_event = { id = endtimes.70 } }
 			}
 			if = {
 				limit = {

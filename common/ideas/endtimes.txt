@@ -16,8 +16,24 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				conscription_factor = -0.20
-				army_org_factor = -0.10
-				army_morale_factor = -0.20
+				army_org_factor = -0.05
+				army_morale_factor = -0.05
+			}
+		}
+		endtimes_disasters = {
+			picture = looming_famine
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				custom_modifier_tooltip = endtimes_disasters_tt
+			}
+		}
+		endtimes_disaster_famine_and_disease = {
+			picture = looming_famine
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				custom_modifier_tooltip = endtimes_disaster_famine_and_disease_tt
 			}
 		}
 		endtimes_famine_and_disease = {

@@ -1583,6 +1583,16 @@ defined_text = {
 defined_text = {
 	name = show_ruling_party
 
+	text = {
+		trigger = {
+			tag = FRA
+			has_country_flag = rev_fra_2027_le_pen_western_handover
+			has_government = democratic
+			is_in_array = { ruling_party = 1 }
+			has_country_leader = { name = "Marine Le Pen" ruling_only = yes }
+		}
+		localization_key = FRA.Nat_Populism
+	}
 	text = { trigger = { is_in_array = { ruling_party = 0 } }
 		localization_key = "[Western_Autocracy_L]"
 	}

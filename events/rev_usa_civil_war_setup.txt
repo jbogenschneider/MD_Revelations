@@ -1430,56 +1430,19 @@ country_event = {
 			}
 		}
 		if = {
-			limit = { NOT = { has_idea = NATO_member } }
-			add_ideas = NATO_member
+			limit = { has_country_flag = endtimes_usa_returns_to_normal }
+			endtimes_dissolve_usa_wartime_faction = yes
 		}
+		# After the Atlantic split, the April 27 event handles the return to NATO.
 		if = {
 			limit = {
-				NOT = { is_in_faction = yes }
-				GER = {
-					exists = yes
-					is_in_faction = yes
-					is_faction_leader = yes
-					NOT = { has_war_with = USA }
+				NOT = { has_country_flag = endtimes_usa_returns_to_normal }
+				OR = {
+					NOT = { has_global_flag = rev_nato_canada_reorganized }
+					NOT = { date < 2028.4.29 }
 				}
 			}
-			GER = { add_to_faction = USA }
-		}
-		if = {
-			limit = {
-				NOT = { is_in_faction = yes }
-				FRA = {
-					exists = yes
-					is_in_faction = yes
-					is_faction_leader = yes
-					NOT = { has_war_with = USA }
-				}
-			}
-			FRA = { add_to_faction = USA }
-		}
-		if = {
-			limit = {
-				NOT = { is_in_faction = yes }
-				ENG = {
-					exists = yes
-					is_in_faction = yes
-					is_faction_leader = yes
-					NOT = { has_war_with = USA }
-				}
-			}
-			ENG = { add_to_faction = USA }
-		}
-		if = {
-			limit = {
-				NOT = { is_in_faction = yes }
-				CAN = {
-					exists = yes
-					is_in_faction = yes
-					is_faction_leader = yes
-					NOT = { has_war_with = USA }
-				}
-			}
-			CAN = { add_to_faction = USA }
+			endtimes_ensure_nato_membership = yes
 		}
 		add_stability = 0.08
 		add_war_support = -0.12
@@ -1495,7 +1458,6 @@ country_event = {
 			limit = { has_country_flag = endtimes_usa_returns_to_normal }
 			# The next regular election is November 2028, not November 2032.
 			set_politics = { last_election = "2024.11.5" election_frequency = 48 elections_allowed = yes }
-			endtimes_ensure_nato_membership = yes
 		}
 		else = { country_event = { id = rev_usa_cw.43 days = 30 } }
 	}

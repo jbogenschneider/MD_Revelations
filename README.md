@@ -1,18 +1,162 @@
-MD Revelations 2026 
-This is a 2026 submod for Millennium Dawn for Hearts of Iron 4. This mod took what the 2025 mod started (credit to Saturn) and brought the "bookmark" up to 2026. Many of the countries key to this scenario were more like 2017 or still stuck on 2000. This will be maintained and will be updated independently within an MD release cycle and ideally immediately following a release. 
+# MD Revelations 2026 – Major Update 11.26
 
-This mod presents the 2026 world with real life events and close to a timeline to this point. New focus trees with a lot of balancing for Ukraine, Russia, USA, Canada and Nato Countries. The primary purpose of this scenario is to play or oppose Trump's USA. The secondary purpose of this mode is to have a realistic Ukraine - Russia situation that can wrap that conflict up. 
+**Compatible with Hearts of Iron IV 1.20.x**
 
-Russia and Ukraine start much closer to their current statuses, although the game is unable to effectively model drone attrition so there is artificial weekly attrition placed on both countries until peace. There are three support company units that have drone effects that improve based on the land drone technology. Check those out. Brigades with these drone support units can attack and cause an attrition effect, even if unable to take the target province. 
-The mod is called Revelations 2026 because the unthinkable is now possible, the USA could be in a war against NATO within the next 3 years. It's not that I think the current president wants to go to war with NATO or plans to, I think that he expects them always to back down, that and he's impulsive. This mod lets you play that what if and fight his other wars along the way: Iran and Cuba. 
+## Overview
 
-Canada is a particularly fun country to play as you could really thwart the USA with a stiff defense should they invade. You can do the other things too, like bomb Iran, start a civil war, or put troops on the ground in Iran. Same for Cuba. There are custom peace events for all these wars. 
+MD Revelations 2026 is a modern-day mod for Hearts of Iron IV,
+based on Millennium Dawn 1.12, that allows you to start playing
+in 2026.
 
-Russia has some "new path" options, you'll want to check out. China, Japan and other non-NATO countries might have been updated, some already by the 2025 mod this one inherited from, China in particular. 
-The focus trees will take you to about 2029. I don't think I'll bother adding anything beyond that the potential dynamics of the next 3-4 years is enough. I'm not trying to build a full Mod like Millennium Dawn is, this will stay a sub-mod around the main theme of USA vs NATO, WW3. 
+**This is now a standalone mod. You no longer need the
+Millennium Dawn Modern Day Mod installed.**
 
-Disclaimer: I'm using some End Times Prophesy to explain how WW3 between USA and NATO could occur. In the loading screens I provide scripture from the Old and New Testaments about the anti-Christ, as well as, recent quotes from people along that theme. If you aren't into that, then you can divert your eyeballs. I did want to raise awareness to the fact that US geo-political decisions today are being heavily influenced by people with End Times on their mind. My opinion is that is playing with fire and not consistent with what Jesus asked us to do, which is to follow him, not politicians, and to be loving and caring and not into dividing and fighting.
+This mod presents the world of 2026 with real-life events
+and closely follows our current timeline before branching
+into an alternate future. It incorporates and greatly
+expands upon the 2025 Borders Mod.
 
-There won't be a dedicated discord for this mod, join the Millennium Dawn discord if you aren't already and I'll see about getting a channel there or use the submods channel for now.  Don't expect me to be very responsive, but I will consider your requests if they stay within the theme of the next three years.
+## Focus Trees and Country Development
 
-If you want to support my work checkout my published game:  Power the Future here on Steam.
+- New national focus trees for all major countries.
+- Accelerated focus trees for other countries, with shorter
+  focus durations than in Millennium Dawn.
+- Shorter generic focus durations, allowing smaller countries
+  to develop faster.
+- Focus trees designed to take countries through approximately
+  2032.
+- Significant balancing improvements for Ukraine, Russia,
+  the USA, Canada, and NATO countries.
+
+## The Road to World War III
+
+There are many great countries to play, with major wars
+breaking out in 2027 and 2028.
+
+The Antichrist, a fictional character rather than anyone
+we currently know, will begin to act, and the game chronicles
+how the world goes to hell — literally.
+
+It plays out like a movie, but your country can watch events
+unfold or participate in one way or another.
+
+Some particularly interesting countries to play include:
+
+- United States
+- Canada
+- Russia
+- Ukraine
+- France
+- Germany
+- United Kingdom
+- Saudi Arabia
+- Iran
+- Turkey
+
+Almost every country will be involved in some way as the
+global situation unfolds.
+
+## Drone Warfare and Military Modernization
+
+Military equipment and combat mechanics have been updated
+to better reflect the realities of modern warfare.
+
+- Added air and land drone equipment that must be produced,
+  making drone warfare more realistic.
+- Helicopters become less important over time and are
+  increasingly replaced by drone motherships.
+- Three specialized drone support companies are available,
+  with capabilities that improve as land drone technology
+  advances.
+- Brigades equipped with these drone support companies can
+  attack and inflict attrition on enemy forces, even if they
+  are unable to capture the target province.
+
+Be sure to check out the new drone support companies!
+
+## New and Expanded War Scenarios
+
+### United States and Canada
+
+- The USA vs. Canada war now occurs earlier.
+- NATO's participation in the conflict is more limited.
+
+### Iran and Cuba
+
+The United States has several military and political options
+available when dealing with Iran and Cuba:
+
+- Conduct bombing campaigns.
+- Instigate civil wars.
+- Deploy ground forces.
+- Resolve conflicts through custom peace events.
+
+### Middle Eastern War
+
+Iran now has the opportunity to launch a revenge war against
+Israel, including a ground offensive that can escalate into
+a full-scale Middle Eastern war.
+
+Turkey, the UAE, Saudi Arabia, Syria, and other regional
+powers can all get in on the Armageddon... I mean, action.
+
+You'll definitely want to check that out!
+
+### Nuclear Escalation
+
+There are also several nuclear situations that can develop
+as global conflicts escalate.
+
+## The Beast System
+
+New national spirits introduce significant gameplay effects
+related to the "Beast System" established by the Antichrist,
+his cabal, and participating world leaders.
+
+These mechanics are part of the broader End Times storyline
+that unfolds as the world descends into chaos.
+
+## Economic and Military Balancing
+
+A considerable amount of work has gone into updating most
+countries to reflect their real-world capabilities in 2026.
+
+Improvements include:
+
+- Updated national economies.
+- Updated technology and research levels.
+- Adjusted military manpower.
+- Rebalanced relative unit strengths.
+- Updated air force equipment and capabilities.
+- More realistic military capabilities across countries.
+
+## Current Status and Future Development
+
+**The mod is fully playable.**
+
+Future enhancements will primarily focus on:
+
+- Further balancing of drone warfare and unit strengths.
+- Additional national focuses.
+- Refinement and cleanup of national spirits.
+- Continued gameplay balancing and improvements.
+- More satirical loading pictures
+
+## Disclaimer
+
+I am using the End Times as the theme for some new and
+interesting World War III scenarios.
+
+The primary source of inspiration is the Book of Revelation,
+although I also draw upon Catholic prophetic and theological
+writings for additional details about the Antichrist, how he
+might rise to power, and what he might do.
+
+These sources include:
+
+- Saint Hildegard of Bingen (12th century).
+- Saint John Henry Newman (19th century).
+
+The mod presents a fictional interpretation of these
+prophecies and writings for entertainment and gameplay
+purposes.

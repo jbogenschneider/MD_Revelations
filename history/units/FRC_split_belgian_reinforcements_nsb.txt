@@ -96,3 +96,12 @@ units = {
 		force_equipment_variants = { medium_tank_amphibious_chassis_1 = { amount = 20 owner = BEL creator = AUS version_name = "Pandur" } } #Spartans taken from stocks
 	}
 }
+
+# Reinforcements for the estimated equipment shortfall in this roster.
+instant_effect = {
+	add_equipment_to_stockpile = { type = infantry_weapons2 amount = 600 }
+	add_equipment_to_stockpile = { type = MBT_3 amount = 12 }
+	add_equipment_to_stockpile = { type = APC_3 amount = 120 }
+	add_equipment_to_stockpile = { type = transport_helicopter2 amount = 4 }
+	add_equipment_to_stockpile = { type = land_drone_equipment_1 amount = 40 }
+}

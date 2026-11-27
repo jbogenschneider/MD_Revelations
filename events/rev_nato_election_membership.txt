@@ -1,26 +1,16 @@
 add_namespace = rev_nato_election_membership
 
-# One check per country, including campaigns saved after the election.
+# One check for Italy, including campaigns saved after the election.
 country_event = {
 	id = rev_nato_election_membership.1
 	hidden = yes
 	is_triggered_only = yes
 
 	trigger = {
+		tag = ITA
 		NOT = { has_country_flag = rev_nato_post_election_membership_checked }
-		OR = {
-			AND = {
-				tag = FRA
-				has_government = nationalist
-				has_country_flag = rev_fra_2027_handover_done
-				has_country_flag = rev_fra_2027_le_pen_elected
-			}
-			AND = {
-				tag = ITA
-				has_government = democratic
-				has_country_flag = rev_ita_2027_election_resolved
-			}
-		}
+		has_government = democratic
+		has_country_flag = rev_ita_2027_election_resolved
 	}
 
 	immediate = {
@@ -48,6 +38,55 @@ country_event = {
 			}
 			log = "[GetDateText]: [Root.GetName]: Restoring NATO membership after the election (one-time check)."
 			endtimes_ensure_nato_membership = yes
+		}
+	}
+}
+
+# Select the existing NATO before removing France from a different faction.
+country_event = {
+	id = rev_nato_election_membership.2
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = { rev_fra_election_nato_transfer_pending = yes }
+
+	immediate = {
+		if = {
+			limit = { GER = { faction_leader = { rev_is_fra_election_nato_destination = yes } } }
+			GER = { faction_leader = { save_event_target_as = rev_nato_destination } }
+		}
+		else = {
+			USA = { faction_leader = { save_event_target_as = rev_nato_destination } }
+		}
+		if = {
+			limit = {
+				event_target:rev_nato_destination = { rev_is_fra_election_nato_destination = yes }
+				NOT = { is_in_faction_with = event_target:rev_nato_destination }
+				rev_nato_can_reunite_member = yes
+			}
+			if = {
+				limit = { is_faction_leader = yes }
+				log = "[GetDateText]: Dismantling the France-led faction before rejoining the existing NATO."
+				dismantle_faction = yes
+			}
+			else_if = {
+				limit = { is_in_faction = yes }
+				faction_leader = { remove_from_faction = ROOT }
+				if = { limit = { is_in_faction = yes } leave_faction = yes }
+			}
+			if = {
+				limit = { is_in_faction = no }
+				event_target:rev_nato_destination = { add_to_faction = ROOT }
+			}
+		}
+		if = {
+			limit = {
+				event_target:rev_nato_destination = { rev_is_fra_election_nato_destination = yes }
+				is_in_faction_with = event_target:rev_nato_destination
+			}
+			rev_nato_record_membership = yes
+			set_country_flag = rev_fra_2027_nato_transfer_completed
+			log = "[GetDateText]: France is in the existing NATO faction after the 2027 election."
 		}
 	}
 }

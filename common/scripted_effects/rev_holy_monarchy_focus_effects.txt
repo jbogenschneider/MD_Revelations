@@ -1,0 +1,67 @@
+rev_hm_found_catholic_league = {
+	if = {
+		limit = { is_subject = no NOT = { has_faction_template = faction_template_holy_league } }
+		save_event_target_as = rev_hm_league_applicant
+		if = {
+			limit = { any_country = { has_faction_template = faction_template_holy_league is_faction_leader = yes } }
+			if = {
+				limit = {
+					NOT = {
+						any_country = {
+							has_faction_template = faction_template_holy_league
+							has_war_with = event_target:rev_hm_league_applicant
+						}
+					}
+				}
+				MeccaPact_leave_previous_alliance = yes
+				if = {
+					limit = { is_in_faction = no }
+					random_country = {
+						limit = { has_faction_template = faction_template_holy_league is_faction_leader = yes }
+						add_to_faction = event_target:rev_hm_league_applicant
+					}
+				}
+			}
+		}
+		else = {
+			MeccaPact_leave_previous_alliance = yes
+			if = {
+				limit = { is_in_faction = no }
+				create_faction_from_template = faction_template_holy_league
+			}
+		}
+	}
+	if = {
+		limit = { has_faction_template = faction_template_holy_league is_faction_leader = yes }
+		save_event_target_as = rev_hm_league_inviter
+		every_other_country = {
+			limit = {
+				exists = yes
+				is_in_europe = yes
+				has_idea = christian
+				is_subject = no
+				is_in_faction = no
+				NOR = { original_tag = ENG original_tag = GER }
+				NOT = { has_war_with = event_target:rev_hm_league_inviter }
+			}
+			country_event = { id = rev_holy_monarchy_focus.1 }
+		}
+	}
+}
+
+rev_hm_prepare_naval_crusade = {
+	add_war_support = 0.05
+	set_temp_variable = { treasury_change = -25 }
+	modify_treasury_effect = yes
+	set_temp_variable = { temp_opinion = 10 }
+	change_maritime_industry_opinion = yes
+	add_ideas = rev_hm_crusade_naval
+}
+
+rev_hm_prepare_land_crusade = {
+	set_temp_variable = { treasury_change = -25 }
+	modify_treasury_effect = yes
+	set_temp_variable = { temp_opinion = 5 }
+	change_defense_industry_opinion = yes
+	add_ideas = rev_hm_crusade_land
+}

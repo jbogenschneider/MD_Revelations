@@ -8,25 +8,9 @@ endtimes_found_saudi_meccapact = {
 				overlord = { set_autonomy = { target = SAU autonomy_state = autonomy_free } }
 			}
 			endtimes_prepare_meccapact_realignment = yes
-			# Found directly instead of routing the founder through the join path.
+			MeccaPact_create = yes
 			if = {
-				limit = {
-					NOT = { rev_is_meccapact_faction = yes }
-					NOT = { any_other_country = { rev_is_meccapact_faction = yes is_faction_leader = yes } }
-				}
-				MeccaPact_create = yes
-			}
-			else_if = {
-				limit = { NOT = { rev_is_meccapact_faction = yes } }
-				random_other_country = {
-					limit = { rev_is_meccapact_faction = yes is_faction_leader = yes }
-					add_to_faction = SAU
-				}
-			}
-			if = {
-				limit = { rev_is_meccapact_faction = yes }
-				set_faction_leader = yes
-				MeccaPact_enroll_member = yes
+				limit = { rev_is_meccapact_faction = yes is_faction_leader = yes }
 				set_global_flag = endtimes_saudi_meccapact_founded
 				endtimes_apply_meccapact_founding_realignment = yes
 				PAK = {
@@ -134,6 +118,10 @@ endtimes_apply_meccapact_founding_realignment = {
 
 # Iran scope. Free the specified Iranian subjects and prepare Hamas for accession.
 endtimes_iran_join_meccapact = {
+	every_other_country = {
+		limit = { has_war_with = PER }
+		white_peace = PER
+	}
 	every_country = {
 		limit = {
 			exists = yes

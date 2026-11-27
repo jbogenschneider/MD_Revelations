@@ -1,5 +1,5 @@
 name="MD Revelations 2026"
-version="1.12.18"
+version="1.12.19"
 tags={
 	"Alternative History"
 	"Events"

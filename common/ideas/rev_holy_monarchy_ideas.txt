@@ -19,5 +19,98 @@ ideas = {
 				clear_variable = rev_holy_monarchy_war_support_floor
 			}
 		}
+		rev_hm_papal_refuge = {
+			picture = monarchy
+			allowed = { always = no }
+			cancel = { NOT = { has_idea = rev_holy_monarchy } }
+			modifier = {
+				stability_factor = 0.15
+				opinion_gain_monthly_same_ideology_factor = 0.1
+			}
+		}
+		rev_hm_camelots_agency = {
+			picture = monarchy
+			allowed = { always = no }
+			cancel = { NOT = { has_idea = rev_holy_monarchy } }
+			modifier = {
+				operative_slot = 2
+				intelligence_agency_defense = 0.2
+				root_out_resistance_effectiveness_factor = 0.1
+				nationalist_drift = 0.02
+				drift_defence_factor = 0.05
+			}
+		}
+		rev_hm_camelots = {
+			picture = monarchy
+			allowed = { always = no }
+			cancel = { NOT = { has_idea = rev_holy_monarchy } }
+			modifier = {
+				nationalist_drift = 0.05
+				drift_defence_factor = 0.1
+				resistance_growth = 0.025
+				resistance_damage_to_garrison = -0.075
+			}
+		}
+		rev_hm_decentralized_command = {
+			picture = monarchy
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				army_morale_factor = 0.05
+				army_attack_factor = 0.05
+			}
+		}
+		rev_hm_armoured_chivalry = {
+			picture = monarchy
+			allowed = { always = no }
+			cancel = {
+				OR = {
+					NOT = { has_idea = rev_holy_monarchy }
+					has_idea = no_military
+				}
+			}
+			modifier = {
+				army_armor_attack_factor = 0.1
+				army_armor_defence_factor = 0.07
+				breakthrough_factor = 0.075
+				army_speed_factor = 0.08
+				training_time_factor = 0.1
+				army_fuel_consumption_factor = 0.075
+			}
+		}
+		rev_hm_crusade_land = {
+			picture = monarchy
+			allowed = { always = no }
+			cancel = {
+				OR = {
+					NOT = { has_idea = rev_holy_monarchy }
+					owns_state = 207 # Jerusalem
+				}
+			}
+			modifier = {
+				acclimatization_hot_climate_gain_factor = 0.1
+				supply_node_range = 0.075
+				supply_consumption_factor = -0.09
+				army_breakthrough_against_minor_factor = 0.075
+				personnel_cost_multiplier_modifier = 0.05
+			}
+		}
+		rev_hm_crusade_naval = {
+			picture = monarchy
+			allowed = { always = no }
+			cancel = {
+				OR = {
+					NOT = { has_idea = rev_holy_monarchy }
+					owns_state = 207 # Jerusalem
+				}
+			}
+			modifier = {
+				navy_fuel_consumption_factor = -0.09
+				amphibious_invasion = 0.08
+				naval_invasion_prep_speed = -0.1
+				navy_max_range_factor = 0.1
+				navy_personnel_cost_multiplier_modifier = 0.1
+			}
+		}
 	}
 }

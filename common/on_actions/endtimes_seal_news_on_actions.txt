@@ -75,12 +75,72 @@ on_actions = {
 			}
 			if = {
 				limit = {
-					date > 2029.1.5
+					NOT = { date < 2029.1.6 }
 					date < 2029.1.7
 					NOT = { has_global_flag = endtimes_fifth_seal_announced }
 				}
 				set_global_flag = endtimes_fifth_seal_announced
 				endtimes_broadcast_news_seal_5 = yes
+			}
+			if = {
+				limit = {
+					has_global_flag = endtimes_fifth_seal_announced
+					NOT = { date < 2029.1.6 }
+					date < 2029.4.4
+					NOT = { check_variable = { global.endtimes_disaster_population_last_day = global.num_days } }
+					# Capture the starting population, then apply losses at the monthly ticks and before the WNN report.
+					OR = {
+						NOT = { has_variable = global.endtimes_disaster_population_start_day }
+						AND = { NOT = { date < 2029.2.1 } date < 2029.2.2 }
+						AND = { NOT = { date < 2029.3.1 } date < 2029.3.2 }
+						AND = { NOT = { date < 2029.4.1 } date < 2029.4.2 }
+						NOT = { date < 2029.4.3 }
+					}
+				}
+				set_variable = { global.endtimes_disaster_population_last_day = global.num_days }
+				endtimes_update_disaster_population = yes
+			}
+			# Keep the spirits on active countries, including saves that missed the Fifth Seal.
+			if = {
+				limit = {
+					NOT = { date < 2029.1.6 }
+					exists = yes
+				}
+				if = {
+					limit = { endtimes_uses_disasters_spirit = yes }
+					if = {
+						limit = { has_idea = endtimes_disaster_famine_and_disease }
+						remove_ideas = endtimes_disaster_famine_and_disease
+					}
+					if = {
+						limit = { NOT = { has_idea = endtimes_disasters } }
+						add_ideas = endtimes_disasters
+					}
+				}
+				else = {
+					if = {
+						limit = { has_idea = endtimes_disasters }
+						remove_ideas = endtimes_disasters
+					}
+					if = {
+						limit = { NOT = { has_idea = endtimes_disaster_famine_and_disease } }
+						add_ideas = endtimes_disaster_famine_and_disease
+					}
+				}
+			}
+			# Broadcast after the last population update.
+			if = {
+				limit = {
+					NOT = { date < 2029.4.3 }
+					date < 2029.4.4
+					NOT = { has_global_flag = endtimes_grim_mark_announced }
+				}
+				set_global_flag = endtimes_grim_mark_announced
+				if = {
+					limit = { SAU = { exists = yes } }
+					SAU = { news_event = { id = endtimes.72 } }
+				}
+				else = { news_event = { id = endtimes.72 } }
 			}
 		}
 	}

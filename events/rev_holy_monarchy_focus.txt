@@ -1,0 +1,122 @@
+add_namespace = rev_holy_monarchy_focus
+
+country_event = {
+	id = rev_holy_monarchy_focus.1
+	title = rev_holy_monarchy_focus.1.t
+	desc = rev_holy_monarchy_focus.1.d
+	picture = GFX_religious_meeting
+	is_triggered_only = yes
+	trigger = {
+		is_in_faction = no
+		is_subject = no
+		event_target:rev_hm_league_inviter = { has_faction_template = faction_template_holy_league is_faction_leader = yes }
+	}
+	option = {
+		name = rev_holy_monarchy_focus.1.a
+		ai_chance = { base = 5 }
+		if = {
+			limit = {
+				is_in_faction = no
+				is_subject = no
+				event_target:rev_hm_league_inviter = { has_faction_template = faction_template_holy_league is_faction_leader = yes }
+				NOT = {
+					any_country = {
+						has_faction_template = faction_template_holy_league
+						has_war_with = PREV
+					}
+				}
+			}
+			event_target:rev_hm_league_inviter = { add_to_faction = ROOT }
+			if = {
+				limit = { is_in_faction_with = event_target:rev_hm_league_inviter }
+				add_stability = 0.1
+				set_temp_variable = { party_index = 23 }
+				set_temp_variable = { party_popularity_increase = 0.1 }
+				set_temp_variable = { temp_outlook_increase = 0.1 }
+				change_relative_party_popularity = yes
+			}
+		}
+	}
+	option = {
+		name = rev_holy_monarchy_focus.1.b
+		ai_chance = { base = 3 }
+		add_stability = -0.05
+		set_temp_variable = { party_index = 23 }
+		set_temp_variable = { party_popularity_increase = -0.05 }
+		set_temp_variable = { temp_outlook_increase = -0.05 }
+		change_relative_party_popularity = yes
+		event_target:rev_hm_league_inviter = { add_opinion_modifier = { target = ROOT modifier = betrayed_our_cause } }
+		set_temp_variable = { temp_opinion = -5 }
+		change_the_clergy_opinion = yes
+	}
+}
+
+country_event = {
+	id = rev_holy_monarchy_focus.2
+	title = rev_holy_monarchy_focus.2.t
+	desc = rev_holy_monarchy_focus.2.d
+	picture = GFX_news_generic_soldiers
+	is_triggered_only = yes
+	option = {
+		name = rev_holy_monarchy_focus.2.a
+		ai_chance = { base = 5 }
+		trigger = {
+			NOT = { tag = LEB }
+			LEB = { exists = yes OR = { is_subject = no is_subject_of = ROOT } }
+			NOT = { has_war_with = LEB }
+		}
+		if = {
+			limit = { LEB = { is_subject_of = ROOT } }
+			rev_hm_prepare_land_crusade = yes
+		}
+		else = {
+			save_event_target_as = rev_hm_crusade_sponsor
+			LEB = { country_event = { id = rev_holy_monarchy_focus.3 } }
+		}
+	}
+	option = {
+		name = rev_holy_monarchy_focus.2.b
+		ai_chance = { base = 3 }
+		rev_hm_prepare_naval_crusade = yes
+	}
+}
+
+country_event = {
+	id = rev_holy_monarchy_focus.3
+	title = rev_holy_monarchy_focus.3.t
+	desc = rev_holy_monarchy_focus.3.d
+	picture = GFX_news_generic_soldiers
+	is_triggered_only = yes
+	option = {
+		name = rev_holy_monarchy_focus.3.a
+		ai_chance = { base = 5 }
+		trigger = {
+			is_subject = no
+			event_target:rev_hm_crusade_sponsor = { exists = yes is_subject = no has_idea = rev_holy_monarchy }
+			NOT = { has_war_with = event_target:rev_hm_crusade_sponsor }
+		}
+		event_target:rev_hm_crusade_sponsor = {
+			puppet = ROOT
+			if = {
+				limit = { LEB = { is_subject_of = event_target:rev_hm_crusade_sponsor } }
+				rev_hm_prepare_land_crusade = yes
+			}
+		}
+	}
+	option = {
+		name = rev_holy_monarchy_focus.3.b
+		ai_chance = { base = 3 }
+		set_temp_variable = { party_index = 23 }
+		set_temp_variable = { party_popularity_increase = -0.1 }
+		set_temp_variable = { temp_outlook_increase = -0.1 }
+		change_relative_party_popularity = yes
+		add_stability = -0.15
+		add_war_support = 0.1
+		event_target:rev_hm_crusade_sponsor = {
+			if = {
+				limit = { exists = yes has_idea = rev_holy_monarchy }
+				rev_hm_prepare_naval_crusade = yes
+			}
+		}
+	}
+}

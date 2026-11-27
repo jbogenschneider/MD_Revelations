@@ -1,66 +1,102 @@
-# Run after the Great Peace's war settlements, before its WNN announcement.
+# Transfer Britain's WestNATO roster to Germany's NATO.
 endtimes_reunite_westnato_with_nato = {
-	# Snapshot all surviving members: dissolving the faction can cancel its ideas.
-	every_country = {
-		limit = {
-			exists = yes
-			OR = {
-				rev_is_westnato_faction = yes
-				has_idea = WestNATO_member
-				is_in_array = { global.westnato_members = THIS }
-			}
-		}
-		set_country_flag = endtimes_westnato_reunion_member
-	}
 	if = {
-		limit = { any_country = { has_country_flag = endtimes_westnato_reunion_member } }
-		# Preserve continental NATO and its German leadership.
-		GER = {
-			if = {
-				limit = { exists = yes is_subject = no }
-				endtimes_ensure_nato_membership = yes
-				set_faction_leader = yes
-			}
-		}
+		# Britain may already be in NATO in a save from before the schedule changed.
+		limit = { ENG = { is_in_faction = yes NOT = { is_in_faction_with = GER } } }
 		every_country = {
-			limit = {
-				rev_is_westnato_faction = yes
-				is_faction_leader = yes
-			}
-			dismantle_faction = yes
+			limit = { OR = { tag = ENG is_in_faction_with = ENG } }
+			set_country_flag = endtimes_westnato_reunion_member
 		}
-		# Agreed reunification: do not use WestNATO_leave's departure penalties.
+		ENG = { faction_leader = { dismantle_faction = yes } }
 		every_country = {
 			limit = { has_country_flag = endtimes_westnato_reunion_member }
+			if = { limit = { is_in_faction = yes } leave_faction = yes }
 			remove_ideas = WestNATO_member
 			clr_country_flag = rev_westnato_faction_member
 			remove_from_tech_sharing_group = WestNATO_Tech_Share
-			remove_from_array = { global.westnato_members = THIS }
-			every_other_country = {
-				limit = {
-					OR = {
-						has_country_flag = endtimes_westnato_reunion_member
-						has_idea = NATO_member
-					}
-				}
-				remove_opinion_modifier = { target = PREV modifier = WestNATO_member_modifier }
-				remove_opinion_modifier = { target = PREV modifier = WestNATO_aspirant }
-				remove_opinion_modifier = { target = PREV modifier = left_westnato }
-				remove_opinion_modifier = { target = PREV modifier = left_nato }
-				PREV = {
+			remove_from_array = { array = global.westnato_members value = THIS }
+			GER = { add_to_faction = PREV }
+			if = {
+				limit = { is_in_faction_with = GER }
+				rev_nato_record_membership = yes
+				every_other_country = {
+					limit = { OR = { tag = GER is_in_faction_with = GER } }
 					remove_opinion_modifier = { target = PREV modifier = WestNATO_member_modifier }
 					remove_opinion_modifier = { target = PREV modifier = WestNATO_aspirant }
 					remove_opinion_modifier = { target = PREV modifier = left_westnato }
 					remove_opinion_modifier = { target = PREV modifier = left_nato }
+					PREV = {
+						remove_opinion_modifier = { target = PREV modifier = WestNATO_member_modifier }
+						remove_opinion_modifier = { target = PREV modifier = WestNATO_aspirant }
+						remove_opinion_modifier = { target = PREV modifier = left_westnato }
+						remove_opinion_modifier = { target = PREV modifier = left_nato }
+					}
 				}
 			}
 		}
+		if = {
+			limit = {
+				NOT = {
+					any_country = {
+						has_country_flag = endtimes_westnato_reunion_member
+						NOT = { is_in_faction_with = GER }
+					}
+				}
+			}
+			set_global_flag = endtimes_westnato_reunited
+			clear_array = global.westnato_members
+			log = "[GetDateText]: WestNATO's members returned to Germany's NATO."
+			GER = { news_event = { id = endtimes.75 } }
+		}
+		else = { log = "[GetDateText]: WestNATO's April 25 transfer did not complete." }
 		every_country = {
 			limit = { has_country_flag = endtimes_westnato_reunion_member }
-			endtimes_ensure_nato_membership = yes
 			clr_country_flag = endtimes_westnato_reunion_member
 		}
-		clear_array = global.westnato_members
-		set_global_flag = endtimes_nato_reunited_at_ceasefire
 	}
+	else = { log = "[GetDateText]: Britain is outside a separate WestNATO faction." }
+}
+
+# USA scope. Dissolve the separate wartime alliance without touching Germany's NATO.
+endtimes_dissolve_usa_wartime_faction = {
+	if = {
+		limit = { is_faction_leader = yes NOT = { is_in_faction_with = GER } }
+		every_other_country = {
+			limit = { is_in_faction_with = USA }
+			USA = { remove_from_faction = PREV }
+			if = { limit = { is_in_faction_with = USA } leave_faction = yes }
+			if = {
+				limit = { NOT = { is_in_faction_with = USA } has_idea = faction_seato_alliance }
+				remove_ideas = faction_seato_alliance
+			}
+		}
+		if = {
+			limit = { is_faction_leader = yes NOT = { is_in_faction_with = GER } }
+			dismantle_faction = yes
+		}
+		if = {
+			limit = { is_in_faction = no }
+			remove_ideas = faction_seato_alliance
+			log = "[GetDateText]: The American wartime alliance was dissolved."
+		}
+	}
+}
+
+# USA event scope. Join Germany's existing NATO.
+endtimes_return_usa_to_nato = {
+	if = {
+		limit = { NOT = { is_in_faction_with = GER } }
+		endtimes_dissolve_usa_wartime_faction = yes
+		if = { limit = { is_in_faction = yes } leave_faction = yes }
+		GER = { add_to_faction = USA }
+	}
+	if = {
+		limit = { is_in_faction_with = GER }
+		remove_ideas = faction_seato_alliance
+		rev_nato_record_membership = yes
+		set_country_flag = endtimes_usa_nato_return_completed
+		log = "[GetDateText]: The United States returned to Germany's NATO."
+		news_event = { id = endtimes.76 }
+	}
+	else = { log = "[GetDateText]: USA's April 27 NATO return did not complete the faction transfer." }
 }

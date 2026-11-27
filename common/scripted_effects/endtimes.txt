@@ -1,3 +1,56 @@
+# Set a population ceiling based on the first snapshot of each state.
+endtimes_update_disaster_population = {
+	if = {
+		limit = { NOT = { has_variable = global.endtimes_disaster_population_start_day } }
+		set_variable = { global.endtimes_disaster_population_start_day = global.num_days }
+		every_state = {
+			set_variable = { endtimes_disaster_start_population_k = state_population_k }
+		}
+	}
+
+	if = {
+		limit = { date < 2029.4.1 }
+		# Prorate the February and March adjustments over the full crisis window.
+		set_temp_variable = { endtimes_disaster_population_factor = global.endtimes_disaster_population_start_day }
+		subtract_from_temp_variable = { endtimes_disaster_population_factor = global.num_days }
+		set_temp_variable = { endtimes_disasters_population_factor = endtimes_disaster_population_factor }
+		divide_temp_variable = { endtimes_disaster_population_factor = 435 }
+		divide_temp_variable = { endtimes_disasters_population_factor = 1740 }
+		add_to_temp_variable = { endtimes_disaster_population_factor = 1 }
+		add_to_temp_variable = { endtimes_disasters_population_factor = 1 }
+	}
+	else = {
+		set_temp_variable = { endtimes_disaster_population_factor = 0.80 }
+		set_temp_variable = { endtimes_disasters_population_factor = 0.95 }
+	}
+
+	every_state = {
+		limit = { has_variable = endtimes_disaster_start_population_k }
+		set_temp_variable = { endtimes_disaster_population_delta_k = endtimes_disaster_start_population_k }
+		if = {
+			limit = { owner = { endtimes_uses_disasters_spirit = yes } }
+			multiply_temp_variable = { endtimes_disaster_population_delta_k = endtimes_disasters_population_factor }
+		}
+		else = {
+			multiply_temp_variable = { endtimes_disaster_population_delta_k = endtimes_disaster_population_factor }
+		}
+		subtract_from_temp_variable = { endtimes_disaster_population_delta_k = state_population_k }
+		# Convert from thousands in chunks to stay within the script variable range.
+		while_loop_effect = {
+			limit = { check_variable = { endtimes_disaster_population_delta_k < 0 } }
+			set_temp_variable = { endtimes_disaster_population_chunk = endtimes_disaster_population_delta_k }
+			clamp_temp_variable = { var = endtimes_disaster_population_chunk min = -1000 }
+			subtract_from_temp_variable = { endtimes_disaster_population_delta_k = endtimes_disaster_population_chunk }
+			multiply_temp_variable = { endtimes_disaster_population_chunk = 1000 }
+			add_manpower = endtimes_disaster_population_chunk
+		}
+		if = {
+			limit = { NOT = { date < 2029.4.3 } }
+			clear_variable = endtimes_disaster_start_population_k
+		}
+	}
+}
+
 # Use MD's consumer-goods formula: expected value * (1 + consumer_goods_factor).
 # Only add the shortfall to 90%; never reduce an already higher demand.
 endtimes_refresh_famine_consumption_floor = {

@@ -19,34 +19,45 @@ endtimes_join_csto_and_cabal = {
 	endtimes_enroll_csto_and_cabal = yes
 }
 
-# Country scope. Membership only; leave previous alliances before calling.
+# Country scope. Join the CSTO only when Russia can provide the actual faction.
 endtimes_enroll_csto_and_cabal = {
-	if = { limit = { has_idea = MeccaPact_member } MeccaPact_leave = yes }
+	endtimes_join_russian_csto = yes
+	add_ideas = endtimes_cabal
+	set_country_flag = endtimes_cabal_initialized
+	endtimes_refresh_support_floor = yes
+}
+
+endtimes_join_russian_csto = {
 	save_event_target_as = endtimes_csto_applicant
 	SOV = {
 		if = {
-			limit = { NOT = { is_in_faction = yes } }
+			limit = { exists = yes is_subject = no is_in_faction = no }
 			create_faction_from_template = faction_template_csto
 		}
-		add_ideas = CSTO_member
 		if = {
-			limit = { NOT = { is_in_array = { global.CSTO_member = THIS } } }
-			add_to_array = { global.CSTO_member = THIS }
-		}
-		add_to_tech_sharing_group = CSTO_Tech_Share
-		set_faction_leader = yes
-		if = {
-			limit = { NOT = { is_in_faction_with = event_target:endtimes_csto_applicant } }
-			add_to_faction = event_target:endtimes_csto_applicant
+			limit = { has_faction_template = faction_template_csto }
+			set_faction_leader = yes
+			endtimes_record_csto_membership = yes
+			if = {
+				limit = { NOT = { is_in_faction_with = event_target:endtimes_csto_applicant } }
+				event_target:endtimes_csto_applicant = {
+					if = { limit = { has_idea = MeccaPact_member } MeccaPact_leave = yes }
+				}
+				add_to_faction = event_target:endtimes_csto_applicant
+			}
 		}
 	}
+	if = {
+		limit = { has_faction_template = faction_template_csto }
+		endtimes_record_csto_membership = yes
+	}
+}
+
+endtimes_record_csto_membership = {
 	add_ideas = CSTO_member
 	if = {
 		limit = { NOT = { is_in_array = { global.CSTO_member = THIS } } }
 		add_to_array = { global.CSTO_member = THIS }
 	}
 	add_to_tech_sharing_group = CSTO_Tech_Share
-	add_ideas = endtimes_cabal
-	set_country_flag = endtimes_cabal_initialized
-	endtimes_refresh_support_floor = yes
 }

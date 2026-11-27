@@ -45,6 +45,14 @@ focus_tree = {
 	shared_focus = REV_NATO_secret_weapons_program
 
 	shared_focus = REV_HM_holy_monarchy
+	shared_focus = REV_HM_protect_the_papacy
+	shared_focus = REV_HM_found_the_catholic_league
+	shared_focus = REV_HM_eldest_daughter_of_the_church
+	shared_focus = REV_HM_the_tenth_crusade
+	shared_focus = REV_HM_modern_chivalry
+	shared_focus = REV_HM_the_kings_camelots
+	shared_focus = REV_HM_pillar_of_counterterrorism
+	shared_focus = REV_HM_the_french_foreign_legion
 	shared_focus = REV_HM_light_industry_investments
 	shared_focus = REV_HM_agricultural_district_subsidization
 	shared_focus = REV_HM_energy_sector

@@ -469,18 +469,21 @@ influence_decisions = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision combat_biggest_influencer_decision"
 			if = { limit = { check_variable = { combat_big_influencer = 0 } }
+				if = { limit = { tag = CHA } log = "[GetDateText]: Chad influence decision: starting tag-based influence update." }
 				set_temp_variable = { percent_change = -5 }
 				set_temp_variable = { tag_index = influence_array^0 }
 				set_temp_variable = { influence_target = THIS.id }
 				change_influence_percentage = yes
 			}
 			else = {
+				if = { limit = { tag = CHA } log = "[GetDateText]: Chad influence decision: starting indexed influence update." }
 				set_temp_variable = { percent_change = -5 }
 				set_temp_variable = { influencer_index = 0 }
 				change_current_influencer_index_percentage = yes
 			}
 
 			clear_variable = combat_big_influencer
+			if = { limit = { tag = CHA } log = "[GetDateText]: Chad influence decision: expiration effect returned." }
 		}
 
 		ai_will_do = {

@@ -8,6 +8,7 @@ on_actions = {
 			ISR = {
 				if = { limit = { exists = yes } rev_nato_enforce_israel_exclusion = yes }
 			}
+			rev_nato_reunite_factions = yes
 		}
 	}
 	on_daily = {
@@ -15,6 +16,13 @@ on_actions = {
 			if = {
 				limit = { rev_is_nato_faction = yes is_subject = no }
 				rev_nato_sync_existing_membership = yes
+			}
+			if = {
+				limit = {
+					is_faction_leader = yes
+					OR = { tag = GER tag = USA rev_is_nato_faction = yes }
+				}
+				rev_nato_reunite_factions = yes
 			}
 			if = {
 				limit = { tag = ISR }

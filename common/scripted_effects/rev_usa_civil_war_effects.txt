@@ -489,6 +489,7 @@ rev_rebuild_nato_under_ger = {
 			NOT = { is_subject = yes }
 			NOT = { is_in_faction = yes }
 			has_idea = NATO_member
+			NOT = { any_country = { rev_is_nato_faction = yes is_faction_leader = yes } }
 		}
 		log = "[GetDateText]: [Root.GetName]: rebuilding NATO under German leadership."
 		create_faction_from_template = faction_template_nato

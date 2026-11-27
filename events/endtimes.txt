@@ -2,6 +2,182 @@
 add_namespace = endtimes
 add_namespace = endtimeseal
 
+# April 25, 2028: WestNATO returns to Germany's existing alliance.
+country_event = {
+	id = endtimes.73
+	hidden = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = { endtimes_westnato_reunification_ready = yes }
+	immediate = {
+		set_global_flag = endtimes_westnato_reunification_started
+		log = "[GetDateText]: The April 25 WestNATO reunification event started."
+		endtimes_reunite_westnato_with_nato = yes
+	}
+}
+
+# April 27, 2028: a Western government in Washington can return to NATO.
+country_event = {
+	id = endtimes.74
+	hidden = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = { endtimes_usa_nato_return_ready = yes }
+	immediate = {
+		set_country_flag = endtimes_usa_nato_return_started
+		log = "[GetDateText]: USA's April 27 NATO return event started."
+		endtimes_return_usa_to_nato = yes
+	}
+}
+
+news_event = {
+	id = endtimes.75
+	title = endtimes.75.t
+	desc = endtimes.75.d
+	picture = GFX_news_nato
+	is_triggered_only = yes
+	major = yes
+	option = { name = endtimes.75.a }
+}
+
+news_event = {
+	id = endtimes.76
+	title = endtimes.76.t
+	desc = endtimes.76.d
+	picture = GFX_news_nato
+	is_triggered_only = yes
+	major = yes
+	option = { name = endtimes.76.a }
+}
+
+# Worldwide WNN report on the Two Witnesses in Jerusalem.
+news_event = {
+	id = endtimes.70
+	title = endtimes.70.t
+	desc = endtimes.70.d
+	picture = GFX_religious_meeting
+	is_triggered_only = yes
+	major = yes
+	trigger = { has_global_flag = endtimes_two_witnesses_dispatched }
+	option = { name = endtimes.70.a }
+}
+
+# China annexes its Far Eastern puppet once Russia has a Western government.
+country_event = {
+	id = endtimes.67
+	hidden = yes
+	is_triggered_only = yes
+	trigger = { endtimes_china_far_east_annexation_ready = yes }
+	immediate = {
+		annex_country = { target = FAR transfer_troops = yes }
+		if = {
+			limit = { NOT = { country_exists = FAR } }
+			set_global_flag = endtimes_china_annexed_far_east
+			news_event = { id = endtimes.68 }
+		}
+	}
+}
+
+news_event = {
+	id = endtimes.68
+	title = endtimes.68.t
+	desc = endtimes.68.d
+	picture = GFX_news_generic_soldiers
+	is_triggered_only = yes
+	major = yes
+	trigger = { has_global_flag = endtimes_china_annexed_far_east }
+	option = { name = endtimes.68.a }
+}
+
+# Confirm the declaration before ending the daily check.
+country_event = {
+	id = endtimes.69
+	hidden = yes
+	is_triggered_only = yes
+	trigger = { endtimes_china_vietnam_war_pending = yes }
+	immediate = {
+		if = {
+			limit = { NOT = { has_war_with = VIE } }
+			if = {
+				limit = { VIE = { is_subject_of = CHI } }
+				set_autonomy = { target = VIE autonomy_state = autonomy_free }
+			}
+			if = {
+				limit = { is_in_faction_with = VIE }
+				VIE = {
+					if = {
+						limit = { rev_is_meccapact_faction = yes }
+						MeccaPact_leave = yes
+					}
+					else = { MeccaPact_leave_previous_alliance = yes }
+				}
+			}
+			if = {
+				limit = { has_non_aggression_pact_with = VIE }
+				diplomatic_relation = {
+					country = VIE
+					relation = non_aggression_pact
+					active = no
+				}
+			}
+			declare_war_on = { target = VIE type = annex_everything }
+		}
+		if = {
+			limit = { has_war_with = VIE }
+			set_country_flag = endtimes_china_vietnam_war_started
+		}
+	}
+}
+
+# Restore NATO membership and reinforce the existing war of the event's recipient.
+country_event = {
+	id = endtimes.66
+	hidden = yes
+	is_triggered_only = yes
+	trigger = {
+		OR = { tag = LIT tag = LAT tag = EST tag = UKR }
+		date > 2029.2.1
+		has_war_with = SOV
+		any_other_country = {
+			OR = { tag = POL tag = FIN tag = ROM }
+			OR = {
+				NOT = { rev_is_nato_faction = yes }
+				NOR = {
+					has_war_with = SOV
+					has_war_with = ROOT
+					is_in_faction_with = SOV
+				}
+			}
+		}
+	}
+	immediate = {
+		every_other_country = {
+			limit = { OR = { tag = POL tag = FIN tag = ROM } }
+			if = {
+				limit = { NOT = { rev_is_nato_faction = yes } }
+				endtimes_ensure_nato_membership = yes
+			}
+			if = {
+				limit = {
+					NOR = {
+						has_war_with = SOV
+						has_war_with = ROOT
+						is_in_faction_with = SOV
+					}
+				}
+				add_to_war = {
+					targeted_alliance = ROOT
+					enemy = SOV
+					hostility_reason = asked_to_join
+					single_target_only = yes
+				}
+			}
+		}
+	}
+}
+
 # January fallback when the breakaways did not enter their planned wars.
 country_event = {
 	id = endtimes.65
@@ -552,6 +728,34 @@ news_event = {
 	major = yes
 	trigger = { has_global_flag = endtimes_global_war_announced }
 	option = { name = endtimes.47.a }
+}
+
+# Give each affected human player a choice before applying the ultimatum.
+country_event = {
+	id = endtimes.71
+	title = endtimes.46.t
+	desc = endtimes.71.d
+	picture = GFX_news_generic_soldiers
+	is_triggered_only = yes
+	timeout_days = 2
+	trigger = {
+		has_country_flag = endtimes_join_or_war_response_pending
+		NOT = { has_global_flag = endtimes_join_or_war_completed }
+	}
+	option = {
+		name = endtimes.71.a
+		ai_chance = { factor = 100 }
+		clr_country_flag = endtimes_join_or_war_response_pending
+		endtimes_try_apply_join_or_war = yes
+	}
+	option = {
+		name = endtimes.71.b
+		ai_chance = { factor = 0 }
+		add_stability = -0.15
+		set_country_flag = endtimes_join_or_war_opted_out
+		clr_country_flag = endtimes_join_or_war_response_pending
+		endtimes_try_apply_join_or_war = yes
+	}
 }
 
 # Worldwide WNN report after the December 5 ultimatum has been applied.
@@ -1371,6 +1575,23 @@ news_event = {
 	}
 }
 
+# Worldwide WNN announcement: April 3, 2029. Narrative only.
+news_event = {
+	id = endtimes.72
+	title = endtimes.72.t
+	desc = endtimes.72.d
+	picture = GFX_eth_famine_strikes
+	is_triggered_only = yes
+	major = yes
+
+	trigger = {
+		NOT = { date < 2029.4.3 }
+		date < 2029.4.4
+	}
+
+	option = { name = endtimes.72.a }
+}
+
 # Worldwide WNN announcement: June 5, 2029.
 news_event = {
 	id = endtimes.21
@@ -1931,7 +2152,7 @@ news_event = {
 
 	trigger = {
 		# Keep queued or external calls on the scheduled day.
-		date > 2029.1.5
+		NOT = { date < 2029.1.6 }
 		date < 2029.1.7
 	}
 

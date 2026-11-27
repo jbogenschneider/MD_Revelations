@@ -29,12 +29,14 @@ NATO_join = {
 	add_to_array = { global.nato_members = THIS }
 	add_ideas = NATO_member
 	add_to_tech_sharing_group = NATO_Tech_Share
-	random_country = {
+	if = {
 		limit = {
-			has_idea = NATO_member
-			is_faction_leader = yes
+			NOT = { rev_is_nato_faction = yes }
+			any_other_country = { rev_is_nato_faction = yes is_faction_leader = yes }
 		}
-		add_to_faction = ROOT
+		save_event_target_as = rev_nato_accession_applicant
+		rev_nato_find_existing_leader = yes
+		event_target:rev_nato_destination = { add_to_faction = event_target:rev_nato_accession_applicant }
 	}
 
 	if = {
@@ -53,7 +55,7 @@ NATO_join_via_event = {
 	if = {
 		limit = {
 			USA = {
-				has_idea = NATO_member
+				rev_is_nato_faction = yes
 				is_faction_leader = yes
 			}
 		}
@@ -62,7 +64,7 @@ NATO_join_via_event = {
 	else = {
 		random_country = {
 			limit = {
-				has_idea = NATO_member
+				rev_is_nato_faction = yes
 				is_faction_leader = yes
 			}
 			country_event = NATO.14

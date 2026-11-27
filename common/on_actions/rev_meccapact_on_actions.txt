@@ -1,4 +1,18 @@
 on_actions = {
+	on_startup = { effect = { rev_repair_meccapact_split = yes } }
+	on_weekly_SAU = { effect = { rev_repair_meccapact_split = yes } }
+	on_assume_faction_leadership = {
+		effect = {
+			if = {
+				limit = {
+					NOT = { tag = SAU }
+					rev_is_meccapact_faction = yes
+					SAU = { exists = yes is_subject = no has_capitulated = no }
+				}
+				SAU = { MeccaPact_create = yes }
+			}
+		}
+	}
 	# ROOT is the applicant; FROM is the faction leader.
 	on_join_faction = {
 		effect = {

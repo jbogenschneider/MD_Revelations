@@ -29,3 +29,11 @@ units = {
 		force_equipment_variants = { infantry_weapons2 = { amount = 333 owner = USA version_name = "Colt Commando" } }
 	}
 }
+
+# Reinforcements for the estimated equipment shortfall in this roster.
+instant_effect = {
+	add_equipment_to_stockpile = { type = command_control_equipment2 amount = 100 }
+	add_equipment_to_stockpile = { type = Anti_tank_1 amount = 32 }
+	add_equipment_to_stockpile = { type = Anti_Air_1 amount = 20 }
+	add_equipment_to_stockpile = { type = transport_helicopter2 amount = 40 }
+}

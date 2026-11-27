@@ -2,21 +2,15 @@ on_actions = {
 	on_daily = {
 		effect = {
 			if = {
+				limit = { rev_fra_election_nato_transfer_pending = yes }
+				country_event = { id = rev_nato_election_membership.2 }
+			}
+			if = {
 				limit = {
+					tag = ITA
 					NOT = { has_country_flag = rev_nato_post_election_membership_checked }
-					OR = {
-						AND = {
-							tag = FRA
-							has_government = nationalist
-							has_country_flag = rev_fra_2027_handover_done
-							has_country_flag = rev_fra_2027_le_pen_elected
-						}
-						AND = {
-							tag = ITA
-							has_government = democratic
-							has_country_flag = rev_ita_2027_election_resolved
-						}
-					}
+					has_government = democratic
+					has_country_flag = rev_ita_2027_election_resolved
 				}
 				country_event = { id = rev_nato_election_membership.1 }
 			}

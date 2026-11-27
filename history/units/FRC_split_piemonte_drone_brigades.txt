@@ -28,3 +28,14 @@ units = {
 		start_equipment_factor = 0.9
 	}
 }
+
+# Reinforcements for the estimated equipment shortfall in this roster.
+instant_effect = {
+	add_equipment_to_stockpile = { type = infantry_weapons2 amount = 452 }
+	add_equipment_to_stockpile = { type = command_control_equipment2 amount = 52 }
+	add_equipment_to_stockpile = { type = Anti_tank_1 amount = 16 }
+	add_equipment_to_stockpile = { type = Anti_Air_1 amount = 12 }
+	add_equipment_to_stockpile = { type = util_vehicle_3 amount = 20 }
+	add_equipment_to_stockpile = { type = SP_arty_1 amount = 4 }
+	add_equipment_to_stockpile = { type = land_drone_equipment_3 amount = 4 }
+}

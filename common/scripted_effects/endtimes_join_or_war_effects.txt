@@ -1,9 +1,41 @@
+# Mark every affected player before sending any of the choices.
+endtimes_offer_join_or_war = {
+	set_global_flag = endtimes_join_or_war_offered
+	every_country = {
+		limit = { endtimes_join_or_war_participant = yes is_ai = no }
+		set_country_flag = endtimes_join_or_war_response_pending
+	}
+	every_country = {
+		limit = { has_country_flag = endtimes_join_or_war_response_pending }
+		country_event = { id = endtimes.71 }
+	}
+	endtimes_try_apply_join_or_war = yes
+}
+
+endtimes_try_apply_join_or_war = {
+	if = {
+		limit = {
+			has_global_flag = endtimes_join_or_war_offered
+			NOT = { has_global_flag = endtimes_join_or_war_completed }
+			NOT = {
+				any_country = {
+					exists = yes
+					is_ai = no
+					has_country_flag = endtimes_join_or_war_response_pending
+				}
+			}
+		}
+		endtimes_apply_join_or_war = yes
+		endtimes_broadcast_news_46 = yes
+	}
+}
+
 # Global scope. Prepare every surviving participant before enrolling any of them.
 # Settle wars against the destination bloc or fellow entrants; other wars continue.
 endtimes_apply_join_or_war = {
 	set_global_flag = endtimes_join_or_war_completed
 	every_country = {
-		limit = { exists = yes endtimes_join_or_war_country = yes }
+		limit = { endtimes_join_or_war_participant = yes }
 		save_event_target_as = endtimes_ultimatum_applicant
 		if = {
 			limit = {
@@ -21,8 +53,9 @@ endtimes_apply_join_or_war = {
 				OR = {
 					tag = SAU
 					rev_is_meccapact_faction = yes
-					endtimes_join_or_war_country = yes
+					endtimes_join_or_war_participant = yes
 				}
+				NOT = { has_country_flag = endtimes_join_or_war_opted_out }
 				has_war_with = event_target:endtimes_ultimatum_applicant
 			}
 			white_peace = event_target:endtimes_ultimatum_applicant
@@ -34,8 +67,7 @@ endtimes_apply_join_or_war = {
 	}
 	every_country = {
 		limit = {
-			exists = yes
-			endtimes_join_or_war_country = yes
+			endtimes_join_or_war_participant = yes
 			NOT = { rev_is_nato_faction = yes }
 			NOT = { rev_is_westnato_faction = yes }
 		}

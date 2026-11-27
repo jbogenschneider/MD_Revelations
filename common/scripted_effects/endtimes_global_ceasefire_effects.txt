@@ -48,7 +48,6 @@ endtimes_apply_global_ceasefire = {
 		}
 
 		# Egypt settles with Iran and the Axis unless allied with the USA.
-		# Check before the later NATO reunification changes any faction membership.
 		if = {
 			limit = {
 				EGY = { exists = yes NOT = { is_in_faction_with = USA } }
@@ -106,9 +105,6 @@ endtimes_apply_global_ceasefire = {
 				white_peace = CHI
 			}
 		}
-
-		# Reunite the temporary Atlantic split only after the wars have ended.
-		endtimes_reunite_westnato_with_nato = yes
 
 		# Apply the ceasefire before broadcasting it, independent of player clicks.
 		endtimes_broadcast_news_38 = yes

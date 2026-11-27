@@ -1387,7 +1387,7 @@ capital = 91
 	}
 	set_politics = {
 		ruling_party = democratic
-		last_election = "2024.6.26"
+		last_election = "2022.11.1" # The next regular election campaign starts in November 2026.
 		election_frequency = 48
 		elections_allowed = yes
 	}
@@ -1396,9 +1396,9 @@ capital = 91
 
 	### Party Popularities
 	set_variable = { party_pop_array^0 = 0 } #Western_Autocracy
-	set_variable = { party_pop_array^1 = 0.23 } #conservatism
+	set_variable = { party_pop_array^1 = 0.27 } #conservatism
 	set_variable = { party_pop_array^2 = 0.13 } #liberalism
-	set_variable = { party_pop_array^3 = 0.32 } #socialism
+	set_variable = { party_pop_array^3 = 0.28 } #socialism
 	set_variable = { party_pop_array^4 = 0 } #Communist-State
 	set_variable = { party_pop_array^5 = 0 } #anarchist_communism
 	set_variable = { party_pop_array^6 = 0 } #Conservative
@@ -1422,6 +1422,9 @@ capital = 91
 
 	### Ruling Party
 	add_to_array = { ruling_party = 3 }
+	# The MD election code uses these indices when it installs the winning party's leader.
+	set_variable = { conservatism_leader = 3 } # Alberto Núñez Feijóo.
+	set_variable = { socialism_leader = 2 } # Pedro Sánchez.
 
 	startup_politics = yes
 

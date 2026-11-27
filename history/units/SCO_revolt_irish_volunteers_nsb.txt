@@ -63,3 +63,12 @@ units = {
 		force_equipment_variants = { medium_tank_destroyer_chassis_0 = { amount = 14 owner = IRE creator = FRA version_name = "Panhard AML 90" } }
 	}
 }
+
+# Reinforcements for the estimated equipment shortfall in this roster.
+instant_effect = {
+	add_equipment_to_stockpile = { type = infantry_weapons2 amount = 680 }
+	add_equipment_to_stockpile = { type = command_control_equipment2 amount = 28 }
+	add_equipment_to_stockpile = { type = MBT_3 amount = 8 }
+	add_equipment_to_stockpile = { type = APC_3 amount = 13 }
+	add_equipment_to_stockpile = { type = land_drone_equipment_3 amount = 10 }
+}

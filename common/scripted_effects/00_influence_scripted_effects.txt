@@ -441,6 +441,7 @@ change_current_influencer_index_percentage = {
 	set_temp_variable = { temp_total = 100 }
 	subtract_from_temp_variable = { temp_total = influence_array_val^influencer_index }
 
+	if = { limit = { tag = CHA } log = "[GetDateText]: Chad indexed influence update: normalizing with remaining influence [?influence_outlook_amount]." }
 	divide_temp_variable = { temp_total = influence_outlook_amount }
 	multiply_variable = { domestic_influence_amount = temp_total }
 	for_each_loop = {
@@ -452,7 +453,9 @@ change_current_influencer_index_percentage = {
 			multiply_variable = { influence_array_val^i = temp_total }
 		}
 	}
+	if = { limit = { tag = CHA } log = "[GetDateText]: Chad indexed influence update: starting influence recalculation." }
 	recalculate_influence = yes
+	if = { limit = { tag = CHA } log = "[GetDateText]: Chad indexed influence update: influence recalculation returned." }
 	set_temp_variable = { percent_change = percent_change_temp }
 
 	custom_effect_tooltip = change_index_influencer_tt

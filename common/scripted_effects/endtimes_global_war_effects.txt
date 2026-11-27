@@ -77,6 +77,18 @@ endtimes_launch_global_war = {
 					event_target:endtimes_global_war_nato_leader = { tag = GER }
 					has_war_with = GER
 				}
+				FRC = {
+					if = {
+						limit = {
+							exists = yes
+							rev_is_meccapact_faction = yes
+							ITA = { exists = yes }
+							NOT = { has_war_with = ITA }
+							NOT = { is_in_faction_with = ITA }
+						}
+						declare_war_on = { target = ITA type = annex_everything }
+					}
+				}
 				FRA = {
 					if = {
 						limit = { exists = yes }
@@ -84,6 +96,7 @@ endtimes_launch_global_war = {
 							if = {
 								limit = {
 									exists = yes
+									rev_is_meccapact_faction = yes
 									NOT = { has_war_with = FRA }
 									NOT = { is_in_faction_with = FRA }
 								}
@@ -94,6 +107,7 @@ endtimes_launch_global_war = {
 							if = {
 								limit = {
 									exists = yes
+									rev_is_meccapact_faction = yes
 									NOT = { has_war_with = FRA }
 									NOT = { is_in_faction_with = FRA }
 								}
@@ -106,6 +120,7 @@ endtimes_launch_global_war = {
 					if = {
 						limit = {
 							exists = yes
+							rev_is_meccapact_faction = yes
 							ENG = { exists = yes }
 							NOT = { has_war_with = ENG }
 							NOT = { is_in_faction_with = ENG }
@@ -117,6 +132,7 @@ endtimes_launch_global_war = {
 					if = {
 						limit = {
 							exists = yes
+							rev_is_meccapact_faction = yes
 							GRE = { exists = yes }
 							NOT = { has_war_with = GRE }
 							NOT = { is_in_faction_with = GRE }
@@ -127,6 +143,7 @@ endtimes_launch_global_war = {
 				every_country = {
 					limit = {
 						exists = yes
+						rev_is_meccapact_faction = yes
 						OR = { tag = DDR tag = CZE tag = AUS }
 						NOT = { has_war_with = GER }
 						NOT = { is_in_faction_with = GER }
@@ -157,6 +174,7 @@ endtimes_launch_global_war = {
 					if = {
 						limit = {
 							exists = yes
+							rev_is_meccapact_faction = yes
 							GRE = { exists = yes }
 							NOT = { has_war_with = GRE }
 							NOT = { is_in_faction_with = GRE }

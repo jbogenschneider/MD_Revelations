@@ -34,26 +34,7 @@ endtimes_setup_east_germany_politics = {
 endtimes_east_germany_join_csto = {
 	NATO_leave = yes
 	leave_faction = yes
-	SOV = {
-		if = {
-			limit = { NOT = { is_in_faction = yes } }
-			create_faction_from_template = faction_template_csto
-		}
-		add_ideas = CSTO_member
-		if = {
-			limit = { NOT = { is_in_array = { global.CSTO_member = THIS } } }
-			add_to_array = { global.CSTO_member = THIS }
-		}
-		add_to_tech_sharing_group = CSTO_Tech_Share
-		set_faction_leader = yes
-		add_to_faction = DDR
-	}
-	add_ideas = CSTO_member
-	if = {
-		limit = { NOT = { is_in_array = { global.CSTO_member = THIS } } }
-		add_to_array = { global.CSTO_member = THIS }
-	}
-	add_to_tech_sharing_group = CSTO_Tech_Share
+	endtimes_join_russian_csto = yes
 }
 
 # GER country scope, during the November 27, 2028 settlement.

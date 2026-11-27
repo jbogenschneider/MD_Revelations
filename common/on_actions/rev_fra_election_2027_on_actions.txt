@@ -21,6 +21,31 @@ on_actions = {
 				}
 				country_event = { id = rev_fra_election.2 }
 			}
+			# Correct old handovers while Marine Le Pen is still the incumbent.
+			if = {
+				limit = {
+					tag = FRA
+					has_country_flag = rev_fra_2027_handover_done
+					has_country_flag = rev_fra_2027_le_pen_elected
+					NOT = { has_country_flag = rev_fra_2027_le_pen_western_handover }
+					has_government = nationalist
+					has_country_leader_ideology = Nat_Populism
+					has_country_leader = { name = "Marine Le Pen" ruling_only = yes }
+				}
+				set_country_flag = rev_fra_2027_le_pen_western_handover
+				remove_country_leader_trait = nationalist_Nat_Populism
+				add_country_leader_trait = western_conservatism
+				set_country_leader_ideology = conservatism
+				set_politics = { ruling_party = democratic }
+				clear_array = ruling_party
+				clear_array = gov_coalition_array
+				add_to_array = { ruling_party = 1 }
+				startup_politics = yes
+				if = {
+					limit = { rev_fra_election_nato_transfer_pending = yes }
+					country_event = { id = rev_nato_election_membership.2 }
+				}
+			}
 		}
 	}
 }

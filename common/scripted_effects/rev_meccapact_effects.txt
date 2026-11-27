@@ -26,8 +26,7 @@ MeccaPact_leave_previous_alliance = {
 	if = { limit = { is_in_faction = yes } leave_faction = yes }
 }
 
-# Country scope. Saudi Arabia is the founding leader; no startup changes.
-# Does nothing if another MeccaPact leader already exists.
+# SAU scope. Reuse the existing pact if leadership changed.
 MeccaPact_create = {
 	if = {
 		limit = {
@@ -35,12 +34,6 @@ MeccaPact_create = {
 			exists = yes
 			is_subject = no
 			NOT = { rev_is_meccapact_faction = yes }
-			NOT = {
-				any_other_country = {
-					rev_is_meccapact_faction = yes
-					is_faction_leader = yes
-				}
-			}
 		}
 		MeccaPact_leave_previous_alliance = yes
 		if = {
@@ -51,6 +44,17 @@ MeccaPact_create = {
 				limit = { is_in_faction = yes is_faction_leader = yes }
 				set_country_flag = rev_meccapact_generic_founder
 				log = "[GetDateText]: Saudi Arabia: created MeccaPact using generic create_faction syntax."
+			}
+		}
+	}
+	if = {
+		limit = { tag = SAU rev_is_meccapact_faction = yes }
+		if = {
+			limit = { is_faction_leader = no }
+			set_faction_leader = yes
+			every_other_country = {
+				limit = { is_subject = no is_in_faction_with = SAU }
+				MeccaPact_enroll_member = yes
 			}
 		}
 		MeccaPact_enroll_member = yes
@@ -70,25 +74,16 @@ MeccaPact_enroll_member = {
 	}
 }
 
-# Country scope. Resolve both countries explicitly: never rely on PREV inside
-# nested searches, and never remove an old alliance before a destination exists.
+# Country scope. Use Saudi Arabia as the sole destination.
 MeccaPact_join = {
 	if = {
 		limit = { exists = yes is_subject = no }
 		save_event_target_as = rev_meccapact_applicant
-		if = {
-			limit = {
-				NOT = { any_country = { rev_is_meccapact_faction = yes is_faction_leader = yes } }
-			}
-			SAU = { MeccaPact_create = yes }
-		}
+		SAU = { MeccaPact_create = yes }
 		if = {
 			limit = {
 				NOT = { rev_is_meccapact_faction = yes }
-				any_other_country = {
-					rev_is_meccapact_faction = yes
-					is_faction_leader = yes
-				}
+				SAU = { rev_is_meccapact_faction = yes is_faction_leader = yes }
 				NOT = {
 					any_other_country = {
 						rev_is_meccapact_faction = yes
@@ -96,12 +91,8 @@ MeccaPact_join = {
 					}
 				}
 			}
-			random_other_country = {
-				limit = { rev_is_meccapact_faction = yes is_faction_leader = yes }
-				save_event_target_as = rev_meccapact_destination
-			}
 			MeccaPact_leave_previous_alliance = yes
-			event_target:rev_meccapact_destination = {
+			SAU = {
 				add_to_faction = event_target:rev_meccapact_applicant
 			}
 		}
@@ -113,12 +104,68 @@ MeccaPact_join = {
 		else = {
 			log = "[GetDateText]: [This.GetName]: MeccaPact_join FAILED; no valid leader, incompatible war or faction transfer refused."
 			if = {
-				limit = { NOT = { any_country = { rev_is_meccapact_faction = yes is_faction_leader = yes } } }
+				limit = { NOT = { SAU = { rev_is_meccapact_faction = yes is_faction_leader = yes } } }
 				log = "[GetDateText]: [This.GetName]: MeccaPact failure detail: no recognized pact leader exists."
 			}
 			if = {
 				limit = { is_in_faction = yes }
 				log = "[GetDateText]: [This.GetName]: MeccaPact failure detail: applicant remains in another faction."
+			}
+		}
+	}
+}
+
+# Saves from before the CSTO check can contain a second pact led by Russia.
+# Turkey and Iran's completed accessions identify the original bloc.
+rev_repair_meccapact_split = {
+	if = {
+		limit = {
+			has_global_flag = endtimes_saudi_meccapact_founded
+			SAU = { exists = yes is_subject = no rev_is_meccapact_faction = yes }
+		}
+		SAU = {
+			if = {
+				limit = { is_faction_leader = no has_capitulated = no }
+				MeccaPact_create = yes
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = endtimes_join_or_war_completed
+				SAU = { is_faction_leader = yes }
+				DDR = { has_country_flag = endtimes_east_germany_independent }
+				SOV = {
+					exists = yes
+					is_faction_leader = yes
+					NOR = {
+						is_in_faction_with = SAU
+						has_faction_template = faction_template_csto
+					}
+				}
+				OR = {
+					SOV = { has_country_flag = rev_meccapact_split_repair_pending }
+					AND = {
+						TUR = { has_country_flag = endtimes_turkey_alex_alliance_completed is_in_faction_with = SOV }
+						PER = { has_country_flag = endtimes_iran_meccapact_completed is_in_faction_with = SOV }
+					}
+				}
+			}
+			SOV = { set_country_flag = rev_meccapact_split_repair_pending }
+			every_country = {
+				limit = { exists = yes NOT = { tag = SOV } is_in_faction_with = SOV }
+				MeccaPact_join = yes
+			}
+			# Dissolve the old faction through the normal departure path once Russia is alone.
+			SOV = {
+				if = {
+					limit = { NOT = { any_other_country = { is_in_faction_with = SOV } } }
+					MeccaPact_join = yes
+					if = {
+						limit = { rev_is_meccapact_faction = yes }
+						clr_country_flag = rev_meccapact_split_repair_pending
+						log = "[GetDateText]: Reunited the two MeccaPacts under Saudi Arabia."
+					}
+				}
 			}
 		}
 	}

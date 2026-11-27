@@ -3,6 +3,10 @@
  endtimes.15.d: "Vladimir Putin and Russia were in Alex's Cabal, but Putin entirely pursed his own Imperial Ambitions. Alex knew Russia would fail but create a power vacume that his people would quickly fill.  Now Alex has total control of Russia, with the full support of the oligarchy.\n\nHe brings a vast personal fortune, a complete artificial intelligence system, and a new currency. Russia is starting over, free of international debt and ready to put its oil revenues to work rebuilding the country. Through Alex's global business ties, especially in the Middle East, Russia will soon be back in business.  Alex still uses another Russian Oligarch as the actual figurehead in public."
  endtimes.15.a: "Russia begins again under Alex."
 
+ endtimes.70.t: "The Two Witnesses"
+ endtimes.70.d: "Just as Alex and his prophets have been performing signs and wonders, two old men have appeared in Jerusalem. They seem able to one-up Alex's prophets with wonders and miracles of their own, and they are preaching the truth of Jesus Christ.\n\nSo far, the local authorities have allowed them to preach, but Alex cannot be happy about it."
+ endtimes.70.a: "Jerusalem is listening."
+
  endtimeseal.7.t: "The Sealed"
  endtimeseal.7.d: "Just as the Beast, Alex, has the Mark, those loyal to Jesus also receive their seal. Angels will protect them and give them extraordinary courage to protect My People and provide refuge. Those who perish will be martyrs.\n\nWe will take the battle to those who would harm us and shelter all who seek our protection."
  endtimeseal.7.a: "Protect My People. Shelter those in need."
@@ -17,8 +21,11 @@
  endtimes.47.d: "Alex is not much of a general, but he has aligned a huge force. His priorities are India and Southern Europe for now."
  endtimes.47.a: "The global war has begun."
  endtimes.46.t: "Join or War"
- endtimes.46.d: "The EU has disbanded and civil wars have already started, but the real World War III has not commenced yet. That changes now, as Alex has issued ultimatums around the world: join, or it will be war.\n\nAreas such as Latin America and Africa are mostly immune to these threats, at least for now. For Europe and Asia, however, the threats are real. India and South Korea are very vulnerable, and Southern Europe is a major target for the AlexPact.\n\nEast Germany, Slovakia, Czechia, Hungary, Serbia, Bulgaria, Albania, Kosovo, Azerbaijan, Armenia, Georgia, Morocco, Tunisia and Austria accept the ultimatum wherever their governments still survive. They leave their previous alliances, including NATO where applicable. Slovakia, Czechia, Hungary, Serbia, Albania and Kosovo adopt the Emerging outlook. Bulgaria, Azerbaijan, Armenia, Georgia, Morocco, Tunisia and Austria also adopt the Emerging outlook, with democratic elections enabled. Kuwait, Bahrain, Qatar, and Libya accept Saudi overlordship and retain their current leaders. The surviving participants join the MeccaPact, adopt SOLOMON, enter the Cabal and receive the Mark."
+ endtimes.46.d: "The EU has disbanded and civil wars have already started, but the real World War III has not commenced yet. That changes now, as Alex has issued ultimatums around the world: join, or it will be war.\n\nAreas such as Latin America and Africa are mostly immune to these threats, at least for now. For Europe and Asia, however, the threats are real. India and South Korea are very vulnerable, and Southern Europe is a major target for the AlexPact.\n\nEast Germany, Slovakia, Czechia, Hungary, Serbia, Bulgaria, Albania, Kosovo, Azerbaijan, Armenia, Georgia, Morocco, Tunisia and Austria are among the countries targeted by the ultimatum. Those that accept leave their previous alliances, including NATO where applicable. Slovakia, Czechia, Hungary, Serbia, Albania and Kosovo adopt the Emerging outlook. Bulgaria, Azerbaijan, Armenia, Georgia, Morocco, Tunisia and Austria also adopt the Emerging outlook, with democratic elections enabled. Kuwait, Bahrain, Qatar, and Libya are offered Saudi overlordship under their current leaders. Countries that accept join the MeccaPact, adopt SOLOMON, enter the Cabal and receive the Mark."
  endtimes.46.a: "The lines are drawn."
+ endtimes.71.d: "Alex has issued an ultimatum to [ROOT.GetNameDef]. Our government can accept his terms or stay out of the realignment."
+ endtimes.71.a: "Accept the ultimatum."
+ endtimes.71.b: "Decline and stay out of the realignment."
  endtimes.45.t: "EU Disolves"
  endtimes.45.d: "The EU zone has been hammered over the past year. The USA, China and the Middle East devastated European banks by writing off their debts, while wars shattered energy security and trade. Religious unrest and natural disasters have made the situation catastrophic.\n\nThe last straw is that many nations seeking stability now want to join the One World currency, and some even want to leave NATO and join Alex's alliance. The EU has folded. NATO will surely fragment too."
  endtimes.45.a: "The European Union is dissolved."
@@ -34,6 +41,9 @@
  endtimes.55.t: "Russia Surrenders"
  endtimes.55.d: "With Moscow and Saint Petersburg occupied, Russia has accepted surrender terms. Ilya Yashin will lead a pro-Western government with democratic elections.[GetEndtimesRussiaSurrenderOverlordReport]\n\nUkraine regains its core territory and returns Russian territory outside its own cores and claims. Russia renounces its claims on Ukrainian core territory. Kaliningrad passes to Poland, and Russia loses its claim there. If China still exists, the Far Eastern Republic is placed under Chinese authority."
  endtimes.55.a: "The war is over for Russia."
+ endtimes.68.t: "China Bides Its Time"
+ endtimes.68.d: "China sent volunteers west to fight for Russia but stayed out of the war itself. Beijing knew it would end up shouldering too much of the fighting while facing Japan on another front. Now that Russia has lost, China has taken full control of the Far East and can focus on the real Eastern Front."
+ endtimes.68.a: "China turns its attention east."
  endtimes_russia_surrender_subject_ukraine: " Russia comes under the authority of Ukraine."
  endtimes_russia_surrender_subject_poland: " Russia comes under the authority of Poland."
  endtimes.56.t: "Russia Capitulates"
@@ -52,7 +62,7 @@
  endtimes.60.d: "Portugal, Belgium, the Netherlands, Romania, Slovenia, Iceland, Sweden, Denmark, Spain, the United States, and Canada are now stable enough to join NATO again."
  endtimes.60.a: "NATO welcomes them back."
  endtimes.61.t: "Many Prophecies"
- endtimes.61.d: "This moment of the game is actually a mix of a lot of different private revelation prophecies from saints and other mystics each with a glimpse of something.  Like France and England would have revolutions and Russia would threaten from the east and Islam would invade from the south.  I'm using this for a fun scenario, this is mostly artistic license to create a somewhat balanced war.   As we know Europe has much smaller armies then this game suggests."
+ endtimes.61.d: "This moment of the game is actually a mix of a lot of different private revelation prophecies from saints and other mystics each who seem to have been given a glimpse of something.  Like France and England would have revolutions and Russia would threaten from the east and Islam would invade from the south.  I'm using this for a fun scenario, and use artistic license to create a somewhat balanced war as opposed to trying to match prophecies exactly.   As we know Europe has much smaller armies then this game suggests and manpower has not been adjusted to take disease and disasters into effect."
  endtimes.61.a: "Continue."
  endtimes.62.t: "Vassals to the Holy Monarchy"
  endtimes.62.d: "Recognizing Jesus spoke of one Kingdom, not many.  Allies in common cause with the priority of restoring a safe world for the Church and it's people."
@@ -123,7 +133,7 @@
 
  endtimes.8.t: "A Dirty Bomb Outside Jerusalem"
  endtimes.8.d: "A dirty bomb has exploded just outside Jerusalem. Iran is suspected, and Israel has vowed retribution."
- endtimes.8.a: "The world awaits Israel's response."
+ endtimes.8.a: "The world awaits Israel's response." 
  endtimes.9.t: "Tehran Suffers a Nuclear Strike"
  endtimes.9.d: "Israel has carried out a nuclear strike on Tehran in retaliation for the dirty bomb attack outside Jerusalem. The Iranian capital has suffered the destructive effects of an atomic explosion."
  endtimes.9.a: "A catastrophe for Tehran."
@@ -156,6 +166,18 @@
  endtimes.13.d: "The super El Niño of 2026 brought lower harvests across Asia and Africa, compounded by the failure to export Black Sea grain because of war.\n\nIn 2027, unfavorable conditions also struck the Western world, ushering in famine in parts of Africa and Southeast Asia.\n\nThese droughts, combined with earthquakes and the need for constant relief efforts, are placing an especially heavy strain on the developing world. More countries are struggling to survive as functioning states."
  endtimes.13.a: "The world faces a growing crisis."
 
+ endtimes.75.t: "WestNATO Returns to NATO"
+ endtimes.75.d: "The governments of WestNATO have dissolved their temporary alliance and returned to NATO under German leadership. Their return reunites the allies on both sides of the Atlantic."
+ endtimes.75.a: "Welcome back."
+
+ endtimes.76.t: "The United States Returns to NATO"
+ endtimes.76.d: "With a Western government back in Washington, the United States has formally restored its NATO membership. Germany continues to lead the alliance."
+ endtimes.76.a: "Welcome back."
+
+ endtimes.72.t: "The Grim Mark is reached"
+ endtimes.72.d: "With the war and disasters, not to mention a little bit of nuclear winter on top of it, the world has surpassed 2 billion dead, with no sign of stabilization."
+ endtimes.72.a: "A grim milestone."
+
  endtimes.21.t: "Famine and Other Disasters"
  endtimes.21.d: "Starting with the super El Niño of 2026 and continuing through 2027, 2028, and now 2029, the world has endured a nonstop series of droughts, floods, earthquakes, and other disasters, now compounded by the Great Reset of the Banking System.\n\nFamine and plague are running rampant through the developing world. These are not new diseases, but old and existing ones that have spiraled out of control, like HIV and Ebola.\n\nOver a billion fewer people are alive today than in 2027."
  endtimes.21.a: "The suffering continues."
@@ -163,6 +185,14 @@
  endtimes.22.t: "France Splits in Two"
  endtimes.22.d: "After the incident at the Vatican, Marine Le Pen's government revealed that it was allied with Alex and intended to bring France into the SOLOMON system.\n\nThe socialist far left opposed the move and has proclaimed the French Popular Republic under the Emerging outlook. The two governments have separated without going to war."
  endtimes.22.a: "France is divided."
+
+ endtimes_disasters: "Disasters"
+ endtimes_disasters_desc: "The disasters are claiming lives and disrupting essential services across the country."
+ endtimes_disasters_tt: "Monthly population losses from February through April 2029 target §R5% below Fifth Seal levels§! by the Grim Mark."
+
+ endtimes_disaster_famine_and_disease: "Disaster, Famine and Disease"
+ endtimes_disaster_famine_and_disease_desc: "War, crop failures, and disease are taking lives in every part of the world."
+ endtimes_disaster_famine_and_disease_tt: "Monthly population losses from February through April 2029 target §R20% below Fifth Seal levels§! by the Grim Mark."
 
  endtimes_famine_and_disease: "Famine and Disease"
  endtimes_famine_and_disease_desc: "Repeated harvest failures, disease outbreaks, and collapsing relief networks have left the population struggling for survival. Essential civilian needs consume the country's productive capacity."
@@ -193,7 +223,7 @@
  SAU_MECCAPACT_neutrality_ADJ: "Saudi Arabian"
 
  endtimes.26.t: "Iran Joins the MeccaPact"
- endtimes.26.d: "Iran has long been an enemy of many MeccaPact countries, but now sees an opportunity for unity with the rest of the region. With China having just joined the new order, Iran has decided to join as well.\n\nThe Axis of Resistance is dissolved. Iraq, Free Syria and Hezbollah are freed from Iranian rule if they remain Iranian subjects, and join Iran in the MeccaPact as independent members wherever they still exist and are free to join. If Hamas still exists, it adopts Emerging Autocracy and joins the pact.\n\nWhere the governments still exist, the United Arab Emirates signs a non-aggression pact with Saudi Arabia. Saudi Arabia takes Houthi Yemen as a puppet. Syria annexes Rojava."
+ endtimes.26.d: "Iran has long been an enemy of many MeccaPact countries, but now sees an opportunity for unity with the rest of the region. With China having just joined the new order, Iran has decided to join as well.\n\nIran agrees to a white peace with every country it is fighting before joining the pact. The Axis of Resistance is dissolved. Iraq, Free Syria and Hezbollah are freed from Iranian rule if they remain Iranian subjects, and join Iran in the MeccaPact as independent members wherever they still exist and are free to join. If Hamas still exists, it adopts Emerging Autocracy and joins the pact.\n\nWhere the governments still exist, the United Arab Emirates signs a non-aggression pact with Saudi Arabia. Saudi Arabia takes Houthi Yemen as a puppet. Syria annexes Rojava."
  endtimes.26.a: "The Middle East united."
  endtimes.28.t: "A Coup in Israel"
  endtimes.28.d: "WNN reports that a coup has brought a new government to power in Israel. Days after the Vatican was stormed, with Israel beset on every side by the One Faith, One World Alliance, a group of wealthy Israeli businessmen announced that a deal had been reached with the Alliance.\n\nThe agreement sets out a framework for peaceful coexistence through a two-state system and the rebuilding of Gaza. Eitan Ben-Ami has been installed as the new president, and Jerusalem is to become an open Holy City once again for all believers.\n\nIsrael joins the Saudi-led MeccaPact, and its new leadership enters the Cabal. The existing Palestinian and Gaza governments are brought into the same alliance and network as part of the settlement."
@@ -277,7 +307,7 @@
  endtimes_usa_beast_systems_banned_tt: "The United States has not abolished the Beast financial systems."
 
  endtimes_nato_reunification_no_report: ""
- endtimes_nato_reunification_report: "\n\nThe temporary WestNATO split has ended. Its surviving members have returned to NATO, restoring a single alliance as the Great Peace takes effect."
+ endtimes_nato_reunification_report: "\n\nThe temporary WestNATO split has ended. Its surviving members have returned to NATO, restoring a single alliance."
 
  endtimes.40.d_interim: "Russia was supposed to hold an election this month. Since the Russian Orthodox Church joined with Rome and the Pope visited, the people have begun leaning in a pro-Western direction. Yet the One Faith is also very popular, and many are naturally drawn to autocrats.\n\nThe world is a mess, and Germany in particular has too many problems at home to maintain close oversight. In a coup, Russia's elections have been suspended. The interim leader will remain in power, now heading a Emerging autocracy.\n\nRussia adopts Western Christianity as its official religious alignment and joins the MeccaPact. A SOLOMON currency agreement writes off half of its current debt and brings the benefits of the global banking system. The promised democratic transition has come to an end."
  endtimes.40.d_no_interim: "Even without the Western-backed interim government, Russia has not escaped the upheaval spreading across the world. The One Faith is very popular, and many Russians are drawn to the promise of autocratic order.\n\nWith the world in chaos and Germany occupied by problems at home, a coup has swept aside the remaining restraints on power. The current leader remains in charge, now heading a Emerging autocracy. Elections are suspended indefinitely.\n\nRussia adopts Western Christianity as its official religious alignment and joins the MeccaPact. It receives the SOLOMON currency system and a write-off of half its current debt, while the armed forces report that no further manpower reserves are available. The Kremlin has committed itself to the new global order."

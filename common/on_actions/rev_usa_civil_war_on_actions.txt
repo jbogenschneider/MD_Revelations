@@ -17,13 +17,13 @@ on_actions = {
 					NOT = { is_in_faction = yes }
 					OR = {
 						has_global_flag = rev_nato_lock_ger_leader
-						USA = { NOT = { has_idea = NATO_member } }
+						USA = { rev_is_nato_faction = no }
 					}
 				}
 				log = "[GetDateText]: [Root.GetName]: on_action restoring NATO because the faction collapsed after USA left."
 				country_event = { id = rev_usa_cw.317 }
 			}
-			if = {
+			else_if = {
 				limit = {
 					tag = GER
 					is_in_faction = yes
@@ -31,7 +31,7 @@ on_actions = {
 					NOT = { is_faction_leader = yes }
 					OR = {
 						has_global_flag = rev_nato_lock_ger_leader
-						USA = { NOT = { has_idea = NATO_member } }
+						USA = { rev_is_nato_faction = no }
 					}
 				}
 				log = "[GetDateText]: [Root.GetName]: on_action promoting Germany to NATO leader after USA left."

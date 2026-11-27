@@ -124,9 +124,9 @@ focus_tree = {
 					rev_is_westnato_faction = yes
 				}
 				AND = {
-					has_global_flag = endtimes_nato_reunited_at_ceasefire
-					any_other_country = {
-						has_faction_template = faction_template_nato
+					endtimes_westnato_has_reunited = yes
+					GER = {
+						exists = yes
 						is_faction_leader = yes
 						NOT = { has_war_with = ROOT }
 					}
@@ -142,7 +142,7 @@ focus_tree = {
 				787 = { transfer_state_to = USA } # North Dakota
 			}
 			if = {
-				limit = { has_global_flag = endtimes_nato_reunited_at_ceasefire }
+				limit = { endtimes_westnato_has_reunited = yes }
 				endtimes_ensure_nato_membership = yes
 			}
 			else = { WestNATO_join = yes }
@@ -150,7 +150,7 @@ focus_tree = {
 				limit = {
 					OR = {
 						rev_is_westnato_faction = yes
-						has_faction_template = faction_template_nato
+						rev_is_nato_faction = yes
 					}
 					is_in_faction_with = CAN
 					CAN = {

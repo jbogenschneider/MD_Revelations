@@ -5,28 +5,31 @@ endtimes_ensure_nato_membership = {
 	save_event_target_as = endtimes_nato_applicant
 	if = {
 		# A missing membership spirit does not mean the country left NATO.
-		limit = { is_in_faction = yes NOT = { rev_is_nato_faction = yes } }
+		limit = {
+			is_in_faction = yes
+			NOT = { rev_is_nato_faction = yes }
+			OR = {
+				NOT = { has_global_flag = rev_nato_lock_ger_leader }
+				tag = GER
+				GER = { rev_is_nato_faction = yes }
+			}
+		}
 		leave_faction = yes
 	}
 	if = {
-		limit = {
-			NOT = { AND = { rev_is_nato_faction = yes is_faction_leader = yes } }
+		limit = { is_in_faction = no }
+		if = {
+			limit = { any_other_country = { rev_is_nato_faction = yes is_faction_leader = yes } }
+			rev_nato_find_existing_leader = yes
+			event_target:rev_nato_destination = { add_to_faction = event_target:endtimes_nato_applicant }
 		}
-		random_other_country = {
-			limit = { rev_is_nato_faction = yes is_faction_leader = yes }
-			if = {
-				limit = { NOT = { is_in_faction_with = event_target:endtimes_nato_applicant } }
-				event_target:endtimes_nato_applicant = { leave_faction = yes }
-				add_to_faction = event_target:endtimes_nato_applicant
-			}
+		else_if = {
+			limit = { OR = { NOT = { has_global_flag = rev_nato_lock_ger_leader } tag = GER } }
+			create_faction_from_template = faction_template_nato
 		}
 	}
 	if = {
-		limit = { NOT = { is_in_faction = yes } }
-		create_faction_from_template = faction_template_nato
-	}
-	if = {
-		limit = { NOT = { has_idea = NATO_member } }
+		limit = { rev_is_nato_faction = yes NOT = { has_idea = NATO_member } }
 		for_each_scope_loop = {
 			array = global.nato_members
 			if = {
@@ -42,12 +45,268 @@ endtimes_ensure_nato_membership = {
 		add_ideas = NATO_member
 	}
 	if = {
-		limit = { NOT = { is_in_array = { global.nato_members = THIS } } }
-		add_to_array = { global.nato_members = THIS }
+		limit = { rev_is_nato_faction = yes }
+		if = {
+			limit = { NOT = { is_in_array = { global.nato_members = THIS } } }
+			add_to_array = { global.nato_members = THIS }
+		}
+		add_to_tech_sharing_group = NATO_Tech_Share
+		remove_ideas = Major_Non_NATO_Ally
+		rev_nato_clear_accession_application = yes
 	}
-	add_to_tech_sharing_group = NATO_Tech_Share
-	remove_ideas = Major_Non_NATO_Ally
-	rev_nato_clear_accession_application = yes
+}
+
+# Caller has already checked that a NATO leader exists.
+rev_nato_find_existing_leader = {
+	if = {
+		limit = { has_global_flag = rev_nato_lock_ger_leader }
+		GER = {
+			if = {
+				limit = { rev_is_nato_faction = yes is_faction_leader = yes }
+				save_event_target_as = rev_nato_destination
+			}
+		}
+	}
+	else_if = {
+		limit = { USA = { rev_is_nato_faction = yes } }
+		random_country = {
+			limit = { is_faction_leader = yes OR = { tag = USA is_in_faction_with = USA } }
+			save_event_target_as = rev_nato_destination
+		}
+	}
+	else_if = {
+		limit = { GER = { rev_is_nato_faction = yes } }
+		random_country = {
+			limit = { is_faction_leader = yes OR = { tag = GER is_in_faction_with = GER } }
+			save_event_target_as = rev_nato_destination
+		}
+	}
+	else = {
+		random_country = {
+			limit = { rev_is_nato_faction = yes is_faction_leader = yes }
+			save_event_target_as = rev_nato_destination
+		}
+	}
+}
+
+# Repair saves with more than one NATO faction. WestNATO has its own identity.
+rev_nato_reunite_factions = {
+	if = {
+		limit = {
+			NOT = { has_global_flag = rev_nato_lock_ger_leader }
+			OR = {
+				rev_nato_has_us_french_split = yes
+				FRA = { rev_nato_is_french_splinter = yes }
+				any_country = {
+					rev_is_nato_faction = yes
+					is_faction_leader = yes
+					any_other_country = { rev_is_nato_faction = yes is_faction_leader = yes }
+				}
+			}
+		}
+		if = {
+			limit = { rev_nato_has_us_french_split = yes }
+			USA = { save_event_target_as = rev_nato_destination }
+		}
+		else = { rev_nato_find_existing_leader = yes }
+		FRA = {
+			if = {
+				limit = { rev_nato_is_french_splinter = yes }
+				set_country_flag = rev_nato_french_splinter_repair_pending
+			}
+		}
+		rev_nato_restore_listed_members_once = yes
+		every_country = {
+			limit = {
+				OR = { rev_is_nato_faction = yes rev_nato_is_french_splinter = yes }
+				is_faction_leader = yes
+				NOT = { tag = event_target:rev_nato_destination }
+			}
+			save_event_target_as = rev_nato_duplicate_leader
+			every_other_country = {
+				limit = {
+					exists = yes
+					is_in_faction_with = event_target:rev_nato_duplicate_leader
+					rev_nato_can_reunite_member = yes
+				}
+				leave_faction = yes
+				rev_nato_join_reunited_faction = yes
+				if = {
+					limit = { is_in_faction = no }
+					event_target:rev_nato_duplicate_leader = { add_to_faction = PREV }
+				}
+			}
+			if = {
+				limit = {
+					rev_nato_can_reunite_member = yes
+					NOT = { any_other_country = { is_in_faction_with = event_target:rev_nato_duplicate_leader } }
+				}
+				dismantle_faction = yes
+				rev_nato_join_reunited_faction = yes
+			}
+		}
+		# Detached members can lose the idea while still being on the membership roster.
+		every_country = {
+			limit = {
+				exists = yes
+				is_in_faction = no
+				OR = {
+					has_idea = NATO_member
+					is_in_array = { global.nato_members = THIS }
+				}
+				rev_nato_can_reunite_member = yes
+			}
+			rev_nato_join_reunited_faction = yes
+		}
+		FRA = {
+			if = {
+				limit = { is_in_faction_with = event_target:rev_nato_destination }
+				clr_country_flag = rev_nato_french_splinter_repair_pending
+			}
+		}
+	}
+}
+
+# Run only after duplicate NATO factions and a destination have been identified.
+rev_nato_restore_listed_members_once = {
+	if = {
+		limit = {
+			event_target:rev_nato_destination = { is_faction_leader = yes }
+			OR = {
+				AND = {
+					rev_nato_has_us_french_split = yes
+					NOT = { has_global_flag = rev_nato_us_french_split_dispatched }
+				}
+				AND = {
+					NOT = { has_global_flag = rev_nato_expanded_roster_repaired }
+					event_target:rev_nato_destination = { rev_is_nato_faction = yes }
+				}
+			}
+		}
+		if = {
+			limit = { rev_nato_has_us_french_split = yes }
+			set_global_flag = rev_nato_us_french_split_dispatched
+		}
+		set_global_flag = rev_nato_expanded_roster_repaired
+		event_target:rev_nato_destination = {
+			log = "[GetDateText]: [This.GetName]: Duplicate NATO detected. Dispatching the NATO roster repair."
+			country_event = { id = rev_nato_reorganization.2 }
+		}
+	}
+}
+
+# Run in the leader of the NATO faction to keep. Console use does not depend on save flags.
+rev_nato_reseat_listed_members = {
+	if = {
+		limit = {
+			exists = yes
+			is_faction_leader = yes
+			OR = { NOT = { has_global_flag = rev_nato_lock_ger_leader } tag = GER }
+		}
+		save_event_target_as = rev_nato_destination
+		log = "[GetDateText]: [This.GetName]: Starting the direct NATO roster repair."
+		FIN = { rev_nato_reseat_member = yes }
+		SPR = { rev_nato_reseat_member = yes }
+		POR = { rev_nato_reseat_member = yes }
+		POL = { rev_nato_reseat_member = yes }
+		LIT = { rev_nato_reseat_member = yes }
+		LAT = { rev_nato_reseat_member = yes }
+		CZE = { rev_nato_reseat_member = yes }
+		EST = { rev_nato_reseat_member = yes }
+		SLO = { rev_nato_reseat_member = yes }
+		HUN = { rev_nato_reseat_member = yes }
+		ROM = { rev_nato_reseat_member = yes }
+		CRO = { rev_nato_reseat_member = yes }
+		TUR = { rev_nato_reseat_member = yes }
+		GRE = { rev_nato_reseat_member = yes }
+		SLV = { rev_nato_reseat_member = yes }
+		ALB = { rev_nato_reseat_member = yes }
+		BUL = { rev_nato_reseat_member = yes }
+		LUX = { rev_nato_reseat_member = yes }
+		BEL = { rev_nato_reseat_member = yes }
+		KOS = { rev_nato_reseat_member = yes }
+		# Finland must leave the French splinter before France relinquishes leadership.
+		FRA = { rev_nato_reseat_member = yes }
+	}
+	else = { log = "[GetDateText]: NATO roster repair skipped: the selected country must be the faction leader." }
+}
+
+rev_nato_reseat_member = {
+	if = {
+		limit = { exists = yes NOT = { tag = event_target:rev_nato_destination } }
+		if = {
+			limit = { rev_nato_can_reunite_member = yes }
+			save_event_target_as = rev_nato_reunion_applicant
+			if = {
+				limit = { is_in_faction = yes }
+				if = {
+					limit = { is_faction_leader = yes }
+					random_other_country = {
+						limit = {
+							exists = yes
+							is_subject = no
+							is_in_faction_with = event_target:rev_nato_reunion_applicant
+						}
+						set_faction_leader = yes
+					}
+					if = {
+						limit = {
+							is_faction_leader = yes
+							NOT = { any_other_country = { is_in_faction_with = event_target:rev_nato_reunion_applicant } }
+						}
+						dismantle_faction = yes
+					}
+				}
+				if = {
+					limit = { is_in_faction = yes is_faction_leader = no }
+					faction_leader = {
+						save_event_target_as = rev_nato_previous_leader
+						remove_from_faction = event_target:rev_nato_reunion_applicant
+					}
+					if = { limit = { is_in_faction = yes } leave_faction = yes }
+					rev_nato_add_repair_member = yes
+					if = {
+						limit = {
+							is_in_faction = no
+							event_target:rev_nato_previous_leader = { is_faction_leader = yes }
+						}
+						event_target:rev_nato_previous_leader = { add_to_faction = event_target:rev_nato_reunion_applicant }
+					}
+				}
+			}
+			rev_nato_add_repair_member = yes
+			if = {
+				limit = { is_in_faction_with = event_target:rev_nato_destination }
+				rev_nato_record_membership = yes
+				log = "[GetDateText]: [This.GetName]: Confirmed in the target NATO after direct roster repair."
+			}
+			else = { log = "[GetDateText]: [This.GetName]: Direct NATO roster repair could not complete the transfer." }
+		}
+		else = { log = "[GetDateText]: [This.GetName]: Direct NATO roster repair skipped a subject or a country at war with the target faction." }
+	}
+}
+
+rev_nato_add_repair_member = {
+	if = {
+		limit = { is_in_faction = no }
+		event_target:rev_nato_destination = { add_to_faction = event_target:rev_nato_reunion_applicant }
+	}
+}
+
+rev_nato_join_reunited_faction = {
+	if = {
+		limit = {
+			is_in_faction = no
+			event_target:rev_nato_destination = { rev_is_nato_faction = yes is_faction_leader = yes }
+		}
+		save_event_target_as = rev_nato_reunion_applicant
+		event_target:rev_nato_destination = { add_to_faction = event_target:rev_nato_reunion_applicant }
+		if = {
+			limit = { is_in_faction_with = event_target:rev_nato_destination }
+			rev_nato_sync_existing_membership = yes
+			log = "[GetDateText]: [This.GetName]: Rejoined the existing NATO faction during duplicate repair."
+		}
+	}
 }
 
 # Membership repair must never move countries or change faction leadership.
@@ -60,19 +319,23 @@ rev_nato_sync_existing_membership = {
 			limit = { is_faction_leader = yes has_faction_template = faction_template_nato }
 			set_faction_rule = rev_nato_joining_rule_exclude_israel
 		}
-		if = {
-			limit = { NOT = { has_idea = NATO_member } }
-			add_ideas = NATO_member
-			log = "[GetDateText]: [This.GetName]: Repaired missing NATO membership spirit in existing NATO faction."
-		}
-		if = {
-			limit = { NOT = { is_in_array = { global.nato_members = THIS } } }
-			add_to_array = { global.nato_members = THIS }
-		}
-		add_to_tech_sharing_group = NATO_Tech_Share
-		remove_ideas = Major_Non_NATO_Ally
-		rev_nato_clear_accession_application = yes
+		rev_nato_record_membership = yes
 	}
+}
+
+rev_nato_record_membership = {
+	if = {
+		limit = { NOT = { has_idea = NATO_member } }
+		add_ideas = NATO_member
+		log = "[GetDateText]: [This.GetName]: Repaired missing NATO membership spirit in existing NATO faction."
+	}
+	if = {
+		limit = { NOT = { is_in_array = { global.nato_members = THIS } } }
+		add_to_array = { global.nato_members = THIS }
+	}
+	add_to_tech_sharing_group = NATO_Tech_Share
+	remove_ideas = Major_Non_NATO_Ally
+	rev_nato_clear_accession_application = yes
 }
 
 # ISR scope. Catch direct/scripted or wartime entry as well as normal invitations.

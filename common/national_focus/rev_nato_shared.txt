@@ -1342,3 +1342,171 @@ shared_focus = {
 	}
 	ai_will_do = { base = 2 }
 }
+
+shared_focus = {
+	id = REV_HM_protect_the_papacy
+	icon = accord_with_pope
+	x = -6
+	y = 5
+	relative_position_id = REV_HM_holy_monarchy
+	cost = 5
+	available = { has_idea = rev_holy_monarchy }
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INFLUENCE }
+	completion_reward = {
+		if = {
+			limit = { HLS = { exists = yes } }
+			add_political_power = 150
+			if = {
+				limit = { NOT = { tag = HLS } NOT = { has_war_with = HLS } }
+				give_guarantee = HLS
+			}
+		}
+		else = { add_ideas = rev_hm_papal_refuge }
+		every_other_country = {
+			limit = { exists = yes has_idea = christian }
+			add_opinion_modifier = { target = ROOT modifier = supports_us }
+		}
+	}
+	ai_will_do = { base = 2 }
+}
+
+shared_focus = {
+	id = REV_HM_found_the_catholic_league
+	icon = army_doctrine
+	x = -2
+	y = 5
+	relative_position_id = REV_HM_holy_monarchy
+	cost = 10
+	available = {
+		has_idea = rev_holy_monarchy
+		is_subject = no
+	}
+	search_filters = { FOCUS_FILTER_ARMY }
+	completion_reward = {
+		add_ideas = rev_hm_decentralized_command
+	}
+	ai_will_do = { base = 4 }
+}
+
+shared_focus = {
+	id = REV_HM_eldest_daughter_of_the_church
+	icon = christian_gov
+	x = 2
+	y = 5
+	relative_position_id = REV_HM_holy_monarchy
+	cost = 10
+	available = { has_idea = rev_holy_monarchy }
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_INTERNAL_FACTION }
+	completion_reward = {
+		swap_ideas = { remove_idea = pluralist add_idea = christian }
+		swap_ideas = { remove_idea = labour_unions add_idea = the_clergy }
+		set_temp_variable = { temp_opinion = 75 }
+		change_the_clergy_opinion = yes
+		HLS = {
+			if = {
+				limit = { exists = yes NOT = { tag = ROOT } }
+				add_opinion_modifier = { target = ROOT modifier = supports_us }
+			}
+		}
+	}
+	ai_will_do = { base = 2 }
+}
+
+shared_focus = {
+	id = REV_HM_the_tenth_crusade
+	icon = SOV_return_israel
+	x = 6
+	y = 5
+	relative_position_id = REV_HM_holy_monarchy
+	cost = 8
+	available = { has_idea = rev_holy_monarchy }
+	search_filters = { FOCUS_FILTER_ANNEXATION }
+	completion_reward = {
+		if = {
+			limit = { country_exists = EGY NOT = { tag = EGY } }
+			create_wargoal = { type = annex_everything target = EGY }
+		}
+		if = {
+			limit = { country_exists = ISR NOT = { tag = ISR } }
+			create_wargoal = { type = annex_everything target = ISR }
+		}
+	}
+	ai_will_do = { base = 2 }
+}
+
+shared_focus = {
+	id = REV_HM_modern_chivalry
+	icon = french_knight
+	x = -6
+	y = 6
+	relative_position_id = REV_HM_holy_monarchy
+	cost = 10
+	available = { has_idea = rev_holy_monarchy }
+	search_filters = { FOCUS_FILTER_INTERNAL_FACTION }
+	completion_reward = {
+		add_ideas = rev_hm_armoured_chivalry
+	}
+	ai_will_do = { base = 2 }
+}
+
+shared_focus = {
+	id = REV_HM_the_kings_camelots
+	icon = french_monarchy
+	x = -2
+	y = 6
+	relative_position_id = REV_HM_holy_monarchy
+	cost = 7
+	available = { has_idea = rev_holy_monarchy }
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+	completion_reward = {
+		if = {
+			limit = { has_dlc = "La Resistance" }
+			add_ideas = rev_hm_camelots_agency
+			if = {
+				limit = { has_intelligence_agency = no }
+				create_intelligence_agency = yes
+			}
+			upgrade_intelligence_agency = upgrade_anti_partisan
+			upgrade_intelligence_agency = upgrade_economy_civilian
+			upgrade_intelligence_agency = upgrade_passive_defense
+		}
+		else = { add_ideas = rev_hm_camelots }
+	}
+	ai_will_do = { base = 2 }
+}
+
+# Adapted from FRA_French_pillar_of_counterterrorism.
+shared_focus = {
+	id = REV_HM_pillar_of_counterterrorism
+	icon = french_specialists
+	x = 2
+	y = 6
+	relative_position_id = REV_HM_holy_monarchy
+	cost = 6.8
+	available = { has_idea = rev_holy_monarchy }
+	search_filters = { FOCUS_FILTER_INFLUENCE FOCUS_FILTER_INTERNAL_FACTION }
+	completion_reward = {
+		add_ideas = FRA_idea_the_french_pillar_of_counterterroism
+		set_temp_variable = { temp_opinion = 5 }
+		change_the_military_opinion = yes
+	}
+	ai_will_do = { base = 2 }
+}
+
+# Adapted from FRA_the_french_foreign_legion.
+shared_focus = {
+	id = REV_HM_the_french_foreign_legion
+	icon = french_legion
+	x = 6
+	y = 6
+	relative_position_id = REV_HM_holy_monarchy
+	cost = 6.8
+	available = { has_idea = rev_holy_monarchy }
+	search_filters = { FOCUS_FILTER_INFLUENCE FOCUS_FILTER_INTERNAL_FACTION }
+	completion_reward = {
+		add_ideas = FRA_idea_the_french_foreign_legion
+		set_temp_variable = { temp_opinion = 5 }
+		change_the_military_opinion = yes
+	}
+	ai_will_do = { base = 2 }
+}
